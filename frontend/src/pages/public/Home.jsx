@@ -167,7 +167,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-20 relative selection:bg-[#D4AF37] selection:text-[#121417]">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-24 sm:pt-28 relative selection:bg-[#D4AF37] selection:text-[#121417]">
       
       {/* ========================================================================= */}
       {/* 1. HERO SECTION (ALAZAR.DEV MODERN AESTHETIC + DARK GOLD PALETTE)          */}
@@ -543,18 +543,18 @@ export const Home = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {services.map((srv, index) => (
-              <div key={index} className="group bg-[#181A1E] border border-[#333] p-8 hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between rounded-xl">
+              <div key={index} className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.08)] flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-[#121417] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-lg">
+                  <div className="w-12 h-12 bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-md">
                     <Building2 size={24} />
                   </div>
                   <h4 className="text-xl font-bold text-[#EAEAEA] mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
                   <p className="text-[#9CA3AF] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
-                <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1">
-                  Scope & Deliverables <ArrowUpRight size={14} />
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-[#2D3137]">
+                  Scope & Deliverables <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             ))}
@@ -917,58 +917,58 @@ export const Home = () => {
           </div>
 
           {/* 3-Bento Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             
             {/* Card 1: Email */}
             <a 
               href="mailto:consult@alexandre-structural.com" 
-              className="flex items-center gap-4 bg-[#181A1E] border border-[#333] hover:border-[#D4AF37]/50 p-5 rounded-xl transition-all group"
+              className="flex items-center gap-4 bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 rounded-2xl transition-all group shadow-lg hover:shadow-[0_10px_25px_rgba(212,175,55,0.08)]"
             >
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
                 <Mail size={20} />
               </div>
               <div className="flex flex-col overflow-hidden">
-                <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
-                <p className="text-xs font-mono text-[#9CA3AF] truncate">consult@alexandre-structural.com</p>
+                <h4 className="text-sm font-bold text-[#EAEAEA] mb-0.5">Send an Email</h4>
+                <p className="text-xs font-mono text-[#9CA3AF] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
               </div>
             </a>
 
             {/* Card 2: Phone */}
             <a 
               href="tel:+15550198472" 
-              className="flex items-center gap-4 bg-[#181A1E] border border-[#333] hover:border-[#D4AF37]/50 p-5 rounded-xl transition-all group"
+              className="flex items-center gap-4 bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 rounded-2xl transition-all group shadow-lg hover:shadow-[0_10px_25px_rgba(212,175,55,0.08)]"
             >
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
                 <Phone size={20} />
               </div>
               <div className="flex flex-col">
-                <h4 className="text-sm font-bold text-[#EAEAEA]">Call Direct</h4>
-                <p className="text-xs font-mono text-[#9CA3AF]">+1 (555) 019-8472</p>
+                <h4 className="text-sm font-bold text-[#EAEAEA] mb-0.5">Call Direct</h4>
+                <p className="text-xs font-mono text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472</p>
               </div>
             </a>
 
             {/* Card 3: Location */}
-            <div className="flex items-center gap-4 bg-[#181A1E] border border-[#333] p-5 rounded-xl">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
+            <div className="flex items-center gap-4 bg-[#181A1E] border border-[#333]/80 p-6 rounded-2xl shadow-lg">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
                 <MapPin size={20} />
               </div>
               <div className="flex flex-col">
-                <h4 className="text-sm font-bold text-[#EAEAEA]">Office Headquarters</h4>
-                <p className="text-xs text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
+                <h4 className="text-sm font-bold text-[#EAEAEA] mb-0.5">Office Headquarters</h4>
+                <p className="text-xs font-mono text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
               </div>
             </div>
 
           </div>
 
           {/* Full Consultation Trigger Banner */}
-          <div className="bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333] p-8 rounded-xl text-center flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 sm:p-10 rounded-3xl text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl">
             <div className="text-left">
-              <h3 className="text-xl font-bold text-[#EAEAEA] mb-1">Ready to Evaluate Your Project's Structural Integrity?</h3>
-              <p className="text-xs text-[#9CA3AF]">Submit project drawings, lateral load requirements, or request a third-party peer review.</p>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#EAEAEA] mb-1.5">Ready to Evaluate Your Project's Structural Integrity?</h3>
+              <p className="text-xs sm:text-sm text-[#9CA3AF]">Submit project drawings, lateral load requirements, or request a third-party peer review.</p>
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+              className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2 active:scale-95"
             >
               Initiate Inquiry <ArrowUpRight size={14} />
             </button>
