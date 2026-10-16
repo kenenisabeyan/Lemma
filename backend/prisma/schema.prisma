@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      String   @default("ADMIN") // ADMIN or CLIENT
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id                  String   @id @default(uuid())
+  title               String
+  slug                String   @unique
+  category            String
+  location            String
+  year                String
+  client              String?
+  role                String   @default("Lead Structural Engineer")
+  structuralSystem    String
+  materials           String
+  description         String
+  challenge           String
+  engineeringApproach String
+  solution            String
+  result              String
+  imageUrl            String
+  diagramUrl          String?
+  videoUrl            String?
+  documentUrl         String?
+  softwareUsed        String   // Stored as JSON or comma-separated string
+  isFeatured          Boolean  @default(false)
+  isPublic            Boolean  @default(true)
+  order               Int      @default(0)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(uuid())
+  title       String
+  icon        String   @default("Building2")
+  summary     String
+  description String
+  features    String   // JSON string of feature bullet points
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Insight {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  category    String   @default("Technical Note")
+  excerpt     String
+  content     String
+  readTime    String   @default("5 min read")
+  imageUrl    String?
+  isFeatured  Boolean  @default(false)
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Testimonial {
+  id            String   @id @default(uuid())
+  clientName    String
+  clientRole    String
+  clientCompany String
+  avatarUrl     String?
+  content       String
+  rating        Int      @default(5)
+  isFeatured    Boolean  @default(true)
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Resource {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  category    String
+  fileUrl     String
+  fileSize    String
+  format      String   @default("PDF")
+  isPublic    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Faq {
+  id        String   @id @default(uuid())
+  question  String
+  answer    String
+  category  String   @default("General")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Inquiry {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  phone       String?
+  projectType String
+  subject     String
+  message     String
+  status      String   @default("NEW") // NEW, IN_REVIEW, RESPONDED
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SiteSettings {
+  id             String   @id @default("default")
+  engineerName   String   @default("Alexandre Techane")
+  title          String   @default("Principal Structural Engineer, PE, SE")
+  heroTagline    String   @default("Precision in Every Structure.")
+  heroBio        String   @default("Ensuring structural integrity, safety, and innovation for complex architectural designs. Bridging the gap between visionary aesthetics and physical reality.")
+  introVideoUrl  String   @default("https://assets.mixkit.co/videos/preview/mixkit-architectural-model-of-a-modern-building-41618-large.mp4")
+  yearsExp       String   @default("14+")
+  projectsCount  String   @default("180+")
+  safetyRecord   String   @default("100%")
+  clientsCount   String   @default("50+")
+  email          String   @default("consult@alexandre-structural.com")
+  phone          String   @default("+1 (555) 019-8472")
+  officeAddress  String   @default("Suite 400, Iron Building, Metropolis City, NY 10001")
+  metaTitle      String   @default("Alexandre - Senior Structural Engineer & Consultant")
+  metaDescription String  @default("Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.")
+  updatedAt      DateTime @updatedAt
+}
