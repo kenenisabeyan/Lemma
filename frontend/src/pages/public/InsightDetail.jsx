@@ -116,21 +116,22 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
 
           <button
             onClick={handleCopy}
-            className="bg-[#181A1E] text-[#9CA3AF] hover:text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] px-4 py-2 text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-colors"
+            className="rounded-full bg-[#181A1E] text-[#9CA3AF] hover:text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-sm"
           >
-            <Share2 size={14} /> {copied ? 'Link Copied!' : 'Share Article'}
+            <Share2 size={13} /> {copied ? 'Link Copied!' : 'Share Article'}
           </button>
         </div>
 
         {/* Article Header */}
         <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="bg-[#181A1E] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span className="rounded-full bg-[#181A1E] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1">
               {article.category}
             </span>
             <span className="text-xs font-mono text-[#9CA3AF] flex items-center gap-1.5">
               <Calendar size={12} className="text-[#D4AF37]" /> {article.publishedAt}
             </span>
+            <span>·</span>
             <span className="text-xs font-mono text-[#9CA3AF] flex items-center gap-1.5">
               <Clock size={12} className="text-[#D4AF37]" /> {article.readTime}
             </span>
@@ -140,13 +141,16 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
             {article.title}
           </h1>
 
-          {/* Author Badge */}
-          <div className="flex items-center gap-4 bg-[#181A1E] p-4 border border-[#333]">
-            <div className="w-11 h-11 bg-[#121417] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm">
+          {/* Author Bento Badge (Alazar style) */}
+          <div className="flex items-center gap-4 bg-[#181A1E] p-4 rounded-2xl border border-[#333]/80 shadow-md">
+            <div className="w-12 h-12 rounded-xl bg-[#121417] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shadow-inner">
               AT
             </div>
             <div>
-              <h4 className="text-sm font-bold text-[#EAEAEA]">Alexandre Techane, PE, SE</h4>
+              <h4 className="text-sm font-bold text-[#EAEAEA] flex items-center gap-1.5">
+                Alexandre Techane, PE, SE
+                <span className="text-[10px] text-[#D4AF37] font-mono">· Verified Author</span>
+              </h4>
               <p className="text-xs text-[#9CA3AF]">Principal Structural Engineer & Technical Director</p>
             </div>
           </div>
@@ -154,8 +158,8 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
 
         {/* Featured Image */}
         {article.imageUrl && (
-          <div className="aspect-[16/9] bg-[#181A1E] border border-[#333] overflow-hidden mb-12">
-            <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover grayscale opacity-90" />
+          <div className="aspect-[16/9] rounded-2xl bg-[#181A1E] border border-[#333]/80 overflow-hidden mb-12 shadow-2xl">
+            <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:scale-105 transition-all duration-700" />
           </div>
         )}
 
@@ -188,14 +192,14 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         </div>
 
         {/* Article Footer & Consultation Link */}
-        <div className="bg-[#181A1E] border border-[#333] p-8 mb-16 flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div className="rounded-2xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 mb-16 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl">
           <div>
             <h4 className="text-lg font-bold text-[#EAEAEA] mb-1">Have questions about this engineering methodology?</h4>
             <p className="text-xs text-[#9CA3AF]">Directly discuss structural modeling or FEA review for your project.</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shrink-0"
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-7 py-3 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0"
           >
             Inquire With Engineer
           </button>
@@ -210,10 +214,12 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
                 <Link
                   key={rel.id}
                   to={`/insights/${rel.slug}`}
-                  className="bg-[#181A1E] border border-[#333] hover:border-[#D4AF37]/50 p-6 transition-all group"
+                  className="rounded-2xl bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 transition-all group shadow-xl hover:shadow-[0_10px_25px_rgba(212,175,55,0.08)] flex flex-col justify-between"
                 >
-                  <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2">{rel.category}</span>
-                  <h4 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
+                  <div>
+                    <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2">{rel.category}</span>
+                    <h4 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
+                  </div>
                   <span className="text-xs font-bold uppercase text-[#D4AF37] flex items-center gap-1 mt-4">
                     Read Article <ArrowUpRight size={12} />
                   </span>

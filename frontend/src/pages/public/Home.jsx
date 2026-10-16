@@ -280,19 +280,19 @@ export const Home = () => {
               </div>
             </div>
 
-            {/* CTAs */}
+            {/* CTAs (Alazar rounded pills) */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <button
                 onClick={() => navigate('/contact')}
-                className="bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center justify-center gap-2"
+                className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold tracking-wider uppercase hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center justify-center gap-2"
               >
-                Hire Me / Consultation <ArrowUpRight size={16} />
+                Hire Me / Consultation <ArrowUpRight size={15} />
               </button>
               <button
                 onClick={() => navigate('/projects')}
-                className="border border-[#333] bg-[#181A1E] text-[#EAEAEA] px-8 py-3.5 text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all flex items-center justify-center gap-2"
+                className="rounded-full border border-[#333] bg-[#181A1E] text-[#EAEAEA] px-8 py-3.5 text-xs font-mono font-bold tracking-wider uppercase hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
               >
-                View Project Portfolio <ChevronRight size={16} />
+                View Project Portfolio <ChevronRight size={15} />
               </button>
             </div>
 
@@ -311,16 +311,16 @@ export const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative group p-2.5 border border-[#333] bg-[#181A1E] rounded-xl shadow-2xl">
+            <div className="relative group p-2.5 border border-[#333]/80 bg-[#181A1E] rounded-2xl shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300">
               {/* Corner Coordinate Crosshairs */}
-              <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37]"></div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37]"></div>
-              <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37]"></div>
-              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37]"></div>
+              <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37] rounded-tl"></div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37] rounded-tr"></div>
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37] rounded-bl"></div>
+              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37] rounded-br"></div>
 
               <div 
                 onClick={() => setIsVideoModalOpen(true)}
-                className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center rounded-lg group-hover:border-[#D4AF37]/50 transition-all"
+                className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center rounded-xl group-hover:border-[#D4AF37]/50 transition-all"
               >
                 <img 
                   src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
@@ -335,11 +335,11 @@ export const Home = () => {
                   <Play className="text-[#D4AF37] w-6 h-6 ml-1" />
                 </div>
 
-                <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center bg-[#121417]/90 p-2.5 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider rounded">
+                <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center bg-[#121417]/90 backdrop-blur-md p-3 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider rounded-xl">
                   <span className="flex items-center gap-2 font-mono">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Introduction Video (Editable in CMS)
                   </span>
-                  <span className="text-[#D4AF37] font-bold">Watch 2 min</span>
+                  <span className="text-[#D4AF37] font-bold font-mono">Watch 2 min</span>
                 </div>
               </div>
             </div>
@@ -617,47 +617,47 @@ export const Home = () => {
             </p>
           </div>
 
-          {/* Education Sub-Navigation */}
-          <div className="flex flex-wrap gap-4 border-b border-[#333] pb-4 mb-10">
+          {/* Education Sub-Navigation (Alazar pill bar) */}
+          <div className="flex flex-wrap gap-2 mb-10 bg-[#181A1E] p-2 rounded-2xl border border-[#333]/80 w-max shadow-lg">
             <button
               onClick={() => setActiveEducationTab('roles')}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border rounded ${
+              className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeEducationTab === 'roles'
-                  ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
-                  : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
+                  : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-[#121417]'
               }`}
             >
               Architect vs Engineer vs Builder
             </button>
             <button
               onClick={() => setActiveEducationTab('loadpath')}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border rounded ${
+              className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeEducationTab === 'loadpath'
-                  ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
-                  : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
+                  : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-[#121417]'
               }`}
             >
               How Loads Flow (Physics of Safety)
             </button>
             <button
               onClick={() => setActiveEducationTab('when')}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border rounded ${
+              className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeEducationTab === 'when'
-                  ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
-                  : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
+                  : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-[#121417]'
               }`}
             >
               When Do You Need an Engineer?
             </button>
           </div>
 
-          {/* Tab 1: Roles Comparison */}
+          {/* Tab 1: Roles Comparison (Alazar Bento 3-Card Grid) */}
           {activeEducationTab === 'roles' && (
             <div className="grid md:grid-cols-3 gap-6">
               
-              <div className="bg-[#121417] border border-[#333] p-8 rounded-xl flex flex-col justify-between">
+              <div className="rounded-2xl bg-[#121417] border border-[#333]/80 p-8 flex flex-col justify-between shadow-xl hover:border-[#D4AF37]/40 transition-all">
                 <div>
-                  <div className="w-12 h-12 bg-[#181A1E] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6 rounded-lg">
+                  <div className="w-12 h-12 bg-[#181A1E] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6 rounded-xl shadow-md">
                     <Compass size={24} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Spatial Design</span>
@@ -672,12 +672,12 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-[#121417] border-2 border-[#D4AF37] p-8 rounded-xl relative flex flex-col justify-between shadow-[0_0_25px_rgba(212,175,55,0.15)]">
-                <div className="absolute -top-3 right-4 bg-[#D4AF37] text-[#121417] text-[10px] font-extrabold uppercase px-2.5 py-0.5 tracking-wider rounded">
+              <div className="rounded-2xl bg-[#181A1E] border-2 border-[#D4AF37] p-8 relative flex flex-col justify-between shadow-[0_0_30px_rgba(212,175,55,0.18)]">
+                <div className="absolute -top-3 right-6 bg-[#D4AF37] text-[#121417] text-[10px] font-mono font-extrabold uppercase px-3 py-0.5 tracking-wider rounded-full shadow-md">
                   Our Discipline
                 </div>
                 <div>
-                  <div className="w-12 h-12 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-6 rounded-lg">
+                  <div className="w-12 h-12 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-6 rounded-xl shadow-md">
                     <ShieldCheck size={26} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1">Physics & Stability</span>
@@ -692,9 +692,9 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-[#121417] border border-[#333] p-8 rounded-xl flex flex-col justify-between">
+              <div className="rounded-2xl bg-[#121417] border border-[#333]/80 p-8 flex flex-col justify-between shadow-xl hover:border-[#D4AF37]/40 transition-all">
                 <div>
-                  <div className="w-12 h-12 bg-[#181A1E] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6 rounded-lg">
+                  <div className="w-12 h-12 bg-[#181A1E] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6 rounded-xl shadow-md">
                     <Hammer size={24} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Physical Execution</span>
@@ -714,23 +714,23 @@ export const Home = () => {
 
           {/* Tab 2: Load Path Visualization */}
           {activeEducationTab === 'loadpath' && (
-            <div className="bg-[#121417] border border-[#333] p-8 lg:p-12 rounded-xl">
-              <div className="flex gap-4 mb-8">
+            <div className="rounded-2xl bg-[#121417] border border-[#333]/80 p-8 lg:p-10 shadow-2xl">
+              <div className="flex flex-wrap gap-2 mb-8 bg-[#181A1E] p-1.5 rounded-xl border border-[#333] w-max">
                 <button
                   onClick={() => setActiveLoadPath('gravity')}
-                  className={`text-xs font-bold uppercase tracking-wider pb-2 border-b-2 transition-colors ${
-                    activeLoadPath === 'gravity' ? 'text-[#D4AF37] border-[#D4AF37]' : 'text-[#9CA3AF] border-transparent'
+                  className={`text-xs font-mono font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg transition-all ${
+                    activeLoadPath === 'gravity' ? 'bg-[#D4AF37] text-[#121417] shadow-sm' : 'text-[#9CA3AF] hover:text-[#EAEAEA]'
                   }`}
                 >
-                  1. Downward Gravity Loads (People, Furniture, Snow)
+                  1. Downward Gravity Loads
                 </button>
                 <button
                   onClick={() => setActiveLoadPath('lateral')}
-                  className={`text-xs font-bold uppercase tracking-wider pb-2 border-b-2 transition-colors ${
-                    activeLoadPath === 'lateral' ? 'text-[#D4AF37] border-[#D4AF37]' : 'text-[#9CA3AF] border-transparent'
+                  className={`text-xs font-mono font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg transition-all ${
+                    activeLoadPath === 'lateral' ? 'bg-[#D4AF37] text-[#121417] shadow-sm' : 'text-[#9CA3AF] hover:text-[#EAEAEA]'
                   }`}
                 >
-                  2. Lateral Loads (140mph Wind & Earthquake Forces)
+                  2. Lateral Hurricane & Seismic Loads
                 </button>
               </div>
 
@@ -742,27 +742,27 @@ export const Home = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
-                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-4 shadow-sm">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 1</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Floor Slabs</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Receives people & equipment</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-4 shadow-sm">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 2</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Beams & Girders</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Transfers load horizontally</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-4 shadow-sm">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 3</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Columns / Walls</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Channels load downward</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-4 shadow-sm">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 4</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Deep Caissons</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Distributes foundation pressure</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#D4AF37]/50 p-4 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#D4AF37]/50 p-4 shadow-sm">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">FINAL</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Solid Bedrock</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Permanent reaction support</p>
@@ -777,21 +777,21 @@ export const Home = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-5 shadow-sm">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">1. Floor Diaphragms</h5>
-                      <p className="text-xs text-[#9CA3AF]">Act as giant horizontal deep beams, collecting wind pressure from exterior facades and channeling it to the core.</p>
+                      <p className="text-xs text-[#9CA3AF] leading-relaxed">Act as giant horizontal deep beams, collecting wind pressure from exterior facades and channeling it to the core.</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-5 shadow-sm">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">2. Reinforced Concrete Core</h5>
-                      <p className="text-xs text-[#9CA3AF]">Heavy shear wall core acts as a vertical cantilever beam that resists overturning moments.</p>
+                      <p className="text-xs text-[#9CA3AF] leading-relaxed">Heavy shear wall core acts as a vertical cantilever beam that resists overturning moments.</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-5 shadow-sm">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">3. Outrigger Belt Trusses</h5>
-                      <p className="text-xs text-[#9CA3AF]">Couples the core to perimeter columns, activating push-pull resistance and damping vibrations.</p>
+                      <p className="text-xs text-[#9CA3AF] leading-relaxed">Couples the core to perimeter columns, activating push-pull resistance and damping vibrations.</p>
                     </div>
-                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
+                    <div className="rounded-xl bg-[#181A1E] border border-[#333] p-5 shadow-sm">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">4. Foundation Tiebacks</h5>
-                      <p className="text-xs text-[#9CA3AF]">Deep tension anchors prevent the building from uprooting during extreme ground motions.</p>
+                      <p className="text-xs text-[#9CA3AF] leading-relaxed">Deep tension anchors prevent the building from uprooting during extreme ground motions.</p>
                     </div>
                   </div>
                 </div>
@@ -799,7 +799,7 @@ export const Home = () => {
             </div>
           )}
 
-          {/* Tab 3: When Do You Need an Engineer? */}
+          {/* Tab 3: When Do You Need an Engineer? (Bento Grid) */}
           {activeEducationTab === 'when' && (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -810,11 +810,11 @@ export const Home = () => {
                 { title: 'Seismic Retrofitting', desc: 'Older buildings built before 1994 require seismic damping upgrades to prevent brittle joint fracture during earthquakes.' },
                 { title: 'Third-Party Peer Reviews', desc: 'Developers hire independent engineers to verify calculations and eliminate redundant concrete/steel, saving millions.' }
               ].map((item, idx) => (
-                <div key={idx} className="bg-[#121417] border border-[#333] p-6 rounded-xl">
-                  <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-bold uppercase mb-2">
-                    <CheckCircle2 size={16} /> Case {idx + 1}
+                <div key={idx} className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 shadow-xl hover:border-[#D4AF37]/50 transition-all">
+                  <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-mono font-bold uppercase mb-2">
+                    <CheckCircle2 size={15} /> Case 0{idx + 1}
                   </div>
-                  <h4 className="text-base font-bold text-[#EAEAEA] mb-2">{item.title}</h4>
+                  <h4 className="text-base font-bold text-[#EAEAEA] mb-2 group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
                   <p className="text-xs text-[#9CA3AF] leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -836,15 +836,15 @@ export const Home = () => {
             <h3 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight">Client Trust & Testimonials</h3>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-[#181A1E] border border-[#333] p-10 relative flex flex-col justify-between rounded-xl">
-                <Quote className="text-[#2A2E35] w-14 h-14 absolute top-6 right-6 pointer-events-none" />
-                <p className="text-[#EAEAEA] text-base leading-relaxed mb-8 relative z-10 italic">
+              <div key={idx} className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 sm:p-10 relative flex flex-col justify-between shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+                <Quote className="text-[#2A2E35] w-14 h-14 absolute top-6 right-6 pointer-events-none group-hover:text-[#D4AF37]/20 transition-colors" />
+                <p className="text-[#EAEAEA] text-sm sm:text-base leading-relaxed mb-8 relative z-10 italic font-light">
                   "{t.content}"
                 </p>
-                <div className="flex items-center gap-4 border-t border-[#333] pt-6">
-                  <div className="w-12 h-12 bg-[#121417] border border-[#D4AF37] rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D4AF37]">
+                <div className="flex items-center gap-4 border-t border-[#2D3137] pt-6">
+                  <div className="w-12 h-12 bg-[#121417] border-2 border-[#D4AF37]/60 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D4AF37] text-sm shadow-md">
                     {t.avatarUrl ? (
                       <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
                     ) : (
@@ -884,17 +884,17 @@ export const Home = () => {
               <Link 
                 key={i} 
                 to={`/insights/${article.slug || 'innovations-high-strength-c80-concrete'}`} 
-                className="flex flex-col justify-between p-6 bg-[#121417] border border-[#333] hover:border-[#D4AF37]/50 transition-all group rounded-xl"
+                className="flex flex-col justify-between p-6 rounded-2xl bg-[#121417] border border-[#333]/80 hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.08)]"
               >
                 <div>
-                  <div className="p-3 bg-[#181A1E] text-[#D4AF37] border border-[#333] w-max mb-4 rounded">
+                  <div className="p-3 bg-[#181A1E] text-[#D4AF37] border border-[#333] w-max mb-4 rounded-xl shadow-sm">
                     <FileText size={20} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#D4AF37] tracking-widest block mb-2">{article.category} • {article.date || 'Oct 2026'}</span>
                   <h5 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-4">{article.title}</h5>
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1 pt-4 border-t border-[#222]">
-                  Read Technical Paper <ArrowUpRight size={12} />
+                  Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </Link>
             ))}

@@ -40,59 +40,65 @@ export const InsightsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
         <div className="mb-16 border-b border-[#333] pb-10">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+            </span>
             Technical Knowledge & Publications
-          </span>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
-            Engineering <span className="text-[#D4AF37]">Insights.</span>
+          </div>
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Insights.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-lg max-w-3xl leading-relaxed">
+          <p className="text-[#9CA3AF] text-base lg:text-lg max-w-3xl leading-relaxed">
             Technical papers, industry notes, code analysis, and design methodology articles published for structural engineering professionals and project developers.
           </p>
         </div>
 
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Articles Grid (Alazar Bento 3-Col Grid) */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((item) => (
             <Link
               key={item.id}
               to={`/insights/${item.slug || 'innovations-high-strength-c80-concrete'}`}
-              className="bg-[#1E2125] border border-[#333] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group cursor-pointer"
+              className="rounded-2xl bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.08)]"
             >
               <div>
-                <div className="aspect-[16/10] bg-[#121417] overflow-hidden border-b border-[#333] relative">
+                <div className="aspect-[16/10] bg-[#141619] overflow-hidden border-b border-[#2D3137] relative">
                   {item.imageUrl && (
-                    <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
+                    <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover grayscale opacity-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                   )}
-                  <span className="absolute top-4 left-4 bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#121417]/80 via-transparent to-transparent"></div>
+                  <span className="absolute top-4 left-4 rounded-full bg-[#121417]/85 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-md">
                     {item.category}
                   </span>
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center gap-4 text-[10px] font-mono text-[#9CA3AF] mb-3 uppercase tracking-wider">
+                  <div className="flex items-center gap-3 text-[10px] font-mono text-[#9CA3AF] mb-3 uppercase tracking-wider">
                     <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D4AF37]" /> {item.publishedAt}</span>
+                    <span>·</span>
                     <span className="flex items-center gap-1"><Clock size={12} className="text-[#D4AF37]" /> {item.readTime}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3">
+                  <h3 className="text-lg font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs text-[#9CA3AF] leading-relaxed">
+                  <p className="text-xs text-[#9CA3AF] leading-relaxed line-clamp-3">
                     {item.excerpt}
                   </p>
                 </div>
               </div>
 
-              <div className="p-6 pt-0">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] group-hover:text-white transition-colors flex items-center gap-1">
-                  Read Technical Paper <ArrowUpRight size={14} />
+              <div className="p-6 pt-0 border-t border-[#2D3137]/60 mt-4">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] group-hover:text-white transition-colors flex items-center gap-1 pt-4">
+                  Read Technical Paper <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </div>
             </Link>

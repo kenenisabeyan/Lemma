@@ -56,33 +56,37 @@ export const FaqPage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417]">
       <div className="max-w-4xl mx-auto px-6">
         
         {/* Header */}
         <div className="mb-14 border-b border-[#333] pb-10 text-center">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+            </span>
             Client Education & FAQs
-          </span>
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
-            Understanding Structural <span className="text-[#D4AF37]">Engineering.</span>
+          </div>
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+            Understanding Structural <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Engineering.</span>
           </h1>
           <p className="text-[#9CA3AF] text-base max-w-2xl mx-auto leading-relaxed">
             Essential questions answered in clear, plain language to clarify engineering processes, building safety standards, and project timelines for clients and developers.
           </p>
         </div>
 
-        {/* Filter & Search Bar */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8">
-          <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+        {/* Filter & Search Bar (Alazar rounded pill bar) */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+          <div className="flex flex-wrap gap-2 w-full sm:w-auto items-center">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider transition-all border ${
+                className={`rounded-full px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
-                    : 'bg-[#181A1E] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
+                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
                 }`}
               >
                 {cat}
@@ -91,39 +95,44 @@ export const FaqPage = () => {
           </div>
 
           <div className="relative w-full sm:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
             <input
               type="text"
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#181A1E] border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] pl-9 pr-4 py-2 outline-none font-mono"
+              className="w-full bg-[#121417] rounded-full border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors"
             />
           </div>
         </div>
 
-        {/* Accordion List */}
+        {/* Accordion List (Alazar Bento Cards) */}
         <div className="flex flex-col gap-4 mb-16">
           {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={faq.id || index} className="bg-[#1E2125] border border-[#333] overflow-hidden transition-colors hover:border-[#D4AF37]/40">
+              <div 
+                key={faq.id || index} 
+                className="rounded-2xl bg-[#181A1E] border border-[#333]/80 overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/50 shadow-md"
+              >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full p-6 text-left font-bold text-base text-[#EAEAEA] hover:text-[#D4AF37] flex justify-between items-center gap-4 transition-colors"
                 >
                   <span className="flex items-center gap-3">
-                    <HelpCircle className="text-[#D4AF37] shrink-0 w-5 h-5" />
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#121417] border border-[#D4AF37]/30 text-[#D4AF37]">
+                      <HelpCircle size={18} />
+                    </span>
                     {faq.question}
                   </span>
-                  <ChevronDown size={20} className={`text-[#D4AF37] transition-transform shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={20} className={`text-[#D4AF37] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-sm text-[#9CA3AF] leading-relaxed border-t border-[#2D3137] bg-[#121417]/60">
-                    <p className="mb-3">{faq.answer}</p>
-                    <span className="text-[10px] font-mono uppercase text-[#D4AF37] border border-[#D4AF37]/30 px-2 py-0.5">
-                      Category: {faq.category}
+                  <div className="px-6 pb-6 pt-2 text-sm text-[#9CA3AF] leading-relaxed border-t border-[#2D3137] bg-[#121417]/40 animate-in fade-in duration-200">
+                    <p className="mb-4 leading-relaxed">{faq.answer}</p>
+                    <span className="rounded-full text-[10px] font-mono uppercase text-[#D4AF37] bg-[#181A1E] border border-[#D4AF37]/30 px-3 py-1">
+                      Discipline: {faq.category}
                     </span>
                   </div>
                 )}
@@ -133,15 +142,17 @@ export const FaqPage = () => {
         </div>
 
         {/* Still have questions banner */}
-        <div className="bg-[#181A1E] border border-[#333] p-8 text-center">
-          <MessageSquare className="w-10 h-10 text-[#D4AF37] mx-auto mb-3" />
+        <div className="rounded-2xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 text-center shadow-2xl">
+          <div className="flex size-14 items-center justify-center rounded-2xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] mx-auto mb-4 shadow-md">
+            <MessageSquare size={24} />
+          </div>
           <h3 className="text-xl font-bold text-[#EAEAEA] mb-2">Have a Question About Your Specific Structural Plan?</h3>
-          <p className="text-xs text-[#9CA3AF] max-w-lg mx-auto mb-6">
+          <p className="text-xs text-[#9CA3AF] max-w-lg mx-auto mb-6 leading-relaxed">
             Every building geometry and soil condition presents unique physics. Reach out directly for preliminary structural feasibility review.
           </p>
           <button
             onClick={() => navigate('/contact')}
-            className="bg-[#D4AF37] text-[#121417] px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all inline-flex items-center gap-2"
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] inline-flex items-center gap-2"
           >
             Inquire About Your Project <ArrowUpRight size={14} />
           </button>
