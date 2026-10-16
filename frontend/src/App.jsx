@@ -6,6 +6,7 @@ import { useAuth } from './hooks/useAuth';
 // Public Layout
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import { FloatingDock } from './components/layout/FloatingDock';
 
 // Public Pages
 import { Home } from './pages/public/Home';
@@ -53,10 +54,30 @@ const ProtectedRoute = ({ children }) => {
 
 // Layout Wrapper for Public Pages
 const PublicLayout = ({ children }) => {
+  const [scrollProgress, setScrollProgress] = React.useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = windowHeight > 0 ? totalScroll / windowHeight : 0;
+      setScrollProgress(scroll);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
+      {/* Top Reading Progress Bar (like alazar.dev) */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] pointer-events-none transition-transform duration-75 ease-out shadow-[0_0_10px_rgba(212,175,55,0.7)]"
+        style={{ transform: `scaleX(${scrollProgress})` }}
+      />
       <Navbar />
       <main>{children}</main>
+      <FloatingDock />
       <Footer />
     </>
   );

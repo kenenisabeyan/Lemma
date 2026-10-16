@@ -43,52 +43,59 @@ export const ServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
         <div className="mb-16 border-b border-[#333] pb-10">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+            </span>
             Scope of Engineering Practice
-          </span>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
-            Structural <span className="text-[#D4AF37]">Services.</span>
+          </div>
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+            Structural <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Services.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-lg max-w-3xl leading-relaxed">
+          <p className="text-[#9CA3AF] text-base lg:text-lg max-w-3xl leading-relaxed">
             Delivering high-performance structural engineering across all phases of development, from initial feasibility and FEA numerical modeling to site quality assurance.
           </p>
         </div>
 
-        {/* Services List */}
-        <div className="flex flex-col gap-12 mb-20">
+        {/* Services List (Alazar Bento Card modules) */}
+        <div className="flex flex-col gap-8 mb-20">
           {servicesList.map((srv, index) => {
             const features = typeof srv.features === 'string'
               ? JSON.parse(srv.features || '[]')
               : (srv.features || []);
 
             return (
-              <div key={srv.id || index} className="bg-[#1E2125] border border-[#333] p-8 lg:p-12 hover:border-[#D4AF37]/40 transition-colors">
+              <div 
+                key={srv.id || index} 
+                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 lg:p-10 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl hover:shadow-[0_15px_35px_rgba(212,175,55,0.08)]"
+              >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-14 h-14 bg-[#121417] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center shrink-0">
+                    <div className="w-14 h-14 rounded-2xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-md">
                       <Building2 size={28} />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block mb-1">
-                        Service Module 0{index + 1}
+                      <span className="inline-block rounded-full bg-[#121417] border border-[#D4AF37]/30 px-2.5 py-0.5 text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest mb-2">
+                        Module 0{index + 1}
                       </span>
-                      <h3 className="text-2xl font-bold text-[#EAEAEA]">{srv.title}</h3>
+                      <h3 className="text-2xl font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors">{srv.title}</h3>
                     </div>
                   </div>
 
                   <div className="lg:col-span-8 flex flex-col gap-6">
-                    <p className="text-[#9CA3AF] text-base leading-relaxed">{srv.description || srv.summary}</p>
+                    <p className="text-[#9CA3AF] text-sm lg:text-base leading-relaxed">{srv.description || srv.summary}</p>
 
-                    <div className="grid sm:grid-cols-2 gap-4 bg-[#121417] p-6 border border-[#2D3137]">
+                    <div className="grid sm:grid-cols-2 gap-3.5 bg-[#121417] p-5 rounded-xl border border-[#2D3137]">
                       {features.map((feat, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-2.5">
+                          <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0 mt-0.5" />
                           <span className="text-xs text-[#EAEAEA] leading-snug">{feat}</span>
                         </div>
                       ))}
@@ -97,7 +104,7 @@ export const ServicesPage = () => {
                     <div className="pt-2">
                       <button
                         onClick={() => navigate('/contact')}
-                        className="bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-bold tracking-widest uppercase hover:bg-white transition-all inline-flex items-center gap-2"
+                        className="rounded-full bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] inline-flex items-center gap-2"
                       >
                         Request Service Consultation <ArrowUpRight size={14} />
                       </button>

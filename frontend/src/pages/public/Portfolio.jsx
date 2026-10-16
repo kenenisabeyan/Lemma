@@ -87,30 +87,31 @@ export const Portfolio = () => {
         
         {/* Header */}
         <div className="mb-12 border-b border-[#333] pb-10">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-4 py-1.5 text-[#D4AF37] text-xs font-mono font-bold tracking-[0.2em] uppercase mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Featured Engineering Practice
-          </span>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
+          </div>
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
             Project <span className="text-[#D4AF37]">Portfolio.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-lg max-w-3xl leading-relaxed">
-            Explore detailed structural case studies across high-rise skyscrapers, long-span bridge infrastructure, and seismic retrofits.
+          <p className="text-[#9CA3AF] text-base lg:text-lg max-w-3xl leading-relaxed">
+            Explore detailed structural case studies across high-rise skyscrapers, long-span bridge infrastructure, and seismic retrofits — complete with finite element modeling notes and calculated results.
           </p>
         </div>
 
-        {/* Filter Controls Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-6 mb-12 bg-[#1E2125] p-4 border border-[#333]">
+        {/* Filter Controls Bar (Alazar-style rounded pill bar) */}
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           
           {/* Category Tabs */}
-          <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+          <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
             {PROJECT_CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors border ${
+                className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
-                    : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:border-[#D4AF37]'
+                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
+                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
                 }`}
               >
                 {cat}
@@ -120,13 +121,13 @@ export const Portfolio = () => {
 
           {/* Search Input */}
           <div className="relative min-w-[260px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF] w-4 h-4" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] w-4 h-4" />
             <input
               type="text"
-              placeholder="Search projects..."
+              placeholder="Search by tower, bridge, system..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none"
+              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors"
             />
           </div>
 
@@ -134,8 +135,8 @@ export const Portfolio = () => {
 
         {/* Projects Grid */}
         {filteredProjects.length === 0 ? (
-          <div className="py-20 text-center bg-[#1E2125] border border-[#333]">
-            <p className="text-[#9CA3AF] text-sm uppercase tracking-wider">No projects match the selected criteria.</p>
+          <div className="py-20 text-center bg-[#181A1E] rounded-2xl border border-[#333]">
+            <p className="text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">No engineering projects match the selected criteria.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

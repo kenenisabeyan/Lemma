@@ -46,207 +46,236 @@ export const Contact = () => {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 relative overflow-hidden">
-      
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[140px] pointer-events-none"></div>
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('consult@alexandre-structural.com');
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 relative overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
+      
+      {/* Background Radial Glow (like alazar.dev) */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#D4AF37]/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
-            Direct Consultation Channel
-          </span>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
-            Request a <span className="text-[#D4AF37]">Consultation.</span>
+        <div className="mb-14 text-center max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+            </span>
+            Available for Select Consultation & Advisory
+          </div>
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+            Have Questions? <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Get in Touch.</span>
           </h1>
           <p className="text-[#9CA3AF] text-base leading-relaxed">
-            Available for new structural engineering projects, high-rise wind & seismic peer reviews, structural evaluations, and technical advisory.
+            Available for new structural engineering design, high-rise wind & seismic peer reviews, structural health evaluations, and forensic advisory.
           </p>
         </div>
 
-        {/* Grid Container */}
-        <div className="max-w-5xl mx-auto grid md:grid-cols-5 border border-[#333] bg-[#1E2125] shadow-2xl">
+        {/* 3-Bento Contact Quick Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           
-          {/* Left Column: Direct Office Contact */}
-          <div className="md:col-span-2 bg-[#17191D] p-10 border-b md:border-b-0 md:border-r border-[#333] flex flex-col justify-between">
-            <div>
-              <h3 className="text-xl font-bold text-[#EAEAEA] mb-8 uppercase tracking-wide flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#D4AF37]"></span> Office Details
-              </h3>
-
-              <div className="flex flex-col gap-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#121417] border border-[#333] text-[#D4AF37] shrink-0">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <p className="text-[#9CA3AF] text-[10px] uppercase tracking-widest mb-1 font-mono">Telephone</p>
-                    <p className="text-[#EAEAEA] text-sm font-semibold">+1 (555) 019-8472</p>
-                    <p className="text-[11px] text-[#9CA3AF]">Mon - Fri: 8:00 AM - 6:00 PM EST</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#121417] border border-[#333] text-[#D4AF37] shrink-0">
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <p className="text-[#9CA3AF] text-[10px] uppercase tracking-widest mb-1 font-mono">Official Email</p>
-                    <p className="text-[#EAEAEA] text-sm font-semibold">consult@alexandre-structural.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#121417] border border-[#333] text-[#D4AF37] shrink-0">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <p className="text-[#9CA3AF] text-[10px] uppercase tracking-widest mb-1 font-mono">Headquarters</p>
-                    <p className="text-[#EAEAEA] text-sm font-semibold">
-                      Suite 400, Iron Building<br />
-                      Metropolis City, NY 10001
-                    </p>
-                  </div>
-                </div>
+          {/* Card 1: Email */}
+          <div className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-110 transition-transform">
+                <Mail size={22} />
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
+                <p className="text-xs text-[#9CA3AF]">Inquiries & Drawings</p>
               </div>
             </div>
-
-            <div className="pt-8 border-t border-[#2A2E35] mt-8 text-xs text-[#9CA3AF]">
-              <p className="flex items-center gap-1.5 text-[#D4AF37]">
-                <ShieldCheck size={16} /> Confidentiality Assured
-              </p>
-              <p className="mt-1">All drawings and project data shared are protected under standard NDA principles.</p>
+            <div className="pt-3 border-t border-[#2D3137] flex items-center justify-between">
+              <span className="text-xs font-mono text-[#9CA3AF] truncate mr-2">consult@alexandre-structural.com</span>
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] hover:text-white px-2 py-1 rounded bg-[#121417] border border-[#333] shrink-0"
+              >
+                {copiedEmail ? 'Copied!' : 'Copy'}
+              </button>
             </div>
           </div>
 
-          {/* Right Column: Interactive Consultation Request Form */}
-          <div className="md:col-span-3 p-10">
-            <h3 className="text-xl font-bold text-[#EAEAEA] mb-8 uppercase tracking-wide">
-              Consultation Form
-            </h3>
-
-            {successMsg && (
-              <div className="mb-6 p-4 bg-emerald-950/40 border border-emerald-500/50 text-emerald-400 text-xs font-semibold flex items-center gap-2">
-                <CheckCircle2 size={18} /> {successMsg}
+          {/* Card 2: Phone */}
+          <a
+            href="tel:+15550198472"
+            className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-110 transition-transform">
+                <Phone size={22} />
               </div>
-            )}
-
-            {errorMsg && (
-              <div className="mb-6 p-4 bg-red-950/40 border border-red-500/50 text-red-400 text-xs font-semibold flex items-center gap-2">
-                <AlertCircle size={18} /> {errorMsg}
+              <div>
+                <h4 className="text-sm font-bold text-[#EAEAEA]">Call Direct</h4>
+                <p className="text-xs text-[#9CA3AF]">Mon - Fri: 8am - 6pm EST</p>
               </div>
-            )}
+            </div>
+            <div className="pt-3 border-t border-[#2D3137] flex items-center justify-between">
+              <span className="text-xs font-mono text-[#9CA3AF]">+1 (555) 019-8472</span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37]">Call Now →</span>
+            </div>
+          </a>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="e.g. Sarah Jenkins"
-                    className="w-full bg-[#121417] border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="s.jenkins@architech.com"
-                    className="w-full bg-[#121417] border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
-                  />
-                </div>
+          {/* Card 3: Office */}
+          <div className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col justify-between shadow-xl">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
+                <MapPin size={22} />
               </div>
-
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="+1 (555) 000-0000"
-                    className="w-full bg-[#121417] border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
-                    Project Type *
-                  </label>
-                  <select
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
-                  >
-                    <option value="Commercial High-Rise">Commercial High-Rise</option>
-                    <option value="Infrastructure & Bridges">Infrastructure & Bridges</option>
-                    <option value="Special Structure / Dome">Special Structure / Dome</option>
-                    <option value="Seismic Retrofit Audit">Seismic Retrofit Audit</option>
-                    <option value="Peer Review / Value Engineering">Peer Review / Value Engineering</option>
-                    <option value="Forensic Structural Evaluation">Forensic Structural Evaluation</option>
-                  </select>
-                </div>
+              <div>
+                <h4 className="text-sm font-bold text-[#EAEAEA]">Office Headquarters</h4>
+                <p className="text-xs text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
               </div>
+            </div>
+            <div className="pt-3 border-t border-[#2D3137]">
+              <span className="text-xs text-[#9CA3AF]">Suite 400, Iron Building, NY 10001</span>
+            </div>
+          </div>
 
+        </div>
+
+        {/* Consultation Request Form Container */}
+        <div className="rounded-2xl border border-[#333]/80 bg-[#181A1E] p-8 lg:p-12 shadow-2xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-[#2D3137]">
+            <div>
+              <h3 className="text-2xl font-bold text-[#EAEAEA] mb-1">
+                Structural Consultation Inquiry
+              </h3>
+              <p className="text-xs text-[#9CA3AF]">
+                Provide your project specifications or scope below for a confidential engineering review.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] bg-[#121417] px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30">
+              <ShieldCheck size={14} /> NDA Confidentiality Assured
+            </div>
+          </div>
+
+          {successMsg && (
+            <div className="mb-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-400 text-xs font-semibold flex items-center gap-2">
+              <CheckCircle2 size={18} /> {successMsg}
+            </div>
+          )}
+
+          {errorMsg && (
+            <div className="mb-6 p-4 rounded-xl bg-red-950/40 border border-red-500/50 text-red-400 text-xs font-semibold flex items-center gap-2">
+              <AlertCircle size={18} /> {errorMsg}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+            <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
-                  Subject / Project Name
+                  Full Name *
                 </label>
                 <input
                   type="text"
-                  name="subject"
-                  value={formData.subject}
+                  name="name"
+                  required
+                  value={formData.name}
                   onChange={handleChange}
-                  placeholder="e.g. Seismic lateral bracing audit for 20-story building"
-                  className="w-full bg-[#121417] border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  placeholder="e.g. Sarah Jenkins, AIA"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
 
               <div>
                 <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
-                  Structural Project Requirements *
+                  Email Address *
                 </label>
-                <textarea
-                  name="message"
+                <input
+                  type="email"
+                  name="email"
                   required
-                  rows="4"
-                  value={formData.message}
+                  value={formData.email}
                   onChange={handleChange}
-                  placeholder="Describe building height, structural materials (concrete/steel), site location, timeline, or key technical challenges..."
-                  className="w-full bg-[#121417] border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors resize-none"
-                ></textarea>
+                  placeholder="s.jenkins@architech.com"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                />
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+1 (555) 000-0000"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                />
               </div>
 
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all w-full flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.2)]"
-              >
-                {loading ? 'Submitting Inquiry...' : 'Send Secure Inquiry'} <Send size={14} />
-              </button>
-            </form>
-          </div>
+              <div>
+                <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                  Project Classification *
+                </label>
+                <select
+                  name="projectType"
+                  value={formData.projectType}
+                  onChange={handleChange}
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                >
+                  <option value="Commercial High-Rise">Commercial High-Rise</option>
+                  <option value="Infrastructure & Bridges">Infrastructure & Bridges</option>
+                  <option value="Special Structure / Dome">Special Structure / Dome</option>
+                  <option value="Seismic Retrofit Audit">Seismic Retrofit Audit</option>
+                  <option value="Peer Review / Value Engineering">Peer Review / Value Engineering</option>
+                  <option value="Forensic Structural Evaluation">Forensic Structural Evaluation</option>
+                </select>
+              </div>
+            </div>
 
+            <div>
+              <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                Subject / Project Name
+              </label>
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="e.g. Seismic lateral bracing audit for 20-story building"
+                className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+              />
+            </div>
+
+            <div>
+              <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                Structural Project Requirements *
+              </label>
+              <textarea
+                name="message"
+                required
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Describe building height, structural materials (concrete/steel), site location, timeline, or key technical challenges..."
+                className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all w-full flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            >
+              {loading ? 'Submitting Inquiry...' : 'Send Secure Consultation Inquiry'} <Send size={14} />
+            </button>
+          </form>
         </div>
 
       </div>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Building2, 
@@ -21,7 +21,15 @@ import {
   Compass,
   Hammer,
   Activity,
-  ArrowDown
+  ArrowDown,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Copy,
+  TrendingDown,
+  Cpu,
+  Layers3
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { StatCounter } from '../../components/engineering/StatCounter';
@@ -35,6 +43,24 @@ export const Home = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [activeEducationTab, setActiveEducationTab] = useState('roles');
   const [activeLoadPath, setActiveLoadPath] = useState('gravity');
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  // Dynamic Rotating Pill Text (like alazar.dev)
+  const rotatingDisciplines = [
+    'High-Rise Commercial Towers',
+    'Seismic Damping Systems',
+    'Post-Tensioned Concrete',
+    'Long-Span Cable Bridges',
+    'Specialty Space Frame Domes'
+  ];
+  const [disciplineIndex, setDisciplineIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDisciplineIndex((prev) => (prev + 1) % rotatingDisciplines.length);
+    }, 3200);
+    return () => clearInterval(timer);
+  }, []);
 
   // Fetch live settings and projects from API with fallback
   const { data: settingsData } = useFetch('/settings', {
@@ -128,71 +154,165 @@ export const Home = () => {
     { title: 'Optimizing Wind Damping Outrigger Systems in 50+ Story Skyscrapers', slug: 'optimizing-wind-damping-outrigger-systems', category: 'High-Rise Analysis', date: 'Aug 15, 2026' }
   ];
 
+  // Marquee tools and building codes (alazar.dev style marquee)
+  const techMarquee = [
+    'ETABS v21', 'SAP2000', 'REVIT Structure', 'SAFE Concrete', 'Tekla Structures', 'ANSYS Mechanical', 'RISA-3D', 'AutoCAD 2025',
+    'IBC 2024', 'ASCE 7-22', 'ACI 318-19', 'AISC 360-22', 'FEMA P-58', 'Eurocode 2 & 3'
+  ];
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('consult@alexandre-structural.com');
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-20">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-20 relative selection:bg-[#D4AF37] selection:text-[#121417]">
       
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION (NAME, PE/SE TITLE, VALUE STATEMENT, CTAS, INTRO VIDEO) */}
+      {/* 1. HERO SECTION (ALAZAR.DEV MODERN AESTHETIC + DARK GOLD PALETTE)          */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] flex items-center py-16 overflow-hidden bg-[#121417] border-b border-[#222]">
-        <EngineeringCanvas />
+      <section className="relative min-h-[95vh] flex items-center py-20 overflow-hidden bg-[#121417] border-b border-[#222]">
+        
+        {/* Animated Aurora Glow Ambience (like alazar.dev) */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/15 blur-[140px] animate-aurora-drift"></div>
+          <div className="absolute bottom-0 right-[6%] h-[48vh] w-[48vh] rounded-full bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2"></div>
+        </div>
 
-        {/* Blueprint line grid background overlay */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+        {/* Blueprint line grid overlay */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-15 pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Left Vertical Coordinate / Tag Badge (like alazar.dev) */}
+        <div aria-hidden="true" className="pointer-events-none absolute top-1/2 left-5 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex z-20">
+          <span className="h-20 w-px bg-gradient-to-b from-transparent to-[#D4AF37]/40"></span>
+          <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#9CA3AF] [writing-mode:vertical-rl]">
+            Engineering Portfolio — 2026
+          </span>
+          <span className="h-20 w-px bg-gradient-to-b from-[#D4AF37]/40 to-transparent"></span>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:pl-16 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Text Column */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col gap-6"
           >
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-4 py-1.5 text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase w-max">
-              <HardHat size={14} /> Alexandre Techane • Principal Structural Engineer PE, SE
+            {/* Top Subtitle with Dot */}
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#9CA3AF]">
+              <span>Principal Structural Engineer</span>
+              <span className="text-[#D4AF37] font-bold">·</span>
+              <span className="text-[#EAEAEA] font-semibold">PE & SE Licensed</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#EAEAEA] leading-[1.08] tracking-tight">
-              Precision in <br />
-              Every <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Structure.</span>
+            {/* Main Name Heading */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#EAEAEA] leading-[1.05] tracking-tight">
+              Alexandre <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Techane</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-[#9CA3AF] max-w-xl leading-relaxed border-l-2 border-[#D4AF37] pl-4">
-              {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
+            {/* Dynamic Rotating Pill Box (signature alazar.dev feature adapted to engineering) */}
+            <div className="flex flex-wrap items-center gap-3 text-lg sm:text-2xl text-[#9CA3AF]">
+              <span>I design & calculate</span>
+              <span className="relative inline-flex items-center">
+                <span className="relative overflow-hidden rounded-md border border-[#D4AF37]/50 bg-[#181A1E] px-4 py-1.5 font-mono text-sm sm:text-base font-bold text-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={disciplineIndex}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -15 }}
+                      transition={{ duration: 0.3 }}
+                      className="inline-block whitespace-nowrap"
+                    >
+                      {rotatingDisciplines[disciplineIndex]}
+                    </motion.span>
+                  </AnimatePresence>
+                </span>
+              </span>
+            </div>
+
+            {/* Concise Value Statement */}
+            <p className="max-w-xl text-base sm:text-lg text-[#9CA3AF] leading-relaxed">
+              {settings.heroBio || 'Turning architectural ambition into resilient, code-compliant physical reality — from initial finite element analysis to high-rise completion.'}
             </p>
 
+            {/* Social / Contact Pill Buttons with Tooltips (like alazar.dev) */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="mailto:consult@alexandre-structural.com"
+                aria-label="Email Engineer"
+                className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-[#333] bg-[#181A1E] hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417] text-[#D4AF37] transition-all duration-300 shadow-md"
+              >
+                <Mail size={16} />
+                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#121417] border border-[#333] px-2 py-0.5 text-[10px] font-mono text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">
+                  Email Inquiries
+                </span>
+              </a>
+
+              <a
+                href="tel:+15550198472"
+                aria-label="Phone Consultation"
+                className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-[#333] bg-[#181A1E] hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417] text-[#D4AF37] transition-all duration-300 shadow-md"
+              >
+                <Phone size={16} />
+                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#121417] border border-[#333] px-2 py-0.5 text-[10px] font-mono text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">
+                  Call Office
+                </span>
+              </a>
+
+              <button
+                onClick={handleCopyEmail}
+                className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-[#333] bg-[#181A1E] hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417] text-[#D4AF37] transition-all duration-300 shadow-md"
+                title="Copy Email"
+              >
+                <Copy size={16} />
+                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#121417] border border-[#333] px-2 py-0.5 text-[10px] font-mono text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">
+                  {copiedEmail ? 'Copied!' : 'Copy Email Address'}
+                </span>
+              </button>
+
+              <div className="flex items-center gap-2 pl-3 border-l border-[#333] text-xs font-mono text-[#9CA3AF]">
+                <MapPin size={13} className="text-[#D4AF37]" />
+                <span>New York, NY · Available Worldwide</span>
+              </div>
+            </div>
+
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <button
                 onClick={() => navigate('/contact')}
-                className="bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] flex items-center justify-center gap-2"
+                className="bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center justify-center gap-2"
               >
-                Hire Me / Request Consultation <ArrowUpRight size={16} />
+                Hire Me / Consultation <ArrowUpRight size={16} />
               </button>
               <button
                 onClick={() => navigate('/projects')}
-                className="border border-[#333] bg-[#1E2125] text-[#EAEAEA] px-8 py-4 text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all flex items-center justify-center gap-2"
+                className="border border-[#333] bg-[#181A1E] text-[#EAEAEA] px-8 py-3.5 text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all flex items-center justify-center gap-2"
               >
                 View Project Portfolio <ChevronRight size={16} />
               </button>
             </div>
 
-            {/* Micro Badges */}
-            <div className="flex flex-wrap gap-6 pt-4 border-t border-[#222] text-xs text-[#9CA3AF]">
-              <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#D4AF37]" /> IBC 2024 & ASCE 7 Code Authority</span>
-              <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#D4AF37]" /> Non-Linear 3D Finite Element Modeling</span>
+            {/* License info bar */}
+            <div className="flex flex-wrap gap-4 pt-4 border-t border-[#222] font-mono text-[11px] text-[#9CA3AF]">
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={13} className="text-[#D4AF37]" /> PE #84729-NY</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={13} className="text-[#D4AF37]" /> SE #92041-CA</span>
+              <span className="flex items-center gap-1.5 text-[#D4AF37] font-semibold"><ShieldCheck size={13} /> 100% Safety Compliance</span>
             </div>
           </motion.div>
 
-          {/* Right Video / Media Intro Card Column */}
+          {/* Right Video / Profile 3D Tilt Card (like alazar.dev hero figure) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative group p-2 border border-[#333] bg-[#1E2125]">
-              {/* Corner Accents */}
+            <div className="relative group p-2.5 border border-[#333] bg-[#181A1E] rounded-xl shadow-2xl">
+              {/* Corner Coordinate Crosshairs */}
               <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37]"></div>
               <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37]"></div>
               <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37]"></div>
@@ -200,22 +320,22 @@ export const Home = () => {
 
               <div 
                 onClick={() => setIsVideoModalOpen(true)}
-                className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center group-hover:border-[#D4AF37]/50 transition-all"
+                className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center rounded-lg group-hover:border-[#D4AF37]/50 transition-all"
               >
                 <img 
                   src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
                   alt="Structural Engineering Overview"
-                  className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                  className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
 
                 {/* Play Button Overlay */}
-                <div className="relative z-20 w-16 h-16 rounded-full bg-[#121417]/90 border border-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                <div className="relative z-20 w-16 h-16 rounded-full bg-[#121417]/90 border border-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_25px_rgba(212,175,55,0.45)]">
                   <Play className="text-[#D4AF37] w-6 h-6 ml-1" />
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-center bg-[#121417]/90 p-2.5 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider">
+                <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center bg-[#121417]/90 p-2.5 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider rounded">
                   <span className="flex items-center gap-2 font-mono">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Introduction Video (Editable in CMS)
                   </span>
@@ -229,22 +349,119 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. ABOUT ME SECTION (BIOGRAPHY, LICENSURE, PHILOSOPHY & CV DOWNLOAD)       */}
+      {/* 2. INFINITE MARQUEE TICKER (SIGNATURE ALAZAR.DEV TECH STRIP PATTERN)       */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#181A1E] border-b border-[#333] relative">
+      <section aria-label="Software Stack & Standards" className="border-y border-[#333] bg-[#181A1E]/40 py-4 overflow-hidden">
+        <div className="mx-auto max-w-6xl [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="overflow-hidden">
+            <div className="animate-marquee flex items-center gap-10">
+              {techMarquee.concat(techMarquee).map((tool, idx) => (
+                <span 
+                  key={idx} 
+                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-[#9CA3AF] text-xs uppercase tracking-wider transition-colors hover:text-[#D4AF37]"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/60 group-hover:bg-[#D4AF37]"></span>
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
+      {/*    (ADAPTED FROM ALAZAR.DEV'S SIGNATURE 3-CARD BENTO GRID SECTION)         */}
+      {/* ========================================================================= */}
+      <section className="py-20 bg-[#121417] relative">
+        <div className="max-w-6xl mx-auto px-6">
+          
+          <div className="mx-auto max-w-3xl text-center mb-14">
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#EAEAEA]">
+              Analyze<span className="text-[#D4AF37]">.</span> Calculate<span className="text-[#D4AF37]">.</span> Deliver<span className="text-[#D4AF37]">.</span>
+            </h2>
+            <p className="mt-4 text-[#9CA3AF] text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              Precision structural mechanics and performance-based simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Bento Card 1: High-Rise Modeling */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333] bg-[#181A1E] p-8 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-2 border-dashed border-[#D4AF37]/40 bg-[#121417] shadow-inner mb-6 group-hover:scale-105 transition-transform">
+                <div className="absolute inset-0 rounded-full bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-md"></div>
+                <Building2 size={36} className="text-[#D4AF37] relative z-10" />
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-[#EAEAEA] text-lg mb-2">High-Rise Lateral Stability</h3>
+                <p className="text-xs text-[#9CA3AF] leading-relaxed">
+                  Dual core shear walls, perimeter belt trusses, and aerodynamic wind damping that suppress lateral drift in slender skyscrapers.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest">
+                ETABS · ASCE 7-22 Wind Tunnel
+              </div>
+            </div>
+
+            {/* Bento Card 2: Performance-Based Seismic Design */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333] bg-[#181A1E] p-8 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#333] bg-[#121417] shadow-inner mb-6 group-hover:scale-105 transition-transform">
+                <div className="absolute inset-0 rounded-full bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-md"></div>
+                <Activity size={36} className="text-[#D4AF37] relative z-10" />
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-[#EAEAEA] text-lg mb-2">Non-Linear Seismic Modeling</h3>
+                <p className="text-xs text-[#9CA3AF] leading-relaxed">
+                  Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments compliant with FEMA P-58.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest">
+                SAP2000 · Base Isolation
+              </div>
+            </div>
+
+            {/* Bento Card 3: Value Engineering & Quantity Optimization */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333] bg-[#181A1E] p-8 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#333] bg-[#121417] shadow-inner mb-6 group-hover:scale-105 transition-transform">
+                <div className="text-center">
+                  <span className="text-2xl font-black text-[#D4AF37] font-mono block">25%</span>
+                  <span className="text-[9px] uppercase tracking-wider font-mono text-[#9CA3AF]">Savings</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-[#EAEAEA] text-lg mb-2">Value Engineering & Cost Optimization</h3>
+                <p className="text-xs text-[#9CA3AF] leading-relaxed">
+                  Eliminating unnecessary concrete mass and steel tonnage through post-tensioning and optimized finite element load redistribution.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest">
+                Peer Review · Quantity Audits
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. ABOUT ME SECTION                                                       */}
+      {/* ========================================================================= */}
+      <section className="py-24 bg-[#181A1E] border-t border-b border-[#333] relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5">
-              <div className="relative border border-[#333] p-2 bg-[#121417]">
-                <div className="aspect-[4/5] bg-[#121417] overflow-hidden">
+              <div className="relative border border-[#333] p-2 bg-[#121417] rounded-xl shadow-2xl">
+                <div className="aspect-[4/5] bg-[#121417] overflow-hidden rounded-lg">
                   <img
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
                     alt="Alexandre Senior Structural Engineer"
                     className="w-full h-full object-cover grayscale opacity-85 hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 bg-[#121417]/95 border border-[#D4AF37] p-4 text-xs font-mono">
+                <div className="absolute bottom-6 left-6 right-6 bg-[#121417]/95 border border-[#D4AF37] p-4 text-xs font-mono rounded-lg">
                   <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
                     <span>PE #84729-NY</span>
                     <span>SE #92041-CA</span>
@@ -256,15 +473,15 @@ export const Home = () => {
 
             <div className="lg:col-span-7 flex flex-col gap-6">
               <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase flex items-center gap-2">
-                <span className="w-6 h-[1px] bg-[#D4AF37]"></span> About Alexandre Techane
+                <span className="w-6 h-[1px] bg-[#D4AF37]"></span> Professional Background
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#EAEAEA] tracking-tight">
-                Engineering Integrity Behind Visionary Architecture.
+                Structural Engineering Behind Visionary Architecture.
               </h2>
 
               <p className="text-[#9CA3AF] text-base leading-relaxed">
-                With over 14 years of specialized practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
+                With over 14 years of specialized structural practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
               </p>
 
               <div className="bg-[#121417] border-l-2 border-[#D4AF37] p-5 text-sm text-[#EAEAEA] italic leading-relaxed">
@@ -272,7 +489,7 @@ export const Home = () => {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center gap-3 bg-[#121417] p-3.5 border border-[#333]">
+                <div className="flex items-center gap-3 bg-[#121417] p-3.5 border border-[#333] rounded-lg">
                   <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-[#EAEAEA] font-bold block">M.S. Structural Engineering</span>
@@ -280,7 +497,7 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 bg-[#121417] p-3.5 border border-[#333]">
+                <div className="flex items-center gap-3 bg-[#121417] p-3.5 border border-[#333] rounded-lg">
                   <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-[#EAEAEA] font-bold block">100% Safety Compliance</span>
@@ -310,7 +527,7 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. EXPERTISE / SERVICES SECTION                                           */}
+      {/* 5. EXPERTISE / SERVICES SECTION                                           */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#121417] relative">
         <div className="max-w-7xl mx-auto px-6">
@@ -328,9 +545,9 @@ export const Home = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((srv, index) => (
-              <div key={index} className="group bg-[#1E2125] border border-[#333] p-8 hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between">
+              <div key={index} className="group bg-[#181A1E] border border-[#333] p-8 hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between rounded-xl">
                 <div>
-                  <div className="w-12 h-12 bg-[#121417] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-[#121417] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-lg">
                     <Building2 size={24} />
                   </div>
                   <h4 className="text-xl font-bold text-[#EAEAEA] mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
@@ -346,9 +563,9 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. STATISTICS ROW                                                         */}
+      {/* 6. STATISTICS ROW                                                         */}
       {/* ========================================================================= */}
-      <section className="py-12 bg-[#1E2125] border-t border-b border-[#333]">
+      <section className="py-12 bg-[#181A1E] border-t border-b border-[#333]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           <StatCounter value={settings.yearsExp || '14+'} label="Years Experience" subtext="PE & SE Certified" />
           <StatCounter value={settings.projectsCount || '180+'} label="Projects Completed" subtext="High-Rise & Infrastructure" />
@@ -358,7 +575,7 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. FEATURED PROJECTS CASE STUDIES                                         */}
+      {/* 7. FEATURED PROJECTS CASE STUDIES                                         */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#121417] relative">
         <div className="max-w-7xl mx-auto px-6">
@@ -383,8 +600,7 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. ENGINEERING EDUCATION: "WHAT STRUCTURAL ENGINEERS DO"                  */}
-      {/*    (DESIGNED SPECIFICALLY FOR NON-ENGINEERS, CLIENTS & RECRUITERS)         */}
+      {/* 8. ENGINEERING EDUCATION: "WHAT STRUCTURAL ENGINEERS DO"                  */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#181A1E] border-t border-b border-[#333] relative">
         <div className="max-w-7xl mx-auto px-6">
@@ -405,7 +621,7 @@ export const Home = () => {
           <div className="flex flex-wrap gap-4 border-b border-[#333] pb-4 mb-10">
             <button
               onClick={() => setActiveEducationTab('roles')}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border ${
+              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border rounded ${
                 activeEducationTab === 'roles'
                   ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
                   : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
@@ -415,7 +631,7 @@ export const Home = () => {
             </button>
             <button
               onClick={() => setActiveEducationTab('loadpath')}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border ${
+              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border rounded ${
                 activeEducationTab === 'loadpath'
                   ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
                   : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
@@ -425,7 +641,7 @@ export const Home = () => {
             </button>
             <button
               onClick={() => setActiveEducationTab('when')}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border ${
+              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border rounded ${
                 activeEducationTab === 'when'
                   ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
                   : 'bg-[#121417] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
@@ -439,9 +655,9 @@ export const Home = () => {
           {activeEducationTab === 'roles' && (
             <div className="grid md:grid-cols-3 gap-6">
               
-              <div className="bg-[#121417] border border-[#333] p-8 relative flex flex-col justify-between">
+              <div className="bg-[#121417] border border-[#333] p-8 rounded-xl flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-[#1E2125] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-[#181A1E] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6 rounded-lg">
                     <Compass size={24} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Spatial Design</span>
@@ -456,12 +672,12 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-[#121417] border-2 border-[#D4AF37] p-8 relative flex flex-col justify-between shadow-[0_0_25px_rgba(212,175,55,0.15)]">
-                <div className="absolute -top-3 right-4 bg-[#D4AF37] text-[#121417] text-[10px] font-extrabold uppercase px-2.5 py-0.5 tracking-wider">
+              <div className="bg-[#121417] border-2 border-[#D4AF37] p-8 rounded-xl relative flex flex-col justify-between shadow-[0_0_25px_rgba(212,175,55,0.15)]">
+                <div className="absolute -top-3 right-4 bg-[#D4AF37] text-[#121417] text-[10px] font-extrabold uppercase px-2.5 py-0.5 tracking-wider rounded">
                   Our Discipline
                 </div>
                 <div>
-                  <div className="w-12 h-12 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-6 rounded-lg">
                     <ShieldCheck size={26} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1">Physics & Stability</span>
@@ -476,9 +692,9 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-[#121417] border border-[#333] p-8 relative flex flex-col justify-between">
+              <div className="bg-[#121417] border border-[#333] p-8 rounded-xl flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-[#1E2125] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-[#181A1E] border border-[#333] text-[#9CA3AF] flex items-center justify-center mb-6 rounded-lg">
                     <Hammer size={24} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Physical Execution</span>
@@ -498,7 +714,7 @@ export const Home = () => {
 
           {/* Tab 2: Load Path Visualization */}
           {activeEducationTab === 'loadpath' && (
-            <div className="bg-[#121417] border border-[#333] p-8 lg:p-12">
+            <div className="bg-[#121417] border border-[#333] p-8 lg:p-12 rounded-xl">
               <div className="flex gap-4 mb-8">
                 <button
                   onClick={() => setActiveLoadPath('gravity')}
@@ -526,27 +742,27 @@ export const Home = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
-                    <div className="bg-[#1E2125] border border-[#333] p-4">
+                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 1</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Floor Slabs</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Receives people & equipment</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#333] p-4">
+                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 2</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Beams & Girders</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Transfers load horizontally</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#333] p-4">
+                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 3</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Columns / Walls</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Channels load downward</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#333] p-4">
+                    <div className="bg-[#181A1E] border border-[#333] p-4 rounded">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">STAGE 4</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Deep Caissons</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Distributes foundation pressure</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#D4AF37]/50 p-4">
+                    <div className="bg-[#181A1E] border border-[#D4AF37]/50 p-4 rounded">
                       <span className="text-[10px] font-mono text-[#D4AF37] block mb-1">FINAL</span>
                       <h5 className="text-xs font-bold text-[#EAEAEA] mb-1">Solid Bedrock</h5>
                       <p className="text-[10px] text-[#9CA3AF]">Permanent reaction support</p>
@@ -561,19 +777,19 @@ export const Home = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                    <div className="bg-[#1E2125] border border-[#333] p-5">
+                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">1. Floor Diaphragms</h5>
                       <p className="text-xs text-[#9CA3AF]">Act as giant horizontal deep beams, collecting wind pressure from exterior facades and channeling it to the core.</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#333] p-5">
+                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">2. Reinforced Concrete Core</h5>
                       <p className="text-xs text-[#9CA3AF]">Heavy shear wall core acts as a vertical cantilever beam that resists overturning moments.</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#333] p-5">
+                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">3. Outrigger Belt Trusses</h5>
                       <p className="text-xs text-[#9CA3AF]">Couples the core to perimeter columns, activating push-pull resistance and damping vibrations.</p>
                     </div>
-                    <div className="bg-[#1E2125] border border-[#333] p-5">
+                    <div className="bg-[#181A1E] border border-[#333] p-5 rounded">
                       <h5 className="text-sm font-bold text-[#D4AF37] mb-2">4. Foundation Tiebacks</h5>
                       <p className="text-xs text-[#9CA3AF]">Deep tension anchors prevent the building from uprooting during extreme ground motions.</p>
                     </div>
@@ -594,7 +810,7 @@ export const Home = () => {
                 { title: 'Seismic Retrofitting', desc: 'Older buildings built before 1994 require seismic damping upgrades to prevent brittle joint fracture during earthquakes.' },
                 { title: 'Third-Party Peer Reviews', desc: 'Developers hire independent engineers to verify calculations and eliminate redundant concrete/steel, saving millions.' }
               ].map((item, idx) => (
-                <div key={idx} className="bg-[#121417] border border-[#333] p-6">
+                <div key={idx} className="bg-[#121417] border border-[#333] p-6 rounded-xl">
                   <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-bold uppercase mb-2">
                     <CheckCircle2 size={16} /> Case {idx + 1}
                   </div>
@@ -609,7 +825,7 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 7. CLIENT TRUST & TESTIMONIALS                                            */}
+      {/* 9. CLIENT TRUST & TESTIMONIALS                                            */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#121417]">
         <div className="max-w-7xl mx-auto px-6">
@@ -622,7 +838,7 @@ export const Home = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-[#1E2125] border border-[#333] p-10 relative flex flex-col justify-between">
+              <div key={idx} className="bg-[#181A1E] border border-[#333] p-10 relative flex flex-col justify-between rounded-xl">
                 <Quote className="text-[#2A2E35] w-14 h-14 absolute top-6 right-6 pointer-events-none" />
                 <p className="text-[#EAEAEA] text-base leading-relaxed mb-8 relative z-10 italic">
                   "{t.content}"
@@ -647,7 +863,7 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 8. LATEST ENGINEERING INSIGHTS                                            */}
+      {/* 10. LATEST ENGINEERING INSIGHTS                                           */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#181A1E] border-t border-[#333]">
         <div className="max-w-7xl mx-auto px-6">
@@ -668,10 +884,10 @@ export const Home = () => {
               <Link 
                 key={i} 
                 to={`/insights/${article.slug || 'innovations-high-strength-c80-concrete'}`} 
-                className="flex flex-col justify-between p-6 bg-[#121417] border border-[#333] hover:border-[#D4AF37]/50 transition-all group"
+                className="flex flex-col justify-between p-6 bg-[#121417] border border-[#333] hover:border-[#D4AF37]/50 transition-all group rounded-xl"
               >
                 <div>
-                  <div className="p-3 bg-[#1E2125] text-[#D4AF37] border border-[#333] w-max mb-4">
+                  <div className="p-3 bg-[#181A1E] text-[#D4AF37] border border-[#333] w-max mb-4 rounded">
                     <FileText size={20} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#D4AF37] tracking-widest block mb-2">{article.category} • {article.date || 'Oct 2026'}</span>
@@ -687,31 +903,77 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 9. CONTACT / HIRE ME CTA BANNER                                           */}
+      {/* 11. CONTACT BENTO STRIP (SIGNATURE ALAZAR.DEV CONTACT PATTERN)             */}
       {/* ========================================================================= */}
-      <section className="py-20 bg-gradient-to-r from-[#181A1E] via-[#121417] to-[#181A1E] border-t border-[#333] relative">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
-            Initiate Project Collaboration
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] mb-6 tracking-tight">Ready to Engineer Your Project?</h2>
-          <p className="text-[#9CA3AF] text-base max-w-2xl mx-auto mb-8">
-            Available for structural consultations, high-rise peer reviews, dynamic seismic evaluations, and complete structural lead engineering documentation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <section className="py-20 bg-[#121417] border-t border-[#333]" id="contact">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
+              Consultation & Engagement
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#EAEAEA] tracking-tight">
+              Have Questions? <span className="text-[#D4AF37]">Get in Touch!</span>
+            </h2>
+          </div>
+
+          {/* 3-Bento Contact Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            
+            {/* Card 1: Email */}
+            <a 
+              href="mailto:consult@alexandre-structural.com" 
+              className="flex items-center gap-4 bg-[#181A1E] border border-[#333] hover:border-[#D4AF37]/50 p-5 rounded-xl transition-all group"
+            >
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <Mail size={20} />
+              </div>
+              <div className="flex flex-col overflow-hidden">
+                <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
+                <p className="text-xs font-mono text-[#9CA3AF] truncate">consult@alexandre-structural.com</p>
+              </div>
+            </a>
+
+            {/* Card 2: Phone */}
+            <a 
+              href="tel:+15550198472" 
+              className="flex items-center gap-4 bg-[#181A1E] border border-[#333] hover:border-[#D4AF37]/50 p-5 rounded-xl transition-all group"
+            >
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <Phone size={20} />
+              </div>
+              <div className="flex flex-col">
+                <h4 className="text-sm font-bold text-[#EAEAEA]">Call Direct</h4>
+                <p className="text-xs font-mono text-[#9CA3AF]">+1 (555) 019-8472</p>
+              </div>
+            </a>
+
+            {/* Card 3: Location */}
+            <div className="flex items-center gap-4 bg-[#181A1E] border border-[#333] p-5 rounded-xl">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
+                <MapPin size={20} />
+              </div>
+              <div className="flex flex-col">
+                <h4 className="text-sm font-bold text-[#EAEAEA]">Office Headquarters</h4>
+                <p className="text-xs text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Full Consultation Trigger Banner */}
+          <div className="bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333] p-8 rounded-xl text-center flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="text-left">
+              <h3 className="text-xl font-bold text-[#EAEAEA] mb-1">Ready to Evaluate Your Project's Structural Integrity?</h3>
+              <p className="text-xs text-[#9CA3AF]">Submit project drawings, lateral load requirements, or request a third-party peer review.</p>
+            </div>
             <button
               onClick={() => navigate('/contact')}
-              className="bg-[#D4AF37] text-[#121417] px-10 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_25px_rgba(212,175,55,0.25)] inline-flex items-center justify-center gap-2"
+              className="bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
             >
-              Request Consultation <ArrowUpRight size={16} />
+              Initiate Inquiry <ArrowUpRight size={14} />
             </button>
-            <a
-              href="/resources"
-              className="bg-[#1E2125] text-[#EAEAEA] border border-[#333] hover:border-[#D4AF37] px-8 py-4 text-xs font-bold tracking-widest uppercase transition-all inline-flex items-center justify-center gap-2"
-            >
-              Download Engineering Guides <Download size={16} />
-            </a>
           </div>
+
         </div>
       </section>
 
@@ -723,14 +985,14 @@ export const Home = () => {
       {/* INTRO VIDEO MODAL */}
       {isVideoModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
-          <div className="relative w-full max-w-4xl bg-[#1E2125] border border-[#D4AF37] p-2">
+          <div className="relative w-full max-w-4xl bg-[#181A1E] border border-[#D4AF37] p-2 rounded-xl">
             <button
               onClick={() => setIsVideoModalOpen(false)}
               className="absolute -top-10 right-0 text-[#EAEAEA] hover:text-[#D4AF37]"
             >
               <X size={28} />
             </button>
-            <div className="aspect-video bg-black">
+            <div className="aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
                 src={settings.introVideoUrl}
                 title="Structural Engineering Professional Intro"
