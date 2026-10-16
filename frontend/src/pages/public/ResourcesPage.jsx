@@ -96,34 +96,38 @@ Phone: +1 (555) 019-8472
   };
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
         <div className="mb-14 border-b border-[#333] pb-10">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
-            Engineering Documentation & Reference Material
-          </span>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
-            Engineering <span className="text-[#D4AF37]">Resources.</span>
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+            </span>
+            Engineering Documentation & Reference Library
+          </div>
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Resources.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-lg max-w-3xl leading-relaxed">
+          <p className="text-[#9CA3AF] text-base lg:text-lg max-w-3xl leading-relaxed">
             Download professional guides, technical checklists, code compliance reference documents, and structural calculation summaries prepared for engineers and architects.
           </p>
         </div>
 
-        {/* Search & Filter Controls */}
-        <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10">
+        {/* Search & Filter Controls (Alazar-style rounded pill bar) */}
+        <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           {/* Categories */}
-          <div className="flex flex-wrap gap-2 w-full md:w-auto">
+          <div className="flex flex-wrap gap-2 w-full md:w-auto items-center">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border ${
+                className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
-                    : 'bg-[#181A1E] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
+                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
                 }`}
               >
                 {cat}
@@ -133,46 +137,49 @@ Phone: +1 (555) 019-8472
 
           {/* Search input */}
           <div className="relative w-full md:w-72">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={16} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
             <input
               type="text"
-              placeholder="Search resources..."
+              placeholder="Search guides, specs, math..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#181A1E] border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] pl-9 pr-4 py-2.5 outline-none font-mono"
+              className="w-full bg-[#121417] rounded-full border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors"
             />
           </div>
         </div>
 
         {/* Download Notification Toast */}
         {downloadNotification && (
-          <div className="mb-6 p-4 bg-emerald-950/40 border border-emerald-500/50 text-emerald-300 text-xs font-bold uppercase tracking-wider flex items-center gap-2 animate-in fade-in">
+          <div className="mb-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-300 text-xs font-bold uppercase tracking-wider flex items-center gap-2 animate-in fade-in shadow-lg">
             <CheckCircle2 size={16} /> {downloadNotification}
           </div>
         )}
 
-        {/* Resource List */}
+        {/* Resource List (Alazar Bento 2-Col Grid) */}
         <div className="grid sm:grid-cols-2 gap-6 mb-16">
           {filteredResources.map((item, index) => (
-            <div key={item.id || index} className="bg-[#1E2125] border border-[#333] p-8 hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between">
+            <div 
+              key={item.id || index} 
+              className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.08)]"
+            >
               <div>
                 <div className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center">
-                    <FileText size={24} />
+                  <div className="w-12 h-12 rounded-xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                    <FileText size={22} />
                   </div>
-                  <span className="text-[10px] font-mono text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 uppercase tracking-widest bg-[#121417]">
+                  <span className="rounded-full text-[10px] font-mono font-bold text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 uppercase tracking-wider bg-[#121417] shadow-sm">
                     {item.format} • {item.fileSize || '1.8 MB'}
                   </span>
                 </div>
 
-                <span className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-widest block mb-2">{item.category}</span>
-                <h3 className="text-xl font-bold text-[#EAEAEA] mb-3">{item.title}</h3>
+                <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block mb-2">{item.category}</span>
+                <h3 className="text-xl font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
                 <p className="text-xs text-[#9CA3AF] leading-relaxed mb-6">{item.description}</p>
               </div>
 
               <button
                 onClick={() => handleDownload(item)}
-                className="bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 hover:bg-[#D4AF37] hover:text-[#121417] transition-all py-3 px-6 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2"
+                className="rounded-full bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 hover:bg-[#D4AF37] hover:text-[#121417] transition-all py-3 px-6 text-xs font-extrabold uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm group-hover:shadow-[0_0_15px_rgba(212,175,55,0.25)]"
               >
                 Download Document <Download size={14} />
               </button>
@@ -181,17 +188,17 @@ Phone: +1 (555) 019-8472
         </div>
 
         {/* Request Custom Technical Guidance Box */}
-        <div className="bg-[#181A1E] border border-[#333] p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div className="rounded-2xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl">
           <div>
             <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1">Tailored Specifications</span>
             <h4 className="text-xl font-bold text-[#EAEAEA]">Need Project-Specific Structural Calculations or CAD Details?</h4>
-            <p className="text-xs text-[#9CA3AF] mt-1 max-w-xl">
+            <p className="text-xs text-[#9CA3AF] mt-1 max-w-xl leading-relaxed">
               I provide custom finite element analysis models, calculation packages for municipal permit submittals, and site-specific seismic retrofitting plans.
             </p>
           </div>
           <a
             href="/contact"
-            className="bg-[#D4AF37] text-[#121417] px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shrink-0"
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0"
           >
             Request Custom Calc Package
           </a>
