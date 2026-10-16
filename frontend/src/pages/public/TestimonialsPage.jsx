@@ -1,8 +1,10 @@
 import React from 'react';
-import { Quote, Star, Building, ShieldCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Quote, Star, Building, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 
 export const TestimonialsPage = () => {
+  const navigate = useNavigate();
   const { data } = useFetch('/testimonials');
 
   const testimonials = data?.testimonials || [
@@ -26,7 +28,7 @@ export const TestimonialsPage = () => {
     },
     {
       id: '3',
-      clientName: 'David Sterling, PE',
+      clientName: 'David Sterling, P.E.',
       clientRole: 'Chief Infrastructure Officer',
       clientCompany: 'State Transit Authority',
       avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80',
@@ -96,6 +98,20 @@ export const TestimonialsPage = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom Banner (Alazar Bento Callout) */}
+        <div className="rounded-3xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl mt-16">
+          <div className="text-left">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#EAEAEA] mb-1.5">Deliver Your Vision with Confirmed Structural Excellence</h3>
+            <p className="text-xs sm:text-sm text-[#9CA3AF]">Join reputable developers, architects, and institutions who trust our engineering precision.</p>
+          </div>
+          <button
+            onClick={() => navigate('/contact')}
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+          >
+            Start Project Consultation <ArrowUpRight size={14} />
+          </button>
         </div>
 
       </div>
