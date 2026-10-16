@@ -45,9 +45,10 @@ export const Footer = () => {
             </h4>
             <ul className="flex flex-col gap-3 text-sm text-[#9CA3AF]">
               <li><Link to="/" className="hover:text-[#D4AF37] transition-colors">Home Page</Link></li>
-              <li><Link to="/about" className="hover:text-[#D4AF37] transition-colors">About & Qualifications</Link></li>
+              <li><Link to="/about" className="hover:text-[#D4AF37] transition-colors">About Me</Link></li>
               <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">Engineering Services</Link></li>
               <li><Link to="/projects" className="hover:text-[#D4AF37] transition-colors">Portfolio & Case Studies</Link></li>
+              <li><Link to="/experience" className="hover:text-[#D4AF37] transition-colors">Career Experience</Link></li>
               <li><Link to="/insights" className="hover:text-[#D4AF37] transition-colors">Technical Insights</Link></li>
             </ul>
           </div>

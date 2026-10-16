@@ -11,7 +11,9 @@ import {
   Settings as SettingsIcon, 
   LogOut, 
   Layers,
-  ArrowLeft
+  ArrowLeft,
+  Download,
+  HelpCircle
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -25,6 +27,8 @@ export const AdminSidebar = () => {
     { name: 'Manage Services', path: '/admin/services', icon: Wrench },
     { name: 'Insights & Articles', path: '/admin/insights', icon: FileText },
     { name: 'Testimonials', path: '/admin/testimonials', icon: MessageSquareQuote },
+    { name: 'Client FAQs', path: '/admin/faqs', icon: HelpCircle },
+    { name: 'Engineering Resources', path: '/admin/resources', icon: Download },
     { name: 'Consultation Inquiries', path: '/admin/inquiries', icon: Inbox },
     { name: 'Video & Media Library', path: '/admin/media', icon: Video },
     { name: 'Site Settings & SEO', path: '/admin/settings', icon: SettingsIcon },

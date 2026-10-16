@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FileText, Clock, ArrowUpRight, Calendar } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 
@@ -9,6 +10,7 @@ export const InsightsPage = () => {
     {
       id: '1',
       title: 'Innovations in High-Strength C80 Concrete Formulations & Creep Mechanics',
+      slug: 'innovations-high-strength-c80-concrete',
       category: 'Materials Engineering',
       excerpt: 'Examining long-term elastic modulus development, shrinkage dynamics, and hydration heat dissipation in high-rise core walls.',
       readTime: '6 min read',
@@ -18,6 +20,7 @@ export const InsightsPage = () => {
     {
       id: '2',
       title: 'Seismic Retrofitting Strategies for Pre-1980 Commercial Frame Buildings',
+      slug: 'seismic-retrofitting-pre-1980-steel-frames',
       category: 'Seismic Resilience',
       excerpt: 'Comparing post-tensioned shear walls vs dynamic fluid viscous dampers under ASCE 41-17 retrofitting standards.',
       readTime: '8 min read',
@@ -27,6 +30,7 @@ export const InsightsPage = () => {
     {
       id: '3',
       title: 'Optimizing Steel Frameworks for Reduced Carbon Footprint',
+      slug: 'optimizing-wind-damping-outrigger-systems',
       category: 'Sustainable Engineering',
       excerpt: 'Quantifying embodied carbon reduction through high-yield ASTM A992 structural steel optimization and cellular beam design.',
       readTime: '5 min read',
@@ -55,7 +59,11 @@ export const InsightsPage = () => {
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((item) => (
-            <article key={item.id} className="bg-[#1E2125] border border-[#333] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group">
+            <Link
+              key={item.id}
+              to={`/insights/${item.slug || 'innovations-high-strength-c80-concrete'}`}
+              className="bg-[#1E2125] border border-[#333] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group cursor-pointer"
+            >
               <div>
                 <div className="aspect-[16/10] bg-[#121417] overflow-hidden border-b border-[#333] relative">
                   {item.imageUrl && (
@@ -87,7 +95,7 @@ export const InsightsPage = () => {
                   Read Technical Paper <ArrowUpRight size={14} />
                 </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 

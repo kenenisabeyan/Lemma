@@ -18,9 +18,10 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'About Me', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Experience', path: '/experience' },
     { name: 'Insights', path: '/insights' },
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'Resources', path: '/resources' },

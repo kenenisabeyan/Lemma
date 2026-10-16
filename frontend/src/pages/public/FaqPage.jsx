@@ -1,38 +1,66 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, HardHat } from 'lucide-react';
+import { ChevronDown, HelpCircle, HardHat, Search, MessageSquare, ArrowUpRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useFetch } from '../../hooks/useFetch';
 
 export const FaqPage = () => {
+  const navigate = useNavigate();
   const [openIndex, setOpenIndex] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const faqs = [
+  const { data } = useFetch('/faqs');
+
+  const defaultFaqs = [
     {
-      q: 'What is the role of a Structural Engineer vs an Architect?',
-      a: 'While architects design the visual aesthetics, interior layouts, spatial functionality, and exterior envelope of a building, structural engineers are responsible for calculating force vectors, gravity loads, wind shear, and seismic mechanics to ensure the building remains safe, rigid, and standing under extreme conditions.'
+      id: '1',
+      question: 'What is the role of a Structural Engineer vs an Architect?',
+      answer: 'While architects design the visual aesthetics, interior layouts, spatial functionality, and exterior envelope of a building, structural engineers are responsible for calculating force vectors, gravity loads, wind shear, and seismic mechanics to ensure the building remains safe, rigid, and standing under extreme conditions.',
+      category: 'General'
     },
     {
-      q: 'When do I need to hire a licensed Structural Engineer (PE/SE)?',
-      a: 'You require a licensed structural engineer whenever you build new high-rise or commercial structures, modify load-bearing walls, add additional stories to an existing building, perform seismic retrofitting, repair foundation cracks, or design bridge/infrastructure systems requiring city building permit approval.'
+      id: '2',
+      question: 'When do I need to hire a licensed Structural Engineer (PE/SE)?',
+      answer: 'You require a licensed structural engineer whenever you build new high-rise or commercial structures, modify load-bearing walls, add additional stories to an existing building, perform seismic retrofitting, repair foundation cracks, or design bridge/infrastructure systems requiring city building permit approval.',
+      category: 'Consultation'
     },
     {
-      q: 'What is non-linear dynamic seismic analysis?',
-      a: 'Non-linear dynamic analysis is a sophisticated computerized finite element simulation (FEA) that models how a structural framework deforms and absorbs energy during a real earthquake ground motion recording. It allows us to optimize damper placement and save structural material.'
+      id: '3',
+      question: 'What is non-linear dynamic seismic analysis?',
+      answer: 'Non-linear dynamic analysis is a sophisticated computerized finite element simulation (FEA) that models how a structural framework deforms and absorbs energy during a real earthquake ground motion recording. It allows us to optimize damper placement and save structural material.',
+      category: 'Technical'
     },
     {
-      q: 'How long does a typical structural peer review or evaluation take?',
-      a: 'A standard peer review or structural assessment takes between 1 to 3 weeks depending on the complexity of the building drawings, finite element calculations, and whether non-destructive site testing (NDT) is required.'
+      id: '4',
+      question: 'How long does a typical structural peer review or evaluation take?',
+      answer: 'A standard peer review or structural assessment takes between 1 to 3 weeks depending on the complexity of the building drawings, finite element calculations, and whether non-destructive site testing (NDT) is required.',
+      category: 'Process'
     },
     {
-      q: 'Can structural engineering lower construction material costs?',
-      a: 'Yes. Through value engineering, advanced post-tensioning, and optimized steel member sizing, high-performance structural engineering frequently reduces concrete volume and structural steel weight by 15% to 30%, saving developers substantial capital.'
+      id: '5',
+      question: 'Can structural engineering lower construction material costs?',
+      answer: 'Yes. Through value engineering, advanced post-tensioning, and optimized steel member sizing, high-performance structural engineering frequently reduces concrete volume and structural steel weight by 15% to 30%, saving developers substantial capital.',
+      category: 'Cost & Value'
     }
   ];
+
+  const faqs = data?.faqs || defaultFaqs;
+  const categories = ['All', 'General', 'Consultation', 'Technical', 'Process', 'Cost & Value'];
+
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
+    const matchesSearch = searchQuery === '' || 
+      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-6">
         
         {/* Header */}
-        <div className="mb-16 border-b border-[#333] pb-10 text-center">
+        <div className="mb-14 border-b border-[#333] pb-10 text-center">
           <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
             Client Education & FAQs
           </span>
@@ -40,35 +68,83 @@ export const FaqPage = () => {
             Understanding Structural <span className="text-[#D4AF37]">Engineering.</span>
           </h1>
           <p className="text-[#9CA3AF] text-base max-w-2xl mx-auto leading-relaxed">
-            Common questions answered in plain language to clarify engineering processes, compliance standards, and project expectations.
+            Essential questions answered in clear, plain language to clarify engineering processes, building safety standards, and project timelines for clients and developers.
           </p>
         </div>
 
+        {/* Filter & Search Bar */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8">
+          <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider transition-all border ${
+                  selectedCategory === cat
+                    ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37]'
+                    : 'bg-[#181A1E] text-[#9CA3AF] border-[#333] hover:text-[#EAEAEA]'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          <div className="relative w-full sm:w-64">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
+            <input
+              type="text"
+              placeholder="Search questions..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-[#181A1E] border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] pl-9 pr-4 py-2 outline-none font-mono"
+            />
+          </div>
+        </div>
+
         {/* Accordion List */}
-        <div className="flex flex-col gap-4">
-          {faqs.map((faq, index) => {
+        <div className="flex flex-col gap-4 mb-16">
+          {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={index} className="bg-[#1E2125] border border-[#333] overflow-hidden transition-colors">
+              <div key={faq.id || index} className="bg-[#1E2125] border border-[#333] overflow-hidden transition-colors hover:border-[#D4AF37]/40">
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full p-6 text-left font-bold text-base text-[#EAEAEA] hover:text-[#D4AF37] flex justify-between items-center gap-4 transition-colors"
                 >
                   <span className="flex items-center gap-3">
                     <HelpCircle className="text-[#D4AF37] shrink-0 w-5 h-5" />
-                    {faq.q}
+                    {faq.question}
                   </span>
-                  <ChevronDown size={20} className={`text-[#D4AF37] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={20} className={`text-[#D4AF37] transition-transform shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-sm text-[#9CA3AF] leading-relaxed border-t border-[#2D3137] bg-[#121417]/50">
-                    {faq.a}
+                  <div className="px-6 pb-6 pt-2 text-sm text-[#9CA3AF] leading-relaxed border-t border-[#2D3137] bg-[#121417]/60">
+                    <p className="mb-3">{faq.answer}</p>
+                    <span className="text-[10px] font-mono uppercase text-[#D4AF37] border border-[#D4AF37]/30 px-2 py-0.5">
+                      Category: {faq.category}
+                    </span>
                   </div>
                 )}
               </div>
             );
           })}
+        </div>
+
+        {/* Still have questions banner */}
+        <div className="bg-[#181A1E] border border-[#333] p-8 text-center">
+          <MessageSquare className="w-10 h-10 text-[#D4AF37] mx-auto mb-3" />
+          <h3 className="text-xl font-bold text-[#EAEAEA] mb-2">Have a Question About Your Specific Structural Plan?</h3>
+          <p className="text-xs text-[#9CA3AF] max-w-lg mx-auto mb-6">
+            Every building geometry and soil condition presents unique physics. Reach out directly for preliminary structural feasibility review.
+          </p>
+          <button
+            onClick={() => navigate('/contact')}
+            className="bg-[#D4AF37] text-[#121417] px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all inline-flex items-center gap-2"
+          >
+            Inquire About Your Project <ArrowUpRight size={14} />
+          </button>
         </div>
 
       </div>

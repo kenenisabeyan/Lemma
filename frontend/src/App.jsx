@@ -12,7 +12,10 @@ import { Home } from './pages/public/Home';
 import { About } from './pages/public/About';
 import { ServicesPage } from './pages/public/ServicesPage';
 import { Portfolio } from './pages/public/Portfolio';
+import { Experience } from './pages/public/Experience';
+import { CaseStudyPage } from './pages/public/CaseStudy';
 import { InsightsPage } from './pages/public/InsightsPage';
+import { InsightDetail } from './pages/public/InsightDetail';
 import { ResourcesPage } from './pages/public/ResourcesPage';
 import { TestimonialsPage } from './pages/public/TestimonialsPage';
 import { FaqPage } from './pages/public/FaqPage';
@@ -27,6 +30,8 @@ import { ManageInsights } from './pages/admin/ManageInsights';
 import { ManageTestimonials } from './pages/admin/ManageTestimonials';
 import { ManageInquiries } from './pages/admin/ManageInquiries';
 import { ManageMedia } from './pages/admin/ManageMedia';
+import { ManageResources } from './pages/admin/ManageResources';
+import { ManageFaqs } from './pages/admin/ManageFaqs';
 import { Settings } from './pages/admin/Settings';
 
 // Scroll to Top Helper
@@ -67,7 +72,10 @@ export default function App() {
         <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
         <Route path="/services" element={<PublicLayout><ServicesPage /></PublicLayout>} />
         <Route path="/projects" element={<PublicLayout><Portfolio /></PublicLayout>} />
+        <Route path="/projects/:slug" element={<PublicLayout><CaseStudyPage /></PublicLayout>} />
+        <Route path="/experience" element={<PublicLayout><Experience /></PublicLayout>} />
         <Route path="/insights" element={<PublicLayout><InsightsPage /></PublicLayout>} />
+        <Route path="/insights/:slug" element={<PublicLayout><InsightDetail /></PublicLayout>} />
         <Route path="/resources" element={<PublicLayout><ResourcesPage /></PublicLayout>} />
         <Route path="/testimonials" element={<PublicLayout><TestimonialsPage /></PublicLayout>} />
         <Route path="/faq" element={<PublicLayout><FaqPage /></PublicLayout>} />
@@ -80,6 +88,8 @@ export default function App() {
         <Route path="/admin/services" element={<ProtectedRoute><ManageServices /></ProtectedRoute>} />
         <Route path="/admin/insights" element={<ProtectedRoute><ManageInsights /></ProtectedRoute>} />
         <Route path="/admin/testimonials" element={<ProtectedRoute><ManageTestimonials /></ProtectedRoute>} />
+        <Route path="/admin/resources" element={<ProtectedRoute><ManageResources /></ProtectedRoute>} />
+        <Route path="/admin/faqs" element={<ProtectedRoute><ManageFaqs /></ProtectedRoute>} />
         <Route path="/admin/inquiries" element={<ProtectedRoute><ManageInquiries /></ProtectedRoute>} />
         <Route path="/admin/media" element={<ProtectedRoute><ManageMedia /></ProtectedRoute>} />
         <Route path="/admin/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
