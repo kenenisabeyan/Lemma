@@ -114,8 +114,12 @@ export const Experience = () => {
         
         {/* Page Header */}
         <div className="mb-14 border-b border-[#333] pb-10">
-          <div className="inline-flex items-center gap-2 border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-4 py-1.5 text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4">
-            <Briefcase size={14} /> Professional History & Engineering Record
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+            </span>
+            Professional History & Engineering Record
           </div>
           <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-6">
             Structural <span className="text-[#D4AF37]">Experience.</span>
@@ -199,7 +203,7 @@ export const Experience = () => {
                       <span className="text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase">
                         {item.year}
                       </span>
-                      <span className="text-[10px] uppercase tracking-wider bg-[#121417] text-[#9CA3AF] border border-[#333] px-2.5 py-0.5">
+                      <span className="text-[10px] uppercase font-mono tracking-wider bg-[#121417] text-[#9CA3AF] border border-[#333] px-3 py-1 rounded-full">
                         {item.category}
                       </span>
                     </div>
@@ -207,17 +211,17 @@ export const Experience = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-xs font-mono bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 px-3 py-1 font-bold">
+                    <span className="text-xs font-mono bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 px-3.5 py-1 rounded-full font-bold">
                       {item.value}
                     </span>
-                    <span className="text-xs font-semibold text-[#9CA3AF] border border-[#333] px-3 py-1 flex items-center gap-1">
+                    <span className="text-xs font-mono text-[#9CA3AF] border border-[#333] px-3 py-1 rounded-full flex items-center gap-1.5">
                       <MapPin size={12} className="text-[#D4AF37]" /> {item.location}
                     </span>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-xs uppercase font-bold text-[#D4AF37] tracking-wider mb-2">
+                  <h4 className="text-xs uppercase font-mono font-bold text-[#D4AF37] tracking-wider mb-2">
                     Structural Achievement & Technical Innovation
                   </h4>
                   <p className="text-sm text-[#EAEAEA] leading-relaxed">
@@ -225,7 +229,7 @@ export const Experience = () => {
                   </p>
                 </div>
 
-                <div className="bg-[#121417] p-5 border border-[#2D3137]">
+                <div className="bg-[#121417] p-6 rounded-xl border border-[#2D3137] shadow-inner">
                   <h5 className="text-[11px] font-mono uppercase text-[#9CA3AF] tracking-wider mb-3">Key Technical Scope:</h5>
                   <div className="grid md:grid-cols-3 gap-3">
                     {item.highlights.map((h, i) => (
