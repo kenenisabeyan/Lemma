@@ -11,7 +11,8 @@
     "postinstall": "cd backend && npm install && cd ../frontend && npm install"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "prisma": "^5.10.0"
   },
   "prisma": {
     "schema": "backend/prisma/schema.prisma"
