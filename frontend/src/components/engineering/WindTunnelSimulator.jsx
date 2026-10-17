@@ -319,7 +319,7 @@ export const WindTunnelSimulator = () => {
               <span className="text-[#06B6D4] font-bold">{dynamicPressureKPa.toFixed(2)} kPa ({Math.round(dynamicPressureKPa * 20.885)} psf)</span>
             </div>
             <div>
-              <span className="text-[#888] block text-[10px]">TOTAL BASE SHEAR ($V_{wind}$):</span>
+              <span className="text-[#888] block text-[10px]">TOTAL BASE SHEAR (V_wind):</span>
               <span className="text-[#D4AF37] font-bold">{baseShearKn.toLocaleString()} kN</span>
             </div>
           </div>
@@ -333,7 +333,7 @@ export const WindTunnelSimulator = () => {
               Occupant Comfort Criteria
             </span>
             <h4 className="text-base font-bold text-[#EAEAEA] mb-1">
-              Top Floor Acceleration ($a_{max}$)
+              Top Floor Acceleration (a_max)
             </h4>
             <p className="text-xs text-[#9CA3AF] leading-relaxed mb-4">
               Wind turbulence causes upper stories to sway. ISO 10137 mandates peak horizontal acceleration remain under 15 milli-g to prevent occupant nausea.

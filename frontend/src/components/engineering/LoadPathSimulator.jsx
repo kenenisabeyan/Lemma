@@ -355,7 +355,7 @@ export const LoadPathSimulator = () => {
             </div>
 
             <div className="p-3.5 rounded-xl bg-[#121417] border border-[#2D3137]">
-              <span className="text-[9px] uppercase text-[#9CA3AF] block mb-1">Overturning ($M_{OT}$)</span>
+              <span className="text-[9px] uppercase text-[#9CA3AF] block mb-1">Overturning (M_OT)</span>
               <span className="text-base font-extrabold text-[#EAEAEA] block truncate">{metrics.overturning}</span>
               <span className="text-[9px] text-[#D4AF37] block mt-0.5">Foundation Moment</span>
             </div>

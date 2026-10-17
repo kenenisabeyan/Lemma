@@ -347,9 +347,9 @@ export const BeamShearMomentSolver = () => {
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
                 <span className="text-[#9CA3AF] flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-blue-500"></span> Shear Force Diagram ($V$)
+                  <span className="w-2 h-2 rounded-full bg-blue-500"></span> Shear Force Diagram (V)
                 </span>
-                <span className="text-blue-400 font-bold">$V_{max} = {results.maxShear}$ kN</span>
+                <span className="text-blue-400 font-bold">V_max = {results.maxShear} kN</span>
               </div>
               <svg viewBox={`0 0 ${svgWidth} 45`} className="w-full h-12 bg-[#181A1E] rounded-xl border border-[#26282D]">
                 <line x1={leftX} y1="22" x2={rightX} y2="22" stroke="#444" strokeWidth="1" strokeDasharray="2 2" />
@@ -370,9 +370,9 @@ export const BeamShearMomentSolver = () => {
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
                 <span className="text-[#9CA3AF] flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span> Bending Moment Diagram ($M$)
+                  <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span> Bending Moment Diagram (M)
                 </span>
-                <span className="text-[#D4AF37] font-bold">$M_{max} = {results.maxMoment}$ kN·m</span>
+                <span className="text-[#D4AF37] font-bold">M_max = {results.maxMoment} kN·m</span>
               </div>
               <svg viewBox={`0 0 ${svgWidth} 50`} className="w-full h-14 bg-[#181A1E] rounded-xl border border-[#26282D]">
                 <line x1={leftX} y1="8" x2={rightX} y2="8" stroke="#444" strokeWidth="1" strokeDasharray="2 2" />
