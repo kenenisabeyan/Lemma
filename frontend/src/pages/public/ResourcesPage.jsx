@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FileText, Download, FileCode, ShieldCheck, Search, Filter, CheckCircle2 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
+import { ValueEngineeringCalculator } from '../../components/engineering/ValueEngineeringCalculator';
 
 export const ResourcesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -191,6 +192,24 @@ Phone: +1 (555) 019-8472
               </button>
             </div>
           ))}
+        </div>
+
+        {/* Interactive Value Engineering Estimator */}
+        <div className="mb-20">
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Live Cost & Material Optimization Tool
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Value Engineering & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Carbon Offset Estimator.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
+            </p>
+          </div>
+
+          <ValueEngineeringCalculator />
         </div>
 
         {/* Request Custom Technical Guidance Box */}
