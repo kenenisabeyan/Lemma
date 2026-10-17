@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Building2, Layers, ShieldCheck, Ruler, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
+import { CodeComplianceMatrix } from '../../components/engineering/CodeComplianceMatrix';
 
 export const ServicesPage = () => {
   const navigate = useNavigate();
@@ -121,6 +122,24 @@ export const ServicesPage = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Code Compliance & Municipal Standards Matrix */}
+        <div className="mb-20">
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Regulatory & Code Compliance Auditor
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Municipal Code & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Provisions Matrix.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Every design calculation and structural drawing package adheres strictly to the latest edition of American and international structural codes.
+            </p>
+          </div>
+
+          <CodeComplianceMatrix />
         </div>
 
         {/* Bottom Consultation Banner (Alazar Bento Callout) */}

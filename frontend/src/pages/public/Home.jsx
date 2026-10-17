@@ -35,6 +35,9 @@ import { useFetch } from '../../hooks/useFetch';
 import { StatCounter } from '../../components/engineering/StatCounter';
 import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { EngineeringCanvas } from '../../components/engineering/EngineeringCanvas';
+import { LoadPathSimulator } from '../../components/engineering/LoadPathSimulator';
+import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
+import { ValueEngineeringCalculator } from '../../components/engineering/ValueEngineeringCalculator';
 import { CaseStudyModal } from './CaseStudy';
 
 export const Home = () => {
@@ -501,6 +504,28 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
+      {/* 3.5 INTERACTIVE LOAD PATH & STRUCTURAL TELEMETRY SIMULATOR                */}
+      {/* ========================================================================= */}
+      <section className="py-20 md:py-28 bg-[#121417] border-t border-[#333] relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Live Dynamic Mechanics Simulation
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Real-Time Lateral & Seismic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Load Path.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Explore how wind aerodynamic drift, non-linear seismic ground motions, and gravitational vectors propagate through reinforced concrete cores and outrigger belt trusses down into bedrock.
+            </p>
+          </div>
+
+          <LoadPathSimulator />
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
       {/* 4. ABOUT ME SECTION                                                       */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#181A1E] border-t border-b border-[#333] relative">
@@ -750,6 +775,28 @@ export const Home = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7.5 INTERACTIVE CAD & FEA BLUEPRINT INSPECTOR                             */}
+      {/* ========================================================================= */}
+      <section className="py-20 md:py-28 bg-[#181A1E] border-t border-b border-[#333] relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Multi-Layer CAD Telemetry Board
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Interactive Drawing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Dossier & FEA Inspector.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles with certified code verification markers.
+            </p>
+          </div>
+
+          <BlueprintInspector />
         </div>
       </section>
 
@@ -1053,6 +1100,28 @@ export const Home = () => {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10.5 VALUE ENGINEERING & CARBON OFFSET CALCULATOR                         */}
+      {/* ========================================================================= */}
+      <section className="py-20 md:py-28 bg-[#181A1E] border-t border-[#333] relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Optimization Feasibility Model
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Value Engineering & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Embodied Carbon Estimator.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
+            </p>
+          </div>
+
+          <ValueEngineeringCalculator />
         </div>
       </section>
 
