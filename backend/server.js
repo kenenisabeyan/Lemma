@@ -31,6 +31,26 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Static uploads directory serving
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Root API Welcome endpoint
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    service: 'Structural Engineering Portfolio Backend API',
+    message: 'Backend API is running properly. Open the frontend website at http://localhost:5173',
+    frontendUrl: 'http://localhost:5173',
+    endpoints: {
+      health: '/api/health',
+      projects: '/api/projects',
+      services: '/api/services',
+      insights: '/api/insights',
+      testimonials: '/api/testimonials',
+      settings: '/api/settings',
+      resources: '/api/resources',
+      faqs: '/api/faqs'
+    }
+  });
+});
+
 // API Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
