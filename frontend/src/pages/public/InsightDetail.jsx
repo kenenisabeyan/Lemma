@@ -96,8 +96,14 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
   };
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="relative min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
+      {/* Alazar Signature Ambient Aurora Drift Background Glow */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
+        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/10 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6">
         
         {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-xs font-mono text-[#9CA3AF] uppercase tracking-wider mb-8">

@@ -311,35 +311,40 @@ export const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative group p-2.5 border border-[#333]/80 bg-[#181A1E] rounded-2xl shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300">
-              {/* Corner Coordinate Crosshairs */}
-              <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37] rounded-tl"></div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37] rounded-tr"></div>
-              <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37] rounded-bl"></div>
-              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37] rounded-br"></div>
+            <div className="relative">
+              {/* Alazar Signature Decorative Outer Mask Frame */}
+              <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
 
-              <div 
-                onClick={() => setIsVideoModalOpen(true)}
-                className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center rounded-xl group-hover:border-[#D4AF37]/50 transition-all"
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
-                  alt="Structural Engineering Overview"
-                  className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                />
+              <div className="relative group p-2.5 border border-[#333]/80 bg-[#181A1E] rounded-2xl shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300">
+                {/* Corner Coordinate Crosshairs */}
+                <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37] rounded-tl"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37] rounded-tr"></div>
+                <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37] rounded-bl"></div>
+                <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37] rounded-br"></div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
+                <div 
+                  onClick={() => setIsVideoModalOpen(true)}
+                  className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center rounded-xl group-hover:border-[#D4AF37]/50 transition-all"
+                >
+                  <img 
+                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
+                    alt="Structural Engineering Overview"
+                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                  />
 
-                {/* Play Button Overlay */}
-                <div className="relative z-20 w-16 h-16 rounded-full bg-[#121417]/90 border border-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_25px_rgba(212,175,55,0.45)]">
-                  <Play className="text-[#D4AF37] w-6 h-6 ml-1" />
-                </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
 
-                <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center bg-[#121417]/90 backdrop-blur-md p-3 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider rounded-xl">
-                  <span className="flex items-center gap-2 font-mono">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Introduction Video (Editable in CMS)
-                  </span>
-                  <span className="text-[#D4AF37] font-bold font-mono">Watch 2 min</span>
+                  {/* Play Button Overlay */}
+                  <div className="relative z-20 w-16 h-16 rounded-full bg-[#121417]/90 border border-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_25px_rgba(212,175,55,0.45)]">
+                    <Play className="text-[#D4AF37] w-6 h-6 ml-1" />
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center bg-[#121417]/90 backdrop-blur-md p-3 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider rounded-xl">
+                    <span className="flex items-center gap-2 font-mono">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Introduction Video (Editable in CMS)
+                    </span>
+                    <span className="text-[#D4AF37] font-bold font-mono">Watch 2 min</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -371,32 +376,32 @@ export const Home = () => {
 
       {/* ========================================================================= */}
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
-      {/*    (ADAPTED FROM ALAZAR.DEV'S SIGNATURE 3-CARD BENTO GRID SECTION)         */}
+      {/*    (EXACT ALAZAR.DEV 6-COLUMN BENTO GRID PATTERN)                          */}
       {/* ========================================================================= */}
-      <section className="py-20 bg-[#121417] relative">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 md:py-24 bg-[#121417] relative">
+        <div className="max-w-5xl mx-auto px-6">
           
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#EAEAEA]">
+            <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-[#EAEAEA]">
               Analyze<span className="text-[#D4AF37]">.</span> Calculate<span className="text-[#D4AF37]">.</span> Deliver<span className="text-[#D4AF37]">.</span>
             </h2>
-            <p className="mt-4 text-[#9CA3AF] text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-              Precision structural mechanics and performance-based simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
+            <p className="mt-4 text-balance text-[#9CA3AF] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+              Precision structural mechanics and finite element performance simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
             
-            {/* Bento Card 1: High-Rise Modeling */}
-            <div className="group relative overflow-hidden rounded-2xl border border-[#333] bg-[#181A1E] p-8 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-2 border-dashed border-[#D4AF37]/40 bg-[#121417] shadow-inner mb-6 group-hover:scale-105 transition-transform">
-                <div className="absolute inset-0 rounded-full bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-md"></div>
-                <Building2 size={36} className="text-[#D4AF37] relative z-10" />
+            {/* Bento Card 1: High-Rise Lateral Stability (Col 1-2) */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333]/80 bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 bg-[#121417] shadow-xs outline outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/25 via-[#D4AF37]/5 to-transparent blur-xl"></div>
+                <Building2 size={36} className="text-[#D4AF37] relative z-20" />
               </div>
-              <div className="text-center">
-                <h3 className="font-bold text-[#EAEAEA] text-lg mb-2">High-Rise Lateral Stability</h3>
-                <p className="text-xs text-[#9CA3AF] leading-relaxed">
-                  Dual core shear walls, perimeter belt trusses, and aerodynamic wind damping that suppress lateral drift in slender skyscrapers.
+              <div className="relative mt-2 space-y-1.5 text-center">
+                <h3 className="font-medium text-[#EAEAEA] text-lg">High-Rise Lateral Stability</h3>
+                <p className="text-[#9CA3AF] text-xs leading-relaxed">
+                  Dual core shear walls, perimeter belt trusses, and aerodynamic damping suppressing lateral drift in skyscrapers.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest">
@@ -404,16 +409,16 @@ export const Home = () => {
               </div>
             </div>
 
-            {/* Bento Card 2: Performance-Based Seismic Design */}
-            <div className="group relative overflow-hidden rounded-2xl border border-[#333] bg-[#181A1E] p-8 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#333] bg-[#121417] shadow-inner mb-6 group-hover:scale-105 transition-transform">
-                <div className="absolute inset-0 rounded-full bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-md"></div>
-                <Activity size={36} className="text-[#D4AF37] relative z-10" />
+            {/* Bento Card 2: Non-Linear Seismic Modeling (Col 3-4) */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333]/80 bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#121417] shadow-xs outline outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/25 via-[#D4AF37]/5 to-transparent blur-xl"></div>
+                <Activity size={36} className="text-[#D4AF37] relative z-20" />
               </div>
-              <div className="text-center">
-                <h3 className="font-bold text-[#EAEAEA] text-lg mb-2">Non-Linear Seismic Modeling</h3>
-                <p className="text-xs text-[#9CA3AF] leading-relaxed">
-                  Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments compliant with FEMA P-58.
+              <div className="relative mt-2 space-y-1.5 text-center">
+                <h3 className="font-medium text-[#EAEAEA] text-lg">Non-Linear Seismic Modeling</h3>
+                <p className="text-[#9CA3AF] text-xs leading-relaxed">
+                  Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments per FEMA P-58.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest">
@@ -421,22 +426,72 @@ export const Home = () => {
               </div>
             </div>
 
-            {/* Bento Card 3: Value Engineering & Quantity Optimization */}
-            <div className="group relative overflow-hidden rounded-2xl border border-[#333] bg-[#181A1E] p-8 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#333] bg-[#121417] shadow-inner mb-6 group-hover:scale-105 transition-transform">
-                <div className="text-center">
-                  <span className="text-2xl font-black text-[#D4AF37] font-mono block">25%</span>
-                  <span className="text-[9px] uppercase tracking-wider font-mono text-[#9CA3AF]">Savings</span>
+            {/* Bento Card 3: Value Engineering Sparkline Graph (Col 5-6) */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333]/80 bg-[#181A1E] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-xl">
+              <div className="min-h-28 relative flex flex-col justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="flex size-8 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30">
+                    <ShieldCheck size={16} />
+                  </div>
+                  <div className="font-mono text-xs font-bold text-[#EAEAEA]">100% Safety Record</div>
                 </div>
+                {/* Alazar Sparkline SVG Curve */}
+                <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-70 group-hover:opacity-100 transition-opacity my-2">
+                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15 L298 110 L3 110 Z" fill="url(#goldGradBento)" opacity="0.15" />
+                  <defs>
+                    <linearGradient id="goldGradBento" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#D4AF37" />
+                      <stop offset="100%" stopColor="transparent" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
-              <div className="text-center">
-                <h3 className="font-bold text-[#EAEAEA] text-lg mb-2">Value Engineering & Cost Optimization</h3>
-                <p className="text-xs text-[#9CA3AF] leading-relaxed">
-                  Eliminating unnecessary concrete mass and steel tonnage through post-tensioning and optimized finite element load redistribution.
+              <div className="relative z-10 mt-2 space-y-1.5 text-center">
+                <h3 className="font-medium text-[#EAEAEA] text-lg">Value Engineering</h3>
+                <p className="text-[#9CA3AF] text-xs leading-relaxed">
+                  Post-tensioning and optimized finite element redistribution saving 20-30% concrete mass and steel tonnage.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest">
                 Peer Review · Quantity Audits
+              </div>
+            </div>
+
+            {/* Bento Card 4: Full-Width 6-Col Bottom Showcase (like alazar.dev bottom bento card) */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#333]/80 bg-[#181A1E] sm:col-span-2 md:col-span-6 p-0 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl">
+              <div className="grid h-full sm:grid-cols-2 items-center">
+                <div className="relative z-10 space-y-6 py-8 ps-8 pe-6">
+                  <div className="flex size-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#121417] shadow-sm outline outline-[#333] outline-offset-2">
+                    <Ruler size={20} className="text-[#D4AF37]" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="font-medium text-[#EAEAEA] text-xl">3D Finite Element Simulation</h3>
+                    <p className="text-[#9CA3AF] text-xs sm:text-sm leading-relaxed max-w-md">
+                      From ETABS building wind tunnel integration to Midas Civil bridge span dynamic response, calculations adhere to the highest international seismic and structural performance criteria.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    <span className="rounded-full bg-[#121417] border border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase">ASCE 7-22</span>
+                    <span className="rounded-full bg-[#121417] border border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase">IBC 2024</span>
+                    <span className="rounded-full bg-[#121417] border border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase">ACI 318-19</span>
+                    <span className="rounded-full bg-[#121417] border border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase">AISC 360</span>
+                  </div>
+                </div>
+                <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
+                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#333] bg-[#121417] shadow-2xl group-hover:border-[#D4AF37]/50 transition-colors">
+                    <img 
+                      src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
+                      alt="Structural FEA Simulation" 
+                      className="w-full h-full object-cover grayscale opacity-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
+                    <div className="absolute bottom-3 left-3 bg-[#121417]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#333] font-mono text-[10px] text-[#D4AF37] flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      ETABS v21 Live Non-Linear Stress Distribution
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -452,29 +507,38 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-5">
-              <div className="relative border border-[#333] p-2 bg-[#121417] rounded-xl shadow-2xl">
-                <div className="aspect-[4/5] bg-[#121417] overflow-hidden rounded-lg">
-                  <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-                    alt="Alexandre Senior Structural Engineer"
-                    className="w-full h-full object-cover grayscale opacity-85 hover:grayscale-0 transition-all duration-700"
-                  />
-                </div>
-                <div className="absolute bottom-6 left-6 right-6 bg-[#121417]/95 border border-[#D4AF37] p-4 text-xs font-mono rounded-lg">
-                  <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
-                    <span>PE #84729-NY</span>
-                    <span>SE #92041-CA</span>
+            <div className="lg:col-span-5 relative">
+              <div className="relative">
+                {/* Alazar Signature Decorative Outer Mask Frame */}
+                <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
+
+                <div className="relative border border-[#333]/80 p-2.5 bg-[#121417] rounded-2xl shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-300">
+                  <div className="aspect-[4/5] bg-[#121417] overflow-hidden rounded-xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                      alt="Alexandre Senior Structural Engineer"
+                      className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
                   </div>
-                  <span className="text-[10px] text-[#9CA3AF] uppercase tracking-widest block">Licensed Structural Engineer & ASCE Fellow</span>
+                  <div className="absolute bottom-6 left-6 right-6 bg-[#121417]/95 border border-[#D4AF37]/60 p-4 text-xs font-mono rounded-xl shadow-xl backdrop-blur-md">
+                    <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
+                      <span>PE #84729-NY</span>
+                      <span>SE #92041-CA</span>
+                    </div>
+                    <span className="text-[10px] text-[#9CA3AF] uppercase tracking-widest block">Licensed Structural Engineer & ASCE Fellow</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase flex items-center gap-2">
-                <span className="w-6 h-[1px] bg-[#D4AF37]"></span> Professional Background
-              </span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm w-max">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+                </span>
+                Professional Background
+              </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#EAEAEA] tracking-tight">
                 Structural Engineering Behind Visionary Architecture.
@@ -484,12 +548,12 @@ export const Home = () => {
                 With over 14 years of specialized structural practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
               </p>
 
-              <div className="bg-[#121417] border-l-2 border-[#D4AF37] p-5 text-sm text-[#EAEAEA] italic leading-relaxed">
+              <div className="bg-[#121417] border-l-2 border-[#D4AF37] p-5 text-sm text-[#EAEAEA] italic leading-relaxed rounded-r-xl border-y border-r border-[#2D3137]">
                 "Structural engineering should never be treated as an architectural limitation. When calculated with precision, physics becomes the catalyst that enables daring, column-free spaces."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center gap-3 bg-[#121417] p-3.5 border border-[#333] rounded-lg">
+                <div className="flex items-center gap-3 bg-[#121417] p-4 border border-[#333]/80 rounded-2xl shadow-md">
                   <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-[#EAEAEA] font-bold block">M.S. Structural Engineering</span>
@@ -497,7 +561,7 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 bg-[#121417] p-3.5 border border-[#333] rounded-lg">
+                <div className="flex items-center gap-3 bg-[#121417] p-4 border border-[#333]/80 rounded-2xl shadow-md">
                   <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-[#EAEAEA] font-bold block">100% Safety Compliance</span>
@@ -509,13 +573,13 @@ export const Home = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/about"
-                  className="bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all flex items-center gap-2"
+                  className="rounded-full bg-[#D4AF37] text-[#121417] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2"
                 >
                   Full Biography & Credentials <ArrowUpRight size={14} />
                 </Link>
                 <a
                   href="/resources"
-                  className="bg-[#121417] text-[#EAEAEA] border border-[#333] hover:border-[#D4AF37] px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-2"
+                  className="rounded-full bg-[#121417] text-[#EAEAEA] border border-[#333] hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2"
                 >
                   Download CV (PDF) <Download size={14} />
                 </a>
@@ -575,26 +639,116 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 7. FEATURED PROJECTS CASE STUDIES                                         */}
+      {/* 7. FEATURED PROJECTS CASE STUDIES (ALAZAR.DEV SPLIT ARTICLE PATTERN)       */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#121417] relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <section className="py-20 md:py-24 bg-[#121417] relative" id="projects">
+        <div className="max-w-5xl mx-auto px-6 space-y-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-[#26282D]">
             <div>
-              <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Featured Portfolio
+              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37]">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                <span>Featured Engineering Practice</span>
+              </div>
+              <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-[#EAEAEA]">
+                Projects<span className="text-[#D4AF37]">.</span>
               </h2>
-              <h3 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight">Project Case Studies</h3>
             </div>
-            <Link to="/projects" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-white transition-colors flex items-center gap-2">
-              Browse All Projects <ChevronRight size={16} />
+            <Link 
+              to="/projects" 
+              className="rounded-full border border-[#333] bg-[#181A1E] text-[#EAEAEA] hover:border-[#D4AF37] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max"
+            >
+              Browse All Projects <ChevronRight size={14} />
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.slice(0, 2).map((proj) => (
-              <ProjectCard key={proj.id} project={proj} onClick={(p) => setSelectedCaseStudy(p)} />
-            ))}
+          <div className="space-y-8">
+            {projects.slice(0, 3).map((proj) => {
+              const softwareList = typeof proj.softwareUsed === 'string'
+                ? JSON.parse(proj.softwareUsed || '[]')
+                : (proj.softwareUsed || []);
+
+              return (
+                <article 
+                  key={proj.id}
+                  className="group grid overflow-hidden rounded-2xl border border-[#333]/80 bg-[#181A1E] md:grid-cols-2 shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300"
+                >
+                  {/* Left Column Image */}
+                  <div className="relative overflow-hidden border-b border-[#333]/80 md:border-b-0 md:border-r min-h-[280px]">
+                    <img 
+                      src={proj.imageUrl} 
+                      alt={proj.title}
+                      className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] grayscale opacity-85 group-hover:grayscale-0"
+                    />
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="rounded-full bg-[#121417]/85 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-md">
+                        {proj.category}
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#9CA3AF] bg-[#121417]/85 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#333]">
+                      PE-SE SEALED · {proj.year}
+                    </div>
+                  </div>
+
+                  {/* Right Column Content */}
+                  <div className="flex flex-col gap-4 p-6 md:p-8 justify-between">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#9CA3AF] text-xs uppercase tracking-[0.2em] mb-1">
+                        <span className="text-[#D4AF37] flex items-center gap-1">
+                          <MapPin size={12} /> {proj.location}
+                        </span>
+                        <span aria-hidden="true">·</span>
+                        <span>{proj.year}</span>
+                      </div>
+                      
+                      <h3 className="font-medium text-xl md:text-2xl text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
+                        {proj.title}
+                      </h3>
+                      
+                      <p className="text-[#9CA3AF] text-xs sm:text-sm leading-relaxed mb-4">
+                        {proj.description}
+                      </p>
+
+                      <ul className="space-y-1.5 text-[#9CA3AF] text-xs mb-4">
+                        <li className="flex gap-2">
+                          <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
+                          <span><strong className="text-[#EAEAEA]">System:</strong> {proj.structuralSystem}</span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
+                          <span><strong className="text-[#EAEAEA]">Result:</strong> {proj.result}</span>
+                        </li>
+                      </ul>
+
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {softwareList.slice(0, 4).map((soft) => (
+                          <span 
+                            key={soft}
+                            className="inline-flex items-center rounded-full border border-[#333] bg-[#121417] px-2.5 py-0.5 font-mono text-[10px] text-[#D4AF37]"
+                          >
+                            {soft}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t border-[#2D3137] flex items-center justify-between">
+                      <button
+                        onClick={() => setSelectedCaseStudy(proj)}
+                        className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider hover:bg-white transition-all flex items-center gap-1.5 shadow-sm"
+                      >
+                        Explore Case Study <ArrowUpRight size={13} />
+                      </button>
+                      <Link 
+                        to={`/projects/${proj.slug || 'nexus-commercial-tower'}`}
+                        className="text-[11px] font-mono text-[#9CA3AF] hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1"
+                      >
+                        Dedicated Page →
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -916,48 +1070,50 @@ export const Home = () => {
             </h2>
           </div>
 
-          {/* 3-Bento Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-            
-            {/* Card 1: Email */}
-            <a 
-              href="mailto:consult@alexandre-structural.com" 
-              className="flex items-center gap-4 bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 rounded-2xl transition-all group shadow-lg hover:shadow-[0_10px_25px_rgba(212,175,55,0.08)]"
-            >
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
-                <Mail size={20} />
-              </div>
-              <div className="flex flex-col overflow-hidden">
-                <h4 className="text-sm font-bold text-[#EAEAEA] mb-0.5">Send an Email</h4>
-                <p className="text-xs font-mono text-[#9CA3AF] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
-              </div>
-            </a>
+          {/* 3-Bento Contact Strip (Alazar's exact hairline-divided grid container) */}
+          <div className="relative mb-10">
+            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-[#333] -top-px left-0 right-0"></div>
+            <div className="grid gap-px overflow-hidden bg-[#2D3137] rounded-2xl border border-[#333] md:grid-cols-3">
+              {/* Card 1: Email */}
+              <a 
+                href="mailto:consult@alexandre-structural.com" 
+                className="flex items-center gap-3 bg-[#181A1E] p-5 shadow-xs transition-colors hover:bg-[#1f2227] group"
+              >
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                  <Mail size={18} />
+                </div>
+                <div className="flex flex-col gap-y-0.5 overflow-hidden">
+                  <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
+                  <p className="text-xs font-mono text-[#9CA3AF] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
+                </div>
+              </a>
 
-            {/* Card 2: Phone */}
-            <a 
-              href="tel:+15550198472" 
-              className="flex items-center gap-4 bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 rounded-2xl transition-all group shadow-lg hover:shadow-[0_10px_25px_rgba(212,175,55,0.08)]"
-            >
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
-                <Phone size={20} />
-              </div>
-              <div className="flex flex-col">
-                <h4 className="text-sm font-bold text-[#EAEAEA] mb-0.5">Call Direct</h4>
-                <p className="text-xs font-mono text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472</p>
-              </div>
-            </a>
+              {/* Card 2: Phone */}
+              <a 
+                href="tel:+15550198472" 
+                className="flex items-center gap-3 bg-[#181A1E] p-5 shadow-xs transition-colors hover:bg-[#1f2227] group"
+              >
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                  <Phone size={18} />
+                </div>
+                <div className="flex flex-col gap-y-0.5">
+                  <h4 className="text-sm font-bold text-[#EAEAEA]">Call Direct</h4>
+                  <p className="text-xs font-mono text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472</p>
+                </div>
+              </a>
 
-            {/* Card 3: Location */}
-            <div className="flex items-center gap-4 bg-[#181A1E] border border-[#333]/80 p-6 rounded-2xl shadow-lg">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
-                <MapPin size={20} />
-              </div>
-              <div className="flex flex-col">
-                <h4 className="text-sm font-bold text-[#EAEAEA] mb-0.5">Office Headquarters</h4>
-                <p className="text-xs font-mono text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
+              {/* Card 3: Location */}
+              <div className="flex items-center gap-3 bg-[#181A1E] p-5 shadow-xs">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
+                  <MapPin size={18} />
+                </div>
+                <div className="flex flex-col gap-y-0.5">
+                  <h4 className="text-sm font-bold text-[#EAEAEA]">Office Headquarters</h4>
+                  <p className="text-xs font-mono text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
+                </div>
               </div>
             </div>
-
+            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-[#333] -bottom-px left-0 right-0"></div>
           </div>
 
           {/* Full Consultation Trigger Banner */}

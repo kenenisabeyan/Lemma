@@ -40,38 +40,38 @@ export const AdminSidebar = () => {
   };
 
   return (
-    <aside className="w-64 bg-[#1E2125] border-r border-[#333] min-h-screen flex flex-col justify-between shrink-0">
+    <aside className="w-64 bg-[#14161A] border-r border-[#26282D] min-h-screen flex flex-col justify-between shrink-0 shadow-2xl">
       <div>
         {/* Brand */}
-        <div className="p-6 border-b border-[#333]">
+        <div className="p-6 border-b border-[#26282D]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 border border-[#D4AF37] bg-[#121417] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg border border-[#D4AF37]/60 bg-[#121417] flex items-center justify-center shadow-md">
               <Layers className="text-[#D4AF37] w-4 h-4" />
             </div>
             <div>
-              <h2 className="text-sm font-bold text-[#EAEAEA] uppercase tracking-wider">CMS Admin</h2>
-              <p className="text-[10px] text-[#D4AF37] tracking-widest uppercase">Structural Portfolio</p>
+              <h2 className="text-sm font-extrabold text-[#EAEAEA] uppercase tracking-wider">CMS Admin</h2>
+              <p className="text-[10px] font-mono text-[#D4AF37] tracking-widest uppercase">Structural Portfolio</p>
             </div>
           </div>
           {user && (
-            <div className="mt-4 pt-3 border-t border-[#2D3137] text-xs text-[#9CA3AF]">
-              Logged in as: <span className="text-[#EAEAEA] font-medium block">{user.email}</span>
+            <div className="mt-4 pt-3 border-t border-[#26282D] text-xs font-mono text-[#9CA3AF]">
+              Logged in: <span className="text-[#EAEAEA] font-medium block truncate">{user.email}</span>
             </div>
           )}
         </div>
 
         {/* Back to main website */}
-        <div className="p-4 border-b border-[#333]">
+        <div className="p-4 border-b border-[#26282D]">
           <button
             onClick={() => navigate('/')}
-            className="w-full bg-[#121417] text-[#9CA3AF] hover:text-[#D4AF37] hover:border-[#D4AF37]/50 border border-[#333] py-2 px-3 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
+            className="w-full rounded-full bg-[#181A1E] text-[#9CA3AF] hover:text-[#D4AF37] hover:border-[#D4AF37]/50 border border-[#333] py-2 px-3 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-sm"
           >
-            <ArrowLeft size={14} /> Back to Live Website
+            <ArrowLeft size={14} /> Back to Live Site
           </button>
         </div>
 
         {/* Nav list */}
-        <nav className="p-4 flex flex-col gap-1">
+        <nav className="p-4 flex flex-col gap-1.5">
           {menuItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -79,10 +79,10 @@ export const AdminSidebar = () => {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-4 py-3 text-xs font-semibold tracking-wider uppercase transition-all border-l-2 ${
+                  `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-200 ${
                     isActive
-                      ? 'bg-[#121417] border-[#D4AF37] text-[#D4AF37]'
-                      : 'border-transparent text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-[#121417]/50'
+                      ? 'bg-[#D4AF37]/15 text-[#D4AF37] border border-[#D4AF37]/40 shadow-sm'
+                      : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-[#181A1E]'
                   }`
                 }
               >
@@ -95,12 +95,12 @@ export const AdminSidebar = () => {
       </div>
 
       {/* Logout */}
-      <div className="p-4 border-t border-[#333]">
+      <div className="p-4 border-t border-[#26282D]">
         <button
           onClick={handleLogout}
-          className="w-full text-red-400 hover:text-red-300 hover:bg-red-500/10 border border-red-500/20 py-2.5 px-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
+          className="w-full rounded-full bg-red-950/20 text-red-400 hover:bg-red-600 hover:text-white border border-red-500/30 py-2.5 px-3 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-sm"
         >
-          <LogOut size={16} /> Sign Out CMS
+          <LogOut size={14} /> Sign Out CMS
         </button>
       </div>
     </aside>

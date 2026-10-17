@@ -1,12 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Briefcase, GraduationCap, HardHat, CheckCircle2, ShieldCheck, Download } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Award, Briefcase, GraduationCap, HardHat, CheckCircle2, ShieldCheck, Download, ArrowUpRight } from 'lucide-react';
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
 
 export const About = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417]">
-      <div className="max-w-7xl mx-auto px-6">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 relative overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
+      {/* Ambient Aurora Drift Glow (like alazar.dev) */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/10 blur-[140px] animate-aurora-drift"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Page Header */}
         <div className="mb-16 border-b border-[#333] pb-10">
@@ -30,21 +38,26 @@ export const About = () => {
           
           {/* Bento Profile Image Card */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="relative rounded-2xl border border-[#333]/80 bg-[#181A1E] p-3 shadow-2xl h-full flex flex-col justify-between">
-              <div className="aspect-[4/5] bg-[#121417] overflow-hidden rounded-xl relative group">
-                <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-                  alt="Alexandre Senior Structural Engineer"
-                  className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4 bg-[#121417]/90 backdrop-blur-md border border-[#D4AF37]/50 px-3 py-1 text-[10px] font-mono font-bold text-[#D4AF37] uppercase tracking-wider rounded-full shadow-lg">
-                  PE #84729-SE · NY State
+            <div className="relative h-full">
+              {/* Alazar Signature Decorative Outer Mask Frame */}
+              <div aria-hidden="true" className="-inset-3 absolute rounded-[2rem] border border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
+
+              <div className="relative rounded-2xl border border-[#333]/80 bg-[#181A1E] p-3 shadow-2xl h-full flex flex-col justify-between">
+                <div className="aspect-[4/5] bg-[#121417] overflow-hidden rounded-xl relative group">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                    alt="Alexandre Senior Structural Engineer"
+                    className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-[#121417]/90 backdrop-blur-md border border-[#D4AF37]/50 px-3 py-1 text-[10px] font-mono font-bold text-[#D4AF37] uppercase tracking-wider rounded-full shadow-lg">
+                    PE #84729-SE · NY State
+                  </div>
                 </div>
-              </div>
-              <div className="p-4 flex items-center justify-between text-xs font-mono text-[#9CA3AF] border-t border-[#2D3137] mt-3">
-                <span className="flex items-center gap-1.5"><ShieldCheck size={14} className="text-[#D4AF37]" /> Licensed PE, SE</span>
-                <span className="text-[#D4AF37]">Active Practice</span>
+                <div className="p-4 flex items-center justify-between text-xs font-mono text-[#9CA3AF] border-t border-[#2D3137] mt-3">
+                  <span className="flex items-center gap-1.5"><ShieldCheck size={14} className="text-[#D4AF37]" /> Licensed PE, SE</span>
+                  <span className="text-[#D4AF37]">Active Practice</span>
+                </div>
               </div>
             </div>
           </div>
@@ -160,7 +173,7 @@ export const About = () => {
         </div>
 
         {/* Licensure & Certifications Bento */}
-        <div>
+        <div className="mb-20">
           <div className="flex items-center gap-2 mb-3">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
             <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37]">Official Licensure</span>
@@ -180,6 +193,28 @@ export const About = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Bottom Bento Consultation Banner (Alazar Signature Closure) */}
+        <div className="rounded-3xl border border-[#333]/80 bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div className="text-left">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for Select Mandates</span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-[#EAEAEA] tracking-tight mb-2">
+              Have a Structural Project in Mind?
+            </h3>
+            <p className="text-xs md:text-sm text-[#9CA3AF] max-w-xl leading-relaxed">
+              From schematic framing layout to stamped PE/SE structural drawing sets and peer reviews — let's engineer something extraordinary together.
+            </p>
+          </div>
+          <button
+            onClick={() => navigate('/contact')}
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+          >
+            Schedule Consultation <ArrowUpRight size={14} />
+          </button>
         </div>
 
       </div>

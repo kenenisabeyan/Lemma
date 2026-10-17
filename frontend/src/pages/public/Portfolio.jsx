@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Search, Filter, HardHat } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Search, Filter, HardHat, ArrowUpRight } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { CaseStudyModal } from './CaseStudy';
 import { PROJECT_CATEGORIES } from '../../utils/constants';
 
 export const Portfolio = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);
@@ -82,8 +84,13 @@ export const Portfolio = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 relative overflow-hidden">
+      {/* Ambient Aurora Drift Glow */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/10 blur-[140px] animate-aurora-drift"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header */}
         <div className="mb-12 border-b border-[#333] pb-10">
@@ -135,11 +142,11 @@ export const Portfolio = () => {
 
         {/* Projects Grid */}
         {filteredProjects.length === 0 ? (
-          <div className="py-20 text-center bg-[#181A1E] rounded-2xl border border-[#333]">
+          <div className="py-20 text-center bg-[#181A1E] rounded-2xl border border-[#333] mb-20">
             <p className="text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">No engineering projects match the selected criteria.</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {filteredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -149,6 +156,28 @@ export const Portfolio = () => {
             ))}
           </div>
         )}
+
+        {/* Bottom Bento Consultation Banner (Alazar Signature Closure) */}
+        <div className="rounded-3xl border border-[#333]/80 bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div className="text-left">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for Select Mandates</span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-[#EAEAEA] tracking-tight mb-2">
+              Have a High-Stakes Project Requiring Stamped Verification?
+            </h3>
+            <p className="text-xs md:text-sm text-[#9CA3AF] max-w-xl leading-relaxed">
+              Available for preliminary structural feasibility review, independent FEA peer reviews, and complete PE/SE calculations packages.
+            </p>
+          </div>
+          <button
+            onClick={() => navigate('/contact')}
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+          >
+            Schedule Consultation <ArrowUpRight size={14} />
+          </button>
+        </div>
 
       </div>
 

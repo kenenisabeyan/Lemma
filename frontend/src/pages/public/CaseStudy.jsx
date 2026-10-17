@@ -274,10 +274,13 @@ export const CaseStudyPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-24 pb-24">
+    <div className="relative min-h-screen bg-[#121417] text-[#EAEAEA] pt-24 pb-24 overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
       
-      {/* Blueprint Sub-Grid Background Overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-15 pointer-events-none"></div>
+      {/* Alazar Signature Ambient Aurora Drift Background Glow */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
+        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/10 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
+      </div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         

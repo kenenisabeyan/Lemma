@@ -79,68 +79,56 @@ export const Contact = () => {
           </p>
         </div>
 
-        {/* 3-Bento Contact Quick Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          
-          {/* Card 1: Email */}
-          <div className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-110 transition-transform">
-                <Mail size={22} />
+        {/* 3-Bento Contact Quick Strip (Alazar's exact hairline-divided grid pattern) */}
+        <div className="relative mb-12">
+          <div aria-hidden="true" className="pointer-events-none absolute h-px bg-[#333] -top-px left-0 right-0"></div>
+          <div className="grid gap-px overflow-hidden bg-[#2D3137] rounded-2xl border border-[#333] md:grid-cols-3 shadow-2xl">
+            {/* Card 1: Email */}
+            <div className="flex items-center justify-between gap-3 bg-[#181A1E] p-6 transition-colors hover:bg-[#1f2227] group">
+              <div className="flex items-center gap-3 overflow-hidden">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                  <Mail size={18} />
+                </div>
+                <div className="flex flex-col gap-y-0.5 overflow-hidden">
+                  <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
+                  <p className="text-xs font-mono text-[#9CA3AF] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
-                <p className="text-xs text-[#9CA3AF]">Inquiries & Drawings</p>
-              </div>
-            </div>
-            <div className="pt-3 border-t border-[#2D3137] flex items-center justify-between">
-              <span className="text-xs font-mono text-[#9CA3AF] truncate mr-2">consult@alexandre-structural.com</span>
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] hover:text-white px-2 py-1 rounded bg-[#121417] border border-[#333] shrink-0"
+                className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] hover:text-white px-2.5 py-1 rounded-full bg-[#121417] border border-[#333] shrink-0 hover:border-[#D4AF37] transition-all"
               >
                 {copiedEmail ? 'Copied!' : 'Copy'}
               </button>
             </div>
-          </div>
 
-          {/* Card 2: Phone */}
-          <a
-            href="tel:+15550198472"
-            className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 hover:border-[#D4AF37]/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-110 transition-transform">
-                <Phone size={22} />
+            {/* Card 2: Phone */}
+            <a
+              href="tel:+15550198472"
+              className="flex items-center gap-3 bg-[#181A1E] p-6 transition-colors hover:bg-[#1f2227] group"
+            >
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <Phone size={18} />
               </div>
-              <div>
+              <div className="flex flex-col gap-y-0.5">
                 <h4 className="text-sm font-bold text-[#EAEAEA]">Call Direct</h4>
-                <p className="text-xs text-[#9CA3AF]">Mon - Fri: 8am - 6pm EST</p>
+                <p className="text-xs font-mono text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472 (Mon-Fri 8am-6pm)</p>
               </div>
-            </div>
-            <div className="pt-3 border-t border-[#2D3137] flex items-center justify-between">
-              <span className="text-xs font-mono text-[#9CA3AF]">+1 (555) 019-8472</span>
-              <span className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37]">Call Now →</span>
-            </div>
-          </a>
+            </a>
 
-          {/* Card 3: Office */}
-          <div className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col justify-between shadow-xl">
-            <div className="flex items-center gap-4 mb-4">
+            {/* Card 3: Location */}
+            <div className="flex items-center gap-3 bg-[#181A1E] p-6">
               <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
-                <MapPin size={22} />
+                <MapPin size={18} />
               </div>
-              <div>
+              <div className="flex flex-col gap-y-0.5">
                 <h4 className="text-sm font-bold text-[#EAEAEA]">Office Headquarters</h4>
-                <p className="text-xs text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
+                <p className="text-xs font-mono text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
               </div>
-            </div>
-            <div className="pt-3 border-t border-[#2D3137]">
-              <span className="text-xs text-[#9CA3AF]">Suite 400, Iron Building, NY 10001</span>
             </div>
           </div>
-
+          <div aria-hidden="true" className="pointer-events-none absolute h-px bg-[#333] -bottom-px left-0 right-0"></div>
         </div>
 
         {/* Consultation Request Form Container */}
