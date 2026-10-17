@@ -106,6 +106,20 @@ export const InsightsPage = () => {
           ))}
         </div>
 
+        {/* Bottom Banner (Alazar Bento Callout) */}
+        <div className="rounded-3xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl mt-16">
+          <div className="text-left">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#EAEAEA] mb-1.5">Applying Advanced Structural Research to Real Builds</h3>
+            <p className="text-xs sm:text-sm text-[#9CA3AF]">Need an expert finite element analysis or code-compliance technical audit for your project?</p>
+          </div>
+          <button
+            onClick={() => navigate('/contact')}
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+          >
+            Request Consultation <ArrowUpRight size={14} />
+          </button>
+        </div>
+
       </div>
     </div>
   );
