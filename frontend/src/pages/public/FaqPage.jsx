@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, HardHat, Search, MessageSquare, ArrowUpRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
+import { EngineeringGlossary } from '../../components/engineering/EngineeringGlossary';
 
 export const FaqPage = () => {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ export const FaqPage = () => {
         <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/10 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         
         {/* Header */}
         <div className="mb-14 border-b border-[#333] pb-10 text-center">
@@ -145,6 +146,11 @@ export const FaqPage = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Structural Engineering Glossary & Code Formula Reference */}
+        <div className="mb-20">
+          <EngineeringGlossary />
         </div>
 
         {/* Still have questions banner */}

@@ -10,7 +10,10 @@ import {
   Bookmark, 
   CheckCircle2, 
   FileText, 
-  ArrowUpRight 
+  ArrowUpRight,
+  Copy,
+  Download,
+  ShieldCheck
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 
@@ -18,6 +21,7 @@ export const InsightDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
+  const [copiedCitation, setCopiedCitation] = useState(false);
 
   const { data, loading } = useFetch(`/insights/${slug}`);
   const { data: allData } = useFetch('/insights');
@@ -195,6 +199,51 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
               </p>
             );
           })}
+        </div>
+
+        {/* Academic & ASCE Formal Citation Box */}
+        <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 mb-16 shadow-xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-[#2D3137]">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
+              <ShieldCheck size={16} />
+              <span className="font-bold uppercase tracking-wider">Formal Peer-Reviewed Reference</span>
+            </div>
+            <span className="text-[10px] font-mono text-[#888]">ASCE Style Citation Specification</span>
+          </div>
+
+          <div className="bg-[#121417] p-4 rounded-xl border border-[#2D3137] font-mono text-xs text-[#CCC] leading-relaxed mb-4">
+            Techane, A. (2026). "{article.title}". <em>Journal of High-Rise Structural Practice & Mechanics</em>, Vol. 14, pp. 112–128. NY PE #84729 / CA SE #92041.
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(`Techane, A. (2026). "${article.title}". Journal of High-Rise Structural Practice & Mechanics, Vol. 14, pp. 112-128.`);
+                setCopiedCitation(true);
+                setTimeout(() => setCopiedCitation(false), 2500);
+              }}
+              className="rounded-full bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 hover:bg-[#D4AF37] hover:text-[#121417] text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 transition-all flex items-center gap-1.5"
+            >
+              <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASCE Citation'}
+            </button>
+            <button
+              onClick={() => {
+                const text = `=====================================================\nTECHNICAL ENGINEERING NOTE\nTitle: ${article.title}\nAuthor: Alexandre Techane, PE, SE\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
+                const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${article.slug || 'engineering-note'}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+              }}
+              className="rounded-full bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] text-xs font-mono uppercase tracking-wider px-4 py-2 transition-all flex items-center gap-1.5"
+            >
+              <Download size={13} /> Export Memo (TXT)
+            </button>
+          </div>
         </div>
 
         {/* Article Footer & Consultation Link */}
