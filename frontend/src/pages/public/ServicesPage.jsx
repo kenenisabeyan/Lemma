@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Building2, Layers, ShieldCheck, Ruler, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { CodeComplianceMatrix } from '../../components/engineering/CodeComplianceMatrix';
+import { WindTunnelSimulator } from '../../components/engineering/WindTunnelSimulator';
 
 export const ServicesPage = () => {
   const navigate = useNavigate();
@@ -140,6 +141,24 @@ export const ServicesPage = () => {
           </div>
 
           <CodeComplianceMatrix />
+        </div>
+
+        {/* Boundary Layer Wind Tunnel & Aerodynamics Section */}
+        <div className="mb-20">
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              Wind Engineering & Boundary Layer Modeling
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Wind Tunnel Aerodynamics & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Vortex Shedding Simulator.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Test skyscraper geometries against ASCE 7-22 wind tunnel criteria. Assess corner chamfering, through-aperture venting, and ISO 10137 occupant acceleration thresholds under hurricane winds.
+            </p>
+          </div>
+
+          <WindTunnelSimulator />
         </div>
 
         {/* Bottom Consultation Banner (Alazar Bento Callout) */}

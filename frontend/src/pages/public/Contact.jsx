@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, ShieldCheck, CheckCircle2, Send, AlertCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, CheckCircle2, Send, AlertCircle, Sparkles, Clock, Compass, FileText } from 'lucide-react';
 import api from '../../services/api';
 
 export const Contact = () => {
@@ -15,6 +15,48 @@ export const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const [activePreset, setActivePreset] = useState(null);
+
+  const scopePresets = [
+    {
+      id: 'high-rise',
+      title: 'High-Rise Tower Lateral Design',
+      type: 'Commercial High-Rise',
+      subject: 'New High-Rise Tower Lateral Stability (Wind & Seismic Analysis)',
+      msg: 'We require structural design for a proposed high-rise development. Scope includes 3D ETABS modeling, lateral force resisting system (shear walls + outriggers), ASCE 7-22 wind drift verification, and deep foundation caissons.'
+    },
+    {
+      id: 'peer-review',
+      title: 'Third-Party Independent Peer Review',
+      type: 'Peer Review / Value Engineering',
+      subject: 'Independent Structural Peer Review & IBC Code Verification',
+      msg: 'We are seeking an independent third-party structural engineer to audit the structural calculation package, member sizing, and lateral wind/seismic response spectrum calculations prior to municipal permit submittal.'
+    },
+    {
+      id: 'retrofit',
+      title: 'Seismic Vulnerability & Retrofit Audit',
+      type: 'Seismic Retrofit Audit',
+      subject: 'Seismic Evaluation & Non-Linear Retrofit Design (ASCE 41)',
+      msg: 'We need a seismic assessment and rehabilitation design for an existing commercial building. Scope includes non-destructive testing verification, pushover analysis, and supplemental damping/brace specifications.'
+    },
+    {
+      id: 'value-eng',
+      title: 'Value Engineering & Quantity Optimization',
+      type: 'Peer Review / Value Engineering',
+      subject: 'Value Engineering Review for Concrete & Steel Reductions',
+      msg: 'We are evaluating the structural design to identify material optimizations. We would like a review of floor slab post-tensioning, column rebar ratios, and transfer girder configurations to reduce embodied carbon and overall construction costs.'
+    }
+  ];
+
+  const handleApplyPreset = (preset) => {
+    setActivePreset(preset.id);
+    setFormData((prev) => ({
+      ...prev,
+      projectType: preset.type,
+      subject: preset.subject,
+      message: preset.msg
+    }));
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -158,6 +200,37 @@ export const Contact = () => {
               <AlertCircle size={18} /> {errorMsg}
             </div>
           )}
+
+          {/* Fast Scope Preset Wizard */}
+          <div className="mb-8 p-5 bg-[#121417] rounded-xl border border-[#333] space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-1.5 font-bold">
+                <Sparkles size={13} /> Quick Scope Builder (Select Mandate to Auto-Fill)
+              </span>
+              <span className="text-[10px] font-mono text-[#888]">Click any preset to initialize inquiry brief</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+              {scopePresets.map((preset) => {
+                const isSelected = activePreset === preset.id;
+                return (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    onClick={() => handleApplyPreset(preset)}
+                    className={`p-3 rounded-lg border text-left text-xs font-mono transition-all flex flex-col justify-between ${
+                      isSelected
+                        ? 'bg-[#181A1E] border-[#D4AF37] text-[#D4AF37] shadow-[0_0_12px_rgba(212,175,55,0.2)]'
+                        : 'bg-[#15171B] border-[#2C2E33] text-[#9CA3AF] hover:border-[#444] hover:text-[#EAEAEA]'
+                    }`}
+                  >
+                    <span className="font-bold block truncate mb-1">{preset.title}</span>
+                    <span className="text-[9px] text-[#666] block">{preset.type}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid sm:grid-cols-2 gap-6">

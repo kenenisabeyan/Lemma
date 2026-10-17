@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { Modal } from '../../components/common/Modal';
 import { useFetch } from '../../hooks/useFetch';
+import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 
 // ==========================================
 // 1. QUICK MODAL VIEW (FOR IN-PAGE PREVIEW)
@@ -461,6 +462,24 @@ export const CaseStudyPage = () => {
             </p>
           </div>
 
+        </div>
+
+        {/* Interactive Drawing Dossier & Multi-Layer CAD Board */}
+        <div className="mb-16">
+          <div className="mb-8 text-center max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-3">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Multi-Layer CAD Telemetry Board
+            </div>
+            <h3 className="text-2xl lg:text-3xl font-extrabold text-[#EAEAEA] tracking-tight mb-2">
+              Interactive Drawing <span className="text-[#D4AF37]">Dossier & FEA Inspector.</span>
+            </h3>
+            <p className="text-xs text-[#9CA3AF] leading-relaxed">
+              Examine the engineering layers for this structure: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
+            </p>
+          </div>
+
+          <BlueprintInspector />
         </div>
 
         {/* Software Stack Used */}
