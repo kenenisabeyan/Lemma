@@ -17,6 +17,7 @@ import {
   CheckSquare
 } from 'lucide-react';
 import { CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
+import { SeismicShakeTable } from '../../components/engineering/SeismicShakeTable';
 
 export const Experience = () => {
   const navigate = useNavigate();
@@ -303,6 +304,24 @@ export const Experience = () => {
             ))}
           </div>
         )}
+
+        {/* Interactive Seismic Shake Table & NLRHA Dissipation Section */}
+        <div className="mb-20">
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+              Live Physics & Non-Linear Dynamics
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Dynamic Seismic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Shake Table Laboratory.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Experience how high-performance structural systems withstand historical earthquake accelerograms through advanced base isolation, viscous fluid dampers, and tuned mass dampers.
+            </p>
+          </div>
+
+          <SeismicShakeTable />
+        </div>
 
         {/* Credentials & Call to Action Banner */}
         <div className="rounded-2xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-2xl">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FileText, Download, FileCode, ShieldCheck, Search, Filter, CheckCircle2 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { ValueEngineeringCalculator } from '../../components/engineering/ValueEngineeringCalculator';
+import { BeamShearMomentSolver } from '../../components/engineering/BeamShearMomentSolver';
 
 export const ResourcesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -210,6 +211,24 @@ Phone: +1 (555) 019-8472
           </div>
 
           <ValueEngineeringCalculator />
+        </div>
+
+        {/* Interactive Beam Mechanics Laboratory */}
+        <div className="mb-20">
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Computational Structural Analysis
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
+              Beam Shear, Moment & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Deflection Laboratory.</span>
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+              Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against AISC 360-22 and IBC limits.
+            </p>
+          </div>
+
+          <BeamShearMomentSolver />
         </div>
 
         {/* Request Custom Technical Guidance Box */}
