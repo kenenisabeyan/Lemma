@@ -29,7 +29,7 @@ export const Dashboard = () => {
     <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
       <AdminSidebar />
 
-      <main className="flex-1 p-8 overflow-y-auto">
+      <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
         
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">

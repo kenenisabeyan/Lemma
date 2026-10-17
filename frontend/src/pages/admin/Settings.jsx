@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Save, CheckCircle2, Globe, ShieldCheck } from 'lucide-react';
+import { Save, CheckCircle2, Globe, ShieldCheck, Search, Sparkles, Building2, Phone, Mail, MapPin } from 'lucide-react';
 import { AdminSidebar } from '../../components/layout/AdminSidebar';
 import { useFetch } from '../../hooks/useFetch';
 import api from '../../services/api';
@@ -53,155 +53,265 @@ export const Settings = () => {
     <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
       <AdminSidebar />
 
-      <main className="flex-1 p-8 overflow-y-auto">
-        <div className="mb-8 pb-6 border-b border-[#333]">
-          <h1 className="text-2xl font-bold uppercase tracking-wider">Site Settings & SEO Configurations</h1>
-          <p className="text-xs text-[#9CA3AF] uppercase tracking-widest mt-1">Configure statistics, hero taglines, office details and SEO fields</p>
+      <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
+        
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Global Configurations & SEO CMS
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+              Site Settings & SEO
+            </h1>
+            <p className="text-xs font-mono text-[#9CA3AF] mt-1">
+              Configure engineer credentials, metric stats counters, office locations, and search engine metadata
+            </p>
+          </div>
         </div>
 
-        <div className="max-w-4xl bg-[#1E2125] border border-[#333] p-8 shadow-xl">
-          {msg && (
-            <div className="mb-6 p-4 bg-emerald-950/40 border border-emerald-500/50 text-emerald-400 text-xs font-semibold flex items-center gap-2">
-              <CheckCircle2 size={18} /> {msg}
-            </div>
-          )}
+        {msg && (
+          <div className="mb-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-400 text-xs font-mono font-bold flex items-center gap-2 shadow-lg">
+            <CheckCircle2 size={18} /> {msg}
+          </div>
+        )}
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 text-xs">
-            
-            {/* General Identity */}
-            <div className="border-b border-[#333] pb-6">
-              <h3 className="text-sm font-bold uppercase text-[#D4AF37] mb-4 flex items-center gap-2">
-                <Globe size={16} /> Professional Identity & Hero Text
-              </h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Engineer Full Name</label>
-                  <input
-                    type="text"
-                    name="engineerName"
-                    value={formData.engineerName}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Title & Credentials</label>
-                  <input
-                    type="text"
-                    name="title"
-                    value={formData.title}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
-              </div>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-8 max-w-5xl mb-12">
+          
+          {/* Section 1: Professional Identity */}
+          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+              <Globe size={18} /> 1. Professional Identity & Hero Copy
+            </h3>
 
-              <div className="mt-4">
-                <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Hero Tagline</label>
+            <div className="grid sm:grid-cols-2 gap-5 mb-5 font-mono text-xs">
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  Engineer Full Name
+                </label>
                 <input
                   type="text"
-                  name="heroTagline"
-                  value={formData.heroTagline}
+                  name="engineerName"
+                  value={formData.engineerName}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm font-bold"
+                />
+              </div>
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  Title & Professional Licenses
+                </label>
+                <input
+                  type="text"
+                  name="title"
+                  value={formData.title}
+                  onChange={handleChange}
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                />
+              </div>
+            </div>
+
+            <div className="mb-5 font-mono text-xs">
+              <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                Hero Tagline
+              </label>
+              <input
+                type="text"
+                name="heroTagline"
+                value={formData.heroTagline}
+                onChange={handleChange}
+                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+              />
+            </div>
+
+            <div className="font-mono text-xs">
+              <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                Hero Narrative Statement
+              </label>
+              <textarea
+                rows="3"
+                name="heroBio"
+                value={formData.heroBio}
+                onChange={handleChange}
+                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans leading-relaxed text-xs"
+              ></textarea>
+            </div>
+          </div>
+
+          {/* Section 2: Metric Stat Counters */}
+          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+              <Sparkles size={18} /> 2. Public Metric Stat Counters
+            </h3>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  Years of Experience
+                </label>
+                <input
+                  type="text"
+                  name="yearsExp"
+                  value={formData.yearsExp}
+                  onChange={handleChange}
+                  placeholder="14+"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                />
+              </div>
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  Projects Completed
+                </label>
+                <input
+                  type="text"
+                  name="projectsCount"
+                  value={formData.projectsCount}
+                  onChange={handleChange}
+                  placeholder="180+"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                />
+              </div>
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  Safety Margin
+                </label>
+                <input
+                  type="text"
+                  name="safetyRecord"
+                  value={formData.safetyRecord}
+                  onChange={handleChange}
+                  placeholder="100%"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-emerald-400 focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                />
+              </div>
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  Developer Clients
+                </label>
+                <input
+                  type="text"
+                  name="clientsCount"
+                  value={formData.clientsCount}
+                  onChange={handleChange}
+                  placeholder="50+"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Section 3: Contact & Office Coordinates */}
+          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+              <Building2 size={18} /> 3. Contact Coordinates & Office
+            </h3>
+
+            <div className="grid sm:grid-cols-2 gap-5 mb-5 font-mono text-xs">
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold flex items-center gap-1.5">
+                  <Mail size={12} className="text-[#D4AF37]" /> Official Consultation Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold flex items-center gap-1.5">
+                  <Phone size={12} className="text-[#D4AF37]" /> Telephone / Office Direct
+                </label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                />
+              </div>
+            </div>
+
+            <div className="font-mono text-xs">
+              <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold flex items-center gap-1.5">
+                <MapPin size={12} className="text-[#D4AF37]" /> Physical Office Address
+              </label>
+              <input
+                type="text"
+                name="officeAddress"
+                value={formData.officeAddress}
+                onChange={handleChange}
+                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+              />
+            </div>
+          </div>
+
+          {/* Section 4: SEO Metadata with Live Google Search Snippet Preview */}
+          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+              <Search size={18} /> 4. Global Search Engine Optimization (SEO)
+            </h3>
+
+            <div className="grid gap-5 font-mono text-xs mb-6">
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  SEO Meta Title Tag (60 chars max)
+                </label>
+                <input
+                  type="text"
+                  name="metaTitle"
+                  value={formData.metaTitle}
+                  onChange={handleChange}
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
                 />
               </div>
 
-              <div className="mt-4">
-                <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Hero Bio Paragraph</label>
+              <div>
+                <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">
+                  SEO Meta Description Tag (160 chars max)
+                </label>
                 <textarea
-                  name="heroBio"
-                  rows="3"
-                  value={formData.heroBio}
+                  rows="2"
+                  name="metaDescription"
+                  value={formData.metaDescription}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
+                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
                 ></textarea>
               </div>
             </div>
 
-            {/* Statistics */}
-            <div className="border-b border-[#333] pb-6">
-              <h3 className="text-sm font-bold uppercase text-[#D4AF37] mb-4">Homepage Statistics Metrics</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Years Exp</label>
-                  <input
-                    type="text"
-                    name="yearsExp"
-                    value={formData.yearsExp}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Projects Count</label>
-                  <input
-                    type="text"
-                    name="projectsCount"
-                    value={formData.projectsCount}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Safety Record</label>
-                  <input
-                    type="text"
-                    name="safetyRecord"
-                    value={formData.safetyRecord}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Clients Count</label>
-                  <input
-                    type="text"
-                    name="clientsCount"
-                    value={formData.clientsCount}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
+            {/* Live Search Engine Snippet Preview */}
+            <div className="rounded-xl bg-[#121417] border border-[#2D3137] p-5">
+              <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">
+                Live Google Search Result Preview
+              </span>
+              <div className="font-sans">
+                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://alexandre-structural.com</span>
+                <h4 className="text-base text-[#8AB4F8] hover:underline cursor-pointer font-medium leading-snug">
+                  {formData.metaTitle || 'Alexandre - Senior Structural Engineer & Consultant'}
+                </h4>
+                <p className="text-xs text-[#BDC1C6] mt-1 line-clamp-2 leading-relaxed">
+                  {formData.metaDescription || 'Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.'}
+                </p>
               </div>
             </div>
+          </div>
 
-            {/* SEO Metadata */}
-            <div>
-              <h3 className="text-sm font-bold uppercase text-[#D4AF37] mb-4">SEO Fields & Open Graph</h3>
-              <div className="flex flex-col gap-4">
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Meta Title</label>
-                  <input
-                    type="text"
-                    name="metaTitle"
-                    value={formData.metaTitle}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  />
-                </div>
-                <div>
-                  <label className="block font-mono uppercase text-[#9CA3AF] text-[10px] mb-1">Meta Description</label>
-                  <textarea
-                    name="metaDescription"
-                    rows="2"
-                    value={formData.metaDescription}
-                    onChange={handleChange}
-                    className="w-full bg-[#121417] border border-[#333] p-3 text-[#EAEAEA]"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-
+          {/* Submit Button */}
+          <div>
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#D4AF37] text-[#121417] py-3.5 font-extrabold uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 mt-4"
+              className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2"
             >
-              {loading ? 'Saving Settings...' : 'Save Site Settings'} <Save size={16} />
+              <Save size={16} />
+              {loading ? 'Saving Configurations...' : 'Save Site Settings & SEO'}
             </button>
-          </form>
-        </div>
+          </div>
+
+        </form>
 
       </main>
     </div>
