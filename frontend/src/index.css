@@ -3,8 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-main: #F8F8F7;
+    --text-main: #18181B;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(228, 228, 231, 0.8);
+    --wine-primary: #801834;
+    --wine-hover: #671229;
+  }
+
+  html.dark {
+    --bg-main: #121417;
+    --text-main: #EAEAEA;
+    --card-bg: rgba(24, 26, 30, 0.85);
+    --border-color: rgba(51, 51, 51, 0.8);
+    --wine-primary: #9E1F43;
+    --wine-hover: #801834;
+  }
+
   body {
-    @apply bg-[#121417] text-[#EAEAEA] overflow-x-hidden min-h-screen selection:bg-[#D4AF37] selection:text-[#121417];
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white;
   }
 }
 

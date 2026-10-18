@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthProvider';
+import { ThemeProvider } from './context/ThemeContext';
 import { useAuth } from './hooks/useAuth';
 
 // Public Layout
@@ -85,9 +86,10 @@ const PublicLayout = ({ children }) => {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <ScrollToTop />
-      <Routes>
+    <ThemeProvider>
+      <AuthProvider>
+        <ScrollToTop />
+        <Routes>
         {/* Public Visitor Routes */}
         <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
         <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
@@ -128,5 +130,6 @@ export default function App() {
         } />
       </Routes>
     </AuthProvider>
+    </ThemeProvider>
   );
 }
