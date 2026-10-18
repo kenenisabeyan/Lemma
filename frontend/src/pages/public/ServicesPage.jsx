@@ -73,7 +73,7 @@ export const ServicesPage = () => {
           </div>
         </div>
 
-        {/* Services List (Alazar Bento Card modules) */}
+        {/* Services List (Bento Card modules) */}
         <div className="flex flex-col gap-8 mb-20">
           {servicesList.map((srv, index) => {
             const features = typeof srv.features === 'string'
@@ -83,30 +83,30 @@ export const ServicesPage = () => {
             return (
               <div 
                 key={srv.id || index} 
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 lg:p-10 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl hover:shadow-[0_15px_35px_rgba(212,175,55,0.08)]"
+                className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 lg:p-10 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl"
               >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-md">
+                    <div className="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-sm">
                       <Building2 size={28} />
                     </div>
                     <div>
-                      <span className="inline-block rounded-full bg-[#121417] border border-[#D4AF37]/30 px-2.5 py-0.5 text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest mb-2">
+                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-widest mb-2 font-bold">
                         Module 0{index + 1}
                       </span>
-                      <h3 className="text-2xl font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors">{srv.title}</h3>
+                      <h3 className="text-2xl font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">{srv.title}</h3>
                     </div>
                   </div>
 
                   <div className="lg:col-span-8 flex flex-col gap-6">
-                    <p className="text-[#9CA3AF] text-sm lg:text-base leading-relaxed">{srv.description || srv.summary}</p>
+                    <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm lg:text-base leading-relaxed">{srv.description || srv.summary}</p>
 
-                    <div className="grid sm:grid-cols-2 gap-3.5 bg-[#121417] p-5 rounded-xl border border-[#2D3137]">
+                    <div className="grid sm:grid-cols-2 gap-3.5 bg-zinc-50 dark:bg-[#121417] p-5 rounded-xl border border-zinc-200/80 dark:border-[#2D3137]">
                       {features.map((feat, i) => (
                         <div key={i} className="flex items-start gap-2.5">
-                          <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0 mt-0.5" />
-                          <span className="text-xs text-[#EAEAEA] leading-snug">{feat}</span>
+                          <CheckCircle2 size={15} className="text-[#801834] dark:text-[#D4AF37] shrink-0 mt-0.5" />
+                          <span className="text-xs text-zinc-800 dark:text-[#EAEAEA] leading-snug">{feat}</span>
                         </div>
                       ))}
                     </div>
@@ -114,7 +114,7 @@ export const ServicesPage = () => {
                     <div className="pt-2">
                       <button
                         onClick={() => navigate('/contact')}
-                        className="rounded-full bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] inline-flex items-center gap-2"
+                        className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-[0_4px_15px_rgba(128,24,52,0.25)] dark:shadow-[0_0_20px_rgba(212,175,55,0.2)] inline-flex items-center gap-2"
                       >
                         Request Service Consultation <ArrowUpRight size={14} />
                       </button>
@@ -130,14 +130,14 @@ export const ServicesPage = () => {
         {/* Code Compliance & Municipal Standards Matrix */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
               Regulatory & Code Compliance Auditor
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-              Municipal Code & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Provisions Matrix.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
+              Municipal Code & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Provisions Matrix.</span>
             </h2>
-            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Every design calculation and structural drawing package adheres strictly to the latest edition of American and international structural codes.
             </p>
           </div>
@@ -148,14 +148,14 @@ export const ServicesPage = () => {
         {/* Boundary Layer Wind Tunnel & Aerodynamics Section */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-cyan-600 dark:bg-cyan-400 animate-pulse"></span>
               Wind Engineering & Boundary Layer Modeling
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-              Wind Tunnel Aerodynamics & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Vortex Shedding Simulator.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
+              Wind Tunnel Aerodynamics & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Vortex Shedding Simulator.</span>
             </h2>
-            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Test skyscraper geometries against ASCE 7-22 wind tunnel criteria. Assess corner chamfering, through-aperture venting, and ISO 10137 occupant acceleration thresholds under hurricane winds.
             </p>
           </div>
@@ -163,15 +163,15 @@ export const ServicesPage = () => {
           <WindTunnelSimulator />
         </div>
 
-        {/* Bottom Consultation Banner (Alazar Bento Callout) */}
-        <div className="rounded-3xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl">
+        {/* Bottom Consultation Banner */}
+        <div className="rounded-3xl bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl dark:shadow-2xl">
           <div className="text-left">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#EAEAEA] mb-1.5">Require Specialized Structural Analysis?</h3>
-            <p className="text-xs sm:text-sm text-[#9CA3AF]">Let's discuss FEA dynamic modeling, IBC code certifications, or third-party peer reviews for your project.</p>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-1.5">Require Specialized Structural Analysis?</h3>
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF]">Let's discuss FEA dynamic modeling, IBC code certifications, or third-party peer reviews for your project.</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-zinc-900 dark:hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-md shrink-0 flex items-center gap-2"
           >
             Schedule Consultation <ArrowUpRight size={14} />
           </button>

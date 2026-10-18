@@ -123,25 +123,25 @@ export const Contact = () => {
           </div>
         </div>
 
-        {/* 3-Bento Contact Quick Strip (Alazar's exact hairline-divided grid pattern) */}
+        {/* 3-Bento Contact Quick Strip */}
         <div className="relative mb-12">
-          <div aria-hidden="true" className="pointer-events-none absolute h-px bg-[#333] -top-px left-0 right-0"></div>
-          <div className="grid gap-px overflow-hidden bg-[#2D3137] rounded-2xl border border-[#333] md:grid-cols-3 shadow-2xl">
+          <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:bg-[#333] -top-px left-0 right-0"></div>
+          <div className="grid gap-px overflow-hidden bg-zinc-200 dark:bg-[#2D3137] rounded-2xl border border-zinc-200/90 dark:border-[#333] md:grid-cols-3 shadow-lg dark:shadow-2xl">
             {/* Card 1: Email */}
-            <div className="flex items-center justify-between gap-3 bg-[#181A1E] p-6 transition-colors hover:bg-[#1f2227] group">
+            <div className="flex items-center justify-between gap-3 bg-white dark:bg-[#181A1E] p-6 transition-colors hover:bg-zinc-50 dark:hover:bg-[#1f2227] group">
               <div className="flex items-center gap-3 overflow-hidden">
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200 dark:border-[#D4AF37]/30 bg-zinc-100 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] group-hover:scale-105 transition-transform shadow-sm">
                   <Mail size={18} />
                 </div>
                 <div className="flex flex-col gap-y-0.5 overflow-hidden">
-                  <h4 className="text-sm font-bold text-[#EAEAEA]">Send an Email</h4>
-                  <p className="text-xs font-mono text-[#9CA3AF] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
+                  <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA]">Send an Email</h4>
+                  <p className="text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] truncate group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] hover:text-white px-2.5 py-1 rounded-full bg-[#121417] border border-[#333] shrink-0 hover:border-[#D4AF37] transition-all"
+                className="text-[10px] font-mono uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] hover:text-white dark:hover:text-white px-2.5 py-1 rounded-full bg-zinc-100 hover:bg-[#801834] dark:bg-[#121417] dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] border border-zinc-200 dark:border-[#333] shrink-0 transition-all font-bold"
               >
                 {copiedEmail ? 'Copied!' : 'Copy'}
               </button>
@@ -150,66 +150,66 @@ export const Contact = () => {
             {/* Card 2: Phone */}
             <a
               href="tel:+15550198472"
-              className="flex items-center gap-3 bg-[#181A1E] p-6 transition-colors hover:bg-[#1f2227] group"
+              className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-6 transition-colors hover:bg-zinc-50 dark:hover:bg-[#1f2227] group"
             >
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200 dark:border-[#D4AF37]/30 bg-zinc-100 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] group-hover:scale-105 transition-transform shadow-sm">
                 <Phone size={18} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-[#EAEAEA]">Call Direct</h4>
-                <p className="text-xs font-mono text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472 (Mon-Fri 8am-6pm)</p>
+                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA]">Call Direct</h4>
+                <p className="text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472 (Mon-Fri 8am-6pm)</p>
               </div>
             </a>
 
             {/* Card 3: Location */}
-            <div className="flex items-center gap-3 bg-[#181A1E] p-6">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
+            <div className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-6">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200 dark:border-[#D4AF37]/30 bg-zinc-100 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] shadow-sm">
                 <MapPin size={18} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-[#EAEAEA]">Office Headquarters</h4>
-                <p className="text-xs font-mono text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
+                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA]">Office Headquarters</h4>
+                <p className="text-xs font-mono text-zinc-600 dark:text-[#9CA3AF]">New York, NY (EST · GMT-5)</p>
               </div>
             </div>
           </div>
-          <div aria-hidden="true" className="pointer-events-none absolute h-px bg-[#333] -bottom-px left-0 right-0"></div>
+          <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:bg-[#333] -bottom-px left-0 right-0"></div>
         </div>
 
         {/* Consultation Request Form Container */}
-        <div className="rounded-2xl border border-[#333]/80 bg-[#181A1E] p-8 lg:p-12 shadow-2xl">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-[#2D3137]">
+        <div className="rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] p-8 lg:p-12 shadow-xl dark:shadow-2xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-[#2D3137]">
             <div>
-              <h3 className="text-2xl font-bold text-[#EAEAEA] mb-1">
+              <h3 className="text-2xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">
                 Structural Consultation Inquiry
               </h3>
-              <p className="text-xs text-[#9CA3AF]">
+              <p className="text-xs text-zinc-600 dark:text-[#9CA3AF]">
                 Provide your project specifications or scope below for a confidential engineering review.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] bg-[#121417] px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#801834] dark:text-[#D4AF37] bg-zinc-100 dark:bg-[#121417] px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-[#D4AF37]/30 font-bold">
               <ShieldCheck size={14} /> NDA Confidentiality Assured
             </div>
           </div>
 
           {successMsg && (
-            <div className="mb-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-400 text-xs font-semibold flex items-center gap-2">
+            <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-500/50 text-emerald-800 dark:text-emerald-400 text-xs font-semibold flex items-center gap-2">
               <CheckCircle2 size={18} /> {successMsg}
             </div>
           )}
 
           {errorMsg && (
-            <div className="mb-6 p-4 rounded-xl bg-red-950/40 border border-red-500/50 text-red-400 text-xs font-semibold flex items-center gap-2">
+            <div className="mb-6 p-4 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-500/50 text-red-800 dark:text-red-400 text-xs font-semibold flex items-center gap-2">
               <AlertCircle size={18} /> {errorMsg}
             </div>
           )}
 
           {/* Fast Scope Preset Wizard */}
-          <div className="mb-8 p-5 bg-[#121417] rounded-xl border border-[#333] space-y-3">
+          <div className="mb-8 p-5 bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-1.5 font-bold">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] flex items-center gap-1.5 font-bold">
                 <Sparkles size={13} /> Quick Scope Builder (Select Mandate to Auto-Fill)
               </span>
-              <span className="text-[10px] font-mono text-[#888]">Click any preset to initialize inquiry brief</span>
+              <span className="text-[10px] font-mono text-zinc-500 dark:text-[#888]">Click any preset to initialize inquiry brief</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
@@ -222,12 +222,12 @@ export const Contact = () => {
                     onClick={() => handleApplyPreset(preset)}
                     className={`p-3 rounded-lg border text-left text-xs font-mono transition-all flex flex-col justify-between ${
                       isSelected
-                        ? 'bg-[#181A1E] border-[#D4AF37] text-[#D4AF37] shadow-[0_0_12px_rgba(212,175,55,0.2)]'
-                        : 'bg-[#15171B] border-[#2C2E33] text-[#9CA3AF] hover:border-[#444] hover:text-[#EAEAEA]'
+                        ? 'bg-white dark:bg-[#181A1E] border-[#801834] dark:border-[#D4AF37] text-[#801834] dark:text-[#D4AF37] shadow-sm'
+                        : 'bg-white/70 dark:bg-[#15171B] border-zinc-200 dark:border-[#2C2E33] text-zinc-600 dark:text-[#9CA3AF] hover:border-zinc-300 dark:hover:border-[#444] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                     }`}
                   >
                     <span className="font-bold block truncate mb-1">{preset.title}</span>
-                    <span className="text-[9px] text-[#666] block">{preset.type}</span>
+                    <span className="text-[9px] text-zinc-500 dark:text-[#666] block">{preset.type}</span>
                   </button>
                 );
               })}
@@ -237,7 +237,7 @@ export const Contact = () => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] mb-2 font-mono font-bold">
                   Full Name *
                 </label>
                 <input
@@ -247,12 +247,12 @@ export const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Sarah Jenkins, AIA"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  className="w-full bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] text-zinc-900 dark:text-[#EAEAEA] p-3.5 text-xs focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors shadow-sm"
                 />
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] mb-2 font-mono font-bold">
                   Email Address *
                 </label>
                 <input
@@ -262,14 +262,14 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="s.jenkins@architech.com"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  className="w-full bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] text-zinc-900 dark:text-[#EAEAEA] p-3.5 text-xs focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors shadow-sm"
                 />
               </div>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] mb-2 font-mono font-bold">
                   Phone Number
                 </label>
                 <input
@@ -278,19 +278,19 @@ export const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+1 (555) 000-0000"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  className="w-full bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] text-zinc-900 dark:text-[#EAEAEA] p-3.5 text-xs focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors shadow-sm"
                 />
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] mb-2 font-mono font-bold">
                   Project Classification *
                 </label>
                 <select
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  className="w-full bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] text-zinc-900 dark:text-[#EAEAEA] p-3.5 text-xs focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors shadow-sm"
                 >
                   <option value="Commercial High-Rise">Commercial High-Rise</option>
                   <option value="Infrastructure & Bridges">Infrastructure & Bridges</option>
@@ -303,7 +303,7 @@ export const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+              <label className="block text-[10px] uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] mb-2 font-mono font-bold">
                 Subject / Project Name
               </label>
               <input
@@ -312,12 +312,12 @@ export const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="e.g. Seismic lateral bracing audit for 20-story building"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] text-zinc-900 dark:text-[#EAEAEA] p-3.5 text-xs focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors shadow-sm"
               />
             </div>
 
             <div>
-              <label className="block text-[10px] uppercase tracking-widest text-[#9CA3AF] mb-2 font-mono">
+              <label className="block text-[10px] uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] mb-2 font-mono font-bold">
                 Structural Project Requirements *
               </label>
               <textarea
@@ -327,14 +327,14 @@ export const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Describe building height, structural materials (concrete/steel), site location, timeline, or key technical challenges..."
-                className="w-full bg-[#121417] rounded-xl border border-[#333] text-[#EAEAEA] p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors resize-none"
+                className="w-full bg-zinc-50 dark:bg-[#121417] rounded-xl border border-zinc-200 dark:border-[#333] text-zinc-900 dark:text-[#EAEAEA] p-3.5 text-xs focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors resize-none shadow-sm"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-white transition-all w-full flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+              className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-zinc-900 dark:hover:bg-white transition-all w-full flex justify-center items-center gap-2 shadow-lg"
             >
               {loading ? 'Submitting Inquiry...' : 'Send Secure Consultation Inquiry'} <Send size={14} />
             </button>
