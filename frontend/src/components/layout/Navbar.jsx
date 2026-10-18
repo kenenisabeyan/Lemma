@@ -1,155 +1,267 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Layers, Menu, X, ArrowUpRight, ShieldCheck, User } from 'lucide-react';
+import { 
+  Menu, 
+  X, 
+  Moon, 
+  Sun, 
+  ArrowUpRight, 
+  ShieldCheck, 
+  User, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ChevronRight,
+  ExternalLink
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../context/ThemeContext';
+import { useFetch } from '../../hooks/useFetch';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { theme, toggleTheme, isDark } = useTheme();
+
+  // Fetch settings for dynamic name & avatar
+  const { data: settingsData } = useFetch('/settings', {
+    settings: {
+      engineerName: 'ALAZAR',
+      title: 'DIRECTOR & DESIGNER',
+      avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80'
+    }
+  });
+
+  const settings = settingsData?.settings || settingsData || {};
+  const brandName = settings.engineerName ? settings.engineerName.toUpperCase().split(' ')[0] : 'ALAZAR';
+  const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'DIRECTOR & DESIGNER';
+  const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80';
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 25);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Experience', path: '/experience' },
-    { name: 'Insights', path: '/insights' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'Contact', path: '/contact' }
+    { num: '01', name: 'Home', path: '/' },
+    { num: '02', name: 'About', path: '/about' },
+    { num: '03', name: 'Services', path: '/services' },
+    { num: '04', name: 'Projects', path: '/projects' },
+    { num: '05', name: 'Experience', path: '/experience' },
+    { num: '06', name: 'Insights', path: '/insights' },
+    { num: '07', name: 'Testimonials', path: '/testimonials' },
+    { num: '08', name: 'Resources', path: '/resources' },
+    { num: '09', name: 'Contact', path: '/contact' }
   ];
 
-  const handleHireMe = () => {
-    navigate('/contact');
-    setMobileOpen(false);
-  };
-
   return (
-    <header className="fixed top-3 sm:top-5 inset-x-0 mx-auto z-50 w-[94%] max-w-7xl pointer-events-none transition-all duration-300">
-      <nav className={`pointer-events-auto rounded-full transition-all duration-300 border ${
-        scrolled 
-          ? 'bg-[#121417]/92 backdrop-blur-xl border-[#D4AF37]/35 shadow-[0_12px_40px_rgba(0,0,0,0.7)] py-2 px-5 sm:px-6' 
-          : 'bg-[#181A1E]/85 backdrop-blur-lg border-[#333]/80 shadow-[0_8px_30px_rgba(0,0,0,0.5)] py-2.5 px-5 sm:px-6'
-      } flex items-center justify-between`}>
-        
-        {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="relative flex items-center justify-center w-8 h-8 rounded-lg border border-[#D4AF37]/60 bg-[#121417] group-hover:border-white transition-colors">
-            <Layers className="text-[#D4AF37] w-4 h-4 group-hover:scale-110 transition-transform" />
-            <span className="absolute -top-1 -right-1 flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-          </div>
-          <div className="flex flex-col">
-            <h1 className="text-sm sm:text-base font-extrabold tracking-wider uppercase text-[#EAEAEA] leading-none">
-              Alexandre<span className="text-[#D4AF37]">.</span>
-            </h1>
-            <p className="text-[9px] font-mono tracking-widest text-[#9CA3AF] uppercase mt-0.5 hidden sm:block">
-              Structural PE, SE
-            </p>
-          </div>
-        </Link>
-
-        {/* Desktop Nav Links (Alazar pill bar) */}
-        <div className="hidden xl:flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider">
-          {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`px-3 py-1.5 rounded-full transition-all duration-200 ${
-                  isActive
-                    ? 'bg-[#D4AF37]/15 text-[#D4AF37] border border-[#D4AF37]/40 font-bold shadow-[0_0_12px_rgba(212,175,55,0.15)]'
-                    : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-white/5'
-                }`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* Right CTA & Admin Pill */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {user && (
-            <Link
-              to="/admin/dashboard"
-              className="hidden md:flex rounded-full items-center gap-1.5 border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] px-3.5 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#121417] transition-all"
-            >
-              <User size={13} /> Admin
-            </Link>
-          )}
-
-          <button
-            onClick={handleHireMe}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-4 sm:px-5 py-2 text-xs font-mono font-extrabold tracking-wider uppercase hover:bg-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.25)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] flex items-center gap-1.5 active:scale-95"
-          >
-            Hire Me <ArrowUpRight size={13} />
-          </button>
-
-          {/* Mobile Toggle */}
-          <button
-            className="xl:hidden text-[#EAEAEA] p-1.5 hover:text-[#D4AF37] transition-colors rounded-full hover:bg-white/5"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle Menu"
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Nav Overlay (Alazar floating card) */}
-      {mobileOpen && (
-        <div className="pointer-events-auto xl:hidden mt-2 rounded-2xl bg-[#181A1E]/95 backdrop-blur-2xl border border-[#D4AF37]/30 p-5 shadow-2xl flex flex-col gap-2 animate-in fade-in slide-in-from-top-3 duration-200">
-          <div className="grid grid-cols-2 gap-1.5 mb-2">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
-              return (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setMobileOpen(false)}
-                  className={`px-3 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all ${
-                    isActive 
-                      ? 'bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/40 font-bold' 
-                      : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-white/5'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </div>
+    <>
+      {/* Top Header Bar */}
+      <header 
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+          scrolled 
+            ? 'bg-white/85 dark:bg-[#121417]/85 backdrop-blur-xl border-b border-zinc-200/60 dark:border-zinc-800/60 shadow-[0_4px_25px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
+            : 'bg-transparent py-4 sm:py-6'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
           
-          {user && (
-            <Link
-              to="/admin/dashboard"
-              onClick={() => setMobileOpen(false)}
-              className="text-left text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider py-2 px-3 border border-[#D4AF37]/30 rounded-xl bg-[#D4AF37]/10"
-            >
-              Admin Dashboard CMS
-            </Link>
-          )}
-
-          <button
-            onClick={handleHireMe}
-            className="rounded-xl bg-[#D4AF37] text-[#121417] px-4 py-3 text-xs font-mono font-extrabold tracking-widest uppercase mt-1 w-full text-center flex justify-center items-center gap-2 active:scale-98"
+          {/* Left Brand: Avatar + Online Dot + Name & Burgundy Subtitle */}
+          <Link 
+            to="/" 
+            className="flex items-center gap-3 group focus:outline-none"
+            aria-label="Home"
           >
-            Hire Me / Request Consultation <ArrowUpRight size={14} />
-          </button>
+            {/* Avatar with Live Green Status Dot */}
+            <div className="relative shrink-0">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-zinc-300 dark:border-zinc-700/80 shadow-sm group-hover:scale-105 transition-transform">
+                <img 
+                  src={avatarImage} 
+                  alt={brandName}
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+              {/* Online Green Indicator Dot */}
+              <span className="absolute bottom-0 right-0 flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-white dark:border-[#121417]"></span>
+              </span>
+            </div>
+
+            {/* Name + Subtitle in Burgundy */}
+            <div className="flex flex-col text-left">
+              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors leading-tight">
+                {brandName}
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#801834] dark:text-[#E84855] uppercase mt-0.5 leading-none">
+                {brandSubtitle}
+              </span>
+            </div>
+          </Link>
+
+          {/* Right Action Buttons: Circular Theme Toggle + Circular Menu Toggle */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            
+            {/* Theme Toggle Circular Pill */}
+            <button
+              onClick={toggleTheme}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white/90 dark:bg-zinc-800/90 border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              title={isDark ? "Light mode" : "Dark mode"}
+            >
+              {isDark ? (
+                <Sun size={17} className="text-amber-400" />
+              ) : (
+                <Moon size={17} className="text-zinc-700" />
+              )}
+            </button>
+
+            {/* Menu Toggle Circular Pill */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle navigation menu"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white/90 dark:bg-zinc-800/90 border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              title="Menu"
+            >
+              {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+
+          </div>
+
         </div>
-      )}
-    </header>
+      </header>
+
+      {/* Modern High-End Slide-Over Navigation Overlay */}
+      <AnimatePresence>
+        {menuOpen && (
+          <div className="fixed inset-0 z-50 flex justify-end">
+            {/* Backdrop Blur */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setMenuOpen(false)}
+              className="fixed inset-0 bg-black/40 dark:bg-black/70 backdrop-blur-sm"
+            />
+
+            {/* Slide-in Menu Drawer */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 260 }}
+              className="relative z-10 w-full max-w-md bg-white dark:bg-[#15171B] border-l border-zinc-200 dark:border-zinc-800 shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
+            >
+              {/* Drawer Top */}
+              <div>
+                <div className="flex items-center justify-between pb-6 border-b border-zinc-200 dark:border-zinc-800">
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={avatarImage} 
+                      alt={brandName}
+                      className="w-10 h-10 rounded-full object-cover border border-zinc-300 dark:border-zinc-700" 
+                    />
+                    <div>
+                      <h3 className="font-extrabold text-sm text-zinc-900 dark:text-zinc-100">{brandName}</h3>
+                      <p className="text-[10px] font-bold tracking-wider text-[#801834] dark:text-[#E84855] uppercase">
+                        {brandSubtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setMenuOpen(false)}
+                    aria-label="Close menu"
+                    className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:scale-105 active:scale-95 transition-all"
+                  >
+                    <X size={18} />
+                  </button>
+                </div>
+
+                {/* Status Badge */}
+                <div className="my-5 flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>Available for Q1/Q2 2026 Projects & Advisory</span>
+                </div>
+
+                {/* Navigation Links */}
+                <nav className="flex flex-col gap-1 mt-4">
+                  {navLinks.map((link) => {
+                    const isActive = location.pathname === link.path;
+                    return (
+                      <Link
+                        key={link.name}
+                        to={link.path}
+                        onClick={() => setMenuOpen(false)}
+                        className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 ${
+                          isActive
+                            ? 'bg-[#801834]/10 dark:bg-[#801834]/20 text-[#801834] dark:text-[#E84855] font-bold'
+                            : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800/60'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="font-mono text-xs opacity-50">{link.num}</span>
+                          <span className="text-base font-semibold tracking-wide uppercase">{link.name}</span>
+                        </div>
+                        <ChevronRight 
+                          size={16} 
+                          className={`transition-transform ${
+                            isActive 
+                              ? 'text-[#801834] dark:text-[#E84855] translate-x-1' 
+                              : 'opacity-0 group-hover:opacity-100 group-hover:translate-x-1'
+                          }`} 
+                        />
+                      </Link>
+                    );
+                  })}
+                </nav>
+              </div>
+
+              {/* Drawer Bottom Actions */}
+              <div className="pt-6 mt-6 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-3">
+                {user && (
+                  <Link
+                    to="/admin/dashboard"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100"
+                  >
+                    <User size={14} /> Admin CMS Portal
+                  </Link>
+                )}
+
+                <button
+                  onClick={() => {
+                    navigate('/contact');
+                    setMenuOpen(false);
+                  }}
+                  className="rounded-full bg-[#801834] hover:bg-[#68132a] active:scale-95 text-white py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#801834]/25 flex items-center justify-center gap-2"
+                >
+                  Schedule Consultation <ArrowUpRight size={14} />
+                </button>
+
+                <div className="flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-400 font-mono pt-2">
+                  <span>Available Worldwide</span>
+                  <span>EST / GMT-5</span>
+                </div>
+              </div>
+
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
