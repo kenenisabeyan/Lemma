@@ -85,8 +85,8 @@ export const FaqPage = () => {
           </div>
         </div>
 
-        {/* Filter & Search Bar (Alazar rounded pill bar) */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        {/* Filter & Search Bar */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8 bg-white dark:bg-[#181A1E] p-3 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 shadow-sm dark:shadow-xl">
           <div className="flex flex-wrap gap-2 w-full sm:w-auto items-center">
             {categories.map(cat => (
               <button
@@ -94,8 +94,8 @@ export const FaqPage = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
+                    ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
+                    : 'bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                 }`}
               >
                 {cat}
@@ -104,43 +104,43 @@ export const FaqPage = () => {
           </div>
 
           <div className="relative w-full sm:w-64">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF]" size={15} />
             <input
               type="text"
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors"
+              className="w-full bg-zinc-50 dark:bg-[#121417] rounded-full border border-zinc-200 dark:border-[#333] focus:border-[#801834] dark:focus:border-[#D4AF37] text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors shadow-sm"
             />
           </div>
         </div>
 
-        {/* Accordion List (Alazar Bento Cards) */}
+        {/* Accordion List */}
         <div className="flex flex-col gap-4 mb-16">
           {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div 
                 key={faq.id || index} 
-                className="rounded-2xl bg-[#181A1E] border border-[#333]/80 overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/50 shadow-md"
+                className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 overflow-hidden transition-all duration-300 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 shadow-sm"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full p-6 text-left font-bold text-base text-[#EAEAEA] hover:text-[#D4AF37] flex justify-between items-center gap-4 transition-colors"
+                  className="w-full p-6 text-left font-bold text-base text-zinc-900 dark:text-[#EAEAEA] hover:text-[#801834] dark:hover:text-[#D4AF37] flex justify-between items-center gap-4 transition-colors"
                 >
                   <span className="flex items-center gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#121417] border border-[#D4AF37]/30 text-[#D4AF37]">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 text-[#801834] dark:text-[#D4AF37]">
                       <HelpCircle size={18} />
                     </span>
                     {faq.question}
                   </span>
-                  <ChevronDown size={20} className={`text-[#D4AF37] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={20} className={`text-[#801834] dark:text-[#D4AF37] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-sm text-[#9CA3AF] leading-relaxed border-t border-[#2D3137] bg-[#121417]/40 animate-in fade-in duration-200">
+                  <div className="px-6 pb-6 pt-2 text-sm text-zinc-600 dark:text-[#9CA3AF] leading-relaxed border-t border-zinc-200 dark:border-[#2D3137] bg-zinc-50/60 dark:bg-[#121417]/40 animate-in fade-in duration-200">
                     <p className="mb-4 leading-relaxed">{faq.answer}</p>
-                    <span className="rounded-full text-[10px] font-mono uppercase text-[#D4AF37] bg-[#181A1E] border border-[#D4AF37]/30 px-3 py-1">
+                    <span className="rounded-full text-[10px] font-mono uppercase text-[#801834] dark:text-[#D4AF37] bg-zinc-100 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#D4AF37]/30 px-3 py-1 font-bold">
                       Discipline: {faq.category}
                     </span>
                   </div>
@@ -156,17 +156,17 @@ export const FaqPage = () => {
         </div>
 
         {/* Still have questions banner */}
-        <div className="rounded-2xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 text-center shadow-2xl">
-          <div className="flex size-14 items-center justify-center rounded-2xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] mx-auto mb-4 shadow-md">
+        <div className="rounded-2xl bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 text-center shadow-xl dark:shadow-2xl">
+          <div className="flex size-14 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] mx-auto mb-4 shadow-sm">
             <MessageSquare size={24} />
           </div>
-          <h3 className="text-xl font-bold text-[#EAEAEA] mb-2">Have a Question About Your Specific Structural Plan?</h3>
-          <p className="text-xs text-[#9CA3AF] max-w-lg mx-auto mb-6 leading-relaxed">
+          <h3 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-2">Have a Question About Your Specific Structural Plan?</h3>
+          <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] max-w-lg mx-auto mb-6 leading-relaxed">
             Every building geometry and soil condition presents unique physics. Reach out directly for preliminary structural feasibility review.
           </p>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] inline-flex items-center gap-2"
+            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3 text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-md inline-flex items-center gap-2"
           >
             Inquire About Your Project <ArrowUpRight size={14} />
           </button>
