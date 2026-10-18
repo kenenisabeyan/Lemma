@@ -97,28 +97,30 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 relative overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
+    <div className="min-h-screen bg-transparent text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white">
       
-      {/* Background Radial Glow (like alazar.dev) */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#D4AF37]/5 rounded-full blur-[140px] pointer-events-none"></div>
+      {/* Background Radial Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#801834]/8 dark:bg-[#801834]/15 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Header */}
         <div className="mb-14 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
             </span>
             Available for Select Consultation & Advisory
           </div>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-            Have Questions? <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Get in Touch.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
+            Have Questions? <span className="text-[#801834] dark:text-[#E84855]">Get in Touch.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-base leading-relaxed">
-            Available for new structural engineering design, high-rise wind & seismic peer reviews, structural health evaluations, and forensic advisory.
-          </p>
+          <div className="rounded-2xl bg-white/75 dark:bg-[#181A1E]/80 backdrop-blur-md border border-white/80 dark:border-zinc-800 p-6 shadow-sm max-w-2xl mx-auto">
+            <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed">
+              Available for new structural engineering design, high-rise wind & seismic peer reviews, structural health evaluations, and forensic advisory.
+            </p>
+          </div>
         </div>
 
         {/* 3-Bento Contact Quick Strip (Alazar's exact hairline-divided grid pattern) */}

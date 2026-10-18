@@ -29,7 +29,8 @@ import {
   Copy,
   TrendingDown,
   Cpu,
-  Layers3
+  Layers3,
+  ArrowRight
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { StatCounter } from '../../components/engineering/StatCounter';
@@ -70,7 +71,9 @@ export const Home = () => {
     settings: {
       engineerName: 'Alexandre Techane',
       title: 'Senior Structural Engineer, PE, SE',
-      heroTagline: 'Precision in Every Structure.',
+      heroHeadlineLine1: 'Resilient Structures.',
+      heroHeadlineAccent: 'Clear',
+      heroHeadlineLine2: 'Engineering.',
       heroBio: 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.',
       introVideoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-architectural-model-of-a-modern-building-41618-large.mp4',
       yearsExp: '14+',
@@ -170,187 +173,92 @@ export const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-24 sm:pt-28 relative selection:bg-[#D4AF37] selection:text-[#121417]">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white">
       
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION (ALAZAR.DEV MODERN AESTHETIC + DARK GOLD PALETTE)          */}
+      {/* 1. CINEMATIC HERO SECTION (SIGNATURE CENTERED HEADER DESIGN)              */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] flex items-center py-20 overflow-hidden bg-[#121417] border-b border-[#222]">
+      <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/60 dark:border-zinc-800/80">
         
-        {/* Animated Aurora Glow Ambience (like alazar.dev) */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/15 blur-[140px] animate-aurora-drift"></div>
-          <div className="absolute bottom-0 right-[6%] h-[48vh] w-[48vh] rounded-full bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2"></div>
-        </div>
-
-        {/* Blueprint line grid overlay */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-15 pointer-events-none"></div>
-
-        {/* Left Vertical Coordinate / Tag Badge (like alazar.dev) */}
-        <div aria-hidden="true" className="pointer-events-none absolute top-1/2 left-5 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex z-20">
-          <span className="h-20 w-px bg-gradient-to-b from-transparent to-[#D4AF37]/40"></span>
-          <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#9CA3AF] [writing-mode:vertical-rl]">
-            Engineering Portfolio — 2026
-          </span>
-          <span className="h-20 w-px bg-gradient-to-b from-[#D4AF37]/40 to-transparent"></span>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 lg:pl-16 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Background Visual: Studio Suite / Architecture Visual */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <img 
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
+            alt="Structural engineering studio background" 
+            className="w-full h-full object-cover opacity-20 dark:opacity-15 filter blur-[0.5px] scale-105" 
+          />
+          {/* Subtle Frosted Gradient Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/55 to-white/95 dark:from-[#121417]/85 dark:via-[#121417]/75 dark:to-[#121417]/95"></div>
           
-          {/* Left Text Column */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          {/* Subtle Ambient Aurora Light */}
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/12 blur-[120px] animate-aurora-drift-2"></div>
+        </div>
+
+        {/* Floating Translucent Accent Ring (matches signature visual from screenshot) */}
+        <div 
+          aria-hidden="true" 
+          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-zinc-400/40 dark:border-zinc-500/40 bg-zinc-300/30 dark:bg-zinc-600/20 backdrop-blur-xs animate-pulse hidden sm:block z-10"
+        />
+
+        {/* Hero Content Container */}
+        <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9">
+          
+          {/* Main Giant Bold Headline (Two-Tone Typography) */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 flex flex-col gap-6"
+            className="space-y-1 sm:space-y-2"
           >
-            {/* Top Subtitle with Dot */}
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#9CA3AF]">
-              <span>Principal Structural Engineer</span>
-              <span className="text-[#D4AF37] font-bold">·</span>
-              <span className="text-[#EAEAEA] font-semibold">PE & SE Licensed</span>
-            </div>
-
-            {/* Main Name Heading */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#EAEAEA] leading-[1.05] tracking-tight">
-              Alexandre <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Techane</span>
-            </h1>
-
-            {/* Dynamic Rotating Pill Box (signature alazar.dev feature adapted to engineering) */}
-            <div className="flex flex-wrap items-center gap-3 text-lg sm:text-2xl text-[#9CA3AF]">
-              <span>I design & calculate</span>
-              <span className="relative inline-flex items-center">
-                <span className="relative overflow-hidden rounded-md border border-[#D4AF37]/50 bg-[#181A1E] px-4 py-1.5 font-mono text-sm sm:text-base font-bold text-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={disciplineIndex}
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -15 }}
-                      transition={{ duration: 0.3 }}
-                      className="inline-block whitespace-nowrap"
-                    >
-                      {rotatingDisciplines[disciplineIndex]}
-                    </motion.span>
-                  </AnimatePresence>
-                </span>
+            <h1 className="font-black text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] tracking-tight leading-[1.04] text-zinc-900 dark:text-zinc-100 select-none">
+              {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
+              <span className="text-[#801834] dark:text-[#E84855]">
+                {settings.heroHeadlineAccent || 'Clear'}
               </span>
-            </div>
-
-            {/* Concise Value Statement */}
-            <p className="max-w-xl text-base sm:text-lg text-[#9CA3AF] leading-relaxed">
-              {settings.heroBio || 'Turning architectural ambition into resilient, code-compliant physical reality — from initial finite element analysis to high-rise completion.'}
-            </p>
-
-            {/* Social / Contact Pill Buttons with Tooltips (like alazar.dev) */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <a
-                href="mailto:consult@alexandre-structural.com"
-                aria-label="Email Engineer"
-                className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-[#333] bg-[#181A1E] hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417] text-[#D4AF37] transition-all duration-300 shadow-md"
-              >
-                <Mail size={16} />
-                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#121417] border border-[#333] px-2 py-0.5 text-[10px] font-mono text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">
-                  Email Inquiries
-                </span>
-              </a>
-
-              <a
-                href="tel:+15550198472"
-                aria-label="Phone Consultation"
-                className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-[#333] bg-[#181A1E] hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417] text-[#D4AF37] transition-all duration-300 shadow-md"
-              >
-                <Phone size={16} />
-                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#121417] border border-[#333] px-2 py-0.5 text-[10px] font-mono text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">
-                  Call Office
-                </span>
-              </a>
-
-              <button
-                onClick={handleCopyEmail}
-                className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-[#333] bg-[#181A1E] hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417] text-[#D4AF37] transition-all duration-300 shadow-md"
-                title="Copy Email"
-              >
-                <Copy size={16} />
-                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#121417] border border-[#333] px-2 py-0.5 text-[10px] font-mono text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">
-                  {copiedEmail ? 'Copied!' : 'Copy Email Address'}
-                </span>
-              </button>
-
-              <div className="flex items-center gap-2 pl-3 border-l border-[#333] text-xs font-mono text-[#9CA3AF]">
-                <MapPin size={13} className="text-[#D4AF37]" />
-                <span>New York, NY · Available Worldwide</span>
-              </div>
-            </div>
-
-            {/* CTAs (Alazar rounded pills) */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <button
-                onClick={() => navigate('/contact')}
-                className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold tracking-wider uppercase hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center justify-center gap-2"
-              >
-                Hire Me / Consultation <ArrowUpRight size={15} />
-              </button>
-              <button
-                onClick={() => navigate('/projects')}
-                className="rounded-full border border-[#333] bg-[#181A1E] text-[#EAEAEA] px-8 py-3.5 text-xs font-mono font-bold tracking-wider uppercase hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
-              >
-                View Project Portfolio <ChevronRight size={15} />
-              </button>
-            </div>
-
-            {/* License info bar */}
-            <div className="flex flex-wrap gap-4 pt-4 border-t border-[#222] font-mono text-[11px] text-[#9CA3AF]">
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={13} className="text-[#D4AF37]" /> PE #84729-NY</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={13} className="text-[#D4AF37]" /> SE #92041-CA</span>
-              <span className="flex items-center gap-1.5 text-[#D4AF37] font-semibold"><ShieldCheck size={13} /> 100% Safety Compliance</span>
-            </div>
+              <br />
+              <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block">
+                {settings.heroHeadlineLine2 || 'Engineering.'}
+              </span>
+            </h1>
           </motion.div>
 
-          {/* Right Video / Profile 3D Tilt Card (like alazar.dev hero figure) */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+          {/* Frosted Glassmorphic Description Pill Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative"
+            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/75 dark:bg-[#181A1E]/80 backdrop-blur-xl border border-white/90 dark:border-zinc-700/60 shadow-[0_12px_35px_rgba(0,0,0,0.06)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6"
           >
-            <div className="relative">
-              {/* Alazar Signature Decorative Outer Mask Frame */}
-              <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
+            <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center">
+              {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
+            </p>
+          </motion.div>
 
-              <div className="relative group p-2.5 border border-[#333]/80 bg-[#181A1E] rounded-2xl shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300">
-                {/* Corner Coordinate Crosshairs */}
-                <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37] rounded-tl"></div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37] rounded-tr"></div>
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37] rounded-bl"></div>
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37] rounded-br"></div>
+          {/* Dual Pill Action Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-2"
+          >
+            {/* Primary Filled Pill Button */}
+            <button
+              onClick={() => navigate('/projects')}
+              className="rounded-full bg-[#801834] hover:bg-[#68132a] active:scale-95 text-white px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(128,24,52,0.35)] hover:shadow-[0_14px_32px_rgba(128,24,52,0.5)] flex items-center gap-2 group cursor-pointer"
+            >
+              <span>EXPLORE PROJECTS</span>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
 
-                <div 
-                  onClick={() => setIsVideoModalOpen(true)}
-                  className="relative aspect-video bg-[#121417] overflow-hidden cursor-pointer flex items-center justify-center rounded-xl group-hover:border-[#D4AF37]/50 transition-all"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
-                    alt="Structural Engineering Overview"
-                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent"></div>
-
-                  {/* Play Button Overlay */}
-                  <div className="relative z-20 w-16 h-16 rounded-full bg-[#121417]/90 border border-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_25px_rgba(212,175,55,0.45)]">
-                    <Play className="text-[#D4AF37] w-6 h-6 ml-1" />
-                  </div>
-
-                  <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center bg-[#121417]/90 backdrop-blur-md p-3 border border-[#333] text-[11px] text-[#EAEAEA] uppercase tracking-wider rounded-xl">
-                    <span className="flex items-center gap-2 font-mono">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Introduction Video (Editable in CMS)
-                    </span>
-                    <span className="text-[#D4AF37] font-bold font-mono">Watch 2 min</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Secondary Frosted White Pill Button */}
+            <button
+              onClick={() => setIsVideoModalOpen(true)}
+              className="rounded-full bg-white dark:bg-[#181A1E] text-[#801834] dark:text-[#E84855] border border-zinc-200/90 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_15px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_15px_rgba(0,0,0,0.4)] flex items-center gap-2 cursor-pointer"
+            >
+              <span>WATCH SHOWREEL</span>
+              <Play size={13} className="fill-[#801834] dark:fill-[#E84855]" />
+            </button>
           </motion.div>
 
         </div>

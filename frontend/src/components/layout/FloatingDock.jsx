@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   Home, 
@@ -14,6 +14,16 @@ import {
 
 export const FloatingDock = () => {
   const [activeTooltip, setActiveTooltip] = useState(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 350);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const dockLinks = [
     { name: 'Home', path: '/', icon: Home },
@@ -30,9 +40,11 @@ export const FloatingDock = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  if (!visible) return null;
+
   return (
-    <div className="fixed bottom-6 inset-x-0 z-40 hidden md:flex justify-center pointer-events-none">
-      <nav className="pointer-events-auto flex items-center gap-1.5 p-2 rounded-full bg-[#181A1E]/85 backdrop-blur-xl border border-[#D4AF37]/25 shadow-[0_10px_35px_rgba(0,0,0,0.65)]">
+    <div className="fixed bottom-6 inset-x-0 z-40 hidden md:flex justify-center pointer-events-none transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
+      <nav className="pointer-events-auto flex items-center gap-1.5 p-2 rounded-full bg-white/90 dark:bg-[#181A1E]/90 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_rgba(0,0,0,0.65)]">
         {dockLinks.map((item) => {
           const Icon = item.icon;
           return (
@@ -44,8 +56,8 @@ export const FloatingDock = () => {
                 className={({ isActive }) =>
                   `flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${
                     isActive
-                      ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.4)] scale-105'
-                      : 'text-[#9CA3AF] hover:text-[#EAEAEA] hover:bg-[#121417]/80 hover:scale-110'
+                      ? 'bg-[#801834] text-white shadow-[0_0_15px_rgba(128,24,52,0.4)] scale-105'
+                      : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110'
                   }`
                 }
               >

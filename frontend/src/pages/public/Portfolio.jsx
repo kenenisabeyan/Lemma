@@ -85,26 +85,28 @@ export const Portfolio = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-transparent text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white">
       {/* Ambient Aurora Drift Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/10 blur-[140px] animate-aurora-drift"></div>
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="mb-12 border-b border-[#333] pb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-4 py-1.5 text-[#D4AF37] text-xs font-mono font-bold tracking-[0.2em] uppercase mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+        <div className="mb-12 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-zinc-800 dark:text-zinc-200 text-xs font-bold tracking-wider uppercase mb-5 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#E84855] animate-pulse"></span>
             Featured Engineering Practice
           </div>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-            Project <span className="text-[#D4AF37]">Portfolio.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
+            Project <span className="text-[#801834] dark:text-[#E84855]">Portfolio.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-base lg:text-lg max-w-3xl leading-relaxed">
-            Explore detailed structural case studies across high-rise skyscrapers, long-span bridge infrastructure, and seismic retrofits — complete with finite element modeling notes and calculated results.
-          </p>
+          <div className="rounded-2xl bg-white/75 dark:bg-[#181A1E]/80 backdrop-blur-md border border-white/80 dark:border-zinc-800 p-6 shadow-sm max-w-3xl">
+            <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
+              Explore detailed structural case studies across high-rise skyscrapers, long-span bridge infrastructure, and seismic retrofits — complete with finite element modeling notes and calculated results.
+            </p>
+          </div>
         </div>
 
         {/* Filter Controls Bar (Alazar-style rounded pill bar) */}

@@ -56,30 +56,32 @@ export const InsightsPage = () => {
   });
 
   return (
-    <div className="relative min-h-screen bg-[#121417] text-[#EAEAEA] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417] overflow-hidden">
-      {/* Alazar Signature Ambient Aurora Drift Background Glow */}
+    <div className="relative min-h-screen bg-transparent text-inherit pt-28 pb-24 selection:bg-[#801834] selection:text-white overflow-hidden">
+      {/* Ambient Aurora Drift Background Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
-        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/10 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
+        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/12 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="mb-14 border-b border-[#333] pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+        <div className="mb-14 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
             </span>
             Technical Knowledge & Publications
           </div>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Insights.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
+            Engineering <span className="text-[#801834] dark:text-[#E84855]">Insights.</span>
           </h1>
-          <p className="text-[#9CA3AF] text-base lg:text-lg max-w-3xl leading-relaxed">
-            Technical papers, industry notes, code analysis, and design methodology articles published for structural engineering professionals and project developers.
-          </p>
+          <div className="rounded-2xl bg-white/75 dark:bg-[#181A1E]/80 backdrop-blur-md border border-white/80 dark:border-zinc-800 p-6 shadow-sm max-w-3xl">
+            <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
+              Technical papers, industry notes, code analysis, and design methodology articles published for structural engineering professionals and project developers.
+            </p>
+          </div>
         </div>
 
         {/* Filter Controls Bar (Signature Alazar pill bar) */}

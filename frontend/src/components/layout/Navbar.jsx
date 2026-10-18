@@ -30,16 +30,16 @@ export const Navbar = () => {
   // Fetch settings for dynamic name & avatar
   const { data: settingsData } = useFetch('/settings', {
     settings: {
-      engineerName: 'ALAZAR',
-      title: 'DIRECTOR & DESIGNER',
-      avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80'
+      engineerName: 'Alexandre',
+      title: 'Structural PE, SE',
+      avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80'
     }
   });
 
   const settings = settingsData?.settings || settingsData || {};
-  const brandName = settings.engineerName ? settings.engineerName.toUpperCase().split(' ')[0] : 'ALAZAR';
-  const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'DIRECTOR & DESIGNER';
-  const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80';
+  const brandName = settings.engineerName ? settings.engineerName.split(' ')[0] : 'Alexandre';
+  const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'STRUCTURAL PE, SE';
+  const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80';
 
   useEffect(() => {
     const handleScroll = () => {
