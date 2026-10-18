@@ -104,41 +104,41 @@ export const EngineeringGlossary = () => {
   });
 
   return (
-    <div className="rounded-3xl bg-[#181A1E] border border-[#333]/80 p-6 lg:p-10 shadow-2xl relative overflow-hidden">
+    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden">
       {/* Background Architectural Grid */}
       <div 
         aria-hidden="true" 
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #D4AF37 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #801834 1px, transparent 0)',
           backgroundSize: '24px 24px'
         }}
       ></div>
 
       {/* Header */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-[#2D3137]">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-[#2D3137]">
         <div>
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37]">
+          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] font-bold">
             <BookOpen size={14} className="animate-pulse" />
             <span>Authoritative Structural Engineering Knowledge Base</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#EAEAEA] tracking-tight">
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
             Structural Engineering Glossary & Code Formula Reference
           </h3>
-          <p className="text-xs sm:text-sm text-[#9CA3AF] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF] mt-1 max-w-2xl leading-relaxed">
             Plain-English explanations, governing mathematical formulas, and legal building code citations for architects, developers, and project teams.
           </p>
         </div>
 
         {/* Search input */}
         <div className="relative w-full lg:w-72 shrink-0">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF]" size={15} />
           <input 
             type="text"
             placeholder="Search formulas or terms..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[#121417] rounded-full border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] placeholder:text-[#666] pl-9 pr-4 py-2.5 outline-none font-mono transition-colors shadow-inner"
+            className="w-full bg-zinc-50 dark:bg-[#121417] rounded-full border border-zinc-200 dark:border-[#333] focus:border-[#801834] dark:focus:border-[#D4AF37] text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] pl-9 pr-4 py-2.5 outline-none font-mono transition-colors shadow-sm"
           />
         </div>
       </div>
@@ -151,8 +151,8 @@ export const EngineeringGlossary = () => {
             onClick={() => setActiveCategory(cat)}
             className={`rounded-full px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
               activeCategory === cat
-                ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.3)] scale-105'
-                : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/40'
+                ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
+                : 'bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
             }`}
           >
             {cat}
@@ -169,59 +169,59 @@ export const EngineeringGlossary = () => {
               key={idx}
               className={`rounded-2xl border p-5 transition-all duration-300 flex flex-col justify-between ${
                 isExpanded
-                  ? 'bg-[#121417] border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.15)]'
-                  : 'bg-[#14161A] border-[#333]/80 hover:border-[#555]'
+                  ? 'bg-zinc-50 dark:bg-[#121417] border-[#801834] dark:border-[#D4AF37] shadow-sm'
+                  : 'bg-white dark:bg-[#14161A] border-zinc-200/90 dark:border-[#333]/80 hover:border-zinc-300 dark:hover:border-[#555]'
               }`}
             >
               <div>
                 <div className="flex justify-between items-start gap-3 mb-2">
                   <div>
-                    <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-1">
+                    <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider block mb-1 font-bold">
                       {item.category}
                     </span>
-                    <h4 className="text-base font-bold text-[#EAEAEA] hover:text-[#D4AF37] transition-colors">
+                    <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">
                       {item.term}
                     </h4>
                   </div>
-                  <span className="rounded-full bg-[#181A1E] border border-[#333] text-[9px] font-mono text-[#9CA3AF] px-2.5 py-1 shrink-0">
+                  <span className="rounded-full bg-zinc-100 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] text-[9px] font-mono text-zinc-600 dark:text-[#9CA3AF] px-2.5 py-1 shrink-0 font-bold">
                     {item.code.split(' ')[0]}
                   </span>
                 </div>
 
                 {/* Formula Callout Box */}
-                <div className="bg-[#181A1E] px-3.5 py-2 rounded-xl border border-[#2D3137] my-3 font-mono text-xs text-[#D4AF37] font-bold flex items-center justify-between">
+                <div className="bg-zinc-100 dark:bg-[#181A1E] px-3.5 py-2 rounded-xl border border-zinc-200 dark:border-[#2D3137] my-3 font-mono text-xs text-[#801834] dark:text-[#D4AF37] font-bold flex items-center justify-between">
                   <span>{item.formula}</span>
-                  <span className="text-[9px] text-[#666] uppercase">{item.code}</span>
+                  <span className="text-[9px] text-zinc-500 dark:text-[#666] uppercase">{item.code}</span>
                 </div>
 
-                <p className="text-xs text-[#9CA3AF] leading-relaxed mb-3">
+                <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed mb-3">
                   {item.summary}
                 </p>
 
                 {/* Expanded Detailed Breakdown */}
                 {isExpanded && (
-                  <div className="mt-4 pt-4 border-t border-[#26282D] space-y-3 animate-in fade-in duration-200 text-xs">
+                  <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-[#26282D] space-y-3 animate-in fade-in duration-200 text-xs">
                     <div>
-                      <strong className="text-[#EAEAEA] block mb-1">Engineering Mechanics:</strong>
-                      <p className="text-[#9CA3AF] leading-relaxed">{item.explanation}</p>
+                      <strong className="text-zinc-900 dark:text-[#EAEAEA] block mb-1">Engineering Mechanics:</strong>
+                      <p className="text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{item.explanation}</p>
                     </div>
-                    <div className="bg-[#181A1E] p-3 rounded-xl border border-[#333] text-[11px]">
-                      <strong className="text-[#D4AF37] block mb-0.5">Practical Impact on Job Site:</strong>
-                      <p className="text-[#CCC] leading-relaxed">{item.significance}</p>
+                    <div className="bg-white dark:bg-[#181A1E] p-3 rounded-xl border border-zinc-200 dark:border-[#333] text-[11px]">
+                      <strong className="text-[#801834] dark:text-[#D4AF37] block mb-0.5 font-bold">Practical Impact on Job Site:</strong>
+                      <p className="text-zinc-700 dark:text-[#CCC] leading-relaxed">{item.significance}</p>
                     </div>
                   </div>
                 )}
               </div>
 
-              <div className="mt-4 pt-3 border-t border-[#26282D] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-zinc-200 dark:border-[#26282D] flex items-center justify-between">
                 <button
                   type="button"
                   onClick={() => setSelectedTerm(isExpanded ? null : item.term)}
-                  className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] hover:text-white transition-colors flex items-center gap-1"
+                  className="text-xs font-mono font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-1"
                 >
                   {isExpanded ? 'Collapse Details' : 'Deep Technical Breakdown →'}
                 </button>
-                <span className="text-[10px] font-mono text-[#666]">
+                <span className="text-[10px] font-mono text-zinc-500 dark:text-[#666]">
                   {item.code}
                 </span>
               </div>
@@ -231,12 +231,12 @@ export const EngineeringGlossary = () => {
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 pt-4 border-t border-[#2D3137] flex flex-wrap items-center justify-between text-[11px] font-mono text-[#888] gap-4">
+      <div className="relative z-10 pt-4 border-t border-zinc-200 dark:border-[#2D3137] flex flex-wrap items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#888] gap-4">
         <div className="flex items-center gap-2">
-          <ShieldCheck size={14} className="text-[#D4AF37]" />
+          <ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" />
           <span>Curated under ASCE 7-22, IBC 2024, ACI 318-19, and AISC 360-22 standards</span>
         </div>
-        <div className="text-[#9CA3AF]">
+        <div className="text-zinc-500 dark:text-[#9CA3AF] font-bold">
           PE/SE Certified Technical Guidance
         </div>
       </div>
