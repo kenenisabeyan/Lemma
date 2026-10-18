@@ -126,8 +126,8 @@ Phone: +1 (555) 019-8472
           </div>
         </div>
 
-        {/* Search & Filter Controls (Alazar-style rounded pill bar) */}
-        <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        {/* Search & Filter Controls */}
+        <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10 bg-white dark:bg-[#181A1E] p-3 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 shadow-sm dark:shadow-xl">
           {/* Categories */}
           <div className="flex flex-wrap gap-2 w-full md:w-auto items-center">
             {categories.map((cat) => (
@@ -136,8 +136,8 @@ Phone: +1 (555) 019-8472
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
+                    ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
+                    : 'bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                 }`}
               >
                 {cat}
@@ -147,49 +147,49 @@ Phone: +1 (555) 019-8472
 
           {/* Search input */}
           <div className="relative w-full md:w-72">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF]" size={15} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF]" size={15} />
             <input
               type="text"
               placeholder="Search guides, specs, math..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] focus:border-[#D4AF37] text-xs text-[#EAEAEA] placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors"
+              className="w-full bg-zinc-50 dark:bg-[#121417] rounded-full border border-zinc-200 dark:border-[#333] focus:border-[#801834] dark:focus:border-[#D4AF37] text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors shadow-sm"
             />
           </div>
         </div>
 
         {/* Download Notification Toast */}
         {downloadNotification && (
-          <div className="mb-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-300 text-xs font-bold uppercase tracking-wider flex items-center gap-2 animate-in fade-in shadow-lg">
+          <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-500/50 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider flex items-center gap-2 animate-in fade-in shadow-md">
             <CheckCircle2 size={16} /> {downloadNotification}
           </div>
         )}
 
-        {/* Resource List (Alazar Bento 2-Col Grid) */}
+        {/* Resource List */}
         <div className="grid sm:grid-cols-2 gap-6 mb-16">
           {filteredResources.map((item, index) => (
             <div 
               key={item.id || index} 
-              className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.08)]"
+              className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl"
             >
               <div>
                 <div className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                     <FileText size={22} />
                   </div>
-                  <span className="rounded-full text-[10px] font-mono font-bold text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 uppercase tracking-wider bg-[#121417] shadow-sm">
+                  <span className="rounded-full text-[10px] font-mono font-bold text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/30 px-3 py-1 uppercase tracking-wider bg-zinc-100 dark:bg-[#121417] shadow-sm">
                     {item.format} • {item.fileSize || '1.8 MB'}
                   </span>
                 </div>
 
-                <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block mb-2">{item.category}</span>
-                <h3 className="text-xl font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
-                <p className="text-xs text-[#9CA3AF] leading-relaxed mb-6">{item.description}</p>
+                <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
+                <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed mb-6">{item.description}</p>
               </div>
 
               <button
                 onClick={() => handleDownload(item)}
-                className="rounded-full bg-[#121417] text-[#D4AF37] border border-[#D4AF37]/40 hover:bg-[#D4AF37] hover:text-[#121417] transition-all py-3 px-6 text-xs font-extrabold uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm group-hover:shadow-[0_0_15px_rgba(212,175,55,0.25)]"
+                className="rounded-full bg-zinc-100 hover:bg-[#801834] hover:text-white dark:bg-[#121417] dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/40 transition-all py-3 px-6 text-xs font-extrabold uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm font-bold"
               >
                 Download Document <Download size={14} />
               </button>
@@ -200,14 +200,14 @@ Phone: +1 (555) 019-8472
         {/* Interactive Value Engineering Estimator */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
               Live Cost & Material Optimization Tool
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-              Value Engineering & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Carbon Offset Estimator.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
+              Value Engineering & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Carbon Offset Estimator.</span>
             </h2>
-            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
             </p>
           </div>
@@ -218,14 +218,14 @@ Phone: +1 (555) 019-8472
         {/* Interactive Beam Mechanics Laboratory */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
               Computational Structural Analysis
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-              Beam Shear, Moment & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Deflection Laboratory.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
+              Beam Shear, Moment & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Deflection Laboratory.</span>
             </h2>
-            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against AISC 360-22 and IBC limits.
             </p>
           </div>
@@ -234,17 +234,17 @@ Phone: +1 (555) 019-8472
         </div>
 
         {/* Request Custom Technical Guidance Box */}
-        <div className="rounded-2xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl">
+        <div className="rounded-2xl bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl dark:shadow-2xl">
           <div>
-            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1">Tailored Specifications</span>
-            <h4 className="text-xl font-bold text-[#EAEAEA]">Need Project-Specific Structural Calculations or CAD Details?</h4>
-            <p className="text-xs text-[#9CA3AF] mt-1 max-w-xl leading-relaxed">
+            <span className="text-[10px] font-mono uppercase text-[#801834] dark:text-[#D4AF37] tracking-wider block mb-1 font-bold">Tailored Specifications</span>
+            <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA]">Need Project-Specific Structural Calculations or CAD Details?</h4>
+            <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1 max-w-xl leading-relaxed">
               I provide custom finite element analysis models, calculation packages for municipal permit submittals, and site-specific seismic retrofitting plans.
             </p>
           </div>
           <a
             href="/contact"
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0"
+            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-md shrink-0"
           >
             Request Custom Calc Package
           </a>

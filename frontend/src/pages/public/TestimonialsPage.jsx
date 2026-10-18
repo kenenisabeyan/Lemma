@@ -91,8 +91,8 @@ export const TestimonialsPage = () => {
           </div>
         </div>
 
-        {/* Filter Controls Bar (Signature Alazar pill bar) */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        {/* Filter Controls Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-white dark:bg-[#181A1E] p-3 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 shadow-sm dark:shadow-xl">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
@@ -102,8 +102,8 @@ export const TestimonialsPage = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
+                    ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
+                    : 'bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                 }`}
               >
                 {cat}
@@ -113,13 +113,13 @@ export const TestimonialsPage = () => {
 
           {/* Search Input */}
           <div className="relative min-w-[260px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] w-4 h-4" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF] w-4 h-4" />
             <input
               type="text"
               placeholder="Search by client, firm, or quote..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-zinc-50 dark:bg-[#121417] rounded-full border border-zinc-200 dark:border-[#333] pl-10 pr-4 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors font-mono shadow-sm"
             />
           </div>
 
@@ -127,9 +127,9 @@ export const TestimonialsPage = () => {
 
         {/* Testimonials Bento Grid */}
         {filteredTestimonials.length === 0 ? (
-          <div className="py-20 text-center bg-[#181A1E] rounded-2xl border border-[#333] mb-16">
-            <MessageSquareQuote className="mx-auto w-12 h-12 text-[#9CA3AF]/40 mb-3" />
-            <p className="text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">
+          <div className="py-20 text-center bg-white dark:bg-[#181A1E] rounded-2xl border border-zinc-200 dark:border-[#333] mb-16 shadow-sm">
+            <MessageSquareQuote className="mx-auto w-12 h-12 text-zinc-400 dark:text-[#9CA3AF]/40 mb-3" />
+            <p className="text-zinc-500 dark:text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">
               No client endorsements match the selected criteria.
             </p>
           </div>
@@ -138,7 +138,7 @@ export const TestimonialsPage = () => {
             {filteredTestimonials.map((t) => (
               <div 
                 key={t.id} 
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-8 relative flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.08)]"
+                className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 relative flex flex-col justify-between hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl"
               >
                 <div>
                   <div className="flex justify-between items-center mb-6">
@@ -147,26 +147,26 @@ export const TestimonialsPage = () => {
                         <Star key={i} size={15} fill="#D4AF37" className="text-[#D4AF37]" />
                       ))}
                     </div>
-                    <Quote size={20} className="text-[#D4AF37]/40 group-hover:text-[#D4AF37] transition-colors" />
+                    <Quote size={20} className="text-[#801834]/30 dark:text-[#D4AF37]/40 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors" />
                   </div>
 
-                  <p className="text-[#EAEAEA] text-sm leading-relaxed mb-8 italic font-light">
+                  <p className="text-zinc-700 dark:text-[#EAEAEA] text-sm leading-relaxed mb-8 italic font-light">
                     "{t.content}"
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3.5 border-t border-[#2D3137] pt-5">
+                <div className="flex items-center gap-3.5 border-t border-zinc-200 dark:border-[#2D3137] pt-5">
                   {t.avatarUrl ? (
-                    <img src={t.avatarUrl} alt={t.clientName} className="w-11 h-11 rounded-full object-cover border-2 border-[#D4AF37]/60 shadow-md" />
+                    <img src={t.avatarUrl} alt={t.clientName} className="w-11 h-11 rounded-full object-cover border-2 border-[#801834]/40 dark:border-[#D4AF37]/60 shadow-sm" />
                   ) : (
-                    <div className="w-11 h-11 rounded-full bg-[#121417] border-2 border-[#D4AF37]/60 flex items-center justify-center text-[#D4AF37] font-bold text-xs">
+                    <div className="w-11 h-11 rounded-full bg-zinc-100 dark:bg-[#121417] border-2 border-[#801834]/40 dark:border-[#D4AF37]/60 flex items-center justify-center text-[#801834] dark:text-[#D4AF37] font-bold text-xs">
                       {t.clientName ? t.clientName.substring(0, 2).toUpperCase() : 'CL'}
                     </div>
                   )}
                   <div className="overflow-hidden">
-                    <h4 className="text-sm font-bold text-[#EAEAEA] truncate">{t.clientName}</h4>
-                    <p className="text-xs text-[#9CA3AF] truncate">{t.clientRole}</p>
-                    <span className="inline-block rounded-full bg-[#121417] border border-[#333] px-2 py-0.5 text-[9px] font-mono text-[#D4AF37] uppercase tracking-wider mt-1">
+                    <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA] truncate">{t.clientName}</h4>
+                    <p className="text-xs text-zinc-500 dark:text-[#9CA3AF] truncate">{t.clientRole}</p>
+                    <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-2 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider mt-1 font-bold">
                       {t.clientCompany}
                     </span>
                   </div>
@@ -176,15 +176,15 @@ export const TestimonialsPage = () => {
           </div>
         )}
 
-        {/* Bottom Banner (Alazar Bento Callout) */}
-        <div className="rounded-3xl bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] border border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-2xl">
+        {/* Bottom Banner */}
+        <div className="rounded-3xl bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl dark:shadow-2xl">
           <div className="text-left">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#EAEAEA] mb-1.5">Deliver Your Vision with Confirmed Structural Excellence</h3>
-            <p className="text-xs sm:text-sm text-[#9CA3AF]">Join reputable developers, architects, and institutions who trust our engineering precision.</p>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-1.5">Deliver Your Vision with Confirmed Structural Excellence</h3>
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF]">Join reputable developers, architects, and institutions who trust our engineering precision.</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-zinc-900 dark:hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-md shrink-0 flex items-center gap-2"
           >
             Start Project Consultation <ArrowUpRight size={14} />
           </button>
