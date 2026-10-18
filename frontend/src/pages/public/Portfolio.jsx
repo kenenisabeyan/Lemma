@@ -85,7 +85,7 @@ export const Portfolio = () => {
   });
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white">
+    <div className="min-h-screen bg-transparent text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white transition-colors duration-200">
       {/* Ambient Aurora Drift Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
@@ -102,15 +102,15 @@ export const Portfolio = () => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
             Project <span className="text-[#801834] dark:text-[#E84855]">Portfolio.</span>
           </h1>
-          <div className="rounded-2xl bg-white/75 dark:bg-[#181A1E]/80 backdrop-blur-md border border-white/80 dark:border-zinc-800 p-6 shadow-sm max-w-3xl">
+          <div className="rounded-2xl bg-white/85 dark:bg-[#181A1E]/80 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800 p-6 shadow-sm max-w-3xl">
             <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
               Explore detailed structural case studies across high-rise skyscrapers, long-span bridge infrastructure, and seismic retrofits — complete with finite element modeling notes and calculated results.
             </p>
           </div>
         </div>
 
-        {/* Filter Controls Bar (Alazar-style rounded pill bar) */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        {/* Filter Controls Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-white dark:bg-[#181A1E] p-3 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 shadow-sm dark:shadow-xl">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
@@ -120,8 +120,8 @@ export const Portfolio = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.35)] scale-105'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA] hover:border-[#D4AF37]/50'
+                    ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] scale-105'
+                    : 'bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50'
                 }`}
               >
                 {cat}
@@ -131,13 +131,13 @@ export const Portfolio = () => {
 
           {/* Search Input */}
           <div className="relative min-w-[260px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] w-4 h-4" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF] w-4 h-4" />
             <input
               type="text"
               placeholder="Search by tower, bridge, system..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-zinc-50 dark:bg-[#121417] rounded-full border border-zinc-200 dark:border-[#333] pl-10 pr-4 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors"
             />
           </div>
 
@@ -145,8 +145,8 @@ export const Portfolio = () => {
 
         {/* Projects Grid */}
         {filteredProjects.length === 0 ? (
-          <div className="py-20 text-center bg-[#181A1E] rounded-2xl border border-[#333] mb-20">
-            <p className="text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">No engineering projects match the selected criteria.</p>
+          <div className="py-20 text-center bg-white dark:bg-[#181A1E] rounded-2xl border border-zinc-200 dark:border-[#333] mb-20 shadow-xs">
+            <p className="text-zinc-500 dark:text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">No engineering projects match the selected criteria.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -163,14 +163,14 @@ export const Portfolio = () => {
         {/* Interactive Drawing Dossier & CAD Inspector */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#EAEAEA] tracking-tight mb-4">
-              Interactive Drawing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">Dossier & FEA Inspector.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
+              Interactive Drawing <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Dossier & FEA Inspector.</span>
             </h2>
-            <p className="text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Examine project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
             </p>
           </div>
@@ -178,23 +178,23 @@ export const Portfolio = () => {
           <BlueprintInspector />
         </div>
 
-        {/* Bottom Bento Consultation Banner (Alazar Signature Closure) */}
-        <div className="rounded-3xl border border-[#333]/80 bg-gradient-to-r from-[#181A1E] via-[#14161A] to-[#181A1E] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+        {/* Bottom Bento Consultation Banner */}
+        <div className="rounded-3xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md dark:shadow-2xl">
           <div className="text-left">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] mb-2 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Available for Select Mandates</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-[#EAEAEA] tracking-tight mb-2">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-2">
               Have a High-Stakes Project Requiring Stamped Verification?
             </h3>
-            <p className="text-xs md:text-sm text-[#9CA3AF] max-w-xl leading-relaxed">
+            <p className="text-xs md:text-sm text-zinc-600 dark:text-[#9CA3AF] max-w-xl leading-relaxed">
               Available for preliminary structural feasibility review, independent FEA peer reviews, and complete PE/SE calculations packages.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] shrink-0 flex items-center gap-2"
+            className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2"
           >
             Schedule Consultation <ArrowUpRight size={14} />
           </button>
