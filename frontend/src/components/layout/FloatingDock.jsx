@@ -66,7 +66,7 @@ export const FloatingDock = () => {
 
               {/* Tooltip */}
               {activeTooltip === item.name && (
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded bg-[#121417] border border-[#333] text-[10px] font-mono font-bold uppercase tracking-wider text-[#D4AF37] shadow-lg whitespace-nowrap animate-in fade-in duration-200 pointer-events-none">
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-zinc-900 dark:bg-[#121417] border border-zinc-700 dark:border-[#333] text-[10px] font-mono font-bold uppercase tracking-wider text-amber-300 dark:text-[#D4AF37] shadow-lg whitespace-nowrap animate-in fade-in duration-200 pointer-events-none">
                   {item.name}
                 </div>
               )}
@@ -74,7 +74,7 @@ export const FloatingDock = () => {
           );
         })}
 
-        <div className="w-[1px] h-6 bg-[#333] mx-1"></div>
+        <div className="w-[1px] h-6 bg-zinc-200 dark:bg-zinc-700 mx-1"></div>
 
         {/* Scroll To Top button */}
         <button
@@ -82,7 +82,7 @@ export const FloatingDock = () => {
           onMouseEnter={() => setActiveTooltip('Top')}
           onMouseLeave={() => setActiveTooltip(null)}
           title="Back to Top"
-          className="flex items-center justify-center w-10 h-10 rounded-full text-[#9CA3AF] hover:text-[#D4AF37] hover:bg-[#121417]/80 hover:scale-110 transition-all duration-300"
+          className="flex items-center justify-center w-10 h-10 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-[#801834] dark:hover:text-[#D4AF37] hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110 transition-all duration-300"
         >
           <ChevronUp size={18} />
         </button>
