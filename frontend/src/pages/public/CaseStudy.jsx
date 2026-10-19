@@ -48,14 +48,14 @@ export const CaseStudyModal = ({ project, onClose }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
           
           <div className="absolute top-4 left-4">
-            <span className="rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/50 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+            <span className="rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/50 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
               {project.category}
             </span>
           </div>
 
           <button
             onClick={openFullPage}
-            className="absolute top-4 right-4 rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-zinc-800 dark:text-[#EAEAEA] hover:text-[#801834] dark:hover:text-[#D4AF37] border border-zinc-200 dark:border-[#333] hover:border-[#801834] dark:hover:border-[#D4AF37] text-[10px] font-mono font-bold px-3.5 py-1.5 uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
+            className="absolute top-4 right-4 rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-zinc-800 dark:text-[#EAEAEA] hover:text-[#D4AF37] border border-zinc-200 dark:border-[#333] hover:border-[#D4AF37] text-[10px] font-mono font-bold px-3.5 py-1.5 uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
           >
             Open Dedicated Page <ArrowUpRight size={12} />
           </button>
@@ -65,7 +65,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-zinc-50 dark:bg-[#181A1E] p-4 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 text-xs shadow-sm">
           <div className="p-2">
             <span className="text-zinc-500 dark:text-[#9CA3AF] uppercase block text-[10px] font-mono mb-0.5">Location</span>
-            <span className="text-zinc-900 dark:text-[#EAEAEA] font-semibold flex items-center gap-1"><MapPin size={12} className="text-[#801834] dark:text-[#D4AF37]"/> {project.location}</span>
+            <span className="text-zinc-900 dark:text-[#EAEAEA] font-semibold flex items-center gap-1"><MapPin size={12} className="text-[#D4AF37]"/> {project.location}</span>
           </div>
           <div className="p-2">
             <span className="text-zinc-500 dark:text-[#9CA3AF] uppercase block text-[10px] font-mono mb-0.5">Completion</span>
@@ -84,13 +84,13 @@ export const CaseStudyModal = ({ project, onClose }) => {
         {/* System & Materials */}
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-2xl bg-white dark:bg-[#181A1E] p-5 border border-zinc-200/90 dark:border-[#333]/80 shadow-sm">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] mb-2 flex items-center gap-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D4AF37] mb-2 flex items-center gap-2">
               <Layers size={14} /> Structural System
             </h4>
             <p className="text-xs text-zinc-700 dark:text-[#EAEAEA] leading-relaxed">{project.structuralSystem}</p>
           </div>
           <div className="rounded-2xl bg-white dark:bg-[#181A1E] p-5 border border-zinc-200/90 dark:border-[#333]/80 shadow-sm">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] mb-2 flex items-center gap-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D4AF37] mb-2 flex items-center gap-2">
               <Building size={14} /> Key Structural Materials
             </h4>
             <p className="text-xs text-zinc-700 dark:text-[#EAEAEA] leading-relaxed">{project.materials}</p>
@@ -100,7 +100,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
         {/* NARRATIVE SECTION: Project -> Challenge -> Approach -> Solution -> Result */}
         <div className="flex flex-col gap-4 text-xs">
           <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
               Phase 01 · Scope
             </span>
             <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA] mb-2">Project Overview & Objectives</h4>
@@ -116,10 +116,10 @@ export const CaseStudyModal = ({ project, onClose }) => {
           </div>
 
           <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
               Phase 03 · FEA Simulation
             </span>
-            <h4 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">Engineering Approach & FEA Modeling</h4>
+            <h4 className="text-sm font-bold text-[#D4AF37] mb-2">Engineering Approach & FEA Modeling</h4>
             <p className="text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{project.engineeringApproach}</p>
           </div>
 
@@ -146,7 +146,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
             <span className="text-[10px] uppercase font-mono text-zinc-500 dark:text-[#9CA3AF]">Software Tools:</span>
             <div className="flex gap-1.5 flex-wrap">
               {softwareList.map((soft) => (
-                <span key={soft} className="rounded-full text-[10px] font-mono bg-white dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 font-bold shadow-2xs">
+                <span key={soft} className="rounded-full text-[10px] font-mono bg-white dark:bg-[#121417] text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 font-bold shadow-2xs">
                   {soft}
                 </span>
               ))}
@@ -156,13 +156,13 @@ export const CaseStudyModal = ({ project, onClose }) => {
           <div className="flex gap-2">
             <button
               onClick={openFullPage}
-              className="rounded-full bg-white dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37] px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-[#801834] hover:text-white dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] transition-all flex items-center gap-1.5 shadow-xs"
+              className="rounded-full bg-white dark:bg-[#121417] text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37] px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#121417] transition-all flex items-center gap-1.5 shadow-xs"
             >
               Dedicated Page <ArrowUpRight size={13} />
             </button>
             <button
               onClick={onClose}
-              className="rounded-full bg-[#801834] text-white dark:bg-[#D4AF37] dark:text-[#121417] px-5 py-2 text-xs font-extrabold uppercase tracking-widest hover:opacity-90 transition-all shadow-md shadow-[#801834]/20"
+              className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2 text-xs font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-md shadow-[#D4AF37]/20"
             >
               Close
             </button>

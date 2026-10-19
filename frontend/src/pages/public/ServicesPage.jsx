@@ -179,8 +179,6 @@ export const ServicesPage = () => {
 
       </div>
     </div>
-
-      </div>
-    </div>
   );
 };
+
