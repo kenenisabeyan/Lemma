@@ -553,27 +553,27 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#801834] dark:bg-[#D4AF37]"></span> Core Capabilities
+              <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Core Capabilities
               </h2>
               <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">Engineering Services</h3>
             </div>
-            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
+            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
               Explore All Services <ChevronRight size={16} />
             </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((srv, index) => (
-              <div key={index} className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl flex flex-col justify-between">
+              <div key={index} className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
+                  <div className="w-12 h-12 bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
                     <Building2 size={24} />
                   </div>
-                  <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
+                  <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
                   <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200 dark:border-[#2D3137]">
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200 dark:border-[#2D3137]">
                   Scope & Deliverables <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
@@ -601,17 +601,17 @@ export const Home = () => {
         <div className="max-w-5xl mx-auto px-6 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-zinc-200 dark:border-[#26282D]">
             <div>
-              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] font-semibold">
-                <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 <span>Featured Engineering Practice</span>
               </div>
               <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-zinc-900 dark:text-[#EAEAEA]">
-                Projects<span className="text-[#801834] dark:text-[#D4AF37]">.</span>
+                Projects<span className="text-[#D4AF37]">.</span>
               </h2>
             </div>
             <Link 
               to="/projects" 
-              className="rounded-full border border-zinc-300 dark:border-[#333] bg-white dark:bg-[#181A1E] text-zinc-800 dark:text-[#EAEAEA] hover:border-[#801834] dark:hover:border-[#D4AF37] hover:text-[#801834] dark:hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
+              className="rounded-full border border-zinc-300 dark:border-[#333] bg-white dark:bg-[#181A1E] text-zinc-800 dark:text-[#EAEAEA] hover:border-[#D4AF37] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
             >
               Browse All Projects <ChevronRight size={14} />
             </Link>
@@ -626,7 +626,7 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.05)] dark:shadow-2xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300"
+                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.05)] dark:shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300"
                 >
                   {/* Left Column Image */}
                   <div className="relative overflow-hidden border-b border-zinc-200 dark:border-[#333]/80 md:border-b-0 md:border-r min-h-[280px]">
@@ -636,7 +636,7 @@ export const Home = () => {
                       className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] grayscale opacity-85 group-hover:grayscale-0"
                     />
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200/90 dark:border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+                      <span className="rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-[#D4AF37] border border-zinc-200/90 dark:border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
                         {proj.category}
                       </span>
                     </div>
@@ -649,14 +649,14 @@ export const Home = () => {
                   <div className="flex flex-col gap-4 p-6 md:p-8 justify-between">
                     <div>
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-zinc-500 dark:text-[#9CA3AF] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
-                        <span className="text-[#801834] dark:text-[#D4AF37] flex items-center gap-1">
+                        <span className="text-[#D4AF37] flex items-center gap-1">
                           <MapPin size={12} /> {proj.location}
                         </span>
                         <span aria-hidden="true">·</span>
                         <span>{proj.year}</span>
                       </div>
                       
-                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
+                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
                         {proj.title}
                       </h3>
                       
@@ -666,11 +666,11 @@ export const Home = () => {
 
                       <ul className="space-y-1.5 text-zinc-600 dark:text-[#9CA3AF] text-xs mb-4">
                         <li className="flex gap-2">
-                          <span aria-hidden="true" className="text-[#801834] dark:text-[#D4AF37] font-bold">—</span>
+                          <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
                           <span><strong className="text-zinc-900 dark:text-[#EAEAEA]">System:</strong> {proj.structuralSystem}</span>
                         </li>
                         <li className="flex gap-2">
-                          <span aria-hidden="true" className="text-[#801834] dark:text-[#D4AF37] font-bold">—</span>
+                          <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
                           <span><strong className="text-zinc-900 dark:text-[#EAEAEA]">Result:</strong> {proj.result}</span>
                         </li>
                       </ul>
@@ -690,13 +690,13 @@ export const Home = () => {
                     <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-[#2D3137] flex items-center justify-between">
                       <button
                         onClick={() => setSelectedCaseStudy(proj)}
-                        className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
+                        className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#C59B27] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
                       >
                         Explore Case Study <ArrowUpRight size={13} />
                       </button>
                       <Link 
                         to={`/projects/${proj.slug || 'nexus-commercial-tower'}`}
-                        className="text-[11px] font-mono text-zinc-500 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
+                        className="text-[11px] font-mono text-zinc-500 dark:text-[#9CA3AF] hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
                       >
                         Dedicated Page →
                       </Link>
