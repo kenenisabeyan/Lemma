@@ -715,12 +715,12 @@ export const Home = () => {
       <section className="py-20 md:py-28 bg-white dark:bg-[#181A1E] border-t border-b border-zinc-200/80 dark:border-[#333] relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Interactive Drawing <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Dossier & FEA Inspector.</span>
+              Interactive Drawing <span className="text-[#D4AF37] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Dossier & FEA Inspector.</span>
             </h2>
             <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles with certified code verification markers.
@@ -738,7 +738,7 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="max-w-3xl mb-16">
-            <span className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
+            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
               Demystifying Structural Mechanics
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
@@ -755,7 +755,7 @@ export const Home = () => {
               onClick={() => setActiveEducationTab('roles')}
               className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeEducationTab === 'roles'
-                  ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] scale-105'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105 font-bold'
                   : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
               }`}
             >
@@ -765,7 +765,7 @@ export const Home = () => {
               onClick={() => setActiveEducationTab('loadpath')}
               className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeEducationTab === 'loadpath'
-                  ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] scale-105'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105 font-bold'
                   : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
               }`}
             >
@@ -775,7 +775,7 @@ export const Home = () => {
               onClick={() => setActiveEducationTab('when')}
               className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeEducationTab === 'when'
-                  ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] scale-105'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105 font-bold'
                   : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
               }`}
             >
@@ -787,7 +787,7 @@ export const Home = () => {
           {activeEducationTab === 'roles' && (
             <div className="grid md:grid-cols-3 gap-6">
               
-              <div className="rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 p-8 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/40 transition-all">
+              <div className="rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 p-8 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#D4AF37]/50 transition-all">
                 <div>
                   <div className="w-12 h-12 bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] text-zinc-600 dark:text-[#9CA3AF] flex items-center justify-center mb-6 rounded-xl shadow-2xs">
                     <Compass size={24} />
@@ -804,27 +804,27 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-white dark:bg-[#181A1E] border-2 border-[#801834] dark:border-[#D4AF37] p-8 relative flex flex-col justify-between shadow-[0_0_25px_rgba(128,24,52,0.1)] dark:shadow-[0_0_30px_rgba(212,175,55,0.18)]">
-                <div className="absolute -top-3 right-6 bg-[#801834] text-white dark:bg-[#D4AF37] dark:text-[#121417] text-[10px] font-mono font-extrabold uppercase px-3 py-0.5 tracking-wider rounded-full shadow-sm">
+              <div className="rounded-2xl bg-white dark:bg-[#181A1E] border-2 border-[#D4AF37] p-8 relative flex flex-col justify-between shadow-[0_0_30px_rgba(212,175,55,0.18)]">
+                <div className="absolute -top-3 right-6 bg-[#D4AF37] text-[#121417] text-[10px] font-mono font-extrabold uppercase px-3 py-0.5 tracking-wider rounded-full shadow-sm">
                   Our Discipline
                 </div>
                 <div>
-                  <div className="w-12 h-12 bg-[#801834]/10 dark:bg-[#D4AF37]/10 border border-[#801834]/30 dark:border-[#D4AF37] text-[#801834] dark:text-[#D4AF37] flex items-center justify-center mb-6 rounded-xl shadow-2xs">
+                  <div className="w-12 h-12 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-6 rounded-xl shadow-2xs">
                     <ShieldCheck size={26} />
                   </div>
-                  <span className="text-[10px] font-mono uppercase text-[#801834] dark:text-[#D4AF37] tracking-wider block mb-1 font-semibold">Physics & Stability</span>
+                  <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-semibold">Physics & Stability</span>
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3">The Structural Engineer</h3>
                   <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed mb-4">
                     Calculates how massive gravitational loads, hurricane winds, and earthquake ground shocks travel safely into the foundation without cracking or deflecting.
                   </p>
                 </div>
-                <div className="pt-4 border-t border-[#801834]/20 dark:border-[#D4AF37]/30 text-[11px] text-[#801834] dark:text-[#D4AF37]">
+                <div className="pt-4 border-t border-[#D4AF37]/30 text-[11px] text-[#D4AF37]">
                   <strong className="text-zinc-900 dark:text-[#EAEAEA] block mb-1">Key Deliverable:</strong>
                   Stamped structural calculations, framing plans, beam/column schedules & PE/SE seals.
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 p-8 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/40 transition-all">
+              <div className="rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 p-8 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#D4AF37]/50 transition-all">
                 <div>
                   <div className="w-12 h-12 bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] text-zinc-600 dark:text-[#9CA3AF] flex items-center justify-center mb-6 rounded-xl shadow-2xs">
                     <Hammer size={24} />
@@ -851,7 +851,7 @@ export const Home = () => {
                 <button
                   onClick={() => setActiveLoadPath('gravity')}
                   className={`text-xs font-mono font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg transition-all ${
-                    activeLoadPath === 'gravity' ? 'bg-[#801834] text-white shadow-xs dark:bg-[#D4AF37] dark:text-[#121417]' : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                    activeLoadPath === 'gravity' ? 'bg-[#D4AF37] text-[#121417] shadow-xs font-bold' : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                   }`}
                 >
                   1. Downward Gravity Loads
@@ -859,7 +859,7 @@ export const Home = () => {
                 <button
                   onClick={() => setActiveLoadPath('lateral')}
                   className={`text-xs font-mono font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg transition-all ${
-                    activeLoadPath === 'lateral' ? 'bg-[#801834] text-white shadow-xs dark:bg-[#D4AF37] dark:text-[#121417]' : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                    activeLoadPath === 'lateral' ? 'bg-[#D4AF37] text-[#121417] shadow-xs font-bold' : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                   }`}
                 >
                   2. Lateral Hurricane & Seismic Loads
@@ -875,27 +875,27 @@ export const Home = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
-                      <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 1</span>
+                      <span className="text-[10px] font-mono text-[#D4AF37] block mb-1 font-semibold">STAGE 1</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Floor Slabs</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Receives people & equipment</p>
                     </div>
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
-                      <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 2</span>
+                      <span className="text-[10px] font-mono text-[#D4AF37] block mb-1 font-semibold">STAGE 2</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Beams & Girders</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Transfers load horizontally</p>
                     </div>
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
-                      <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 3</span>
+                      <span className="text-[10px] font-mono text-[#D4AF37] block mb-1 font-semibold">STAGE 3</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Columns / Walls</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Channels load downward</p>
                     </div>
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
-                      <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 4</span>
+                      <span className="text-[10px] font-mono text-[#D4AF37] block mb-1 font-semibold">STAGE 4</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Deep Caissons</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Distributes foundation pressure</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-[#801834]/40 dark:border-[#D4AF37]/50 p-4 shadow-2xs">
-                      <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-bold">FINAL</span>
+                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-[#D4AF37]/50 p-4 shadow-2xs">
+                      <span className="text-[10px] font-mono text-[#D4AF37] block mb-1 font-bold">FINAL</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Solid Bedrock</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Permanent reaction support</p>
                     </div>
@@ -910,19 +910,19 @@ export const Home = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
-                      <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">1. Floor Diaphragms</h5>
+                      <h5 className="text-sm font-bold text-[#D4AF37] mb-2">1. Floor Diaphragms</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Act as giant horizontal deep beams, collecting wind pressure from exterior facades and channeling it to the core.</p>
                     </div>
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
-                      <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">2. Reinforced Concrete Core</h5>
+                      <h5 className="text-sm font-bold text-[#D4AF37] mb-2">2. Reinforced Concrete Core</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Heavy shear wall core acts as a vertical cantilever beam that resists overturning moments.</p>
                     </div>
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
-                      <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">3. Outrigger Belt Trusses</h5>
+                      <h5 className="text-sm font-bold text-[#D4AF37] mb-2">3. Outrigger Belt Trusses</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Couples the core to perimeter columns, activating push-pull resistance and damping vibrations.</p>
                     </div>
                     <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
-                      <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">4. Foundation Tiebacks</h5>
+                      <h5 className="text-sm font-bold text-[#D4AF37] mb-2">4. Foundation Tiebacks</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Deep tension anchors prevent the building from uprooting during extreme ground motions.</p>
                     </div>
                   </div>
@@ -942,11 +942,11 @@ export const Home = () => {
                 { title: 'Seismic Retrofitting', desc: 'Older buildings built before 1994 require seismic damping upgrades to prevent brittle joint fracture during earthquakes.' },
                 { title: 'Third-Party Peer Reviews', desc: 'Developers hire independent engineers to verify calculations and eliminate redundant concrete/steel, saving millions.' }
               ].map((item, idx) => (
-                <div key={idx} className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all">
-                  <div className="flex items-center gap-2 text-[#801834] dark:text-[#D4AF37] text-xs font-mono font-bold uppercase mb-2">
+                <div key={idx} className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#D4AF37]/50 transition-all">
+                  <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-mono font-bold uppercase mb-2">
                     <CheckCircle2 size={15} /> Case 0{idx + 1}
                   </div>
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] mb-2 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
+                  <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] mb-2 group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
                   <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -962,21 +962,21 @@ export const Home = () => {
       <section className="py-24 bg-white dark:bg-[#121417] transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-14">
-            <h2 className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-              <span className="w-8 h-[1px] bg-[#801834] dark:bg-[#D4AF37]"></span> Industry Endorsements
+            <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Industry Endorsements
             </h2>
             <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">Client Trust & Testimonials</h3>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="group rounded-2xl bg-zinc-50/80 dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-10 relative flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300">
-                <Quote className="text-zinc-300 dark:text-[#2A2E35] w-14 h-14 absolute top-6 right-6 pointer-events-none group-hover:text-[#801834]/20 dark:group-hover:text-[#D4AF37]/20 transition-colors" />
+              <div key={idx} className="group rounded-2xl bg-zinc-50/80 dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-10 relative flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+                <Quote className="text-zinc-300 dark:text-[#2A2E35] w-14 h-14 absolute top-6 right-6 pointer-events-none group-hover:text-[#D4AF37]/20 transition-colors" />
                 <p className="text-zinc-800 dark:text-[#EAEAEA] text-sm sm:text-base leading-relaxed mb-8 relative z-10 italic font-light">
                   "{t.content}"
                 </p>
                 <div className="flex items-center gap-4 border-t border-zinc-200 dark:border-[#2D3137] pt-6">
-                  <div className="w-12 h-12 bg-white dark:bg-[#121417] border-2 border-[#801834]/60 dark:border-[#D4AF37]/60 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#801834] dark:text-[#D4AF37] text-sm shadow-xs">
+                  <div className="w-12 h-12 bg-white dark:bg-[#121417] border-2 border-[#D4AF37]/60 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D4AF37] text-sm shadow-xs">
                     {t.avatarUrl ? (
                       <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
                     ) : (
@@ -1001,12 +1001,12 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
-              <h2 className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#801834] dark:bg-[#D4AF37]"></span> Publications
+              <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Publications
               </h2>
               <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">Technical Notes & Articles</h3>
             </div>
-            <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
+            <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
               Browse All Articles <ChevronRight size={16} />
             </Link>
           </div>
@@ -1016,16 +1016,16 @@ export const Home = () => {
               <Link 
                 key={i} 
                 to={`/insights/${article.slug || 'innovations-high-strength-c80-concrete'}`} 
-                className="flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl"
+                className="flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl"
               >
                 <div>
-                  <div className="p-3 bg-zinc-50 dark:bg-[#181A1E] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#333] w-max mb-4 rounded-xl shadow-2xs">
+                  <div className="p-3 bg-zinc-50 dark:bg-[#181A1E] text-[#D4AF37] border border-zinc-200 dark:border-[#333] w-max mb-4 rounded-xl shadow-2xs">
                     <FileText size={20} />
                   </div>
-                  <span className="text-[10px] uppercase font-mono text-[#801834] dark:text-[#D4AF37] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
-                  <h5 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-4">{article.title}</h5>
+                  <span className="text-[10px] uppercase font-mono text-[#D4AF37] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
+                  <h5 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-4">{article.title}</h5>
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] flex items-center gap-1 pt-4 border-t border-zinc-200 dark:border-[#222]">
+                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1 pt-4 border-t border-zinc-200 dark:border-[#222]">
                   Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </Link>
@@ -1040,12 +1040,12 @@ export const Home = () => {
       <section className="py-20 md:py-28 bg-white dark:bg-[#181A1E] border-t border-zinc-200/80 dark:border-[#333] relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
-              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Optimization Feasibility Model
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Value Engineering & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Embodied Carbon Estimator.</span>
+              Value Engineering & <span className="text-[#D4AF37] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Embodied Carbon Estimator.</span>
             </h2>
             <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
@@ -1062,11 +1062,11 @@ export const Home = () => {
       <section className="py-20 bg-zinc-50/70 dark:bg-[#121417] border-t border-zinc-200/80 dark:border-[#333] transition-colors" id="contact">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
-            <span className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
+            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
               Consultation & Engagement
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
-              Have Questions? <span className="text-[#801834] dark:text-[#D4AF37]">Get in Touch!</span>
+              Have Questions? <span className="text-[#D4AF37]">Get in Touch!</span>
             </h2>
           </div>
 
@@ -1079,12 +1079,12 @@ export const Home = () => {
                 href="mailto:consult@alexandre-structural.com" 
                 className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-5 shadow-xs transition-colors hover:bg-zinc-50 dark:hover:bg-[#1f2227] group"
               >
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
                   <Mail size={18} />
                 </div>
                 <div className="flex flex-col gap-y-0.5 overflow-hidden">
                   <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA]">Send an Email</h4>
-                  <p className="text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] truncate group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
+                  <p className="text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
                 </div>
               </a>
 
@@ -1093,18 +1093,18 @@ export const Home = () => {
                 href="tel:+15550198472" 
                 className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-5 shadow-xs transition-colors hover:bg-zinc-50 dark:hover:bg-[#1f2227] group"
               >
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
                   <Phone size={18} />
                 </div>
                 <div className="flex flex-col gap-y-0.5">
                   <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA]">Call Direct</h4>
-                  <p className="text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472</p>
+                  <p className="text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472</p>
                 </div>
               </a>
 
               {/* Card 3: Location */}
               <div className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-5 shadow-xs">
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37]">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
                   <MapPin size={18} />
                 </div>
                 <div className="flex flex-col gap-y-0.5">
@@ -1124,7 +1124,7 @@ export const Home = () => {
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 active:scale-95"
+              className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#C59B27] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] shrink-0 flex items-center gap-2 active:scale-95 cursor-pointer"
             >
               Initiate Inquiry <ArrowUpRight size={14} />
             </button>
