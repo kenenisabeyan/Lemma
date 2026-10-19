@@ -100,33 +100,33 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
   };
 
   return (
-    <div className="relative min-h-screen bg-transparent text-inherit pt-28 pb-24 overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
+    <div className="relative min-h-screen bg-transparent text-inherit pt-28 pb-24 overflow-hidden selection:bg-[#801834] selection:text-white">
       {/* Ambient Aurora Drift Background Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/5 dark:bg-[#D4AF37]/10 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
-        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/5 dark:bg-[#D4AF37]/8 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
+        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/12 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         
         {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] uppercase tracking-wider mb-8">
-          <Link to="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+          <Link to="/" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Home</Link>
           <ChevronRight size={14} className="text-zinc-400 dark:text-[#444]" />
-          <Link to="/insights" className="hover:text-[#D4AF37] transition-colors">Insights</Link>
+          <Link to="/insights" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Insights</Link>
           <ChevronRight size={14} className="text-zinc-400 dark:text-[#444]" />
-          <span className="text-[#D4AF37] font-bold line-clamp-1">{article.title}</span>
+          <span className="text-[#801834] dark:text-[#D4AF37] font-bold line-clamp-1">{article.title}</span>
         </div>
 
         {/* Back and Action Bar */}
         <div className="flex justify-between items-center pb-6 mb-8 border-b border-zinc-200 dark:border-[#333]">
-          <Link to="/insights" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] hover:text-[#D4AF37] transition-colors font-mono">
+          <Link to="/insights" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">
             <ArrowLeft size={16} /> All Insights
           </Link>
 
           <button
             onClick={handleCopy}
-            className="rounded-full bg-white dark:bg-[#181A1E] text-zinc-600 dark:text-[#9CA3AF] hover:text-[#D4AF37] border border-zinc-200 dark:border-[#333] hover:border-[#D4AF37] px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-sm font-bold"
+            className="rounded-full bg-white dark:bg-[#181A1E] text-zinc-600 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] border border-zinc-200 dark:border-[#333] hover:border-[#801834] dark:hover:border-[#D4AF37] px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-sm font-bold"
           >
             <Share2 size={13} /> {copied ? 'Link Copied!' : 'Share Article'}
           </button>
@@ -135,15 +135,15 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         {/* Article Header */}
         <div className="mb-8">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="rounded-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 shadow-sm">
+            <span className="rounded-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 shadow-sm">
               {article.category}
             </span>
             <span className="text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] flex items-center gap-1.5">
-              <Calendar size={12} className="text-[#D4AF37]" /> {article.publishedAt}
+              <Calendar size={12} className="text-[#801834] dark:text-[#D4AF37]" /> {article.publishedAt}
             </span>
             <span>·</span>
             <span className="text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] flex items-center gap-1.5">
-              <Clock size={12} className="text-[#D4AF37]" /> {article.readTime}
+              <Clock size={12} className="text-[#801834] dark:text-[#D4AF37]" /> {article.readTime}
             </span>
           </div>
 
@@ -153,13 +153,13 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
 
           {/* Author Bento Badge */}
           <div className="flex items-center gap-4 bg-white dark:bg-[#181A1E] p-4 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-[#121417] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shadow-inner font-mono">
+            <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-[#121417] border border-[#801834] dark:border-[#D4AF37] text-[#801834] dark:text-[#D4AF37] flex items-center justify-center font-bold text-sm shadow-inner">
               AT
             </div>
             <div>
               <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA] flex items-center gap-1.5">
                 Alexandre Techane, PE, SE
-                <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· Verified Author</span>
+                <span className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-mono font-bold">· Verified Author</span>
               </h4>
               <p className="text-xs text-zinc-500 dark:text-[#9CA3AF]">Principal Structural Engineer & Technical Director</p>
             </div>
@@ -178,7 +178,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
           {article.content.split('\n\n').map((paragraph, index) => {
             if (paragraph.startsWith('### ')) {
               return (
-                <h3 key={index} className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] text-left pt-6 pb-2 border-l-2 border-[#D4AF37] pl-3">
+                <h3 key={index} className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] text-left pt-6 pb-2 border-l-2 border-[#801834] dark:border-[#D4AF37] pl-3">
                   {paragraph.replace('### ', '')}
                 </h3>
               );
@@ -204,7 +204,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         {/* Academic & ASCE Formal Citation Box */}
         <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 sm:p-8 mb-16 shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-zinc-200 dark:border-[#2D3137]">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#801834] dark:text-[#D4AF37]">
               <ShieldCheck size={16} />
               <span className="font-bold uppercase tracking-wider">Formal Peer-Reviewed Reference</span>
             </div>
@@ -222,7 +222,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
                 setCopiedCitation(true);
                 setTimeout(() => setCopiedCitation(false), 2500);
               }}
-              className="rounded-full bg-zinc-100 hover:bg-[#D4AF37] hover:text-[#121417] dark:bg-[#121417] text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/40 dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 transition-all flex items-center gap-1.5"
+              className="rounded-full bg-zinc-100 hover:bg-[#801834] hover:text-white dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/40 dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 transition-all flex items-center gap-1.5"
             >
               <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASCE Citation'}
             </button>
@@ -254,7 +254,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-7 py-3 text-xs font-mono font-extrabold uppercase tracking-widest hover:bg-white transition-all shadow-md shrink-0"
+            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-7 py-3 text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-md shrink-0"
           >
             Inquire With Engineer
           </button>
@@ -269,13 +269,13 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
                 <Link
                   key={rel.id}
                   to={`/insights/${rel.slug}`}
-                  className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 hover:border-[#D4AF37]/50 p-6 transition-all group shadow-sm hover:shadow-xl flex flex-col justify-between"
+                  className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 p-6 transition-all group shadow-sm hover:shadow-xl flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
+                    <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
+                    <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
                   </div>
-                  <span className="text-xs font-bold uppercase text-[#D4AF37] flex items-center gap-1 mt-4 font-mono">
+                  <span className="text-xs font-bold uppercase text-[#801834] dark:text-[#D4AF37] flex items-center gap-1 mt-4">
                     Read Article <ArrowUpRight size={12} />
                   </span>
                 </Link>
