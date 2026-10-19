@@ -22,9 +22,9 @@
   }
 
   body {
-    background-color: var(--bg-main);
+    background-color: #FFFFFF;
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-white dark:bg-[#121417];
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-white;
   }
 }
 
