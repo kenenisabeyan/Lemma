@@ -173,7 +173,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
@@ -188,36 +188,52 @@ export const Home = () => {
             className="w-full h-full object-cover opacity-20 dark:opacity-15 filter blur-[0.5px] scale-105" 
           />
           {/* Subtle Frosted Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white dark:from-[#121417]/85 dark:via-[#121417]/75 dark:to-[#121417]/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white dark:from-[#0E1013]/90 dark:via-[#121417]/85 dark:to-[#0E1013]/95"></div>
           
-          {/* Subtle Ambient Aurora Light */}
-          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
-          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/12 blur-[120px] animate-aurora-drift-2"></div>
+          {/* Subtle Ambient Gold Aurora Light */}
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/10 dark:bg-[#D4AF37]/15 blur-[140px] animate-aurora-drift"></div>
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/8 dark:bg-[#D4AF37]/12 blur-[120px] animate-aurora-drift-2"></div>
         </div>
 
         {/* Floating Translucent Accent Ring */}
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-zinc-400/40 dark:border-zinc-500/40 bg-zinc-300/30 dark:bg-zinc-600/20 backdrop-blur-xs animate-pulse hidden sm:block z-10"
+          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-zinc-400/40 dark:border-[#D4AF37]/40 bg-[#D4AF37]/20 backdrop-blur-xs animate-pulse hidden sm:block z-10"
         />
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9">
+        <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-6 sm:gap-8">
           
+          {/* Professional Identity Pill Badge (Requirement 5) */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-[#D4AF37]/40 bg-white/90 dark:bg-[#181A1E]/90 backdrop-blur-md px-4 sm:px-5 py-1.5 text-xs font-mono font-bold tracking-wider uppercase text-zinc-800 dark:text-[#EAEAEA] shadow-sm"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>{settings.engineerName || 'Alexandre Techane'}</span>
+            <span className="text-[#D4AF37] font-extrabold">·</span>
+            <span className="text-[#D4AF37]">{settings.title || 'Senior Structural Engineer, PE, SE'}</span>
+          </motion.div>
+
           {/* Main Giant Bold Headline */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             className="space-y-1 sm:space-y-2"
           >
             <h1 className="font-black text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] tracking-tight leading-[1.04] text-zinc-900 dark:text-zinc-100 select-none">
               {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
-              <span className="text-[#801834] dark:text-[#E84855]">
+              <span className="text-[#D4AF37] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">
                 {settings.heroHeadlineAccent || 'Clear'}
               </span>
               <br />
-              <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block">
+              <span className="text-[#D4AF37] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37] opacity-95 inline-block">
                 {settings.heroHeadlineLine2 || 'Engineering.'}
               </span>
             </h1>
@@ -228,36 +244,44 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/85 dark:bg-[#181A1E]/80 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/60 shadow-[0_12px_35px_rgba(0,0,0,0.06)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6"
+            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/85 dark:bg-[#181A1E]/80 backdrop-blur-xl border border-zinc-200/90 dark:border-[#333]/80 shadow-[0_12px_35px_rgba(0,0,0,0.06)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6"
           >
             <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center">
               {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
             </p>
           </motion.div>
 
-          {/* Dual Pill Action Buttons */}
+          {/* Triple Action Buttons: Primary Hire Me + Secondary Explore Projects + Watch Showreel (Requirement 5) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-2"
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2"
           >
-            {/* Primary Filled Pill Button */}
+            {/* Primary CTA: Hire Me / Consultation */}
             <button
-              onClick={() => navigate('/projects')}
-              className="rounded-full bg-[#801834] hover:bg-[#68132a] active:scale-95 text-white px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(128,24,52,0.35)] hover:shadow-[0_14px_32px_rgba(128,24,52,0.5)] flex items-center gap-2 group cursor-pointer"
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D4AF37] hover:bg-[#C59B27] active:scale-95 text-[#121417] px-7 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_6px_22px_rgba(212,175,55,0.35)] hover:shadow-[0_10px_28px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer"
             >
-              <span>EXPLORE PROJECTS</span>
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <span>REQUEST CONSULTATION</span>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform stroke-[2.5]" />
             </button>
 
-            {/* Secondary Frosted White Pill Button */}
+            {/* Secondary CTA: Explore Projects */}
+            <button
+              onClick={() => navigate('/projects')}
+              className="rounded-full bg-white dark:bg-[#181A1E] text-zinc-900 dark:text-[#EAEAEA] border border-zinc-300 dark:border-[#333] hover:border-[#D4AF37] dark:hover:border-[#D4AF37] hover:text-[#D4AF37] active:scale-95 px-7 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+            >
+              <span>EXPLORE PROJECTS</span>
+            </button>
+
+            {/* Tertiary CTA: Watch Showreel Video */}
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="rounded-full bg-white dark:bg-[#181A1E] text-[#801834] dark:text-[#E84855] border border-zinc-200/90 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_15px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_15px_rgba(0,0,0,0.4)] flex items-center gap-2 cursor-pointer"
+              className="rounded-full bg-zinc-100 dark:bg-[#14161A] text-zinc-700 dark:text-[#9CA3AF] hover:text-[#D4AF37] border border-zinc-200 dark:border-zinc-800 hover:border-[#D4AF37]/50 active:scale-95 px-6 sm:px-7 py-3.5 sm:py-4 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
             >
-              <span>WATCH SHOWREEL</span>
-              <Play size={13} className="fill-[#801834] dark:fill-[#E84855]" />
+              <span>WATCH REEL</span>
+              <Play size={12} className="fill-[#D4AF37] text-[#D4AF37]" />
             </button>
           </motion.div>
 
@@ -274,9 +298,9 @@ export const Home = () => {
               {techMarquee.concat(techMarquee).map((tool, idx) => (
                 <span 
                   key={idx} 
-                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-zinc-600 dark:text-[#9CA3AF] text-xs uppercase tracking-wider transition-colors hover:text-[#801834] dark:hover:text-[#D4AF37]"
+                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-zinc-600 dark:text-[#9CA3AF] text-xs uppercase tracking-wider transition-colors hover:text-[#D4AF37]"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#801834]/60 dark:bg-[#D4AF37]/60 group-hover:bg-[#801834] dark:group-hover:bg-[#D4AF37]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/60 group-hover:bg-[#D4AF37]"></span>
                   {tool}
                 </span>
               ))}
@@ -293,7 +317,7 @@ export const Home = () => {
           
           <div className="mx-auto max-w-3xl text-center mb-14">
             <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-zinc-900 dark:text-[#EAEAEA]">
-              Analyze<span className="text-[#801834] dark:text-[#D4AF37]">.</span> Calculate<span className="text-[#801834] dark:text-[#D4AF37]">.</span> Deliver<span className="text-[#801834] dark:text-[#D4AF37]">.</span>
+              Analyze<span className="text-[#D4AF37]">.</span> Calculate<span className="text-[#D4AF37]">.</span> Deliver<span className="text-[#D4AF37]">.</span>
             </h2>
             <p className="mt-4 text-balance text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
               Precision structural mechanics and finite element performance simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
@@ -303,10 +327,10 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: High-Rise Lateral Stability (Col 1-2) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#801834]/30 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#801834]/15 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
-                <Building2 size={36} className="text-[#801834] dark:text-[#D4AF37] relative z-20" />
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
+                <Building2 size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
                 <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">High-Rise Lateral Stability</h3>
@@ -314,16 +338,16 @@ export const Home = () => {
                   Dual core shear walls, perimeter belt trusses, and aerodynamic damping suppressing lateral drift in skyscrapers.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 ETABS · ASCE 7-22 Wind Tunnel
               </div>
             </div>
 
             {/* Bento Card 2: Non-Linear Seismic Modeling (Col 3-4) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#801834]/30 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#801834]/15 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
-                <Activity size={36} className="text-[#801834] dark:text-[#D4AF37] relative z-20" />
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
+                <Activity size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
                 <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">Non-Linear Seismic Modeling</h3>
@@ -331,27 +355,27 @@ export const Home = () => {
                   Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments per FEMA P-58.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 SAP2000 · Base Isolation
               </div>
             </div>
 
             {/* Bento Card 3: Value Engineering Sparkline Graph (Col 5-6) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="flex size-8 items-center justify-center rounded-full bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] border border-[#801834]/20 dark:border-[#D4AF37]/30">
+                  <div className="flex size-8 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30">
                     <ShieldCheck size={16} />
                   </div>
                   <div className="font-mono text-xs font-bold text-zinc-900 dark:text-[#EAEAEA]">100% Safety Record</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
-                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" />
                   <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15 L298 110 L3 110 Z" fill="url(#goldGradBento)" opacity="0.15" />
                   <defs>
                     <linearGradient id="goldGradBento" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stopColor="#801834" />
+                      <stop offset="0%" stopColor="#D4AF37" />
                       <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
                   </defs>
@@ -363,17 +387,17 @@ export const Home = () => {
                   Post-tensioning and optimized finite element redistribution saving 20-30% concrete mass and steel tonnage.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 Peer Review · Quantity Audits
               </div>
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] sm:col-span-2 md:col-span-6 p-0 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] sm:col-span-2 md:col-span-6 p-0 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl">
               <div className="grid h-full sm:grid-cols-2 items-center">
                 <div className="relative z-10 space-y-6 py-8 ps-8 pe-6">
-                  <div className="flex size-12 items-center justify-center rounded-full border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-zinc-50 dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-2">
-                    <Ruler size={20} className="text-[#801834] dark:text-[#D4AF37]" />
+                  <div className="flex size-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-zinc-50 dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-2">
+                    <Ruler size={20} className="text-[#D4AF37]" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-xl">3D Finite Element Simulation</h3>
@@ -382,21 +406,21 @@ export const Home = () => {
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">AISC 360</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#D4AF37] uppercase font-semibold">AISC 360</span>
                   </div>
                 </div>
                 <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
-                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 dark:border-[#333] bg-zinc-100 dark:bg-[#121417] shadow-md dark:shadow-2xl group-hover:border-[#801834]/40 dark:group-hover:border-[#D4AF37]/50 transition-colors">
+                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 dark:border-[#333] bg-zinc-100 dark:bg-[#121417] shadow-md dark:shadow-2xl group-hover:border-[#D4AF37]/50 transition-colors">
                     <img 
                       src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
                       alt="Structural FEA Simulation" 
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-3 left-3 bg-white/95 dark:bg-[#121417]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-[#333] font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
+                    <div className="absolute bottom-3 left-3 bg-white/95 dark:bg-[#121417]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-[#333] font-mono text-[10px] text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                       ETABS v21 Live Non-Linear Stress Distribution
                     </div>
@@ -416,12 +440,12 @@ export const Home = () => {
       <section className="py-20 md:py-28 bg-zinc-50/70 dark:bg-[#121417] border-t border-zinc-200/80 dark:border-[#333] relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Dynamic Mechanics Simulation
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Real-Time Lateral & Seismic <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Load Path.</span>
+              Real-Time Lateral & Seismic <span className="text-[#D4AF37] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Load Path.</span>
             </h2>
             <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Explore how wind aerodynamic drift, non-linear seismic ground motions, and gravitational vectors propagate through reinforced concrete cores and outrigger belt trusses down into bedrock.
@@ -442,9 +466,9 @@ export const Home = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative">
                 {/* Decorative Outer Mask Frame */}
-                <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#801834]/20 dark:border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
+                <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
 
-                <div className="relative border border-zinc-200/90 dark:border-[#333]/80 p-2.5 bg-zinc-50 dark:bg-[#121417] rounded-2xl shadow-lg dark:shadow-2xl group hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300">
+                <div className="relative border border-zinc-200/90 dark:border-[#333]/80 p-2.5 bg-zinc-50 dark:bg-[#121417] rounded-2xl shadow-lg dark:shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-300">
                   <div className="aspect-[4/5] bg-zinc-100 dark:bg-[#121417] overflow-hidden rounded-xl">
                     <img
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
@@ -453,7 +477,7 @@ export const Home = () => {
                     />
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-[#121417]/95 border border-zinc-200 dark:border-[#D4AF37]/60 p-4 text-xs font-mono rounded-xl shadow-md dark:shadow-xl backdrop-blur-md">
-                    <div className="flex justify-between items-center text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
+                    <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
                       <span>PE #84729-NY</span>
                       <span>SE #92041-CA</span>
                     </div>
@@ -464,10 +488,10 @@ export const Home = () => {
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs w-max font-semibold">
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs w-max font-semibold">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] dark:bg-[#D4AF37] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834] dark:bg-[#D4AF37]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
                 </span>
                 Professional Background
               </div>
@@ -480,13 +504,13 @@ export const Home = () => {
                 With over 14 years of specialized structural practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
               </p>
 
-              <div className="bg-zinc-50 dark:bg-[#121417] border-l-2 border-[#801834] dark:border-[#D4AF37] p-5 text-sm text-zinc-800 dark:text-[#EAEAEA] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200 dark:border-[#2D3137]">
+              <div className="bg-zinc-50 dark:bg-[#121417] border-l-2 border-[#D4AF37] p-5 text-sm text-zinc-800 dark:text-[#EAEAEA] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200 dark:border-[#2D3137]">
                 "Structural engineering should never be treated as an architectural limitation. When calculated with precision, physics becomes the catalyst that enables daring, column-free spaces."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
                 <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
-                  <GraduationCap className="text-[#801834] dark:text-[#D4AF37] w-5 h-5 shrink-0" />
+                  <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 dark:text-[#EAEAEA] font-bold block">M.S. Structural Engineering</span>
                     <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Columbia University</span>
@@ -494,7 +518,7 @@ export const Home = () => {
                 </div>
 
                 <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
-                  <ShieldCheck className="text-[#801834] dark:text-[#D4AF37] w-5 h-5 shrink-0" />
+                  <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 dark:text-[#EAEAEA] font-bold block">100% Safety Compliance</span>
                     <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Zero Audit Deficiencies</span>
@@ -505,13 +529,13 @@ export const Home = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/about"
-                  className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.25)] flex items-center gap-2"
+                  className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#C59B27] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] flex items-center gap-2"
                 >
                   Full Biography & Credentials <ArrowUpRight size={14} />
                 </Link>
                 <a
                   href="/resources"
-                  className="rounded-full bg-white dark:bg-[#121417] text-zinc-800 dark:text-[#EAEAEA] border border-zinc-300 dark:border-[#333] hover:border-[#801834] dark:hover:border-[#D4AF37] hover:text-[#801834] dark:hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                  className="rounded-full bg-white dark:bg-[#121417] text-zinc-800 dark:text-[#EAEAEA] border border-zinc-300 dark:border-[#333] hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
                 >
                   Download CV (PDF) <Download size={14} />
                 </a>

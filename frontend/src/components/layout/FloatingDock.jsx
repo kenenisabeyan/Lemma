@@ -56,7 +56,7 @@ export const FloatingDock = () => {
                 className={({ isActive }) =>
                   `flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${
                     isActive
-                      ? 'bg-[#801834] text-white shadow-[0_0_15px_rgba(128,24,52,0.4)] scale-105'
+                      ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.45)] scale-105 font-bold'
                       : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110'
                   }`
                 }
@@ -82,7 +82,7 @@ export const FloatingDock = () => {
           onMouseEnter={() => setActiveTooltip('Top')}
           onMouseLeave={() => setActiveTooltip(null)}
           title="Back to Top"
-          className="flex items-center justify-center w-10 h-10 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-[#801834] dark:hover:text-[#D4AF37] hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110 transition-all duration-300"
+          className="flex items-center justify-center w-10 h-10 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-[#D4AF37] hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110 transition-all duration-300"
         >
           <ChevronUp size={18} />
         </button>

@@ -8,23 +8,27 @@
     --text-main: #18181B;
     --card-bg: rgba(255, 255, 255, 0.95);
     --border-color: rgba(228, 228, 231, 0.8);
-    --wine-primary: #801834;
-    --wine-hover: #671229;
+    --gold-primary: #D4AF37;
+    --gold-hover: #C59B27;
+    --gold-light: #F3E5AB;
+    --gold-glow: rgba(212, 175, 55, 0.3);
   }
 
   html.dark {
-    --bg-main: #121417;
-    --text-main: #EAEAEA;
+    --bg-main: #0E1013;
+    --text-main: #F4F4F5;
     --card-bg: rgba(24, 26, 30, 0.85);
     --border-color: rgba(51, 51, 51, 0.8);
-    --wine-primary: #9E1F43;
-    --wine-hover: #801834;
+    --gold-primary: #D4AF37;
+    --gold-hover: #E5C158;
+    --gold-light: #F3E5AB;
+    --gold-glow: rgba(212, 175, 55, 0.35);
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-white dark:bg-[#121417];
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#D4AF37] selection:text-[#121417] bg-white dark:bg-[#0E1013];
   }
 }
 
@@ -52,11 +56,11 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #801834;
+  background: #D4AF37;
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #E5C158;
 }
 
 /* Structural Blueprint Grid Backgrounds */
@@ -121,9 +125,9 @@ html.dark .tech-box {
 }
 
 .tech-box:hover {
-  border-color: rgba(128, 24, 52, 0.4);
+  border-color: rgba(212, 175, 55, 0.45);
 }
 
 html.dark .tech-box:hover {
-  border-color: rgba(212, 175, 55, 0.5);
+  border-color: rgba(212, 175, 55, 0.55);
 }

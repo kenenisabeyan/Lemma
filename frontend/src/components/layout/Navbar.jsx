@@ -100,42 +100,71 @@ export const Navbar = () => {
               </span>
             </div>
 
-            {/* Name + Subtitle in Burgundy */}
+            {/* Name + Subtitle in Metallic Gold */}
             <div className="flex flex-col text-left">
-              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors leading-tight">
+              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-900 dark:text-zinc-100 group-hover:text-[#D4AF37] transition-colors leading-tight">
                 {brandName}
               </span>
-              <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#801834] dark:text-[#E84855] uppercase mt-0.5 leading-none">
+              <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mt-0.5 leading-none">
                 {brandSubtitle}
               </span>
             </div>
           </Link>
 
-          {/* Right Action Buttons: Circular Theme Toggle + Circular Menu Toggle */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          {/* Desktop Navigation Links (Section 6 Requirement) */}
+          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1 xl:gap-2 bg-white/70 dark:bg-[#181A1E]/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-zinc-200/80 dark:border-[#333]/80 shadow-xs">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                    isActive
+                      ? 'bg-[#D4AF37] text-[#121417] font-bold shadow-xs'
+                      : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Right Action Buttons: Prominent Hire Me CTA + Theme Toggle + Menu Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3">
             
+            {/* Prominent Hire Me / Request Consultation CTA (Section 6 Requirement) */}
+            <Link
+              to="/contact"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-[#D4AF37] hover:bg-[#C59B27] active:scale-95 text-[#121417] px-4 sm:px-5 py-2 sm:py-2.5 font-bold text-xs uppercase tracking-wider transition-all shadow-[0_2px_12px_rgba(212,175,55,0.3)] hover:shadow-[0_4px_16px_rgba(212,175,55,0.45)] cursor-pointer"
+            >
+              <span>Hire Me</span>
+              <ArrowUpRight size={13} className="stroke-[2.5]" />
+            </Link>
+
             {/* Theme Toggle Circular Pill */}
             <button
               onClick={toggleTheme}
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white/90 dark:bg-zinc-800/90 border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-white/90 dark:bg-[#181A1E] border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-xs hover:scale-105 active:scale-95 transition-all focus:outline-none"
               title={isDark ? "Light mode" : "Dark mode"}
             >
               {isDark ? (
-                <Sun size={17} className="text-amber-400" />
+                <Sun size={16} className="text-amber-400" />
               ) : (
-                <Moon size={17} className="text-zinc-700" />
+                <Moon size={16} className="text-zinc-700" />
               )}
             </button>
 
-            {/* Menu Toggle Circular Pill */}
+            {/* Menu Toggle Circular Pill (for mobile and full drawer) */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle navigation menu"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white/90 dark:bg-zinc-800/90 border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-white/90 dark:bg-[#181A1E] border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-xs hover:scale-105 active:scale-95 transition-all focus:outline-none"
               title="Menu"
             >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
+              {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
 
           </div>
@@ -176,7 +205,7 @@ export const Navbar = () => {
                     />
                     <div>
                       <h3 className="font-extrabold text-sm text-zinc-900 dark:text-zinc-100">{brandName}</h3>
-                      <p className="text-[10px] font-bold tracking-wider text-[#801834] dark:text-[#E84855] uppercase">
+                      <p className="text-[10px] font-bold tracking-wider text-[#D4AF37] uppercase">
                         {brandSubtitle}
                       </p>
                     </div>
@@ -208,7 +237,7 @@ export const Navbar = () => {
                         onClick={() => setMenuOpen(false)}
                         className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 ${
                           isActive
-                            ? 'bg-[#801834]/10 dark:bg-[#801834]/20 text-[#801834] dark:text-[#E84855] font-bold'
+                            ? 'bg-[#D4AF37]/15 text-[#D4AF37] font-bold'
                             : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800/60'
                         }`}
                       >
@@ -220,7 +249,7 @@ export const Navbar = () => {
                           size={16} 
                           className={`transition-transform ${
                             isActive 
-                              ? 'text-[#801834] dark:text-[#E84855] translate-x-1' 
+                              ? 'text-[#D4AF37] translate-x-1' 
                               : 'opacity-0 group-hover:opacity-100 group-hover:translate-x-1'
                           }`} 
                         />
@@ -247,7 +276,7 @@ export const Navbar = () => {
                     navigate('/contact');
                     setMenuOpen(false);
                   }}
-                  className="rounded-full bg-[#801834] hover:bg-[#68132a] active:scale-95 text-white py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#801834]/25 flex items-center justify-center gap-2"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#C59B27] active:scale-95 text-[#121417] py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#D4AF37]/20 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   Schedule Consultation <ArrowUpRight size={14} />
                 </button>
