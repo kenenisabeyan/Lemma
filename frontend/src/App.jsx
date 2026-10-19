@@ -77,7 +77,7 @@ const PublicLayout = ({ children }) => {
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
       <Navbar />
-      <main>{children}</main>
+      <main className="bg-white min-h-screen text-zinc-900">{children}</main>
       <FloatingDock />
       <Footer />
     </>
@@ -119,11 +119,11 @@ export default function App() {
 
         {/* Custom 404 Route */}
         <Route path="*" element={
-          <div className="min-h-screen bg-[#121417] text-[#EAEAEA] flex flex-col items-center justify-center p-6 text-center">
-            <h1 className="text-8xl font-extrabold text-[#D4AF37] font-mono">404</h1>
+          <div className="min-h-screen bg-white text-zinc-900 flex flex-col items-center justify-center p-6 text-center">
+            <h1 className="text-8xl font-extrabold text-[#801834] font-mono">404</h1>
             <p className="text-xl font-bold uppercase tracking-wider mt-4">Structural Boundary Not Found</p>
-            <p className="text-xs text-[#9CA3AF] mt-2 mb-6">The requested engineering route does not exist in the blueprint schema.</p>
-            <a href="/" className="bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+            <p className="text-xs text-zinc-500 mt-2 mb-6">The requested engineering route does not exist in the blueprint schema.</p>
+            <a href="/" className="bg-[#801834] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-zinc-900 transition-colors rounded-full shadow-md">
               Return to Homepage
             </a>
           </div>
