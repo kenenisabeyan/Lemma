@@ -110,8 +110,8 @@ export const LoadPathSimulator = () => {
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-[#26282D] relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs">
-            <Gauge size={13} className="text-[#801834] dark:text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-xs">
+            <Gauge size={13} className="text-[#D4AF37]" />
             Interactive Structural Finite Element Simulator
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
@@ -126,9 +126,9 @@ export const LoadPathSimulator = () => {
         <div className="flex flex-wrap gap-2 bg-zinc-100 dark:bg-[#121417] p-1.5 rounded-2xl border border-zinc-200 dark:border-[#333]">
           <button
             onClick={() => setLoadMode('wind')}
-            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer ${
               loadMode === 'wind'
-                ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
+                ? 'bg-[#D4AF37] text-[#121417] shadow-sm dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
                 : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-white dark:hover:bg-white/5'
             }`}
           >
@@ -136,9 +136,9 @@ export const LoadPathSimulator = () => {
           </button>
           <button
             onClick={() => setLoadMode('seismic')}
-            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer ${
               loadMode === 'seismic'
-                ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
+                ? 'bg-[#D4AF37] text-[#121417] shadow-sm dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
                 : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-white dark:hover:bg-white/5'
             }`}
           >
@@ -146,9 +146,9 @@ export const LoadPathSimulator = () => {
           </button>
           <button
             onClick={() => setLoadMode('gravity')}
-            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer ${
               loadMode === 'gravity'
-                ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
+                ? 'bg-[#D4AF37] text-[#121417] shadow-sm dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
                 : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-white dark:hover:bg-white/5'
             }`}
           >
@@ -156,9 +156,9 @@ export const LoadPathSimulator = () => {
           </button>
           <button
             onClick={() => setLoadMode('thermal')}
-            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
+            className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer ${
               loadMode === 'thermal'
-                ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
+                ? 'bg-[#D4AF37] text-[#121417] shadow-sm dark:shadow-[0_0_15px_rgba(212,175,55,0.35)]'
                 : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-white dark:hover:bg-white/5'
             }`}
           >
@@ -175,8 +175,8 @@ export const LoadPathSimulator = () => {
           
           {/* Top Crosshair Badge */}
           <div className="w-full flex justify-between items-center text-[10px] font-mono text-zinc-500 dark:text-[#9CA3AF]">
-            <span className="flex items-center gap-1 text-[#801834] dark:text-[#D4AF37] font-semibold">
-              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+            <span className="flex items-center gap-1 text-[#D4AF37] font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               ELEVATION SECTION: TOWER CORE
             </span>
             <span>H = 215m · 52 STORIES</span>
@@ -188,9 +188,9 @@ export const LoadPathSimulator = () => {
               
               {/* Foundation Caissons to Bedrock */}
               <rect x="40" y="270" width="120" height="25" fill="#E4E4E7" className="dark:fill-[#22252A]" stroke="#A1A1AA" strokeWidth="1.5" />
-              <line x1="60" y1="270" x2="60" y2="295" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" strokeDasharray="3 3" />
-              <line x1="100" y1="270" x2="100" y2="295" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" strokeDasharray="3 3" />
-              <line x1="140" y1="270" x2="140" y2="295" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" strokeDasharray="3 3" />
+              <line x1="60" y1="270" x2="60" y2="295" stroke="#D4AF37" strokeWidth="2" strokeDasharray="3 3" />
+              <line x1="100" y1="270" x2="100" y2="295" stroke="#D4AF37" strokeWidth="2" strokeDasharray="3 3" />
+              <line x1="140" y1="270" x2="140" y2="295" stroke="#D4AF37" strokeWidth="2" strokeDasharray="3 3" />
               <text x="100" y="287" textAnchor="middle" fill="#71717A" fontSize="7" fontFamily="monospace">BEDROCK SOCKET CAISSONS</text>
 
               {/* Central Shear Wall Core */}
@@ -201,7 +201,7 @@ export const LoadPathSimulator = () => {
                 height="240"
                 fill="#FFFFFF"
                 className="dark:fill-[#181A1E]"
-                stroke="#801834"
+                stroke="#D4AF37"
                 strokeWidth="2"
                 animate={loadMode === 'wind' ? {
                   skewX: [(intensity * 0.04), 0, (intensity * 0.04)],
@@ -217,12 +217,12 @@ export const LoadPathSimulator = () => {
               <line x1="155" y1="30" x2="155" y2="270" stroke="#71717A" strokeWidth="3" />
 
               {/* Outrigger Belt Trusses (Level 26 & Level 50) */}
-              <line x1="45" y1="80" x2="155" y2="80" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" />
-              <line x1="45" y1="170" x2="155" y2="170" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" />
-              <line x1="45" y1="80" x2="80" y2="110" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1" strokeDasharray="2 2" />
-              <line x1="155" y1="80" x2="120" y2="110" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1" strokeDasharray="2 2" />
-              <line x1="45" y1="170" x2="80" y2="200" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1" strokeDasharray="2 2" />
-              <line x1="155" y1="170" x2="120" y2="200" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1" strokeDasharray="2 2" />
+              <line x1="45" y1="80" x2="155" y2="80" stroke="#D4AF37" strokeWidth="2" />
+              <line x1="45" y1="170" x2="155" y2="170" stroke="#D4AF37" strokeWidth="2" />
+              <line x1="45" y1="80" x2="80" y2="110" stroke="#D4AF37" strokeWidth="1" strokeDasharray="2 2" />
+              <line x1="155" y1="80" x2="120" y2="110" stroke="#D4AF37" strokeWidth="1" strokeDasharray="2 2" />
+              <line x1="45" y1="170" x2="80" y2="200" stroke="#D4AF37" strokeWidth="1" strokeDasharray="2 2" />
+              <line x1="155" y1="170" x2="120" y2="200" stroke="#D4AF37" strokeWidth="1" strokeDasharray="2 2" />
 
               {/* Horizontal Floor Plates */}
               {[60, 100, 130, 150, 190, 220, 245].map((y) => (
@@ -293,9 +293,9 @@ export const LoadPathSimulator = () => {
           <div className="w-full pt-4 border-t border-zinc-200 dark:border-[#26282D]">
             <div className="flex justify-between items-center text-[10px] font-mono text-zinc-500 dark:text-[#9CA3AF] mb-1.5">
               <span className="flex items-center gap-1 font-semibold">
-                <Sliders size={11} className="text-[#801834] dark:text-[#D4AF37]" /> FORCE INTENSITY FACTOR
+                <Sliders size={11} className="text-[#D4AF37]" /> FORCE INTENSITY FACTOR
               </span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{intensity}% LOAD COMBINATION</span>
+              <span className="text-[#D4AF37] font-bold">{intensity}% LOAD COMBINATION</span>
             </div>
             <input
               type="range"
@@ -303,7 +303,7 @@ export const LoadPathSimulator = () => {
               max="100"
               value={intensity}
               onChange={(e) => setIntensity(Number(e.target.value))}
-              className="w-full accent-[#801834] dark:accent-[#D4AF37] h-1.5 bg-zinc-200 dark:bg-[#181A1E] rounded-lg cursor-pointer"
+              className="w-full accent-[#D4AF37] h-1.5 bg-zinc-200 dark:bg-[#181A1E] rounded-lg cursor-pointer"
             />
           </div>
         </div>
@@ -313,7 +313,7 @@ export const LoadPathSimulator = () => {
           
           <div>
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-              <span className="text-xs font-mono font-bold uppercase text-[#801834] dark:text-[#D4AF37] tracking-wider">
+              <span className="text-xs font-mono font-bold uppercase text-[#D4AF37] tracking-wider">
                 {metrics.title}
               </span>
               <span className={`text-[10px] font-mono font-extrabold uppercase px-3 py-1 rounded-full border shadow-2xs ${metrics.statusColor}`}>
@@ -325,7 +325,7 @@ export const LoadPathSimulator = () => {
               {metrics.primaryMetric}
             </h4>
             <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] font-mono mb-4">
-              {metrics.primaryLabel} · <span className="text-[#801834] dark:text-[#D4AF37] font-semibold">{metrics.codeClause}</span>
+              {metrics.primaryLabel} · <span className="text-[#D4AF37] font-semibold">{metrics.codeClause}</span>
             </p>
 
             <p className="text-xs sm:text-sm text-zinc-700 dark:text-[#9CA3AF] leading-relaxed bg-zinc-50 dark:bg-[#121417] p-4 rounded-xl border border-zinc-200 dark:border-[#2D3137] mb-6 shadow-xs">
@@ -338,7 +338,7 @@ export const LoadPathSimulator = () => {
             <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
               <span className="text-[9px] uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Base Shear ($V_b$)</span>
               <span className="text-base font-extrabold text-zinc-900 dark:text-[#EAEAEA] block">{metrics.baseShear}</span>
-              <span className="text-[9px] text-[#801834] dark:text-[#D4AF37] font-semibold block mt-0.5">Reaction Force</span>
+              <span className="text-[9px] text-[#D4AF37] font-semibold block mt-0.5">Reaction Force</span>
             </div>
 
             <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
@@ -350,7 +350,7 @@ export const LoadPathSimulator = () => {
             <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
               <span className="text-[9px] uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Overturning (M_OT)</span>
               <span className="text-base font-extrabold text-zinc-900 dark:text-[#EAEAEA] block truncate">{metrics.overturning}</span>
-              <span className="text-[9px] text-[#801834] dark:text-[#D4AF37] font-semibold block mt-0.5">Foundation Moment</span>
+              <span className="text-[9px] text-[#D4AF37] font-semibold block mt-0.5">Foundation Moment</span>
             </div>
 
             <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
@@ -363,10 +363,10 @@ export const LoadPathSimulator = () => {
           {/* Stamped Verification Bar */}
           <div className="pt-4 border-t border-zinc-200 dark:border-[#26282D] flex flex-wrap justify-between items-center text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] gap-2">
             <div className="flex items-center gap-2">
-              <ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" />
+              <ShieldCheck size={14} className="text-[#D4AF37]" />
               <span>FEA Solver Model: ETABS v21 / SAP2000 Non-Linear Dynamic Engine</span>
             </div>
-            <span className="text-[#801834] dark:text-[#D4AF37] font-semibold text-[11px]">
+            <span className="text-[#D4AF37] font-semibold text-[11px]">
               PE #84729-SE VERIFIED
             </span>
           </div>

@@ -192,8 +192,6 @@ export const TestimonialsPage = () => {
 
       </div>
     </div>
-
-      </div>
-    </div>
   );
 };
+

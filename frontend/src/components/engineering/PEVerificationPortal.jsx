@@ -48,7 +48,7 @@ export const PEVerificationPortal = () => {
         aria-hidden="true" 
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #801834 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #D4AF37 1px, transparent 0)',
           backgroundSize: '24px 24px'
         }}
       ></div>
@@ -56,7 +56,7 @@ export const PEVerificationPortal = () => {
       {/* Header */}
       <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-[#2D3137]">
         <div>
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37]">
+          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37]">
             <Award size={14} className="animate-pulse" />
             <span>State Board Licensure & Credentials Portal</span>
           </div>
@@ -72,11 +72,11 @@ export const PEVerificationPortal = () => {
         <div className="flex flex-wrap gap-2 shrink-0">
           <div className="rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/50 px-3.5 py-2 text-xs font-mono shadow-xs">
             <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF] uppercase block">New York State</span>
-            <span className="text-[#801834] dark:text-[#D4AF37] font-bold">PE #84729 · ACTIVE</span>
+            <span className="text-[#D4AF37] font-bold">PE #84729 · ACTIVE</span>
           </div>
           <div className="rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/50 px-3.5 py-2 text-xs font-mono shadow-xs">
             <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF] uppercase block">California Board</span>
-            <span className="text-[#801834] dark:text-[#D4AF37] font-bold">SE #92041 · ACTIVE</span>
+            <span className="text-[#D4AF37] font-bold">SE #92041 · ACTIVE</span>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ export const PEVerificationPortal = () => {
         {/* Left Column: Form Controls */}
         <div className="lg:col-span-5 flex flex-col justify-between space-y-4 bg-zinc-50 dark:bg-[#121417] p-6 rounded-2xl border border-zinc-200 dark:border-[#333]">
           <div className="space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 font-bold">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 font-bold">
               <Compass size={14} /> Project Parameters for Certification
             </span>
 
@@ -98,7 +98,7 @@ export const PEVerificationPortal = () => {
                 type="text" 
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] font-medium shadow-2xs"
+                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#D4AF37] font-medium shadow-2xs"
               />
             </div>
 
@@ -108,7 +108,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#D4AF37] shadow-2xs"
               >
                 <option value="New York City Department of Buildings (NYC DOB)">New York City Department of Buildings (NYC DOB)</option>
                 <option value="California Department of Health Care Access (HCAI/OSHPD)">California HCAI / OSHPD Seismic Division</option>
@@ -124,7 +124,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={systemType}
                 onChange={(e) => setSystemType(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#D4AF37] shadow-2xs"
               >
                 <option value="Dual Core Concrete Shear Wall & Steel Outriggers">Dual Core Concrete Shear Wall & Steel Outriggers</option>
                 <option value="Post-Tensioned Concrete Flat Plate Frame">Post-Tensioned Concrete Flat Plate Frame</option>
@@ -139,7 +139,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={designStandard}
                 onChange={(e) => setDesignStandard(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#D4AF37] shadow-2xs"
               >
                 <option value="IBC 2024 / ASCE 7-22 / ACI 318-19">IBC 2024 / ASCE 7-22 / ACI 318-19</option>
                 <option value="CBC 2025 / ASCE 7-22 / AISC 360-22">CBC 2025 / ASCE 7-22 / AISC 360-22</option>
@@ -152,7 +152,7 @@ export const PEVerificationPortal = () => {
           <div className="pt-4 border-t border-zinc-200 dark:border-[#26282D]">
             <button
               onClick={() => setIsGenerated(true)}
-              className="w-full rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
+              className="w-full rounded-full bg-[#D4AF37] text-[#121417] hover:bg-white py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <FileCheck2 size={15} /> Update Sealed Certification Dossier
             </button>
@@ -160,18 +160,18 @@ export const PEVerificationPortal = () => {
         </div>
 
         {/* Right Column: Formal Stamped Certificate */}
-        <div className="lg:col-span-7 bg-white dark:bg-gradient-to-b dark:from-[#181A1E] dark:to-[#14161A] rounded-2xl border-2 border-[#801834]/40 dark:border-[#D4AF37]/60 p-8 shadow-sm dark:shadow-2xl relative flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-white dark:bg-gradient-to-b dark:from-[#181A1E] dark:to-[#14161A] rounded-2xl border-2 border-[#D4AF37]/50 dark:border-[#D4AF37]/60 p-8 shadow-sm dark:shadow-2xl relative flex flex-col justify-between">
           
           {/* Decorative Corner Badges */}
-          <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-[#801834] dark:border-[#D4AF37]"></div>
-          <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-[#801834] dark:border-[#D4AF37]"></div>
-          <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-[#801834] dark:border-[#D4AF37]"></div>
-          <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-[#801834] dark:border-[#D4AF37]"></div>
+          <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]"></div>
+          <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]"></div>
+          <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]"></div>
+          <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]"></div>
 
           <div>
             {/* Certificate Header */}
             <div className="text-center pb-6 border-b border-zinc-200 dark:border-[#2D3137] relative">
-              <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-[0.25em] block mb-1 font-bold">
+              <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-[0.25em] block mb-1 font-bold">
                 PROFESSIONAL ENGINEERING REGISTRATION & COMPLIANCE DOSSIER
               </span>
               <h4 className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-wide uppercase font-serif">
@@ -195,7 +195,7 @@ export const PEVerificationPortal = () => {
                 </div>
                 <div>
                   <span className="text-zinc-500 dark:text-[#888] block text-[9px] font-semibold">MUNICIPAL AUTHORITY:</span>
-                  <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{jurisdiction}</span>
+                  <span className="text-[#D4AF37] font-bold">{jurisdiction}</span>
                 </div>
                 <div>
                   <span className="text-zinc-500 dark:text-[#888] block text-[9px] font-semibold">STRUCTURAL SYSTEM:</span>
@@ -203,7 +203,7 @@ export const PEVerificationPortal = () => {
                 </div>
                 <div>
                   <span className="text-zinc-500 dark:text-[#888] block text-[9px] font-semibold">GOVERNING CODE:</span>
-                  <span className="text-[#801834] dark:text-[#D4AF37] font-semibold">{designStandard}</span>
+                  <span className="text-[#D4AF37] font-semibold">{designStandard}</span>
                 </div>
               </div>
             </div>
@@ -217,22 +217,22 @@ export const PEVerificationPortal = () => {
               <div className="relative w-24 h-24 shrink-0 flex items-center justify-center">
                 <svg viewBox="0 0 100 100" className="w-full h-full animate-spin-slow">
                   {/* Outer Seal Rings */}
-                  <circle cx="50" cy="50" r="47" fill="none" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" />
-                  <circle cx="50" cy="50" r="42" fill="none" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1" strokeDasharray="2 2" />
-                  <circle cx="50" cy="50" r="32" fill="none" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1" />
+                  <circle cx="50" cy="50" r="47" fill="none" stroke="#D4AF37" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="#D4AF37" strokeWidth="1" strokeDasharray="2 2" />
+                  <circle cx="50" cy="50" r="32" fill="none" stroke="#D4AF37" strokeWidth="1" />
                   
                   {/* Curved Text Simulation */}
                   <path id="curve" d="M 18,50 A 32,32 0 1,1 82,50" fill="none" />
-                  <text fontSize="5.5" fill="#801834" className="dark:fill-[#D4AF37]" fontFamily="monospace" letterSpacing="1">
+                  <text fontSize="5.5" fill="#D4AF37" fontFamily="monospace" letterSpacing="1">
                     <textPath href="#curve" startOffset="5%">ALEXANDRE TECHANE</textPath>
                   </text>
-                  <text x="50" y="52" textAnchor="middle" fill="#801834" className="dark:fill-[#D4AF37]" fontSize="5" fontFamily="monospace" fontWeight="bold">
+                  <text x="50" y="52" textAnchor="middle" fill="#D4AF37" fontSize="5" fontFamily="monospace" fontWeight="bold">
                     PE #84729
                   </text>
-                  <text x="50" y="60" textAnchor="middle" fill="#801834" className="dark:fill-[#D4AF37]" fontSize="4.5" fontFamily="monospace">
+                  <text x="50" y="60" textAnchor="middle" fill="#D4AF37" fontSize="4.5" fontFamily="monospace">
                     SE #92041
                   </text>
-                  <text x="50" y="68" textAnchor="middle" fill="#801834" className="dark:fill-[#D4AF37]" fontSize="4" fontFamily="monospace">
+                  <text x="50" y="68" textAnchor="middle" fill="#D4AF37" fontSize="4" fontFamily="monospace">
                     STATE OF NY & CA
                   </text>
                 </svg>
@@ -241,7 +241,7 @@ export const PEVerificationPortal = () => {
               <div className="text-xs font-mono">
                 <div className="text-zinc-900 dark:text-[#EAEAEA] font-bold text-sm">Alexandre Techane, PE, SE</div>
                 <div className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Licensed Structural Engineer</div>
-                <div className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold mt-0.5">PE NY #84729 · SE CA #92041</div>
+                <div className="text-[10px] text-[#D4AF37] font-semibold mt-0.5">PE NY #84729 · SE CA #92041</div>
                 <div className="text-[9px] text-zinc-400 dark:text-[#777] mt-1">Date: {timestamp}</div>
               </div>
             </div>
@@ -250,13 +250,13 @@ export const PEVerificationPortal = () => {
             <div className="flex flex-col gap-2 shrink-0">
               <button
                 onClick={handlePrint}
-                className="rounded-full bg-zinc-50 dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37]/50 hover:bg-[#801834] hover:text-white dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                className="rounded-full bg-zinc-50 dark:bg-[#121417] text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-[#121417] px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs cursor-pointer"
               >
                 <Printer size={13} /> Print Stamped Certificate
               </button>
               <button
                 onClick={handleCopy}
-                className="rounded-full bg-zinc-50 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA] px-4 py-1.5 text-[10px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 justify-center shadow-xs"
+                className="rounded-full bg-zinc-50 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA] px-4 py-1.5 text-[10px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 justify-center shadow-xs cursor-pointer"
               >
                 {copiedToken ? (
                   <>
