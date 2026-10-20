@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Award, Briefcase, GraduationCap, HardHat, CheckCircle2, ShieldCheck, Download, ArrowUpRight } from 'lucide-react';
+import { Award, Briefcase, GraduationCap, HardHat, CheckCircle2, ShieldCheck, Download, ArrowUpRight, Cpu } from 'lucide-react';
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
 import { PEVerificationPortal } from '../../components/engineering/PEVerificationPortal';
+import { EngineeringPrinciplesMatrix } from '../../components/engineering/EngineeringPrinciplesMatrix';
 
 export const About = () => {
   const navigate = useNavigate();
@@ -196,6 +197,11 @@ export const About = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Engineering Principles & Mechanical Code Compliance Matrix */}
+        <div className="mb-24">
+          <EngineeringPrinciplesMatrix />
         </div>
 
         {/* Digital PE/SE Seal & Licensure Verification Portal */}

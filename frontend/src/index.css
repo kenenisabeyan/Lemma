@@ -137,3 +137,56 @@ html.dark .tech-box {
 html.dark .tech-box:hover {
   border-color: rgba(212, 175, 55, 0.5);
 }
+
+/* CAD Corner Crosshairs & Architectural Accents */
+.cad-bracket-corners {
+  position: relative;
+}
+
+.cad-bracket-corners::before,
+.cad-bracket-corners::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  border-color: #801834;
+  opacity: 0.4;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+html.dark .cad-bracket-corners::before,
+html.dark .cad-bracket-corners::after {
+  border-color: #D4AF37;
+  opacity: 0.5;
+}
+
+.cad-bracket-corners::before {
+  top: 8px;
+  left: 8px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.cad-bracket-corners::after {
+  bottom: 8px;
+  right: 8px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.cad-bracket-corners:hover::before,
+.cad-bracket-corners:hover::after {
+  opacity: 0.85;
+}
+
+/* Blueprint Dot Grid */
+.bg-blueprint-dots {
+  background-image: radial-gradient(circle, rgba(128, 24, 52, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+html.dark .bg-blueprint-dots {
+  background-image: radial-gradient(circle, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+}
+

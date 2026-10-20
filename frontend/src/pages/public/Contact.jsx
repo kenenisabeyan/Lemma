@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, ShieldCheck, CheckCircle2, Send, AlertCircle, Sparkles, Clock, Compass, FileText } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Phone, Mail, MapPin, ShieldCheck, CheckCircle2, Send, AlertCircle, Sparkles, Clock, Compass, FileText, Check } from 'lucide-react';
 import api from '../../services/api';
+import { StructuralScopeEstimator } from '../../components/engineering/StructuralScopeEstimator';
 
 export const Contact = () => {
+  const formRef = useRef(null);
+  const [estimatorApplied, setEstimatorApplied] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,6 +59,21 @@ export const Contact = () => {
       subject: preset.subject,
       message: preset.msg
     }));
+  };
+
+  const handleApplyEstimatorScope = (scopeData) => {
+    setActivePreset(null);
+    setFormData((prev) => ({
+      ...prev,
+      projectType: scopeData.projectType,
+      subject: scopeData.subject,
+      message: scopeData.message
+    }));
+    setEstimatorApplied(true);
+    setTimeout(() => setEstimatorApplied(false), 4000);
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const handleChange = (e) => {
@@ -175,21 +193,42 @@ export const Contact = () => {
           <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:bg-[#333] -bottom-px left-0 right-0"></div>
         </div>
 
+        {/* Interactive Scope & Deliverables Matrix */}
+        <div className="mb-14">
+          <StructuralScopeEstimator onApplyScope={handleApplyEstimatorScope} />
+        </div>
+
         {/* Consultation Request Form Container */}
-        <div className="rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] p-8 lg:p-12 shadow-xl dark:shadow-2xl">
+        <div 
+          ref={formRef}
+          className="rounded-3xl border border-zinc-200/90 dark:border-[#333]/80 bg-white/95 dark:bg-[#181A1E] p-8 lg:p-12 shadow-xl dark:shadow-2xl relative cad-bracket-corners transition-colors"
+        >
+          {/* Engineering Coordinates Strip */}
+          <div className="flex items-center justify-between text-[9px] font-mono text-zinc-400 dark:text-zinc-500 uppercase tracking-widest pb-3 mb-6 border-b border-zinc-100 dark:border-[#26282D]">
+            <span>MANDATE: DIRECT CLIENT INQUIRY</span>
+            <span className="hidden sm:inline">REF: NY-PE-84729 / CA-SE-92041</span>
+            <span>SECURE 256-BIT SSL</span>
+          </div>
+
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-[#2D3137]">
             <div>
-              <h3 className="text-2xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">
-                Structural Consultation Inquiry
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-1 tracking-tight">
+                Structural Consultation Inquiry Brief
               </h3>
               <p className="text-xs text-zinc-600 dark:text-[#9CA3AF]">
                 Provide your project specifications or scope below for a confidential engineering review.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#801834] dark:text-[#D4AF37] bg-zinc-100 dark:bg-[#121417] px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-[#D4AF37]/30 font-bold">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#801834] dark:text-[#D4AF37] bg-zinc-100 dark:bg-[#121417] px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-[#D4AF37]/30 font-bold shrink-0">
               <ShieldCheck size={14} /> NDA Confidentiality Assured
             </div>
           </div>
+
+          {estimatorApplied && (
+            <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-600 text-emerald-800 dark:text-emerald-300 text-xs font-semibold flex items-center gap-2 animate-bounce">
+              <Check size={18} /> Parameters from Scope Estimator loaded into consultation brief!
+            </div>
+          )}
 
           {successMsg && (
             <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-500/50 text-emerald-800 dark:text-emerald-400 text-xs font-semibold flex items-center gap-2">
