@@ -16,7 +16,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-white dark:bg-[#0D0E11] border-t border-zinc-200/80 dark:border-[#222] pt-20 pb-12 relative overflow-hidden text-zinc-900 dark:text-[#EAEAEA] transition-colors duration-200">
+    <footer className="bg-gradient-to-b from-[#F5F2ED] via-[#FAF9F6] to-[#EFECE5] dark:from-[#121417] dark:to-[#0D0E11] border-t border-zinc-200/80 dark:border-[#222] pt-20 pb-12 relative overflow-hidden text-zinc-900 dark:text-[#EAEAEA] transition-colors duration-200">
       {/* Background subtle styling */}
       <div className="absolute inset-0 opacity-5 pointer-events-none bg-blueprint-gold"></div>
 
@@ -25,7 +25,7 @@ export const Footer = () => {
         {/* ========================================================================= */}
         {/* TOP BENTO CALLOUT: AVAILABLE FOR CONSULTING                                */}
         {/* ========================================================================= */}
-        <div className="rounded-3xl bg-zinc-50 dark:bg-gradient-to-br dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-12 mb-16 shadow-lg dark:shadow-2xl relative overflow-hidden group hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/40 transition-all duration-300">
+        <div className="rounded-3xl bg-gradient-to-br from-white via-[#FAF0F3]/70 to-[#FDF8F2] dark:bg-gradient-to-br dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-rose-100 dark:border-[#333]/80 p-8 sm:p-12 mb-16 shadow-lg dark:shadow-2xl relative overflow-hidden group hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/40 transition-all duration-300">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#801834]/5 dark:bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
           
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 relative z-10">

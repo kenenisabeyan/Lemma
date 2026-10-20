@@ -17,6 +17,19 @@ export default {
           text: "#EAEAEA",
           muted: "#9CA3AF",
           border: "#333333"
+        },
+        architectural: {
+          canvas: "#FAF9F6",
+          surface: "#FFFFFF",
+          subtle: "#F4F4F2",
+          "wine-tint": "#FAF0F3",
+          "slate-tint": "#F0F4F8",
+          "warm-tint": "#FDF8F2",
+          border: "#E4E4E7",
+          wine: "#801834",
+          "wine-dark": "#671229",
+          "wine-light": "#A32446",
+          gold: "#D4AF37"
         }
       },
       fontFamily: {
@@ -24,7 +37,8 @@ export default {
         mono: ['JetBrains Mono', 'Courier New', 'monospace']
       },
       backgroundImage: {
-        'blueprint-grid': 'linear-gradient(to right, rgba(212,175,55,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(212,175,55,0.08) 1px, transparent 1px)',
+        'blueprint-grid': 'linear-gradient(to right, rgba(128,24,52,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(128,24,52,0.06) 1px, transparent 1px)',
+        'light-grid': 'linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px)',
         'dark-grid': 'linear-gradient(to right, #26292E 1px, transparent 1px), linear-gradient(to bottom, #26292E 1px, transparent 1px)'
       }
     },

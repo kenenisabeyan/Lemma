@@ -22,7 +22,7 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = 'max-w-3xl'
         <div className="h-1 w-full bg-gradient-to-r from-[#801834] via-[#D4AF37] to-[#801834]"></div>
 
         {/* Header */}
-        <div className="p-6 border-b border-zinc-200/90 dark:border-[#2D3137] flex items-center justify-between bg-zinc-50/95 dark:bg-[#121417]/95">
+        <div className="p-6 border-b border-zinc-200/90 dark:border-[#2D3137] flex items-center justify-between bg-gradient-to-r from-[#FAF0F3]/90 via-white to-[#FDF8F2]/80 dark:from-[#181A1E] dark:to-[#121417]">
           <h3 className="text-base sm:text-lg font-mono font-extrabold uppercase tracking-wider text-zinc-900 dark:text-[#EAEAEA] flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>
             {title}
