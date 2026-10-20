@@ -141,22 +141,52 @@ export const Home = () => {
     { icon: 'Ruler', title: 'Peer Review & Consultation', summary: 'Third-party calculation verification, cost value engineering, and constructability advisory.' }
   ];
 
-  const testimonials = (testimonialsData?.testimonials && testimonialsData.testimonials.length > 0) ? testimonialsData.testimonials : [
+  const defaultTestimonials = [
     {
+      id: '1',
       clientName: 'Sarah Jenkins, AIA',
       clientRole: 'Principal Architect',
       clientCompany: 'ArchiTech Global Design',
+      category: 'Architects',
       avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'Alexandre’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.'
+      content: 'Alexandre’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
+      rating: 5,
+      projectRef: 'Nexus Commercial Tower (52-Story)'
     },
     {
+      id: '2',
       clientName: 'Marcus Vance',
       clientRole: 'VP of Development',
       clientCompany: 'Apex Commercial Properties',
+      category: 'Developers',
       avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80',
-      content: 'Unmatched technical depth and clear communication. He translates complex structural mechanics into actionable insights that non-engineers can confidently execute.'
+      content: 'Unmatched technical depth and clear communication. He translates complex structural mechanics into actionable insights that non-engineers can confidently execute.',
+      rating: 5,
+      projectRef: 'Horizon Logistics Distribution Center'
+    },
+    {
+      id: '3',
+      clientName: 'David Sterling, P.E.',
+      clientRole: 'Chief Infrastructure Officer',
+      clientCompany: 'State Transit Authority',
+      category: 'Civic Infrastructure',
+      avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80',
+      content: 'His non-linear seismic pushover analysis on the Avalon Suspension Bridge retrofitting plan saved millions in unnecessary material replacement while guaranteeing 120-year structural durability.',
+      rating: 5,
+      projectRef: 'Avalon River Suspension Bridge'
     }
   ];
+
+  const testimonials = (testimonialsData?.testimonials && testimonialsData.testimonials.length > 0) ? testimonialsData.testimonials : defaultTestimonials;
+
+  const filteredTestimonials = testimonials.filter(t => {
+    if (selectedTestimonialCategory === 'All') return true;
+    if (t.category === selectedTestimonialCategory) return true;
+    if (selectedTestimonialCategory === 'Architects' && (t.clientRole?.toLowerCase().includes('architect') || t.clientCompany?.toLowerCase().includes('design'))) return true;
+    if (selectedTestimonialCategory === 'Developers' && (t.clientRole?.toLowerCase().includes('development') || t.clientCompany?.toLowerCase().includes('properties'))) return true;
+    if (selectedTestimonialCategory === 'Civic Infrastructure' && (t.clientRole?.toLowerCase().includes('infrastructure') || t.clientCompany?.toLowerCase().includes('transit') || t.clientRole?.toLowerCase().includes('officer'))) return true;
+    return false;
+  });
 
   const insights = (insightsData?.insights && insightsData.insights.length > 0) ? insightsData.insights : [
     { title: 'Innovations in High-Strength C80 Concrete Formulations', slug: 'innovations-high-strength-c80-concrete', category: 'Materials Science', date: 'Oct 12, 2026' },
