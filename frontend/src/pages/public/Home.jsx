@@ -193,6 +193,9 @@ export const Home = () => {
           {/* Subtle Ambient Aurora Light */}
           <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/12 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
           <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-amber-500/10 dark:bg-[#801834]/12 blur-[120px] animate-aurora-drift-2"></div>
+          
+          {/* Interactive Structural Mechanics Truss Canvas */}
+          <EngineeringCanvas />
         </div>
 
         {/* Floating Translucent Accent Ring */}
