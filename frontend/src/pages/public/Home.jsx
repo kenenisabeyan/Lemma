@@ -50,6 +50,8 @@ export const Home = () => {
   const [activeEducationTab, setActiveEducationTab] = useState('roles');
   const [activeLoadPath, setActiveLoadPath] = useState('gravity');
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [selectedTestimonialCategory, setSelectedTestimonialCategory] = useState('All');
+  const testimonialCategories = ['All', 'Architects', 'Developers', 'Civic Infrastructure'];
 
   // Dynamic Rotating Pill Text
   const rotatingDisciplines = [
