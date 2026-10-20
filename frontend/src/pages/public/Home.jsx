@@ -246,7 +246,7 @@ export const Home = () => {
         />
 
         {/* Hero Content Container */}
-        <div className="relative z-30 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9 pointer-events-none">
+        <div className="relative z-30 max-w-4xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9 pointer-events-none px-4">
           
           {/* Main Giant Bold Headline with 3D Depth */}
           <motion.div
@@ -255,7 +255,7 @@ export const Home = () => {
             transition={{ duration: 0.8 }}
             className="space-y-1 sm:space-y-2 pointer-events-auto"
           >
-            <h1 className="font-black text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] tracking-tight leading-[1.04] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
+            <h1 className="font-black text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] xl:text-[6.2rem] tracking-tight leading-[1.06] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
               {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
               <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
                 {settings.heroHeadlineAccent || 'Clear'}

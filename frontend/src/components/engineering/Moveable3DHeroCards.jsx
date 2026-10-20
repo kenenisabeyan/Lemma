@@ -178,7 +178,7 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(128, 24, 52, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-3 shadow-xl transition-shadow select-none group hidden md:block`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-3 shadow-xl transition-shadow select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
             <div className="relative overflow-hidden rounded-xl bg-zinc-950 aspect-[16/10] border border-zinc-200/40 dark:border-zinc-800">
