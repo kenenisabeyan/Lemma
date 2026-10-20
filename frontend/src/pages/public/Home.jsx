@@ -272,7 +272,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-3xl mx-auto rounded-3xl bg-white dark:bg-[#181A1E]/90 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6"
+            className="w-full max-w-3xl mx-auto rounded-3xl bg-white dark:bg-[#181A1E]/90 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6 pointer-events-auto"
           >
             <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center">
               {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
@@ -284,7 +284,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-2"
+            className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-2 pointer-events-auto"
           >
             {/* Primary Filled Pill Button */}
             <button
