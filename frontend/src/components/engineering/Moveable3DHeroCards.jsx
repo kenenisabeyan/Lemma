@@ -36,15 +36,15 @@ export const Moveable3DHeroCards = () => {
       project: 'Nexus Commercial Tower',
       tag: 'ELEVATION +420M',
       code: 'IBC 2024 / ASCE 7-22',
-      metric: '140 MPH WIND TUNNEL PASS',
+      metric: '140 MPH WIND PASS',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
       icon: Building2,
       accent: 'border-[#801834] dark:border-[#D4AF37]',
       accentBg: 'bg-[#801834] dark:bg-[#D4AF37]',
       accentText: 'text-[#801834] dark:text-[#D4AF37]',
-      defaultPos: 'top-10 left-4 lg:left-12',
-      depthMultiplier: 25,
-      tiltFactor: 14
+      defaultPos: 'top-10 left-2 lg:left-6 xl:left-10',
+      depthMultiplier: 20,
+      tiltFactor: 12
     },
     {
       id: 'bridge',
@@ -53,14 +53,14 @@ export const Moveable3DHeroCards = () => {
       tag: 'SPAN 450M · SEISMIC ISOLATED',
       code: 'AASHTO / CALTRANS SEISMIC',
       metric: 'UHPC PYLONS · 120-YR LIFE',
-      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
       icon: Compass,
       accent: 'border-cyan-500',
       accentBg: 'bg-cyan-500',
       accentText: 'text-cyan-500',
-      defaultPos: 'top-14 right-4 lg:right-12',
-      depthMultiplier: -20,
-      tiltFactor: -12
+      defaultPos: 'top-14 right-2 lg:right-6 xl:right-10',
+      depthMultiplier: -18,
+      tiltFactor: -10
     },
     {
       id: 'steel',
@@ -74,9 +74,9 @@ export const Moveable3DHeroCards = () => {
       accent: 'border-emerald-500',
       accentBg: 'bg-emerald-500',
       accentText: 'text-emerald-500',
-      defaultPos: 'bottom-16 left-4 lg:left-14',
-      depthMultiplier: 18,
-      tiltFactor: -10
+      defaultPos: 'bottom-12 left-2 lg:left-6 xl:left-12',
+      depthMultiplier: 16,
+      tiltFactor: -8
     },
     {
       id: 'damper',
@@ -90,9 +90,9 @@ export const Moveable3DHeroCards = () => {
       accent: 'border-amber-500',
       accentBg: 'bg-amber-500',
       accentText: 'text-amber-500',
-      defaultPos: 'bottom-12 right-4 lg:right-14',
-      depthMultiplier: -22,
-      tiltFactor: 12
+      defaultPos: 'bottom-8 right-2 lg:right-6 xl:right-12',
+      depthMultiplier: -18,
+      tiltFactor: 10
     }
   ];
 
@@ -174,7 +174,7 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(128, 24, 52, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} pointer-events-auto cursor-grab active:cursor-grabbing w-72 sm:w-80 rounded-2xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-3.5 shadow-2xl transition-shadow select-none group hidden md:block`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-3 shadow-xl transition-shadow select-none group hidden md:block`}
           >
             {/* 3D Depth Card Inner Stage */}
             <div className="relative overflow-hidden rounded-xl bg-zinc-950 aspect-[16/10] border border-zinc-200/40 dark:border-zinc-800">

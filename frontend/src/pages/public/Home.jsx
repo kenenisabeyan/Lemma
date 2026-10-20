@@ -246,7 +246,7 @@ export const Home = () => {
         />
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9 pointer-events-none">
+        <div className="relative z-30 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9 pointer-events-none">
           
           {/* Main Giant Bold Headline with 3D Depth */}
           <motion.div
