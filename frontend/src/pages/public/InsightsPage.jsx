@@ -56,7 +56,7 @@ export const InsightsPage = () => {
   });
 
   return (
-    <div className="relative min-h-screen bg-transparent text-inherit pt-28 pb-24 selection:bg-[#801834] selection:text-white overflow-hidden">
+    <div className="relative min-h-screen bg-transparent bg-cad-grid text-inherit pt-28 pb-24 selection:bg-[#801834] selection:text-white overflow-hidden">
       {/* Ambient Aurora Drift Background Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
@@ -67,7 +67,7 @@ export const InsightsPage = () => {
         
         {/* Header */}
         <div className="mb-14 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
@@ -77,7 +77,7 @@ export const InsightsPage = () => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
             Engineering <span className="text-[#801834] dark:text-[#E84855]">Insights.</span>
           </h1>
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
             <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
               Technical papers, industry notes, code analysis, and design methodology articles published for structural engineering professionals and project developers.
             </p>
@@ -85,7 +85,7 @@ export const InsightsPage = () => {
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-white dark:bg-[#181A1E] p-3 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 shadow-sm dark:shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-white/95 dark:bg-[#14171C]/95 p-3 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 shadow-sm dark:shadow-xl">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
@@ -96,7 +96,7 @@ export const InsightsPage = () => {
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedCategory === cat
                     ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                    : 'bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                    : 'bg-[#F4F5F7] dark:bg-[#0E1014] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80 hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                 }`}
               >
                 {cat}
@@ -112,7 +112,7 @@ export const InsightsPage = () => {
               placeholder="Search papers, ASCE codes..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-[#121417] rounded-full border border-zinc-200 dark:border-[#333] pl-10 pr-4 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors font-mono shadow-sm"
+              className="w-full bg-[#F4F5F7] dark:bg-[#0E1014] rounded-full border border-zinc-200/80 dark:border-zinc-800/80 pl-10 pr-4 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors font-mono shadow-sm"
             />
           </div>
 
@@ -120,7 +120,7 @@ export const InsightsPage = () => {
 
         {/* Articles Grid */}
         {filteredArticles.length === 0 ? (
-          <div className="py-20 text-center bg-white dark:bg-[#181A1E] rounded-2xl border border-zinc-200 dark:border-[#333] mb-16 shadow-sm">
+          <div className="py-20 text-center bg-white/95 dark:bg-[#14171C]/95 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 mb-16 shadow-sm">
             <BookOpen className="mx-auto w-12 h-12 text-zinc-400 dark:text-[#9CA3AF]/40 mb-3" />
             <p className="text-zinc-500 dark:text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">
               No technical publications match the selected criteria.
@@ -132,10 +132,10 @@ export const InsightsPage = () => {
               <Link
                 key={item.id}
                 to={`/insights/${item.slug || 'innovations-high-strength-c80-concrete'}`}
-                className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl"
+                className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl"
               >
                 <div>
-                  <div className="aspect-[16/10] bg-zinc-100 dark:bg-[#141619] overflow-hidden border-b border-zinc-200 dark:border-[#2D3137] relative">
+                  <div className="aspect-[16/10] bg-[#F4F5F7] dark:bg-[#0E1014] overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 relative">
                     {item.imageUrl && (
                       <img 
                         src={item.imageUrl} 
@@ -144,7 +144,7 @@ export const InsightsPage = () => {
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-[#121417]/85 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-[#14171C]/90 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-700/80 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
                       {item.category}
                     </span>
                   </div>
@@ -166,7 +166,7 @@ export const InsightsPage = () => {
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 border-t border-zinc-100 dark:border-[#2D3137]/60 mt-4">
+                <div className="p-6 pt-0 border-t border-zinc-200/80 dark:border-zinc-800/80 mt-4">
                   <span className="text-xs font-bold uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] group-hover:text-zinc-900 dark:group-hover:text-white transition-colors flex items-center gap-1 pt-4">
                     Read Technical Paper <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>

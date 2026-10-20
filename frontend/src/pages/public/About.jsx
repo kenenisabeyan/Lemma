@@ -10,7 +10,7 @@ export const About = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent bg-cad-grid text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white transition-colors duration-200">
       {/* Ambient Aurora Drift Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
@@ -20,7 +20,7 @@ export const About = () => {
         
         {/* Page Header */}
         <div className="mb-16 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
@@ -30,7 +30,7 @@ export const About = () => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
             Engineered for <span className="text-[#801834] dark:text-[#E84855]">Resilience.</span>
           </h1>
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
             <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
               Over 14 years of professional practice delivering robust structural design solutions for high-rise commercial developments, heavy civil infrastructure, and complex architectural steel frames.
             </p>
@@ -46,8 +46,8 @@ export const About = () => {
               {/* Decorative Outer Mask Frame */}
               <div aria-hidden="true" className="-inset-3 absolute rounded-[2rem] border border-[#801834]/20 dark:border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
 
-              <div className="relative rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] p-3 shadow-md dark:shadow-2xl h-full flex flex-col justify-between">
-                <div className="aspect-[4/5] bg-zinc-100 dark:bg-[#121417] overflow-hidden rounded-xl relative group">
+              <div className="relative rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 p-3 shadow-md dark:shadow-2xl h-full flex flex-col justify-between">
+                <div className="aspect-[4/5] bg-[#F4F5F7] dark:bg-[#0E1014] overflow-hidden rounded-xl relative group">
                   <img
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
                     alt="Alexandre Senior Structural Engineer"
@@ -58,7 +58,7 @@ export const About = () => {
                     PE #84729-SE · NY State
                   </div>
                 </div>
-                <div className="p-4 flex items-center justify-between text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] border-t border-zinc-200 dark:border-[#2D3137] mt-3 font-semibold">
+                <div className="p-4 flex items-center justify-between text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] border-t border-zinc-200/80 dark:border-zinc-800/80 mt-3 font-semibold">
                   <span className="flex items-center gap-1.5"><ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" /> Licensed PE, SE</span>
                   <span className="text-[#801834] dark:text-[#D4AF37]">Active Practice</span>
                 </div>
@@ -67,7 +67,7 @@ export const About = () => {
           </div>
 
           {/* Bento Philosophy & Highlights */}
-          <div className="lg:col-span-7 flex flex-col justify-between gap-6 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] p-8 lg:p-10 shadow-md dark:shadow-2xl">
+          <div className="lg:col-span-7 flex flex-col justify-between gap-6 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 p-8 lg:p-10 shadow-md dark:shadow-2xl">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>
@@ -85,8 +85,8 @@ export const About = () => {
             </div>
 
             <div>
-              <div className="grid sm:grid-cols-2 gap-4 pt-6 border-t border-zinc-200 dark:border-[#2D3137]">
-                <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] p-3.5 rounded-xl border border-zinc-200 dark:border-[#333]">
+              <div className="grid sm:grid-cols-2 gap-4 pt-6 border-t border-zinc-200/80 dark:border-zinc-800/80">
+                <div className="flex items-center gap-3 bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
                   <div className="p-2 rounded-lg bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] border border-[#801834]/20 dark:border-[#D4AF37]/30 shrink-0">
                     <ShieldCheck size={18} />
                   </div>
@@ -96,7 +96,7 @@ export const About = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] p-3.5 rounded-xl border border-zinc-200 dark:border-[#333]">
+                <div className="flex items-center gap-3 bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
                   <div className="p-2 rounded-lg bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] border border-[#801834]/20 dark:border-[#D4AF37]/30 shrink-0">
                     <GraduationCap size={18} />
                   </div>
@@ -132,18 +132,18 @@ export const About = () => {
             {SOFTWARE_STACK.map((soft) => (
               <div 
                 key={soft.name} 
-                className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-lg flex flex-col justify-between"
+                className="group rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-lg flex flex-col justify-between"
               >
                 <div>
                   <div className="flex justify-between items-center mb-4">
                     <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] font-mono group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">{soft.name}</h4>
-                    <span className="rounded-full text-[10px] font-mono font-bold text-[#801834] dark:text-[#D4AF37] bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 uppercase">
+                    <span className="rounded-full text-[10px] font-mono font-bold text-[#801834] dark:text-[#D4AF37] bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 px-2.5 py-0.5 uppercase">
                       {soft.level}
                     </span>
                   </div>
                   <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{soft.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-zinc-500 dark:text-[#666] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">
+                <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-zinc-800/80 text-[10px] font-mono text-zinc-500 dark:text-[#666] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">
                   FEA Precision Verified
                 </div>
               </div>
@@ -159,12 +159,12 @@ export const About = () => {
           </div>
           <h3 className="text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-12">Career Timeline</h3>
 
-          <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-[#333] pl-8 ml-4">
+          <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200/80 dark:border-zinc-800 pl-8 ml-4">
             {CAREER_TIMELINE.map((item, index) => (
               <div key={index} className="relative group">
                 <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#121417] border-2 border-[#801834] dark:border-[#D4AF37] group-hover:scale-125 transition-transform shadow-xs"></div>
-                <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-md">
-                  <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+                <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-md">
+                  <span className="inline-block rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 px-3 py-0.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                     {item.year}
                   </span>
                   <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">{item.role}</h4>
@@ -186,8 +186,8 @@ export const About = () => {
 
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
-              <div key={index} className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 flex items-start gap-4 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-lg group">
-                <div className="p-3 bg-zinc-50 dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#333] rounded-xl group-hover:scale-105 transition-transform shrink-0">
+              <div key={index} className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 flex items-start gap-4 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-lg group">
+                <div className="p-3 bg-[#F4F5F7] dark:bg-[#0E1014] text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl group-hover:scale-105 transition-transform shrink-0">
                   <Award size={24} />
                 </div>
                 <div>
@@ -207,7 +207,7 @@ export const About = () => {
         {/* Digital PE/SE Seal & Licensure Verification Portal */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
               Live Licensure Credential System
             </div>
@@ -223,7 +223,7 @@ export const About = () => {
         </div>
 
         {/* Bottom Bento Consultation Banner */}
-        <div className="rounded-3xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md dark:shadow-2xl">
+        <div className="rounded-3xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#F4F5F7]/95 dark:bg-[#0E1014]/95 bg-cad-grid p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md dark:shadow-2xl">
           <div className="text-left">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] mb-2 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
