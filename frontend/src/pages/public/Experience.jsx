@@ -110,7 +110,7 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-transparent text-inherit pt-28 pb-24 overflow-hidden selection:bg-[#801834] selection:text-white">
+    <div className="relative min-h-screen bg-transparent text-inherit pt-28 pb-24 overflow-hidden bg-cad-grid selection:bg-[#801834] selection:text-white">
       {/* Ambient Aurora Drift Background Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
@@ -121,7 +121,7 @@ export const Experience = () => {
         
         {/* Page Header */}
         <div className="mb-14 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-800 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
@@ -131,7 +131,7 @@ export const Experience = () => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
             Structural <span className="text-[#801834] dark:text-[#E84855]">Experience.</span>
           </h1>
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
             <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
               A comprehensive record of 14+ years in structural analysis, high-rise wind engineering, bridge infrastructure, and seismic disaster-resilience consulting.
             </p>
@@ -140,25 +140,25 @@ export const Experience = () => {
 
         {/* Quantified Metrics Highlight Bar */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-16">
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-sm hover:shadow-md transition-all">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-sm hover:shadow-md transition-all">
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] tracking-wider block mb-1">Supervised Project Scale</span>
             <div className="text-3xl lg:text-4xl font-extrabold text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:to-[#F3E5AB] font-mono">$850M+</div>
             <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1">Total structural construction value</p>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-sm hover:shadow-md transition-all">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-sm hover:shadow-md transition-all">
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] tracking-wider block mb-1">Completed Deliverables</span>
             <div className="text-3xl lg:text-4xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] font-mono">180+</div>
             <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1">High-rise, bridge & civic projects</p>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-sm hover:shadow-md transition-all">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-sm hover:shadow-md transition-all">
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] tracking-wider block mb-1">Professional Practice</span>
             <div className="text-3xl lg:text-4xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] font-mono">14+ Yrs</div>
             <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1">Licensed PE & SE engineer</p>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-sm hover:shadow-md transition-all">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-sm hover:shadow-md transition-all">
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] tracking-wider block mb-1">Structural Safety Record</span>
             <div className="text-3xl lg:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">100%</div>
             <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1">Zero audit failures or deficiencies</p>
@@ -166,13 +166,13 @@ export const Experience = () => {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap gap-2 mb-12 bg-white dark:bg-[#181A1E] p-2 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 w-max shadow-sm dark:shadow-lg">
+        <div className="flex flex-wrap gap-2 mb-12 bg-white/95 dark:bg-[#14171C]/95 p-2 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 w-max shadow-sm dark:shadow-lg">
           <button
             onClick={() => setActiveTab('milestones')}
             className={`px-5 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'milestones'
                 ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
+                : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-[#F4F5F7] dark:hover:bg-[#0E1014]'
             }`}
           >
             Major Project Milestones
@@ -183,7 +183,7 @@ export const Experience = () => {
             className={`px-5 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'timeline'
                 ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
+                : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-[#F4F5F7] dark:hover:bg-[#0E1014]'
             }`}
           >
             Career Timeline & Roles
@@ -194,7 +194,7 @@ export const Experience = () => {
             className={`px-5 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'competencies'
                 ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-zinc-100 dark:hover:bg-[#121417]'
+                : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:bg-[#F4F5F7] dark:hover:bg-[#0E1014]'
             }`}
           >
             Core Competencies
@@ -205,14 +205,14 @@ export const Experience = () => {
         {activeTab === 'milestones' && (
           <div className="flex flex-col gap-8 mb-20">
             {engineeringMilestones.map((item, index) => (
-              <div key={index} className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 lg:p-10 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl">
-                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-6 pb-6 border-b border-zinc-200 dark:border-[#2D3137]">
+              <div key={index} className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 lg:p-10 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-6 pb-6 border-b border-zinc-200 dark:border-zinc-800">
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold tracking-widest uppercase">
                         {item.year}
                       </span>
-                      <span className="text-[10px] uppercase font-mono tracking-wider bg-zinc-100 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] px-3 py-1 rounded-full">
+                      <span className="text-[10px] uppercase font-mono tracking-wider bg-[#F4F5F7] dark:bg-[#0E1014] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800 px-3 py-1 rounded-full">
                         {item.category}
                       </span>
                     </div>
@@ -220,10 +220,10 @@ export const Experience = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-xs font-mono bg-zinc-100 dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/40 px-3.5 py-1 rounded-full font-bold">
+                    <span className="text-xs font-mono bg-[#F4F5F7] dark:bg-[#0E1014] text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-[#D4AF37]/40 px-3.5 py-1 rounded-full font-bold">
                       {item.value}
                     </span>
-                    <span className="text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] px-3 py-1 rounded-full flex items-center gap-1.5">
+                    <span className="text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800 px-3 py-1 rounded-full flex items-center gap-1.5">
                       <MapPin size={12} className="text-[#801834] dark:text-[#D4AF37]" /> {item.location}
                     </span>
                   </div>
@@ -238,7 +238,7 @@ export const Experience = () => {
                   </p>
                 </div>
 
-                <div className="bg-zinc-50 dark:bg-[#121417] p-6 rounded-xl border border-zinc-200/80 dark:border-[#2D3137] shadow-inner">
+                <div className="bg-[#F4F5F7] dark:bg-[#0E1014] p-6 rounded-xl border border-zinc-200/80 dark:border-zinc-800 shadow-inner">
                   <h5 className="text-[11px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] tracking-wider mb-3 font-bold">Key Technical Scope:</h5>
                   <div className="grid md:grid-cols-3 gap-3">
                     {item.highlights.map((h, i) => (
@@ -257,12 +257,12 @@ export const Experience = () => {
         {/* Tab 2: Career Timeline */}
         {activeTab === 'timeline' && (
           <div className="mb-20">
-            <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-[#333] pl-8 ml-4">
+            <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 ml-4">
               {CAREER_TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#121417] border-2 border-[#801834] dark:border-[#D4AF37] group-hover:scale-125 transition-transform"></div>
-                  <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl">
-                    <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 px-3 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+                  <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#0E1014] border-2 border-[#801834] dark:border-[#D4AF37] group-hover:scale-125 transition-transform"></div>
+                  <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <span className="inline-block rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-[#D4AF37]/40 px-3 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                       {item.year}
                     </span>
                     <h3 className="text-2xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">{item.role}</h3>
@@ -273,9 +273,9 @@ export const Experience = () => {
                       {item.description}
                     </p>
                     <div className="flex flex-wrap gap-2 text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold">
-                      <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1">Direct Client Coordination</span>
-                      <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1">Code Authority Submissions</span>
-                      <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1">Multi-Disciplinary BIM</span>
+                      <span className="rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800 px-3 py-1">Direct Client Coordination</span>
+                      <span className="rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800 px-3 py-1">Code Authority Submissions</span>
+                      <span className="rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800 px-3 py-1">Multi-Disciplinary BIM</span>
                     </div>
                   </div>
                 </div>
@@ -290,16 +290,16 @@ export const Experience = () => {
             {structuralCompetencies.map((comp, index) => (
               <div 
                 key={index} 
-                className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between"
+                className="group rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center font-mono font-bold text-sm mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center font-mono font-bold text-sm mb-6 group-hover:scale-110 transition-transform">
                     0{index + 1}
                   </div>
                   <h4 className="text-lg font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">{comp.title}</h4>
                   <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{comp.desc}</p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] flex items-center gap-2 text-[10px] uppercase font-mono text-[#801834] dark:text-[#D4AF37] font-bold">
+                <div className="mt-6 pt-4 border-t border-zinc-200/80 dark:border-zinc-800 flex items-center gap-2 text-[10px] uppercase font-mono text-[#801834] dark:text-[#D4AF37] font-bold">
                   <ShieldCheck size={12} /> Rigorous Engineering Verified
                 </div>
               </div>
@@ -310,7 +310,7 @@ export const Experience = () => {
         {/* Interactive Seismic Shake Table & NLRHA Dissipation Section */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#D4AF37]/40 bg-white/95 dark:bg-[#14171C]/95 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
               Live Physics & Non-Linear Dynamics
             </div>
@@ -326,8 +326,9 @@ export const Experience = () => {
         </div>
 
         {/* Credentials & Call to Action Banner */}
-        <div className="rounded-2xl bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-xl dark:shadow-2xl">
-          <div>
+        <div className="rounded-3xl bg-[#FAF9F6] dark:bg-[#0E1014] border border-zinc-200/90 dark:border-zinc-800/90 p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-xl dark:shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-cad-grid opacity-30 pointer-events-none"></div>
+          <div className="relative z-10">
             <span className="text-[10px] font-mono uppercase text-[#801834] dark:text-[#D4AF37] tracking-widest block mb-2 font-bold">Ready to Collaborate</span>
             <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-2">Need an Expert Structural Engineer for Your Project?</h3>
             <p className="text-sm text-zinc-600 dark:text-[#9CA3AF] max-w-xl leading-relaxed">
@@ -335,10 +336,10 @@ export const Experience = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0 relative z-10">
             <a
               href="/resources"
-              className="rounded-full bg-zinc-100 hover:bg-zinc-200 dark:bg-[#121417] text-zinc-900 dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/40 px-6 py-3.5 text-xs font-bold uppercase tracking-widest dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] transition-all flex items-center justify-center gap-2"
+              className="rounded-full bg-white dark:bg-[#14171C] text-zinc-900 dark:text-[#D4AF37] border border-zinc-200/80 dark:border-[#D4AF37]/40 px-6 py-3.5 text-xs font-bold uppercase tracking-widest hover:bg-[#F4F5F7] dark:hover:bg-[#1D2128] transition-all flex items-center justify-center gap-2 shadow-xs"
             >
               Download Full CV (PDF) <Download size={14} />
             </a>

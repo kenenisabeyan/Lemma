@@ -102,7 +102,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
   const storiesSliderId = useId();
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 sm:p-8 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-8 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
       
       {/* Decorative Technical Corner Marks */}
       <div className="absolute top-3 left-3 text-[10px] font-mono text-zinc-300 dark:text-zinc-700 pointer-events-none select-none">+</div>
@@ -111,9 +111,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
       <div className="absolute bottom-3 right-3 text-[10px] font-mono text-zinc-300 dark:text-zinc-700 pointer-events-none select-none">+</div>
 
       {/* Header Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/90 dark:border-[#2D3137]">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/90 dark:border-zinc-800/90">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#801834]/40 bg-zinc-50 dark:bg-[#261219] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#E84855] shadow-xs mb-2 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#801834]/40 bg-[#F4F5F7] dark:bg-[#1C1417] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#E84855] shadow-xs mb-2 font-bold">
             <Sliders size={13} />
             <span>Interactive Feasibility Telemetry</span>
           </div>
@@ -126,7 +126,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
         </div>
 
         {/* Live Stamp Badge */}
-        <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] px-4 py-2.5 rounded-2xl border border-zinc-200 dark:border-[#333] shrink-0">
+        <div className="flex items-center gap-3 bg-[#F4F5F7] dark:bg-[#0E1014] px-4 py-2.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 shrink-0">
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
           <div className="text-left font-mono">
             <span className="text-[9px] text-zinc-500 dark:text-[#888] block uppercase">CALC ENGINE</span>
@@ -152,14 +152,14 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between group ${
                   isSelected
                     ? 'bg-[#FAF0F3] dark:bg-[#261219] border-[#801834] dark:border-[#D4AF37] shadow-sm'
-                    : 'bg-zinc-50/70 dark:bg-[#14161A] border-zinc-200/80 dark:border-[#2C2E33] hover:border-zinc-300 dark:hover:border-[#444]'
+                    : 'bg-[#F4F5F7]/80 dark:bg-[#0E1014]/90 border-zinc-200/80 dark:border-zinc-800/80 hover:border-zinc-300 dark:hover:border-zinc-700'
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className={`p-2 rounded-xl transition-colors ${
                     isSelected 
                       ? 'bg-[#801834] text-white dark:bg-[#D4AF37] dark:text-[#121417]' 
-                      : 'bg-white dark:bg-[#1E2125] text-zinc-600 dark:text-zinc-300 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37]'
+                      : 'bg-white dark:bg-[#181B20] text-zinc-600 dark:text-zinc-300 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37]'
                   }`}>
                     <Icon size={18} />
                   </div>
@@ -187,7 +187,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
       <div className="grid lg:grid-cols-12 gap-8 mb-8 items-start">
         
         {/* Sliders & Spec Controls (7 Cols) */}
-        <div className="lg:col-span-7 space-y-6 bg-zinc-50 dark:bg-[#121417] p-6 rounded-2xl border border-zinc-200/90 dark:border-[#333]">
+        <div className="lg:col-span-7 space-y-6 bg-[#F4F5F7] dark:bg-[#0E1014] p-6 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90">
           
           {/* Gross Floor Area Slider */}
           <div>
@@ -196,7 +196,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 <Compass size={14} className="text-[#801834] dark:text-[#D4AF37]" />
                 Gross Floor Area (GSF)
               </label>
-              <span className="text-xs font-mono font-bold text-[#801834] dark:text-[#D4AF37] bg-white dark:bg-[#181A1E] px-3 py-1 rounded-full border border-zinc-200 dark:border-[#333] shadow-2xs">
+              <span className="text-xs font-mono font-bold text-[#801834] dark:text-[#D4AF37] bg-white dark:bg-[#14171C] px-3 py-1 rounded-full border border-zinc-200/80 dark:border-zinc-800/80 shadow-2xs">
                 {grossArea.toLocaleString()} sq ft
               </span>
             </div>
@@ -225,7 +225,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 <Building2 size={14} className="text-[#801834] dark:text-[#D4AF37]" />
                 Structural Stories / Height
               </label>
-              <span className="text-xs font-mono font-bold text-[#801834] dark:text-[#D4AF37] bg-white dark:bg-[#181A1E] px-3 py-1 rounded-full border border-zinc-200 dark:border-[#333] shadow-2xs">
+              <span className="text-xs font-mono font-bold text-[#801834] dark:text-[#D4AF37] bg-white dark:bg-[#14171C] px-3 py-1 rounded-full border border-zinc-200/80 dark:border-zinc-800/80 shadow-2xs">
                 {stories} {stories === 1 ? 'Level' : 'Stories'} (~{Math.round(stories * 13.5)} ft)
               </span>
             </div>
@@ -248,7 +248,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           </div>
 
           {/* Framing System & Environmental Codes */}
-          <div className="grid sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-200/80 dark:border-[#222]">
+          <div className="grid sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80">
             
             <div>
               <label className="block text-[10px] font-mono uppercase text-zinc-500 dark:text-zinc-400 mb-1.5 font-semibold">
@@ -257,7 +257,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               <select
                 value={framingSystem}
                 onChange={(e) => setFramingSystem(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-2.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] font-medium focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-2.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] font-medium focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none shadow-2xs"
               >
                 <option value="pt-concrete">Post-Tensioned Concrete</option>
                 <option value="structural-steel">Composite Steel Frame</option>
@@ -272,7 +272,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               <select
                 value={windZone}
                 onChange={(e) => setWindZone(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-2.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] font-medium focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-2.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] font-medium focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none shadow-2xs"
               >
                 <option value="115mph">115 mph (Standard Urban)</option>
                 <option value="130mph">130 mph (Coastal / Inland)</option>
@@ -287,7 +287,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               <select
                 value={seismicCategory}
                 onChange={(e) => setSeismicCategory(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-2.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] font-medium focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-2.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] font-medium focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none shadow-2xs"
               >
                 <option value="SDC-B">SDC B (Low Hazard)</option>
                 <option value="SDC-C">SDC C (Moderate)</option>
@@ -301,9 +301,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
         </div>
 
         {/* Live Calculated Deliverables Panel (5 Cols) */}
-        <div className="lg:col-span-5 flex flex-col justify-between bg-white dark:bg-[#16181C] p-6 rounded-2xl border-2 border-[#801834]/30 dark:border-[#D4AF37]/40 shadow-md">
+        <div className="lg:col-span-5 flex flex-col justify-between bg-white/95 dark:bg-[#14171C]/95 p-6 rounded-2xl border-2 border-[#801834]/30 dark:border-[#D4AF37]/40 shadow-md">
           <div>
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-100 dark:border-[#26282D]">
+            <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-200/60 dark:border-zinc-800/60">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 flex items-center gap-1.5">
                 <Sparkles size={14} className="text-[#801834] dark:text-[#D4AF37]" />
                 Calculated Deliverables & Timeline
@@ -316,7 +316,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
             <div className="space-y-3.5">
               
               {/* Calculation Package */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200/70 dark:border-[#2C2E33]">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/70 dark:border-zinc-800/70">
                 <div className="flex items-center gap-2.5">
                   <div className="p-1.5 rounded-lg bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37]">
                     <FileSpreadsheet size={16} />
@@ -332,7 +332,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               </div>
 
               {/* BIM / Revit Sheets */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200/70 dark:border-[#2C2E33]">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/70 dark:border-zinc-800/70">
                 <div className="flex items-center gap-2.5">
                   <div className="p-1.5 rounded-lg bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37]">
                     <Layers size={16} />
@@ -348,7 +348,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               </div>
 
               {/* Delivery Timeline */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200/70 dark:border-[#2C2E33]">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/70 dark:border-zinc-800/70">
                 <div className="flex items-center gap-2.5">
                   <div className="p-1.5 rounded-lg bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37]">
                     <Clock size={16} />
@@ -382,8 +382,8 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
             </div>
           </div>
 
-          {/* Action Button: Load into Form */}
-          <div className="pt-6 mt-6 border-t border-zinc-100 dark:border-[#26282D]">
+            {/* Action Button: Load into Form */}
+          <div className="pt-6 mt-6 border-t border-zinc-200/60 dark:border-zinc-800/60">
             <button
               type="button"
               onClick={handleApply}

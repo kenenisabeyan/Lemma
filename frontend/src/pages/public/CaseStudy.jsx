@@ -43,26 +43,26 @@ export const CaseStudyModal = ({ project, onClose }) => {
       <div className="flex flex-col gap-6">
         
         {/* Banner Header Image */}
-        <div className="relative aspect-[16/9] rounded-2xl bg-zinc-100 dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 overflow-hidden shadow-sm">
+        <div className="relative aspect-[16/9] rounded-2xl bg-zinc-100 dark:bg-[#0E1014] border border-zinc-200/90 dark:border-zinc-800/90 overflow-hidden shadow-sm">
           <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
           
           <div className="absolute top-4 left-4">
-            <span className="rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/50 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+            <span className="rounded-full bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-[#D4AF37]/50 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
               {project.category}
             </span>
           </div>
 
           <button
             onClick={openFullPage}
-            className="absolute top-4 right-4 rounded-full bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md text-zinc-800 dark:text-[#EAEAEA] hover:text-[#801834] dark:hover:text-[#D4AF37] border border-zinc-200 dark:border-[#333] hover:border-[#801834] dark:hover:border-[#D4AF37] text-[10px] font-mono font-bold px-3.5 py-1.5 uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
+            className="absolute top-4 right-4 rounded-full bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md text-zinc-800 dark:text-[#EAEAEA] hover:text-[#801834] dark:hover:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-800 hover:border-[#801834] dark:hover:border-[#D4AF37] text-[10px] font-mono font-bold px-3.5 py-1.5 uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
           >
             Open Dedicated Page <ArrowUpRight size={12} />
           </button>
         </div>
 
         {/* Structural Metadata Bar (Alazar Bento Strip) */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-zinc-50 dark:bg-[#181A1E] p-4 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 text-xs shadow-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#F4F5F7] dark:bg-[#0E1014] p-4 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 text-xs shadow-sm">
           <div className="p-2">
             <span className="text-zinc-500 dark:text-[#9CA3AF] uppercase block text-[10px] font-mono mb-0.5">Location</span>
             <span className="text-zinc-900 dark:text-[#EAEAEA] font-semibold flex items-center gap-1"><MapPin size={12} className="text-[#801834] dark:text-[#D4AF37]"/> {project.location}</span>
@@ -83,13 +83,13 @@ export const CaseStudyModal = ({ project, onClose }) => {
 
         {/* System & Materials */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] p-5 border border-zinc-200/90 dark:border-[#333]/80 shadow-sm">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 p-5 border border-zinc-200/90 dark:border-zinc-800/90 shadow-sm">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] mb-2 flex items-center gap-2">
               <Layers size={14} /> Structural System
             </h4>
             <p className="text-xs text-zinc-700 dark:text-[#EAEAEA] leading-relaxed">{project.structuralSystem}</p>
           </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] p-5 border border-zinc-200/90 dark:border-[#333]/80 shadow-sm">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 p-5 border border-zinc-200/90 dark:border-zinc-800/90 shadow-sm">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] mb-2 flex items-center gap-2">
               <Building size={14} /> Key Structural Materials
             </h4>
@@ -99,8 +99,8 @@ export const CaseStudyModal = ({ project, onClose }) => {
 
         {/* NARRATIVE SECTION: Project -> Challenge -> Approach -> Solution -> Result */}
         <div className="flex flex-col gap-4 text-xs">
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-5 shadow-sm">
+            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#0E1014] border border-zinc-200/80 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
               Phase 01 · Scope
             </span>
             <h4 className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA] mb-2">Project Overview & Objectives</h4>
@@ -108,23 +108,23 @@ export const CaseStudyModal = ({ project, onClose }) => {
           </div>
 
           <div className="rounded-2xl bg-red-50/50 dark:bg-red-950/10 border border-red-200 dark:border-red-500/20 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-white dark:bg-[#121417] border border-red-200 dark:border-red-500/30 px-2.5 py-0.5 text-[9px] font-mono text-red-600 dark:text-red-400 font-bold uppercase tracking-wider mb-2">
+            <span className="inline-block rounded-full bg-white dark:bg-[#0E1014] border border-red-200 dark:border-red-500/30 px-2.5 py-0.5 text-[9px] font-mono text-red-600 dark:text-red-400 font-bold uppercase tracking-wider mb-2">
               Phase 02 · Boundary
             </span>
             <h4 className="text-sm font-bold text-red-600 dark:text-red-400 mb-2">Structural Challenge</h4>
             <p className="text-zinc-800 dark:text-[#EAEAEA] leading-relaxed">{project.challenge}</p>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-5 shadow-sm">
+            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#0E1014] border border-zinc-200/80 dark:border-[#D4AF37]/30 px-2.5 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
               Phase 03 · FEA Simulation
             </span>
             <h4 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">Engineering Approach & FEA Modeling</h4>
             <p className="text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{project.engineeringApproach}</p>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-emerald-50 dark:bg-[#121417] border border-emerald-200 dark:border-emerald-500/30 px-2.5 py-0.5 text-[9px] font-mono text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-wider mb-2">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-5 shadow-sm">
+            <span className="inline-block rounded-full bg-emerald-50 dark:bg-[#0E1014] border border-emerald-200 dark:border-emerald-500/30 px-2.5 py-0.5 text-[9px] font-mono text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-wider mb-2">
               Phase 04 · Execution
             </span>
             <h4 className="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2">Innovative Solution Implemented</h4>
@@ -132,7 +132,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
           </div>
 
           <div className="rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/30 p-5 shadow-sm">
-            <span className="inline-block rounded-full bg-white dark:bg-[#121417] border border-emerald-200 dark:border-emerald-500/30 px-2.5 py-0.5 text-[9px] font-mono text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5 w-max">
+            <span className="inline-block rounded-full bg-white dark:bg-[#0E1014] border border-emerald-200 dark:border-emerald-500/30 px-2.5 py-0.5 text-[9px] font-mono text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5 w-max">
               <CheckCircle2 size={12} /> Phase 05 · Performance Verification
             </span>
             <h4 className="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2">Quantified Performance Result</h4>
@@ -141,12 +141,12 @@ export const CaseStudyModal = ({ project, onClose }) => {
         </div>
 
         {/* Software Stack Used */}
-        <div className="rounded-2xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-4 flex flex-wrap items-center justify-between gap-4 shadow-sm">
+        <div className="rounded-2xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/90 dark:border-zinc-800/90 p-4 flex flex-wrap items-center justify-between gap-4 shadow-sm">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] uppercase font-mono text-zinc-500 dark:text-[#9CA3AF]">Software Tools:</span>
             <div className="flex gap-1.5 flex-wrap">
               {softwareList.map((soft) => (
-                <span key={soft} className="rounded-full text-[10px] font-mono bg-white dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/30 px-2.5 py-0.5 font-bold shadow-2xs">
+                <span key={soft} className="rounded-full text-[10px] font-mono bg-white dark:bg-[#14171C] text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-[#D4AF37]/30 px-2.5 py-0.5 font-bold shadow-2xs">
                   {soft}
                 </span>
               ))}
@@ -156,7 +156,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
           <div className="flex gap-2">
             <button
               onClick={openFullPage}
-              className="rounded-full bg-white dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37] px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-[#801834] hover:text-white dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] transition-all flex items-center gap-1.5 shadow-xs"
+              className="rounded-full bg-white dark:bg-[#14171C] text-[#801834] dark:text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37] px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-[#801834] hover:text-white dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] transition-all flex items-center gap-1.5 shadow-xs"
             >
               Dedicated Page <ArrowUpRight size={13} />
             </button>
@@ -275,7 +275,7 @@ export const CaseStudyPage = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-transparent text-inherit pt-24 pb-24 overflow-hidden selection:bg-[#801834] selection:text-white dark:selection:bg-[#D4AF37] dark:selection:text-[#121417]">
+    <div className="relative min-h-screen bg-transparent text-inherit pt-24 pb-24 overflow-hidden bg-cad-grid selection:bg-[#801834] selection:text-white dark:selection:bg-[#D4AF37] dark:selection:text-[#121417]">
       
       {/* Alazar Signature Ambient Aurora Drift Background Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -288,14 +288,14 @@ export const CaseStudyPage = () => {
         {/* Breadcrumb Navigation */}
         <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] uppercase tracking-wider mb-8">
           <Link to="/" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Home</Link>
-          <ChevronRight size={14} className="text-zinc-300 dark:text-[#444]" />
+          <ChevronRight size={14} className="text-zinc-300 dark:text-zinc-700" />
           <Link to="/projects" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Projects</Link>
-          <ChevronRight size={14} className="text-zinc-300 dark:text-[#444]" />
+          <ChevronRight size={14} className="text-zinc-300 dark:text-zinc-700" />
           <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{project.title}</span>
         </div>
 
         {/* Back Link & Action Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-zinc-200/90 dark:border-[#333]">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-zinc-200/90 dark:border-zinc-800/90">
           <Link to="/projects" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">
             <ArrowLeft size={16} /> Back to All Projects
           </Link>
@@ -303,7 +303,7 @@ export const CaseStudyPage = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={handleCopyLink}
-              className="rounded-full bg-white dark:bg-[#181A1E] text-zinc-700 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] border border-zinc-200 dark:border-[#333] hover:border-[#801834] dark:hover:border-[#D4AF37] px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-xs"
+              className="rounded-full bg-white/95 dark:bg-[#14171C]/95 text-zinc-700 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-800 hover:border-[#801834] dark:hover:border-[#D4AF37] px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-xs"
             >
               <Share2 size={13} /> {copied ? 'Link Copied!' : 'Share Case Study'}
             </button>
@@ -318,7 +318,7 @@ export const CaseStudyPage = () => {
 
         {/* Hero Header */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#D4AF37]/40 bg-[#F4F5F7] dark:bg-[#0E1014] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] dark:bg-[#D4AF37] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834] dark:bg-[#D4AF37]"></span>
@@ -334,7 +334,7 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Main Project Feature Image with Crosshairs */}
-        <div className="relative aspect-[16/9] rounded-2xl bg-zinc-100 dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 overflow-hidden mb-10 group shadow-xl">
+        <div className="relative aspect-[16/9] rounded-2xl bg-zinc-100 dark:bg-[#0E1014] border border-zinc-200/90 dark:border-zinc-800/90 overflow-hidden mb-10 group shadow-xl">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -343,14 +343,14 @@ export const CaseStudyPage = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           
           {/* Engineering Blueprint Label */}
-          <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-white/95 dark:bg-[#121417]/85 backdrop-blur-md p-3.5 rounded-xl border border-zinc-200 dark:border-[#333] text-xs font-mono shadow-md">
+          <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800 text-xs font-mono shadow-md">
             <span className="text-[#801834] dark:text-[#D4AF37] font-bold">PROJECT CODE: {project.slug.toUpperCase()}</span>
             <span className="text-zinc-600 dark:text-[#9CA3AF] hidden sm:inline">PE/SE SEAL CERTIFIED • ASCE 7 / IBC COMPLIANT</span>
           </div>
         </div>
 
         {/* Structural Metadata Bar (Alazar Bento Strip) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white dark:bg-[#181A1E] p-6 rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 mb-12 shadow-sm">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/95 dark:bg-[#14171C]/95 p-6 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 mb-12 shadow-sm">
           <div className="p-2">
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Geographic Location</span>
             <span className="text-sm font-bold text-zinc-900 dark:text-[#EAEAEA] flex items-center gap-1.5">
@@ -379,7 +379,7 @@ export const CaseStudyPage = () => {
 
         {/* System & Material Specifications Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-sm">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-sm">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] mb-3 flex items-center gap-2">
               <Layers size={16} /> Lateral & Gravity Structural System
             </h3>
@@ -388,7 +388,7 @@ export const CaseStudyPage = () => {
             </p>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-sm">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-sm">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#D4AF37] mb-3 flex items-center gap-2">
               <Building size={16} /> Primary Materials Specified
             </h3>
@@ -404,8 +404,8 @@ export const CaseStudyPage = () => {
         <div className="flex flex-col gap-6 mb-16">
           
           {/* Step 1: Overview */}
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-3 py-0.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 shadow-sm">
+            <span className="inline-block rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-[#D4AF37]/30 px-3 py-0.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
               Phase 01 • Context & Scope
             </span>
             <h2 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-4">1. Project Overview & Architectural Vision</h2>
@@ -416,7 +416,7 @@ export const CaseStudyPage = () => {
 
           {/* Step 2: Challenge */}
           <div className="rounded-2xl bg-red-50/50 dark:bg-red-950/10 border border-red-200 dark:border-red-500/30 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-white dark:bg-[#121417] border border-red-200 dark:border-red-500/40 px-3 py-0.5 text-xs font-mono text-red-600 dark:text-red-400 font-bold tracking-widest uppercase mb-3">
+            <span className="inline-block rounded-full bg-white dark:bg-[#0E1014] border border-red-200 dark:border-red-500/40 px-3 py-0.5 text-xs font-mono text-red-600 dark:text-red-400 font-bold tracking-widest uppercase mb-3">
               Phase 02 • Technical Boundary
             </span>
             <h2 className="text-xl font-bold text-red-600 dark:text-red-400 mb-4">2. The Structural Engineering Challenge</h2>
@@ -426,23 +426,23 @@ export const CaseStudyPage = () => {
           </div>
 
           {/* Step 3: Engineering Approach */}
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/30 px-3 py-0.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 shadow-sm">
+            <span className="inline-block rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-[#D4AF37]/30 px-3 py-0.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
               Phase 03 • Mechanics & Simulation
             </span>
             <h2 className="text-xl font-bold text-[#801834] dark:text-[#D4AF37] mb-4">3. Engineering Approach & FEA Modeling</h2>
             <p className="text-sm text-zinc-600 dark:text-[#9CA3AF] leading-relaxed mb-6">
               {project.engineeringApproach}
             </p>
-            <div className="rounded-xl bg-zinc-50 dark:bg-[#121417] p-4 border border-zinc-200 dark:border-[#2D3137] text-xs text-zinc-700 dark:text-[#9CA3AF] flex items-center gap-3">
+            <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] p-4 border border-zinc-200/80 dark:border-zinc-800 text-xs text-zinc-700 dark:text-[#9CA3AF] flex items-center gap-3">
               <Cpu className="text-[#801834] dark:text-[#D4AF37] shrink-0" size={18} />
               <span>Full non-linear dynamic spectrum analysis, gravity load redistribution modeling, and wind tunnel pressure coefficients validated against IBC seismic design criteria.</span>
             </div>
           </div>
 
           {/* Step 4: Solution */}
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-emerald-50 dark:bg-[#121417] border border-emerald-200 dark:border-emerald-500/30 px-3 py-0.5 text-xs font-mono text-emerald-700 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 shadow-sm">
+            <span className="inline-block rounded-full bg-emerald-50 dark:bg-[#0E1014] border border-emerald-200 dark:border-emerald-500/30 px-3 py-0.5 text-xs font-mono text-emerald-700 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3">
               Phase 04 • Implementation
             </span>
             <h2 className="text-xl font-bold text-emerald-700 dark:text-emerald-400 mb-4">4. Innovative Structural Solution Implemented</h2>
@@ -453,7 +453,7 @@ export const CaseStudyPage = () => {
 
           {/* Step 5: Result */}
           <div className="rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/40 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-white dark:bg-[#121417] border border-emerald-200 dark:border-emerald-500/30 px-3 py-0.5 text-xs font-mono text-emerald-700 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3 flex items-center gap-2 w-max">
+            <span className="inline-block rounded-full bg-white dark:bg-[#0E1014] border border-emerald-200 dark:border-emerald-500/30 px-3 py-0.5 text-xs font-mono text-emerald-700 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3 flex items-center gap-2 w-max">
               <CheckCircle2 size={16} /> Phase 05 • Performance Verification
             </span>
             <h2 className="text-xl font-bold text-emerald-700 dark:text-emerald-400 mb-4">5. Quantified Performance Result</h2>
@@ -467,7 +467,7 @@ export const CaseStudyPage = () => {
         {/* Interactive Drawing Dossier & Multi-Layer CAD Board */}
         <div className="mb-16">
           <div className="mb-8 text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-white dark:bg-[#181A1E] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-3 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#D4AF37]/40 bg-[#F4F5F7] dark:bg-[#0E1014] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-3 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
@@ -483,7 +483,7 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Software Stack Used */}
-        <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
+        <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-6 mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
           <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] tracking-widest block mb-1">
               Finite Element & BIM Software Tools Utilized
@@ -493,7 +493,7 @@ export const CaseStudyPage = () => {
 
           <div className="flex flex-wrap gap-2">
             {softwareList.map((soft) => (
-              <span key={soft} className="rounded-full text-xs font-mono bg-zinc-50 dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#D4AF37]/30 px-3 py-1 font-bold shadow-2xs">
+              <span key={soft} className="rounded-full text-xs font-mono bg-[#F4F5F7] dark:bg-[#0E1014] text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-[#D4AF37]/30 px-3 py-1 font-bold shadow-2xs">
                 {soft}
               </span>
             ))}
@@ -502,7 +502,7 @@ export const CaseStudyPage = () => {
 
         {/* Related Projects Section */}
         {relatedProjects.length > 0 && (
-          <div className="border-t border-zinc-200/90 dark:border-[#333] pt-12 mb-16">
+          <div className="border-t border-zinc-200/90 dark:border-zinc-800/90 pt-12 mb-16">
             <div className="flex justify-between items-center mb-8">
               <h3 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA]">Explore Related Case Studies</h3>
               <Link to="/projects" className="text-xs font-bold uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] hover:opacity-80 transition-opacity flex items-center gap-1">
@@ -515,7 +515,7 @@ export const CaseStudyPage = () => {
                 <Link
                   key={rel.id}
                   to={`/projects/${rel.slug}`}
-                  className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 p-6 transition-all group flex flex-col justify-between shadow-sm hover:shadow-xl"
+                  className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 p-6 transition-all group flex flex-col justify-between shadow-sm hover:shadow-xl"
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
@@ -532,17 +532,20 @@ export const CaseStudyPage = () => {
         )}
 
         {/* Bottom Consultation CTA */}
-        <div className="rounded-2xl bg-gradient-to-r from-zinc-50 via-white to-zinc-50 dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-10 text-center shadow-lg">
-          <h3 className="text-2xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3">Facing a Complex Structural Engineering Challenge?</h3>
-          <p className="text-sm text-zinc-600 dark:text-[#9CA3AF] max-w-xl mx-auto mb-6 leading-relaxed">
-            Let's evaluate your project drawings, lateral load requirements, and value engineering possibilities with senior engineering rigor.
-          </p>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#801834] text-white dark:bg-[#D4AF37] dark:text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:opacity-90 transition-all shadow-md shadow-[#801834]/20 dark:shadow-[0_0_20px_rgba(212,175,55,0.25)] inline-flex items-center gap-2"
-          >
-            Initiate Consultation Inquiry <ArrowUpRight size={16} />
-          </button>
+        <div className="rounded-3xl bg-[#FAF9F6] dark:bg-[#0E1014] border border-zinc-200/90 dark:border-zinc-800/90 p-10 text-center shadow-lg relative overflow-hidden">
+          <div className="absolute inset-0 bg-cad-grid opacity-30 pointer-events-none"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3">Facing a Complex Structural Engineering Challenge?</h3>
+            <p className="text-sm text-zinc-600 dark:text-[#9CA3AF] max-w-xl mx-auto mb-6 leading-relaxed">
+              Let's evaluate your project drawings, lateral load requirements, and value engineering possibilities with senior engineering rigor.
+            </p>
+            <button
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#801834] text-white dark:bg-[#D4AF37] dark:text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:opacity-90 transition-all shadow-md shadow-[#801834]/20 dark:shadow-[0_0_20px_rgba(212,175,55,0.25)] inline-flex items-center gap-2"
+            >
+              Initiate Consultation Inquiry <ArrowUpRight size={16} />
+            </button>
+          </div>
         </div>
 
       </div>
