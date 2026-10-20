@@ -105,38 +105,8 @@ export const Moveable3DHeroCards = () => {
   };
 
   return (
-    <div key={resetKey} className="absolute inset-0 pointer-events-none z-20 overflow-hidden">
+    <div key={resetKey} className="absolute inset-0 pointer-events-none z-20 overflow-hidden hidden md:block">
       
-      {/* 3D Interaction Control HUD Bar */}
-      <div className="absolute top-24 inset-x-0 flex justify-center pointer-events-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/85 dark:bg-[#181A1E]/85 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 shadow-md text-xs font-mono"
-        >
-          <span className="flex items-center gap-1.5 text-zinc-700 dark:text-zinc-200 font-bold">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            3D Spatial Engine:
-          </span>
-          <span className="text-zinc-500 dark:text-zinc-400 hidden sm:inline">
-            Drag cards anywhere in 3D space
-          </span>
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-[10px] text-zinc-600 dark:text-zinc-300 font-semibold border border-zinc-200 dark:border-zinc-700">
-            <Move size={11} className="text-[#801834] dark:text-[#D4AF37]" /> Interactive
-          </span>
-
-          {hasInteracted && (
-            <button
-              onClick={handleReset}
-              className="text-[11px] font-bold text-[#801834] dark:text-[#D4AF37] hover:underline flex items-center gap-1 cursor-pointer pl-1 border-l border-zinc-300 dark:border-zinc-700"
-              title="Reset cards back to initial orbit"
-            >
-              <RotateCcw size={11} /> Reset
-            </button>
-          )}
-        </motion.div>
-      </div>
 
       {/* Floating Moveable 3D Cards */}
       {cards.map((card, idx) => {
@@ -247,41 +217,6 @@ export const Moveable3DHeroCards = () => {
           </motion.div>
         );
       })}
-
-      {/* Mobile Touch Draggable 3D Cards Carousel Strip */}
-      <div className="md:hidden absolute bottom-3 inset-x-0 px-4 pointer-events-auto">
-        <div className="flex items-center gap-1.5 mb-2 justify-center">
-          <Move size={10} className="text-[#801834] dark:text-[#D4AF37]" />
-          <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 font-bold uppercase tracking-wider">
-            Swipe / Drag 3D Project Cards
-          </span>
-        </div>
-        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory">
-          {cards.map((card) => (
-            <motion.div
-              key={`mob-${card.id}`}
-              whileTap={{ scale: 0.97 }}
-              className="snap-center shrink-0 w-64 rounded-xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-2.5 shadow-xl select-none"
-            >
-              <div className="relative overflow-hidden rounded-lg aspect-[16/10] bg-zinc-950">
-                <img 
-                  src={card.image} 
-                  alt={card.title} 
-                  className="w-full h-full object-cover" 
-                  draggable={false} 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/60 text-[8px] font-mono text-[#D4AF37] font-bold">
-                  {card.code}
-                </span>
-                <span className="absolute bottom-1.5 left-1.5 right-1.5 text-[10px] font-bold text-white truncate">
-                  {card.title}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
     </div>
   );

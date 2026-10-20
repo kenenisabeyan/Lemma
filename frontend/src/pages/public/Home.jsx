@@ -246,8 +246,19 @@ export const Home = () => {
         />
 
         {/* Hero Content Container */}
-        <div className="relative z-30 max-w-4xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9 pointer-events-none px-4">
+        <div className="relative z-30 max-w-4xl mx-auto w-full text-center flex flex-col items-center gap-5 sm:gap-7 pointer-events-none px-4">
           
+          {/* Spatial 3D Studio Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 shadow-sm pointer-events-auto"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>3D Spatial Studio · Moveable Elements</span>
+          </motion.div>
+
           {/* Main Giant Bold Headline with 3D Depth */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
