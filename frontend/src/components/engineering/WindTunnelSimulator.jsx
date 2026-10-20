@@ -245,7 +245,7 @@ export const WindTunnelSimulator = () => {
               Flow: <strong className="text-cyan-400">ATMOSPHERIC BOUNDARY LAYER</strong>
             </span>
             <span className="text-[10px] font-mono text-[#F3E5AB] dark:text-[#D4AF37]">
-              Velocity $V = {windSpeedMph} \text{ mph}$ · Gradient Height $Z_g = 450\text{m}$
+              Velocity V = {windSpeedMph} mph · Gradient Height Z_g = 450m
             </span>
           </div>
 
