@@ -36,12 +36,22 @@ import { ManageResources } from './pages/admin/ManageResources';
 import { ManageFaqs } from './pages/admin/ManageFaqs';
 import { Settings } from './pages/admin/Settings';
 
-// Scroll to Top Helper
+// Scroll to Top & Hash Anchor Helper
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 60);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 };
 
@@ -100,7 +110,7 @@ export default function App() {
         <Route path="/insights" element={<PublicLayout><InsightsPage /></PublicLayout>} />
         <Route path="/insights/:slug" element={<PublicLayout><InsightDetail /></PublicLayout>} />
         <Route path="/resources" element={<PublicLayout><ResourcesPage /></PublicLayout>} />
-        <Route path="/testimonials" element={<PublicLayout><TestimonialsPage /></PublicLayout>} />
+        <Route path="/testimonials" element={<Navigate to="/#testimonials" replace />} />
         <Route path="/faq" element={<PublicLayout><FaqPage /></PublicLayout>} />
         <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
 

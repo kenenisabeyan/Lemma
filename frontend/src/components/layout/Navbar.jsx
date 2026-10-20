@@ -61,7 +61,7 @@ export const Navbar = () => {
     { num: '04', name: 'Projects', path: '/projects' },
     { num: '05', name: 'Experience', path: '/experience' },
     { num: '06', name: 'Insights', path: '/insights' },
-    { num: '07', name: 'Testimonials', path: '/testimonials' },
+    { num: '07', name: 'Testimonials', path: '/#testimonials' },
     { num: '08', name: 'Resources', path: '/resources' },
     { num: '09', name: 'Contact', path: '/contact' }
   ];
