@@ -244,6 +244,41 @@ export const Moveable3DHeroCards = () => {
         );
       })}
 
+      {/* Mobile Touch Draggable 3D Cards Carousel Strip */}
+      <div className="md:hidden absolute bottom-3 inset-x-0 px-4 pointer-events-auto">
+        <div className="flex items-center gap-1.5 mb-2 justify-center">
+          <Move size={10} className="text-[#801834] dark:text-[#D4AF37]" />
+          <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 font-bold uppercase tracking-wider">
+            Swipe / Drag 3D Project Cards
+          </span>
+        </div>
+        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory">
+          {cards.map((card) => (
+            <motion.div
+              key={`mob-${card.id}`}
+              whileTap={{ scale: 0.97 }}
+              className="snap-center shrink-0 w-64 rounded-xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-2.5 shadow-xl select-none"
+            >
+              <div className="relative overflow-hidden rounded-lg aspect-[16/10] bg-zinc-950">
+                <img 
+                  src={card.image} 
+                  alt={card.title} 
+                  className="w-full h-full object-cover" 
+                  draggable={false} 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/60 text-[8px] font-mono text-[#D4AF37] font-bold">
+                  {card.code}
+                </span>
+                <span className="absolute bottom-1.5 left-1.5 right-1.5 text-[10px] font-bold text-white truncate">
+                  {card.title}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -38,6 +38,8 @@ import { useFetch } from '../../hooks/useFetch';
 import { StatCounter } from '../../components/engineering/StatCounter';
 import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { EngineeringCanvas } from '../../components/engineering/EngineeringCanvas';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
+import { Moveable3DHeroCards } from '../../components/engineering/Moveable3DHeroCards';
 import { LoadPathSimulator } from '../../components/engineering/LoadPathSimulator';
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 import { ValueEngineeringCalculator } from '../../components/engineering/ValueEngineeringCalculator';
@@ -212,25 +214,30 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#121417]">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-[#FAF9F6] dark:bg-[#121417]">
         
-        {/* Background Visual: Studio Suite / Architecture Visual */}
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        {/* Hardware-Accelerated 3D Three.js Wireframe Structural Tower */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden select-none">
           <img 
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
             alt="Structural engineering studio background" 
-            className="w-full h-full object-cover opacity-10 dark:opacity-15 filter blur-[0.5px] scale-105" 
+            className="w-full h-full object-cover opacity-5 dark:opacity-10 filter blur-[0.5px] scale-105 pointer-events-none" 
           />
-          {/* Subtle Frosted White Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/85 to-white/98 dark:from-[#121417]/85 dark:via-[#121417]/75 dark:to-[#121417]/95"></div>
-          
           {/* Subtle Ambient Studio Light */}
-          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
-          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-zinc-200/40 dark:bg-[#801834]/12 blur-[120px] animate-aurora-drift-2"></div>
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none"></div>
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-zinc-200/40 dark:bg-[#801834]/12 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
           
-          {/* Interactive Structural Mechanics Truss Canvas */}
-          <EngineeringCanvas />
+          {/* 3D Interactive Three.js High-Rise Model */}
+          <div className="absolute inset-0 z-0 opacity-80 dark:opacity-90">
+            <Hero3DCanvas />
+          </div>
+
+          {/* Frosted Vignette Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/95 dark:from-[#121417]/50 dark:via-transparent dark:to-[#121417]/95 pointer-events-none"></div>
         </div>
+
+        {/* 3D Moveable Floating Architectural & Engineering Cards (Draggable in 3D Space) */}
+        <Moveable3DHeroCards />
 
         {/* Floating Translucent Accent Ring */}
         <div 
@@ -239,22 +246,22 @@ export const Home = () => {
         />
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9">
+        <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center gap-7 sm:gap-9 pointer-events-none">
           
-          {/* Main Giant Bold Headline */}
+          {/* Main Giant Bold Headline with 3D Depth */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-1 sm:space-y-2"
+            className="space-y-1 sm:space-y-2 pointer-events-auto"
           >
-            <h1 className="font-black text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] tracking-tight leading-[1.04] text-zinc-900 dark:text-zinc-100 select-none">
+            <h1 className="font-black text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] tracking-tight leading-[1.04] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
               {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
-              <span className="text-[#801834] dark:text-[#E84855]">
+              <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
                 {settings.heroHeadlineAccent || 'Clear'}
               </span>
               <br />
-              <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block">
+              <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
                 {settings.heroHeadlineLine2 || 'Engineering.'}
               </span>
             </h1>
