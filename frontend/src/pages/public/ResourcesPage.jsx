@@ -249,20 +249,6 @@ Phone: +1 (555) 019-8472
             Request Custom Calc Package
           </a>
         </div>
-          <div>
-            <span className="text-[10px] font-mono uppercase text-[#801834] dark:text-[#D4AF37] tracking-wider block mb-1 font-bold">Tailored Specifications</span>
-            <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA]">Need Project-Specific Structural Calculations or CAD Details?</h4>
-            <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1 max-w-xl leading-relaxed">
-              I provide custom finite element analysis models, calculation packages for municipal permit submittals, and site-specific seismic retrofitting plans.
-            </p>
-          </div>
-          <a
-            href="/contact"
-            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-md shrink-0"
-          >
-            Request Custom Calc Package
-          </a>
-        </div>
 
       </div>
     </div>
