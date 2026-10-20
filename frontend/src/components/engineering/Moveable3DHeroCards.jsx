@@ -42,7 +42,8 @@ export const Moveable3DHeroCards = () => {
       accent: 'border-[#801834] dark:border-[#D4AF37]',
       accentBg: 'bg-[#801834] dark:bg-[#D4AF37]',
       accentText: 'text-[#801834] dark:text-[#D4AF37]',
-      defaultPos: 'top-10 left-2 lg:left-6 xl:left-10',
+      defaultPos: 'top-8 left-4 2xl:left-12',
+      visibility: 'hidden xl:block',
       depthMultiplier: 20,
       tiltFactor: 12
     },
@@ -53,12 +54,13 @@ export const Moveable3DHeroCards = () => {
       tag: 'SPAN 450M · SEISMIC ISOLATED',
       code: 'AASHTO / CALTRANS SEISMIC',
       metric: 'UHPC PYLONS · 120-YR LIFE',
-      image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
+      image: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
       icon: Compass,
       accent: 'border-cyan-500',
       accentBg: 'bg-cyan-500',
       accentText: 'text-cyan-500',
-      defaultPos: 'top-14 right-2 lg:right-6 xl:right-10',
+      defaultPos: 'top-12 right-4 2xl:right-12',
+      visibility: 'hidden xl:block',
       depthMultiplier: -18,
       tiltFactor: -10
     },
@@ -74,7 +76,8 @@ export const Moveable3DHeroCards = () => {
       accent: 'border-emerald-500',
       accentBg: 'bg-emerald-500',
       accentText: 'text-emerald-500',
-      defaultPos: 'bottom-12 left-2 lg:left-6 xl:left-12',
+      defaultPos: 'bottom-10 left-4 2xl:left-12',
+      visibility: 'hidden md:block',
       depthMultiplier: 16,
       tiltFactor: -8
     },
@@ -90,7 +93,8 @@ export const Moveable3DHeroCards = () => {
       accent: 'border-amber-500',
       accentBg: 'bg-amber-500',
       accentText: 'text-amber-500',
-      defaultPos: 'bottom-8 right-2 lg:right-6 xl:right-12',
+      defaultPos: 'bottom-8 right-4 2xl:right-12',
+      visibility: 'hidden md:block',
       depthMultiplier: -18,
       tiltFactor: 10
     }
