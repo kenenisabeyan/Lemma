@@ -97,7 +97,7 @@ export const EngineeringPrinciplesMatrix = () => {
   const currentPrinciple = principles.find(p => p.id === activeTab) || principles[0];
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 sm:p-8 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 bg-cad-grid border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-8 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
       
       {/* Decorative Technical Corner Marks */}
       <div className="absolute top-3 left-3 text-[10px] font-mono text-zinc-300 dark:text-zinc-700 pointer-events-none select-none">+</div>
@@ -106,9 +106,9 @@ export const EngineeringPrinciplesMatrix = () => {
       <div className="absolute bottom-3 right-3 text-[10px] font-mono text-zinc-300 dark:text-zinc-700 pointer-events-none select-none">+</div>
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/90 dark:border-[#2D3137]">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/80 dark:border-zinc-800/80">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#801834]/40 bg-zinc-50 dark:bg-[#261219] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#E84855] shadow-xs mb-2 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-[#F4F5F7] dark:bg-[#0E1014] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-2 font-bold">
             <Cpu size={13} />
             <span>Core Mathematical & Mechanical Standards</span>
           </div>
@@ -121,7 +121,7 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Code Standard Stamp */}
-        <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] px-4 py-2 rounded-2xl border border-zinc-200 dark:border-[#333] shrink-0 font-mono text-xs">
+        <div className="flex items-center gap-3 bg-[#F4F5F7] dark:bg-[#0E1014] px-4 py-2 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 shrink-0 font-mono text-xs">
           <div className="w-2.5 h-2.5 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></div>
           <div>
             <span className="text-[9px] text-zinc-400 dark:text-[#777] block uppercase">MANDATE</span>
@@ -142,14 +142,14 @@ export const EngineeringPrinciplesMatrix = () => {
               className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between ${
                 isActive
                   ? 'bg-[#FAF0F3] dark:bg-[#261219] border-[#801834] dark:border-[#D4AF37] shadow-sm'
-                  : 'bg-zinc-50/70 dark:bg-[#14161A] border-zinc-200/80 dark:border-[#2C2E33] hover:border-zinc-300 dark:hover:border-[#444]'
+                  : 'bg-[#F4F5F7] dark:bg-[#0E1014] border-zinc-200/80 dark:border-zinc-800/80 hover:border-zinc-300 dark:hover:border-zinc-700'
               }`}
             >
               <div className="flex items-center justify-between mb-3">
                 <div className={`p-2 rounded-xl transition-colors ${
                   isActive 
                     ? 'bg-[#801834] text-white dark:bg-[#D4AF37] dark:text-[#121417]' 
-                    : 'bg-white dark:bg-[#1E2125] text-zinc-600 dark:text-zinc-300'
+                    : 'bg-white dark:bg-[#14171C] text-zinc-600 dark:text-zinc-300'
                 }`}>
                   <Icon size={18} />
                 </div>
@@ -168,8 +168,8 @@ export const EngineeringPrinciplesMatrix = () => {
       </div>
 
       {/* Principle Detail Dossier */}
-      <div className="bg-zinc-50 dark:bg-[#14161A] rounded-2xl border border-zinc-200/90 dark:border-[#2C2E33] p-6 lg:p-8">
-        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 pb-6 mb-6 border-b border-zinc-200/80 dark:border-[#26282D]">
+      <div className="bg-[#F4F5F7] dark:bg-[#0E1014] rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 p-6 lg:p-8">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 pb-6 mb-6 border-b border-zinc-200/80 dark:border-zinc-800/80">
           <div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] font-bold">
               Governing Code: {currentPrinciple.code}
@@ -184,7 +184,7 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Mathematical Equation & Physics Panel */}
-        <div className="mb-6 p-5 rounded-xl bg-white dark:bg-[#181A1E] border border-zinc-200/80 dark:border-[#333] shadow-2xs">
+        <div className="mb-6 p-5 rounded-xl bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 shadow-2xs">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-bold">
               Key Mechanics Formulation
@@ -193,7 +193,7 @@ export const EngineeringPrinciplesMatrix = () => {
               Deterministic Limit State
             </span>
           </div>
-          <div className="p-4 rounded-lg bg-zinc-50 dark:bg-[#121417] border border-zinc-200/70 dark:border-[#25282E] text-center font-mono text-sm sm:text-base font-bold text-[#801834] dark:text-[#D4AF37] overflow-x-auto">
+          <div className="p-4 rounded-lg bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 text-center font-mono text-sm sm:text-base font-bold text-[#801834] dark:text-[#D4AF37] overflow-x-auto">
             <code>{currentPrinciple.formula}</code>
           </div>
           <p className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400 mt-2 text-center">
@@ -211,7 +211,7 @@ export const EngineeringPrinciplesMatrix = () => {
             </span>
             <div className="space-y-2.5">
               {currentPrinciple.details.map((detail, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-white dark:bg-[#181A1E] border border-zinc-200/70 dark:border-[#2C2E33]">
+                <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80">
                   <CheckCircle2 size={16} className="text-[#801834] dark:text-[#D4AF37] shrink-0 mt-0.5" />
                   <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed font-medium">
                     {detail}
@@ -228,7 +228,7 @@ export const EngineeringPrinciplesMatrix = () => {
             </span>
             <div className="space-y-2.5">
               {currentPrinciple.metrics.map((metric, idx) => (
-                <div key={idx} className="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-[#181A1E] border border-zinc-200/70 dark:border-[#2C2E33]">
+                <div key={idx} className="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80">
                   <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400">
                     {metric.label}
                   </span>

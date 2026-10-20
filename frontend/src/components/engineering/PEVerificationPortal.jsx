@@ -42,7 +42,7 @@ export const PEVerificationPortal = () => {
   };
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 lg:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 bg-cad-grid border border-zinc-200/90 dark:border-zinc-800/90 p-6 lg:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
       {/* Background Subtle Stamp Watermark */}
       <div 
         aria-hidden="true" 
@@ -54,7 +54,7 @@ export const PEVerificationPortal = () => {
       ></div>
 
       {/* Header */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-[#2D3137]">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200/80 dark:border-zinc-800/80">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37]">
             <Award size={14} className="animate-pulse" />
@@ -70,11 +70,11 @@ export const PEVerificationPortal = () => {
 
         {/* Live Standing Badges */}
         <div className="flex flex-wrap gap-2 shrink-0">
-          <div className="rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/50 px-3.5 py-2 text-xs font-mono shadow-xs">
+          <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 px-3.5 py-2 text-xs font-mono shadow-xs">
             <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF] uppercase block">New York State</span>
             <span className="text-[#801834] dark:text-[#D4AF37] font-bold">PE #84729 · ACTIVE</span>
           </div>
-          <div className="rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#D4AF37]/50 px-3.5 py-2 text-xs font-mono shadow-xs">
+          <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 px-3.5 py-2 text-xs font-mono shadow-xs">
             <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF] uppercase block">California Board</span>
             <span className="text-[#801834] dark:text-[#D4AF37] font-bold">SE #92041 · ACTIVE</span>
           </div>
@@ -85,7 +85,7 @@ export const PEVerificationPortal = () => {
       <div className="relative z-10 grid lg:grid-cols-12 gap-8 my-8 items-stretch">
         
         {/* Left Column: Form Controls */}
-        <div className="lg:col-span-5 flex flex-col justify-between space-y-4 bg-zinc-50 dark:bg-[#121417] p-6 rounded-2xl border border-zinc-200 dark:border-[#333]">
+        <div className="lg:col-span-5 flex flex-col justify-between space-y-4 bg-[#F4F5F7] dark:bg-[#0E1014] p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80">
           <div className="space-y-4">
             <span className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 font-bold">
               <Compass size={14} /> Project Parameters for Certification
@@ -98,7 +98,7 @@ export const PEVerificationPortal = () => {
                 type="text" 
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] font-medium shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] font-medium shadow-2xs"
               />
             </div>
 
@@ -108,7 +108,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
               >
                 <option value="New York City Department of Buildings (NYC DOB)">New York City Department of Buildings (NYC DOB)</option>
                 <option value="California Department of Health Care Access (HCAI/OSHPD)">California HCAI / OSHPD Seismic Division</option>
@@ -124,7 +124,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={systemType}
                 onChange={(e) => setSystemType(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
               >
                 <option value="Dual Core Concrete Shear Wall & Steel Outriggers">Dual Core Concrete Shear Wall & Steel Outriggers</option>
                 <option value="Post-Tensioned Concrete Flat Plate Frame">Post-Tensioned Concrete Flat Plate Frame</option>
@@ -139,7 +139,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={designStandard}
                 onChange={(e) => setDesignStandard(e.target.value)}
-                className="w-full bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] focus:outline-none focus:border-[#801834] dark:focus:border-[#D4AF37] shadow-2xs"
               >
                 <option value="IBC 2024 / ASCE 7-22 / ACI 318-19">IBC 2024 / ASCE 7-22 / ACI 318-19</option>
                 <option value="CBC 2025 / ASCE 7-22 / AISC 360-22">CBC 2025 / ASCE 7-22 / AISC 360-22</option>
@@ -149,7 +149,7 @@ export const PEVerificationPortal = () => {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-zinc-200 dark:border-[#26282D]">
+          <div className="pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80">
             <button
               onClick={() => setIsGenerated(true)}
               className="w-full rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
@@ -160,7 +160,7 @@ export const PEVerificationPortal = () => {
         </div>
 
         {/* Right Column: Formal Stamped Certificate */}
-        <div className="lg:col-span-7 bg-white dark:bg-gradient-to-b dark:from-[#181A1E] dark:to-[#14161A] rounded-2xl border-2 border-[#801834]/40 dark:border-[#D4AF37]/60 p-8 shadow-sm dark:shadow-2xl relative flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-white/95 dark:bg-[#14171C]/95 rounded-2xl border-2 border-[#801834]/40 dark:border-[#D4AF37]/60 p-8 shadow-sm dark:shadow-2xl relative flex flex-col justify-between">
           
           {/* Decorative Corner Badges */}
           <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-[#801834] dark:border-[#D4AF37]"></div>
@@ -170,7 +170,7 @@ export const PEVerificationPortal = () => {
 
           <div>
             {/* Certificate Header */}
-            <div className="text-center pb-6 border-b border-zinc-200 dark:border-[#2D3137] relative">
+            <div className="text-center pb-6 border-b border-zinc-200/80 dark:border-zinc-800/80 relative">
               <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-[0.25em] block mb-1 font-bold">
                 PROFESSIONAL ENGINEERING REGISTRATION & COMPLIANCE DOSSIER
               </span>
@@ -188,7 +188,7 @@ export const PEVerificationPortal = () => {
                 "I hereby certify that the structural analysis, finite element mathematical modeling, and construction calculations for the specified facility have been conducted under my direct professional supervisory control in full conformance with governing building safety statutes."
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-3 bg-zinc-50 dark:bg-[#121417] p-4 rounded-xl border border-zinc-200 dark:border-[#333] text-[11px] font-mono shadow-2xs">
+              <div className="grid sm:grid-cols-2 gap-3 bg-[#F4F5F7] dark:bg-[#0E1014] p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 text-[11px] font-mono shadow-2xs">
                 <div>
                   <span className="text-zinc-500 dark:text-[#888] block text-[9px] font-semibold">PROJECT DESIGNATION:</span>
                   <span className="text-zinc-900 dark:text-[#EAEAEA] font-bold">{projectName || 'Metropolis Commercial Project'}</span>
@@ -210,7 +210,7 @@ export const PEVerificationPortal = () => {
           </div>
 
           {/* Certificate Footer: Official Seal & Cryptographic Token */}
-          <div className="pt-6 border-t border-zinc-200 dark:border-[#2D3137] flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="pt-6 border-t border-zinc-200/80 dark:border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-6">
             
             {/* Circular PE/SE Official Seal (SVG) */}
             <div className="flex items-center gap-4">
@@ -250,13 +250,13 @@ export const PEVerificationPortal = () => {
             <div className="flex flex-col gap-2 shrink-0">
               <button
                 onClick={handlePrint}
-                className="rounded-full bg-zinc-50 dark:bg-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-300 dark:border-[#D4AF37]/50 hover:bg-[#801834] hover:text-white dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                className="rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] text-[#801834] dark:text-[#D4AF37] border border-zinc-300 dark:border-zinc-700 hover:bg-[#801834] hover:text-white dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
               >
                 <Printer size={13} /> Print Stamped Certificate
               </button>
               <button
                 onClick={handleCopy}
-                className="rounded-full bg-zinc-50 dark:bg-[#121417] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA] px-4 py-1.5 text-[10px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 justify-center shadow-xs"
+                className="rounded-full bg-[#F4F5F7] dark:bg-[#0E1014] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80 hover:text-zinc-900 dark:hover:text-[#EAEAEA] px-4 py-1.5 text-[10px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 justify-center shadow-xs"
               >
                 {copiedToken ? (
                   <>
@@ -273,7 +273,7 @@ export const PEVerificationPortal = () => {
           </div>
 
           {/* Cryptographic Digital Watermark */}
-          <div className="mt-4 pt-3 border-t border-zinc-200 dark:border-[#26282D] flex items-center justify-between text-[9px] font-mono text-zinc-400 dark:text-[#777]">
+          <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-zinc-800/80 flex items-center justify-between text-[9px] font-mono text-zinc-400 dark:text-[#777]">
             <span className="flex items-center gap-1">
               <Lock size={10} className="text-emerald-600 dark:text-emerald-400" /> Cryptographic Digital Seal: {verificationHash}
             </span>
