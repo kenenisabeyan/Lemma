@@ -9,7 +9,7 @@ export const ServicesPage = () => {
   const navigate = useNavigate();
   const { data } = useFetch('/services');
 
-  const servicesList = data?.services || [
+  const servicesList = (data?.services && data.services.length > 0) ? data.services : [
     {
       id: '1',
       title: 'Structural Analysis & Engineering Design',
