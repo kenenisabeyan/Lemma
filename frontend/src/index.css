@@ -162,8 +162,8 @@ html.dark .bg-cad-dots {
 }
 
 html.dark .tech-box {
-  background: #181A1E;
-  border: 1px solid #333333;
+  background: #111827;
+  border: 1px solid #1E293B;
 }
 
 .tech-box:hover {
@@ -171,7 +171,7 @@ html.dark .tech-box {
 }
 
 html.dark .tech-box:hover {
-  border-color: rgba(212, 175, 55, 0.5);
+  border-color: rgba(56, 189, 248, 0.5);
 }
 
 /* CAD Corner Crosshairs & Architectural Accents */
@@ -193,7 +193,7 @@ html.dark .tech-box:hover {
 
 html.dark .cad-bracket-corners::before,
 html.dark .cad-bracket-corners::after {
-  border-color: #D4AF37;
+  border-color: #38BDF8;
   opacity: 0.5;
 }
 
@@ -218,11 +218,11 @@ html.dark .cad-bracket-corners::after {
 
 /* Blueprint Dot Grid */
 .bg-blueprint-dots {
-  background-image: radial-gradient(circle, rgba(128, 24, 52, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.07) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 html.dark .bg-blueprint-dots {
-  background-image: radial-gradient(circle, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
 }
 
