@@ -89,7 +89,7 @@ export const Home = () => {
   const { data: insightsData } = useFetch('/insights');
 
   const settings = settingsData?.settings || settingsData || {};
-  const projects = projectsData?.projects || [
+  const projects = (projectsData?.projects && projectsData.projects.length > 0) ? projectsData.projects : [
     {
       id: '1',
       title: 'Nexus Commercial Tower',
@@ -130,14 +130,14 @@ export const Home = () => {
     }
   ];
 
-  const services = servicesData?.services || [
+  const services = (servicesData?.services && servicesData.services.length > 0) ? servicesData.services : [
     { icon: 'Building2', title: 'Structural Analysis & Design', summary: 'Advanced linear & non-linear 3D modeling for high-rise towers, commercial centers, and civic buildings.' },
     { icon: 'Layers', title: 'Reinforced Concrete & Steel', summary: 'Specialized connection detailing, post-tensioned slab calculations, and structural steel optimization.' },
     { icon: 'ShieldCheck', title: 'Seismic Retrofit & Evaluation', summary: 'Structural integrity auditing, non-destructive testing, dynamic pushover analysis, and dampening retrofits.' },
     { icon: 'Ruler', title: 'Peer Review & Consultation', summary: 'Third-party calculation verification, cost value engineering, and constructability advisory.' }
   ];
 
-  const testimonials = testimonialsData?.testimonials || [
+  const testimonials = (testimonialsData?.testimonials && testimonialsData.testimonials.length > 0) ? testimonialsData.testimonials : [
     {
       clientName: 'Sarah Jenkins, AIA',
       clientRole: 'Principal Architect',
@@ -154,7 +154,7 @@ export const Home = () => {
     }
   ];
 
-  const insights = insightsData?.insights || [
+  const insights = (insightsData?.insights && insightsData.insights.length > 0) ? insightsData.insights : [
     { title: 'Innovations in High-Strength C80 Concrete Formulations', slug: 'innovations-high-strength-c80-concrete', category: 'Materials Science', date: 'Oct 12, 2026' },
     { title: 'Seismic Retrofitting Strategies for Pre-1980 Structural Steel Frame Buildings', slug: 'seismic-retrofitting-pre-1980-steel-frames', category: 'Seismic Design', date: 'Sep 28, 2026' },
     { title: 'Optimizing Wind Damping Outrigger Systems in 50+ Story Skyscrapers', slug: 'optimizing-wind-damping-outrigger-systems', category: 'High-Rise Analysis', date: 'Aug 15, 2026' }
