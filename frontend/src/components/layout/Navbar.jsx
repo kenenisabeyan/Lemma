@@ -205,7 +205,16 @@ export const Navbar = () => {
                       <Link
                         key={link.name}
                         to={link.path}
-                        onClick={() => setMenuOpen(false)}
+                        onClick={() => {
+                          setMenuOpen(false);
+                          if (link.path.includes('#')) {
+                            const id = link.path.split('#')[1];
+                            setTimeout(() => {
+                              const el = document.getElementById(id);
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            }, 100);
+                          }
+                        }}
                         className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 ${
                           isActive
                             ? 'bg-[#801834]/10 dark:bg-[#801834]/20 text-[#801834] dark:text-[#E84855] font-bold'

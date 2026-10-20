@@ -30,7 +30,9 @@ import {
   TrendingDown, 
   Cpu, 
   Layers3, 
-  ArrowRight 
+  ArrowRight,
+  Star,
+  MessageSquareQuote
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { StatCounter } from '../../components/engineering/StatCounter';

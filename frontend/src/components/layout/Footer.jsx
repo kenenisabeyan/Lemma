@@ -116,7 +116,7 @@ export const Footer = () => {
               </h4>
               <ul className="flex flex-col gap-2.5 text-xs text-zinc-600 dark:text-[#9CA3AF] font-mono">
                 <li><Link to="/resources" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Downloads & Guides</Link></li>
-                <li><Link to="/testimonials" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Testimonials</Link></li>
+                <li><Link to="/#testimonials" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Testimonials</Link></li>
                 <li><Link to="/faq" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Client FAQs</Link></li>
                 <li><Link to="/contact" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Consultation</Link></li>
                 <li><Link to="/admin/login" className="hover:text-[#801834] dark:hover:text-[#D4AF37] transition-colors">Admin Login</Link></li>
