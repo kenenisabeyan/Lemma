@@ -72,7 +72,7 @@ export const Navbar = () => {
       <header 
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-[#FAF9F6]/90 dark:bg-[#121417]/90 backdrop-blur-xl border-b border-zinc-200/60 dark:border-zinc-800/60 shadow-[0_4px_25px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
+            ? 'bg-white/95 dark:bg-[#121417]/90 backdrop-blur-xl border-b border-zinc-200/80 dark:border-zinc-800/80 shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
             : 'bg-transparent py-4 sm:py-6'
         }`}
       >
@@ -118,7 +118,7 @@ export const Navbar = () => {
             <button
               onClick={toggleTheme}
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-[#FAF9F6] dark:bg-zinc-800/90 border border-rose-100/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white dark:bg-zinc-800/90 border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
               title={isDark ? "Light mode" : "Dark mode"}
             >
               {isDark ? (
@@ -132,7 +132,7 @@ export const Navbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle navigation menu"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-[#FAF9F6] dark:bg-zinc-800/90 border border-rose-100/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white dark:bg-zinc-800/90 border border-zinc-200/90 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
               title="Menu"
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}

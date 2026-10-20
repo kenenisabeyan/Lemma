@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --bg-main: #FAF9F6;
+    --bg-main: #FFFFFF;
     --bg-surface: #FFFFFF;
-    --bg-subtle: #F4F4F2;
+    --bg-subtle: #F8F9FA;
     --bg-tint-wine: #FAF0F3;
-    --bg-tint-slate: #F0F4F8;
-    --bg-tint-amber: #FDF9F0;
-    --text-main: #18181B;
-    --card-bg: rgba(255, 255, 255, 0.98);
-    --border-color: rgba(228, 228, 231, 0.85);
+    --bg-tint-slate: #F1F5F9;
+    --bg-tint-amber: #FAF8F5;
+    --text-main: #09090B;
+    --card-bg: #FFFFFF;
+    --border-color: rgba(228, 228, 231, 0.9);
     --wine-primary: #801834;
     --wine-hover: #671229;
   }
@@ -34,7 +34,7 @@
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-[#FAF9F6] dark:bg-[#121417];
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-white text-zinc-900 dark:bg-[#121417] dark:text-[#EAEAEA];
   }
 }
 

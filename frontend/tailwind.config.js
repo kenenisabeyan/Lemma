@@ -19,12 +19,12 @@ export default {
           border: "#333333"
         },
         architectural: {
-          canvas: "#FAF9F6",
+          canvas: "#FFFFFF",
           surface: "#FFFFFF",
-          subtle: "#F4F4F2",
+          subtle: "#F8F9FA",
           "wine-tint": "#FAF0F3",
-          "slate-tint": "#F0F4F8",
-          "warm-tint": "#FDF8F2",
+          "slate-tint": "#F1F5F9",
+          "warm-tint": "#FAF8F5",
           border: "#E4E4E7",
           wine: "#801834",
           "wine-dark": "#671229",
