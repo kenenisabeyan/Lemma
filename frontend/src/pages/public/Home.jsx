@@ -1251,6 +1251,7 @@ export const Home = () => {
               className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 active:scale-95"
             >
               Initiate Inquiry <ArrowUpRight size={14} />
+            </button>
           </div>
 
         </div>
@@ -1264,7 +1265,7 @@ export const Home = () => {
       {/* INTRO VIDEO MODAL */}
       {isVideoModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-          <div className="relative w-full max-w-4xl bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#D4AF37] p-2 rounded-xl shadow-2xl">
+          <div className="relative w-full max-w-4xl bg-white dark:bg-[#14171C] border border-zinc-200 dark:border-[#D4AF37]/50 p-2 rounded-xl shadow-2xl">
             <button
               onClick={() => setIsVideoModalOpen(false)}
               className="absolute -top-10 right-0 text-white hover:text-zinc-300"

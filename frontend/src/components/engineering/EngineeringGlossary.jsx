@@ -240,14 +240,6 @@ export const EngineeringGlossary = () => {
           PE/SE Certified Technical Guidance
         </div>
       </div>
-        <div className="flex items-center gap-2">
-          <ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" />
-          <span>Curated under ASCE 7-22, IBC 2024, ACI 318-19, and AISC 360-22 standards</span>
-        </div>
-        <div className="text-zinc-500 dark:text-[#9CA3AF] font-bold">
-          PE/SE Certified Technical Guidance
-        </div>
-      </div>
 
     </div>
   );
