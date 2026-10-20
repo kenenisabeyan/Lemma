@@ -113,7 +113,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
       {/* Header Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/90 dark:border-[#2D3137]">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-rose-100 dark:border-[#801834]/40 bg-[#FAF0F3] dark:bg-[#261219] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#E84855] shadow-xs mb-2 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#801834]/40 bg-zinc-50 dark:bg-[#261219] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#E84855] shadow-xs mb-2 font-bold">
             <Sliders size={13} />
             <span>Interactive Feasibility Telemetry</span>
           </div>

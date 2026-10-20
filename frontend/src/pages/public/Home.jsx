@@ -231,7 +231,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/95 dark:bg-[#181A1E]/80 backdrop-blur-xl border border-rose-100/90 dark:border-zinc-700/60 shadow-[0_12px_35px_rgba(128,24,52,0.06)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6"
+            className="w-full max-w-3xl mx-auto rounded-3xl bg-white dark:bg-[#181A1E]/90 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6"
           >
             <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center">
               {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
@@ -385,10 +385,10 @@ export const Home = () => {
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <span className="rounded-full bg-[#FAF0F3] dark:bg-[#121417] border border-rose-100 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
-                    <span className="rounded-full bg-[#FAF0F3] dark:bg-[#121417] border border-rose-100 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
-                    <span className="rounded-full bg-[#FAF0F3] dark:bg-[#121417] border border-rose-100 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
-                    <span className="rounded-full bg-[#FAF0F3] dark:bg-[#121417] border border-rose-100 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] uppercase font-semibold">AISC 360</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
+                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">AISC 360</span>
                   </div>
                 </div>
                 <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
