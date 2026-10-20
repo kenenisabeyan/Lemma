@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --bg-main: #FFFFFF;
+    --bg-main: #FAF9F6;
     --bg-surface: #FFFFFF;
-    --bg-subtle: #F8F9FA;
+    --bg-subtle: #F4F5F7;
     --bg-tint-wine: #FAF0F3;
     --bg-tint-slate: #F1F5F9;
     --bg-tint-amber: #FAF8F5;
-    --text-main: #09090B;
+    --text-main: #0B0C0E;
     --card-bg: #FFFFFF;
     --border-color: rgba(228, 228, 231, 0.9);
     --wine-primary: #801834;
@@ -18,15 +18,15 @@
   }
 
   html.dark {
-    --bg-main: #121417;
-    --bg-surface: #181A1E;
-    --bg-subtle: #1E2125;
+    --bg-main: #0B0C0E;
+    --bg-surface: #14171C;
+    --bg-subtle: #0E1014;
     --bg-tint-wine: #261219;
     --bg-tint-slate: #151A21;
     --bg-tint-amber: #242013;
     --text-main: #EAEAEA;
-    --card-bg: rgba(24, 26, 30, 0.85);
-    --border-color: rgba(51, 51, 51, 0.8);
+    --card-bg: rgba(20, 23, 28, 0.92);
+    --border-color: rgba(39, 43, 51, 0.9);
     --wine-primary: #9E1F43;
     --wine-hover: #801834;
   }
@@ -34,7 +34,7 @@
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-white text-zinc-900 dark:bg-[#121417] dark:text-[#EAEAEA];
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-[#FAF9F6] text-zinc-900 dark:bg-[#0B0C0E] dark:text-[#EAEAEA];
   }
 }
 
@@ -45,11 +45,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F4F4F5;
+  background: #F4F5F7;
 }
 
 html.dark ::-webkit-scrollbar-track {
-  background: #121417;
+  background: #0B0C0E;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -58,7 +58,7 @@ html.dark ::-webkit-scrollbar-track {
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background: #2A2E35;
+  background: #272B33;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -80,6 +80,36 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   background-image: linear-gradient(to right, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
   background-size: 80px 80px;
+}
+
+/* Precision CAD Architectural Drafting Grid (Major & Minor Precision Grid) */
+.bg-cad-grid {
+  background-image: 
+    linear-gradient(to right, rgba(128, 24, 52, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 24, 52, 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(128, 24, 52, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 24, 52, 0.025) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+
+html.dark .bg-cad-grid {
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.09) 1px, transparent 1px),
+    linear-gradient(to right, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+
+/* Micro CAD Drafting Coordinate Dots */
+.bg-cad-dots {
+  background-image: radial-gradient(rgba(128, 24, 52, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+html.dark .bg-cad-dots {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.09) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
 }
 
 /* Infinite Marquee Ticker */

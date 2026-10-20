@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { useTheme } from '../../context/ThemeContext';
 
 export const Hero3DCanvas = ({ className = '' }) => {
   const containerRef = useRef(null);
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const container = containerRef.current;
@@ -32,11 +34,10 @@ export const Hero3DCanvas = ({ className = '' }) => {
     scene.add(towerGroup);
 
     // Color definitions based on dark / light mode
-    const isDark = document.documentElement.classList.contains('dark');
     const primaryColor = isDark ? 0xd4af37 : 0x801834; // Gold vs Wine
     const accentColor = isDark ? 0x38bdf8 : 0x0284c7;  // Cyan / Sky
-    const slabColor = isDark ? 0x22262d : 0xe4e4e7;
-    const wireColor = isDark ? 0x555c68 : 0xa1a1aa;
+    const slabColor = isDark ? 0x181a1f : 0xf4f4f5;
+    const wireColor = isDark ? 0x3f444e : 0x71717a;
 
     // Build High-Rise Tower Geometry: 16 Stories with Outrigger Trusses
     const floorCount = 14;
@@ -335,7 +336,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
       }
       renderer.dispose();
     };
-  }, []);
+  }, [isDark]);
 
   return (
     <div 

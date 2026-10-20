@@ -214,26 +214,21 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-[#FAF9F6] dark:bg-[#121417]">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-[#FAF9F6] dark:bg-[#0B0C0E] bg-cad-grid transition-colors">
         
-        {/* Hardware-Accelerated 3D Three.js Wireframe Structural Tower */}
+        {/* Architectural CAD Blueprint & 3D Three.js Wireframe Model */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden select-none">
-          <img 
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" 
-            alt="Structural engineering studio background" 
-            className="w-full h-full object-cover opacity-5 dark:opacity-10 filter blur-[0.5px] scale-105 pointer-events-none" 
-          />
-          {/* Subtle Ambient Studio Light */}
-          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none"></div>
-          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-zinc-200/40 dark:bg-[#801834]/12 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
+          {/* Subtle Ambient Studio Light (Wine & Gold) */}
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/6 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none"></div>
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/5 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
           
           {/* 3D Interactive Three.js High-Rise Model */}
-          <div className="absolute inset-0 z-0 opacity-80 dark:opacity-90">
+          <div className="absolute inset-0 z-0">
             <Hero3DCanvas />
           </div>
 
-          {/* Frosted Vignette Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/95 dark:from-[#121417]/50 dark:via-transparent dark:to-[#121417]/95 pointer-events-none"></div>
+          {/* Precision Blueprint Vignette Edge Fade */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#FAF9F6]/90 dark:to-[#0B0C0E]/90 pointer-events-none"></div>
         </div>
 
         {/* 3D Moveable Floating Architectural & Engineering Cards (Draggable in 3D Space) */}
@@ -322,7 +317,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 2. INFINITE MARQUEE TICKER                                                */}
       {/* ========================================================================= */}
-      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 dark:border-zinc-800 bg-[#F8F9FA] dark:bg-[#15171B] py-4 overflow-hidden transition-colors">
+      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 dark:border-zinc-800/80 bg-[#F4F5F7] dark:bg-[#0E1014] py-4 overflow-hidden transition-colors">
         <div className="mx-auto max-w-6xl [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="overflow-hidden">
             <div className="animate-marquee flex items-center gap-10">
@@ -343,7 +338,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-white dark:bg-[#121417] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800">
+      <section className="py-20 md:py-24 bg-[#FAF9F6] dark:bg-[#0B0C0E] bg-cad-grid relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
         <div className="max-w-5xl mx-auto px-6">
           
           <div className="mx-auto max-w-3xl text-center mb-14">
@@ -358,8 +353,8 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: High-Rise Lateral Stability (Col 1-2) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#801834]/30 dark:border-[#D4AF37]/40 bg-[#FAF0F3] dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#801834]/30 dark:border-[#D4AF37]/40 bg-[#FAF0F3] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
                 <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#801834]/15 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
                 <Building2 size={36} className="text-[#801834] dark:text-[#D4AF37] relative z-20" />
               </div>
@@ -375,8 +370,8 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 2: Non-Linear Seismic Modeling (Col 3-4) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#801834]/30 dark:border-[#D4AF37]/40 bg-[#FAF0F3] dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#801834]/30 dark:border-[#D4AF37]/40 bg-[#FAF0F3] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
                 <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#801834]/15 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
                 <Activity size={36} className="text-[#801834] dark:text-[#D4AF37] relative z-20" />
               </div>
@@ -392,7 +387,7 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 3: Value Engineering Sparkline Graph (Col 5-6) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex size-8 items-center justify-center rounded-full bg-[#FAF0F3] dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] border border-[#801834]/20 dark:border-[#D4AF37]/30">
@@ -424,7 +419,7 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] sm:col-span-2 md:col-span-6 p-0 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs sm:col-span-2 md:col-span-6 p-0 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
               <div className="grid h-full sm:grid-cols-2 items-center">
                 <div className="relative z-10 space-y-6 py-8 ps-8 pe-6">
                   <div className="flex size-12 items-center justify-center rounded-full border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#FAF0F3] dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-2">

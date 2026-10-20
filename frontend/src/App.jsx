@@ -86,7 +86,7 @@ const PublicLayout = ({ children }) => {
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
       <Navbar />
-      <main className="bg-[#FAF9F6] dark:bg-[#121417] min-h-screen text-zinc-900 dark:text-[#EAEAEA] transition-colors duration-200">{children}</main>
+      <main className="bg-[#FAF9F6] dark:bg-[#0B0C0E] min-h-screen text-zinc-900 dark:text-[#EAEAEA] transition-colors duration-200">{children}</main>
       <FloatingDock />
       <Footer />
     </>
