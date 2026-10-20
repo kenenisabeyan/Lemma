@@ -67,15 +67,15 @@ export const BlueprintInspector = () => {
   const currentHotspot = hotspots.find((h) => h.id === selectedHotspot) || hotspots[0];
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 sm:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
       
       {/* Background blueprint subtle grid */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-cad-grid opacity-20 pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-[#26282D] relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-zinc-800 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-[#F4F5F7] dark:bg-[#0E1014] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs">
             <Compass size={13} className="text-[#801834] dark:text-[#D4AF37]" />
             Multi-Layer Engineering Drawing Inspector
           </div>
@@ -88,7 +88,7 @@ export const BlueprintInspector = () => {
         </div>
 
         {/* Layer Switcher Tabs */}
-        <div className="flex bg-zinc-100 dark:bg-[#121417] p-1.5 rounded-2xl border border-zinc-200 dark:border-[#333]">
+        <div className="flex bg-[#F4F5F7] dark:bg-[#0E1014] p-1.5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
           <button
             onClick={() => setActiveLayer('render')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
@@ -242,11 +242,11 @@ export const BlueprintInspector = () => {
         </div>
 
         {/* Right Column: Node Engineering Specification Telemetry (5 cols) */}
-        <div className="lg:col-span-5 rounded-2xl bg-zinc-50 dark:bg-[#14161A] border border-zinc-200 dark:border-[#2D3137] p-6 sm:p-8 flex flex-col justify-between shadow-xs dark:shadow-xl">
+        <div className="lg:col-span-5 rounded-2xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 flex flex-col justify-between shadow-xs dark:shadow-xl">
           
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="rounded-full bg-white dark:bg-[#121417] border border-[#801834]/30 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-wider shadow-2xs">
+              <span className="rounded-full bg-white dark:bg-[#14171C] border border-[#801834]/30 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-wider shadow-2xs">
                 Inspection Node #{currentHotspot.id}
               </span>
               <span className="text-emerald-700 dark:text-emerald-400 font-mono font-bold text-xs bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
@@ -262,21 +262,21 @@ export const BlueprintInspector = () => {
               Spec: <span className="text-zinc-800 dark:text-[#EAEAEA]">{currentHotspot.spec}</span>
             </div>
 
-            <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed bg-white dark:bg-[#121417] p-4 rounded-xl border border-zinc-200 dark:border-[#26282D] mb-6 shadow-2xs">
+            <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed bg-white dark:bg-[#14171C] p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 mb-6 shadow-2xs">
               {currentHotspot.description}
             </p>
           </div>
 
           {/* Technical Details Grid */}
           <div className="flex flex-col gap-3 font-mono text-xs">
-            <div className="p-3 rounded-xl bg-white dark:bg-[#121417] border border-zinc-200 dark:border-[#26282D] flex justify-between items-center shadow-2xs">
+            <div className="p-3 rounded-xl bg-white dark:bg-[#14171C] border border-zinc-200 dark:border-zinc-800 flex justify-between items-center shadow-2xs">
               <span className="text-zinc-500 dark:text-[#9CA3AF] text-[10px] uppercase font-semibold">Design Capacity</span>
               <span className="text-zinc-900 dark:text-[#EAEAEA] font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.capacity}
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-white dark:bg-[#121417] border border-zinc-200 dark:border-[#26282D] flex justify-between items-center shadow-2xs">
+            <div className="p-3 rounded-xl bg-white dark:bg-[#14171C] border border-zinc-200 dark:border-zinc-800 flex justify-between items-center shadow-2xs">
               <span className="text-zinc-500 dark:text-[#9CA3AF] text-[10px] uppercase font-semibold">Compliance Code</span>
               <span className="text-[#801834] dark:text-[#D4AF37] font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.code}
@@ -284,7 +284,7 @@ export const BlueprintInspector = () => {
             </div>
 
             {/* PE / SE Seal */}
-            <div className="pt-4 border-t border-zinc-200 dark:border-[#26282D] flex items-center justify-between text-[11px] text-zinc-500 dark:text-[#9CA3AF]">
+            <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between text-[11px] text-zinc-500 dark:text-[#9CA3AF]">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" /> Licensed Stamped Detail
               </span>

@@ -102,15 +102,15 @@ export const LoadPathSimulator = () => {
   const metrics = getMetrics();
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 sm:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
       
       {/* Background blueprint subtle grid */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-cad-grid opacity-20 pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-[#26282D] relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-zinc-800 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-[#F4F5F7] dark:bg-[#0E1014] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs">
             <Gauge size={13} className="text-[#801834] dark:text-[#D4AF37]" />
             Interactive Structural Finite Element Simulator
           </div>
@@ -123,7 +123,7 @@ export const LoadPathSimulator = () => {
         </div>
 
         {/* Load Mode Selector Pills */}
-        <div className="flex flex-wrap gap-2 bg-zinc-100 dark:bg-[#121417] p-1.5 rounded-2xl border border-zinc-200 dark:border-[#333]">
+        <div className="flex flex-wrap gap-2 bg-[#F4F5F7] dark:bg-[#0E1014] p-1.5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
           <button
             onClick={() => setLoadMode('wind')}
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
@@ -171,7 +171,7 @@ export const LoadPathSimulator = () => {
       <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
         
         {/* Left Column: Interactive Vector Diagram (5 cols) */}
-        <div className="lg:col-span-5 rounded-2xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] p-6 relative overflow-hidden flex flex-col items-center justify-between min-h-[420px] shadow-xs dark:shadow-inner">
+        <div className="lg:col-span-5 rounded-2xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-6 relative overflow-hidden flex flex-col items-center justify-between min-h-[420px] shadow-xs dark:shadow-inner">
           
           {/* Top Crosshair Badge */}
           <div className="w-full flex justify-between items-center text-[10px] font-mono text-zinc-500 dark:text-[#9CA3AF]">
@@ -328,32 +328,32 @@ export const LoadPathSimulator = () => {
               {metrics.primaryLabel} · <span className="text-[#801834] dark:text-[#D4AF37] font-semibold">{metrics.codeClause}</span>
             </p>
 
-            <p className="text-xs sm:text-sm text-zinc-700 dark:text-[#9CA3AF] leading-relaxed bg-zinc-50 dark:bg-[#121417] p-4 rounded-xl border border-zinc-200 dark:border-[#2D3137] mb-6 shadow-xs">
+            <p className="text-xs sm:text-sm text-zinc-700 dark:text-[#9CA3AF] leading-relaxed bg-[#F4F5F7] dark:bg-[#0E1014] p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 mb-6 shadow-xs">
               {metrics.explanation}
             </p>
           </div>
 
           {/* Telemetry Metrics Bento 4-Box */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono">
-            <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
+            <div className="p-3.5 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 shadow-xs">
               <span className="text-[9px] uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Base Shear ($V_b$)</span>
               <span className="text-base font-extrabold text-zinc-900 dark:text-[#EAEAEA] block">{metrics.baseShear}</span>
               <span className="text-[9px] text-[#801834] dark:text-[#D4AF37] font-semibold block mt-0.5">Reaction Force</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
+            <div className="p-3.5 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 shadow-xs">
               <span className="text-[9px] uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Roof Drift Ratio</span>
               <span className="text-base font-extrabold text-zinc-900 dark:text-[#EAEAEA] block">{metrics.driftRatio}</span>
               <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-semibold block mt-0.5">Limit H/400</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
+            <div className="p-3.5 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 shadow-xs">
               <span className="text-[9px] uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Overturning (M_OT)</span>
               <span className="text-base font-extrabold text-zinc-900 dark:text-[#EAEAEA] block truncate">{metrics.overturning}</span>
               <span className="text-[9px] text-[#801834] dark:text-[#D4AF37] font-semibold block mt-0.5">Foundation Moment</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] shadow-xs">
+            <div className="p-3.5 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 shadow-xs">
               <span className="text-[9px] uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1">Energy Dissipation</span>
               <span className="text-base font-extrabold text-emerald-600 dark:text-emerald-400 block">{metrics.dissipation}</span>
               <span className="text-[9px] text-zinc-500 dark:text-[#9CA3AF] block mt-0.5">Supplemental</span>
@@ -361,7 +361,7 @@ export const LoadPathSimulator = () => {
           </div>
 
           {/* Stamped Verification Bar */}
-          <div className="pt-4 border-t border-zinc-200 dark:border-[#26282D] flex flex-wrap justify-between items-center text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] gap-2">
+          <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800 flex flex-wrap justify-between items-center text-xs font-mono text-zinc-500 dark:text-[#9CA3AF] gap-2">
             <div className="flex items-center gap-2">
               <ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" />
               <span>FEA Solver Model: ETABS v21 / SAP2000 Non-Linear Dynamic Engine</span>

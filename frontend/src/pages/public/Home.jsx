@@ -872,8 +872,8 @@ export const Home = () => {
 
           {/* Tab 2: Load Path Visualization */}
           {activeEducationTab === 'loadpath' && (
-            <div className="rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/90 dark:border-[#333]/80 p-8 lg:p-10 shadow-md dark:shadow-2xl">
-              <div className="flex flex-wrap gap-2 mb-8 bg-zinc-100 dark:bg-[#181A1E] p-1.5 rounded-xl border border-zinc-200 dark:border-[#333] w-max">
+            <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-8 lg:p-10 shadow-md dark:shadow-2xl">
+              <div className="flex flex-wrap gap-2 mb-8 bg-[#F4F5F7] dark:bg-[#0E1014] p-1.5 rounded-xl border border-zinc-200 dark:border-zinc-800 w-max">
                 <button
                   onClick={() => setActiveLoadPath('gravity')}
                   className={`text-xs font-mono font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg transition-all ${
@@ -900,27 +900,27 @@ export const Home = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-4 shadow-2xs">
                       <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 1</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Floor Slabs</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Receives people & equipment</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-4 shadow-2xs">
                       <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 2</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Beams & Girders</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Transfers load horizontally</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-4 shadow-2xs">
                       <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 3</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Columns / Walls</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Channels load downward</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-4 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-4 shadow-2xs">
                       <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-semibold">STAGE 4</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Deep Caissons</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Distributes foundation pressure</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-[#801834]/40 dark:border-[#D4AF37]/50 p-4 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-[#801834]/40 dark:border-[#D4AF37]/50 p-4 shadow-2xs">
                       <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] block mb-1 font-bold">FINAL</span>
                       <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">Solid Bedrock</h5>
                       <p className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Permanent reaction support</p>
@@ -935,19 +935,19 @@ export const Home = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-5 shadow-2xs">
                       <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">1. Floor Diaphragms</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Act as giant horizontal deep beams, collecting wind pressure from exterior facades and channeling it to the core.</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-5 shadow-2xs">
                       <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">2. Reinforced Concrete Core</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Heavy shear wall core acts as a vertical cantilever beam that resists overturning moments.</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-5 shadow-2xs">
                       <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">3. Outrigger Belt Trusses</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Couples the core to perimeter columns, activating push-pull resistance and damping vibrations.</p>
                     </div>
-                    <div className="rounded-xl bg-zinc-50 dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] p-5 shadow-2xs">
+                    <div className="rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 p-5 shadow-2xs">
                       <h5 className="text-sm font-bold text-[#801834] dark:text-[#D4AF37] mb-2">4. Foundation Tiebacks</h5>
                       <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">Deep tension anchors prevent the building from uprooting during extreme ground motions.</p>
                     </div>
@@ -968,7 +968,7 @@ export const Home = () => {
                 { title: 'Seismic Retrofitting', desc: 'Older buildings built before 1994 require seismic damping upgrades to prevent brittle joint fracture during earthquakes.' },
                 { title: 'Third-Party Peer Reviews', desc: 'Developers hire independent engineers to verify calculations and eliminate redundant concrete/steel, saving millions.' }
               ].map((item, idx) => (
-                <div key={idx} className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all">
+                <div key={idx} className="group rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all">
                   <div className="flex items-center gap-2 text-[#801834] dark:text-[#D4AF37] text-xs font-mono font-bold uppercase mb-2">
                     <CheckCircle2 size={15} /> Case 0{idx + 1}
                   </div>
@@ -985,13 +985,13 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 9. CLIENT TRUST & TESTIMONIALS                                            */}
       {/* ========================================================================= */}
-      <section id="testimonials" className="py-24 bg-[#F8F9FA] dark:bg-[#14161A] border-b border-zinc-200/80 dark:border-zinc-800 transition-colors scroll-mt-20">
+      <section id="testimonials" className="py-24 bg-[#F4F5F7] dark:bg-[#0E1014] bg-cad-grid border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-4">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
@@ -1007,7 +1007,7 @@ export const Home = () => {
             </div>
 
             {/* Quick Proof Metrics Strip */}
-            <div className="flex items-center gap-4 bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl p-4 shadow-sm shrink-0">
+            <div className="flex items-center gap-4 bg-white dark:bg-[#14171C] border border-zinc-200/90 dark:border-zinc-800/90 rounded-2xl p-4 shadow-sm shrink-0">
               <div className="flex flex-col">
                 <div className="flex items-center gap-1 text-[#D4AF37]">
                   {[...Array(5)].map((_, i) => (
@@ -1030,7 +1030,7 @@ export const Home = () => {
                 className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedTestimonialCategory === cat
                     ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                    : 'bg-white dark:bg-[#181A1E] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/90 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                    : 'bg-white dark:bg-[#14171C] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/90 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
                 }`}
               >
                 {cat}
@@ -1040,7 +1040,7 @@ export const Home = () => {
 
           {/* Testimonials Cards Grid */}
           {filteredTestimonials.length === 0 ? (
-            <div className="py-16 text-center bg-white dark:bg-[#181A1E] rounded-2xl border border-zinc-200 dark:border-[#333] mb-12 shadow-sm">
+            <div className="py-16 text-center bg-white dark:bg-[#14171C] rounded-2xl border border-zinc-200 dark:border-zinc-800 mb-12 shadow-sm">
               <MessageSquareQuote className="mx-auto w-10 h-10 text-zinc-400 dark:text-[#9CA3AF]/40 mb-2" />
               <p className="text-zinc-500 dark:text-[#9CA3AF] text-xs font-mono uppercase tracking-wider">
                 No client endorsements match the selected category.
@@ -1051,7 +1051,7 @@ export const Home = () => {
               {filteredTestimonials.map((t, idx) => (
                 <div 
                   key={t.id || idx} 
-                  className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 relative flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.03)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 hover:-translate-y-1"
+                  className="group rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-8 relative flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.03)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-6">
@@ -1068,15 +1068,15 @@ export const Home = () => {
                     </p>
 
                     {t.projectRef && (
-                      <div className="mb-6 px-3 py-1.5 rounded-lg bg-zinc-50 dark:bg-[#121417] border border-zinc-200/80 dark:border-[#2D3137] text-[11px] font-mono text-zinc-600 dark:text-[#9CA3AF] flex items-center gap-1.5">
+                      <div className="mb-6 px-3 py-1.5 rounded-lg bg-[#FAF9F6] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800 text-[11px] font-mono text-zinc-600 dark:text-[#9CA3AF] flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>
                         <span className="truncate">Ref: {t.projectRef}</span>
                       </div>
                     )}
                   </div>
 
-                  <div className="flex items-center gap-3.5 border-t border-zinc-200 dark:border-[#2D3137] pt-5">
-                    <div className="w-11 h-11 rounded-full bg-zinc-100 dark:bg-[#121417] border-2 border-[#801834]/50 dark:border-[#D4AF37]/60 overflow-hidden flex items-center justify-center font-bold text-[#801834] dark:text-[#D4AF37] text-xs shadow-xs shrink-0">
+                  <div className="flex items-center gap-3.5 border-t border-zinc-200 dark:border-zinc-800 pt-5">
+                    <div className="w-11 h-11 rounded-full bg-zinc-100 dark:bg-[#0E1014] border-2 border-[#801834]/50 dark:border-[#D4AF37]/60 overflow-hidden flex items-center justify-center font-bold text-[#801834] dark:text-[#D4AF37] text-xs shadow-xs shrink-0">
                       {t.avatarUrl ? (
                         <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
                       ) : (
@@ -1086,7 +1086,7 @@ export const Home = () => {
                     <div className="overflow-hidden">
                       <h5 className="text-zinc-900 dark:text-[#EAEAEA] font-bold text-sm truncate">{t.clientName}</h5>
                       <p className="text-zinc-500 dark:text-[#9CA3AF] text-xs truncate">{t.clientRole}</p>
-                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-2 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
+                      <span className="inline-block rounded-full bg-[#FAF9F6] dark:bg-[#0E1014] border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
                         {t.clientCompany}
                       </span>
                     </div>
@@ -1097,7 +1097,7 @@ export const Home = () => {
           )}
 
           {/* Interactive Consultation Prompt / Trust Banner */}
-          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="rounded-2xl bg-white dark:bg-[#14171C] border border-zinc-200/90 dark:border-zinc-800/90 p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                 <ShieldCheck size={26} />
@@ -1121,7 +1121,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 10. LATEST ENGINEERING INSIGHTS                                           */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-white dark:bg-[#121417] border-b border-zinc-200/80 dark:border-zinc-800 transition-colors">
+      <section className="py-24 bg-[#FAF9F6] dark:bg-[#0B0C0E] border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
@@ -1140,16 +1140,16 @@ export const Home = () => {
               <Link 
                 key={i} 
                 to={`/insights/${article.slug || 'innovations-high-strength-c80-concrete'}`} 
-                className="flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-[#121417] border border-zinc-200/80 dark:border-[#333]/80 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-xl"
+                className="flex flex-col justify-between p-6 rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/80 dark:border-zinc-800/80 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-xl"
               >
                 <div>
-                  <div className="p-3 bg-zinc-100 dark:bg-[#181A1E] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-[#333] w-max mb-4 rounded-xl shadow-2xs">
+                  <div className="p-3 bg-[#F4F5F7] dark:bg-[#0E1014] text-[#801834] dark:text-[#D4AF37] border border-zinc-200 dark:border-zinc-800 w-max mb-4 rounded-xl shadow-2xs">
                     <FileText size={20} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#801834] dark:text-[#D4AF37] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
                   <h5 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-4">{article.title}</h5>
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] flex items-center gap-1 pt-4 border-t border-zinc-200 dark:border-[#222]">
+                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] flex items-center gap-1 pt-4 border-t border-zinc-200 dark:border-zinc-800">
                   Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </Link>
@@ -1161,10 +1161,10 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 10.5 VALUE ENGINEERING & CARBON OFFSET CALCULATOR                         */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#F8F9FA] dark:bg-[#14161A] border-b border-zinc-200/80 dark:border-zinc-800 relative transition-colors">
+      <section className="py-20 md:py-28 bg-[#F4F5F7] dark:bg-[#0E1014] bg-cad-dots border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#D4AF37]/40 bg-white dark:bg-[#121417] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
               Optimization Feasibility Model
             </div>
@@ -1183,7 +1183,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 11. CONTACT BENTO STRIP                                                   */}
       {/* ========================================================================= */}
-      <section className="py-20 bg-white dark:bg-[#121417] border-t border-zinc-200/80 dark:border-zinc-800 transition-colors" id="contact">
+      <section className="py-20 bg-[#FAF9F6] dark:bg-[#0B0C0E] border-t border-zinc-200/80 dark:border-zinc-800/80 transition-colors" id="contact">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <span className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
@@ -1196,12 +1196,12 @@ export const Home = () => {
 
           {/* 3-Bento Contact Strip */}
           <div className="relative mb-10">
-            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:bg-[#333] -top-px left-0 right-0"></div>
-            <div className="grid gap-px overflow-hidden bg-zinc-200 dark:bg-[#2D3137] rounded-2xl border border-zinc-200 dark:border-[#333] md:grid-cols-3 shadow-md dark:shadow-2xl">
+            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:border-zinc-800 -top-px left-0 right-0"></div>
+            <div className="grid gap-px overflow-hidden bg-zinc-200 dark:bg-zinc-800 rounded-2xl border border-zinc-200 dark:border-zinc-800 md:grid-cols-3 shadow-md dark:shadow-2xl">
               {/* Card 1: Email */}
               <a 
                 href="mailto:consult@alexandre-structural.com" 
-                className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-5 shadow-xs transition-colors hover:bg-zinc-50 dark:hover:bg-[#1f2227] group"
+                className="flex items-center gap-3 bg-white dark:bg-[#14171C] p-5 shadow-xs transition-colors hover:bg-zinc-50 dark:hover:bg-[#1c2027] group"
               >
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] group-hover:scale-105 transition-transform">
                   <Mail size={18} />
@@ -1215,7 +1215,7 @@ export const Home = () => {
               {/* Card 2: Phone */}
               <a 
                 href="tel:+15550198472" 
-                className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-5 shadow-xs transition-colors hover:bg-zinc-50 dark:hover:bg-[#1f2227] group"
+                className="flex items-center gap-3 bg-white dark:bg-[#14171C] p-5 shadow-xs transition-colors hover:bg-zinc-50 dark:hover:bg-[#1c2027] group"
               >
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] group-hover:scale-105 transition-transform">
                   <Phone size={18} />
@@ -1227,7 +1227,7 @@ export const Home = () => {
               </a>
 
               {/* Card 3: Location */}
-              <div className="flex items-center gap-3 bg-white dark:bg-[#181A1E] p-5 shadow-xs">
+              <div className="flex items-center gap-3 bg-white dark:bg-[#14171C] p-5 shadow-xs">
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#801834]/10 dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37]">
                   <MapPin size={18} />
                 </div>
@@ -1237,11 +1237,11 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:bg-[#333] -bottom-px left-0 right-0"></div>
+            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 dark:border-zinc-800 -bottom-px left-0 right-0"></div>
           </div>
 
           {/* Full Consultation Trigger Banner */}
-          <div className="bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-10 rounded-3xl text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-md dark:shadow-2xl">
+          <div className="bg-white dark:bg-[#14171C] border border-zinc-200/90 dark:border-zinc-800/90 p-8 sm:p-10 rounded-3xl text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-md dark:shadow-2xl">
             <div className="text-left">
               <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-1.5">Ready to Evaluate Your Project's Structural Integrity?</h3>
               <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF]">Submit project drawings, lateral load requirements, or request a third-party peer review.</p>
@@ -1251,7 +1251,6 @@ export const Home = () => {
               className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 active:scale-95"
             >
               Initiate Inquiry <ArrowUpRight size={14} />
-            </button>
           </div>
 
         </div>
