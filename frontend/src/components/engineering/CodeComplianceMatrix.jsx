@@ -90,15 +90,15 @@ export const CodeComplianceMatrix = () => {
   const currentCode = codesData[activeCode] || codesData['ASCE 7-22'];
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 sm:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 bg-cad-grid border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-10 shadow-lg dark:shadow-2xl relative overflow-hidden transition-colors duration-200">
       
       {/* Background blueprint subtle grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 dark:border-[#26282D] relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200/80 dark:border-zinc-800/80 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-[#D4AF37]/40 bg-zinc-50 dark:bg-[#121417] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs font-semibold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-[#F4F5F7] dark:bg-[#0E1014] px-3.5 py-1 text-xs font-mono text-[#801834] dark:text-[#D4AF37] mb-2 shadow-xs font-semibold">
             <FileCheck2 size={13} className="text-[#801834] dark:text-[#D4AF37]" />
             Regulatory Building Code & Municipal Compliance Auditor
           </div>
@@ -111,7 +111,7 @@ export const CodeComplianceMatrix = () => {
         </div>
 
         {/* Code Selector Pills */}
-        <div className="flex flex-wrap gap-2 bg-zinc-100 dark:bg-[#121417] p-1.5 rounded-2xl border border-zinc-200 dark:border-[#333]">
+        <div className="flex flex-wrap gap-2 bg-[#F4F5F7] dark:bg-[#0E1014] p-1.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80">
           {Object.keys(codesData).map((codeKey) => (
             <button
               key={codeKey}
@@ -129,7 +129,7 @@ export const CodeComplianceMatrix = () => {
       </div>
 
       {/* Risk Category & SDC Selectors */}
-      <div className="grid sm:grid-cols-2 gap-4 mb-8 bg-zinc-50 dark:bg-[#121417] p-4 rounded-2xl border border-zinc-200 dark:border-[#2D3137] relative z-10 font-mono text-xs">
+      <div className="grid sm:grid-cols-2 gap-4 mb-8 bg-[#F4F5F7] dark:bg-[#0E1014] p-4 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 relative z-10 font-mono text-xs">
         <div className="flex items-center justify-between gap-4">
           <span className="text-zinc-600 dark:text-[#9CA3AF] uppercase font-bold text-[10px]">Building Risk Category:</span>
           <div className="flex gap-1.5">
@@ -140,7 +140,7 @@ export const CodeComplianceMatrix = () => {
                 className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                   riskCategory === rc
                     ? 'bg-[#801834] text-white shadow-2xs dark:bg-[#D4AF37] dark:text-[#121417]'
-                    : 'bg-white dark:bg-[#181A1E] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333]'
+                    : 'bg-white dark:bg-[#14171C] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80'
                 }`}
               >
                 Cat {rc}
@@ -159,7 +159,7 @@ export const CodeComplianceMatrix = () => {
                 className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
                   seismicCategory === sdc
                     ? 'bg-[#801834] text-white shadow-2xs dark:bg-[#D4AF37] dark:text-[#121417]'
-                    : 'bg-white dark:bg-[#181A1E] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200 dark:border-[#333]'
+                    : 'bg-white dark:bg-[#14171C] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80'
                 }`}
               >
                 {sdc}
@@ -185,7 +185,7 @@ export const CodeComplianceMatrix = () => {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {currentCode.parameters.map((param, i) => (
-              <div key={i} className="p-4 rounded-xl bg-zinc-50 dark:bg-[#121417] border border-zinc-200 dark:border-[#2D3137] flex flex-col justify-between shadow-2xs">
+              <div key={i} className="p-4 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 flex flex-col justify-between shadow-2xs">
                 <div>
                   <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-[#9CA3AF] block mb-1 font-semibold">
                     {param.label}
@@ -194,7 +194,7 @@ export const CodeComplianceMatrix = () => {
                     {param.value}
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] font-medium block mt-2 pt-2 border-t border-zinc-200 dark:border-[#222]">
+                <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] font-medium block mt-2 pt-2 border-t border-zinc-200/80 dark:border-zinc-800/80">
                   {param.note}
                 </span>
               </div>
@@ -203,7 +203,7 @@ export const CodeComplianceMatrix = () => {
         </div>
 
         {/* Right Column: Code Checklist & Certification Stamp (5 cols) */}
-        <div className="lg:col-span-5 rounded-2xl bg-zinc-50 dark:bg-[#14161A] border border-zinc-200 dark:border-[#2D3137] p-6 sm:p-7 flex flex-col justify-between shadow-xs dark:shadow-xl">
+        <div className="lg:col-span-5 rounded-2xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-800/80 p-6 sm:p-7 flex flex-col justify-between shadow-xs dark:shadow-xl">
           <div>
             <h5 className="text-xs font-mono font-bold uppercase text-[#801834] dark:text-[#D4AF37] tracking-wider mb-4 flex items-center gap-2">
               <ShieldCheck size={16} /> Engineering Verification Audit
@@ -211,7 +211,7 @@ export const CodeComplianceMatrix = () => {
 
             <div className="flex flex-col gap-3 font-mono text-xs mb-6">
               {currentCode.checklist.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#121417] border border-zinc-200 dark:border-[#26282D] shadow-2xs">
+                <div key={idx} className="flex items-start gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#14171C] border border-zinc-200/80 dark:border-zinc-800/80 shadow-2xs">
                   <CheckCircle2 size={14} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-zinc-800 dark:text-[#EAEAEA] text-[11px] leading-snug">{item}</span>
                 </div>
@@ -219,7 +219,7 @@ export const CodeComplianceMatrix = () => {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-zinc-200 dark:border-[#26282D] flex items-center justify-between text-xs font-mono text-zinc-500 dark:text-[#9CA3AF]">
+          <div className="pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500 dark:text-[#9CA3AF]">
             <span>Audit Status: <span className="text-emerald-600 dark:text-emerald-400 font-bold">100% Code Verified</span></span>
             <span className="text-[#801834] dark:text-[#D4AF37] font-bold">PE #84729 / SE #92041</span>
           </div>
