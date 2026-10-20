@@ -15,7 +15,7 @@ export const Portfolio = () => {
 
   const { data, loading } = useFetch('/projects');
 
-  const allProjects = data?.projects || [
+  const allProjects = (data?.projects && data.projects.length > 0) ? data.projects : [
     {
       id: '1',
       title: 'Nexus Commercial Tower',

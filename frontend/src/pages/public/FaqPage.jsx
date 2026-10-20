@@ -45,7 +45,7 @@ export const FaqPage = () => {
     }
   ];
 
-  const faqs = data?.faqs || defaultFaqs;
+  const faqs = (data?.faqs && data.faqs.length > 0) ? data.faqs : defaultFaqs;
   const categories = ['All', 'General', 'Consultation', 'Technical', 'Process', 'Cost & Value'];
 
   const filteredFaqs = faqs.filter(faq => {

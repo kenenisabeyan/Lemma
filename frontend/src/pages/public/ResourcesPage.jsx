@@ -46,7 +46,7 @@ export const ResourcesPage = () => {
     }
   ];
 
-  const resources = data?.resources || defaultResources;
+  const resources = (data?.resources && data.resources.length > 0) ? data.resources : defaultResources;
 
   const categories = ['All', 'Design Guides', 'Technical Specifications', 'CAD / BIM Templates', 'Engineering Calculations'];
 
