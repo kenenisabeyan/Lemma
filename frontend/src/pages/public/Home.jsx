@@ -972,38 +972,136 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 9. CLIENT TRUST & TESTIMONIALS                                            */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#F8F9FA] dark:bg-[#14161A] border-b border-zinc-200/80 dark:border-zinc-800 transition-colors">
+      <section id="testimonials" className="py-24 bg-[#F8F9FA] dark:bg-[#14161A] border-b border-zinc-200/80 dark:border-zinc-800 transition-colors scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-14">
-            <h2 className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-              <span className="w-8 h-[1px] bg-[#801834] dark:bg-[#D4AF37]"></span> Industry Endorsements
-            </h2>
-            <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">Client Trust & Testimonials</h3>
+          
+          {/* Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-4">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
+                </span>
+                Industry Endorsements & Client Trust
+              </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
+                Verified Client <span className="text-[#801834] dark:text-[#E84855]">Testimonials.</span>
+              </h2>
+              <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
+                Direct evaluations and technical endorsements from collaborating architects, developers, and civic engineering authorities.
+              </p>
+            </div>
+
+            {/* Quick Proof Metrics Strip */}
+            <div className="flex items-center gap-4 bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl p-4 shadow-sm shrink-0">
+              <div className="flex flex-col">
+                <div className="flex items-center gap-1 text-[#D4AF37]">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={14} fill="#D4AF37" className="text-[#D4AF37]" />
+                  ))}
+                </div>
+                <span className="text-[11px] font-mono text-zinc-500 dark:text-[#9CA3AF] mt-1 font-semibold">
+                  5.0 ★ Rating from 40+ Projects
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-10 relative flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.03)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300">
-                <Quote className="text-zinc-300 dark:text-[#2A2E35] w-14 h-14 absolute top-6 right-6 pointer-events-none group-hover:text-[#801834]/20 dark:group-hover:text-[#D4AF37]/20 transition-colors" />
-                <p className="text-zinc-800 dark:text-[#EAEAEA] text-sm sm:text-base leading-relaxed mb-8 relative z-10 italic font-light">
-                  "{t.content}"
-                </p>
-                <div className="flex items-center gap-4 border-t border-zinc-200 dark:border-[#2D3137] pt-6">
-                  <div className="w-12 h-12 bg-zinc-100 dark:bg-[#121417] border-2 border-[#801834]/60 dark:border-[#D4AF37]/60 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#801834] dark:text-[#D4AF37] text-sm shadow-xs">
-                    {t.avatarUrl ? (
-                      <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
-                    ) : (
-                      t.clientName.slice(0, 2)
-                    )}
-                  </div>
-                  <div>
-                    <h5 className="text-zinc-900 dark:text-[#EAEAEA] font-bold text-sm">{t.clientName}</h5>
-                    <p className="text-zinc-500 dark:text-[#9CA3AF] text-xs uppercase tracking-wider">{t.clientRole}, {t.clientCompany}</p>
-                  </div>
-                </div>
-              </div>
+          {/* Category Filter Tabs */}
+          <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-none items-center mb-10">
+            {testimonialCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedTestimonialCategory(cat)}
+                className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
+                  selectedTestimonialCategory === cat
+                    ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
+                    : 'bg-white dark:bg-[#181A1E] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/90 dark:border-[#333] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                }`}
+              >
+                {cat}
+              </button>
             ))}
           </div>
+
+          {/* Testimonials Cards Grid */}
+          {filteredTestimonials.length === 0 ? (
+            <div className="py-16 text-center bg-white dark:bg-[#181A1E] rounded-2xl border border-zinc-200 dark:border-[#333] mb-12 shadow-sm">
+              <MessageSquareQuote className="mx-auto w-10 h-10 text-zinc-400 dark:text-[#9CA3AF]/40 mb-2" />
+              <p className="text-zinc-500 dark:text-[#9CA3AF] text-xs font-mono uppercase tracking-wider">
+                No client endorsements match the selected category.
+              </p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {filteredTestimonials.map((t, idx) => (
+                <div 
+                  key={t.id || idx} 
+                  className="group rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 relative flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.03)] dark:shadow-xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <div className="flex gap-1 text-[#D4AF37]">
+                        {[...Array(t.rating || 5)].map((_, i) => (
+                          <Star key={i} size={15} fill="#D4AF37" className="text-[#D4AF37]" />
+                        ))}
+                      </div>
+                      <Quote className="text-zinc-300 dark:text-[#2A2E35] w-8 h-8 group-hover:text-[#801834]/40 dark:group-hover:text-[#D4AF37]/40 transition-colors" />
+                    </div>
+
+                    <p className="text-zinc-800 dark:text-[#EAEAEA] text-sm leading-relaxed mb-6 italic font-light">
+                      "{t.content}"
+                    </p>
+
+                    {t.projectRef && (
+                      <div className="mb-6 px-3 py-1.5 rounded-lg bg-zinc-50 dark:bg-[#121417] border border-zinc-200/80 dark:border-[#2D3137] text-[11px] font-mono text-zinc-600 dark:text-[#9CA3AF] flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>
+                        <span className="truncate">Ref: {t.projectRef}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-3.5 border-t border-zinc-200 dark:border-[#2D3137] pt-5">
+                    <div className="w-11 h-11 rounded-full bg-zinc-100 dark:bg-[#121417] border-2 border-[#801834]/50 dark:border-[#D4AF37]/60 overflow-hidden flex items-center justify-center font-bold text-[#801834] dark:text-[#D4AF37] text-xs shadow-xs shrink-0">
+                      {t.avatarUrl ? (
+                        <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
+                      ) : (
+                        (t.clientName || 'CL').slice(0, 2).toUpperCase()
+                      )}
+                    </div>
+                    <div className="overflow-hidden">
+                      <h5 className="text-zinc-900 dark:text-[#EAEAEA] font-bold text-sm truncate">{t.clientName}</h5>
+                      <p className="text-zinc-500 dark:text-[#9CA3AF] text-xs truncate">{t.clientRole}</p>
+                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-2 py-0.5 text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
+                        {t.clientCompany}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Interactive Consultation Prompt / Trust Banner */}
+          <div className="rounded-2xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                <ShieldCheck size={26} />
+              </div>
+              <div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-[#EAEAEA]">100% Structural Safety & Peer-Review Track Record</h4>
+                <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-0.5">Every project engineered to exceed IBC, ASCE 7, and ACI standards with zero structural drift failures.</p>
+              </div>
+            </div>
+            <Link
+              to="/contact"
+              className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-sm shrink-0 inline-flex items-center gap-2"
+            >
+              Request Consultation <ArrowUpRight size={14} />
+            </Link>
+          </div>
+
         </div>
       </section>
 

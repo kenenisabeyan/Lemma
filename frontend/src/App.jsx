@@ -19,7 +19,6 @@ import { CaseStudyPage } from './pages/public/CaseStudy';
 import { InsightsPage } from './pages/public/InsightsPage';
 import { InsightDetail } from './pages/public/InsightDetail';
 import { ResourcesPage } from './pages/public/ResourcesPage';
-import { TestimonialsPage } from './pages/public/TestimonialsPage';
 import { FaqPage } from './pages/public/FaqPage';
 import { Contact } from './pages/public/Contact';
 
