@@ -4,37 +4,37 @@
 
 @layer base {
   :root {
-    --bg-main: #FAF9F6;
+    --bg-main: #F8FAFC;
     --bg-surface: #FFFFFF;
-    --bg-subtle: #F4F5F7;
+    --bg-subtle: #F1F5F9;
     --bg-tint-wine: #FAF0F3;
     --bg-tint-slate: #F1F5F9;
-    --bg-tint-amber: #FAF8F5;
-    --text-main: #0B0C0E;
+    --bg-tint-amber: #FEF3C7;
+    --text-main: #0F172A;
     --card-bg: #FFFFFF;
-    --border-color: rgba(228, 228, 231, 0.9);
+    --border-color: rgba(226, 232, 240, 0.9);
     --wine-primary: #801834;
     --wine-hover: #671229;
   }
 
   html.dark {
-    --bg-main: #0B0C0E;
-    --bg-surface: #14171C;
-    --bg-subtle: #0E1014;
+    --bg-main: #0B0F19;
+    --bg-surface: #111827;
+    --bg-subtle: #0F172A;
     --bg-tint-wine: #261219;
-    --bg-tint-slate: #151A21;
+    --bg-tint-slate: #162032;
     --bg-tint-amber: #242013;
-    --text-main: #EAEAEA;
-    --card-bg: rgba(20, 23, 28, 0.92);
-    --border-color: rgba(39, 43, 51, 0.9);
-    --wine-primary: #9E1F43;
-    --wine-hover: #801834;
+    --text-main: #F8FAFC;
+    --card-bg: rgba(17, 24, 39, 0.95);
+    --border-color: rgba(51, 65, 85, 0.7);
+    --wine-primary: #E11D48;
+    --wine-hover: #BE123C;
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-[#FAF9F6] text-zinc-900 dark:bg-[#0B0C0E] dark:text-[#EAEAEA];
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-[#F8FAFC] text-slate-900 dark:bg-[#0B0F19] dark:text-slate-100;
   }
 }
 
@@ -45,20 +45,20 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F4F5F7;
+  background: #F1F5F9;
 }
 
 html.dark ::-webkit-scrollbar-track {
-  background: #0B0C0E;
+  background: #0B0F19;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4D4D8;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background: #272B33;
+  background: #1E293B;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -66,13 +66,19 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #38BDF8;
 }
 
 /* Structural Blueprint Grid Backgrounds */
 .bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+html.dark .bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -85,30 +91,30 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 /* Precision CAD Architectural Drafting Grid (Major & Minor Precision Grid) */
 .bg-cad-grid {
   background-image: 
-    linear-gradient(to right, rgba(128, 24, 52, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(128, 24, 52, 0.07) 1px, transparent 1px),
-    linear-gradient(to right, rgba(128, 24, 52, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(128, 24, 52, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(15, 23, 42, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
   background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
 
 html.dark .bg-cad-grid {
   background-image: 
-    linear-gradient(to right, rgba(212, 175, 55, 0.09) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.09) 1px, transparent 1px),
-    linear-gradient(to right, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(148, 163, 184, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.02) 1px, transparent 1px);
   background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
 
 /* Micro CAD Drafting Coordinate Dots */
 .bg-cad-dots {
-  background-image: radial-gradient(rgba(128, 24, 52, 0.08) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 
 html.dark .bg-cad-dots {
-  background-image: radial-gradient(rgba(212, 175, 55, 0.09) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(56, 189, 248, 0.07) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 

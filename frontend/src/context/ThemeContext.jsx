@@ -6,8 +6,8 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('portfolio_theme');
     if (saved) return saved;
-    // Default to light mode to match the exact aesthetic of the screenshot
-    return 'light';
+    // Default to dark mode to match structural engineering CAD workstation standard
+    return 'dark';
   });
 
   useEffect(() => {

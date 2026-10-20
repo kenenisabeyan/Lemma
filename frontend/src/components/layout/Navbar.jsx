@@ -72,7 +72,7 @@ export const Navbar = () => {
       <header 
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-[#FAF9F6]/95 dark:bg-[#0B0C0E]/90 backdrop-blur-xl border-b border-zinc-200/80 dark:border-zinc-800/80 shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
+            ? 'bg-[#F8FAFC]/95 dark:bg-[#0B0F19]/95 backdrop-blur-xl border-b border-slate-200/90 dark:border-slate-800/90 shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
             : 'bg-transparent py-4 sm:py-6'
         }`}
       >
@@ -163,7 +163,7 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 260 }}
-              className="relative z-10 w-full max-w-md bg-[#FAF9F6] dark:bg-[#0E1014] border-l border-zinc-200 dark:border-zinc-800 shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
+              className="relative z-10 w-full max-w-md bg-[#F8FAFC] dark:bg-[#0F172A] border-l border-slate-200 dark:border-slate-800 shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
             >
               {/* Drawer Top */}
               <div>
