@@ -578,7 +578,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       <section className="py-20 md:py-24 bg-white dark:bg-[#121417] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800" id="projects">
         <div className="max-w-5xl mx-auto px-6 space-y-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-amber-200/70 dark:border-[#26282D]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-zinc-200/80 dark:border-[#26282D]">
             <div>
               <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
@@ -605,7 +605,7 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden rounded-2xl border border-amber-100/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] md:grid-cols-2 shadow-[0_8px_30px_rgba(0,0,0,0.05)] dark:shadow-2xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300"
+                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-[#181A1E] md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] dark:shadow-2xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300"
                 >
                   {/* Left Column Image */}
                   <div className="relative overflow-hidden border-b border-zinc-200 dark:border-[#333]/80 md:border-b-0 md:border-r min-h-[280px]">
