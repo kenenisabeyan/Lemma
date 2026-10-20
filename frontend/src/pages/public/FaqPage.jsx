@@ -78,7 +78,7 @@ export const FaqPage = () => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
             Understanding Structural <span className="text-[#801834] dark:text-[#E84855]">Engineering.</span>
           </h1>
-          <div className="rounded-2xl bg-white/95 dark:bg-[#181A1E]/80 backdrop-blur-md border border-rose-100/90 dark:border-zinc-800 p-6 shadow-[0_8px_30px_rgba(128,24,52,0.04)] max-w-2xl mx-auto">
+          <div className="rounded-2xl bg-white dark:bg-[#181A1E] backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-2xl mx-auto">
             <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed">
               Essential questions answered in clear, plain language to clarify engineering processes, building safety standards, and project timelines for clients and developers.
             </p>
