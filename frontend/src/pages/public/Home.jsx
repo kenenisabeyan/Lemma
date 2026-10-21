@@ -463,17 +463,17 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3.5 INTERACTIVE LOAD PATH & STRUCTURAL TELEMETRY SIMULATOR                */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#F4F5F7] dark:bg-[#0E1014] bg-cad-dots border-t border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
+      <section className="py-20 md:py-28 bg-[#FFFFFF] dark:bg-[#0E1014] border-t border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Dynamic Mechanics Simulation
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Real-Time Lateral & Seismic <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Load Path.</span>
+              Real-Time Lateral & Seismic <span className="text-[#D4AF37]">Load Path.</span>
             </h2>
-            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-[#54595F] dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
               Explore how wind aerodynamic drift, non-linear seismic ground motions, and gravitational vectors propagate through reinforced concrete cores and outrigger belt trusses down into bedrock.
             </p>
           </div>
@@ -485,16 +485,16 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 4. ABOUT ME SECTION                                                       */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#FAF9F6] dark:bg-[#0B0C0E] border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
+      <section className="py-24 bg-[#FFFFFF] dark:bg-[#0B0C0E] border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5 relative">
               <div className="relative">
                 {/* Decorative Outer Mask Frame */}
-                <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#801834]/20 dark:border-[#D4AF37]/25 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none"></div>
+                <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 pointer-events-none"></div>
 
-                <div className="relative border border-zinc-200/90 dark:border-zinc-800/90 p-2.5 bg-white/95 dark:bg-[#14171C]/95 rounded-2xl shadow-lg dark:shadow-2xl group hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300">
+                <div className="relative border border-zinc-200/90 dark:border-zinc-800/90 p-2.5 bg-[#FFFFFF] dark:bg-[#14171C]/95 rounded-2xl shadow-lg dark:shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-300">
                   <div className="aspect-[4/5] bg-zinc-100 dark:bg-[#0E1014] overflow-hidden rounded-xl">
                     <img
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
@@ -503,21 +503,21 @@ export const Home = () => {
                     />
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-[#0E1014]/95 border border-zinc-200 dark:border-[#D4AF37]/60 p-4 text-xs font-mono rounded-xl shadow-md dark:shadow-xl backdrop-blur-md">
-                    <div className="flex justify-between items-center text-[#801834] dark:text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
+                    <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
                       <span>PE #84729-NY</span>
                       <span>SE #92041-CA</span>
                     </div>
-                    <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF] uppercase tracking-widest block">Licensed Structural Engineer & ASCE Fellow</span>
+                    <span className="text-[10px] text-[#54595F] dark:text-[#9CA3AF] uppercase tracking-widest block font-medium">Licensed Structural Engineer & ASCE Fellow</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 bg-white dark:bg-[#14171C] px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs w-max font-semibold">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#14171C] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs w-max font-semibold">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] dark:bg-[#D4AF37] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834] dark:bg-[#D4AF37]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
                 </span>
                 Professional Background
               </div>
@@ -526,28 +526,28 @@ export const Home = () => {
                 Structural Engineering Behind Visionary Architecture.
               </h2>
 
-              <p className="text-zinc-600 dark:text-[#9CA3AF] text-base leading-relaxed">
+              <p className="text-[#54595F] dark:text-[#9CA3AF] text-base leading-relaxed">
                 With over 14 years of specialized structural practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
               </p>
 
-              <div className="bg-zinc-50 dark:bg-[#121417] border-l-2 border-[#801834] dark:border-[#D4AF37] p-5 text-sm text-zinc-800 dark:text-[#EAEAEA] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200 dark:border-[#2D3137]">
+              <div className="bg-[#FFFFFF] dark:bg-[#121417] border-l-2 border-[#D4AF37] p-5 text-sm text-[#54595F] dark:text-[#EAEAEA] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200 dark:border-[#2D3137]">
                 "Structural engineering should never be treated as an architectural limitation. When calculated with precision, physics becomes the catalyst that enables daring, column-free spaces."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
-                  <GraduationCap className="text-[#801834] dark:text-[#D4AF37] w-5 h-5 shrink-0" />
+                <div className="flex items-center gap-3 bg-[#FFFFFF] dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
+                  <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 dark:text-[#EAEAEA] font-bold block">M.S. Structural Engineering</span>
-                    <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Columbia University</span>
+                    <span className="text-[10px] text-[#54595F] dark:text-[#9CA3AF]">Columbia University</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 bg-zinc-50 dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
-                  <ShieldCheck className="text-[#801834] dark:text-[#D4AF37] w-5 h-5 shrink-0" />
+                <div className="flex items-center gap-3 bg-[#FFFFFF] dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
+                  <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 dark:text-[#EAEAEA] font-bold block">100% Safety Compliance</span>
-                    <span className="text-[10px] text-zinc-500 dark:text-[#9CA3AF]">Zero Audit Deficiencies</span>
+                    <span className="text-[10px] text-[#54595F] dark:text-[#9CA3AF]">Zero Audit Deficiencies</span>
                   </div>
                 </div>
               </div>
@@ -555,13 +555,13 @@ export const Home = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/about"
-                  className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.25)] flex items-center gap-2"
+                  className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] flex items-center gap-2 font-bold"
                 >
                   Full Biography & Credentials <ArrowUpRight size={14} />
                 </Link>
                 <a
                   href="/resources"
-                  className="rounded-full bg-white dark:bg-[#121417] text-zinc-800 dark:text-[#EAEAEA] border border-zinc-300 dark:border-[#333] hover:border-[#801834] dark:hover:border-[#D4AF37] hover:text-[#801834] dark:hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                  className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] text-[#54595F] dark:text-[#EAEAEA] border border-zinc-300 dark:border-[#333] hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
                 >
                   Download CV (PDF) <Download size={14} />
                 </a>
@@ -575,31 +575,31 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 5. EXPERTISE / SERVICES SECTION                                           */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#F4F5F7] dark:bg-[#0E1014] bg-cad-grid relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
+      <section className="py-24 bg-[#FFFFFF] dark:bg-[#0E1014] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="text-[#801834] dark:text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#801834] dark:bg-[#D4AF37]"></span> Core Capabilities
+              <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Core Capabilities
               </h2>
               <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">Engineering Services</h3>
             </div>
-            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
+            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
               Explore All Services <ChevronRight size={16} />
             </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((srv, index) => (
-              <div key={index} className="group rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_6px_25px_rgba(0,0,0,0.04)] dark:shadow-xl flex flex-col justify-between">
+              <div key={index} className="group rounded-2xl bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_6px_25px_rgba(0,0,0,0.03)] dark:shadow-xl flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-white dark:bg-[#0E1014] border border-zinc-200 dark:border-[#D4AF37]/40 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
+                  <div className="w-12 h-12 bg-[#FEF9E7] dark:bg-[#0E1014] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
                     <Building2 size={24} />
                   </div>
-                  <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3 group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
-                  <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
+                  <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
+                  <p className="text-[#54595F] dark:text-[#9CA3AF] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 dark:text-[#9CA3AF] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200 dark:border-zinc-800">
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] dark:text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200 dark:border-zinc-800">
                   Scope & Deliverables <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
@@ -611,7 +611,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 6. STATISTICS ROW                                                         */}
       {/* ========================================================================= */}
-      <section className="py-12 bg-white dark:bg-[#14171C] border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors">
+      <section className="py-12 bg-[#FFFFFF] dark:bg-[#14171C] border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           <StatCounter value={settings.yearsExp || '14+'} label="Years Experience" subtext="PE & SE Certified" />
           <StatCounter value={settings.projectsCount || '180+'} label="Projects Completed" subtext="High-Rise & Infrastructure" />
@@ -623,21 +623,21 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 7. FEATURED PROJECTS CASE STUDIES                                         */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-[#FAF9F6] dark:bg-[#0B0C0E] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80" id="projects">
+      <section className="py-20 md:py-24 bg-[#FFFFFF] dark:bg-[#0B0C0E] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80" id="projects">
         <div className="max-w-5xl mx-auto px-6 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-zinc-200/80 dark:border-zinc-800/80">
             <div>
-              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] font-semibold">
-                <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 <span>Featured Engineering Practice</span>
               </div>
               <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-zinc-900 dark:text-[#EAEAEA]">
-                Projects<span className="text-[#801834] dark:text-[#D4AF37]">.</span>
+                Projects<span className="text-[#D4AF37]">.</span>
               </h2>
             </div>
             <Link 
               to="/projects" 
-              className="rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#14171C] text-zinc-800 dark:text-[#EAEAEA] hover:border-[#801834] dark:hover:border-[#D4AF37] hover:text-[#801834] dark:hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
+              className="rounded-full border border-zinc-300 dark:border-zinc-700 bg-[#FFFFFF] dark:bg-[#14171C] text-[#54595F] dark:text-[#EAEAEA] hover:border-[#D4AF37] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
             >
               Browse All Projects <ChevronRight size={14} />
             </Link>
@@ -652,7 +652,7 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] dark:shadow-2xl hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300"
+                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] dark:shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300"
                 >
                   {/* Left Column Image */}
                   <div className="relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800/90 md:border-b-0 md:border-r min-h-[280px]">
@@ -662,11 +662,11 @@ export const Home = () => {
                       className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] grayscale opacity-85 group-hover:grayscale-0"
                     />
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="rounded-full bg-white/95 dark:bg-[#0E1014]/90 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200/90 dark:border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+                      <span className="rounded-full bg-[#FFFFFF]/95 dark:bg-[#0E1014]/90 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
                         {proj.category}
                       </span>
                     </div>
-                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-zinc-600 dark:text-[#9CA3AF] bg-white/95 dark:bg-[#0E1014]/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200 dark:border-zinc-800 shadow-xs">
+                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] dark:text-[#9CA3AF] bg-[#FFFFFF]/95 dark:bg-[#0E1014]/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200 dark:border-zinc-800 shadow-xs font-semibold">
                       PE-SE SEALED · {proj.year}
                     </div>
                   </div>
@@ -674,29 +674,29 @@ export const Home = () => {
                   {/* Right Column Content */}
                   <div className="flex flex-col gap-4 p-6 md:p-8 justify-between">
                     <div>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-zinc-500 dark:text-[#9CA3AF] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
-                        <span className="text-[#801834] dark:text-[#D4AF37] flex items-center gap-1">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#54595F] dark:text-[#9CA3AF] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
+                        <span className="text-[#D4AF37] flex items-center gap-1">
                           <MapPin size={12} /> {proj.location}
                         </span>
                         <span aria-hidden="true">·</span>
                         <span>{proj.year}</span>
                       </div>
                       
-                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
+                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
                         {proj.title}
                       </h3>
                       
-                      <p className="text-zinc-600 dark:text-[#9CA3AF] text-xs sm:text-sm leading-relaxed mb-4">
+                      <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs sm:text-sm leading-relaxed mb-4">
                         {proj.description}
                       </p>
 
-                      <ul className="space-y-1.5 text-zinc-600 dark:text-[#9CA3AF] text-xs mb-4">
+                      <ul className="space-y-1.5 text-[#54595F] dark:text-[#9CA3AF] text-xs mb-4">
                         <li className="flex gap-2">
-                          <span aria-hidden="true" className="text-[#801834] dark:text-[#D4AF37] font-bold">—</span>
+                          <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
                           <span><strong className="text-zinc-900 dark:text-[#EAEAEA]">System:</strong> {proj.structuralSystem}</span>
                         </li>
                         <li className="flex gap-2">
-                          <span aria-hidden="true" className="text-[#801834] dark:text-[#D4AF37] font-bold">—</span>
+                          <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
                           <span><strong className="text-zinc-900 dark:text-[#EAEAEA]">Result:</strong> {proj.result}</span>
                         </li>
                       </ul>
@@ -705,7 +705,7 @@ export const Home = () => {
                         {softwareList.slice(0, 4).map((soft) => (
                           <span 
                             key={soft}
-                            className="inline-flex items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-[#FAF0F3] dark:bg-[#0E1014] px-2.5 py-0.5 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] shadow-2xs"
+                            className="inline-flex items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-[#FFFFFF] dark:bg-[#0E1014] px-2.5 py-0.5 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] shadow-2xs font-semibold"
                           >
                             {soft}
                           </span>
@@ -716,13 +716,13 @@ export const Home = () => {
                     <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
                       <button
                         onClick={() => setSelectedCaseStudy(proj)}
-                        className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
+                        className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
                       >
                         Explore Case Study <ArrowUpRight size={13} />
                       </button>
                       <Link 
                         to={`/projects/${proj.slug || 'nexus-commercial-tower'}`}
-                        className="text-[11px] font-mono text-zinc-500 dark:text-[#9CA3AF] hover:text-[#801834] dark:hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
+                        className="text-[11px] font-mono text-[#54595F] dark:text-[#9CA3AF] hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
                       >
                         Dedicated Page →
                       </Link>
