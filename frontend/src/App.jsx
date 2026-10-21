@@ -86,7 +86,7 @@ const PublicLayout = ({ children }) => {
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
       <Navbar />
-      <main className="bg-[#F8FAFC] dark:bg-[#0B0F19] min-h-screen text-slate-900 dark:text-slate-100 transition-colors duration-200">{children}</main>
+      <main className="bg-[#FFFFFF] dark:bg-[#0B0F19] min-h-screen text-[#54595F] dark:text-slate-100 transition-colors duration-200">{children}</main>
       <FloatingDock />
       <Footer />
     </>
@@ -128,11 +128,11 @@ export default function App() {
 
         {/* Custom 404 Route */}
         <Route path="*" element={
-          <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 flex flex-col items-center justify-center p-6 text-center transition-colors">
-            <h1 className="text-8xl font-extrabold text-[#801834] dark:text-[#D4AF37] font-mono">404</h1>
-            <p className="text-xl font-bold uppercase tracking-wider mt-4">Structural Boundary Not Found</p>
-            <p className="text-xs text-zinc-500 dark:text-[#9CA3AF] mt-2 mb-6">The requested engineering route does not exist in the blueprint schema.</p>
-            <a href="/" className="bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-zinc-900 dark:hover:bg-white transition-colors rounded-full shadow-md">
+          <div className="min-h-screen bg-[#FFFFFF] dark:bg-[#0B0F19] text-[#54595F] dark:text-slate-100 flex flex-col items-center justify-center p-6 text-center transition-colors">
+            <h1 className="text-8xl font-extrabold text-[#D4AF37] font-mono">404</h1>
+            <p className="text-xl font-bold uppercase tracking-wider mt-4 text-zinc-900 dark:text-white">Structural Boundary Not Found</p>
+            <p className="text-xs text-[#54595F] dark:text-[#9CA3AF] mt-2 mb-6">The requested engineering route does not exist in the blueprint schema.</p>
+            <a href="/" className="bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#c49f2c] transition-colors rounded-full shadow-md">
               Return to Homepage
             </a>
           </div>
