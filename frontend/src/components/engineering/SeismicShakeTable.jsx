@@ -75,7 +75,7 @@ export const SeismicShakeTable = () => {
           shearReduction: 0,
           dampingRatio: '3.5% (Elastic Concrete)',
           damageLevel: activePGA > 0.8 ? 'Severe / Plastic Hinging' : activePGA > 0.5 ? 'Moderate Cracking' : 'Minimal',
-          damageBadgeColor: activePGA > 0.8 ? 'text-rose-400 bg-rose-500/10 border-rose-500/30' : 'text-amber-400 bg-amber-500/10 border-amber-500/30',
+          damageBadgeColor: activePGA > 0.8 ? 'text-rose-600 bg-rose-50 border-rose-200' : 'text-amber-600 bg-amber-50 border-amber-200',
           driftVal: (activePGA * 1.85).toFixed(2), // %
           baseShear: Math.round(activePGA * 4800), // kN
           swayAmplitude: 34 * pgaMultiplier
@@ -87,7 +87,7 @@ export const SeismicShakeTable = () => {
           shearReduction: 42,
           dampingRatio: '28% (Viscous Fluid Dissipation)',
           damageLevel: 'Immediate Occupancy (Elastic)',
-          damageBadgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
+          damageBadgeColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
           driftVal: (activePGA * 0.96).toFixed(2), // %
           baseShear: Math.round(activePGA * 2800), // kN
           swayAmplitude: 16 * pgaMultiplier
@@ -99,7 +99,7 @@ export const SeismicShakeTable = () => {
           shearReduction: 68,
           dampingRatio: '32% (Hysteretic Isolation)',
           damageLevel: 'Operational (Zero Structural Damage)',
-          damageBadgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
+          damageBadgeColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
           driftVal: (activePGA * 0.48).toFixed(2), // %
           baseShear: Math.round(activePGA * 1550), // kN
           swayAmplitude: 8 * pgaMultiplier
@@ -111,7 +111,7 @@ export const SeismicShakeTable = () => {
           shearReduction: 35,
           dampingRatio: '18% (Inertial Counterweight)',
           damageLevel: 'Minor Reversible Micro-Cracking',
-          damageBadgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
+          damageBadgeColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
           driftVal: (activePGA * 1.15).toFixed(2), // %
           baseShear: Math.round(activePGA * 3120), // kN
           swayAmplitude: 20 * pgaMultiplier
@@ -155,28 +155,19 @@ export const SeismicShakeTable = () => {
     : 0;
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-6 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden">
-      {/* Background Architectural Grid */}
-      <div 
-        aria-hidden="true" 
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #801834 1px, transparent 0)',
-          backgroundSize: '24px 24px'
-        }}
-      ></div>
-
+    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 lg:p-10 shadow-xl relative overflow-hidden">
+      
       {/* Header Banner */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-[#2D3137]">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200">
         <div>
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] font-bold">
+          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold">
             <Activity size={14} className="animate-pulse" />
             <span>Non-Linear Response History Analysis (NLRHA)</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
-            Earthquake Shake Table & Seismic Dissipation Simulator
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#54595F] tracking-tight">
+            Earthquake Shake Table & <span className="text-[#D4AF37]">Seismic Dissipation</span> Simulator
           </h3>
-          <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
             Test a 40-story structural tower against recorded earthquake accelerograms. Evaluate the dramatic energy dissipation achieved through base isolation, viscous dampers, and tuned mass dampers.
           </p>
         </div>
@@ -186,8 +177,8 @@ export const SeismicShakeTable = () => {
             onClick={() => setIsSimulating(!isSimulating)}
             className={`rounded-full px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-md ${
               isSimulating
-                ? 'bg-rose-500 text-white hover:bg-rose-600 shadow-[0_0_20px_rgba(244,63,94,0.35)]'
-                : 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] hover:bg-zinc-900 dark:hover:bg-white hover:scale-105'
+                ? 'bg-rose-500 text-white hover:bg-rose-600'
+                : 'bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] hover:scale-105'
             }`}
           >
             {isSimulating ? (
@@ -208,8 +199,8 @@ export const SeismicShakeTable = () => {
         
         {/* Left Column: Earthquake Record Selection */}
         <div className="lg:col-span-5 space-y-4">
-          <label className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>
+          <label className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
             1. Select Recorded Earthquake Accelerogram
           </label>
 
@@ -223,28 +214,28 @@ export const SeismicShakeTable = () => {
                   onClick={() => { setSelectedEarthquake(key); setIsSimulating(false); }}
                   className={`p-3.5 rounded-xl border text-left transition-all relative ${
                     isSelected
-                      ? 'bg-zinc-50 dark:bg-[#121417] border-[#801834] dark:border-[#D4AF37] shadow-sm'
-                      : 'bg-white dark:bg-[#14161A] border-zinc-200 dark:border-[#333] hover:border-zinc-300 dark:hover:border-[#555] text-zinc-600 dark:text-[#9CA3AF]'
+                      ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
+                      : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37] text-[#54595F]'
                   }`}
                 >
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] font-bold">{eq.magnitude}</span>
-                    <span className="text-[9px] font-mono text-zinc-500 dark:text-[#9CA3AF]">{eq.basePGA}g PGA</span>
+                    <span className="text-[10px] font-mono text-[#D4AF37] font-bold">{eq.magnitude}</span>
+                    <span className="text-[9px] font-mono text-[#54595F]/75">{eq.basePGA}g PGA</span>
                   </div>
-                  <h4 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] truncate">{eq.name}</h4>
-                  <span className="text-[10px] font-mono text-zinc-500 dark:text-[#777] block mt-0.5">{eq.type}</span>
+                  <h4 className="text-xs font-bold text-[#54595F] truncate">{eq.name}</h4>
+                  <span className="text-[10px] font-mono text-[#54595F]/75 block mt-0.5">{eq.type}</span>
                 </button>
               );
             })}
           </div>
 
           {/* PGA Multiplier Slider */}
-          <div className="bg-zinc-50 dark:bg-[#121417] p-4 rounded-xl border border-zinc-200 dark:border-[#333] space-y-2">
+          <div className="bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 space-y-2">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-600 dark:text-[#9CA3AF] flex items-center gap-1.5 font-bold">
-                <Sliders size={13} className="text-[#801834] dark:text-[#D4AF37]" /> Ground Motion Intensity:
+              <span className="text-[#54595F] flex items-center gap-1.5 font-bold">
+                <Sliders size={13} className="text-[#D4AF37]" /> Ground Motion Intensity:
               </span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{pgaMultiplier}x ({activePGA}g PGA)</span>
+              <span className="text-[#D4AF37] font-bold">{pgaMultiplier}x ({activePGA}g PGA)</span>
             </div>
             <input 
               type="range"
@@ -253,9 +244,9 @@ export const SeismicShakeTable = () => {
               step="0.1"
               value={pgaMultiplier}
               onChange={(e) => setPgaMultiplier(parseFloat(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 dark:bg-[#26282D] rounded-lg appearance-none cursor-pointer accent-[#801834] dark:accent-[#D4AF37]"
+              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
-            <div className="flex justify-between text-[10px] font-mono text-zinc-500 dark:text-[#666]">
+            <div className="flex justify-between text-[10px] font-mono text-[#54595F]/75">
               <span>0.5x (Moderate)</span>
               <span>1.0x (Design Basis DBE)</span>
               <span>2.0x (Max Considered MCE_R)</span>
@@ -265,8 +256,8 @@ export const SeismicShakeTable = () => {
 
         {/* Right Column: Damping System Selector */}
         <div className="lg:col-span-7 space-y-4">
-          <label className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>
+          <label className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
             2. Structural Energy Dissipation Mechanism
           </label>
 
@@ -284,21 +275,21 @@ export const SeismicShakeTable = () => {
                   onClick={() => setDampingSystem(sys.id)}
                   className={`p-4 rounded-xl border text-left transition-all flex flex-col justify-between ${
                     isSelected
-                      ? 'bg-zinc-50 dark:bg-[#121417] border-[#801834] dark:border-[#D4AF37] shadow-sm'
-                      : 'bg-white dark:bg-[#14161A] border-zinc-200 dark:border-[#333] hover:border-zinc-300 dark:hover:border-[#555]'
+                      ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
+                      : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37]'
                   }`}
                 >
                   <div>
                     <div className="flex justify-between items-center mb-1">
                       <span className={`text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded ${
-                        isSelected ? 'bg-[#801834]/10 dark:bg-[#D4AF37]/20 text-[#801834] dark:text-[#D4AF37]' : 'bg-zinc-100 dark:bg-[#222] text-zinc-500 dark:text-[#888]'
+                        isSelected ? 'bg-[#D4AF37]/20 text-[#D4AF37]' : 'bg-zinc-100 text-[#54595F]'
                       }`}>
                         {sys.tag}
                       </span>
-                      {isSelected && <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span>}
+                      {isSelected && <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>}
                     </div>
-                    <h5 className="text-xs font-bold text-zinc-900 dark:text-[#EAEAEA] mb-1">{sys.title}</h5>
-                    <p className="text-[11px] text-zinc-600 dark:text-[#9CA3AF] leading-relaxed">{sys.desc}</p>
+                    <h5 className="text-xs font-bold text-[#54595F] mb-1">{sys.title}</h5>
+                    <p className="text-[11px] text-[#54595F] leading-relaxed">{sys.desc}</p>
                   </div>
                 </button>
               );
@@ -312,15 +303,15 @@ export const SeismicShakeTable = () => {
       <div className="relative z-10 grid lg:grid-cols-12 gap-6 items-stretch my-6">
         
         {/* Left Column: Animated Dynamic Structural Tower */}
-        <div className="lg:col-span-7 bg-zinc-50 dark:bg-[#121417] rounded-2xl border border-zinc-200 dark:border-[#333] p-6 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
+        <div className="lg:col-span-7 bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
           
           {/* Status HUD Overlays */}
           <div className="flex items-center justify-between text-xs font-mono">
-            <span className="flex items-center gap-2 text-zinc-600 dark:text-[#9CA3AF]">
+            <span className="flex items-center gap-2 text-[#54595F]">
               <span className={`w-2.5 h-2.5 rounded-full ${isSimulating ? 'bg-rose-500 animate-ping' : 'bg-emerald-500'}`}></span>
-              Status: <strong className="text-zinc-900 dark:text-[#EAEAEA]">{isSimulating ? 'SEISMIC MOTION INJECTED' : 'STATIC EQUILIBRIUM'}</strong>
+              Status: <strong className="text-[#54595F]">{isSimulating ? 'SEISMIC MOTION INJECTED' : 'STATIC EQUILIBRIUM'}</strong>
             </span>
-            <span className="text-[10px] text-[#801834] dark:text-[#D4AF37] bg-white dark:bg-[#181A1E] border border-zinc-200 dark:border-[#333] px-2.5 py-1 rounded-md font-bold">
+            <span className="text-[10px] text-[#D4AF37] bg-[#FFFFFF] border border-[#D4AF37]/40 px-2.5 py-1 rounded-md font-bold">
               Tower H = 160m (40 Stories) · $T_1 = 2.45s$
             </span>
           </div>
@@ -330,16 +321,16 @@ export const SeismicShakeTable = () => {
             
             {/* Shake Ground Base Plate */}
             <div 
-              className="absolute bottom-4 w-4/5 h-4 bg-zinc-200 dark:bg-[#22252A] rounded-md border-t-2 border-[#801834] dark:border-[#D4AF37] flex items-center justify-center transition-transform duration-75"
+              className="absolute bottom-4 w-4/5 h-4 bg-zinc-100 rounded-md border-t-2 border-[#D4AF37] flex items-center justify-center transition-transform duration-75"
               style={{ transform: `translateX(${currentGroundOffset}px)` }}
             >
-              <span className="text-[9px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-wider font-bold">
+              <span className="text-[9px] font-mono text-[#D4AF37] uppercase tracking-wider font-bold">
                 HYDRAULIC SHAKE ACTUATOR PLATFORM
               </span>
             </div>
 
             {/* Bedrock Strata Indicator */}
-            <div className="absolute bottom-0 w-full h-3 border-t border-zinc-200 dark:border-[#333] flex justify-between px-4 text-[8px] font-mono text-zinc-500 dark:text-[#666]">
+            <div className="absolute bottom-0 w-full h-3 border-t border-zinc-200 flex justify-between px-4 text-[8px] font-mono text-[#54595F]/75">
               <span>SOLID BEDROCK ANCHOR</span>
               <span>PGA = {activePGA}g</span>
             </div>
@@ -353,16 +344,16 @@ export const SeismicShakeTable = () => {
               }}
             >
               {/* Ground Anchor Bolts */}
-              <line x1="75" y1="210" x2="75" y2="230" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="3" />
-              <line x1="125" y1="210" x2="125" y2="230" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="3" />
+              <line x1="75" y1="210" x2="75" y2="230" stroke="#D4AF37" strokeWidth="3" />
+              <line x1="125" y1="210" x2="125" y2="230" stroke="#D4AF37" strokeWidth="3" />
 
               {/* Base Isolator Pads (if active) */}
               {dampingSystem === 'base-isolation' && (
                 <g>
-                  <rect x="70" y="200" width="18" height="10" fill="#801834" className="dark:fill-[#D4AF37]" rx="2" />
-                  <rect x="112" y="200" width="18" height="10" fill="#801834" className="dark:fill-[#D4AF37]" rx="2" />
-                  <line x1="70" y1="205" x2="88" y2="205" stroke="#FFFFFF" className="dark:stroke-[#121417]" strokeWidth="1" />
-                  <line x1="112" y1="205" x2="130" y2="205" stroke="#FFFFFF" className="dark:stroke-[#121417]" strokeWidth="1" />
+                  <rect x="70" y="200" width="18" height="10" fill="#D4AF37" rx="2" />
+                  <rect x="112" y="200" width="18" height="10" fill="#D4AF37" rx="2" />
+                  <line x1="70" y1="205" x2="88" y2="205" stroke="#FFFFFF" strokeWidth="1" />
+                  <line x1="112" y1="205" x2="130" y2="205" stroke="#FFFFFF" strokeWidth="1" />
                 </g>
               )}
 
@@ -372,29 +363,28 @@ export const SeismicShakeTable = () => {
                 y="30" 
                 width="24" 
                 height="170" 
-                fill="#F4F4F5"
-                className="dark:fill-[#181A1E]" 
-                stroke="#801834" 
+                fill="#FFFFFF"
+                stroke="#D4AF37" 
                 strokeWidth="1.5" 
                 strokeDasharray="4 2"
               />
 
               {/* Perimeter Columns */}
-              <line x1="68" y1="30" x2="68" y2="200" stroke="#18181B" className="dark:stroke-[#EAEAEA]" strokeWidth="2.5" />
-              <line x1="132" y1="30" x2="132" y2="200" stroke="#18181B" className="dark:stroke-[#EAEAEA]" strokeWidth="2.5" />
+              <line x1="68" y1="30" x2="68" y2="200" stroke="#54595F" strokeWidth="2.5" />
+              <line x1="132" y1="30" x2="132" y2="200" stroke="#54595F" strokeWidth="2.5" />
 
               {/* Floor Diaphragms (10 Levels shown) */}
               {[35, 52, 69, 86, 103, 120, 137, 154, 171, 188].map((y, i) => (
                 <g key={i}>
-                  <line x1="64" y1={y} x2="136" y2={y} stroke="#A1A1AA" className="dark:stroke-[#3E4249]" strokeWidth="1.5" />
-                  <circle cx="68" cy={y} r="2" fill="#801834" className="dark:fill-[#D4AF37]" />
-                  <circle cx="132" cy={y} r="2" fill="#801834" className="dark:fill-[#D4AF37]" />
+                  <line x1="64" y1={y} x2="136" y2={y} stroke="#CBD5E1" strokeWidth="1.5" />
+                  <circle cx="68" cy={y} r="2" fill="#D4AF37" />
+                  <circle cx="132" cy={y} r="2" fill="#D4AF37" />
                 </g>
               ))}
 
               {/* Outrigger Belt Truss at Mid-Height */}
-              <line x1="68" y1="103" x2="100" y2="120" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" />
-              <line x1="132" y1="103" x2="100" y2="120" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" />
+              <line x1="68" y1="103" x2="100" y2="120" stroke="#D4AF37" strokeWidth="2" />
+              <line x1="132" y1="103" x2="100" y2="120" stroke="#D4AF37" strokeWidth="2" />
 
               {/* Fluid Viscous Damper Cylinders (if active) */}
               {dampingSystem === 'fvd' && (
@@ -408,39 +398,39 @@ export const SeismicShakeTable = () => {
               {/* Tuned Mass Damper Rooftop Pendulum (if active) */}
               {dampingSystem === 'tmd' && (
                 <g>
-                  <line x1="100" y1="30" x2="100" y2="44" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1.5" />
+                  <line x1="100" y1="30" x2="100" y2="44" stroke="#D4AF37" strokeWidth="1.5" />
                   <circle 
                     cx={100 - (currentSway * 0.4)} 
                     cy="44" 
                     r="6" 
-                    fill="#F59E0B" 
-                    stroke="#801834" 
+                    fill="#D4AF37" 
+                    stroke="#D4AF37" 
                     strokeWidth="1"
                   />
-                  <text x="68" y="24" fill="#F59E0B" fontSize="6" fontFamily="monospace">500t TMD COUNTERWEIGHT</text>
+                  <text x="68" y="24" fill="#D4AF37" fontSize="6" fontFamily="monospace">500t TMD COUNTERWEIGHT</text>
                 </g>
               )}
 
               {/* Roof Crown */}
-              <polygon points="68,30 100,12 132,30" fill="none" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2" />
-              <line x1="100" y1="12" x2="100" y2="2" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="1.5" />
+              <polygon points="68,30 100,12 132,30" fill="none" stroke="#D4AF37" strokeWidth="2" />
+              <line x1="100" y1="12" x2="100" y2="2" stroke="#D4AF37" strokeWidth="1.5" />
             </svg>
           </div>
 
           {/* Real-Time Telemetry Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-zinc-200 dark:border-[#222] text-xs font-mono">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-zinc-200 text-xs font-mono">
             <div>
-              <span className="text-zinc-500 dark:text-[#888] block text-[10px]">CURRENT ROOF DRIFT:</span>
-              <span className={`font-bold ${parseFloat(metrics.driftVal) > 1.5 ? 'text-rose-600 dark:text-rose-400' : 'text-[#801834] dark:text-[#D4AF37]'}`}>
+              <span className="text-[#54595F]/75 block text-[10px]">CURRENT ROOF DRIFT:</span>
+              <span className={`font-bold ${parseFloat(metrics.driftVal) > 1.5 ? 'text-rose-600' : 'text-[#D4AF37]'}`}>
                 {metrics.driftVal}% ({parseFloat(metrics.driftVal) < 1.0 ? 'Compliant < 1.0%' : 'Exceeds Normal Limit'})
               </span>
             </div>
             <div>
-              <span className="text-zinc-500 dark:text-[#888] block text-[10px]">BASE SHEAR DEMAND:</span>
-              <span className="text-zinc-900 dark:text-[#EAEAEA] font-bold">{metrics.baseShear} kN</span>
+              <span className="text-[#54595F]/75 block text-[10px]">BASE SHEAR DEMAND:</span>
+              <span className="text-[#54595F] font-bold">{metrics.baseShear} kN</span>
             </div>
             <div>
-              <span className="text-zinc-500 dark:text-[#888] block text-[10px]">STRUCTURAL STATUS:</span>
+              <span className="text-[#54595F]/75 block text-[10px]">STRUCTURAL STATUS:</span>
               <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold border ${metrics.damageBadgeColor}`}>
                 {metrics.damageLevel}
               </span>
@@ -449,26 +439,26 @@ export const SeismicShakeTable = () => {
         </div>
 
         {/* Right Column: Comparative Spectral Acceleration Plot & Performance Metrics */}
-        <div className="lg:col-span-5 bg-zinc-50 dark:bg-[#121417] rounded-2xl border border-zinc-200 dark:border-[#333] p-6 flex flex-col justify-between">
+        <div className="lg:col-span-5 bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 flex flex-col justify-between shadow-sm">
           
           <div>
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] font-bold">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-bold">
                 Seismic Response Spectrum ($S_a$ vs $T$)
               </span>
-              <span className="text-[10px] font-mono text-zinc-500 dark:text-[#9CA3AF]">ASCE 7-22 Section 11</span>
+              <span className="text-[10px] font-mono text-[#54595F]">ASCE 7-22 Section 11</span>
             </div>
 
             {/* Response Spectrum Graph (SVG) */}
-            <div className="bg-white dark:bg-[#181A1E] p-3 rounded-xl border border-zinc-200 dark:border-[#2D3137] relative">
+            <div className="bg-[#FFFFFF] p-3 rounded-xl border border-zinc-200 relative">
               <svg viewBox="0 0 240 110" className="w-full h-24">
                 {/* Axis lines */}
-                <line x1="25" y1="10" x2="25" y2="95" stroke="#CBD5E1" className="dark:stroke-[#444]" strokeWidth="1" />
-                <line x1="25" y1="95" x2="230" y2="95" stroke="#CBD5E1" className="dark:stroke-[#444]" strokeWidth="1" />
+                <line x1="25" y1="10" x2="25" y2="95" stroke="#CBD5E1" strokeWidth="1" />
+                <line x1="25" y1="95" x2="230" y2="95" stroke="#CBD5E1" strokeWidth="1" />
 
                 {/* Grid guidelines */}
-                <line x1="25" y1="35" x2="230" y2="35" stroke="#F1F5F9" className="dark:stroke-[#26282D]" strokeDasharray="2 2" />
-                <line x1="25" y1="65" x2="230" y2="65" stroke="#F1F5F9" className="dark:stroke-[#26282D]" strokeDasharray="2 2" />
+                <line x1="25" y1="35" x2="230" y2="35" stroke="#F1F5F9" strokeDasharray="2 2" />
+                <line x1="25" y1="65" x2="230" y2="65" stroke="#F1F5F9" strokeDasharray="2 2" />
 
                 {/* Undamped Curve (Red) */}
                 <path 
@@ -479,12 +469,11 @@ export const SeismicShakeTable = () => {
                   opacity={dampingSystem === 'fixed' ? '1' : '0.4'}
                 />
 
-                {/* Mitigated System Curve (Gold/Green) */}
+                {/* Mitigated System Curve (Gold) */}
                 <path 
                   d={`M 25 85 Q 55 ${dampingSystem === 'base-isolation' ? '65' : dampingSystem === 'fvd' ? '45' : '55'} 90 ${dampingSystem === 'base-isolation' ? '70' : '50'} T 160 82 T 225 90`} 
                   fill="none" 
-                  stroke="#801834"
-                  className="dark:stroke-[#D4AF37]" 
+                  stroke="#D4AF37" 
                   strokeWidth="2.5" 
                 />
 
@@ -498,32 +487,32 @@ export const SeismicShakeTable = () => {
                 <text x="210" y="105" fill="#888" fontSize="7" fontFamily="monospace">Period $T$</text>
               </svg>
 
-              <div className="flex justify-between items-center text-[10px] font-mono text-zinc-500 dark:text-[#9CA3AF] mt-1 pt-1 border-t border-zinc-100 dark:border-[#26282D]">
+              <div className="flex justify-between items-center text-[10px] font-mono text-[#54595F] mt-1 pt-1 border-t border-zinc-100">
                 <span className="flex items-center gap-1.5"><span className="w-2 h-0.5 bg-rose-500"></span> Fixed Base Envelope</span>
-                <span className="flex items-center gap-1.5"><span className="w-2 h-0.5 bg-[#801834] dark:bg-[#D4AF37]"></span> Mitigated Envelope</span>
+                <span className="flex items-center gap-1.5"><span className="w-2 h-0.5 bg-[#D4AF37]"></span> Mitigated Envelope</span>
               </div>
             </div>
           </div>
 
           {/* Performance Impact Summary */}
           <div className="space-y-2.5 my-4">
-            <div className="flex justify-between items-center text-xs font-mono bg-white dark:bg-[#181A1E] p-2.5 rounded-lg border border-zinc-200 dark:border-[#26282D]">
-              <span className="text-zinc-600 dark:text-[#9CA3AF]">Peak Lateral Drift Reduction:</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-bold">-{metrics.driftReduction}%</span>
+            <div className="flex justify-between items-center text-xs font-mono bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[#54595F]">Peak Lateral Drift Reduction:</span>
+              <span className="text-emerald-600 font-bold">-{metrics.driftReduction}%</span>
             </div>
-            <div className="flex justify-between items-center text-xs font-mono bg-white dark:bg-[#181A1E] p-2.5 rounded-lg border border-zinc-200 dark:border-[#26282D]">
-              <span className="text-zinc-600 dark:text-[#9CA3AF]">Base Shear Acceleration Reduction:</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-bold">-{metrics.shearReduction}%</span>
+            <div className="flex justify-between items-center text-xs font-mono bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[#54595F]">Base Shear Acceleration Reduction:</span>
+              <span className="text-emerald-600 font-bold">-{metrics.shearReduction}%</span>
             </div>
-            <div className="flex justify-between items-center text-xs font-mono bg-white dark:bg-[#181A1E] p-2.5 rounded-lg border border-zinc-200 dark:border-[#26282D]">
-              <span className="text-zinc-600 dark:text-[#9CA3AF]">Effective System Damping:</span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{metrics.dampingRatio}</span>
+            <div className="flex justify-between items-center text-xs font-mono bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[#54595F]">Effective System Damping:</span>
+              <span className="text-[#D4AF37] font-bold">{metrics.dampingRatio}</span>
             </div>
           </div>
 
           {/* Code Reference Stamp */}
-          <div className="pt-3 border-t border-zinc-200 dark:border-[#222] flex items-center justify-between text-[10px] font-mono text-zinc-500 dark:text-[#888]">
-            <span className="flex items-center gap-1 text-[#801834] dark:text-[#D4AF37] font-bold">
+          <div className="pt-3 border-t border-zinc-200 flex items-center justify-between text-[10px] font-mono text-[#54595F]">
+            <span className="flex items-center gap-1 text-[#D4AF37] font-bold">
               <ShieldCheck size={13} /> FEMA P-58 Validated
             </span>
             <span>ASCE 7-22 CHAPTER 17 & 18</span>

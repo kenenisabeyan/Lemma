@@ -50,38 +50,27 @@ export const BeamShearMomentSolver = () => {
     const EI = E_Pa * I_m4; // N*m^2
 
     if (supportType === 'simply-supported') {
-      // Reactions:
-      // RA = (w*L)/2 + (P*b)/L
-      // RB = (w*L)/2 + (P*a)/L
       RA = (w * L) / 2 + (P * b) / L;
       RB = (w * L) / 2 + (P * a) / L;
       maxShear = Math.max(RA, RB);
 
-      // Max moment approximation:
       const M_udl = (w * L * L) / 8;
       const M_point = (P * a * b) / L;
       maxMoment = M_udl + M_point;
 
-      // Deflection:
-      // Delta_udl = 5*w*L^4 / (384*EI)
-      // Delta_point = P*a^2*b^2 / (3*EI*L) (at midspan approx P*L^3/(48*EI))
       const delta_udl_m = (5 * (w * 1000) * Math.pow(L, 4)) / (384 * EI);
       const delta_pt_m = ((P * 1000) * Math.pow(L, 3)) / (48 * EI);
       maxDeflectionMm = (delta_udl_m + delta_pt_m) * 1000;
     } else if (supportType === 'cantilever') {
-      // Fixed at left, free at right
       RA = w * L + P;
       RB = 0;
       maxShear = RA;
       maxMoment = (w * L * L) / 2 + P * a;
 
-      // Cantilever deflection at tip:
-      // Delta = w*L^4 / (8*EI) + P*a^2*(3L - a)/(6*EI)
       const delta_udl_m = ((w * 1000) * Math.pow(L, 4)) / (8 * EI);
       const delta_pt_m = ((P * 1000) * Math.pow(a, 2) * (3 * L - a)) / (6 * EI);
       maxDeflectionMm = (delta_udl_m + delta_pt_m) * 1000;
     } else {
-      // Fixed-Fixed (Double Clamped)
       RA = (w * L) / 2 + (P * Math.pow(b, 2) * (3 * a + b)) / Math.pow(L, 3);
       RB = (w * L) / 2 + (P * Math.pow(a, 2) * (a + 3 * b)) / Math.pow(L, 3);
       maxShear = Math.max(RA, RB);
@@ -123,33 +112,24 @@ export const BeamShearMomentSolver = () => {
   const ptPixelX = leftX + (pointLoadA / spanL) * spanPixel;
 
   return (
-    <div className="rounded-3xl bg-white/95 dark:bg-[#14171C]/95 bg-cad-grid border border-zinc-200/90 dark:border-zinc-800/90 p-6 lg:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden">
-      {/* Background Architectural Grid */}
-      <div 
-        aria-hidden="true" 
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #801834 1px, transparent 0)',
-          backgroundSize: '24px 24px'
-        }}
-      ></div>
-
+    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 lg:p-10 shadow-xl relative overflow-hidden">
+      
       {/* Header */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200/80 dark:border-zinc-800/80">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200">
         <div>
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] font-bold">
+          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold">
             <Calculator size={14} className="animate-pulse" />
             <span>Interactive Euler-Bernoulli Structural Mechanics Solver</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
-            Beam Shear ($V$), Bending Moment ($M$) & Deflection ($\Delta$) Laboratory
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#54595F] tracking-tight">
+            Beam Shear ($V$), Bending Moment ($M$) & <span className="text-[#D4AF37]">Deflection ($\Delta$)</span> Laboratory
           </h3>
-          <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
             Real-time finite element matrix solver for indeterminate and determinate structural framing spans. Adjust loads, boundary conditions, and cross-section profiles to inspect live internal stresses.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 bg-[#F4F5F7] dark:bg-[#0E1014] p-1.5 rounded-full border border-zinc-200/80 dark:border-zinc-800/80 shrink-0">
+        <div className="flex items-center gap-2 bg-[#FFFFFF] p-1.5 rounded-full border border-zinc-200 shrink-0">
           {[
             { id: 'simply-supported', label: 'Simply Supported' },
             { id: 'cantilever', label: 'Cantilever' },
@@ -160,8 +140,8 @@ export const BeamShearMomentSolver = () => {
               onClick={() => setSupportType(type.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all ${
                 supportType === type.id
-                  ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm'
-                  : 'text-zinc-600 dark:text-[#9CA3AF] hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                  ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
+                  : 'text-[#54595F] hover:text-[#D4AF37]'
               }`}
             >
               {type.label}
@@ -175,15 +155,15 @@ export const BeamShearMomentSolver = () => {
         
         {/* Controls Column (Sliders) */}
         <div className="lg:col-span-5 space-y-4">
-          <label className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 font-bold">
+          <label className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 font-bold">
             <Sliders size={13} /> Span & Load Configuration
           </label>
 
           {/* Span Length */}
-          <div className="bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 space-y-1.5">
+          <div className="bg-[#FFFFFF] p-3.5 rounded-xl border border-zinc-200 space-y-1.5">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-600 dark:text-[#9CA3AF] font-bold">Clear Span Length ($L$):</span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{spanL} meters ({Math.round(spanL * 3.28084)} ft)</span>
+              <span className="text-[#54595F] font-bold">Clear Span Length ($L$):</span>
+              <span className="text-[#D4AF37] font-bold">{spanL} meters ({Math.round(spanL * 3.28084)} ft)</span>
             </div>
             <input 
               type="range"
@@ -196,15 +176,15 @@ export const BeamShearMomentSolver = () => {
                 setSpanL(val);
                 if (pointLoadA > val) setPointLoadA(Math.round(val / 2));
               }}
-              className="w-full h-1.5 bg-zinc-200 dark:bg-[#26282D] rounded-lg appearance-none cursor-pointer accent-[#801834] dark:accent-[#D4AF37]"
+              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
           </div>
 
           {/* Uniform Distributed Load (UDL) */}
-          <div className="bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 space-y-1.5">
+          <div className="bg-[#FFFFFF] p-3.5 rounded-xl border border-zinc-200 space-y-1.5">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-600 dark:text-[#9CA3AF] font-bold">Uniform Load ($w$): Dead + Live</span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{udlW} kN/m</span>
+              <span className="text-[#54595F] font-bold">Uniform Load ($w$): Dead + Live</span>
+              <span className="text-[#D4AF37] font-bold">{udlW} kN/m</span>
             </div>
             <input 
               type="range"
@@ -213,15 +193,15 @@ export const BeamShearMomentSolver = () => {
               step="2"
               value={udlW}
               onChange={(e) => setUdlW(parseInt(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 dark:bg-[#26282D] rounded-lg appearance-none cursor-pointer accent-[#801834] dark:accent-[#D4AF37]"
+              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
           </div>
 
           {/* Concentrated Point Load (P) */}
-          <div className="bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 space-y-1.5">
+          <div className="bg-[#FFFFFF] p-3.5 rounded-xl border border-zinc-200 space-y-1.5">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-600 dark:text-[#9CA3AF] font-bold">Point Load ($P$): Equipment/Column</span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{pointLoadP} kN</span>
+              <span className="text-[#54595F] font-bold">Point Load ($P$): Equipment/Column</span>
+              <span className="text-[#D4AF37] font-bold">{pointLoadP} kN</span>
             </div>
             <input 
               type="range"
@@ -230,15 +210,15 @@ export const BeamShearMomentSolver = () => {
               step="10"
               value={pointLoadP}
               onChange={(e) => setPointLoadP(parseInt(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 dark:bg-[#26282D] rounded-lg appearance-none cursor-pointer accent-[#801834] dark:accent-[#D4AF37]"
+              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
           </div>
 
           {/* Point Load Position (a) */}
-          <div className="bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 space-y-1.5">
+          <div className="bg-[#FFFFFF] p-3.5 rounded-xl border border-zinc-200 space-y-1.5">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-600 dark:text-[#9CA3AF] font-bold">Point Load Location ($a$):</span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold">{pointLoadA} m from left support</span>
+              <span className="text-[#54595F] font-bold">Point Load Location ($a$):</span>
+              <span className="text-[#D4AF37] font-bold">{pointLoadA} m from left support</span>
             </div>
             <input 
               type="range"
@@ -247,13 +227,13 @@ export const BeamShearMomentSolver = () => {
               step="0.5"
               value={pointLoadA}
               onChange={(e) => setPointLoadA(parseFloat(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 dark:bg-[#26282D] rounded-lg appearance-none cursor-pointer accent-[#801834] dark:accent-[#D4AF37]"
+              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
           </div>
 
           {/* Section Profile Selector */}
-          <div className="bg-[#F4F5F7] dark:bg-[#0E1014] p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 space-y-2">
-            <span className="text-xs font-mono text-zinc-600 dark:text-[#9CA3AF] block font-bold">Structural Section Profile (AISC / ACI):</span>
+          <div className="bg-[#FFFFFF] p-3.5 rounded-xl border border-zinc-200 space-y-2">
+            <span className="text-xs font-mono text-[#54595F] block font-bold">Structural Section Profile (AISC / ACI):</span>
             <div className="grid grid-cols-2 gap-2">
               {Object.keys(sections).map((key) => {
                 const s = sections[key];
@@ -264,12 +244,12 @@ export const BeamShearMomentSolver = () => {
                     onClick={() => setSectionProfile(key)}
                     className={`p-2.5 rounded-lg border text-left text-xs font-mono transition-all ${
                       isSelected
-                        ? 'bg-white dark:bg-[#14171C] border-[#801834] dark:border-[#D4AF37] text-[#801834] dark:text-[#D4AF37] font-bold shadow-sm'
-                        : 'bg-white/80 dark:bg-[#14171C]/70 border-zinc-200/80 dark:border-zinc-800/80 text-zinc-600 dark:text-[#888] hover:text-zinc-900 dark:hover:text-[#CCC]'
+                        ? 'bg-[#FFFFFF] border-[#D4AF37] text-[#D4AF37] font-bold ring-1 ring-[#D4AF37] shadow-sm'
+                        : 'bg-[#FFFFFF] border-zinc-200 text-[#54595F] hover:border-[#D4AF37]'
                     }`}
                   >
                     <span className="block truncate font-bold">{s.name.split(' ')[0]}</span>
-                    <span className="text-[9px] text-zinc-500 dark:text-[#666] block">$I_x = {s.Ix} \times 10^6$</span>
+                    <span className="text-[9px] text-[#54595F]/75 block">$I_x = {s.Ix} \times 10^6$</span>
                   </button>
                 );
               })}
@@ -279,28 +259,28 @@ export const BeamShearMomentSolver = () => {
         </div>
 
         {/* Live Diagram Stage (SVG SFD & BMD Curves) */}
-        <div className="lg:col-span-7 bg-[#F4F5F7] dark:bg-[#0E1014] rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 p-6 flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 flex flex-col justify-between shadow-sm">
           
           <div className="space-y-6">
             
             {/* 1. Free Body Loading Diagram */}
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
-                <span className="text-zinc-900 dark:text-[#EAEAEA] font-bold">1. Free Body Beam Loading</span>
-                <span className="text-[#801834] dark:text-[#D4AF37] font-bold">Span $L = {spanL}m$</span>
+                <span className="text-[#54595F] font-bold">1. Free Body Beam Loading</span>
+                <span className="text-[#D4AF37] font-bold">Span $L = {spanL}m$</span>
               </div>
-              <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-16 bg-white dark:bg-[#14171C] rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
+              <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-16 bg-[#FFFFFF] rounded-xl border border-zinc-200">
                 {/* UDL Arrows */}
                 {udlW > 0 && (
                   <g opacity="0.75">
                     {[50, 85, 120, 155, 190, 225, 260].map((x) => (
                       <g key={x}>
-                        <line x1={x} y1="12" x2={x} y2="28" stroke="#F59E0B" strokeWidth="1" />
-                        <polygon points={`${x-2},26 ${x+2},26 ${x},30`} fill="#F59E0B" />
+                        <line x1={x} y1="12" x2={x} y2="28" stroke="#D4AF37" strokeWidth="1" />
+                        <polygon points={`${x-2},26 ${x+2},26 ${x},30`} fill="#D4AF37" />
                       </g>
                     ))}
-                    <line x1="45" y1="12" x2="275" y2="12" stroke="#F59E0B" strokeWidth="1" strokeDasharray="3 3" />
-                    <text x="140" y="9" fill="#F59E0B" fontSize="6" fontFamily="monospace">w = {udlW} kN/m</text>
+                    <line x1="45" y1="12" x2="275" y2="12" stroke="#D4AF37" strokeWidth="1" strokeDasharray="3 3" />
+                    <text x="140" y="9" fill="#D4AF37" fontSize="6" fontFamily="monospace">w = {udlW} kN/m</text>
                   </g>
                 )}
 
@@ -314,30 +294,30 @@ export const BeamShearMomentSolver = () => {
                 )}
 
                 {/* Beam Spine */}
-                <line x1={leftX} y1={beamY} x2={rightX} y2={beamY} stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="4" />
+                <line x1={leftX} y1={beamY} x2={rightX} y2={beamY} stroke="#D4AF37" strokeWidth="4" />
 
                 {/* Left Support */}
                 {supportType === 'cantilever' ? (
                   <g>
-                    <line x1={leftX} y1="25" x2={leftX} y2="55" stroke="#18181B" className="dark:stroke-[#EAEAEA]" strokeWidth="3" />
+                    <line x1={leftX} y1="25" x2={leftX} y2="55" stroke="#54595F" strokeWidth="3" />
                     <line x1={leftX-4} y1="28" x2={leftX} y2="34" stroke="#888" strokeWidth="1" />
                     <line x1={leftX-4} y1="36" x2={leftX} y2="42" stroke="#888" strokeWidth="1" />
                     <line x1={leftX-4} y1="44" x2={leftX} y2="50" stroke="#888" strokeWidth="1" />
                   </g>
                 ) : (
                   <g>
-                    <polygon points={`${leftX},${beamY} ${leftX-6},${beamY+12} ${leftX+6},${beamY+12}`} fill="#18181B" className="dark:fill-[#EAEAEA]" />
+                    <polygon points={`${leftX},${beamY} ${leftX-6},${beamY+12} ${leftX+6},${beamY+12}`} fill="#54595F" />
                     <line x1={leftX-8} y1={beamY+13} x2={leftX+8} y2={beamY+13} stroke="#888" strokeWidth="1.5" />
-                    <text x={leftX - 14} y={beamY + 22} fill="#71717A" className="dark:fill-[#9CA3AF]" fontSize="6" fontFamily="monospace">RA={results.RA}kN</text>
+                    <text x={leftX - 14} y={beamY + 22} fill="#54595F" fontSize="6" fontFamily="monospace">RA={results.RA}kN</text>
                   </g>
                 )}
 
                 {/* Right Support */}
                 {supportType !== 'cantilever' && (
                   <g>
-                    <polygon points={`${rightX},${beamY} ${rightX-6},${beamY+12} ${rightX+6},${beamY+12}`} fill="#18181B" className="dark:fill-[#EAEAEA]" />
+                    <polygon points={`${rightX},${beamY} ${rightX-6},${beamY+12} ${rightX+6},${beamY+12}`} fill="#54595F" />
                     <line x1={rightX-8} y1={beamY+13} x2={rightX+8} y2={beamY+13} stroke="#888" strokeWidth="1.5" />
-                    <text x={rightX - 14} y={beamY + 22} fill="#71717A" className="dark:fill-[#9CA3AF]" fontSize="6" fontFamily="monospace">RB={results.RB}kN</text>
+                    <text x={rightX - 14} y={beamY + 22} fill="#54595F" fontSize="6" fontFamily="monospace">RB={results.RB}kN</text>
                   </g>
                 )}
               </svg>
@@ -346,13 +326,13 @@ export const BeamShearMomentSolver = () => {
             {/* 2. Shear Force Diagram (SFD) */}
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
-                <span className="text-zinc-600 dark:text-[#9CA3AF] flex items-center gap-1.5 font-bold">
+                <span className="text-[#54595F] flex items-center gap-1.5 font-bold">
                   <span className="w-2 h-2 rounded-full bg-blue-500"></span> Shear Force Diagram (V)
                 </span>
-                <span className="text-blue-600 dark:text-blue-400 font-bold">V_max = {results.maxShear} kN</span>
+                <span className="text-blue-600 font-bold">V_max = {results.maxShear} kN</span>
               </div>
-              <svg viewBox={`0 0 ${svgWidth} 45`} className="w-full h-12 bg-white dark:bg-[#14171C] rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
-                <line x1={leftX} y1="22" x2={rightX} y2="22" stroke="#CBD5E1" className="dark:stroke-[#444]" strokeWidth="1" strokeDasharray="2 2" />
+              <svg viewBox={`0 0 ${svgWidth} 45`} className="w-full h-12 bg-[#FFFFFF] rounded-xl border border-zinc-200">
+                <line x1={leftX} y1="22" x2={rightX} y2="22" stroke="#CBD5E1" strokeWidth="1" strokeDasharray="2 2" />
                 {/* SFD Shaded Polygon */}
                 <polygon 
                   points={`${leftX},22 ${leftX},8 ${ptPixelX},14 ${ptPixelX},32 ${rightX},38 ${rightX},22`} 
@@ -361,56 +341,55 @@ export const BeamShearMomentSolver = () => {
                   stroke="#3B82F6" 
                   strokeWidth="1.5" 
                 />
-                <text x={leftX + 5} y="16" fill="#2563EB" className="dark:fill-[#3B82F6]" fontSize="7" fontFamily="monospace">+{results.RA} kN</text>
-                <text x={rightX - 45} y="34" fill="#2563EB" className="dark:fill-[#3B82F6]" fontSize="7" fontFamily="monospace">-{results.RB} kN</text>
+                <text x={leftX + 5} y="16" fill="#2563EB" fontSize="7" fontFamily="monospace">+{results.RA} kN</text>
+                <text x={rightX - 45} y="34" fill="#2563EB" fontSize="7" fontFamily="monospace">-{results.RB} kN</text>
               </svg>
             </div>
 
             {/* 3. Bending Moment Diagram (BMD) */}
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
-                <span className="text-zinc-600 dark:text-[#9CA3AF] flex items-center gap-1.5 font-bold">
-                  <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37]"></span> Bending Moment Diagram (M)
+                <span className="text-[#54595F] flex items-center gap-1.5 font-bold">
+                  <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span> Bending Moment Diagram (M)
                 </span>
-                <span className="text-[#801834] dark:text-[#D4AF37] font-bold">M_max = {results.maxMoment} kN·m</span>
+                <span className="text-[#D4AF37] font-bold">M_max = {results.maxMoment} kN·m</span>
               </div>
-              <svg viewBox={`0 0 ${svgWidth} 50`} className="w-full h-14 bg-white dark:bg-[#14171C] rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
-                <line x1={leftX} y1="8" x2={rightX} y2="8" stroke="#CBD5E1" className="dark:stroke-[#444]" strokeWidth="1" strokeDasharray="2 2" />
+              <svg viewBox={`0 0 ${svgWidth} 50`} className="w-full h-14 bg-[#FFFFFF] rounded-xl border border-zinc-200">
+                <line x1={leftX} y1="8" x2={rightX} y2="8" stroke="#CBD5E1" strokeWidth="1" strokeDasharray="2 2" />
                 {/* BMD Parabolic Curve (Tension at bottom) */}
                 <path 
                   d={`M ${leftX} 8 Q ${ptPixelX} 45 ${rightX} 8`} 
-                  fill="#801834"
-                  className="dark:fill-[#D4AF37]" 
+                  fill="#D4AF37"
                   fillOpacity="0.15" 
-                  stroke="#801834"
+                  stroke="#D4AF37"
                   strokeWidth="2" 
                 />
-                <circle cx={ptPixelX} cy="36" r="3" fill="#801834" className="dark:fill-[#D4AF37]" />
-                <text x={ptPixelX - 18} y="47" fill="#801834" className="dark:fill-[#D4AF37]" fontSize="7" fontFamily="monospace" fontWeight="bold">{results.maxMoment} kN·m</text>
+                <circle cx={ptPixelX} cy="36" r="3" fill="#D4AF37" />
+                <text x={ptPixelX - 18} y="47" fill="#D4AF37" fontSize="7" fontFamily="monospace" fontWeight="bold">{results.maxMoment} kN·m</text>
               </svg>
             </div>
 
           </div>
 
           {/* Telemetry Evaluation Box */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80 mt-4 text-xs font-mono">
-            <div className="bg-white dark:bg-[#14171C] p-2.5 rounded-lg border border-zinc-200/80 dark:border-zinc-800/80">
-              <span className="text-[10px] text-zinc-500 dark:text-[#888] block">MAX MOMENT ($M_u$):</span>
-              <span className="text-[#801834] dark:text-[#D4AF37] font-bold text-sm">{results.maxMoment} kN·m</span>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-zinc-200 mt-4 text-xs font-mono">
+            <div className="bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[10px] text-[#54595F]/75 block">MAX MOMENT ($M_u$):</span>
+              <span className="text-[#D4AF37] font-bold text-sm">{results.maxMoment} kN·m</span>
             </div>
-            <div className="bg-white dark:bg-[#14171C] p-2.5 rounded-lg border border-zinc-200/80 dark:border-zinc-800/80">
-              <span className="text-[10px] text-zinc-500 dark:text-[#888] block">MAX SHEAR ($V_u$):</span>
-              <span className="text-blue-600 dark:text-blue-400 font-bold text-sm">{results.maxShear} kN</span>
+            <div className="bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[10px] text-[#54595F]/75 block">MAX SHEAR ($V_u$):</span>
+              <span className="text-blue-600 font-bold text-sm">{results.maxShear} kN</span>
             </div>
-            <div className="bg-white dark:bg-[#14171C] p-2.5 rounded-lg border border-zinc-200/80 dark:border-zinc-800/80">
-              <span className="text-[10px] text-zinc-500 dark:text-[#888] block">MAX DEFLECTION ($\Delta$):</span>
-              <span className={`font-bold text-sm ${results.isPassL360 ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+            <div className="bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[10px] text-[#54595F]/75 block">MAX DEFLECTION ($\Delta$):</span>
+              <span className={`font-bold text-sm ${results.isPassL360 ? 'text-emerald-600' : 'text-rose-600'}`}>
                 {results.deflection} mm
               </span>
             </div>
-            <div className="bg-white dark:bg-[#14171C] p-2.5 rounded-lg border border-zinc-200/80 dark:border-zinc-800/80">
-              <span className="text-[10px] text-zinc-500 dark:text-[#888] block">IBC DEFLECTION CHECK:</span>
-              <span className={`inline-flex items-center gap-1 font-bold text-xs ${results.isPassL360 ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+            <div className="bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+              <span className="text-[10px] text-[#54595F]/75 block">IBC DEFLECTION CHECK:</span>
+              <span className={`inline-flex items-center gap-1 font-bold text-xs ${results.isPassL360 ? 'text-emerald-600' : 'text-rose-600'}`}>
                 {results.isPassL360 ? <CheckCircle2 size={12} /> : <AlertTriangle size={12} />}
                 {results.isPassL360 ? 'PASS (≤ L/360)' : 'EXCEEDS L/360'}
               </span>
@@ -422,9 +401,9 @@ export const BeamShearMomentSolver = () => {
       </div>
 
       {/* Code Compliance Footer */}
-      <div className="relative z-10 pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80 flex flex-wrap items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#888] gap-4">
+      <div className="relative z-10 pt-4 border-t border-zinc-200 flex flex-wrap items-center justify-between text-[11px] font-mono text-[#54595F]/75 gap-4">
         <div className="flex items-center gap-2">
-          <ShieldCheck size={14} className="text-[#801834] dark:text-[#D4AF37]" />
+          <ShieldCheck size={14} className="text-[#D4AF37]" />
           <span>Euler-Bernoulli Elastic Formulation: EI · (d⁴w / dx⁴) = q(x)</span>
         </div>
         <div>

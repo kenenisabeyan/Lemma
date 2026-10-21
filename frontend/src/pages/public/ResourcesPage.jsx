@@ -59,7 +59,6 @@ export const ResourcesPage = () => {
   });
 
   const handleDownload = (item) => {
-    // Generate an engineering document download simulation
     const content = `=====================================================
 STRUCTURAL ENGINEERING TECHNICAL RESOURCE
 Title: ${item.title}
@@ -98,36 +97,36 @@ Phone: +1 (555) 019-8472
   };
 
   return (
-    <div className="relative min-h-screen bg-transparent bg-cad-grid text-inherit pt-28 pb-24 selection:bg-[#801834] selection:text-white overflow-hidden">
-      {/* Ambient Aurora Drift Background Glow */}
+    <div className="relative min-h-screen bg-[#FFFFFF] text-[#54595F] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417] overflow-hidden">
+      {/* Ambient subtle glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
-        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/12 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/5 blur-[130px]"></div>
+        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/5 blur-[110px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="mb-14 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
+        <div className="mb-14 border-b border-zinc-200 pb-10">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
             </span>
             Engineering Documentation & Reference Library
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
-            Engineering <span className="text-[#801834] dark:text-[#E84855]">Resources.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
+            <span className="text-[#D4AF37]">Engineering</span> Resources.
           </h1>
-          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
-            <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
+          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl">
+            <p className="text-[#54595F] text-base lg:text-lg leading-relaxed">
               Download professional guides, technical checklists, code compliance reference documents, and structural calculation summaries prepared for engineers and architects.
             </p>
           </div>
         </div>
 
         {/* Search & Filter Controls */}
-        <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10 bg-white/95 dark:bg-[#14171C]/95 p-3 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 shadow-sm dark:shadow-xl">
+        <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10 bg-[#FFFFFF] p-3 rounded-2xl border border-zinc-200 shadow-sm">
           {/* Categories */}
           <div className="flex flex-wrap gap-2 w-full md:w-auto items-center">
             {categories.map((cat) => (
@@ -136,8 +135,8 @@ Phone: +1 (555) 019-8472
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                    : 'bg-[#F4F5F7] dark:bg-[#0E1014] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80 hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                    ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105'
+                    : 'bg-[#FFFFFF] text-[#54595F] border border-zinc-200 hover:border-[#D4AF37]'
                 }`}
               >
                 {cat}
@@ -147,20 +146,20 @@ Phone: +1 (555) 019-8472
 
           {/* Search input */}
           <div className="relative w-full md:w-72">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF]" size={15} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" size={15} />
             <input
               type="text"
               placeholder="Search guides, specs, math..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#F4F5F7] dark:bg-[#0E1014] rounded-full border border-zinc-200/80 dark:border-zinc-800/80 focus:border-[#801834] dark:focus:border-[#D4AF37] text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] pl-9 pr-4 py-2 outline-none font-mono transition-colors shadow-sm"
+              className="w-full bg-[#FFFFFF] rounded-full border border-zinc-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] text-xs text-[#54595F] placeholder:text-[#54595F]/50 pl-9 pr-4 py-2 outline-none font-mono transition-colors shadow-sm"
             />
           </div>
         </div>
 
         {/* Download Notification Toast */}
         {downloadNotification && (
-          <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-500/50 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider flex items-center gap-2 animate-in fade-in shadow-md">
+          <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md">
             <CheckCircle2 size={16} /> {downloadNotification}
           </div>
         )}
@@ -170,26 +169,26 @@ Phone: +1 (555) 019-8472
           {filteredResources.map((item, index) => (
             <div 
               key={item.id || index} 
-              className="group rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 p-8 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl"
+              className="group rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-8 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl"
             >
               <div>
                 <div className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#F4F5F7] dark:bg-[#0E1014] border border-zinc-200/80 dark:border-zinc-700/80 text-[#801834] dark:text-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                  <div className="w-12 h-12 rounded-xl bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                     <FileText size={22} />
                   </div>
-                  <span className="rounded-full text-[10px] font-mono font-bold text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-700/80 px-3 py-1 uppercase tracking-wider bg-[#F4F5F7] dark:bg-[#0E1014] shadow-sm">
+                  <span className="rounded-full text-[10px] font-mono font-bold text-[#D4AF37] border border-[#D4AF37]/40 px-3 py-1 uppercase tracking-wider bg-[#FFFFFF] shadow-sm">
                     {item.format} • {item.fileSize || '1.8 MB'}
                   </span>
                 </div>
 
-                <span className="text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
-                <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed mb-6">{item.description}</p>
+                <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
+                <h3 className="text-xl font-bold text-[#54595F] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
+                <p className="text-xs text-[#54595F] leading-relaxed mb-6">{item.description}</p>
               </div>
 
               <button
                 onClick={() => handleDownload(item)}
-                className="rounded-full bg-[#F4F5F7] hover:bg-[#801834] hover:text-white dark:bg-[#0E1014] dark:hover:bg-[#D4AF37] dark:hover:text-[#121417] text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-700/80 transition-all py-3 px-6 text-xs font-extrabold uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm font-bold"
+                className="rounded-full bg-[#FFFFFF] hover:bg-[#D4AF37] hover:text-[#121417] text-[#54595F] border border-[#D4AF37] transition-all py-3 px-6 text-xs font-extrabold uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm font-bold"
               >
                 Download Document <Download size={14} />
               </button>
@@ -200,14 +199,14 @@ Phone: +1 (555) 019-8472
         {/* Interactive Value Engineering Estimator */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Cost & Material Optimization Tool
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Value Engineering & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Carbon Offset Estimator.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#54595F] tracking-tight mb-4">
+              <span className="text-[#D4AF37]">Value Engineering</span> & Carbon Offset Estimator.
             </h2>
-            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
             </p>
           </div>
@@ -218,14 +217,14 @@ Phone: +1 (555) 019-8472
         {/* Interactive Beam Mechanics Laboratory */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-sm mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Computational Structural Analysis
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Beam Shear, Moment & <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Deflection Laboratory.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#54595F] tracking-tight mb-4">
+              <span className="text-[#D4AF37]">Beam Shear, Moment</span> & Deflection Laboratory.
             </h2>
-            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against AISC 360-22 and IBC limits.
             </p>
           </div>
@@ -234,17 +233,17 @@ Phone: +1 (555) 019-8472
         </div>
 
         {/* Request Custom Technical Guidance Box */}
-        <div className="rounded-2xl bg-[#F4F5F7]/95 dark:bg-[#0E1014]/95 bg-cad-grid border border-zinc-200/90 dark:border-zinc-800/90 p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl dark:shadow-2xl">
+        <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
           <div>
-            <span className="text-[10px] font-mono uppercase text-[#801834] dark:text-[#D4AF37] tracking-wider block mb-1 font-bold">Tailored Specifications</span>
-            <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA]">Need Project-Specific Structural Calculations or CAD Details?</h4>
-            <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] mt-1 max-w-xl leading-relaxed">
+            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-bold">Tailored Specifications</span>
+            <h4 className="text-xl font-bold text-[#54595F]"><span className="text-[#D4AF37]">Need</span> Project-Specific Structural Calculations or CAD Details?</h4>
+            <p className="text-xs text-[#54595F] mt-1 max-w-xl leading-relaxed">
               I provide custom finite element analysis models, calculation packages for municipal permit submittals, and site-specific seismic retrofitting plans.
             </p>
           </div>
           <a
             href="/contact"
-            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-900 dark:hover:bg-white transition-all shadow-md shrink-0"
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-extrabold uppercase tracking-widest hover:bg-[#c49f2c] transition-all shadow-md shrink-0"
           >
             Request Custom Calc Package
           </a>

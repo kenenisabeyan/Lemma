@@ -1287,24 +1287,6 @@ export const Home = () => {
           </div>
         </div>
       )}
-            <button
-              onClick={() => setIsVideoModalOpen(false)}
-              className="absolute -top-10 right-0 text-white hover:text-zinc-300"
-            >
-              <X size={28} />
-            </button>
-            <div className="aspect-video bg-black rounded-lg overflow-hidden">
-              <iframe
-                src={settings.introVideoUrl}
-                title="Structural Engineering Professional Intro"
-                className="w-full h-full"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );

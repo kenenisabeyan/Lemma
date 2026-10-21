@@ -56,36 +56,36 @@ export const InsightsPage = () => {
   });
 
   return (
-    <div className="relative min-h-screen bg-transparent bg-cad-grid text-inherit pt-28 pb-24 selection:bg-[#801834] selection:text-white overflow-hidden">
-      {/* Ambient Aurora Drift Background Glow */}
+    <div className="relative min-h-screen bg-[#FFFFFF] text-[#54595F] pt-28 pb-24 selection:bg-[#D4AF37] selection:text-[#121417] overflow-hidden">
+      {/* Ambient subtle glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[130px] animate-aurora-drift motion-reduce:animate-none"></div>
-        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/12 blur-[110px] animate-aurora-drift-2 motion-reduce:animate-none"></div>
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/5 blur-[130px]"></div>
+        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/5 blur-[110px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="mb-14 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200 shadow-sm mb-5">
+        <div className="mb-14 border-b border-zinc-200 pb-10">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#801834] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#801834]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
             </span>
             Technical Knowledge & Publications
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
-            Engineering <span className="text-[#801834] dark:text-[#E84855]">Insights.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
+            <span className="text-[#D4AF37]">Engineering</span> Insights.
           </h1>
-          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
-            <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
+          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl">
+            <p className="text-[#54595F] text-base lg:text-lg leading-relaxed">
               Technical papers, industry notes, code analysis, and design methodology articles published for structural engineering professionals and project developers.
             </p>
           </div>
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-white/95 dark:bg-[#14171C]/95 p-3 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 shadow-sm dark:shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-[#FFFFFF] p-3 rounded-2xl border border-zinc-200 shadow-sm">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
@@ -95,8 +95,8 @@ export const InsightsPage = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] shadow-sm scale-105'
-                    : 'bg-[#F4F5F7] dark:bg-[#0E1014] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80 hover:text-zinc-900 dark:hover:text-[#EAEAEA]'
+                    ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105'
+                    : 'bg-[#FFFFFF] text-[#54595F] border border-zinc-200 hover:border-[#D4AF37]'
                 }`}
               >
                 {cat}
@@ -106,13 +106,13 @@ export const InsightsPage = () => {
 
           {/* Search Input */}
           <div className="relative min-w-[260px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF] w-4 h-4" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search papers, ASCE codes..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#F4F5F7] dark:bg-[#0E1014] rounded-full border border-zinc-200/80 dark:border-zinc-800/80 pl-10 pr-4 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors font-mono shadow-sm"
+              className="w-full bg-[#FFFFFF] rounded-full border border-zinc-200 pl-10 pr-4 py-2 text-xs text-[#54595F] placeholder:text-[#54595F]/50 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors font-mono shadow-sm"
             />
           </div>
 
@@ -120,9 +120,9 @@ export const InsightsPage = () => {
 
         {/* Articles Grid */}
         {filteredArticles.length === 0 ? (
-          <div className="py-20 text-center bg-white/95 dark:bg-[#14171C]/95 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 mb-16 shadow-sm">
-            <BookOpen className="mx-auto w-12 h-12 text-zinc-400 dark:text-[#9CA3AF]/40 mb-3" />
-            <p className="text-zinc-500 dark:text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">
+          <div className="py-20 text-center bg-[#FFFFFF] rounded-2xl border border-zinc-200 mb-16 shadow-sm">
+            <BookOpen className="mx-auto w-12 h-12 text-zinc-300 mb-3" />
+            <p className="text-[#54595F] text-sm font-mono uppercase tracking-wider">
               No technical publications match the selected criteria.
             </p>
           </div>
@@ -132,42 +132,42 @@ export const InsightsPage = () => {
               <Link
                 key={item.id}
                 to={`/insights/${item.slug || 'innovations-high-strength-c80-concrete'}`}
-                className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl"
+                className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl"
               >
                 <div>
-                  <div className="aspect-[16/10] bg-[#F4F5F7] dark:bg-[#0E1014] overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 relative">
+                  <div className="aspect-[16/10] bg-zinc-100 overflow-hidden border-b border-zinc-200 relative">
                     {item.imageUrl && (
                       <img 
                         src={item.imageUrl} 
                         alt={item.title} 
-                        className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-[#14171C]/90 backdrop-blur-md text-[#801834] dark:text-[#D4AF37] border border-zinc-200/80 dark:border-zinc-700/80 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+                    <span className="absolute top-4 left-4 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/40 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
                       {item.category}
                     </span>
                   </div>
 
                   <div className="p-6">
-                    <div className="flex items-center gap-3 text-[10px] font-mono text-zinc-500 dark:text-[#9CA3AF] mb-3 uppercase tracking-wider">
-                      <span className="flex items-center gap-1"><Calendar size={12} className="text-[#801834] dark:text-[#D4AF37]" /> {item.publishedAt}</span>
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-[#54595F]/75 mb-3 uppercase tracking-wider">
+                      <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D4AF37]" /> {item.publishedAt}</span>
                       <span>·</span>
-                      <span className="flex items-center gap-1"><Clock size={12} className="text-[#801834] dark:text-[#D4AF37]" /> {item.readTime}</span>
+                      <span className="flex items-center gap-1"><Clock size={12} className="text-[#D4AF37]" /> {item.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#801834] dark:group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
+                    <h3 className="text-lg font-bold text-[#54595F] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
                       {item.title}
                     </h3>
 
-                    <p className="text-xs text-zinc-600 dark:text-[#9CA3AF] leading-relaxed line-clamp-3">
+                    <p className="text-xs text-[#54595F] leading-relaxed line-clamp-3">
                       {item.excerpt}
                     </p>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 border-t border-zinc-200/80 dark:border-zinc-800/80 mt-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#801834] dark:text-[#D4AF37] group-hover:text-zinc-900 dark:group-hover:text-white transition-colors flex items-center gap-1 pt-4">
+                <div className="p-6 pt-0 border-t border-zinc-200 mt-4">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] group-hover:text-[#54595F] transition-colors flex items-center gap-1 pt-4">
                     Read Technical Paper <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </div>
@@ -177,14 +177,14 @@ export const InsightsPage = () => {
         )}
 
         {/* Bottom Banner */}
-        <div className="rounded-3xl bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] border border-zinc-200/90 dark:border-[#333]/80 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl dark:shadow-2xl">
+        <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
           <div className="text-left">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] mb-1.5">Applying Advanced Structural Research to Real Builds</h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#9CA3AF]">Need an expert finite element analysis or code-compliance technical audit for your project?</p>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#54595F] mb-1.5"><span className="text-[#D4AF37]">Applying</span> Advanced Structural Research to Real Builds</h3>
+            <p className="text-xs sm:text-sm text-[#54595F]">Need an expert finite element analysis or code-compliance technical audit for your project?</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#801834] dark:bg-[#D4AF37] text-white dark:text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-zinc-900 dark:hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-md shrink-0 flex items-center gap-2"
+            className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-[#c49f2c] transition-all shadow-md shrink-0 flex items-center gap-2"
           >
             Request Consultation <ArrowUpRight size={14} />
           </button>
