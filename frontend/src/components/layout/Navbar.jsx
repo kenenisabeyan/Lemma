@@ -72,13 +72,13 @@ export const Navbar = () => {
       <header 
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-[#F8FAFC]/95 dark:bg-[#0B0F19]/95 backdrop-blur-xl border-b border-slate-200/90 dark:border-slate-800/90 shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
+            ? 'bg-[#FFFFFF]/95 dark:bg-[#0B0F19]/95 backdrop-blur-xl border-b border-zinc-200/90 dark:border-slate-800/90 shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
             : 'bg-transparent py-4 sm:py-6'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
           
-          {/* Left Brand: Avatar + Online Dot + Name & Burgundy Subtitle */}
+          {/* Left Brand: Avatar + Online Dot + Name & Subtitle */}
           <Link 
             to="/" 
             className="flex items-center gap-3 group focus:outline-none"
@@ -100,12 +100,12 @@ export const Navbar = () => {
               </span>
             </div>
 
-            {/* Name + Subtitle in Burgundy */}
+            {/* Name + Subtitle in Gold */}
             <div className="flex flex-col text-left">
-              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors leading-tight">
+              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-900 dark:text-zinc-100 group-hover:text-[#D4AF37] dark:group-hover:text-[#D4AF37] transition-colors leading-tight">
                 {brandName}
               </span>
-              <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#801834] dark:text-[#E84855] uppercase mt-0.5 leading-none">
+              <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#D4AF37] dark:text-[#D4AF37] uppercase mt-0.5 leading-none">
                 {brandSubtitle}
               </span>
             </div>
@@ -163,7 +163,7 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 260 }}
-              className="relative z-10 w-full max-w-md bg-[#F8FAFC] dark:bg-[#0F172A] border-l border-slate-200 dark:border-slate-800 shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
+              className="relative z-10 w-full max-w-md bg-[#FFFFFF] dark:bg-[#0F172A] border-l border-zinc-200 dark:border-slate-800 shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
             >
               {/* Drawer Top */}
               <div>
@@ -176,7 +176,7 @@ export const Navbar = () => {
                     />
                     <div>
                       <h3 className="font-extrabold text-sm text-zinc-900 dark:text-zinc-100">{brandName}</h3>
-                      <p className="text-[10px] font-bold tracking-wider text-[#801834] dark:text-[#E84855] uppercase">
+                      <p className="text-[10px] font-bold tracking-wider text-[#D4AF37] dark:text-[#D4AF37] uppercase">
                         {brandSubtitle}
                       </p>
                     </div>
@@ -217,8 +217,8 @@ export const Navbar = () => {
                         }}
                         className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 ${
                           isActive
-                            ? 'bg-[#801834]/10 dark:bg-[#801834]/20 text-[#801834] dark:text-[#E84855] font-bold'
-                            : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800/60'
+                            ? 'bg-[#D4AF37]/15 dark:bg-[#D4AF37]/20 text-[#D4AF37] dark:text-[#D4AF37] font-bold'
+                            : 'text-[#54595F] dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 hover:text-[#D4AF37]'
                         }`}
                       >
                         <div className="flex items-center gap-3">
@@ -229,7 +229,7 @@ export const Navbar = () => {
                           size={16} 
                           className={`transition-transform ${
                             isActive 
-                              ? 'text-[#801834] dark:text-[#E84855] translate-x-1' 
+                              ? 'text-[#D4AF37] dark:text-[#D4AF37] translate-x-1' 
                               : 'opacity-0 group-hover:opacity-100 group-hover:translate-x-1'
                           }`} 
                         />
@@ -245,7 +245,7 @@ export const Navbar = () => {
                   <Link
                     to="/admin/dashboard"
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100"
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-[#FFFFFF] dark:bg-zinc-800 text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100"
                   >
                     <User size={14} /> Admin CMS Portal
                   </Link>
@@ -256,7 +256,7 @@ export const Navbar = () => {
                     navigate('/contact');
                     setMenuOpen(false);
                   }}
-                  className="rounded-full bg-[#801834] hover:bg-[#68132a] active:scale-95 text-white py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#801834]/25 flex items-center justify-center gap-2"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#D4AF37]/25 flex items-center justify-center gap-2"
                 >
                   Schedule Consultation <ArrowUpRight size={14} />
                 </button>
