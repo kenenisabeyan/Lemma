@@ -85,32 +85,32 @@ export const Portfolio = () => {
   });
 
   return (
-    <div className="min-h-screen bg-transparent bg-cad-grid text-inherit pt-28 pb-24 relative overflow-hidden selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-[#FFFFFF] bg-cad-grid text-[#54595F] pt-28 pb-24 relative overflow-hidden transition-colors duration-200">
       {/* Ambient Aurora Drift Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#801834]/10 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
+        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/10 blur-[140px] animate-aurora-drift"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="mb-12 border-b border-zinc-200/80 dark:border-zinc-800 pb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-zinc-800 dark:text-zinc-200 text-xs font-bold tracking-wider uppercase mb-5 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-[#801834] dark:bg-[#E84855] animate-pulse"></span>
+        <div className="mb-12 border-b border-zinc-200/80 pb-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-zinc-800 text-xs font-bold tracking-wider uppercase mb-5 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Featured Engineering Practice
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-[1.08] mb-5">
-            Project <span className="text-[#801834] dark:text-[#E84855]">Portfolio.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
+            Project <span className="text-[#D4AF37]">Portfolio.</span>
           </h1>
-          <div className="rounded-2xl bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-md border border-zinc-200/90 dark:border-zinc-800/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
-            <p className="text-zinc-700 dark:text-zinc-300 text-base lg:text-lg leading-relaxed">
+          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] max-w-3xl">
+            <p className="text-[#54595F] text-base lg:text-lg leading-relaxed">
               Explore detailed structural case studies across high-rise skyscrapers, long-span bridge infrastructure, and seismic retrofits — complete with finite element modeling notes and calculated results.
             </p>
           </div>
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-white/95 dark:bg-[#14171C]/95 p-3 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 shadow-sm dark:shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-12 bg-[#FFFFFF] p-3 rounded-2xl border border-zinc-200/90 shadow-sm">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
@@ -120,8 +120,8 @@ export const Portfolio = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-[#801834] text-white shadow-sm dark:bg-[#D4AF37] dark:text-[#121417] scale-105'
-                    : 'bg-[#F4F5F7] dark:bg-[#0E1014] text-zinc-600 dark:text-[#9CA3AF] border border-zinc-200/80 dark:border-zinc-800/80 hover:text-zinc-900 dark:hover:text-[#EAEAEA] hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50'
+                    ? 'bg-[#D4AF37] text-[#121417] shadow-sm font-extrabold scale-105'
+                    : 'bg-[#FFFFFF] text-[#54595F] border border-zinc-200/80 hover:text-zinc-900 hover:border-[#D4AF37]'
                 }`}
               >
                 {cat}
@@ -131,13 +131,13 @@ export const Portfolio = () => {
 
           {/* Search Input */}
           <div className="relative min-w-[260px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-[#9CA3AF] w-4 h-4" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search by tower, bridge, system..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#F4F5F7] dark:bg-[#0E1014] rounded-full border border-zinc-200/80 dark:border-zinc-800/80 pl-10 pr-4 py-2 text-xs text-zinc-900 dark:text-[#EAEAEA] placeholder:text-zinc-400 dark:placeholder:text-[#666] focus:border-[#801834] dark:focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-[#FFFFFF] rounded-full border border-zinc-200 pl-10 pr-4 py-2 text-xs text-zinc-900 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
             />
           </div>
 
@@ -145,8 +145,8 @@ export const Portfolio = () => {
 
         {/* Projects Grid */}
         {filteredProjects.length === 0 ? (
-          <div className="py-20 text-center bg-white/95 dark:bg-[#14171C]/95 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 mb-20 shadow-xs">
-            <p className="text-zinc-500 dark:text-[#9CA3AF] text-sm font-mono uppercase tracking-wider">No engineering projects match the selected criteria.</p>
+          <div className="py-20 text-center bg-[#FFFFFF] rounded-2xl border border-zinc-200/90 mb-20 shadow-xs">
+            <p className="text-[#54595F] text-sm font-mono uppercase tracking-wider">No engineering projects match the selected criteria.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -163,14 +163,14 @@ export const Portfolio = () => {
         {/* Interactive Drawing Dossier & CAD Inspector */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/90 dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#801834] dark:text-[#D4AF37] shadow-xs mb-4 font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
-              Interactive Drawing <span className="text-[#801834] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#D4AF37]">Dossier & FEA Inspector.</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+              Interactive Drawing <span className="text-[#D4AF37]">Dossier & FEA Inspector.</span>
             </h2>
-            <p className="text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               Examine project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
             </p>
           </div>
@@ -179,26 +179,38 @@ export const Portfolio = () => {
         </div>
 
         {/* Bottom Bento Consultation Banner */}
-        <div className="rounded-3xl border border-zinc-200/90 dark:border-[#333]/80 bg-white dark:bg-gradient-to-r dark:from-[#181A1E] dark:via-[#14161A] dark:to-[#181A1E] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md dark:shadow-2xl">
+        <div className="rounded-3xl border border-zinc-200/90 bg-[#FFFFFF] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
           <div className="text-left">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#801834] dark:text-[#D4AF37] mb-2 font-semibold">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Available for Select Mandates</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-2">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-zinc-900 tracking-tight mb-2">
               Have a High-Stakes Project Requiring Stamped Verification?
             </h3>
-            <p className="text-xs md:text-sm text-zinc-600 dark:text-[#9CA3AF] max-w-xl leading-relaxed">
+            <p className="text-xs md:text-sm text-[#54595F] max-w-xl leading-relaxed">
               Available for preliminary structural feasibility review, independent FEA peer reviews, and complete PE/SE calculations packages.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#801834] text-white hover:bg-[#68132a] dark:bg-[#D4AF37] dark:text-[#121417] dark:hover:bg-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2"
+            className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] shrink-0 flex items-center gap-2"
           >
             Schedule Consultation <ArrowUpRight size={14} />
           </button>
         </div>
+
+      </div>
+
+      {/* Case Study Modal */}
+      {selectedProject && (
+        <CaseStudyModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </div>
+  );
 
       </div>
 
