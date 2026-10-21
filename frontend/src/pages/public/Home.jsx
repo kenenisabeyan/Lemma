@@ -295,7 +295,7 @@ export const Home = () => {
             {/* Primary Filled Pill Button */}
             <button
               onClick={() => navigate('/projects')}
-              className="rounded-full bg-[#801834] hover:bg-[#68132a] active:scale-95 text-white px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(128,24,52,0.35)] hover:shadow-[0_14px_32px_rgba(128,24,52,0.5)] flex items-center gap-2 group cursor-pointer"
+              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
             >
               <span>EXPLORE PROJECTS</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -304,10 +304,10 @@ export const Home = () => {
             {/* Secondary Frosted White Pill Button */}
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="rounded-full bg-white dark:bg-[#181A1E] text-[#801834] dark:text-[#E84855] border border-rose-200/90 dark:border-zinc-700 hover:bg-rose-50/60 dark:hover:bg-zinc-800 active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_15px_rgba(128,24,52,0.06)] dark:shadow-[0_4px_15px_rgba(0,0,0,0.4)] flex items-center gap-2 cursor-pointer"
+              className="rounded-full bg-white dark:bg-[#181A1E] text-[#54595F] dark:text-[#EAEAEA] border border-zinc-200/90 dark:border-zinc-700 hover:border-[#D4AF37] hover:text-[#D4AF37] active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-sm flex items-center gap-2 cursor-pointer"
             >
               <span>WATCH SHOWREEL</span>
-              <Play size={13} className="fill-[#801834] dark:fill-[#E84855]" />
+              <Play size={13} className="fill-[#D4AF37] text-[#D4AF37]" />
             </button>
           </motion.div>
 
@@ -317,16 +317,16 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 2. INFINITE MARQUEE TICKER                                                */}
       {/* ========================================================================= */}
-      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 dark:border-zinc-800/80 bg-[#F4F5F7] dark:bg-[#0E1014] py-4 overflow-hidden transition-colors">
+      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 dark:border-zinc-800/80 bg-[#FFFFFF] dark:bg-[#0E1014] py-4 overflow-hidden transition-colors">
         <div className="mx-auto max-w-6xl [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="overflow-hidden">
             <div className="animate-marquee flex items-center gap-10">
               {techMarquee.concat(techMarquee).map((tool, idx) => (
                 <span 
                   key={idx} 
-                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-zinc-700 dark:text-[#9CA3AF] text-xs uppercase tracking-wider transition-colors hover:text-[#801834] dark:hover:text-[#D4AF37]"
+                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-[#54595F] dark:text-[#9CA3AF] text-xs uppercase tracking-wider transition-colors hover:text-[#D4AF37] dark:hover:text-[#D4AF37]"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#801834]/70 dark:bg-[#D4AF37]/60 group-hover:bg-[#801834] dark:group-hover:bg-[#D4AF37]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] group-hover:scale-125 transition-transform"></span>
                   {tool}
                 </span>
               ))}
@@ -338,14 +338,14 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-[#FAF9F6] dark:bg-[#0B0C0E] bg-cad-grid relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
+      <section className="py-20 md:py-24 bg-[#FFFFFF] dark:bg-[#0B0C0E] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
         <div className="max-w-5xl mx-auto px-6">
           
           <div className="mx-auto max-w-3xl text-center mb-14">
             <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-zinc-900 dark:text-[#EAEAEA]">
-              Analyze<span className="text-[#801834] dark:text-[#D4AF37]">.</span> Calculate<span className="text-[#801834] dark:text-[#D4AF37]">.</span> Deliver<span className="text-[#801834] dark:text-[#D4AF37]">.</span>
+              Analyze<span className="text-[#D4AF37]">.</span> Calculate<span className="text-[#D4AF37]">.</span> Deliver<span className="text-[#D4AF37]">.</span>
             </h2>
-            <p className="mt-4 text-balance text-zinc-600 dark:text-[#9CA3AF] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            <p className="mt-4 text-balance text-[#54595F] dark:text-[#9CA3AF] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
               Precision structural mechanics and finite element performance simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
             </p>
           </div>
@@ -353,55 +353,55 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: High-Rise Lateral Stability (Col 1-2) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#801834]/30 dark:border-[#D4AF37]/40 bg-[#FAF0F3] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#801834]/15 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
-                <Building2 size={36} className="text-[#801834] dark:text-[#D4AF37] relative z-20" />
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 dark:border-[#D4AF37]/40 bg-[#FEF9E7] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
+                <Building2 size={36} className="text-[#D4AF37] dark:text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
                 <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">High-Rise Lateral Stability</h3>
-                <p className="text-zinc-600 dark:text-[#9CA3AF] text-xs leading-relaxed">
+                <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs leading-relaxed">
                   Dual core shear walls, perimeter belt trusses, and aerodynamic damping suppressing lateral drift in skyscrapers.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 ETABS · ASCE 7-22 Wind Tunnel
               </div>
             </div>
 
             {/* Bento Card 2: Non-Linear Seismic Modeling (Col 3-4) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#801834]/30 dark:border-[#D4AF37]/40 bg-[#FAF0F3] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#801834]/15 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
-                <Activity size={36} className="text-[#801834] dark:text-[#D4AF37] relative z-20" />
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 dark:border-[#D4AF37]/40 bg-[#FEF9E7] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
+                <Activity size={36} className="text-[#D4AF37] dark:text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
                 <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">Non-Linear Seismic Modeling</h3>
-                <p className="text-zinc-600 dark:text-[#9CA3AF] text-xs leading-relaxed">
+                <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs leading-relaxed">
                   Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments per FEMA P-58.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 SAP2000 · Base Isolation
               </div>
             </div>
 
             {/* Bento Card 3: Value Engineering Sparkline Graph (Col 5-6) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="flex size-8 items-center justify-center rounded-full bg-[#FAF0F3] dark:bg-[#D4AF37]/10 text-[#801834] dark:text-[#D4AF37] border border-[#801834]/20 dark:border-[#D4AF37]/30">
+                  <div className="flex size-8 items-center justify-center rounded-full bg-[#FEF9E7] dark:bg-[#D4AF37]/10 text-[#D4AF37] dark:text-[#D4AF37] border border-[#D4AF37]/30">
                     <ShieldCheck size={16} />
                   </div>
                   <div className="font-mono text-xs font-bold text-zinc-900 dark:text-[#EAEAEA]">100% Safety Record</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
-                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#801834" className="dark:stroke-[#D4AF37]" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#D4AF37" className="dark:stroke-[#D4AF37]" strokeWidth="2.5" fill="none" strokeLinecap="round" />
                   <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15 L298 110 L3 110 Z" fill="url(#goldGradBento)" opacity="0.15" />
                   <defs>
                     <linearGradient id="goldGradBento" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stopColor="#801834" />
+                      <stop offset="0%" stopColor="#D4AF37" />
                       <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
                   </defs>
@@ -409,44 +409,44 @@ export const Home = () => {
               </div>
               <div className="relative z-10 mt-2 space-y-1.5 text-center">
                 <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">Value Engineering</h3>
-                <p className="text-zinc-600 dark:text-[#9CA3AF] text-xs leading-relaxed">
+                <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs leading-relaxed">
                   Post-tensioning and optimized finite element redistribution saving 20-30% concrete mass and steel tonnage.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#801834] dark:text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 Peer Review · Quantity Audits
               </div>
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white/95 dark:bg-[#14171C]/95 backdrop-blur-xs sm:col-span-2 md:col-span-6 p-0 hover:border-[#801834]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(128,24,52,0.05)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs sm:col-span-2 md:col-span-6 p-0 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
               <div className="grid h-full sm:grid-cols-2 items-center">
                 <div className="relative z-10 space-y-6 py-8 ps-8 pe-6">
-                  <div className="flex size-12 items-center justify-center rounded-full border border-[#801834]/20 dark:border-[#D4AF37]/30 bg-[#FAF0F3] dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-2">
-                    <Ruler size={20} className="text-[#801834] dark:text-[#D4AF37]" />
+                  <div className="flex size-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-2">
+                    <Ruler size={20} className="text-[#D4AF37]" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-xl">3D Finite Element Simulation</h3>
-                    <p className="text-zinc-600 dark:text-[#9CA3AF] text-xs sm:text-sm leading-relaxed max-w-md">
+                    <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs sm:text-sm leading-relaxed max-w-md">
                       From ETABS building wind tunnel integration to Midas Civil bridge span dynamic response, calculations adhere to the highest international seismic and structural performance criteria.
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
-                    <span className="rounded-full bg-zinc-100 dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-zinc-700 dark:text-[#D4AF37] uppercase font-semibold">AISC 360</span>
+                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
+                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
+                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
+                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">AISC 360</span>
                   </div>
                 </div>
                 <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
-                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 dark:border-[#333] bg-[#FAF0F3] dark:bg-[#121417] shadow-md dark:shadow-2xl group-hover:border-[#801834]/40 dark:group-hover:border-[#D4AF37]/50 transition-colors">
+                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 dark:border-[#333] bg-[#FFFFFF] dark:bg-[#121417] shadow-md dark:shadow-2xl group-hover:border-[#D4AF37]/50 transition-colors">
                     <img 
                       src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
                       alt="Structural FEA Simulation" 
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-3 left-3 bg-white/95 dark:bg-[#121417]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-[#333] font-mono text-[10px] text-[#801834] dark:text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
+                    <div className="absolute bottom-3 left-3 bg-white/95 dark:bg-[#121417]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-[#333] font-mono text-[10px] text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                       ETABS v21 Live Non-Linear Stress Distribution
                     </div>
