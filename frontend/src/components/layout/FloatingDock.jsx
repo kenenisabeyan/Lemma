@@ -44,7 +44,7 @@ export const FloatingDock = () => {
 
   return (
     <div className="fixed bottom-6 inset-x-0 z-40 hidden md:flex justify-center pointer-events-none transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
-      <nav className="pointer-events-auto flex items-center gap-1.5 p-2 rounded-full bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_rgba(0,0,0,0.65)]">
+      <nav className="pointer-events-auto flex items-center gap-1.5 p-2 rounded-full bg-[#FFFFFF]/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_rgba(0,0,0,0.65)]">
         {dockLinks.map((item) => {
           const Icon = item.icon;
           return (
@@ -56,8 +56,8 @@ export const FloatingDock = () => {
                 className={({ isActive }) =>
                   `flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${
                     isActive
-                      ? 'bg-[#801834] text-white shadow-[0_0_15px_rgba(128,24,52,0.4)] scale-105'
-                      : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110'
+                      ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_15px_rgba(212,175,55,0.4)] scale-105'
+                      : 'text-[#54595F] dark:text-zinc-400 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110'
                   }`
                 }
               >
@@ -66,7 +66,7 @@ export const FloatingDock = () => {
 
               {/* Tooltip */}
               {activeTooltip === item.name && (
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-zinc-900 dark:bg-[#121417] border border-zinc-700 dark:border-[#333] text-[10px] font-mono font-bold uppercase tracking-wider text-amber-300 dark:text-[#D4AF37] shadow-lg whitespace-nowrap animate-in fade-in duration-200 pointer-events-none">
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-zinc-900 dark:bg-[#121417] border border-zinc-700 dark:border-[#333] text-[10px] font-mono font-bold uppercase tracking-wider text-[#D4AF37] shadow-lg whitespace-nowrap animate-in fade-in duration-200 pointer-events-none">
                   {item.name}
                 </div>
               )}
@@ -82,7 +82,7 @@ export const FloatingDock = () => {
           onMouseEnter={() => setActiveTooltip('Top')}
           onMouseLeave={() => setActiveTooltip(null)}
           title="Back to Top"
-          className="flex items-center justify-center w-10 h-10 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-[#801834] dark:hover:text-[#D4AF37] hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110 transition-all duration-300"
+          className="flex items-center justify-center w-10 h-10 rounded-full text-[#54595F] dark:text-zinc-400 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:scale-110 transition-all duration-300"
         >
           <ChevronUp size={18} />
         </button>
