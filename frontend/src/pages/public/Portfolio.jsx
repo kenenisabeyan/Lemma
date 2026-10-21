@@ -211,16 +211,5 @@ export const Portfolio = () => {
       )}
     </div>
   );
-
-      </div>
-
-      {/* Case Study Modal */}
-      {selectedProject && (
-        <CaseStudyModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
-    </div>
-  );
 };
+
