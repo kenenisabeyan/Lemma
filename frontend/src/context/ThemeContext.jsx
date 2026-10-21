@@ -4,10 +4,10 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('portfolio_theme');
-    if (saved) return saved;
-    // Default to dark mode to match structural engineering CAD workstation standard
-    return 'dark';
+    const saved = localStorage.getItem('portfolio_theme_v3');
+    if (saved === 'dark' || saved === 'light') return saved;
+    // Default to light mode to showcase clean #FFFFFF white background
+    return 'light';
   });
 
   useEffect(() => {
@@ -19,6 +19,7 @@ export const ThemeProvider = ({ children }) => {
       root.classList.remove('dark');
       root.classList.add('light');
     }
+    localStorage.setItem('portfolio_theme_v3', theme);
     localStorage.setItem('portfolio_theme', theme);
   }, [theme]);
 
