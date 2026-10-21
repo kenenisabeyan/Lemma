@@ -45,7 +45,6 @@ export const ServicesPage = () => {
   ];
 
   return (
-  return (
     <div className="relative min-h-screen bg-[#FFFFFF] bg-cad-grid text-[#54595F] pt-28 pb-24 overflow-hidden">
       {/* Ambient Aurora Drift Background Glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
