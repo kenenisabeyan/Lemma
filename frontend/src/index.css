@@ -4,17 +4,19 @@
 
 @layer base {
   :root {
-    --bg-main: #F8FAFC;
+    --bg-main: #FFFFFF;
     --bg-surface: #FFFFFF;
-    --bg-subtle: #F1F5F9;
-    --bg-tint-wine: #FAF0F3;
-    --bg-tint-slate: #F1F5F9;
-    --bg-tint-amber: #FEF3C7;
-    --text-main: #0F172A;
+    --bg-subtle: #FFFFFF;
+    --bg-tint-wine: #FEF9E7;
+    --bg-tint-slate: #FFFFFF;
+    --bg-tint-amber: #FEF9C3;
+    --text-main: #54595F;
     --card-bg: #FFFFFF;
     --border-color: rgba(226, 232, 240, 0.9);
-    --wine-primary: #801834;
-    --wine-hover: #671229;
+    --wine-primary: #D4AF37;
+    --wine-hover: #c49f2c;
+    --gold-primary: #D4AF37;
+    --gold-hover: #c49f2c;
   }
 
   html.dark {
@@ -27,14 +29,16 @@
     --text-main: #F8FAFC;
     --card-bg: rgba(17, 24, 39, 0.95);
     --border-color: rgba(51, 65, 85, 0.7);
-    --wine-primary: #E11D48;
-    --wine-hover: #BE123C;
+    --wine-primary: #D4AF37;
+    --wine-hover: #c49f2c;
+    --gold-primary: #D4AF37;
+    --gold-hover: #c49f2c;
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#801834] selection:text-white bg-[#F8FAFC] text-slate-900 dark:bg-[#0B0F19] dark:text-slate-100;
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#D4AF37] selection:text-[#121417] bg-[#FFFFFF] text-[#54595F];
   }
 }
 
@@ -45,7 +49,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #FFFFFF;
 }
 
 html.dark ::-webkit-scrollbar-track {
@@ -62,11 +66,11 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #801834;
+  background: #D4AF37;
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #D4AF37;
 }
 
 /* Structural Blueprint Grid Backgrounds */
