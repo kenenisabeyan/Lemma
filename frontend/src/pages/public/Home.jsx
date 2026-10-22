@@ -212,10 +212,14 @@ export const Home = () => {
     <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
       
       {/* ========================================================================= */}
+      {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-[#FAF9F6] dark:bg-[#0B0C0E] bg-cad-grid transition-colors">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/70 dark:bg-[#0B0C0E]/85 backdrop-blur-2xl bg-cad-grid transition-colors">
         
+        {/* Luminous White Glass Frosted Sheen Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/55 to-white/80 dark:from-[#0B0C0E]/75 dark:via-[#0B0C0E]/45 dark:to-[#0B0C0E]/80 pointer-events-none" />
+
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10">
           {/* Subtle Ambient Studio Light (Wine & Gold) */}
@@ -228,7 +232,7 @@ export const Home = () => {
           </div>
 
           {/* Precision Blueprint Vignette Edge Fade - subtle bottom transition only */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#FAF9F6]/80 dark:from-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
         </div>
 
         {/* 3D Moveable Floating Architectural & Engineering Cards (Draggable in 3D Space) */}
@@ -237,7 +241,7 @@ export const Home = () => {
         {/* Floating Translucent Accent Ring */}
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-zinc-400/40 dark:border-zinc-500/40 bg-zinc-300/30 dark:bg-zinc-600/20 backdrop-blur-xs animate-pulse hidden sm:block z-10"
+          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-white/80 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md shadow-xs animate-pulse hidden sm:block z-10"
         />
 
         {/* Hero Content Container */}
@@ -248,7 +252,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/60 dark:border-white/15 bg-white/40 dark:bg-white/[0.06] backdrop-blur-xl px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.35)] pointer-events-auto"
+            className="inline-flex items-center gap-2 rounded-full border border-white/90 dark:border-white/20 bg-white/80 dark:bg-white/10 backdrop-blur-2xl px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] pointer-events-auto"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
             <span>3D Spatial Studio · Moveable Elements</span>
@@ -278,7 +282,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/40 dark:bg-black/30 backdrop-blur-2xl border border-white/60 dark:border-white/15 shadow-[0_10px_35px_rgba(0,0,0,0.05)] dark:shadow-[0_12px_45px_rgba(0,0,0,0.55)] px-6 sm:px-10 py-5 sm:py-6 pointer-events-auto transition-all"
+            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-10 py-5 sm:py-6 pointer-events-auto transition-all"
           >
             <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center drop-shadow-xs">
               {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
@@ -304,7 +308,7 @@ export const Home = () => {
             {/* Secondary Frosted Glass Pill Button */}
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="rounded-full bg-white/40 dark:bg-white/[0.06] backdrop-blur-xl text-zinc-900 dark:text-zinc-100 border border-white/60 dark:border-white/15 hover:border-[#D4AF37] hover:bg-white/60 dark:hover:bg-white/[0.12] hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex items-center gap-2 cursor-pointer"
+              className="rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
             >
               <span>WATCH SHOWREEL</span>
               <Play size={13} className="fill-[#D4AF37] text-[#D4AF37]" />

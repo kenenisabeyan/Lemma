@@ -28,9 +28,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // 1. SCENE, CAMERA, RENDERER
     const scene = new THREE.Scene();
 
-    // Atmospheric depth fog that seamlessly dissolves the 3D model into the background color
-    const bgColor = isDark ? 0x0B0C0E : 0xFAF9F6;
-    scene.fog = new THREE.FogExp2(bgColor, 0.018);
+    // Atmospheric depth fog that seamlessly dissolves the 3D model into the white glass background
+    const bgColor = isDark ? 0x0B0C0E : 0xFFFFFF;
+    scene.fog = new THREE.FogExp2(bgColor, 0.016);
 
     const camera = new THREE.PerspectiveCamera(
       45,
@@ -715,10 +715,10 @@ export const Hero3DCanvas = ({ className = '' }) => {
             <button
               key={mode.id}
               onClick={() => setActiveMode(mode.id)}
-              className={`rounded-full px-3 sm:px-3.5 py-1.5 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer backdrop-blur-xl shadow-xs ${
+              className={`rounded-full px-3 sm:px-3.5 py-1.5 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer backdrop-blur-2xl shadow-xs ${
                 isActive
                   ? 'bg-[#D4AF37] text-[#121417] border border-[#D4AF37] shadow-[0_4px_15px_rgba(212,175,55,0.4)] scale-105'
-                  : 'bg-white/40 dark:bg-white/[0.06] text-zinc-800 dark:text-zinc-200 border border-white/60 dark:border-white/15 hover:border-[#D4AF37] hover:text-[#D4AF37]'
+                  : 'bg-white/80 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white hover:text-[#D4AF37] shadow-[0_4px_16px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.9)]'
               }`}
             >
               <Icon size={12} className={isActive ? 'text-[#121417]' : 'text-[#D4AF37]'} />
@@ -732,7 +732,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
       {/* LIVE CIVIL ENGINEERING TELEMETRY HUD (FROSTED GLASS READOUT)             */}
       {/* ========================================================================= */}
       <div className="absolute bottom-4 right-4 sm:right-6 z-30 pointer-events-auto hidden sm:block">
-        <div className="rounded-2xl bg-white/45 dark:bg-black/35 backdrop-blur-2xl border border-white/60 dark:border-white/15 p-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] font-mono text-[10px] text-zinc-800 dark:text-zinc-200 space-y-1.5 max-w-xs transition-all">
+        <div className="rounded-2xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 p-3.5 shadow-[0_12px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] font-mono text-[10px] text-zinc-800 dark:text-zinc-200 space-y-1.5 max-w-xs transition-all">
           <div className="flex items-center justify-between gap-3 border-b border-white/30 dark:border-white/10 pb-1.5">
             <span className="text-[#D4AF37] font-bold flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>

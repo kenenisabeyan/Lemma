@@ -71,7 +71,7 @@ export const Moveable3DHeroCards = () => {
       tag: 'FEA STRESS: 0.68 OK',
       code: 'AISC 360-22 MOMENT FRAME',
       metric: 'ASTM A992 · BUCKLING SAFE',
-      image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80',
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80',
       icon: ShieldCheck,
       accent: 'border-emerald-500',
       accentBg: 'bg-emerald-500',
@@ -148,7 +148,7 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(128, 24, 52, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/45 dark:bg-white/[0.05] backdrop-blur-2xl border border-white/60 dark:border-white/15 p-3 shadow-[0_8px_32px_0_rgba(31,38,135,0.12)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
             <div className="relative overflow-hidden rounded-xl bg-zinc-950/80 backdrop-blur-xs aspect-[16/10] border border-white/20 dark:border-white/10">
@@ -209,7 +209,7 @@ export const Moveable3DHeroCards = () => {
                 </span>
               </div>
 
-              <div className="text-[9px] font-mono text-zinc-600 dark:text-zinc-400 border border-white/40 dark:border-white/10 px-2 py-1 rounded-md bg-white/30 dark:bg-white/[0.06] backdrop-blur-md uppercase tracking-widest shrink-0 font-semibold">
+              <div className="text-[9px] font-mono text-zinc-700 dark:text-zinc-300 border border-white/80 dark:border-white/20 px-2 py-1 rounded-md bg-white/70 dark:bg-white/10 backdrop-blur-md uppercase tracking-widest shrink-0 font-semibold shadow-2xs">
                 FEA Verified
               </div>
             </div>

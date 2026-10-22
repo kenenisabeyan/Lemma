@@ -121,14 +121,14 @@ export const Experience = () => {
         
         {/* Page Header */}
         <div className="mb-14 border-b border-zinc-200 pb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/90 dark:border-white/20 bg-white/80 dark:bg-white/10 backdrop-blur-xl px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-[0_2px_12px_rgba(0,0,0,0.03),inset_0_1px_1px_rgba(255,255,255,0.9)] mb-5 font-semibold">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Professional History & Engineering Record
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
             Structural <span className="text-[#D4AF37]">Experience.</span>
           </h1>
-          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl">
+          <div className="rounded-2xl bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 p-6 sm:p-7 shadow-[0_12px_36px_rgba(0,0,0,0.04),inset_0_1px_2px_rgba(255,255,255,0.95)] max-w-3xl">
             <p className="text-[#54595F] text-base lg:text-lg leading-relaxed">
               A comprehensive record of 14+ years in structural analysis, high-rise wind engineering, bridge infrastructure, and seismic disaster-resilience consulting.
             </p>
