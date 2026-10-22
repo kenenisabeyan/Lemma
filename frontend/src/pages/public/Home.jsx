@@ -216,14 +216,14 @@ export const Home = () => {
       {/* ========================================================================= */}
       <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-[#FAF9F6] dark:bg-[#0B0C0E] bg-cad-grid transition-colors">
         
-        {/* Architectural CAD Blueprint & 3D Three.js Wireframe Model */}
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden select-none">
+        {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
+        <div className="absolute inset-0 overflow-hidden select-none z-10">
           {/* Subtle Ambient Studio Light (Wine & Gold) */}
           <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/6 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none"></div>
           <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/5 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
           
-          {/* 3D Interactive Three.js High-Rise Model */}
-          <div className="absolute inset-0 z-0">
+          {/* 3D Interactive Three.js High-Rise Civil Engineering Process Model */}
+          <div className="absolute inset-0">
             <Hero3DCanvas />
           </div>
 
