@@ -56,6 +56,8 @@ export const Home = () => {
 
   // Hero Section Dynamic Portfolio Project Showcase
   const [activeHeroProjectIdx, setActiveHeroProjectIdx] = useState(0);
+  const [isEngineerHovered, setIsEngineerHovered] = useState(false);
+  const [isProjectHovered, setIsProjectHovered] = useState(false);
   const heroProjects = [
     {
       id: '1',
@@ -409,25 +411,45 @@ export const Home = () => {
                     className="relative z-10 w-full sm:w-[52%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group overflow-hidden"
                   >
                     {/* Engineer Portrait Photo */}
-                    <div className="relative aspect-[4/4.8] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner">
+                    <div 
+                      onMouseEnter={() => setIsEngineerHovered(true)}
+                      onMouseLeave={() => setIsEngineerHovered(false)}
+                      className="relative aspect-[4/4.8] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
+                    >
                       <img
                         src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
                         alt="Alexandre Techane"
                         className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
                       />
 
-                      {/* Gradient Overlay - Visible ONLY on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-                      {/* Bottom Name & Role Overlay - Visible ONLY on Hover */}
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/90 dark:bg-black/80 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 pointer-events-none">
-                        <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight">
-                          {settings.engineerName || 'Alexandre Techane'}
-                        </p>
-                        <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide">
-                          Senior Structural Principal · PE, SE
-                        </p>
-                      </div>
+                      {/* Smooth Hover Overlay - Never rendered before hover */}
+                      <AnimatePresence>
+                        {isEngineerHovered && (
+                          <>
+                            <motion.div
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"
+                            />
+                            <motion.div
+                              initial={{ opacity: 0, y: 8 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 8 }}
+                              transition={{ duration: 0.25 }}
+                              className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/95 dark:bg-black/85 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm pointer-events-none"
+                            >
+                              <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight">
+                                {settings.engineerName || 'Alexandre Techane'}
+                              </p>
+                              <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide">
+                                Senior Structural Principal · PE, SE
+                              </p>
+                            </motion.div>
+                          </>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </motion.div>
 
@@ -440,7 +462,9 @@ export const Home = () => {
                   >
                     {/* Project Preview Image */}
                     <div 
-                      className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner group/img cursor-pointer"
+                      onMouseEnter={() => setIsProjectHovered(true)}
+                      onMouseLeave={() => setIsProjectHovered(false)}
+                      className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
                       onClick={() => {
                         const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
                         setSelectedCaseStudy(matched);
@@ -455,32 +479,56 @@ export const Home = () => {
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.95 }}
                           transition={{ duration: 0.35 }}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </AnimatePresence>
 
-                      {/* Gradient Overlay - Visible ONLY on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-                      {/* Floating Metric Badge - Visible ONLY on Hover */}
-                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        {heroProjects[activeHeroProjectIdx].metric}
-                      </div>
-
-                      {/* Quick Inspect Arrow - Visible ONLY on Hover */}
-                      <div className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
-                        <ArrowUpRight size={12} />
-                      </div>
-
-                      {/* Title & Tag on Project Image - Visible ONLY on Hover */}
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 opacity-0 group-hover/img:opacity-100 transition-all duration-300 translate-y-1 group-hover/img:translate-y-0 pointer-events-none">
-                        <p className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-semibold">
-                          {heroProjects[activeHeroProjectIdx].category}
-                        </p>
-                        <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
-                          {heroProjects[activeHeroProjectIdx].title}
-                        </h4>
-                      </div>
+                      {/* Smooth Hover Overlay - Never rendered before hover */}
+                      <AnimatePresence>
+                        {isProjectHovered && (
+                          <>
+                            <motion.div
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"
+                            />
+                            <motion.div
+                              initial={{ opacity: 0, y: -6 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: -6 }}
+                              transition={{ duration: 0.25 }}
+                              className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white pointer-events-none"
+                            >
+                              {heroProjects[activeHeroProjectIdx].metric}
+                            </motion.div>
+                            <motion.div
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0.8 }}
+                              transition={{ duration: 0.25 }}
+                              className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs pointer-events-none"
+                            >
+                              <ArrowUpRight size={12} />
+                            </motion.div>
+                            <motion.div
+                              initial={{ opacity: 0, y: 8 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 8 }}
+                              transition={{ duration: 0.25 }}
+                              className="absolute bottom-2.5 left-2.5 right-2.5 pointer-events-none"
+                            >
+                              <p className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-semibold">
+                                {heroProjects[activeHeroProjectIdx].category}
+                              </p>
+                              <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
+                                {heroProjects[activeHeroProjectIdx].title}
+                              </h4>
+                            </motion.div>
+                          </>
+                        )}
+                      </AnimatePresence>
                     </div>
 
                     {/* Interactive Project Switcher (Pure Thumbnails, No Text) */}
