@@ -148,10 +148,10 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(128, 24, 52, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 p-3 shadow-xl transition-shadow select-none group ${card.visibility || 'hidden md:block'}`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/45 dark:bg-white/[0.05] backdrop-blur-2xl border border-white/60 dark:border-white/15 p-3 shadow-[0_8px_32px_0_rgba(31,38,135,0.12)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
-            <div className="relative overflow-hidden rounded-xl bg-zinc-950 aspect-[16/10] border border-zinc-200/40 dark:border-zinc-800">
+            <div className="relative overflow-hidden rounded-xl bg-zinc-950/80 backdrop-blur-xs aspect-[16/10] border border-white/20 dark:border-white/10">
               
               {/* Photorealistic Architectural Engineering Image */}
               <img 
@@ -171,13 +171,13 @@ export const Moveable3DHeroCards = () => {
               <span className="absolute bottom-2 right-2 text-[8px] font-mono text-white/50 tracking-widest">+</span>
 
               {/* Moveable Badge Chip with Grab Icon */}
-              <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono text-white font-bold shadow-sm">
+              <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-black/40 backdrop-blur-md border border-white/20 text-[10px] font-mono text-white font-bold shadow-sm">
                 <Move size={10} className="text-[#D4AF37] animate-pulse" />
                 <span className="tracking-wider">MOVEABLE 3D</span>
               </div>
 
               {/* Upper Right Engineering Tag */}
-              <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono text-emerald-400 font-bold">
+              <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-black/40 backdrop-blur-md border border-white/20 text-[9px] font-mono text-emerald-400 font-bold">
                 {card.tag}
               </div>
 
@@ -200,7 +200,7 @@ export const Moveable3DHeroCards = () => {
             {/* Bottom Card Footer Details */}
             <div className="pt-3 px-1 flex items-center justify-between text-xs">
               <div className="overflow-hidden">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 block truncate">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-600 dark:text-zinc-400 block truncate font-medium">
                   {card.project}
                 </span>
                 <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1">
@@ -209,7 +209,7 @@ export const Moveable3DHeroCards = () => {
                 </span>
               </div>
 
-              <div className="text-[9px] font-mono text-zinc-400 dark:text-zinc-500 border border-zinc-200 dark:border-zinc-700/80 px-2 py-1 rounded-md bg-zinc-50 dark:bg-zinc-800/60 uppercase tracking-widest shrink-0 font-semibold">
+              <div className="text-[9px] font-mono text-zinc-600 dark:text-zinc-400 border border-white/40 dark:border-white/10 px-2 py-1 rounded-md bg-white/30 dark:bg-white/[0.06] backdrop-blur-md uppercase tracking-widest shrink-0 font-semibold">
                 FEA Verified
               </div>
             </div>

@@ -18,7 +18,8 @@ export const Hero3DCanvas = ({ className = '' }) => {
       0.1,
       1000
     );
-    camera.position.set(0, 15, 42);
+    camera.position.set(0, 4, 34);
+    camera.lookAt(0, 1, 0);
 
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -33,31 +34,31 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const towerGroup = new THREE.Group();
     scene.add(towerGroup);
 
-    // Color definitions based on dark / light mode
-    const primaryColor = isDark ? 0xd4af37 : 0x801834; // Gold vs Wine
-    const accentColor = isDark ? 0x38bdf8 : 0x0284c7;  // Cyan / Sky
-    const slabColor = isDark ? 0x181a1f : 0xf4f4f5;
-    const wireColor = isDark ? 0x3f444e : 0x71717a;
+    // Color definitions based on dark / light mode (vibrant illuminated structural wireframe)
+    const primaryColor = isDark ? 0xf59e0b : 0xd4af37; // Radiant gold
+    const accentColor = isDark ? 0x38bdf8 : 0x0284c7;  // Electric cyan sky
+    const slabColor = isDark ? 0x0f172a : 0xf1f5f9;
+    const wireColor = isDark ? 0x334155 : 0x94a3b8;
 
-    // Build High-Rise Tower Geometry: 16 Stories with Outrigger Trusses
+    // Build High-Rise Tower Geometry: 14 Stories with Outrigger Trusses
     const floorCount = 14;
     const floorWidth = 9;
     const floorDepth = 9;
     const storyHeight = 2.2;
     const totalHeight = floorCount * storyHeight;
 
-    // Floor slabs
-    const slabGeo = new THREE.BoxGeometry(floorWidth, 0.25, floorDepth);
+    // Floor slabs (translucent glass floor plates)
+    const slabGeo = new THREE.BoxGeometry(floorWidth, 0.22, floorDepth);
     const slabMat = new THREE.MeshBasicMaterial({
       color: slabColor,
       transparent: true,
-      opacity: isDark ? 0.4 : 0.35,
+      opacity: isDark ? 0.16 : 0.12,
       wireframe: false
     });
     const slabEdgeMat = new THREE.LineBasicMaterial({
       color: primaryColor,
       transparent: true,
-      opacity: isDark ? 0.6 : 0.45
+      opacity: isDark ? 0.9 : 0.75
     });
 
     for (let i = 0; i < floorCount; i++) {
@@ -87,7 +88,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const colMat = new THREE.MeshBasicMaterial({
       color: primaryColor,
       transparent: true,
-      opacity: 0.85
+      opacity: 0.95
     });
 
     colCorners.forEach(([x, z]) => {
@@ -99,9 +100,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // Central Core Shear Walls (Inner Elevator / Service Core)
     const coreGeo = new THREE.BoxGeometry(3.6, totalHeight, 3.6);
     const coreMat = new THREE.MeshBasicMaterial({
-      color: slabColor,
+      color: accentColor,
       transparent: true,
-      opacity: isDark ? 0.3 : 0.2,
+      opacity: isDark ? 0.35 : 0.22,
       wireframe: true
     });
     const coreMesh = new THREE.Mesh(coreGeo, coreMat);
@@ -151,16 +152,16 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const braceMat = new THREE.LineBasicMaterial({
       color: accentColor,
       transparent: true,
-      opacity: isDark ? 0.7 : 0.55
+      opacity: isDark ? 0.95 : 0.8
     });
     const braces = new THREE.LineSegments(braceGeo, braceMat);
     towerGroup.add(braces);
 
     // Glowing Joint Nodes (FEA Mesh Nodes)
     const nodeCount = 36;
-    const nodeGeo = new THREE.SphereGeometry(0.2, 8, 8);
+    const nodeGeo = new THREE.SphereGeometry(0.28, 12, 12);
     const nodeMat = new THREE.MeshBasicMaterial({
-      color: primaryColor
+      color: isDark ? 0xfef08a : 0xd4af37
     });
 
     const nodeInstanced = new THREE.InstancedMesh(nodeGeo, nodeMat, nodeCount);
@@ -184,11 +185,11 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const gridHelper = new THREE.GridHelper(30, 20, primaryColor, wireColor);
     gridHelper.position.y = -totalHeight / 2 + 1.8;
     gridHelper.material.transparent = true;
-    gridHelper.material.opacity = isDark ? 0.35 : 0.25;
+    gridHelper.material.opacity = isDark ? 0.45 : 0.35;
     scene.add(gridHelper);
 
     // Surrounding Floating Structural Particle Dust
-    const particleCount = 70;
+    const particleCount = 75;
     const particlePoints = [];
     for (let i = 0; i < particleCount; i++) {
       particlePoints.push(
@@ -202,9 +203,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const particleGeo = new THREE.BufferGeometry().setFromPoints(particlePoints);
     const particleMat = new THREE.PointsMaterial({
       color: primaryColor,
-      size: 0.35,
+      size: 0.42,
       transparent: true,
-      opacity: isDark ? 0.6 : 0.4
+      opacity: isDark ? 0.85 : 0.6
     });
     const particles = new THREE.Points(particleGeo, particleMat);
     scene.add(particles);

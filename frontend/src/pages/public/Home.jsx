@@ -227,8 +227,8 @@ export const Home = () => {
             <Hero3DCanvas />
           </div>
 
-          {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#FAF9F6]/90 dark:to-[#0B0C0E]/90 pointer-events-none"></div>
+          {/* Precision Blueprint Vignette Edge Fade - subtle bottom transition only */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#FAF9F6]/80 dark:from-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
         </div>
 
         {/* 3D Moveable Floating Architectural & Engineering Cards (Draggable in 3D Space) */}
@@ -243,14 +243,14 @@ export const Home = () => {
         {/* Hero Content Container */}
         <div className="relative z-30 max-w-4xl mx-auto w-full text-center flex flex-col items-center gap-5 sm:gap-7 pointer-events-none px-4">
           
-          {/* Spatial 3D Studio Badge */}
+          {/* Spatial 3D Studio Badge in Translucent Glass Format */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-zinc-700/80 bg-white/80 dark:bg-zinc-900/80 px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 shadow-sm pointer-events-auto"
+            className="inline-flex items-center gap-2 rounded-full border border-white/60 dark:border-white/15 bg-white/40 dark:bg-white/[0.06] backdrop-blur-xl px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.35)] pointer-events-auto"
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
             <span>3D Spatial Studio · Moveable Elements</span>
           </motion.div>
 
@@ -273,14 +273,14 @@ export const Home = () => {
             </h1>
           </motion.div>
 
-          {/* Frosted Glassmorphic Description Pill Card */}
+          {/* Frosted Glassmorphic Description Pill Card (Allows 3D Model to Shine Through) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-3xl mx-auto rounded-3xl bg-white dark:bg-[#181A1E]/90 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_35px_rgba(0,0,0,0.5)] px-6 sm:px-10 py-5 sm:py-6 pointer-events-auto"
+            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/40 dark:bg-black/30 backdrop-blur-2xl border border-white/60 dark:border-white/15 shadow-[0_10px_35px_rgba(0,0,0,0.05)] dark:shadow-[0_12px_45px_rgba(0,0,0,0.55)] px-6 sm:px-10 py-5 sm:py-6 pointer-events-auto transition-all"
           >
-            <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center">
+            <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center drop-shadow-xs">
               {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
             </p>
           </motion.div>
@@ -301,10 +301,10 @@ export const Home = () => {
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
 
-            {/* Secondary Frosted White Pill Button */}
+            {/* Secondary Frosted Glass Pill Button */}
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="rounded-full bg-white dark:bg-[#181A1E] text-[#54595F] dark:text-[#EAEAEA] border border-zinc-200/90 dark:border-zinc-700 hover:border-[#D4AF37] hover:text-[#D4AF37] active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+              className="rounded-full bg-white/40 dark:bg-white/[0.06] backdrop-blur-xl text-zinc-900 dark:text-zinc-100 border border-white/60 dark:border-white/15 hover:border-[#D4AF37] hover:bg-white/60 dark:hover:bg-white/[0.12] hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex items-center gap-2 cursor-pointer"
             >
               <span>WATCH SHOWREEL</span>
               <Play size={13} className="fill-[#D4AF37] text-[#D4AF37]" />
