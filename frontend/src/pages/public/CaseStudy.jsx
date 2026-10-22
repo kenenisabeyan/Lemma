@@ -103,7 +103,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
             <span className="inline-block rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 px-2.5 py-0.5 text-[9px] font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
               Phase 01 · Scope
             </span>
-            <h4 className="text-sm font-bold text-[#54595F] mb-2">Project Overview & Objectives</h4>
+            <h4 className="text-sm font-bold text-zinc-900 mb-2">Project Overview & Objectives</h4>
             <p className="text-[#54595F] leading-relaxed">{project.description}</p>
           </div>
 
@@ -318,14 +318,11 @@ export const CaseStudyPage = () => {
 
         {/* Hero Header */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Structural Case Study · {project.category}
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#54595F] tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
             <span className="text-[#D4AF37]">{project.title.split(' ')[0]}</span> {project.title.split(' ').slice(1).join(' ')}
           </h1>
           <p className="text-[#54595F] text-base sm:text-lg max-w-3xl leading-relaxed">
@@ -353,25 +350,25 @@ export const CaseStudyPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-[#FFFFFF] p-6 rounded-2xl border border-zinc-200 mb-12 shadow-sm">
           <div className="p-2">
             <span className="text-[10px] font-mono uppercase text-[#54595F]/75 block mb-1">Geographic Location</span>
-            <span className="text-sm font-bold text-[#54595F] flex items-center gap-1.5">
+            <span className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
               <MapPin size={14} className="text-[#D4AF37]" /> {project.location}
             </span>
           </div>
           <div className="p-2">
             <span className="text-[10px] font-mono uppercase text-[#54595F]/75 block mb-1">Completion Year</span>
-            <span className="text-sm font-bold text-[#54595F] flex items-center gap-1.5">
+            <span className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
               <Calendar size={14} className="text-[#D4AF37]" /> {project.year}
             </span>
           </div>
           <div className="p-2">
             <span className="text-[10px] font-mono uppercase text-[#54595F]/75 block mb-1">Structural Role</span>
-            <span className="text-sm font-bold text-[#54595F] flex items-center gap-1.5">
+            <span className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
               <ShieldCheck size={14} className="text-[#D4AF37]" /> {project.role || 'Lead Structural Engineer'}
             </span>
           </div>
           <div className="p-2">
             <span className="text-[10px] font-mono uppercase text-[#54595F]/75 block mb-1">Client / Authority</span>
-            <span className="text-sm font-bold text-[#54595F] flex items-center gap-1.5">
+            <span className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
               <Building size={14} className="text-[#D4AF37]" /> {project.client || 'Private Developer'}
             </span>
           </div>
@@ -406,7 +403,7 @@ export const CaseStudyPage = () => {
             <span className="inline-block rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
               Phase 01 • Context & Scope
             </span>
-            <h2 className="text-xl font-bold text-[#54595F] mb-4">1. Project Overview & Architectural Vision</h2>
+            <h2 className="text-xl font-bold text-zinc-900 mb-4">1. Project Overview & Architectural Vision</h2>
             <p className="text-sm text-[#54595F] leading-relaxed">
               {project.description}
             </p>
@@ -465,11 +462,11 @@ export const CaseStudyPage = () => {
         {/* Interactive Drawing Dossier & Multi-Layer CAD Board */}
         <div className="mb-16">
           <div className="mb-8 text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
-            <h3 className="text-2xl lg:text-3xl font-extrabold text-[#54595F] tracking-tight mb-2">
+            <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight mb-2">
               Interactive Drawing <span className="text-[#D4AF37]">Dossier & FEA Inspector.</span>
             </h3>
             <p className="text-xs text-[#54595F] leading-relaxed">
@@ -486,7 +483,7 @@ export const CaseStudyPage = () => {
             <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-widest block mb-1">
               Finite Element & BIM Software Tools Utilized
             </span>
-            <h4 className="text-sm font-bold text-[#54595F]">Computational Engineering Stack</h4>
+            <h4 className="text-sm font-bold text-zinc-900">Computational Engineering Stack</h4>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -502,7 +499,7 @@ export const CaseStudyPage = () => {
         {relatedProjects.length > 0 && (
           <div className="border-t border-zinc-200 pt-12 mb-16">
             <div className="flex justify-between items-center mb-8">
-              <h3 className="text-xl font-bold text-[#54595F]">Explore Related Case Studies</h3>
+              <h3 className="text-xl font-bold text-zinc-900"><span className="text-[#D4AF37]">Explore</span> Related Case Studies</h3>
               <Link to="/projects" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:opacity-80 transition-opacity flex items-center gap-1">
                 View All Portfolio <ArrowUpRight size={14} />
               </Link>
@@ -517,7 +514,7 @@ export const CaseStudyPage = () => {
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-lg font-bold text-[#54595F] group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
+                    <h4 className="text-lg font-bold text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
                     <p className="text-xs text-[#54595F] line-clamp-2 mb-4">{rel.challenge}</p>
                   </div>
                   <span className="text-xs font-bold uppercase tracking-wider text-[#D4AF37] flex items-center gap-1 font-bold">
@@ -532,7 +529,7 @@ export const CaseStudyPage = () => {
         {/* Bottom Consultation CTA */}
         <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-10 text-center shadow-lg relative overflow-hidden">
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-[#54595F] mb-3">Facing a <span className="text-[#D4AF37]">Complex</span> Structural Engineering Challenge?</h3>
+            <h3 className="text-2xl font-bold text-zinc-900 mb-3">Facing a <span className="text-[#D4AF37]">Complex</span> Structural Engineering Challenge?</h3>
             <p className="text-sm text-[#54595F] max-w-xl mx-auto mb-6 leading-relaxed">
               Let's evaluate your project drawings, lateral load requirements, and value engineering possibilities with senior engineering rigor.
             </p>

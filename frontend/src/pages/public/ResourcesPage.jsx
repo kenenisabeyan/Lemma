@@ -108,14 +108,11 @@ Phone: +1 (555) 019-8472
         
         {/* Header */}
         <div className="mb-14 border-b border-zinc-200 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Engineering Documentation & Reference Library
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
             <span className="text-[#D4AF37]">Engineering</span> Resources.
           </h1>
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl">
@@ -182,7 +179,7 @@ Phone: +1 (555) 019-8472
                 </div>
 
                 <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
-                <h3 className="text-xl font-bold text-[#54595F] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
+                <h3 className="text-xl font-bold text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">{item.title}</h3>
                 <p className="text-xs text-[#54595F] leading-relaxed mb-6">{item.description}</p>
               </div>
 
@@ -199,11 +196,11 @@ Phone: +1 (555) 019-8472
         {/* Interactive Value Engineering Estimator */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Cost & Material Optimization Tool
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#54595F] tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
               <span className="text-[#D4AF37]">Value Engineering</span> & Carbon Offset Estimator.
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
@@ -217,11 +214,11 @@ Phone: +1 (555) 019-8472
         {/* Interactive Beam Mechanics Laboratory */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Computational Structural Analysis
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#54595F] tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
               <span className="text-[#D4AF37]">Beam Shear, Moment</span> & Deflection Laboratory.
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
@@ -236,7 +233,7 @@ Phone: +1 (555) 019-8472
         <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-8 lg:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
           <div>
             <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-bold">Tailored Specifications</span>
-            <h4 className="text-xl font-bold text-[#54595F]"><span className="text-[#D4AF37]">Need</span> Project-Specific Structural Calculations or CAD Details?</h4>
+            <h4 className="text-xl font-bold text-zinc-900"><span className="text-[#D4AF37]">Need</span> Project-Specific Structural Calculations or CAD Details?</h4>
             <p className="text-xs text-[#54595F] mt-1 max-w-xl leading-relaxed">
               I provide custom finite element analysis models, calculation packages for municipal permit submittals, and site-specific seismic retrofitting plans.
             </p>

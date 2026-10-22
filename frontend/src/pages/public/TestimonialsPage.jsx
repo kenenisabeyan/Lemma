@@ -74,14 +74,11 @@ export const TestimonialsPage = () => {
         
         {/* Header */}
         <div className="mb-14 border-b border-zinc-200 pb-10 text-center">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Client Trust & Professional Endorsements
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
             <span className="text-[#D4AF37]">Client</span> Testimonials.
           </h1>
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl mx-auto">
@@ -164,7 +161,7 @@ export const TestimonialsPage = () => {
                     </div>
                   )}
                   <div className="overflow-hidden">
-                    <h4 className="text-sm font-bold text-[#54595F] truncate">{t.clientName}</h4>
+                    <h4 className="text-sm font-bold text-zinc-900 truncate">{t.clientName}</h4>
                     <p className="text-xs text-[#54595F] truncate">{t.clientRole}</p>
                     <span className="inline-block rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 px-2 py-0.5 text-[9px] font-mono text-[#D4AF37] uppercase tracking-wider mt-1 font-bold">
                       {t.clientCompany}
@@ -179,7 +176,7 @@ export const TestimonialsPage = () => {
         {/* Bottom Banner */}
         <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
           <div className="text-left">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#54595F] mb-1.5"><span className="text-[#D4AF37]">Deliver</span> Your Vision with Confirmed Structural Excellence</h3>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5"><span className="text-[#D4AF37]">Deliver</span> Your Vision with Confirmed Structural Excellence</h3>
             <p className="text-xs sm:text-sm text-[#54595F]">Join reputable developers, architects, and institutions who trust our engineering precision.</p>
           </div>
           <button
