@@ -1005,11 +1005,8 @@ export const Home = () => {
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 shadow-sm mb-4">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-                </span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 Industry Endorsements & Client Trust
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
