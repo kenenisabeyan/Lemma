@@ -73,7 +73,7 @@ export const Home = () => {
       category: 'Infrastructure & Bridges',
       metric: '450m Cable-Stayed Span',
       tag: '120-Yr Life · SAP2000 Seismic',
-      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
       slug: 'avalon-river-bridge',
       location: 'West River Corridor'
     },
@@ -83,7 +83,7 @@ export const Home = () => {
       category: 'Specialty Structures',
       metric: '92m Clear-Span Enclosure',
       tag: 'Lightweight Steel · Non-Linear',
-      imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80',
       slug: 'solaria-geodesic-dome',
       location: 'Metropolis Civic Center'
     }
@@ -255,7 +255,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Luminous White Glass Frosted Sheen & Reflection Layers */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/80 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/85 pointer-events-none" />
@@ -406,7 +406,7 @@ export const Home = () => {
                     initial={{ opacity: 0, x: 25 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative z-10 w-full sm:w-[56%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group"
+                    className="relative z-10 w-full sm:w-[53%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group"
                   >
                     {/* Top Mini Header Strip */}
                     <div className="flex items-center justify-between pb-2 px-1 border-b border-zinc-200/60 dark:border-white/10 text-[10px] font-mono">
@@ -468,7 +468,7 @@ export const Home = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.35 }}
-                    className="relative z-20 w-full sm:w-[64%] sm:-ml-12 sm:mt-16 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)]"
+                    className="relative z-20 w-full sm:w-[60%] sm:-ml-8 sm:mt-12 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)]"
                   >
                     {/* Project Header Tag */}
                     <div className="flex items-center justify-between pb-2 px-1 border-b border-zinc-200/60 dark:border-white/10 text-[10px] font-mono">
