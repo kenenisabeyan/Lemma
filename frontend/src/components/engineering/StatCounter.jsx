@@ -8,7 +8,7 @@ export const StatCounter = ({ value, label, subtext }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="rounded-2xl bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 p-8 text-center shadow-[0_12px_36px_rgba(0,0,0,0.04),inset_0_1px_2px_rgba(255,255,255,0.95)] relative group hover:border-[#D4AF37]/60 hover:shadow-[0_16px_40px_rgba(212,175,55,0.12)] transition-all duration-300 overflow-hidden"
+      className="rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-8 text-center shadow-sm relative group hover:border-[#D4AF37]/60 hover:shadow-md transition-all duration-300 overflow-hidden"
     >
       {/* Top subtle highlight glow */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent"></div>

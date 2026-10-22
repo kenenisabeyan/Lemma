@@ -44,7 +44,7 @@ export const FloatingDock = () => {
 
   return (
     <div className="fixed bottom-6 inset-x-0 z-40 hidden md:flex justify-center pointer-events-none transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
-      <nav className="pointer-events-auto flex items-center gap-1.5 p-2 rounded-full bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_12px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)]">
+      <nav className="pointer-events-auto flex items-center gap-1.5 p-2 rounded-full bg-[#FFFFFF]/95 dark:bg-[#181A1E]/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-700/80 shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_rgba(0,0,0,0.65)]">
         {dockLinks.map((item) => {
           const Icon = item.icon;
           return (

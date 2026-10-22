@@ -11,11 +11,11 @@ export const ProjectCard = ({ project, onClick }) => {
     <motion.div
       whileHover={{ y: -6 }}
       onClick={() => onClick && onClick(project)}
-      className="group cursor-pointer rounded-2xl bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 hover:border-[#D4AF37]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.04),inset_0_1px_2px_rgba(255,255,255,0.95)] hover:shadow-[0_16px_40px_rgba(212,175,55,0.12)]"
+      className="group cursor-pointer rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#D4AF37]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl"
     >
       <div>
         {/* Project Thumbnail Image with Blueprint Crosshairs Overlay */}
-        <div className="relative aspect-[16/10] bg-white/50 overflow-hidden border-b border-white/80 dark:border-white/10">
+        <div className="relative aspect-[16/10] bg-[#FFFFFF] overflow-hidden border-b border-zinc-200/80">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -27,13 +27,13 @@ export const ProjectCard = ({ project, onClick }) => {
 
           {/* Technical Badge Overlay */}
           <div className="absolute top-4 left-4 z-10 flex gap-2">
-            <span className="rounded-full bg-white/85 dark:bg-zinc-900/80 backdrop-blur-xl text-[#D4AF37] border border-white/90 dark:border-white/20 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-[0_2px_10px_rgba(0,0,0,0.03),inset_0_1px_1px_rgba(255,255,255,0.9)]">
+            <span className="rounded-full bg-[#FFFFFF] backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
               {project.category}
             </span>
           </div>
 
           {/* Structural Blueprint Coordinates */}
-          <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] dark:text-zinc-300 bg-white/90 dark:bg-zinc-900/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/90 dark:border-white/20 shadow-xs font-semibold">
+          <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] bg-[#FFFFFF]/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200/80 shadow-xs font-semibold">
             {project.year} · PE-SE SEALED
           </div>
         </div>
@@ -51,7 +51,7 @@ export const ProjectCard = ({ project, onClick }) => {
           </h3>
 
           {/* Structural System Highlight */}
-          <div className="rounded-xl bg-white/70 dark:bg-white/[0.05] backdrop-blur-md border border-white/80 dark:border-white/10 p-3 text-xs text-[#54595F] mb-4 shadow-2xs">
+          <div className="rounded-xl bg-[#FFFFFF] border border-zinc-200/90 p-3 text-xs text-[#54595F] mb-4 shadow-2xs">
             <span className="text-[#D4AF37] font-semibold block text-[10px] font-mono uppercase tracking-wider mb-1">
               Structural Framing System:
             </span>
@@ -66,10 +66,10 @@ export const ProjectCard = ({ project, onClick }) => {
       </div>
 
       {/* Footer Tags & Action Link */}
-      <div className="px-6 py-4 border-t border-white/80 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-md flex justify-between items-center gap-3">
+      <div className="px-6 py-4 border-t border-zinc-200/80 bg-[#FFFFFF] flex justify-between items-center gap-3">
         <div className="flex gap-1.5 flex-wrap">
           {softwareList.slice(0, 3).map((soft) => (
-            <span key={soft} className="rounded-full text-[9px] font-mono text-[#54595F] dark:text-zinc-300 bg-white/80 dark:bg-white/10 px-2.5 py-0.5 border border-white/90 dark:border-white/20 shadow-2xs font-semibold backdrop-blur-xs">
+            <span key={soft} className="rounded-full text-[9px] font-mono text-[#54595F] bg-[#FFFFFF] px-2.5 py-0.5 border border-zinc-200 shadow-2xs font-semibold">
               {soft}
             </span>
           ))}
