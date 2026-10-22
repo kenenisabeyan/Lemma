@@ -317,14 +317,14 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 2. INFINITE MARQUEE TICKER                                                */}
       {/* ========================================================================= */}
-      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 dark:border-zinc-800/80 bg-[#FFFFFF] dark:bg-[#0E1014] py-4 overflow-hidden transition-colors">
+      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 bg-[#FFFFFF] py-4 overflow-hidden transition-colors">
         <div className="mx-auto max-w-6xl [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="overflow-hidden">
             <div className="animate-marquee flex items-center gap-10">
               {techMarquee.concat(techMarquee).map((tool, idx) => (
                 <span 
                   key={idx} 
-                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-[#54595F] dark:text-[#9CA3AF] text-xs uppercase tracking-wider transition-colors hover:text-[#D4AF37] dark:hover:text-[#D4AF37]"
+                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-[#54595F] text-xs uppercase tracking-wider transition-colors hover:text-[#D4AF37]"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] group-hover:scale-125 transition-transform"></span>
                   {tool}
@@ -338,14 +338,18 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-[#FFFFFF] dark:bg-[#0B0C0E] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
+      <section className="py-20 md:py-24 bg-[#FFFFFF] relative transition-colors border-b border-zinc-200/80">
         <div className="max-w-5xl mx-auto px-6">
           
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-zinc-900 dark:text-[#EAEAEA]">
-              Analyze<span className="text-[#D4AF37]">.</span> Calculate<span className="text-[#D4AF37]">.</span> Deliver<span className="text-[#D4AF37]">.</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+              Engineering Capabilities & Performance
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+              Analyze. Calculate. <span className="text-[#D4AF37]">Deliver.</span>
             </h2>
-            <p className="mt-4 text-balance text-[#54595F] dark:text-[#9CA3AF] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            <p className="text-[#54595F] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
               Precision structural mechanics and finite element performance simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
             </p>
           </div>
@@ -353,51 +357,51 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: High-Rise Lateral Stability (Col 1-2) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 dark:border-[#D4AF37]/40 bg-[#FEF9E7] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
-                <Building2 size={36} className="text-[#D4AF37] dark:text-[#D4AF37] relative z-20" />
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-xl"></div>
+                <Building2 size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">High-Rise Lateral Stability</h3>
-                <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs leading-relaxed">
+                <h3 className="font-semibold text-zinc-900 text-lg">High-Rise Lateral Stability</h3>
+                <p className="text-[#54595F] text-xs leading-relaxed">
                   Dual core shear walls, perimeter belt trusses, and aerodynamic damping suppressing lateral drift in skyscrapers.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 ETABS · ASCE 7-22 Wind Tunnel
               </div>
             </div>
 
             {/* Bento Card 2: Non-Linear Seismic Modeling (Col 3-4) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 dark:border-[#D4AF37]/40 bg-[#FEF9E7] dark:bg-[#0E1014] shadow-xs outline outline-zinc-200 dark:outline-zinc-800 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 dark:from-[#D4AF37]/25 via-transparent to-transparent blur-xl"></div>
-                <Activity size={36} className="text-[#D4AF37] dark:text-[#D4AF37] relative z-20" />
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
+                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-xl"></div>
+                <Activity size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">Non-Linear Seismic Modeling</h3>
-                <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs leading-relaxed">
+                <h3 className="font-semibold text-zinc-900 text-lg">Non-Linear Seismic Modeling</h3>
+                <p className="text-[#54595F] text-xs leading-relaxed">
                   Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments per FEMA P-58.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 SAP2000 · Base Isolation
               </div>
             </div>
 
             {/* Bento Card 3: Value Engineering Sparkline Graph (Col 5-6) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="flex size-8 items-center justify-center rounded-full bg-[#FEF9E7] dark:bg-[#D4AF37]/10 text-[#D4AF37] dark:text-[#D4AF37] border border-[#D4AF37]/30">
+                  <div className="flex size-8 items-center justify-center rounded-full bg-[#FEF9E7] text-[#D4AF37] border border-[#D4AF37]/30">
                     <ShieldCheck size={16} />
                   </div>
-                  <div className="font-mono text-xs font-bold text-zinc-900 dark:text-[#EAEAEA]">100% Safety Record</div>
+                  <div className="font-mono text-xs font-bold text-zinc-900">100% Safety Record</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
-                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#D4AF37" className="dark:stroke-[#D4AF37]" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" />
                   <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15 L298 110 L3 110 Z" fill="url(#goldGradBento)" opacity="0.15" />
                   <defs>
                     <linearGradient id="goldGradBento" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -408,45 +412,45 @@ export const Home = () => {
                 </svg>
               </div>
               <div className="relative z-10 mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-lg">Value Engineering</h3>
-                <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs leading-relaxed">
+                <h3 className="font-semibold text-zinc-900 text-lg">Value Engineering</h3>
+                <p className="text-[#54595F] text-xs leading-relaxed">
                   Post-tensioning and optimized finite element redistribution saving 20-30% concrete mass and steel tonnage.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-[#2D3137] text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 Peer Review · Quantity Audits
               </div>
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs sm:col-span-2 md:col-span-6 p-0 hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-xl">
+            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] sm:col-span-2 md:col-span-6 p-0 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="grid h-full sm:grid-cols-2 items-center">
                 <div className="relative z-10 space-y-6 py-8 ps-8 pe-6">
-                  <div className="flex size-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#121417] shadow-xs outline outline-zinc-200 dark:outline-[#333] outline-offset-2">
+                  <div className="flex size-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-2">
                     <Ruler size={20} className="text-[#D4AF37]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-semibold text-zinc-900 dark:text-[#EAEAEA] text-xl">3D Finite Element Simulation</h3>
-                    <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs sm:text-sm leading-relaxed max-w-md">
+                    <h3 className="font-semibold text-zinc-900 text-xl">3D Finite Element Simulation</h3>
+                    <p className="text-[#54595F] text-xs sm:text-sm leading-relaxed max-w-md">
                       From ETABS building wind tunnel integration to Midas Civil bridge span dynamic response, calculations adhere to the highest international seismic and structural performance criteria.
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">ASCE 7-22</span>
-                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">IBC 2024</span>
-                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">ACI 318-19</span>
-                    <span className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] border border-zinc-200 dark:border-[#333] px-3 py-1 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] uppercase font-semibold">AISC 360</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ASCE 7-22</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">IBC 2024</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ACI 318-19</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">AISC 360</span>
                   </div>
                 </div>
                 <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
-                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 dark:border-[#333] bg-[#FFFFFF] dark:bg-[#121417] shadow-md dark:shadow-2xl group-hover:border-[#D4AF37]/50 transition-colors">
+                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 bg-[#FFFFFF] shadow-md group-hover:border-[#D4AF37]/50 transition-colors">
                     <img 
                       src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
                       alt="Structural FEA Simulation" 
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-3 left-3 bg-white/95 dark:bg-[#121417]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-[#333] font-mono text-[10px] text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
+                    <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 font-mono text-[10px] text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                       ETABS v21 Live Non-Linear Stress Distribution
                     </div>
@@ -463,17 +467,17 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3.5 INTERACTIVE LOAD PATH & STRUCTURAL TELEMETRY SIMULATOR                */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#FFFFFF] dark:bg-[#0E1014] border-t border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
+      <section className="py-20 md:py-28 bg-[#FFFFFF] border-t border-b border-zinc-200/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#14171C]/90 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Dynamic Mechanics Simulation
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
               Real-Time Lateral & Seismic <span className="text-[#D4AF37]">Load Path.</span>
             </h2>
-            <p className="text-[#54595F] dark:text-[#9CA3AF] text-sm md:text-base leading-relaxed">
+            <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               Explore how wind aerodynamic drift, non-linear seismic ground motions, and gravitational vectors propagate through reinforced concrete cores and outrigger belt trusses down into bedrock.
             </p>
           </div>
@@ -485,7 +489,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 4. ABOUT ME SECTION                                                       */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#FFFFFF] dark:bg-[#0B0C0E] border-b border-zinc-200/80 dark:border-zinc-800/80 relative transition-colors">
+      <section className="py-24 bg-[#FFFFFF] border-b border-zinc-200/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
@@ -494,60 +498,57 @@ export const Home = () => {
                 {/* Decorative Outer Mask Frame */}
                 <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 pointer-events-none"></div>
 
-                <div className="relative border border-zinc-200/90 dark:border-zinc-800/90 p-2.5 bg-[#FFFFFF] dark:bg-[#14171C]/95 rounded-2xl shadow-lg dark:shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-300">
-                  <div className="aspect-[4/5] bg-zinc-100 dark:bg-[#0E1014] overflow-hidden rounded-xl">
+                <div className="relative border border-zinc-200/90 p-2.5 bg-[#FFFFFF] rounded-2xl shadow-lg group hover:border-[#D4AF37]/50 transition-all duration-300">
+                  <div className="aspect-[4/5] bg-zinc-100 overflow-hidden rounded-xl">
                     <img
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
                       alt="Alexandre Senior Structural Engineer"
                       className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-[#0E1014]/95 border border-zinc-200 dark:border-[#D4AF37]/60 p-4 text-xs font-mono rounded-xl shadow-md dark:shadow-xl backdrop-blur-md">
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 border border-zinc-200 p-4 text-xs font-mono rounded-xl shadow-md backdrop-blur-md">
                     <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
                       <span>PE #84729-NY</span>
                       <span>SE #92041-CA</span>
                     </div>
-                    <span className="text-[10px] text-[#54595F] dark:text-[#9CA3AF] uppercase tracking-widest block font-medium">Licensed Structural Engineer & ASCE Fellow</span>
+                    <span className="text-[10px] text-[#54595F] uppercase tracking-widest block font-medium">Licensed Structural Engineer & ASCE Fellow</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#14171C] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs w-max font-semibold">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-                </span>
-                Professional Background
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs w-max font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                Professional Background & Practice
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">
-                Structural Engineering Behind Visionary Architecture.
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
+                Structural Engineering Behind <span className="text-[#D4AF37]">Visionary Architecture.</span>
               </h2>
 
-              <p className="text-[#54595F] dark:text-[#9CA3AF] text-base leading-relaxed">
+              <p className="text-[#54595F] text-base leading-relaxed">
                 With over 14 years of specialized structural practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
               </p>
 
-              <div className="bg-[#FFFFFF] dark:bg-[#121417] border-l-2 border-[#D4AF37] p-5 text-sm text-[#54595F] dark:text-[#EAEAEA] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200 dark:border-[#2D3137]">
+              <div className="bg-[#FFFFFF] border-l-2 border-[#D4AF37] p-5 text-sm text-[#54595F] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200">
                 "Structural engineering should never be treated as an architectural limitation. When calculated with precision, physics becomes the catalyst that enables daring, column-free spaces."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center gap-3 bg-[#FFFFFF] dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
+                <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
                   <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 dark:text-[#EAEAEA] font-bold block">M.S. Structural Engineering</span>
-                    <span className="text-[10px] text-[#54595F] dark:text-[#9CA3AF]">Columbia University</span>
+                    <span className="text-xs text-zinc-900 font-bold block">M.S. Structural Engineering</span>
+                    <span className="text-[10px] text-[#54595F]">Columbia University</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 bg-[#FFFFFF] dark:bg-[#121417] p-4 border border-zinc-200/90 dark:border-[#333]/80 rounded-2xl shadow-xs">
+                <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
                   <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 dark:text-[#EAEAEA] font-bold block">100% Safety Compliance</span>
-                    <span className="text-[10px] text-[#54595F] dark:text-[#9CA3AF]">Zero Audit Deficiencies</span>
+                    <span className="text-xs text-zinc-900 font-bold block">100% Safety Compliance</span>
+                    <span className="text-[10px] text-[#54595F]">Zero Audit Deficiencies</span>
                   </div>
                 </div>
               </div>
@@ -561,7 +562,7 @@ export const Home = () => {
                 </Link>
                 <a
                   href="/resources"
-                  className="rounded-full bg-[#FFFFFF] dark:bg-[#121417] text-[#54595F] dark:text-[#EAEAEA] border border-zinc-300 dark:border-[#333] hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                  className="rounded-full bg-[#FFFFFF] text-[#54595F] border border-zinc-300 hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
                 >
                   Download CV (PDF) <Download size={14} />
                 </a>
@@ -575,31 +576,37 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 5. EXPERTISE / SERVICES SECTION                                           */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#FFFFFF] dark:bg-[#0E1014] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80">
+      <section className="py-24 bg-[#FFFFFF] relative transition-colors border-b border-zinc-200/80">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Core Capabilities
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                Core Capabilities & Practice
+              </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+                Specialized Structural <span className="text-[#D4AF37]">Services & Advisory.</span>
               </h2>
-              <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-[#EAEAEA] tracking-tight">Engineering Services</h3>
+              <p className="text-[#54595F] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+                Comprehensive structural design, non-linear seismic assessment, and forensic building verification.
+              </p>
             </div>
-            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2">
+            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 transition-colors flex items-center gap-2">
               Explore All Services <ChevronRight size={16} />
             </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((srv, index) => (
-              <div key={index} className="group rounded-2xl bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs border border-zinc-200/90 dark:border-zinc-800/90 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_6px_25px_rgba(0,0,0,0.03)] dark:shadow-xl flex flex-col justify-between">
+              <div key={index} className="group rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_6px_25px_rgba(0,0,0,0.03)] flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-[#FEF9E7] dark:bg-[#0E1014] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
+                  <div className="w-12 h-12 bg-[#FEF9E7] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
                     <Building2 size={24} />
                   </div>
-                  <h4 className="text-xl font-bold text-zinc-900 dark:text-[#EAEAEA] mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
-                  <p className="text-[#54595F] dark:text-[#9CA3AF] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
+                  <h4 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
+                  <p className="text-[#54595F] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] dark:text-[#9CA3AF] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200 dark:border-zinc-800">
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200">
                   Scope & Deliverables <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
@@ -611,7 +618,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 6. STATISTICS ROW                                                         */}
       {/* ========================================================================= */}
-      <section className="py-12 bg-[#FFFFFF] dark:bg-[#14171C] border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors">
+      <section className="py-14 bg-[#FFFFFF] border-b border-zinc-200/80 transition-colors">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           <StatCounter value={settings.yearsExp || '14+'} label="Years Experience" subtext="PE & SE Certified" />
           <StatCounter value={settings.projectsCount || '180+'} label="Projects Completed" subtext="High-Rise & Infrastructure" />
@@ -623,21 +630,24 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 7. FEATURED PROJECTS CASE STUDIES                                         */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-[#FFFFFF] dark:bg-[#0B0C0E] relative transition-colors border-b border-zinc-200/80 dark:border-zinc-800/80" id="projects">
+      <section className="py-20 md:py-24 bg-[#FFFFFF] relative transition-colors border-b border-zinc-200/80" id="projects">
         <div className="max-w-5xl mx-auto px-6 space-y-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-zinc-200/80 dark:border-zinc-800/80">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4 border-b border-zinc-200/80">
             <div>
-              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold">
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                <span>Featured Engineering Practice</span>
+                Featured Engineering Practice
               </div>
-              <h2 className="text-balance font-medium text-2xl md:text-4xl lg:text-5xl tracking-tight text-zinc-900 dark:text-[#EAEAEA]">
-                Projects<span className="text-[#D4AF37]">.</span>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+                Landmark Structural <span className="text-[#D4AF37]">Projects.</span>
               </h2>
+              <p className="text-[#54595F] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+                Showcase of verified structural engineering, seismic retrofitting, and high-rise core designs.
+              </p>
             </div>
             <Link 
               to="/projects" 
-              className="rounded-full border border-zinc-300 dark:border-zinc-700 bg-[#FFFFFF] dark:bg-[#14171C] text-[#54595F] dark:text-[#EAEAEA] hover:border-[#D4AF37] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
+              className="rounded-full border border-zinc-300 bg-[#FFFFFF] text-[#54595F] hover:border-[#D4AF37] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
             >
               Browse All Projects <ChevronRight size={14} />
             </Link>
@@ -652,21 +662,21 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-[#FFFFFF] dark:bg-[#14171C]/95 backdrop-blur-xs md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] dark:shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-300"
+                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:border-[#D4AF37]/50 transition-all duration-300"
                 >
                   {/* Left Column Image */}
-                  <div className="relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800/90 md:border-b-0 md:border-r min-h-[280px]">
+                  <div className="relative overflow-hidden border-b border-zinc-200 md:border-b-0 md:border-r min-h-[280px]">
                     <img 
                       src={proj.imageUrl} 
                       alt={proj.title}
                       className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] grayscale opacity-85 group-hover:grayscale-0"
                     />
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="rounded-full bg-[#FFFFFF]/95 dark:bg-[#0E1014]/90 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+                      <span className="rounded-full bg-[#FFFFFF]/95 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
                         {proj.category}
                       </span>
                     </div>
-                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] dark:text-[#9CA3AF] bg-[#FFFFFF]/95 dark:bg-[#0E1014]/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200 dark:border-zinc-800 shadow-xs font-semibold">
+                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] bg-[#FFFFFF]/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200 shadow-xs font-semibold">
                       PE-SE SEALED · {proj.year}
                     </div>
                   </div>
@@ -674,7 +684,7 @@ export const Home = () => {
                   {/* Right Column Content */}
                   <div className="flex flex-col gap-4 p-6 md:p-8 justify-between">
                     <div>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#54595F] dark:text-[#9CA3AF] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#54595F] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
                         <span className="text-[#D4AF37] flex items-center gap-1">
                           <MapPin size={12} /> {proj.location}
                         </span>
@@ -682,22 +692,22 @@ export const Home = () => {
                         <span>{proj.year}</span>
                       </div>
                       
-                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 dark:text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
+                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
                         {proj.title}
                       </h3>
                       
-                      <p className="text-[#54595F] dark:text-[#9CA3AF] text-xs sm:text-sm leading-relaxed mb-4">
+                      <p className="text-[#54595F] text-xs sm:text-sm leading-relaxed mb-4">
                         {proj.description}
                       </p>
 
-                      <ul className="space-y-1.5 text-[#54595F] dark:text-[#9CA3AF] text-xs mb-4">
+                      <ul className="space-y-1.5 text-[#54595F] text-xs mb-4">
                         <li className="flex gap-2">
                           <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
-                          <span><strong className="text-zinc-900 dark:text-[#EAEAEA]">System:</strong> {proj.structuralSystem}</span>
+                          <span><strong className="text-zinc-900">System:</strong> {proj.structuralSystem}</span>
                         </li>
                         <li className="flex gap-2">
                           <span aria-hidden="true" className="text-[#D4AF37] font-bold">—</span>
-                          <span><strong className="text-zinc-900 dark:text-[#EAEAEA]">Result:</strong> {proj.result}</span>
+                          <span><strong className="text-zinc-900">Result:</strong> {proj.result}</span>
                         </li>
                       </ul>
 
@@ -705,7 +715,7 @@ export const Home = () => {
                         {softwareList.slice(0, 4).map((soft) => (
                           <span 
                             key={soft}
-                            className="inline-flex items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-[#FFFFFF] dark:bg-[#0E1014] px-2.5 py-0.5 font-mono text-[10px] text-[#54595F] dark:text-[#D4AF37] shadow-2xs font-semibold"
+                            className="inline-flex items-center rounded-full border border-zinc-200 bg-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] text-[#54595F] shadow-2xs font-semibold"
                           >
                             {soft}
                           </span>
@@ -713,7 +723,7 @@ export const Home = () => {
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+                    <div className="mt-4 pt-4 border-t border-zinc-200 flex items-center justify-between">
                       <button
                         onClick={() => setSelectedCaseStudy(proj)}
                         className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
@@ -722,7 +732,7 @@ export const Home = () => {
                       </button>
                       <Link 
                         to={`/projects/${proj.slug || 'nexus-commercial-tower'}`}
-                        className="text-[11px] font-mono text-[#54595F] dark:text-[#9CA3AF] hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
+                        className="text-[11px] font-mono text-[#54595F] hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
                       >
                         Dedicated Page →
                       </Link>
