@@ -699,36 +699,6 @@ export const Hero3DCanvas = ({ className = '' }) => {
       />
 
       {/* ========================================================================= */}
-      {/* INTERACTIVE CIVIL ENGINEERING PROCESS CONTROL BAR (FROSTED GLASS)        */}
-      {/* ========================================================================= */}
-      <div className="absolute top-20 sm:top-24 inset-x-4 sm:inset-x-auto sm:left-8 z-30 pointer-events-auto flex flex-wrap items-center gap-2">
-        {[
-          { id: 'all', label: 'Integrated Process', icon: Activity },
-          { id: 'loadpath', label: 'Load Transfer', icon: Zap },
-          { id: 'fea', label: 'FEA Stress Map', icon: Cpu },
-          { id: 'crane', label: 'Roof Crane Staging', icon: Compass },
-          { id: 'scan', label: 'LiDAR Telemetry', icon: Eye }
-        ].map((mode) => {
-          const Icon = mode.icon;
-          const isActive = activeMode === mode.id;
-          return (
-            <button
-              key={mode.id}
-              onClick={() => setActiveMode(mode.id)}
-              className={`rounded-full px-3 sm:px-3.5 py-1.5 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all cursor-pointer backdrop-blur-2xl shadow-xs ${
-                isActive
-                  ? 'bg-[#D4AF37] text-[#121417] border border-[#D4AF37] shadow-[0_4px_15px_rgba(212,175,55,0.4)] scale-105'
-                  : 'bg-white/80 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white hover:text-[#D4AF37] shadow-[0_4px_16px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.9)]'
-              }`}
-            >
-              <Icon size={12} className={isActive ? 'text-[#121417]' : 'text-[#D4AF37]'} />
-              <span>{mode.label}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* ========================================================================= */}
       {/* LIVE CIVIL ENGINEERING TELEMETRY HUD (FROSTED GLASS READOUT)             */}
       {/* ========================================================================= */}
       <div className="absolute bottom-4 right-4 sm:right-6 z-30 pointer-events-auto hidden sm:block">

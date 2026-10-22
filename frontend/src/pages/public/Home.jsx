@@ -39,7 +39,6 @@ import { StatCounter } from '../../components/engineering/StatCounter';
 import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { EngineeringCanvas } from '../../components/engineering/EngineeringCanvas';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
-import { Moveable3DHeroCards } from '../../components/engineering/Moveable3DHeroCards';
 import { LoadPathSimulator } from '../../components/engineering/LoadPathSimulator';
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 import { ValueEngineeringCalculator } from '../../components/engineering/ValueEngineeringCalculator';
@@ -235,9 +234,6 @@ export const Home = () => {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
         </div>
 
-        {/* 3D Moveable Floating Architectural & Engineering Cards (Draggable in 3D Space) */}
-        <Moveable3DHeroCards />
-
         {/* Floating Translucent Accent Ring */}
         <div 
           aria-hidden="true" 
@@ -247,17 +243,6 @@ export const Home = () => {
         {/* Hero Content Container */}
         <div className="relative z-30 max-w-4xl mx-auto w-full text-center flex flex-col items-center gap-5 sm:gap-7 pointer-events-none px-4">
           
-          {/* Spatial 3D Studio Badge in Translucent Glass Format */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/90 dark:border-white/20 bg-white/80 dark:bg-white/10 backdrop-blur-2xl px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] pointer-events-auto"
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
-            <span>3D Spatial Studio · Moveable Elements</span>
-          </motion.div>
-
           {/* Main Giant Bold Headline with 3D Depth */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
