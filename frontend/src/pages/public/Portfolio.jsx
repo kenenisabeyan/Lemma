@@ -95,7 +95,7 @@ export const Portfolio = () => {
         
         {/* Header */}
         <div className="mb-12 border-b border-zinc-200/80 pb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-zinc-800 text-xs font-bold tracking-wider uppercase mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Featured Engineering Practice
           </div>

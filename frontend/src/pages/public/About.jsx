@@ -20,11 +20,8 @@ export const About = () => {
         
         {/* Page Header */}
         <div className="mb-16 border-b border-zinc-200/80 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Professional Biography & Credentials
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
@@ -122,11 +119,13 @@ export const About = () => {
 
         {/* Software Toolkit Bento Cards */}
         <div className="mb-24">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold">Technical Toolkit</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            Technical Toolkit & Simulation
           </div>
-          <h3 className="text-3xl font-extrabold text-zinc-900 mb-10">Software & FEA Proficiency</h3>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight mb-10">
+            Software & <span className="text-[#D4AF37]">FEA Proficiency.</span>
+          </h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SOFTWARE_STACK.map((soft) => (
@@ -153,11 +152,13 @@ export const About = () => {
 
         {/* Career Timeline */}
         <div className="mb-24">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold">Professional Journey</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            Professional Journey & Track Record
           </div>
-          <h3 className="text-3xl font-extrabold text-zinc-900 mb-12">Career Timeline</h3>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight mb-12">
+            Engineering <span className="text-[#D4AF37]">Career Timeline.</span>
+          </h3>
 
           <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 pl-8 ml-4">
             {CAREER_TIMELINE.map((item, index) => (
@@ -178,11 +179,13 @@ export const About = () => {
 
         {/* Licensure & Certifications Bento */}
         <div className="mb-20">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold">Official Licensure</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            Official Licensure & Credentials
           </div>
-          <h3 className="text-3xl font-extrabold text-zinc-900 mb-10">Licensure & Certifications</h3>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-900 tracking-tight mb-10">
+            Licensure & <span className="text-[#D4AF37]">Board Certifications.</span>
+          </h3>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
