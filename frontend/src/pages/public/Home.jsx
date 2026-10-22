@@ -54,6 +54,48 @@ export const Home = () => {
   const [selectedTestimonialCategory, setSelectedTestimonialCategory] = useState('All');
   const testimonialCategories = ['All', 'Architects', 'Developers', 'Civic Infrastructure'];
 
+  // Hero Section Dynamic Portfolio Project Showcase
+  const [activeHeroProjectIdx, setActiveHeroProjectIdx] = useState(0);
+  const heroProjects = [
+    {
+      id: '1',
+      title: 'Nexus Commercial Tower',
+      category: 'Commercial High-Rise',
+      metric: '52-Story Outrigger Core',
+      tag: 'LEED Platinum · ETABS FEA',
+      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
+      slug: 'nexus-commercial-tower',
+      location: 'New York, NY'
+    },
+    {
+      id: '2',
+      title: 'Avalon Suspension Bridge',
+      category: 'Infrastructure & Bridges',
+      metric: '450m Cable-Stayed Span',
+      tag: '120-Yr Life · SAP2000 Seismic',
+      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      slug: 'avalon-river-bridge',
+      location: 'West River Corridor'
+    },
+    {
+      id: '3',
+      title: 'Solaria Geodesic Dome',
+      category: 'Specialty Structures',
+      metric: '92m Clear-Span Enclosure',
+      tag: 'Lightweight Steel · Non-Linear',
+      imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
+      slug: 'solaria-geodesic-dome',
+      location: 'Metropolis Civic Center'
+    }
+  ];
+
+  useEffect(() => {
+    const heroProjectTimer = setInterval(() => {
+      setActiveHeroProjectIdx((prev) => (prev + 1) % heroProjects.length);
+    }, 4500);
+    return () => clearInterval(heroProjectTimer);
+  }, [heroProjects.length]);
+
   // Dynamic Rotating Pill Text
   const rotatingDisciplines = [
     'High-Rise Commercial Towers',
@@ -240,66 +282,297 @@ export const Home = () => {
           className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-white/80 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md shadow-xs animate-pulse hidden sm:block z-10"
         />
 
-        {/* Hero Content Container */}
-        <div className="relative z-30 max-w-4xl mx-auto w-full text-center flex flex-col items-center gap-5 sm:gap-7 pointer-events-none px-4">
-          
-          {/* Main Giant Bold Headline with 3D Depth */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-1 sm:space-y-2 pointer-events-auto"
-          >
-            <h1 className="font-black text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] xl:text-[6.2rem] tracking-tight leading-[1.06] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
-              {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
-              <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
-                {settings.heroHeadlineAccent || 'Clear'}
-              </span>
-              <br />
-              <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
-                {settings.heroHeadlineLine2 || 'Engineering.'}
-              </span>
-            </h1>
-          </motion.div>
+        {/* Hero Content Container - Split 2-Column Professional Architecture */}
+        <div className="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-8 pointer-events-none">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+            
+            {/* --------------------------------------------------------------- */}
+            {/* LEFT COLUMN: Headings, Bio Narrative, Engineering Badges & CTAs */}
+            {/* --------------------------------------------------------------- */}
+            <div className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5">
+              
+              {/* Professional License & Advisory Pill */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs pointer-events-auto"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
+                  Senior Structural Advisory · NY PE & CA SE
+                </span>
+              </motion.div>
 
-          {/* Frosted Glassmorphic Description Pill Card (Allows 3D Model to Shine Through) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-3xl mx-auto rounded-3xl bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-10 py-5 sm:py-6 pointer-events-auto transition-all"
-          >
-            <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-center drop-shadow-xs">
-              {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
-            </p>
-          </motion.div>
+              {/* Main Headline (Left Aligned) */}
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="space-y-1 sm:space-y-2 pointer-events-auto"
+              >
+                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-[4.2rem] tracking-tight leading-[1.06] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
+                  {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
+                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                    {settings.heroHeadlineAccent || 'Clear'}
+                  </span>
+                  <br />
+                  <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                    {settings.heroHeadlineLine2 || 'Engineering.'}
+                  </span>
+                </h1>
+              </motion.div>
 
-          {/* Dual Pill Action Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
-            className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-2 pointer-events-auto"
-          >
-            {/* Primary Filled Pill Button */}
-            <button
-              onClick={() => navigate('/projects')}
-              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
-            >
-              <span>EXPLORE PROJECTS</span>
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+              {/* Frosted White Glass Description Card (Left Aligned) */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5 pointer-events-auto transition-all"
+              >
+                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
+                  {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
+                </p>
 
-            {/* Secondary Frosted Glass Pill Button */}
-            <button
-              onClick={() => setIsVideoModalOpen(true)}
-              className="rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
-            >
-              <span>WATCH SHOWREEL</span>
-              <Play size={13} className="fill-[#D4AF37] text-[#D4AF37]" />
-            </button>
-          </motion.div>
+                {/* Rotating Focus Indicator */}
+                <div className="mt-3 pt-2.5 border-t border-zinc-200/80 dark:border-white/10 flex items-center gap-2 text-xs font-mono">
+                  <span className="font-semibold text-zinc-500 uppercase tracking-wider text-[10px]">Active Focus:</span>
+                  <span className="font-bold text-[#801834] dark:text-[#E84855] underline decoration-[#D4AF37] decoration-2 underline-offset-4">
+                    {rotatingDisciplines[disciplineIndex]}
+                  </span>
+                </div>
+              </motion.div>
 
+              {/* Dual Action Buttons (Left Aligned) */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="flex flex-wrap items-center justify-start gap-4 pt-1 pointer-events-auto"
+              >
+                {/* Primary Filled Pill Button */}
+                <button
+                  onClick={() => navigate('/projects')}
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
+                >
+                  <span>EXPLORE PROJECTS</span>
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                {/* Secondary Frosted Glass Pill Button */}
+                <button
+                  onClick={() => setIsVideoModalOpen(true)}
+                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                >
+                  <span>WATCH SHOWREEL</span>
+                  <Play size={13} className="fill-[#D4AF37] text-[#D4AF37]" />
+                </button>
+              </motion.div>
+
+              {/* Quick Credentials / Performance Row */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg pointer-events-auto"
+              >
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">{settings.yearsExp || '14+'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Years Practice</span>
+                </div>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">{settings.projectsCount || '180+'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Built Projects</span>
+                </div>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Safety Record</span>
+                </div>
+              </motion.div>
+
+            </div>
+
+            {/* --------------------------------------------------------------- */}
+            {/* RIGHT COLUMN: Professional Portrait & Portfolio Images Showcase */}
+            {/* --------------------------------------------------------------- */}
+            <div className="lg:col-span-5 xl:col-span-6 relative flex flex-col items-center justify-center pointer-events-auto">
+              <div className="relative w-full max-w-lg lg:max-w-none flex flex-col items-center">
+                
+                {/* Visual Composition Container */}
+                <div className="relative w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
+                  
+                  {/* 1. Professional Engineer Portrait Card */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 25 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative z-10 w-full sm:w-[56%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group"
+                  >
+                    {/* Top Mini Header Strip */}
+                    <div className="flex items-center justify-between pb-2 px-1 border-b border-zinc-200/60 dark:border-white/10 text-[10px] font-mono">
+                      <span className="flex items-center gap-1.5 text-[#801834] dark:text-[#E84855] font-bold uppercase tracking-wider">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#801834] dark:bg-[#E84855] animate-ping" />
+                        PE #84729-NY
+                      </span>
+                      <span className="text-zinc-500 font-medium tracking-tight">SE #92041-CA</span>
+                    </div>
+
+                    {/* Engineer Portrait Photo */}
+                    <div className="relative mt-2 aspect-[4/4.8] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner">
+                      <img
+                        src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
+                        alt="Alexandre Techane - Senior Structural Engineer"
+                        className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent pointer-events-none" />
+                      
+                      {/* Technical Blueprint Annotations */}
+                      <div className="absolute top-2 left-2 text-[9px] font-mono text-white/80 select-none font-bold bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                        + 0.00 REF
+                      </div>
+                      <div className="absolute top-2 right-2 text-[9px] font-mono text-white/80 select-none font-bold bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                        ASCE FELLOW
+                      </div>
+
+                      {/* Bottom Name & Role Overlay */}
+                      <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/90 dark:bg-black/80 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight">
+                              {settings.engineerName || 'Alexandre Techane'}
+                            </p>
+                            <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide">
+                              Senior Structural Principal
+                            </p>
+                          </div>
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-700/50 text-[9px] font-mono font-bold text-emerald-700 dark:text-emerald-400">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                            ACTIVE
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Verification Footer */}
+                    <div className="mt-2.5 pt-2 px-1 flex items-center justify-between text-[10px] text-zinc-600 dark:text-zinc-400 font-mono">
+                      <span className="flex items-center gap-1 font-semibold">
+                        <Award size={12} className="text-[#D4AF37]" />
+                        Licensed Structural Engineer
+                      </span>
+                      <span className="font-semibold text-zinc-800 dark:text-zinc-200">14+ Yrs</span>
+                    </div>
+                  </motion.div>
+
+                  {/* 2. Layered Portfolio Project Showcase Card (With Interactive Image Selector) */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.35 }}
+                    className="relative z-20 w-full sm:w-[64%] sm:-ml-12 sm:mt-16 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)]"
+                  >
+                    {/* Project Header Tag */}
+                    <div className="flex items-center justify-between pb-2 px-1 border-b border-zinc-200/60 dark:border-white/10 text-[10px] font-mono">
+                      <span className="text-[#D4AF37] font-bold uppercase tracking-wider flex items-center gap-1">
+                        <Building2 size={11} />
+                        PORTFOLIO SHOWCASE
+                      </span>
+                      <span className="text-zinc-400 font-medium">0{activeHeroProjectIdx + 1} / 0{heroProjects.length}</span>
+                    </div>
+
+                    {/* Project Preview Image */}
+                    <div 
+                      className="relative mt-2 aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner group cursor-pointer"
+                      onClick={() => {
+                        const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
+                        setSelectedCaseStudy(matched);
+                      }}
+                    >
+                      <AnimatePresence mode="wait">
+                        <motion.img
+                          key={activeHeroProjectIdx}
+                          src={heroProjects[activeHeroProjectIdx].imageUrl}
+                          alt={heroProjects[activeHeroProjectIdx].title}
+                          initial={{ opacity: 0, scale: 1.05 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.95 }}
+                          transition={{ duration: 0.35 }}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </AnimatePresence>
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+
+                      {/* Floating Metric Badge */}
+                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white">
+                        {heroProjects[activeHeroProjectIdx].metric}
+                      </div>
+
+                      {/* Quick Inspect Arrow */}
+                      <div className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs group-hover:bg-[#D4AF37] group-hover:text-black transition-colors">
+                        <ArrowUpRight size={12} />
+                      </div>
+
+                      {/* Title & Tag on Project Image */}
+                      <div className="absolute bottom-2 left-2.5 right-2.5">
+                        <p className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-semibold">
+                          {heroProjects[activeHeroProjectIdx].category}
+                        </p>
+                        <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
+                          {heroProjects[activeHeroProjectIdx].title}
+                        </h4>
+                      </div>
+                    </div>
+
+                    {/* Interactive 3 Project Thumbnail Selector Buttons */}
+                    <div className="mt-2.5 grid grid-cols-3 gap-1.5">
+                      {heroProjects.map((proj, idx) => (
+                        <button
+                          key={proj.id}
+                          onClick={() => setActiveHeroProjectIdx(idx)}
+                          className={`p-1 rounded-xl text-left transition-all border cursor-pointer ${
+                            activeHeroProjectIdx === idx
+                              ? 'bg-[#801834]/10 dark:bg-[#801834]/20 border-[#801834]/40 dark:border-[#E84855]/40 text-[#801834] dark:text-[#E84855]'
+                              : 'bg-zinc-50 dark:bg-white/5 border-zinc-200/60 dark:border-white/10 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300'
+                          }`}
+                        >
+                          <div className="flex items-center gap-1.5">
+                            <img
+                              src={proj.imageUrl}
+                              alt={proj.title}
+                              className="w-5 h-5 rounded-md object-cover shrink-0"
+                            />
+                            <span className="text-[9px] font-mono font-bold truncate block">
+                              0{idx + 1} {proj.title.split(' ')[0]}
+                            </span>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+
+                </div>
+
+                {/* Bottom Trust Indicators Strip under Right Composition */}
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="mt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-[11px] font-mono text-zinc-600 dark:text-zinc-400"
+                >
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-white/80 dark:border-white/15 shadow-xs">
+                    <ShieldCheck size={13} className="text-[#D4AF37]" />
+                    FEA Certified Dynamic Calculations
+                  </span>
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-white/80 dark:border-white/15 shadow-xs">
+                    <CheckCircle2 size={13} className="text-[#801834] dark:text-[#E84855]" />
+                    100% Structural Safety Record
+                  </span>
+                </motion.div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
