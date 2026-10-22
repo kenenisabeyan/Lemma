@@ -401,87 +401,46 @@ export const Home = () => {
                 {/* Visual Composition Container */}
                 <div className="relative w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
                   
-                  {/* 1. Professional Engineer Portrait Card */}
+                  {/* 1. Professional Engineer Portrait Card (Clean Image, Text on Hover Only) */}
                   <motion.div
                     initial={{ opacity: 0, x: 25 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative z-10 w-full sm:w-[53%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group"
+                    className="relative z-10 w-full sm:w-[52%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group overflow-hidden"
                   >
-                    {/* Top Mini Header Strip */}
-                    <div className="flex items-center justify-between pb-2 px-1 border-b border-zinc-200/60 dark:border-white/10 text-[10px] font-mono">
-                      <span className="flex items-center gap-1.5 text-[#801834] dark:text-[#E84855] font-bold uppercase tracking-wider">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#801834] dark:bg-[#E84855] animate-ping" />
-                        PE #84729-NY
-                      </span>
-                      <span className="text-zinc-500 font-medium tracking-tight">SE #92041-CA</span>
-                    </div>
-
                     {/* Engineer Portrait Photo */}
-                    <div className="relative mt-2 aspect-[4/4.8] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner">
+                    <div className="relative aspect-[4/4.8] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner">
                       <img
                         src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
-                        alt="Alexandre Techane - Senior Structural Engineer"
+                        alt="Alexandre Techane"
                         className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent pointer-events-none" />
-                      
-                      {/* Technical Blueprint Annotations */}
-                      <div className="absolute top-2 left-2 text-[9px] font-mono text-white/80 select-none font-bold bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
-                        + 0.00 REF
-                      </div>
-                      <div className="absolute top-2 right-2 text-[9px] font-mono text-white/80 select-none font-bold bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
-                        ASCE FELLOW
-                      </div>
 
-                      {/* Bottom Name & Role Overlay */}
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/90 dark:bg-black/80 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight">
-                              {settings.engineerName || 'Alexandre Techane'}
-                            </p>
-                            <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide">
-                              Senior Structural Principal
-                            </p>
-                          </div>
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-700/50 text-[9px] font-mono font-bold text-emerald-700 dark:text-emerald-400">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                            ACTIVE
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      {/* Gradient Overlay - Visible ONLY on Hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                    {/* Bottom Verification Footer */}
-                    <div className="mt-2.5 pt-2 px-1 flex items-center justify-between text-[10px] text-zinc-600 dark:text-zinc-400 font-mono">
-                      <span className="flex items-center gap-1 font-semibold">
-                        <Award size={12} className="text-[#D4AF37]" />
-                        Licensed Structural Engineer
-                      </span>
-                      <span className="font-semibold text-zinc-800 dark:text-zinc-200">14+ Yrs</span>
+                      {/* Bottom Name & Role Overlay - Visible ONLY on Hover */}
+                      <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/90 dark:bg-black/80 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                        <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight">
+                          {settings.engineerName || 'Alexandre Techane'}
+                        </p>
+                        <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide">
+                          Senior Structural Principal · PE, SE
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
 
-                  {/* 2. Layered Portfolio Project Showcase Card (With Interactive Image Selector) */}
+                  {/* 2. Layered Portfolio Project Showcase Card (Clean Image, Text on Hover Only) */}
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.35 }}
-                    className="relative z-20 w-full sm:w-[60%] sm:-ml-8 sm:mt-12 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-3 sm:p-3.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)]"
+                    className="relative z-20 w-full sm:w-[60%] sm:-ml-8 sm:mt-12 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)] group"
                   >
-                    {/* Project Header Tag */}
-                    <div className="flex items-center justify-between pb-2 px-1 border-b border-zinc-200/60 dark:border-white/10 text-[10px] font-mono">
-                      <span className="text-[#D4AF37] font-bold uppercase tracking-wider flex items-center gap-1">
-                        <Building2 size={11} />
-                        PORTFOLIO SHOWCASE
-                      </span>
-                      <span className="text-zinc-400 font-medium">0{activeHeroProjectIdx + 1} / 0{heroProjects.length}</span>
-                    </div>
-
                     {/* Project Preview Image */}
                     <div 
-                      className="relative mt-2 aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner group cursor-pointer"
+                      className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner group/img cursor-pointer"
                       onClick={() => {
                         const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
                         setSelectedCaseStudy(matched);
@@ -496,24 +455,25 @@ export const Home = () => {
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.95 }}
                           transition={{ duration: 0.35 }}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
                         />
                       </AnimatePresence>
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                      {/* Gradient Overlay - Visible ONLY on Hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                      {/* Floating Metric Badge */}
-                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white">
+                      {/* Floating Metric Badge - Visible ONLY on Hover */}
+                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none">
                         {heroProjects[activeHeroProjectIdx].metric}
                       </div>
 
-                      {/* Quick Inspect Arrow */}
-                      <div className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs group-hover:bg-[#D4AF37] group-hover:text-black transition-colors">
+                      {/* Quick Inspect Arrow - Visible ONLY on Hover */}
+                      <div className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
                         <ArrowUpRight size={12} />
                       </div>
 
-                      {/* Title & Tag on Project Image */}
-                      <div className="absolute bottom-2 left-2.5 right-2.5">
+                      {/* Title & Tag on Project Image - Visible ONLY on Hover */}
+                      <div className="absolute bottom-2.5 left-2.5 right-2.5 opacity-0 group-hover/img:opacity-100 transition-all duration-300 translate-y-1 group-hover/img:translate-y-0 pointer-events-none">
                         <p className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-semibold">
                           {heroProjects[activeHeroProjectIdx].category}
                         </p>
@@ -523,51 +483,30 @@ export const Home = () => {
                       </div>
                     </div>
 
-                    {/* Interactive 3 Project Thumbnail Selector Buttons */}
-                    <div className="mt-2.5 grid grid-cols-3 gap-1.5">
+                    {/* Interactive Project Switcher (Pure Thumbnails, No Text) */}
+                    <div className="mt-2 flex items-center justify-center gap-2">
                       {heroProjects.map((proj, idx) => (
                         <button
                           key={proj.id}
                           onClick={() => setActiveHeroProjectIdx(idx)}
-                          className={`p-1 rounded-xl text-left transition-all border cursor-pointer ${
+                          aria-label={proj.title}
+                          className={`relative w-12 h-7 sm:w-14 sm:h-8 rounded-xl overflow-hidden transition-all duration-300 border-2 cursor-pointer ${
                             activeHeroProjectIdx === idx
-                              ? 'bg-[#801834]/10 dark:bg-[#801834]/20 border-[#801834]/40 dark:border-[#E84855]/40 text-[#801834] dark:text-[#E84855]'
-                              : 'bg-zinc-50 dark:bg-white/5 border-zinc-200/60 dark:border-white/10 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300'
+                              ? 'border-[#D4AF37] ring-2 ring-[#D4AF37]/40 scale-105 shadow-md'
+                              : 'border-white/70 dark:border-white/20 opacity-50 hover:opacity-100 hover:scale-102'
                           }`}
                         >
-                          <div className="flex items-center gap-1.5">
-                            <img
-                              src={proj.imageUrl}
-                              alt={proj.title}
-                              className="w-5 h-5 rounded-md object-cover shrink-0"
-                            />
-                            <span className="text-[9px] font-mono font-bold truncate block">
-                              0{idx + 1} {proj.title.split(' ')[0]}
-                            </span>
-                          </div>
+                          <img
+                            src={proj.imageUrl}
+                            alt={proj.title}
+                            className="w-full h-full object-cover"
+                          />
                         </button>
                       ))}
                     </div>
                   </motion.div>
 
                 </div>
-
-                {/* Bottom Trust Indicators Strip under Right Composition */}
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-[11px] font-mono text-zinc-600 dark:text-zinc-400"
-                >
-                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-white/80 dark:border-white/15 shadow-xs">
-                    <ShieldCheck size={13} className="text-[#D4AF37]" />
-                    FEA Certified Dynamic Calculations
-                  </span>
-                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-white/80 dark:border-white/15 shadow-xs">
-                    <CheckCircle2 size={13} className="text-[#801834] dark:text-[#E84855]" />
-                    100% Structural Safety Record
-                  </span>
-                </motion.div>
 
               </div>
             </div>
