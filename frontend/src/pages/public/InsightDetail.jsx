@@ -135,7 +135,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         {/* Article Header */}
         <div className="mb-8">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-white/90 dark:border-white/20 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 shadow-[0_2px_10px_rgba(0,0,0,0.03),inset_0_1px_1px_rgba(255,255,255,0.9)]">
+            <span className="rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 shadow-sm">
               {article.category}
             </span>
             <span className="text-xs font-mono text-[#54595F] flex items-center gap-1.5">
@@ -152,7 +152,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
           </h1>
 
           {/* Author Bento Badge */}
-          <div className="flex items-center gap-4 bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl p-4 rounded-2xl border border-white/90 dark:border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.04),inset_0_1px_2px_rgba(255,255,255,0.95)]">
+          <div className="flex items-center gap-4 bg-[#FFFFFF] p-4 rounded-2xl border border-zinc-200 shadow-sm">
             <div className="w-12 h-12 rounded-xl bg-[#FFFFFF] border-2 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shadow-xs">
               AT
             </div>

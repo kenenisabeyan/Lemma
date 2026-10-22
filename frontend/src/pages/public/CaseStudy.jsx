@@ -318,7 +318,7 @@ export const CaseStudyPage = () => {
 
         {/* Hero Header */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/90 dark:border-white/20 bg-white/80 dark:bg-white/10 backdrop-blur-xl px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-[0_2px_12px_rgba(0,0,0,0.03),inset_0_1px_1px_rgba(255,255,255,0.9)] mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-4">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Structural Case Study · {project.category}
           </div>
