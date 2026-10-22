@@ -66,10 +66,10 @@ export const ProjectCard = ({ project, onClick }) => {
       </div>
 
       {/* Footer Tags & Action Link */}
-      <div className="px-6 py-4 border-t border-zinc-200/80 bg-[#FFFFFF] flex justify-between items-center gap-3">
+      <div className="px-6 py-4 border-t border-white/80 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-md flex justify-between items-center gap-3">
         <div className="flex gap-1.5 flex-wrap">
           {softwareList.slice(0, 3).map((soft) => (
-            <span key={soft} className="rounded-full text-[9px] font-mono text-[#54595F] bg-[#FFFFFF] px-2.5 py-0.5 border border-zinc-200 shadow-2xs font-semibold">
+            <span key={soft} className="rounded-full text-[9px] font-mono text-[#54595F] dark:text-zinc-300 bg-white/80 dark:bg-white/10 px-2.5 py-0.5 border border-white/90 dark:border-white/20 shadow-2xs font-semibold backdrop-blur-xs">
               {soft}
             </span>
           ))}
