@@ -777,13 +777,14 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="max-w-3xl mb-16">
-            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Demystifying Structural Mechanics
-            </span>
+            </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
-              What Does a Structural Engineer Actually Do?
+              What Does a Structural Engineer <span className="text-[#D4AF37]">Actually Do?</span>
             </h2>
-            <p className="text-[#54595F] text-base leading-relaxed">
+            <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               If an architect decides what a building looks like and how people live inside it, the structural engineer calculates how physics, gravity, wind, and earthquakes interact with the structure so it remains completely safe for generations.
             </p>
           </div>
