@@ -8,18 +8,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
   const { isDark } = useTheme();
 
   // Active engineering process visualization mode
-  const [activeMode, setActiveMode] = useState('all'); // 'all' | 'fea' | 'loadpath' | 'crane' | 'scan'
+  const [activeMode] = useState('all');
   const activeModeRef = useRef(activeMode);
   activeModeRef.current = activeMode;
-
-  // Real-time civil engineering telemetry metrics
-  const [telemetry, setTelemetry] = useState({
-    axialLoad: '24,850 kN',
-    baseShear: '18,420 kN',
-    driftRatio: 'H / 540',
-    naturalPeriod: '2.42s',
-    stressState: 'OPTIMAL (0.68 F_y)'
-  });
 
   useEffect(() => {
     const container = containerRef.current;
@@ -695,55 +686,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
       <div 
         ref={containerRef} 
         className="w-full h-full cursor-grab active:cursor-grabbing"
-        title="Civil Engineering 3D Simulation: Click & drag to rotate, scroll to zoom"
       />
-
-      {/* ========================================================================= */}
-      {/* LIVE CIVIL ENGINEERING TELEMETRY HUD (FROSTED GLASS READOUT)             */}
-      {/* ========================================================================= */}
-      <div className="absolute bottom-4 right-4 sm:right-6 z-30 pointer-events-auto hidden sm:block">
-        <div className="rounded-2xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 p-3.5 shadow-[0_12px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] font-mono text-[10px] text-zinc-800 dark:text-zinc-200 space-y-1.5 max-w-xs transition-all">
-          <div className="flex items-center justify-between gap-3 border-b border-white/30 dark:border-white/10 pb-1.5">
-            <span className="text-[#D4AF37] font-bold flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              FEA TELEMETRY
-            </span>
-            <span className="text-[9px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-              ASCE 7-22 / IBC
-            </span>
-          </div>
-
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-[10px]">
-            <div>
-              <span className="text-zinc-500 dark:text-zinc-400 block text-[9px]">AXIAL GRAVITY</span>
-              <span className="font-bold text-zinc-900 dark:text-zinc-100">{telemetry.axialLoad}</span>
-            </div>
-            <div>
-              <span className="text-zinc-500 dark:text-zinc-400 block text-[9px]">BASE SHEAR V_b</span>
-              <span className="font-bold text-zinc-900 dark:text-zinc-100">{telemetry.baseShear}</span>
-            </div>
-            <div>
-              <span className="text-zinc-500 dark:text-zinc-400 block text-[9px]">LATERAL DRIFT</span>
-              <span className="font-bold text-emerald-600 dark:text-emerald-400">{telemetry.driftRatio} (PASS)</span>
-            </div>
-            <div>
-              <span className="text-zinc-500 dark:text-zinc-400 block text-[9px]">1st MODE PERIOD</span>
-              <span className="font-bold text-zinc-900 dark:text-zinc-100">{telemetry.naturalPeriod}</span>
-            </div>
-          </div>
-
-          {/* FEA Color Tensor Legend */}
-          <div className="pt-1.5 border-t border-white/30 dark:border-white/10 flex items-center justify-between text-[9px]">
-            <span className="text-zinc-500 dark:text-zinc-400">STRESS TENSOR:</span>
-            <div className="flex items-center gap-1">
-              <span className="inline-block w-2.5 h-2 rounded-xs bg-[#38bdf8]" title="Low: 45 MPa"></span>
-              <span className="inline-block w-2.5 h-2 rounded-xs bg-[#10b981]" title="Nominal: 120 MPa"></span>
-              <span className="inline-block w-2.5 h-2 rounded-xs bg-[#f59e0b]" title="Shear: 210 MPa"></span>
-              <span className="inline-block w-2.5 h-2 rounded-xs bg-[#ef4444]" title="Peak Moment: 290 MPa"></span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
