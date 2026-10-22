@@ -1136,10 +1136,16 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
-              <h2 className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Publications
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                Engineering Publications & Research
+              </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+                Technical Notes & <span className="text-[#D4AF37]">Engineering Articles.</span>
               </h2>
-              <h3 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">Technical Notes & Articles</h3>
+              <p className="text-[#54595F] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+                Peer-reviewed methodologies, seismic mitigation insights, and modern material specifications.
+              </p>
             </div>
             <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 transition-colors flex items-center gap-2">
               Browse All Articles <ChevronRight size={16} />
