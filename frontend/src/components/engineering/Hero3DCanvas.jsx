@@ -27,6 +27,11 @@ export const Hero3DCanvas = ({ className = '' }) => {
 
     // 1. SCENE, CAMERA, RENDERER
     const scene = new THREE.Scene();
+
+    // Atmospheric depth fog that seamlessly dissolves the 3D model into the background color
+    const bgColor = isDark ? 0x0B0C0E : 0xFAF9F6;
+    scene.fog = new THREE.FogExp2(bgColor, 0.018);
+
     const camera = new THREE.PerspectiveCamera(
       45,
       container.clientWidth / container.clientHeight,
@@ -34,8 +39,8 @@ export const Hero3DCanvas = ({ className = '' }) => {
       1000
     );
     // Adjusted camera perspective to frame full civil engineering scope: bedrock to crane peak
-    camera.position.set(0, 3, 37);
-    camera.lookAt(0, 1.5, 0);
+    camera.position.set(0, 2.5, 40);
+    camera.lookAt(0, 1.2, 0);
 
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -50,18 +55,20 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const rootAssembly = new THREE.Group();
     scene.add(rootAssembly);
 
-    // 2. PALETTE DEFINITIONS (Light vs Dark mode structural standards)
-    const goldColor = isDark ? 0xf59e0b : 0xd4af37;     // Primary steel / moment frame
-    const cyanColor = isDark ? 0x38bdf8 : 0x0284c7;     // Tension braces & outriggers
-    const concreteColor = isDark ? 0x0f172a : 0xf1f5f9; // Concrete core & foundation
-    const wireColor = isDark ? 0x334155 : 0x94a3b8;     // Subterranean grid
-    const bedrockColor = isDark ? 0x1e293b : 0xe2e8f0;  // Deep geological strata
+    // 2. PALETTE DEFINITIONS (Harmonized to match #FAF9F6 light and #0B0C0E dark backgrounds)
+    const steelPrimary = isDark ? 0x94A3B8 : 0x475569;      // Slate architectural steel
+    const accentWine = isDark ? 0xBE123C : 0x801834;        // Signature burgundy matching headline
+    const champagneGold = isDark ? 0xD4AF37 : 0xB89745;     // Muted architectural gold/bronze
+    const concreteColor = isDark ? 0x0F172A : 0xE8E5DE;     // Blends seamlessly into bedrock & floor
+    const wireColor = isDark ? 0x334155 : 0xCBD5E1;         // Subterranean grid
+    const bedrockColor = isDark ? 0x1E293B : 0xDDD8CF;      // Deep strata grid
+    const braceColor = isDark ? 0x38BDF8 : 0x64748B;        // Tension cables
 
-    // Stress gradient colors for FEA mode
-    const feaLow = 0x38bdf8;     // Low stress: 45 MPa (Cyan/Blue)
-    const feaNominal = 0x10b981; // Nominal: 120 MPa (Green)
-    const feaWarning = 0xf59e0b; // High shear: 210 MPa (Amber)
-    const feaCritical = 0xef4444;// Peak moment: 290 MPa (Red)
+    // Stress gradient colors for FEA mode (refined architectural tone)
+    const feaLow = isDark ? 0x38BDF8 : 0x64748B;      // Low stress: Slate
+    const feaNominal = isDark ? 0x10B981 : 0x2E7D32;  // Nominal: Deep emerald
+    const feaWarning = isDark ? 0xF59E0B : 0xB89745;  // High shear: Warm bronze
+    const feaCritical = isDark ? 0xEF4444 : 0x801834; // Peak moment: Burgundy wine
 
     // Structural Geometry Parameters
     const floorCount = 14;
@@ -79,10 +86,10 @@ export const Hero3DCanvas = ({ className = '' }) => {
     rootAssembly.add(substructureGroup);
 
     // Bedrock Geological Basal Grid (GL -28.0m)
-    const bedrockGrid = new THREE.GridHelper(36, 18, goldColor, bedrockColor);
+    const bedrockGrid = new THREE.GridHelper(36, 18, isDark ? 0x334155 : 0xC7C1B5, bedrockColor);
     bedrockGrid.position.y = -totalHeight / 2 - 4.5;
     bedrockGrid.material.transparent = true;
-    bedrockGrid.material.opacity = isDark ? 0.4 : 0.3;
+    bedrockGrid.material.opacity = isDark ? 0.3 : 0.2;
     substructureGroup.add(bedrockGrid);
 
     // 4 Drilled Shaft Caissons (Deep Foundation Piles extending into bedrock)
@@ -92,12 +99,12 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const pileMat = new THREE.MeshBasicMaterial({
       color: concreteColor,
       transparent: true,
-      opacity: isDark ? 0.35 : 0.25
+      opacity: isDark ? 0.25 : 0.14
     });
     const pileEdgeMat = new THREE.LineBasicMaterial({
-      color: cyanColor,
+      color: steelPrimary,
       transparent: true,
-      opacity: isDark ? 0.8 : 0.6
+      opacity: isDark ? 0.5 : 0.28
     });
 
     const pilePositions = [
@@ -126,7 +133,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
         spiralPoints.push(new THREE.Vector3(px + Math.cos(theta) * r, pile.position.y + y, pz + Math.sin(theta) * r));
       }
       const spiralGeo = new THREE.BufferGeometry().setFromPoints(spiralPoints);
-      const spiralMat = new THREE.LineBasicMaterial({ color: goldColor, transparent: true, opacity: 0.65 });
+      const spiralMat = new THREE.LineBasicMaterial({ color: accentWine, transparent: true, opacity: isDark ? 0.5 : 0.32 });
       substructureGroup.add(new THREE.Line(spiralGeo, spiralMat));
     });
 
@@ -136,12 +143,12 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const raftMat = new THREE.MeshBasicMaterial({
       color: concreteColor,
       transparent: true,
-      opacity: isDark ? 0.35 : 0.25
+      opacity: isDark ? 0.25 : 0.14
     });
     const raftEdgeMat = new THREE.LineBasicMaterial({
-      color: goldColor,
+      color: steelPrimary,
       transparent: true,
-      opacity: isDark ? 0.9 : 0.75
+      opacity: isDark ? 0.6 : 0.35
     });
     const raftMesh = new THREE.Mesh(raftGeo, raftMat);
     raftMesh.position.y = -totalHeight / 2 + 1.4;
@@ -162,12 +169,12 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const slabMat = new THREE.MeshBasicMaterial({
       color: concreteColor,
       transparent: true,
-      opacity: isDark ? 0.16 : 0.12
+      opacity: isDark ? 0.14 : 0.08
     });
     const slabEdgeMat = new THREE.LineBasicMaterial({
-      color: goldColor,
+      color: steelPrimary,
       transparent: true,
-      opacity: isDark ? 0.85 : 0.7
+      opacity: isDark ? 0.5 : 0.3
     });
 
     for (let i = 0; i < floorCount; i++) {
@@ -188,32 +195,45 @@ export const Hero3DCanvas = ({ className = '' }) => {
           tendonPoints.push(new THREE.Vector3(s, y + sag, 0));
         }
         const tendonGeo = new THREE.BufferGeometry().setFromPoints(tendonPoints);
-        const tendonMat = new THREE.LineBasicMaterial({ color: cyanColor, transparent: true, opacity: 0.75 });
+        const tendonMat = new THREE.LineBasicMaterial({ 
+          color: isDark ? 0x38BDF8 : accentWine, 
+          transparent: true, 
+          opacity: isDark ? 0.55 : 0.32 
+        });
         towerGroup.add(new THREE.Line(tendonGeo, tendonMat));
       }
     }
 
-    // 4 Composite Steel-Concrete Mega-Columns (Tapered base for realistic gravity loads)
+    // 4 Composite Steel-Concrete Mega-Columns (Translucent architectural core with crisp outlines)
     const colGeo = new THREE.CylinderGeometry(0.18, 0.28, totalHeight, 8);
     const colMat = new THREE.MeshBasicMaterial({
-      color: goldColor,
+      color: steelPrimary,
       transparent: true,
-      opacity: 0.95
+      opacity: isDark ? 0.45 : 0.26
+    });
+    const colEdgeMat = new THREE.LineBasicMaterial({
+      color: isDark ? champagneGold : accentWine,
+      transparent: true,
+      opacity: isDark ? 0.5 : 0.34
     });
 
     pilePositions.forEach(([cx, cz]) => {
       const colMesh = new THREE.Mesh(colGeo, colMat);
       colMesh.position.set(cx, 2, cz);
       towerGroup.add(colMesh);
+
+      const colEdges = new THREE.LineSegments(new THREE.EdgesGeometry(colGeo), colEdgeMat);
+      colEdges.position.set(cx, 2, cz);
+      towerGroup.add(colEdges);
     });
 
     // Central Core Shear Wall Box with Elevator / MEP Shaft Openings
     const coreWidth = 3.6;
     const coreGeo = new THREE.BoxGeometry(coreWidth, totalHeight, coreWidth);
     const coreMat = new THREE.MeshBasicMaterial({
-      color: cyanColor,
+      color: steelPrimary,
       transparent: true,
-      opacity: isDark ? 0.35 : 0.2,
+      opacity: isDark ? 0.16 : 0.08,
       wireframe: true
     });
     const coreMesh = new THREE.Mesh(coreGeo, coreMat);
@@ -241,9 +261,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
     }
     const braceGeo = new THREE.BufferGeometry().setFromPoints(bracePoints);
     const braceMat = new THREE.LineBasicMaterial({
-      color: cyanColor,
+      color: braceColor,
       transparent: true,
-      opacity: isDark ? 0.95 : 0.8
+      opacity: isDark ? 0.45 : 0.25
     });
     towerGroup.add(new THREE.LineSegments(braceGeo, braceMat));
 
@@ -251,7 +271,11 @@ export const Hero3DCanvas = ({ className = '' }) => {
     outriggerFloors.forEach((f) => {
       const dy = f * storyHeight - totalHeight / 2 + 2;
       const damperGeo = new THREE.CylinderGeometry(0.12, 0.12, colHalfW - 1.8, 8);
-      const damperMat = new THREE.MeshBasicMaterial({ color: isDark ? 0xf59e0b : 0xd4af37 });
+      const damperMat = new THREE.MeshBasicMaterial({ 
+        color: accentWine, 
+        transparent: true, 
+        opacity: isDark ? 0.75 : 0.5 
+      });
       
       const damperLeft = new THREE.Mesh(damperGeo, damperMat);
       damperLeft.position.set(-colHalfW / 2 - 0.9, dy + 0.3, 0);
@@ -266,8 +290,12 @@ export const Hero3DCanvas = ({ className = '' }) => {
 
     // FEA Joint Nodes (Color-coded based on structural stress concentration)
     const nodeCount = 44;
-    const nodeGeo = new THREE.SphereGeometry(0.26, 12, 12);
-    const nodeMat = new THREE.MeshBasicMaterial({ color: goldColor });
+    const nodeGeo = new THREE.SphereGeometry(0.18, 10, 10);
+    const nodeMat = new THREE.MeshBasicMaterial({ 
+      color: champagneGold, 
+      transparent: true, 
+      opacity: isDark ? 0.75 : 0.5 
+    });
     const nodeInstanced = new THREE.InstancedMesh(nodeGeo, nodeMat, nodeCount);
     const dummy = new THREE.Object3D();
 
@@ -275,7 +303,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const nodeColors = [];
     for (let f = 0; f < floorCount && nodeIdx < nodeCount; f += 2) {
       const y = f * storyHeight - totalHeight / 2 + 2;
-      // FEA stress gradient: base is critical red/amber, mid is nominal green, top is cyan
+      // FEA stress gradient: base is critical wine, mid is nominal bronze/green, top is subtle slate
       const stressColor = f < 3 ? feaCritical : (f < 8 ? feaWarning : (f < 11 ? feaNominal : feaLow));
       const colObj = new THREE.Color(stressColor);
 
@@ -305,14 +333,23 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // Crane Vertical Mast Tower (Lattice Truss Column)
     const mastHeight = 6.8;
     const mastGeo = new THREE.BoxGeometry(0.65, mastHeight, 0.65);
-    const mastMat = new THREE.MeshBasicMaterial({ color: goldColor, wireframe: true });
+    const mastMat = new THREE.MeshBasicMaterial({ 
+      color: steelPrimary, 
+      wireframe: true, 
+      transparent: true, 
+      opacity: isDark ? 0.5 : 0.32 
+    });
     const mastMesh = new THREE.Mesh(mastGeo, mastMat);
     mastMesh.position.y = mastHeight / 2;
     craneGroup.add(mastMesh);
 
     // Crane Slewing Ring & Operator Cab
     const cabGeo = new THREE.BoxGeometry(0.9, 0.7, 0.9);
-    const cabMat = new THREE.MeshBasicMaterial({ color: isDark ? 0x22c55e : 0x10b981 });
+    const cabMat = new THREE.MeshBasicMaterial({ 
+      color: accentWine, 
+      transparent: true, 
+      opacity: isDark ? 0.7 : 0.45 
+    });
     const cabMesh = new THREE.Mesh(cabGeo, cabMat);
     cabMesh.position.set(0.2, mastHeight, 0);
     craneGroup.add(cabMesh);
@@ -334,12 +371,20 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // Counter-jib extending backwards with counterweight
     jibPoints.push(new THREE.Vector3(0, 0, 0), new THREE.Vector3(-4.5, 0, 0));
     const jibGeo = new THREE.BufferGeometry().setFromPoints(jibPoints);
-    const jibMat = new THREE.LineBasicMaterial({ color: goldColor, linewidth: 2 });
+    const jibMat = new THREE.LineBasicMaterial({ 
+      color: isDark ? champagneGold : steelPrimary, 
+      transparent: true, 
+      opacity: isDark ? 0.6 : 0.38 
+    });
     slewingJib.add(new THREE.LineSegments(jibGeo, jibMat));
 
     // Concrete Counterweight Block
     const cwGeo = new THREE.BoxGeometry(1.4, 0.8, 0.9);
-    const cwMat = new THREE.MeshBasicMaterial({ color: concreteColor, transparent: true, opacity: 0.85 });
+    const cwMat = new THREE.MeshBasicMaterial({ 
+      color: concreteColor, 
+      transparent: true, 
+      opacity: isDark ? 0.6 : 0.4 
+    });
     const cwMesh = new THREE.Mesh(cwGeo, cwMat);
     cwMesh.position.set(-3.8, -0.2, 0);
     slewingJib.add(cwMesh);
@@ -351,12 +396,21 @@ export const Hero3DCanvas = ({ className = '' }) => {
 
     const hoistCablePoints = [new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, -3.8, 0)];
     const hoistCableGeo = new THREE.BufferGeometry().setFromPoints(hoistCablePoints);
-    const hoistCableMat = new THREE.LineBasicMaterial({ color: cyanColor });
+    const hoistCableMat = new THREE.LineBasicMaterial({ 
+      color: steelPrimary, 
+      transparent: true, 
+      opacity: 0.35 
+    });
     hoistTrolley.add(new THREE.Line(hoistCableGeo, hoistCableMat));
 
     // Active Structural Steel Girder being lifted into place
     const girderGeo = new THREE.BoxGeometry(3.5, 0.35, 0.45);
-    const girderMat = new THREE.MeshBasicMaterial({ color: goldColor, wireframe: true });
+    const girderMat = new THREE.MeshBasicMaterial({ 
+      color: accentWine, 
+      wireframe: true, 
+      transparent: true, 
+      opacity: isDark ? 0.7 : 0.45 
+    });
     const girderMesh = new THREE.Mesh(girderGeo, girderMat);
     girderMesh.position.set(0, -3.8, 0);
     hoistTrolley.add(girderMesh);
@@ -366,11 +420,11 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // =========================================================================
     // Glowing force packets stream down mega-columns demonstrating Newton load transfer
     const loadPulseCount = 32;
-    const pulseGeo = new THREE.SphereGeometry(0.18, 8, 8);
+    const pulseGeo = new THREE.SphereGeometry(0.14, 8, 8);
     const pulseMat = new THREE.MeshBasicMaterial({
-      color: isDark ? 0xffffff : 0xf59e0b,
+      color: isDark ? 0xFFFBEB : accentWine,
       transparent: true,
-      opacity: 0.95
+      opacity: isDark ? 0.65 : 0.42
     });
     const pulseInstanced = new THREE.InstancedMesh(pulseGeo, pulseMat, loadPulseCount);
     const pulseDummy = new THREE.Object3D();
@@ -398,9 +452,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const scanWidth = floorWidth + 3.0;
     const scanPlaneGeo = new THREE.PlaneGeometry(scanWidth, scanWidth);
     const scanPlaneMat = new THREE.MeshBasicMaterial({
-      color: cyanColor,
+      color: isDark ? 0x38BDF8 : accentWine,
       transparent: true,
-      opacity: 0.12,
+      opacity: isDark ? 0.08 : 0.04,
       side: THREE.DoubleSide
     });
     const scanPlaneMesh = new THREE.Mesh(scanPlaneGeo, scanPlaneMat);
@@ -410,17 +464,17 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // High-intensity scanner perimeter laser ring
     const scanRingGeo = new THREE.EdgesGeometry(scanPlaneGeo);
     const scanRingMat = new THREE.LineBasicMaterial({
-      color: cyanColor,
+      color: isDark ? 0x38BDF8 : accentWine,
       transparent: true,
-      opacity: 0.85,
-      linewidth: 2
+      opacity: isDark ? 0.4 : 0.22,
+      linewidth: 1.5
     });
     const scanRing = new THREE.LineSegments(scanRingGeo, scanRingMat);
     scanRing.rotation.x = Math.PI / 2;
     scanPlaneGroup.add(scanRing);
 
-    // Surrounding Ambient Structural Particles (Atmospheric airborne dust)
-    const particleCount = 80;
+    // Surrounding Ambient Structural Particles (Atmospheric airborne dust, delicate and fine)
+    const particleCount = 50;
     const particlePoints = [];
     for (let i = 0; i < particleCount; i++) {
       particlePoints.push(
@@ -433,10 +487,10 @@ export const Hero3DCanvas = ({ className = '' }) => {
     }
     const particleGeo = new THREE.BufferGeometry().setFromPoints(particlePoints);
     const particleMat = new THREE.PointsMaterial({
-      color: goldColor,
-      size: 0.4,
+      color: isDark ? champagneGold : accentWine,
+      size: 0.12,
       transparent: true,
-      opacity: isDark ? 0.8 : 0.5
+      opacity: isDark ? 0.35 : 0.2
     });
     const particles = new THREE.Points(particleGeo, particleMat);
     scene.add(particles);
