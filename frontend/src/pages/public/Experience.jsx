@@ -262,7 +262,7 @@ export const Experience = () => {
                     <span className="inline-block rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 px-3 py-1 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                       {item.year}
                     </span>
-                    <h3 className="text-2xl font-bold text-[#54595F] mb-1">{item.role}</h3>
+                    <h3 className="text-2xl font-bold text-zinc-900 mb-1">{item.role}</h3>
                     <p className="text-xs font-semibold text-[#54595F]/80 uppercase tracking-wider mb-4 flex items-center gap-2">
                       <Building2 size={13} className="text-[#D4AF37]" /> {item.company}
                     </p>
@@ -293,7 +293,7 @@ export const Experience = () => {
                   <div className="w-10 h-10 rounded-xl bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center font-mono font-bold text-sm mb-6 group-hover:scale-110 transition-transform">
                     0{index + 1}
                   </div>
-                  <h4 className="text-lg font-bold text-[#54595F] mb-3 group-hover:text-[#D4AF37] transition-colors">{comp.title}</h4>
+                  <h4 className="text-lg font-bold text-zinc-900 mb-3 group-hover:text-[#D4AF37] transition-colors">{comp.title}</h4>
                   <p className="text-xs text-[#54595F] leading-relaxed">{comp.desc}</p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-zinc-200 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D4AF37] font-bold">
@@ -307,12 +307,12 @@ export const Experience = () => {
         {/* Interactive Seismic Shake Table & NLRHA Dissipation Section */}
         <div className="mb-20">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Physics & Non-Linear Dynamics
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#54595F] tracking-tight mb-4">
-              <span className="text-[#D4AF37]">Dynamic</span> Seismic Shake Table Laboratory.
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+              Dynamic Seismic <span className="text-[#D4AF37]">Shake Table Laboratory.</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               Experience how high-performance structural systems withstand historical earthquake accelerograms through advanced base isolation, viscous fluid dampers, and tuned mass dampers.
@@ -326,7 +326,7 @@ export const Experience = () => {
         <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-xl relative overflow-hidden">
           <div className="relative z-10">
             <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-widest block mb-2 font-bold">Ready to Collaborate</span>
-            <h3 className="text-2xl lg:text-3xl font-extrabold text-[#54595F] mb-2"><span className="text-[#D4AF37]">Need</span> an Expert Structural Engineer for Your Project?</h3>
+            <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 mb-2">Need an Expert <span className="text-[#D4AF37]">Structural Engineer</span> for Your Project?</h3>
             <p className="text-sm text-[#54595F] max-w-xl leading-relaxed">
               Available for high-rise peer reviews, dynamic seismic analysis, value engineering audits, and complete construction documentation.
             </p>

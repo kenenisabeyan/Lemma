@@ -67,14 +67,11 @@ export const InsightsPage = () => {
         
         {/* Header */}
         <div className="mb-14 border-b border-zinc-200 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Technical Knowledge & Publications
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
             <span className="text-[#D4AF37]">Engineering</span> Insights.
           </h1>
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl">
@@ -156,7 +153,7 @@ export const InsightsPage = () => {
                       <span className="flex items-center gap-1"><Clock size={12} className="text-[#D4AF37]" /> {item.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-[#54595F] group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
+                    <h3 className="text-lg font-bold text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-3 leading-snug">
                       {item.title}
                     </h3>
 
@@ -179,7 +176,7 @@ export const InsightsPage = () => {
         {/* Bottom Banner */}
         <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-8 sm:p-12 text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
           <div className="text-left">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#54595F] mb-1.5"><span className="text-[#D4AF37]">Applying</span> Advanced Structural Research to Real Builds</h3>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5"><span className="text-[#D4AF37]">Applying</span> Advanced Structural Research to Real Builds</h3>
             <p className="text-xs sm:text-sm text-[#54595F]">Need an expert finite element analysis or code-compliance technical audit for your project?</p>
           </div>
           <button

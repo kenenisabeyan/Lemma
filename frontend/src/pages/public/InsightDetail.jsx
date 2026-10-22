@@ -147,7 +147,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#54595F] tracking-tight leading-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight mb-6">
             <span className="text-[#D4AF37]">{article.title.split(' ')[0]}</span> {article.title.split(' ').slice(1).join(' ')}
           </h1>
 
@@ -157,7 +157,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
               AT
             </div>
             <div>
-              <h4 className="text-sm font-bold text-[#54595F] flex items-center gap-1.5">
+              <h4 className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
                 Alexandre Techane, PE, SE
                 <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· Verified Author</span>
               </h4>
@@ -178,7 +178,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
           {article.content.split('\n\n').map((paragraph, index) => {
             if (paragraph.startsWith('### ')) {
               return (
-                <h3 key={index} className="text-xl font-bold text-[#54595F] text-left pt-6 pb-2 border-l-2 border-[#D4AF37] pl-3">
+                <h3 key={index} className="text-xl font-bold text-zinc-900 text-left pt-6 pb-2 border-l-2 border-[#D4AF37] pl-3">
                   {paragraph.replace('### ', '')}
                 </h3>
               );
@@ -249,7 +249,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         {/* Article Footer & Consultation Link */}
         <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-8 mb-16 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl relative overflow-hidden">
           <div className="relative z-10">
-            <h4 className="text-lg font-bold text-[#54595F] mb-1"><span className="text-[#D4AF37]">Have</span> questions about this engineering methodology?</h4>
+            <h4 className="text-lg font-bold text-zinc-900 mb-1"><span className="text-[#D4AF37]">Have</span> questions about this engineering methodology?</h4>
             <p className="text-xs text-[#54595F]">Directly discuss structural modeling or FEA review for your project.</p>
           </div>
           <button
@@ -263,7 +263,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         {/* Related Articles */}
         {related.length > 0 && (
           <div className="border-t border-zinc-200 pt-12">
-            <h3 className="text-xl font-bold text-[#54595F] mb-6">More Engineering Insights</h3>
+            <h3 className="text-xl font-bold text-zinc-900 mb-6"><span className="text-[#D4AF37]">More</span> Engineering Insights</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {related.map(rel => (
                 <Link
@@ -273,7 +273,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-base font-bold text-[#54595F] group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
+                    <h4 className="text-base font-bold text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
                   </div>
                   <span className="text-xs font-bold uppercase text-[#D4AF37] flex items-center gap-1 mt-4">
                     Read Article <ArrowUpRight size={12} />

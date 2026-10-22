@@ -124,15 +124,12 @@ export const Contact = () => {
         
         {/* Header */}
         <div className="mb-14 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Available for Select Consultation & Advisory
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
-            <span className="text-[#D4AF37]">Have Questions?</span> Get in Touch.
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
+            Have Questions? <span className="text-[#D4AF37]">Get in Touch.</span>
           </h1>
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-2xl mx-auto">
             <p className="text-[#54595F] text-base leading-relaxed">
@@ -151,7 +148,7 @@ export const Contact = () => {
                   <Mail size={18} />
                 </div>
                 <div className="flex flex-col gap-y-0.5 overflow-hidden">
-                  <h4 className="text-sm font-bold text-[#54595F]">Send an Email</h4>
+                  <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
                   <p className="text-xs font-mono text-[#54595F]/80 truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
                 </div>
               </div>
@@ -173,7 +170,7 @@ export const Contact = () => {
                 <Phone size={18} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-[#54595F]">Call Direct</h4>
+                <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
                 <p className="text-xs font-mono text-[#54595F]/80 group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472 (Mon-Fri 8am-6pm)</p>
               </div>
             </a>
@@ -184,7 +181,7 @@ export const Contact = () => {
                 <MapPin size={18} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-[#54595F]">Office Headquarters</h4>
+                <h4 className="text-sm font-bold text-zinc-900">Office Headquarters</h4>
                 <p className="text-xs font-mono text-[#54595F]/80">New York, NY (EST · GMT-5)</p>
               </div>
             </div>
@@ -210,7 +207,7 @@ export const Contact = () => {
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-200">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#54595F] mb-1 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 mb-1 tracking-tight">
                 Structural Consultation Inquiry Brief
               </h3>
               <p className="text-xs text-[#54595F]">

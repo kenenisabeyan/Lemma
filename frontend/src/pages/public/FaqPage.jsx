@@ -68,14 +68,11 @@ export const FaqPage = () => {
         
         {/* Header */}
         <div className="mb-14 border-b border-zinc-200 pb-10 text-center">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono font-semibold text-[#D4AF37] shadow-xs mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Client Education & FAQs
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
             <span className="text-[#D4AF37]">Understanding</span> Structural Engineering.
           </h1>
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-2xl mx-auto">
@@ -126,7 +123,7 @@ export const FaqPage = () => {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full p-6 text-left font-bold text-base text-[#54595F] hover:text-[#D4AF37] flex justify-between items-center gap-4 transition-colors"
+                  className="w-full p-6 text-left font-bold text-base text-zinc-900 hover:text-[#D4AF37] flex justify-between items-center gap-4 transition-colors"
                 >
                   <span className="flex items-center gap-3">
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37]">
@@ -160,7 +157,7 @@ export const FaqPage = () => {
           <div className="flex size-14 items-center justify-center rounded-2xl bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37] mx-auto mb-4 shadow-sm">
             <MessageSquare size={24} />
           </div>
-          <h3 className="text-xl font-bold text-[#54595F] mb-2"><span className="text-[#D4AF37]">Have</span> a Question About Your Specific Structural Plan?</h3>
+          <h3 className="text-xl font-bold text-zinc-900 mb-2"><span className="text-[#D4AF37]">Have</span> a Question About Your Specific Structural Plan?</h3>
           <p className="text-xs text-[#54595F] max-w-lg mx-auto mb-6 leading-relaxed">
             Every building geometry and soil condition presents unique physics. Reach out directly for preliminary structural feasibility review.
           </p>
