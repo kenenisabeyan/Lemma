@@ -121,15 +121,12 @@ export const Experience = () => {
         
         {/* Page Header */}
         <div className="mb-14 border-b border-zinc-200 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-[#54595F] shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Professional History & Engineering Record
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#54595F] tracking-tight leading-[1.08] mb-5">
-            <span className="text-[#D4AF37]">Structural</span> Experience.
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
+            Structural <span className="text-[#D4AF37]">Experience.</span>
           </h1>
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-3xl">
             <p className="text-[#54595F] text-base lg:text-lg leading-relaxed">
@@ -141,25 +138,25 @@ export const Experience = () => {
         {/* Quantified Metrics Highlight Bar */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-16">
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 shadow-sm hover:shadow-md transition-all">
-            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1">Supervised Project Scale</span>
+            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1 font-semibold">Supervised Project Scale</span>
             <div className="text-3xl lg:text-4xl font-extrabold text-[#D4AF37] font-mono">$850M+</div>
             <p className="text-xs text-[#54595F] mt-1">Total structural construction value</p>
           </div>
 
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 shadow-sm hover:shadow-md transition-all">
-            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1">Completed Deliverables</span>
-            <div className="text-3xl lg:text-4xl font-extrabold text-[#54595F] font-mono">180+</div>
+            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1 font-semibold">Completed Deliverables</span>
+            <div className="text-3xl lg:text-4xl font-extrabold text-zinc-900 font-mono">180+</div>
             <p className="text-xs text-[#54595F] mt-1">High-rise, bridge & civic projects</p>
           </div>
 
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 shadow-sm hover:shadow-md transition-all">
-            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1">Professional Practice</span>
-            <div className="text-3xl lg:text-4xl font-extrabold text-[#54595F] font-mono">14+ Yrs</div>
+            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1 font-semibold">Professional Practice</span>
+            <div className="text-3xl lg:text-4xl font-extrabold text-zinc-900 font-mono">14+ Yrs</div>
             <p className="text-xs text-[#54595F] mt-1">Licensed PE & SE engineer</p>
           </div>
 
           <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 shadow-sm hover:shadow-md transition-all">
-            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1">Structural Safety Record</span>
+            <span className="text-[10px] font-mono uppercase text-[#54595F]/75 tracking-wider block mb-1 font-semibold">Structural Safety Record</span>
             <div className="text-3xl lg:text-4xl font-extrabold text-emerald-600 font-mono">100%</div>
             <p className="text-xs text-[#54595F] mt-1">Zero audit failures or deficiencies</p>
           </div>

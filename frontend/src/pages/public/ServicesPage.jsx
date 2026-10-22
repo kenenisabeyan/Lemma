@@ -56,11 +56,8 @@ export const ServicesPage = () => {
         
         {/* Header */}
         <div className="mb-16 border-b border-zinc-200/80 pb-10">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-bold tracking-wider uppercase text-zinc-800 shadow-sm mb-5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Scope of Engineering Practice
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
