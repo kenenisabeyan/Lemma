@@ -1202,13 +1202,17 @@ export const Home = () => {
       {/* ========================================================================= */}
       <section className="py-20 bg-[#FFFFFF] border-t border-zinc-200/80 transition-colors" id="contact">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
+          <div className="text-center mb-10 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Consultation & Engagement
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
               Have Questions? <span className="text-[#D4AF37]">Get in Touch!</span>
             </h2>
+            <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
+              Inquire about project feasibilities, structural code compliance audits, or specialized high-rise structural design.
+            </p>
           </div>
 
           {/* 3-Bento Contact Strip */}
