@@ -15,6 +15,8 @@ import {
   Building2
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
+import { TechMarquee } from '../../components/common/TechMarquee';
 
 export const TestimonialsPage = () => {
   const navigate = useNavigate();
@@ -90,6 +92,13 @@ export const TestimonialsPage = () => {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
         <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+
+        {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
+        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
+          <Hero3DCanvas />
+          {/* Precision Blueprint Vignette Edge Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
+        </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
