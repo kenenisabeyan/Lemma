@@ -222,9 +222,9 @@ export const InsightsPage = () => {
 
                 <Link
                   to={`/insights/${featuredArticle.slug || 'innovations-high-strength-c80-concrete'}`}
-                  className="rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
+                  className="rounded-2xl bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-4 py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(212,175,55,0.25)] hover:shadow-[0_12px_28px_rgba(212,175,55,0.4)] cursor-pointer"
                 >
-                  Read Complete Paper <ArrowRight size={13} />
+                  Read Complete Paper <ArrowRight size={13} className="text-[#121417]" />
                 </Link>
 
               </div>
