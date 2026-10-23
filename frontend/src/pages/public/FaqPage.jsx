@@ -17,6 +17,8 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import { EngineeringGlossary } from '../../components/engineering/EngineeringGlossary';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
+import { TechMarquee } from '../../components/common/TechMarquee';
 
 export const FaqPage = () => {
   const navigate = useNavigate();
@@ -83,6 +85,13 @@ export const FaqPage = () => {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
         <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+
+        {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
+        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
+          <Hero3DCanvas />
+          {/* Precision Blueprint Vignette Edge Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
+        </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -222,10 +231,13 @@ export const FaqPage = () => {
         </div>
       </section>
 
+      {/* Infinite Marquee Ticker */}
+      <TechMarquee />
+
       {/* ========================================================================= */}
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
-      <div id="faq-accordion" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-7 relative z-30 scroll-mt-24">
+      <div id="faq-accordion" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30 scroll-mt-24">
         <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
           
           {/* Category Tabs */}

@@ -250,10 +250,13 @@ export const TestimonialsPage = () => {
         </div>
       </section>
 
+      {/* Infinite Marquee Ticker */}
+      <TechMarquee />
+
       {/* ========================================================================= */}
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
-      <div id="testimonials-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-7 relative z-30">
+      <div id="testimonials-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
         <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
           
           {/* Category Tabs */}
