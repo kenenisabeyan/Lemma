@@ -6,11 +6,12 @@
   :root {
     --bg-main: #FFFFFF;
     --bg-surface: #FFFFFF;
-    --bg-subtle: #FFFFFF;
+    --bg-subtle: #F8F9FA;
     --bg-tint-wine: #FEF9E7;
-    --bg-tint-slate: #FFFFFF;
+    --bg-tint-slate: #F1F5F9;
     --bg-tint-amber: #FEF9C3;
     --text-main: #54595F;
+    --text-heading: #18181B;
     --card-bg: #FFFFFF;
     --border-color: rgba(226, 232, 240, 0.9);
     --wine-primary: #D4AF37;
@@ -20,15 +21,16 @@
   }
 
   html.dark {
-    --bg-main: #FFFFFF;
-    --bg-surface: #FFFFFF;
-    --bg-subtle: #FFFFFF;
-    --bg-tint-wine: #FEF9E7;
-    --bg-tint-slate: #FFFFFF;
-    --bg-tint-amber: #FEF9C3;
-    --text-main: #54595F;
-    --card-bg: #FFFFFF;
-    --border-color: rgba(226, 232, 240, 0.9);
+    --bg-main: #0B0C0E;
+    --bg-surface: #131517;
+    --bg-subtle: #1A1C1F;
+    --bg-tint-wine: #1A0F14;
+    --bg-tint-slate: #121620;
+    --bg-tint-amber: #1A1608;
+    --text-main: #D1D5DB;
+    --text-heading: #F4F4F5;
+    --card-bg: #151719;
+    --border-color: rgba(55, 65, 81, 0.6);
     --wine-primary: #D4AF37;
     --wine-hover: #c49f2c;
     --gold-primary: #D4AF37;
@@ -38,7 +40,7 @@
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#D4AF37] selection:text-[#121417] bg-[#FFFFFF] text-[#54595F];
+    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#D4AF37] selection:text-[#121417];
   }
 }
 
@@ -53,7 +55,7 @@
 }
 
 html.dark ::-webkit-scrollbar-track {
-  background: #FFFFFF;
+  background: #0B0C0E;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,7 +64,7 @@ html.dark ::-webkit-scrollbar-track {
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #374151;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -81,8 +83,8 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 }
 
 html.dark .bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -104,10 +106,10 @@ html.dark .bg-grid-pattern {
 
 html.dark .bg-cad-grid {
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to right, rgba(15, 23, 42, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
 
@@ -118,7 +120,7 @@ html.dark .bg-cad-grid {
 }
 
 html.dark .bg-cad-dots {
-  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 
@@ -166,8 +168,8 @@ html.dark .bg-cad-dots {
 }
 
 html.dark .tech-box {
-  background: #FFFFFF;
-  border: 1px solid #E4E4E7;
+  background: #151719;
+  border: 1px solid #2A2D31;
 }
 
 .tech-box:hover {
@@ -227,6 +229,6 @@ html.dark .cad-bracket-corners::after {
 }
 
 html.dark .bg-blueprint-dots {
-  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
 }
 
