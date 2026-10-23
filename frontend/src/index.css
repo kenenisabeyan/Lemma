@@ -20,15 +20,15 @@
   }
 
   html.dark {
-    --bg-main: #0B0F19;
-    --bg-surface: #111827;
-    --bg-subtle: #0F172A;
-    --bg-tint-wine: #261219;
-    --bg-tint-slate: #162032;
-    --bg-tint-amber: #242013;
-    --text-main: #F8FAFC;
-    --card-bg: rgba(17, 24, 39, 0.95);
-    --border-color: rgba(51, 65, 85, 0.7);
+    --bg-main: #FFFFFF;
+    --bg-surface: #FFFFFF;
+    --bg-subtle: #FFFFFF;
+    --bg-tint-wine: #FEF9E7;
+    --bg-tint-slate: #FFFFFF;
+    --bg-tint-amber: #FEF9C3;
+    --text-main: #54595F;
+    --card-bg: #FFFFFF;
+    --border-color: rgba(226, 232, 240, 0.9);
     --wine-primary: #D4AF37;
     --wine-hover: #c49f2c;
     --gold-primary: #D4AF37;
@@ -53,7 +53,7 @@
 }
 
 html.dark ::-webkit-scrollbar-track {
-  background: #0B0F19;
+  background: #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,7 +62,7 @@ html.dark ::-webkit-scrollbar-track {
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #CBD5E1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -81,8 +81,8 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 }
 
 html.dark .bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -104,10 +104,10 @@ html.dark .bg-grid-pattern {
 
 html.dark .bg-cad-grid {
   background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
-    linear-gradient(to right, rgba(148, 163, 184, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(15, 23, 42, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
   background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
 
@@ -118,7 +118,7 @@ html.dark .bg-cad-grid {
 }
 
 html.dark .bg-cad-dots {
-  background-image: radial-gradient(rgba(56, 189, 248, 0.07) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 
@@ -166,8 +166,8 @@ html.dark .bg-cad-dots {
 }
 
 html.dark .tech-box {
-  background: #111827;
-  border: 1px solid #1E293B;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E7;
 }
 
 .tech-box:hover {
@@ -227,6 +227,6 @@ html.dark .cad-bracket-corners::after {
 }
 
 html.dark .bg-blueprint-dots {
-  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.07) 1px, transparent 1px);
 }
 
