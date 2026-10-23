@@ -291,35 +291,23 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             {/* LEFT COLUMN: Headings, Bio Narrative, Engineering Badges & CTAs */}
             {/* --------------------------------------------------------------- */}
-            <div className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
+            <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
-              {/* Professional License & Advisory Pill */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs pointer-events-auto select-text"
-              >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 select-text">
-                  Senior Structural Advisory · NY PE & CA SE
-                </span>
-              </motion.div>
+
 
               {/* Main Headline (Left Aligned) */}
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="space-y-1 sm:space-y-2 pointer-events-auto select-text"
+                className="space-y-1 sm:space-y-1.5 pointer-events-auto select-text"
               >
-                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-[4.2rem] tracking-tight leading-[1.06] text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
-                  {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
-                    {settings.heroHeadlineAccent || 'Clear'}
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
+                  <span className="block select-text">
+                    {settings.heroHeadlineLine1 || 'Resilient Structures.'}
                   </span>
-                  <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                  <span className="text-[#801834] dark:text-[#E84855] block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                    {settings.heroHeadlineAccent ? `${settings.heroHeadlineAccent} ` : 'Clear '}
                     {settings.heroHeadlineLine2 || 'Engineering.'}
                   </span>
                 </h1>
@@ -345,29 +333,29 @@ export const Home = () => {
                 </div>
               </motion.div>
 
-              {/* Dual Action Buttons (Left Aligned) */}
+              {/* Dual Action Buttons (Side by Side Horizontally) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-wrap items-center justify-start gap-4 pt-1 pointer-events-auto select-text"
+                className="flex flex-row items-center justify-start gap-3 sm:gap-4 pt-1 pointer-events-auto select-text"
               >
                 {/* Primary Filled Pill Button */}
                 <button
                   onClick={() => navigate('/projects')}
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37] shrink-0 whitespace-nowrap"
                 >
                   <span>EXPLORE PROJECTS</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
 
                 {/* Secondary Frosted Glass Pill Button */}
                 <button
                   onClick={() => setIsVideoModalOpen(true)}
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap"
                 >
                   <span>WATCH SHOWREEL</span>
-                  <Play size={13} className="fill-[#D4AF37] text-[#D4AF37]" />
+                  <Play size={12} className="fill-[#D4AF37] text-[#D4AF37] shrink-0" />
                 </button>
               </motion.div>
 
@@ -397,8 +385,8 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             {/* RIGHT COLUMN: Professional Portrait & Portfolio Images Showcase */}
             {/* --------------------------------------------------------------- */}
-            <div className="lg:col-span-5 xl:col-span-6 relative flex flex-col items-center justify-center pointer-events-auto">
-              <div className="relative w-full max-w-lg lg:max-w-none flex flex-col items-center">
+            <div className="lg:col-span-6 xl:col-span-6 relative flex flex-col items-center justify-center pointer-events-auto">
+              <div className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-none flex flex-col items-center">
                 
                 {/* Visual Composition Container */}
                 <div className="relative w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
@@ -408,13 +396,13 @@ export const Home = () => {
                     initial={{ opacity: 0, x: 25 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative z-10 w-full sm:w-[52%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group overflow-hidden"
+                    className="relative z-10 w-full sm:w-[58%] lg:w-[57%] xl:w-[58%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2.5 sm:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group overflow-hidden"
                   >
-                    {/* Engineer Portrait Photo */}
+                    {/* Engineer Portrait Photo - Taller Vertical Frame */}
                     <div 
                       onMouseEnter={() => setIsEngineerHovered(true)}
                       onMouseLeave={() => setIsEngineerHovered(false)}
-                      className="relative aspect-[4/4.8] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
+                      className="relative aspect-[3/4.6] sm:aspect-[3/4.7] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
                     >
                       <img
                         src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
@@ -458,13 +446,13 @@ export const Home = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.35 }}
-                    className="relative z-20 w-full sm:w-[60%] sm:-ml-8 sm:mt-12 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)] group select-text"
+                    className="relative z-20 w-full sm:w-[68%] lg:w-[67%] xl:w-[68%] sm:-ml-12 sm:mt-14 lg:mt-16 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2.5 sm:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.14),inset_0_1px_2px_rgba(255,255,255,0.95)] group select-text"
                   >
-                    {/* Project Preview Image */}
+                    {/* Project Preview Image - Taller Vertical Frame */}
                     <div 
                       onMouseEnter={() => setIsProjectHovered(true)}
                       onMouseLeave={() => setIsProjectHovered(false)}
-                      className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
+                      className="relative aspect-[16/13] sm:aspect-[16/13.5] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
                       onClick={() => {
                         const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
                         setSelectedCaseStudy(matched);
@@ -499,7 +487,7 @@ export const Home = () => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -6 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white pointer-events-auto select-text"
+                              className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono font-semibold text-white pointer-events-auto select-text"
                             >
                               {heroProjects[activeHeroProjectIdx].metric}
                             </motion.div>
@@ -508,9 +496,9 @@ export const Home = () => {
                               animate={{ opacity: 1, scale: 1 }}
                               exit={{ opacity: 0, scale: 0.8 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs pointer-events-none"
+                              className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs pointer-events-none"
                             >
-                              <ArrowUpRight size={12} />
+                              <ArrowUpRight size={13} />
                             </motion.div>
                             <motion.div
                               initial={{ opacity: 0, y: 8 }}
@@ -532,13 +520,13 @@ export const Home = () => {
                     </div>
 
                     {/* Interactive Project Switcher (Pure Thumbnails, No Text) */}
-                    <div className="mt-2 flex items-center justify-center gap-2">
+                    <div className="mt-2.5 flex items-center justify-center gap-2.5">
                       {heroProjects.map((proj, idx) => (
                         <button
                           key={proj.id}
                           onClick={() => setActiveHeroProjectIdx(idx)}
                           aria-label={proj.title}
-                          className={`relative w-12 h-7 sm:w-14 sm:h-8 rounded-xl overflow-hidden transition-all duration-300 border-2 cursor-pointer ${
+                          className={`relative w-14 h-8 sm:w-16 sm:h-9 rounded-xl overflow-hidden transition-all duration-300 border-2 cursor-pointer ${
                             activeHeroProjectIdx === idx
                               ? 'border-[#D4AF37] ring-2 ring-[#D4AF37]/40 scale-105 shadow-md'
                               : 'border-white/70 dark:border-white/20 opacity-50 hover:opacity-100 hover:scale-102'
