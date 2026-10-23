@@ -15,6 +15,8 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
+import { TechMarquee } from '../../components/common/TechMarquee';
 
 export const InsightsPage = () => {
   const navigate = useNavigate();
