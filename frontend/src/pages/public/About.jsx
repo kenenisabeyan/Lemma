@@ -152,6 +152,27 @@ export const About = () => {
                 </button>
               </motion.div>
 
+              {/* Quick KPI Stats Row */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
+              >
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">14+</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Years Practice</span>
+                </div>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">$850M+</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Built Value</span>
+                </div>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Safety Record</span>
+                </div>
+              </motion.div>
+
             </div>
 
             {/* Right Column: Verified Licensure Seal & Engineer Portrait */}
