@@ -21,6 +21,8 @@ import {
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
 import { PEVerificationPortal } from '../../components/engineering/PEVerificationPortal';
 import { EngineeringPrinciplesMatrix } from '../../components/engineering/EngineeringPrinciplesMatrix';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
+import { TechMarquee } from '../../components/common/TechMarquee';
 
 export const About = () => {
   const navigate = useNavigate();
@@ -40,6 +42,13 @@ export const About = () => {
         {/* Subtle Ambient Studio Lights */}
         <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+
+        {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
+        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
+          <Hero3DCanvas />
+          {/* Precision Blueprint Vignette Edge Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
+        </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -207,6 +216,9 @@ export const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Infinite Marquee Ticker */}
+      <TechMarquee />
 
       {/* ========================================================================= */}
       {/* 2. CORE PHILOSOPHY & PRACTICE HIGHLIGHTS                                  */}
