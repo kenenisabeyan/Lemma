@@ -264,7 +264,7 @@ export const Home = () => {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
-        <div className="absolute inset-0 overflow-hidden select-none z-10">
+        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           {/* Subtle Ambient Studio Light (Wine & Gold) */}
           <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none"></div>
           <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
@@ -285,23 +285,23 @@ export const Home = () => {
         />
 
         {/* Hero Content Container - Split 2-Column Professional Architecture */}
-        <div className="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-8 pointer-events-none">
+        <div className="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-8 select-text">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
             
             {/* --------------------------------------------------------------- */}
             {/* LEFT COLUMN: Headings, Bio Narrative, Engineering Badges & CTAs */}
             {/* --------------------------------------------------------------- */}
-            <div className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5">
+            <div className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
               {/* Professional License & Advisory Pill */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs pointer-events-auto"
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs pointer-events-auto select-text"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
+                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 select-text">
                   Senior Structural Advisory · NY PE & CA SE
                 </span>
               </motion.div>
@@ -311,15 +311,15 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="space-y-1 sm:space-y-2 pointer-events-auto"
+                className="space-y-1 sm:space-y-2 pointer-events-auto select-text"
               >
-                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-[4.2rem] tracking-tight leading-[1.06] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
+                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-[4.2rem] tracking-tight leading-[1.06] text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
                   {settings.heroHeadlineLine1 || 'Resilient Structures.'}{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
                     {settings.heroHeadlineAccent || 'Clear'}
                   </span>
                   <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                  <span className="text-[#801834] dark:text-[#E84855] opacity-90 inline-block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
                     {settings.heroHeadlineLine2 || 'Engineering.'}
                   </span>
                 </h1>
@@ -330,16 +330,16 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5 pointer-events-auto transition-all"
+                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5 pointer-events-auto select-text transition-all"
               >
-                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
+                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs select-text">
                   {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
                 </p>
 
                 {/* Rotating Focus Indicator */}
-                <div className="mt-3 pt-2.5 border-t border-zinc-200/80 dark:border-white/10 flex items-center gap-2 text-xs font-mono">
-                  <span className="font-semibold text-zinc-500 uppercase tracking-wider text-[10px]">Active Focus:</span>
-                  <span className="font-bold text-[#801834] dark:text-[#E84855] underline decoration-[#D4AF37] decoration-2 underline-offset-4">
+                <div className="mt-3 pt-2.5 border-t border-zinc-200/80 dark:border-white/10 flex items-center gap-2 text-xs font-mono select-text">
+                  <span className="font-semibold text-zinc-500 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
+                  <span className="font-bold text-[#801834] dark:text-[#E84855] underline decoration-[#D4AF37] decoration-2 underline-offset-4 select-text">
                     {rotatingDisciplines[disciplineIndex]}
                   </span>
                 </div>
@@ -350,7 +350,7 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-wrap items-center justify-start gap-4 pt-1 pointer-events-auto"
+                className="flex flex-wrap items-center justify-start gap-4 pt-1 pointer-events-auto select-text"
               >
                 {/* Primary Filled Pill Button */}
                 <button
@@ -376,19 +376,19 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg pointer-events-auto"
+                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg pointer-events-auto select-text"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">{settings.yearsExp || '14+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Years Practice</span>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono select-text">{settings.yearsExp || '14+'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Years Practice</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">{settings.projectsCount || '180+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Built Projects</span>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono select-text">{settings.projectsCount || '180+'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Built Projects</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Safety Record</span>
+                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono select-text">100%</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Safety Record</span>
                 </div>
               </motion.div>
 
@@ -438,12 +438,12 @@ export const Home = () => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: 8 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/95 dark:bg-black/85 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm pointer-events-none"
+                              className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/95 dark:bg-black/85 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm pointer-events-auto select-text"
                             >
-                              <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight">
+                              <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight select-text">
                                 {settings.engineerName || 'Alexandre Techane'}
                               </p>
-                              <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide">
+                              <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide select-text">
                                 Senior Structural Principal · PE, SE
                               </p>
                             </motion.div>
@@ -458,7 +458,7 @@ export const Home = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.35 }}
-                    className="relative z-20 w-full sm:w-[60%] sm:-ml-8 sm:mt-12 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)] group"
+                    className="relative z-20 w-full sm:w-[60%] sm:-ml-8 sm:mt-12 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2 sm:p-2.5 shadow-[0_25px_60px_rgba(0,0,0,0.12),inset_0_1px_2px_rgba(255,255,255,0.95)] group select-text"
                   >
                     {/* Project Preview Image */}
                     <div 
@@ -499,7 +499,7 @@ export const Home = () => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -6 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white pointer-events-none"
+                              className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] font-mono font-semibold text-white pointer-events-auto select-text"
                             >
                               {heroProjects[activeHeroProjectIdx].metric}
                             </motion.div>
@@ -517,12 +517,12 @@ export const Home = () => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: 8 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute bottom-2.5 left-2.5 right-2.5 pointer-events-none"
+                              className="absolute bottom-2.5 left-2.5 right-2.5 pointer-events-auto select-text"
                             >
-                              <p className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-semibold">
+                              <p className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-semibold select-text">
                                 {heroProjects[activeHeroProjectIdx].category}
                               </p>
-                              <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
+                              <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate select-text">
                                 {heroProjects[activeHeroProjectIdx].title}
                               </h4>
                             </motion.div>
