@@ -13,7 +13,9 @@ import {
   ArrowUpRight,
   Copy,
   Download,
-  ShieldCheck
+  ShieldCheck,
+  Building2,
+  Check
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 
@@ -68,25 +70,9 @@ Legacy moment-resisting frames designed in the 1960s and 1970s relied on E70T-4 
 
 ### 2. Damping vs Bracing Intervention
 Rather than excavating tenant finishes to replace hundreds of individual beam-to-column connections, our preferred engineering intervention integrates supplemental energy dissipation systems:
-- Fluid Viscous Dampers (FVD): Provide velocity-dependent resistance out of phase with peak seismic displacements, reducing base shear by up to 35%.
-- Buckling-Restrained Braced Frames (BRBF): Deliver predictable, ductile hysteretic energy dissipation in both tension and compression.`
-    },
-    {
-      id: '3',
-      title: 'Optimizing Wind Damping Outrigger Systems in 50+ Story Skyscrapers',
-      slug: 'optimizing-wind-damping-outrigger-systems',
-      category: 'High-Rise Analysis',
-      publishedAt: 'Aug 15, 2026',
-      readTime: '7 min read',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
-      excerpt: 'Coupling central shear wall cores to perimeter megacolumns through multistage belt trusses.',
-      content: `Dynamic wind pressures govern structural design for slender towers having aspect ratios greater than 6:1. Integrating perimeter outrigger trusses activates tension-compression force couples between external megacolumns and the internal shear wall core, substantially reducing overturning moments at the base and suppressing occupant vortex shedding vibrations.
-
-### 1. The Slenderness Ratio Boundary
-When skyscraper height-to-width ratios surpass 7:1, pure cantilever core wall systems suffer from excessive lateral displacement and vortex-shedding accelerations that exceed ISO 10137 human comfort thresholds.
-
-### 2. Two-Stage Outrigger Mechanics
-By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height marks, we introduce reverse bending moments into the central core. This effectively reduces base overturning moment by 28% and cuts roof drift by 42%.`
+- Buckling-restrained braces installed along exterior facade bays.
+- Fluid viscous dampers placed at perimeter moment frames to absorb seismic energy.
+- Carbon fiber polymer (CFRP) composite wraps for local beam shear enhancement.`
     }
   ];
 
@@ -100,85 +86,87 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
   };
 
   return (
-    <div className="relative min-h-screen bg-[#FFFFFF] text-[#54595F] pt-28 pb-24 overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
-      {/* Ambient subtle glow */}
+    <div className="min-h-screen bg-transparent text-inherit relative pt-32 pb-24 overflow-hidden selection:bg-[#801834] selection:text-white transition-colors duration-200">
+      
+      {/* Background Sheen & Ambient Aurora Lights */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-[8%] h-[55vh] w-[55vh] rounded-full bg-[#D4AF37]/5 blur-[130px]"></div>
-        <div className="absolute bottom-0 right-[4%] h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/5 blur-[110px]"></div>
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/20 blur-[140px] animate-aurora-drift"></div>
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/8 dark:bg-[#D4AF37]/15 blur-[120px] animate-aurora-drift-2"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumbs */}
-        <div className="flex items-center gap-2 text-xs font-mono text-[#54595F] uppercase tracking-wider mb-8">
-          <Link to="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
-          <ChevronRight size={14} className="text-zinc-300" />
-          <Link to="/insights" className="hover:text-[#D4AF37] transition-colors">Insights</Link>
-          <ChevronRight size={14} className="text-zinc-300" />
+        <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 uppercase tracking-wider mb-8">
+          <Link to="/" className="hover:text-[#801834] dark:hover:text-[#E84855] transition-colors">Home</Link>
+          <ChevronRight size={14} className="text-zinc-400" />
+          <Link to="/insights" className="hover:text-[#801834] dark:hover:text-[#E84855] transition-colors">Insights</Link>
+          <ChevronRight size={14} className="text-zinc-400" />
           <span className="text-[#D4AF37] font-bold line-clamp-1">{article.title}</span>
         </div>
 
         {/* Back and Action Bar */}
-        <div className="flex justify-between items-center pb-6 mb-8 border-b border-zinc-200">
-          <Link to="/insights" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#54595F] hover:text-[#D4AF37] transition-colors">
+        <div className="flex justify-between items-center pb-6 mb-8 border-b border-zinc-200/80 dark:border-white/10">
+          <Link to="/insights" className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#801834] dark:hover:text-[#E84855] transition-colors">
             <ArrowLeft size={16} /> All Insights
           </Link>
 
           <button
             onClick={handleCopy}
-            className="rounded-full bg-[#FFFFFF] text-[#54595F] hover:text-[#D4AF37] border border-zinc-200 hover:border-[#D4AF37] px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-sm font-bold"
+            className="rounded-full bg-white/80 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 border border-zinc-200/80 dark:border-white/10 px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-sm font-bold hover:border-[#D4AF37]"
           >
-            <Share2 size={13} /> {copied ? 'Link Copied!' : 'Share Article'}
+            <Share2 size={13} className="text-[#D4AF37]" /> {copied ? 'Link Copied!' : 'Share Article'}
           </button>
         </div>
 
         {/* Article Header */}
-        <div className="mb-8">
+        <div className="mb-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 shadow-sm">
+            <span className="rounded-full bg-amber-500/10 border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 shadow-xs">
               {article.category}
             </span>
-            <span className="text-xs font-mono text-[#54595F] flex items-center gap-1.5">
+            <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
               <Calendar size={12} className="text-[#D4AF37]" /> {article.publishedAt}
             </span>
             <span>·</span>
-            <span className="text-xs font-mono text-[#54595F] flex items-center gap-1.5">
+            <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
               <Clock size={12} className="text-[#D4AF37]" /> {article.readTime}
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight mb-6">
-            <span className="text-[#D4AF37]">{article.title.split(' ')[0]}</span> {article.title.split(' ').slice(1).join(' ')}
+          <h1 className="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-tight mb-6">
+            <span className="text-[#801834] dark:text-[#E84855]">{article.title.split(' ')[0]}</span> {article.title.split(' ').slice(1).join(' ')}
           </h1>
 
           {/* Author Bento Badge */}
-          <div className="flex items-center gap-4 bg-[#FFFFFF] p-4 rounded-2xl border border-zinc-200 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-[#FFFFFF] border-2 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shadow-xs">
+          <div className="flex items-center gap-4 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-4 rounded-2xl border border-white/90 dark:border-white/10 shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-2 border-[#D4AF37] text-[#801834] dark:text-[#E84855] flex items-center justify-center font-bold text-sm shadow-xs">
               AT
             </div>
             <div>
-              <h4 className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
+              <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
                 Alexandre Techane, PE, SE
                 <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· Verified Author</span>
               </h4>
-              <p className="text-xs text-[#54595F]">Principal Structural Engineer & Technical Director</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">Principal Structural Engineer & Technical Director</p>
             </div>
           </div>
         </div>
 
         {/* Featured Image */}
         {article.imageUrl && (
-          <div className="aspect-[16/9] rounded-2xl bg-[#FFFFFF] border border-zinc-200 overflow-hidden mb-12 shadow-lg">
-            <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover hover:scale-105 transition-all duration-700" />
+          <div className="aspect-[16/9] rounded-3xl bg-zinc-900 border border-zinc-200/80 dark:border-white/10 overflow-hidden mb-12 shadow-xl relative">
+            <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
           </div>
         )}
 
         {/* Article Body Content */}
-        <div className="prose max-w-none text-base text-[#54595F] leading-relaxed space-y-6 mb-16">
+        <div className="prose max-w-none text-base text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-6 mb-16 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 sm:p-12 rounded-3xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
           {article.content.split('\n\n').map((paragraph, index) => {
             if (paragraph.startsWith('### ')) {
               return (
-                <h3 key={index} className="text-xl font-bold text-zinc-900 text-left pt-6 pb-2 border-l-2 border-[#D4AF37] pl-3">
+                <h3 key={index} className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-100 text-left pt-6 pb-2 border-l-4 border-[#801834] dark:border-[#E84855] pl-4">
                   {paragraph.replace('### ', '')}
                 </h3>
               );
@@ -186,7 +174,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
             if (paragraph.startsWith('- ')) {
               const bullets = paragraph.split('\n- ');
               return (
-                <ul key={index} className="space-y-2 pl-4 list-disc text-sm text-[#54595F]">
+                <ul key={index} className="space-y-2 pl-4 list-disc text-sm sm:text-base text-zinc-700 dark:text-zinc-300">
                   {bullets.map((b, i) => (
                     <li key={i}>{b.replace(/^- /, '')}</li>
                   ))}
@@ -194,7 +182,7 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
               );
             }
             return (
-              <p key={index} className="text-[#54595F] leading-relaxed text-sm sm:text-base">
+              <p key={index} className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-sm sm:text-base">
                 {paragraph}
               </p>
             );
@@ -202,16 +190,16 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
         </div>
 
         {/* Academic & ASCE Formal Citation Box */}
-        <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-8 mb-16 shadow-lg">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-zinc-200">
+        <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 sm:p-8 mb-16 shadow-lg">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-zinc-200/80 dark:border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
               <ShieldCheck size={16} />
               <span className="font-bold uppercase tracking-wider">Formal Peer-Reviewed Reference</span>
             </div>
-            <span className="text-[10px] font-mono text-[#54595F]/75">ASCE Style Citation Specification</span>
+            <span className="text-[10px] font-mono text-zinc-500">ASCE Style Citation Specification</span>
           </div>
 
-          <div className="bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 font-mono text-xs text-[#54595F] leading-relaxed mb-4">
+          <div className="bg-zinc-50 dark:bg-zinc-800/80 p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 font-mono text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
             Techane, A. (2026). "{article.title}". <em>Journal of High-Rise Structural Practice & Mechanics</em>, Vol. 14, pp. 112–128. NY PE #84729 / CA SE #92041.
           </div>
 
@@ -222,9 +210,9 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
                 setCopiedCitation(true);
                 setTimeout(() => setCopiedCitation(false), 2500);
               }}
-              className="rounded-full bg-[#FFFFFF] text-[#54595F] hover:bg-[#D4AF37] hover:text-[#121417] border border-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 transition-all flex items-center gap-1.5"
+              className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white text-xs font-mono font-bold uppercase tracking-wider px-4 py-2.5 transition-all flex items-center gap-1.5"
             >
-              <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASCE Citation'}
+              <Copy size={13} className="text-[#D4AF37]" /> {copiedCitation ? 'Citation Copied!' : 'Copy ASCE Citation'}
             </button>
             <button
               onClick={() => {
@@ -239,22 +227,24 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
               }}
-              className="rounded-full bg-[#FFFFFF] text-[#54595F] border border-zinc-200 hover:border-[#D4AF37] hover:text-[#D4AF37] text-xs font-mono uppercase tracking-wider px-4 py-2 transition-all flex items-center gap-1.5"
+              className="rounded-full bg-white/80 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 border border-zinc-200/80 dark:border-white/10 hover:border-[#D4AF37] text-xs font-mono uppercase tracking-wider px-4 py-2.5 transition-all flex items-center gap-1.5"
             >
-              <Download size={13} /> Export Memo (TXT)
+              <Download size={13} className="text-[#D4AF37]" /> Export Memo (TXT)
             </button>
           </div>
         </div>
 
         {/* Article Footer & Consultation Link */}
-        <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-8 mb-16 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl relative overflow-hidden">
-          <div className="relative z-10">
-            <h4 className="text-lg font-bold text-zinc-900 mb-1"><span className="text-[#D4AF37]">Have</span> questions about this engineering methodology?</h4>
-            <p className="text-xs text-[#54595F]">Directly discuss structural modeling or FEA review for your project.</p>
+        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 mb-16 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl relative overflow-hidden">
+          <div className="relative z-10 max-w-xl">
+            <h4 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-1">
+              Have questions about this <span className="text-[#801834] dark:text-[#E84855]">engineering methodology?</span>
+            </h4>
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">Directly discuss structural modeling or FEA review for your project.</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-7 py-3 text-xs font-extrabold uppercase tracking-widest hover:bg-[#c49f2c] transition-all shadow-md shrink-0 relative z-10"
+            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-widest transition-all shadow-md shrink-0 relative z-10"
           >
             Inquire With Engineer
           </button>
@@ -262,21 +252,23 @@ By linking the core to perimeter megacolumns at the 1/3 and 2/3 building height 
 
         {/* Related Articles */}
         {related.length > 0 && (
-          <div className="border-t border-zinc-200 pt-12">
-            <h3 className="text-xl font-bold text-zinc-900 mb-6"><span className="text-[#D4AF37]">More</span> Engineering Insights</h3>
+          <div className="border-t border-zinc-200/80 dark:border-white/10 pt-12">
+            <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 mb-6">
+              More <span className="text-[#801834] dark:text-[#E84855]">Engineering Insights</span>
+            </h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {related.map(rel => (
                 <Link
                   key={rel.id}
                   to={`/insights/${rel.slug}`}
-                  className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 hover:border-[#D4AF37] p-6 transition-all group shadow-sm hover:shadow-xl flex flex-col justify-between"
+                  className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 hover:border-[#D4AF37]/50 p-6 transition-all group shadow-sm hover:shadow-xl flex flex-col justify-between"
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-base font-bold text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-2">{rel.title}</h4>
+                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors mb-2">{rel.title}</h4>
                   </div>
-                  <span className="text-xs font-bold uppercase text-[#D4AF37] flex items-center gap-1 mt-4">
-                    Read Article <ArrowUpRight size={12} />
+                  <span className="text-xs font-mono font-bold uppercase text-[#D4AF37] flex items-center gap-1.5 mt-4">
+                    Read Article <ArrowUpRight size={13} />
                   </span>
                 </Link>
               ))}
