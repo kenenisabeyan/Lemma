@@ -313,20 +313,20 @@ export const Home = () => {
                 </h1>
               </motion.div>
 
-              {/* Frosted White Glass Description Card (Left Aligned) */}
+              {/* Narrative Bio & Focus (Clean Typography without Background Box) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5 pointer-events-auto select-text transition-all"
+                className="w-full space-y-2.5 pointer-events-auto select-text"
               >
-                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs select-text">
+                <p className="text-zinc-700 dark:text-zinc-300 font-medium text-sm sm:text-base leading-relaxed text-left select-text max-w-xl">
                   {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
                 </p>
 
-                {/* Rotating Focus Indicator */}
-                <div className="mt-3 pt-2.5 border-t border-zinc-200/80 dark:border-white/10 flex items-center gap-2 text-xs font-mono select-text">
-                  <span className="font-semibold text-zinc-500 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
+                {/* Rotating Focus Indicator (Clean, No Card Background) */}
+                <div className="flex items-center gap-2 text-xs font-mono select-text pt-0.5">
+                  <span className="font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
                   <span className="font-bold text-[#801834] dark:text-[#E84855] underline decoration-[#D4AF37] decoration-2 underline-offset-4 select-text">
                     {rotatingDisciplines[disciplineIndex]}
                   </span>
