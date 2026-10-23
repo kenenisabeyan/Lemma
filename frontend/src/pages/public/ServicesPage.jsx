@@ -8,12 +8,12 @@ import {
   Ruler, 
   CheckCircle2, 
   ArrowUpRight, 
+  ArrowRight,
   Activity, 
   Cpu, 
   FileCheck2, 
   Compass, 
   Sparkles,
-  ArrowRight,
   Wind
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
@@ -88,30 +88,33 @@ export const ServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* CINEMATIC SERVICES HERO SECTION                                           */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
-        {/* Ambient Sheen & Radiant Studio Lights */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/85 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/90 pointer-events-none" />
-        <div className="absolute -top-1/4 left-1/3 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/20 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/8 dark:bg-[#D4AF37]/15 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/80 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/85 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+
+        {/* Subtle Ambient Studio Lights */}
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Scope, Headline, Value Proposition */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left gap-5">
+            <div className="lg:col-span-7 flex flex-col items-start text-left gap-4 sm:gap-5">
               
               {/* Badge */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -124,9 +127,9 @@ export const ServicesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="space-y-1.5"
+                className="space-y-1 sm:space-y-2"
               >
-                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
+                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
                   Disciplined Mechanics.{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
                     Comprehensive
@@ -143,48 +146,52 @@ export const ServicesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
+                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
               >
-                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
+                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
                   Delivering high-performance structural engineering across all phases of development — from schematic load path conception and 3D FEA numerical simulations to stamped calculation packages and constructability peer reviews.
                 </p>
 
                 {/* Assurance & SLA Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">PE/SE Stamped Packages</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-4 mt-4 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
+                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold text-xs">PE/SE Stamped</span>
                   </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">ASCE 7-22 / IBC 2024</span>
+                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold text-xs">IBC & ASCE 7-22</span>
                   </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">Fast-Track Peer Reviews</span>
+                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold text-xs">Fast Peer Review</span>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Action Buttons */}
+              {/* Signature Action Buttons (Exact Match to Home) */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-wrap items-center gap-3.5 pt-2"
+                className="flex flex-wrap items-center justify-start gap-4 pt-1"
               >
+                {/* Primary Filled Pill Button */}
                 <button
                   onClick={() => navigate('/contact')}
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] hover:scale-[1.02]"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
                 >
-                  Request Service Consultation <ArrowUpRight size={15} className="text-[#D4AF37]" />
+                  <span>REQUEST CONSULTATION</span>
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </button>
+
+                {/* Secondary Frosted Glass Pill Button */}
                 <a
                   href="#service-modules"
-                  className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-white/10 hover:bg-white dark:hover:bg-white/20 text-zinc-900 dark:text-zinc-100 border border-zinc-200/80 dark:border-white/20 backdrop-blur-xl px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all hover:scale-[1.02]"
+                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
                 >
-                  <Layers size={14} className="text-[#D4AF37]" />
-                  Explore 4 Practice Pillars
+                  <Layers size={15} className="text-[#D4AF37]" />
+                  <span>EXPLORE 4 PILLARS</span>
                 </a>
               </motion.div>
 
@@ -197,7 +204,7 @@ export const ServicesPage = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col gap-3"
             >
-              <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/70 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-5 sm:p-6">
+              <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] p-5 sm:p-6">
                 
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
@@ -217,15 +224,15 @@ export const ServicesPage = () => {
                       <button
                         key={idx}
                         onClick={() => setActiveHeroTab(idx)}
-                        className={`text-left p-3.5 rounded-2xl border transition-all flex items-start gap-3.5 ${
+                        className={`text-left p-3.5 rounded-2xl border transition-all flex items-start gap-3.5 cursor-pointer ${
                           isActive
-                            ? 'bg-gradient-to-r from-zinc-900 to-zinc-950 dark:from-white dark:to-zinc-100 text-white dark:text-zinc-950 border-transparent shadow-lg scale-[1.01]'
-                            : 'bg-white/60 dark:bg-zinc-800/50 hover:bg-white dark:hover:bg-zinc-800 border-zinc-200/70 dark:border-white/5 text-zinc-800 dark:text-zinc-200'
+                            ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37] shadow-[0_6px_20px_rgba(212,175,55,0.35)] scale-[1.01]'
+                            : 'bg-white/70 dark:bg-zinc-800/50 hover:bg-white dark:hover:bg-zinc-800 border-zinc-200/70 dark:border-white/10 text-zinc-800 dark:text-zinc-200'
                         }`}
                       >
                         <div className={`p-2.5 rounded-xl border shrink-0 ${
                           isActive
-                            ? 'bg-white/10 dark:bg-black/10 border-white/20 dark:border-black/20 text-[#D4AF37]'
+                            ? 'bg-zinc-950/15 border-zinc-950/20 text-[#121417]'
                             : 'bg-zinc-100 dark:bg-zinc-700/60 border-zinc-200/60 dark:border-white/5 text-[#801834] dark:text-[#E84855]'
                         }`}>
                           <Icon size={18} />
@@ -233,16 +240,16 @@ export const ServicesPage = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-1 mb-0.5">
                             <span className="font-bold text-xs uppercase tracking-wide truncate">{pillar.title}</span>
-                            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full shrink-0 ${
+                            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full shrink-0 font-bold ${
                               isActive
-                                ? 'bg-[#D4AF37] text-zinc-950 font-black'
+                                ? 'bg-zinc-950 text-white'
                                 : 'bg-zinc-200/70 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400'
                             }`}>
                               {pillar.metric}
                             </span>
                           </div>
                           <p className={`text-[11px] leading-tight line-clamp-1 ${
-                            isActive ? 'text-zinc-300 dark:text-zinc-700' : 'text-zinc-500 dark:text-zinc-400'
+                            isActive ? 'text-zinc-800 font-medium' : 'text-zinc-500 dark:text-zinc-400'
                           }`}>
                             {pillar.short}
                           </p>
@@ -305,12 +312,12 @@ export const ServicesPage = () => {
             return (
               <div 
                 key={srv.id || index} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-7 sm:p-10 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)] relative overflow-hidden"
+                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-7 sm:p-10 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] relative overflow-hidden"
               >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-sm">
+                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                       <Icon size={30} />
                     </div>
                     <div>
@@ -340,9 +347,10 @@ export const ServicesPage = () => {
                     <div className="pt-2 flex flex-wrap items-center gap-3">
                       <button
                         onClick={() => navigate('/contact')}
-                        className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-6 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_8px_20px_rgba(128,24,52,0.25)] inline-flex items-center gap-2 hover:scale-[1.02]"
+                        className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
                       >
-                        Request Service Consultation <ArrowUpRight size={14} className="text-[#D4AF37]" />
+                        <span>Request Service Consultation</span>
+                        <ArrowUpRight size={14} />
                       </button>
                     </div>
                   </div>
@@ -396,7 +404,7 @@ export const ServicesPage = () => {
         {/* ======================================================================= */}
         {/* 5. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
+        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Require Specialized Structural Analysis?</h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -405,9 +413,10 @@ export const ServicesPage = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
           >
-            Schedule Consultation <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            <span>Schedule Consultation</span>
+            <ArrowUpRight size={15} />
           </button>
         </div>
 

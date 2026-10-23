@@ -10,6 +10,7 @@ import {
   ShieldCheck, 
   Download, 
   ArrowUpRight, 
+  ArrowRight,
   Cpu, 
   Compass, 
   FileCheck2, 
@@ -25,30 +26,33 @@ export const About = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC ABOUT & CREDENTIALS HERO SECTION                             */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
-        {/* Ambient Sheen & Radiant Studio Lights */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/85 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/90 pointer-events-none" />
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/20 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/8 dark:bg-[#D4AF37]/15 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/80 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/85 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+
+        {/* Subtle Ambient Studio Lights */}
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Licensure, Headline, Philosophy & Metrics */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left gap-5">
+            <div className="lg:col-span-7 flex flex-col items-start text-left gap-4 sm:gap-5">
               
               {/* License Pill */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -61,9 +65,9 @@ export const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="space-y-1.5"
+                className="space-y-1 sm:space-y-2"
               >
-                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
+                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
                   Engineered for Resilience.{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
                     Grounded
@@ -80,58 +84,62 @@ export const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
+                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
               >
-                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
+                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
                   Over 14 years of professional practice delivering robust structural design solutions for high-rise commercial developments, heavy civil infrastructure, and complex architectural steel frames. My philosophy balances non-linear computational mechanics with bold spatial elegance.
                 </p>
 
                 {/* Authority Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
-                  <div className="flex items-center gap-2.5 text-zinc-700 dark:text-zinc-300">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-4 mt-4 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
+                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
                     <GraduationCap size={16} className="text-[#D4AF37] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100">Columbia University</span>
-                      <span className="text-[10px] text-zinc-500">M.S. Structural Engineering</span>
+                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">Columbia Univ.</span>
+                      <span className="text-[9px] text-zinc-500">M.S. Structural</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2.5 text-zinc-700 dark:text-zinc-300">
+                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
                     <ShieldCheck size={16} className="text-[#D4AF37] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100">100% Safety Record</span>
-                      <span className="text-[10px] text-zinc-500">Zero Audit Deficiencies</span>
+                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">100% Safety</span>
+                      <span className="text-[9px] text-zinc-500">Zero Deficiencies</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2.5 text-zinc-700 dark:text-zinc-300">
+                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
                     <Building2 size={16} className="text-[#D4AF37] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100">180+ Delivered</span>
-                      <span className="text-[10px] text-zinc-500">High-Rise & Infrastructure</span>
+                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">180+ Delivered</span>
+                      <span className="text-[9px] text-zinc-500">High-Rise & Bridges</span>
                     </div>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Action Buttons */}
+              {/* Signature Action Buttons (Exact Match to Home) */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-wrap items-center gap-3.5 pt-2"
+                className="flex flex-wrap items-center justify-start gap-4 pt-1"
               >
+                {/* Primary Filled Pill Button */}
                 <a
                   href="#pe-portal"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] hover:scale-[1.02]"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
                 >
-                  <ShieldCheck size={15} className="text-[#D4AF37]" />
-                  Verify PE/SE Credentials
+                  <ShieldCheck size={16} />
+                  <span>VERIFY PE/SE CREDENTIALS</span>
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
+
+                {/* Secondary Frosted Glass Pill Button */}
                 <button
                   onClick={() => navigate('/resources')}
-                  className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-white/10 hover:bg-white dark:hover:bg-white/20 text-zinc-900 dark:text-zinc-100 border border-zinc-200/80 dark:border-white/20 backdrop-blur-xl px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all hover:scale-[1.02]"
+                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
                 >
                   <Download size={14} className="text-[#D4AF37]" />
-                  Download Complete CV (PDF)
+                  <span>DOWNLOAD CV (PDF)</span>
                 </button>
               </motion.div>
 
@@ -144,7 +152,7 @@ export const About = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col gap-4"
             >
-              <div className="relative rounded-3xl bg-white/85 dark:bg-zinc-900/70 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-5 overflow-hidden group">
+              <div className="relative rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] p-5 overflow-hidden group">
                 
                 {/* Header ribbon */}
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
@@ -186,9 +194,10 @@ export const About = () => {
                 <div className="pt-3 flex items-center justify-between gap-3">
                   <a
                     href="#pe-portal"
-                    className="flex-1 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm text-center"
+                    className="flex-1 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(212,175,55,0.3)] text-center cursor-pointer"
                   >
-                    Open Licensure Seal Portal <ArrowUpRight size={13} />
+                    <span>Open Licensure Seal Portal</span>
+                    <ArrowUpRight size={13} />
                   </a>
                 </div>
 
@@ -204,7 +213,7 @@ export const About = () => {
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         
-        <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 sm:p-12 mb-24 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+        <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 sm:p-12 mb-24 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
             <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-bold">Core Practice Philosophy</span>
@@ -242,7 +251,7 @@ export const About = () => {
               >
                 <div>
                   <div className="flex justify-between items-center mb-4">
-                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-mono group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors">{soft.name}</h4>
+                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-mono group-hover:text-[#D4AF37] transition-colors">{soft.name}</h4>
                     <span className="rounded-full text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 uppercase">
                       {soft.level}
                     </span>
@@ -274,7 +283,7 @@ export const About = () => {
               <div key={index} className="relative group">
                 <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform shadow-xs"></div>
                 <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 sm:p-7 hover:border-[#D4AF37]/50 transition-all shadow-sm">
-                  <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/30 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+                  <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                     {item.year}
                   </span>
                   <h4 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h4>
@@ -301,7 +310,7 @@ export const About = () => {
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
               <div key={index} className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex items-start gap-4 hover:border-[#D4AF37]/50 transition-all shadow-sm group">
-                <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#801834] dark:text-[#E84855] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform shrink-0">
+                <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform shrink-0">
                   <Award size={24} />
                 </div>
                 <div>
@@ -343,7 +352,7 @@ export const About = () => {
         {/* ======================================================================= */}
         {/* 8. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
           <div className="text-left max-w-2xl">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -358,9 +367,10 @@ export const About = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
           >
-            Schedule Consultation <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            <span>Schedule Consultation</span>
+            <ArrowUpRight size={15} />
           </button>
         </div>
 
