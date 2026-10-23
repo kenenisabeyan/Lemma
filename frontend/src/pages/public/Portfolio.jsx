@@ -22,6 +22,8 @@ import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 import { CaseStudyModal } from './CaseStudy';
 import { PROJECT_CATEGORIES } from '../../utils/constants';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
+import { TechMarquee } from '../../components/common/TechMarquee';
 
 export const Portfolio = () => {
   const navigate = useNavigate();
