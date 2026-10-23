@@ -21,6 +21,7 @@ import {
 import { Modal } from '../../components/common/Modal';
 import { useFetch } from '../../hooks/useFetch';
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
+import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 
 // ==========================================
 // 1. QUICK MODAL VIEW (FOR IN-PAGE PREVIEW)
@@ -243,13 +244,22 @@ export const CaseStudyPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative pt-32 pb-24 overflow-hidden selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative pt-32 pb-24 overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200 bg-cad-grid">
       
-      {/* Ambient Sheen & Radiant Studio Lights */}
+      {/* Luminous White Glass Frosted Sheen & Center Light Dome */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/80 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/85 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+
+      {/* Subtle Ambient Studio Lights */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2"></div>
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none"></div>
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
+      </div>
+
+      {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
+      <div className="absolute inset-0 overflow-hidden select-none z-0 pointer-events-none">
+        <Hero3DCanvas />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-white via-white/80 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/80 to-transparent pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
