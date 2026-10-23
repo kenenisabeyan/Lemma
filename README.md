@@ -1,4 +1,4 @@
-# 🏗️ Alexandre | Senior Structural Engineer Portfolio & CMS
+# 🏗️ Lemma | Senior Structural Engineer Portfolio & CMS
 
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.1-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)

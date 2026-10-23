@@ -124,7 +124,7 @@ model Inquiry {
 
 model SiteSettings {
   id             String   @id @default("default")
-  engineerName   String   @default("Alexandre Techane")
+  engineerName   String   @default("Lemma Techane")
   title          String   @default("Principal Structural Engineer, PE, SE")
   heroTagline    String   @default("Precision in Every Structure.")
   heroBio        String   @default("Ensuring structural integrity, safety, and innovation for complex architectural designs. Bridging the gap between visionary aesthetics and physical reality.")
@@ -133,10 +133,10 @@ model SiteSettings {
   projectsCount  String   @default("180+")
   safetyRecord   String   @default("100%")
   clientsCount   String   @default("50+")
-  email          String   @default("consult@alexandre-structural.com")
+  email          String   @default("consult@lemma-structural.com")
   phone          String   @default("+1 (555) 019-8472")
   officeAddress  String   @default("Suite 400, Iron Building, Metropolis City, NY 10001")
-  metaTitle      String   @default("Alexandre - Senior Structural Engineer & Consultant")
+  metaTitle      String   @default("Lemma - Senior Structural Engineer & Consultant")
   metaDescription String  @default("Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.")
   updatedAt      DateTime @updatedAt
 }

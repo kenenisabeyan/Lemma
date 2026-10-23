@@ -35,7 +35,7 @@ export const PEVerificationPortal = () => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(
-      `PE/SE Verification Certificate\nEngineer: Alexandre Techane, PE, SE\nNY PE #84729 | CA SE #92041\nProject: ${projectName}\nJurisdiction: ${jurisdiction}\nToken: ${verificationHash}`
+      `PE/SE Verification Certificate\nEngineer: Lemma Techane, PE, SE\nNY PE #84729 | CA SE #92041\nProject: ${projectName}\nJurisdiction: ${jurisdiction}\nToken: ${verificationHash}`
     );
     setCopiedToken(true);
     setTimeout(() => setCopiedToken(false), 3000);
@@ -224,7 +224,7 @@ export const PEVerificationPortal = () => {
                   {/* Curved Text Simulation */}
                   <path id="curve" d="M 18,50 A 32,32 0 1,1 82,50" fill="none" />
                   <text fontSize="5.5" fill="#D4AF37" fontFamily="monospace" letterSpacing="1">
-                    <textPath href="#curve" startOffset="5%">ALEXANDRE TECHANE</textPath>
+                    <textPath href="#curve" startOffset="5%">LEMMA TECHANE</textPath>
                   </text>
                   <text x="50" y="52" textAnchor="middle" fill="#D4AF37" fontSize="5" fontFamily="monospace" fontWeight="bold">
                     PE #84729
@@ -239,7 +239,7 @@ export const PEVerificationPortal = () => {
               </div>
 
               <div className="text-xs font-mono">
-                <div className="text-zinc-900 font-bold text-sm">Alexandre Techane, PE, SE</div>
+                <div className="text-zinc-900 font-bold text-sm">Lemma Techane, PE, SE</div>
                 <div className="text-[10px] text-[#54595F]">Licensed Structural Engineer</div>
                 <div className="text-[10px] text-[#D4AF37] font-semibold mt-0.5">PE NY #84729 · SE CA #92041</div>
                 <div className="text-[9px] text-[#54595F] mt-1">Date: {timestamp}</div>

@@ -199,7 +199,7 @@ export const About = () => {
                 <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner group">
                   <img
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-                    alt="Alexandre Techane Senior Structural Engineer"
+                    alt="Lemma Techane Senior Structural Engineer"
                     className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
@@ -215,7 +215,7 @@ export const About = () => {
                       <ShieldCheck size={14} />
                       <span>Sealed & Verified Practice</span>
                     </div>
-                    <h3 className="text-xl font-black text-white leading-tight">Alexandre Techane, PE, SE</h3>
+                    <h3 className="text-xl font-black text-white leading-tight">Lemma Techane, PE, SE</h3>
                     <p className="text-xs text-zinc-300 font-mono">Senior Principal · Structural & Civil Engineering</p>
                   </div>
                 </div>

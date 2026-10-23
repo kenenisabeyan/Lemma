@@ -9,7 +9,7 @@ export const Settings = () => {
   const initialSettings = data?.settings || {};
 
   const [formData, setFormData] = useState({
-    engineerName: initialSettings.engineerName || 'Alexandre Techane',
+    engineerName: initialSettings.engineerName || 'Lemma Techane',
     title: initialSettings.title || 'Senior Structural Engineer, PE, SE',
     heroTagline: initialSettings.heroTagline || 'Precision in Every Structure.',
     heroBio: initialSettings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.',
@@ -17,10 +17,10 @@ export const Settings = () => {
     projectsCount: initialSettings.projectsCount || '180+',
     safetyRecord: initialSettings.safetyRecord || '100%',
     clientsCount: initialSettings.clientsCount || '50+',
-    email: initialSettings.email || 'consult@alexandre-structural.com',
+    email: initialSettings.email || 'consult@lemma-structural.com',
     phone: initialSettings.phone || '+1 (555) 019-8472',
     officeAddress: initialSettings.officeAddress || 'Suite 400, Iron Building, Metropolis City, NY 10001',
-    metaTitle: initialSettings.metaTitle || 'Alexandre - Senior Structural Engineer & Consultant',
+    metaTitle: initialSettings.metaTitle || 'Lemma - Senior Structural Engineer & Consultant',
     metaDescription: initialSettings.metaDescription || 'Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.'
   });
 
@@ -288,9 +288,9 @@ export const Settings = () => {
                 Live Google Search Result Preview
               </span>
               <div className="font-sans">
-                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://alexandre-structural.com</span>
+                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://lemma-structural.com</span>
                 <h4 className="text-base text-[#8AB4F8] hover:underline cursor-pointer font-medium leading-snug">
-                  {formData.metaTitle || 'Alexandre - Senior Structural Engineer & Consultant'}
+                  {formData.metaTitle || 'Lemma - Senior Structural Engineer & Consultant'}
                 </h4>
                 <p className="text-xs text-[#BDC1C6] mt-1 line-clamp-2 leading-relaxed">
                   {formData.metaDescription || 'Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.'}

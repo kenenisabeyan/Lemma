@@ -22,7 +22,7 @@ export const CAREER_TIMELINE = [
   {
     year: '2021 - Present',
     role: 'Principal Structural Engineer & Founder',
-    company: 'Alexandre Structural Engineering & Advisory',
+    company: 'Lemma Structural Engineering & Advisory',
     description: 'Leading complex structural design teams, high-rise wind engineering integration, and seismic retrofit consultations.'
   },
   {

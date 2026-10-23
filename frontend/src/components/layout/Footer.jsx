@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('consult@alexandre-structural.com');
+    navigator.clipboard.writeText('consult@lemma-structural.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -72,7 +72,7 @@ export const Footer = () => {
                 <Layers className="text-[#D4AF37] dark:text-[#D4AF37] w-4 h-4" />
               </div>
               <span className="font-extrabold text-lg tracking-wider uppercase text-zinc-900 dark:text-slate-100">
-                Alexandre<span className="text-[#D4AF37]">.</span>
+                Lemma<span className="text-[#D4AF37]">.</span>
               </span>
             </Link>
             <p className="text-[#54595F] dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
@@ -138,7 +138,7 @@ export const Footer = () => {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail className="text-[#D4AF37] w-4 h-4 shrink-0" />
-                  <a href="mailto:consult@alexandre-structural.com" className="hover:text-[#D4AF37] transition-colors font-mono truncate">consult@alexandre-structural.com</a>
+                  <a href="mailto:consult@lemma-structural.com" className="hover:text-[#D4AF37] transition-colors font-mono truncate">consult@lemma-structural.com</a>
                 </li>
               </ul>
             </div>
@@ -148,7 +148,7 @@ export const Footer = () => {
 
         {/* Bottom Sub-footer */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-[#54595F] dark:text-[#9CA3AF]">
-          <p>&copy; {new Date().getFullYear()} Alexandre Structural Engineering Professional Portfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Lemma Structural Engineering Professional Portfolio. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <button 
               onClick={scrollToTop} 

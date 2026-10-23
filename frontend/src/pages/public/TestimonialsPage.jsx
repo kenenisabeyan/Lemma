@@ -33,7 +33,7 @@ export const TestimonialsPage = () => {
       clientCompany: 'ArchiTech Global Design',
       category: 'Architects',
       avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'Alexandre’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
+      content: 'Lemma’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
       rating: 5
     },
     {

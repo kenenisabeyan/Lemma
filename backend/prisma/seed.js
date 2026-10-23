@@ -13,7 +13,7 @@ async function main() {
     update: {},
     create: {
       email: 'admin@engineering.com',
-      name: 'Alexandre Techane',
+      name: 'Lemma Techane',
       password: hashedPassword,
       role: 'ADMIN'
     }
@@ -26,7 +26,7 @@ async function main() {
     update: {},
     create: {
       id: 'default',
-      engineerName: 'Alexandre Techane',
+      engineerName: 'Lemma Techane',
       title: 'Senior Structural Engineer, PE, SE',
       heroTagline: 'Precision in Every Structure.',
       heroBio: 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.',
@@ -35,7 +35,7 @@ async function main() {
       projectsCount: '180+',
       safetyRecord: '100%',
       clientsCount: '50+',
-      email: 'consult@alexandre-structural.com',
+      email: 'consult@lemma-structural.com',
       phone: '+1 (555) 019-8472',
       officeAddress: 'Suite 400, Iron Building, Metropolis City, NY 10001'
     }
@@ -183,7 +183,7 @@ async function main() {
       clientRole: 'Principal Architect',
       clientCompany: 'ArchiTech Global Design',
       avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'Alexandre’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
+      content: 'Lemma’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
       rating: 5,
       isFeatured: true,
       order: 1

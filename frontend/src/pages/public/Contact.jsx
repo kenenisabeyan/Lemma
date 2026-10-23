@@ -129,7 +129,7 @@ export const Contact = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('consult@alexandre-structural.com');
+    navigator.clipboard.writeText('consult@lemma-structural.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -294,7 +294,7 @@ export const Contact = () => {
                       <div className="min-w-0">
                         <span className="text-[10px] font-mono text-zinc-500 uppercase block">Consultation Email</span>
                         <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 truncate block">
-                          consult@alexandre-structural.com
+                          consult@lemma-structural.com
                         </span>
                       </div>
                     </div>

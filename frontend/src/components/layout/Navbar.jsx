@@ -30,14 +30,14 @@ export const Navbar = () => {
   // Fetch settings for dynamic name & avatar
   const { data: settingsData } = useFetch('/settings', {
     settings: {
-      engineerName: 'Alexandre',
+      engineerName: 'Lemma',
       title: 'Structural PE, SE',
       avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80'
     }
   });
 
   const settings = settingsData?.settings || settingsData || {};
-  const brandName = settings.engineerName ? settings.engineerName.split(' ')[0] : 'Alexandre';
+  const brandName = settings.engineerName ? settings.engineerName.split(' ')[0] : 'Lemma';
   const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'STRUCTURAL PE, SE';
   const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80';
 

@@ -83,7 +83,7 @@ STRUCTURAL ENGINEERING TECHNICAL RESOURCE
 Title: ${item.title}
 Category: ${item.category}
 Standard: IBC 2024 / ASCE 7-22 / ACI 318
-Author: Alexandre Techane, PE, SE
+Author: Lemma Techane, PE, SE
 License: NY PE #84729 | CA SE #92041
 =====================================================
 
@@ -97,7 +97,7 @@ CORE TECHNICAL GUIDANCE:
 4. Non-linear dynamic analyses must adhere to ASCE 7-22 Section 16.
 
 For consultation or project verification:
-Email: consult@alexandre-structural.com
+Email: consult@lemma-structural.com
 Phone: +1 (555) 019-8472
 =====================================================`;
 

@@ -23,7 +23,7 @@ const submitInquiry = async (req, res, next) => {
 
     // Notify engineer via email log helper
     await sendNotificationEmail({
-      to: process.env.NOTIFICATION_EMAIL || 'consult@alexandre-structural.com',
+      to: process.env.NOTIFICATION_EMAIL || 'consult@lemma-structural.com',
       subject: `[New Structural Inquiry] ${projectType} - ${name}`,
       body: `Client: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nProject Type: ${projectType}\nSubject: ${subject}\n\nMessage:\n${message}`
     });

@@ -118,7 +118,7 @@ export const Home = () => {
   // Fetch live settings and projects from API with fallback
   const { data: settingsData } = useFetch('/settings', {
     settings: {
-      engineerName: 'Alexandre Techane',
+      engineerName: 'Lemma Techane',
       title: 'Senior Structural Engineer, PE, SE',
       heroHeadlineLine1: 'Resilient Structures.',
       heroHeadlineAccent: 'Clear',
@@ -194,7 +194,7 @@ export const Home = () => {
       clientCompany: 'ArchiTech Global Design',
       category: 'Architects',
       avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'Alexandre’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
+      content: 'Lemma’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
       rating: 5,
       projectRef: 'Nexus Commercial Tower (52-Story)'
     },
@@ -246,7 +246,7 @@ export const Home = () => {
   ];
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('consult@alexandre-structural.com');
+    navigator.clipboard.writeText('consult@lemma-structural.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -406,7 +406,7 @@ export const Home = () => {
                     >
                       <img
                         src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
-                        alt="Alexandre Techane"
+                        alt="Lemma Techane"
                         className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
                       />
 
@@ -429,7 +429,7 @@ export const Home = () => {
                               className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/95 dark:bg-black/85 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm pointer-events-auto select-text"
                             >
                               <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight select-text">
-                                {settings.engineerName || 'Alexandre Techane'}
+                                {settings.engineerName || 'Lemma Techane'}
                               </p>
                               <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide select-text">
                                 Senior Structural Principal · PE, SE
@@ -739,7 +739,7 @@ export const Home = () => {
                   <div className="aspect-[4/5] bg-zinc-100 overflow-hidden rounded-xl">
                     <img
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-                      alt="Alexandre Senior Structural Engineer"
+                      alt="Lemma Senior Structural Engineer"
                       className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
@@ -1458,7 +1458,7 @@ export const Home = () => {
             <div className="grid gap-px overflow-hidden bg-zinc-200 rounded-2xl border border-zinc-200 md:grid-cols-3 shadow-md">
               {/* Card 1: Email */}
               <a 
-                href="mailto:consult@alexandre-structural.com" 
+                href="mailto:consult@lemma-structural.com" 
                 className="flex items-center gap-3 bg-[#FFFFFF] p-5 shadow-xs transition-colors hover:bg-zinc-50 group"
               >
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
@@ -1466,7 +1466,7 @@ export const Home = () => {
                 </div>
                 <div className="flex flex-col gap-y-0.5 overflow-hidden">
                   <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
-                  <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
+                  <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">consult@lemma-structural.com</p>
                 </div>
               </a>
 

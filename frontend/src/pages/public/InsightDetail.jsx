@@ -141,11 +141,11 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           {/* Author Bento Badge */}
           <div className="flex items-center gap-4 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-4 rounded-2xl border border-white/90 dark:border-white/10 shadow-sm">
             <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-2 border-[#D4AF37] text-[#801834] dark:text-[#E84855] flex items-center justify-center font-bold text-sm shadow-xs">
-              AT
+              LT
             </div>
             <div>
               <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
-                Alexandre Techane, PE, SE
+                Lemma Techane, PE, SE
                 <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· Verified Author</span>
               </h4>
               <p className="text-xs text-zinc-500 dark:text-zinc-400">Principal Structural Engineer & Technical Director</p>
@@ -216,7 +216,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             </button>
             <button
               onClick={() => {
-                const text = `=====================================================\nTECHNICAL ENGINEERING NOTE\nTitle: ${article.title}\nAuthor: Alexandre Techane, PE, SE\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
+                const text = `=====================================================\nTECHNICAL ENGINEERING NOTE\nTitle: ${article.title}\nAuthor: Lemma Techane, PE, SE\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
                 const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
