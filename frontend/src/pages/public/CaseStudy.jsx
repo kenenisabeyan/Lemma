@@ -247,8 +247,9 @@ export const CaseStudyPage = () => {
       
       {/* Ambient Sheen & Radiant Studio Lights */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/20 blur-[140px] animate-aurora-drift"></div>
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/8 dark:bg-[#D4AF37]/15 blur-[120px] animate-aurora-drift-2"></div>
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/5 dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift"></div>
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/6 dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -271,15 +272,16 @@ export const CaseStudyPage = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={handleCopyLink}
-              className="rounded-full bg-white/80 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 hover:text-[#801834] dark:hover:text-[#E84855] border border-zinc-200/80 dark:border-white/10 px-4 py-2 text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all shadow-xs"
+              className="rounded-full bg-white/85 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] border border-white/90 dark:border-white/20 backdrop-blur-xl px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-[0_4px_15px_rgba(0,0,0,0.04)] cursor-pointer"
             >
               <Share2 size={13} className="text-[#D4AF37]" /> {copied ? 'Link Copied!' : 'Share Case Study'}
             </button>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md"
+              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-6 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer"
             >
-              Consult On Similar Scope <ArrowUpRight size={14} className="text-[#D4AF37]" />
+              <span>Consult On Scope</span>
+              <ArrowUpRight size={14} className="text-[#121417]" />
             </button>
           </div>
         </div>
@@ -507,9 +509,10 @@ export const CaseStudyPage = () => {
             </p>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md inline-flex items-center gap-2"
+              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] inline-flex items-center gap-2 cursor-pointer"
             >
-              Initiate Consultation Inquiry <ArrowUpRight size={16} className="text-[#D4AF37]" />
+              <span>Initiate Consultation Inquiry</span>
+              <ArrowUpRight size={16} className="text-[#121417]" />
             </button>
           </div>
         </div>
