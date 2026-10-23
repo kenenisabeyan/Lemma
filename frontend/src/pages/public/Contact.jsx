@@ -1,5 +1,23 @@
 import React, { useState, useRef } from 'react';
-import { Phone, Mail, MapPin, ShieldCheck, CheckCircle2, Send, AlertCircle, Sparkles, Clock, Compass, FileText, Check } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ShieldCheck, 
+  CheckCircle2, 
+  Send, 
+  AlertCircle, 
+  Sparkles, 
+  Clock, 
+  Compass, 
+  FileText, 
+  Check, 
+  Copy, 
+  Building2, 
+  ArrowUpRight,
+  ArrowRight
+} from 'lucide-react';
 import api from '../../services/api';
 import { StructuralScopeEstimator } from '../../components/engineering/StructuralScopeEstimator';
 
@@ -115,135 +133,249 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] text-[#54595F] pt-28 pb-24 relative overflow-hidden selection:bg-[#D4AF37] selection:text-[#121417]">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
       
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#D4AF37]/5 rounded-full blur-[140px] pointer-events-none"></div>
-
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      {/* ========================================================================= */}
+      {/* 1. CINEMATIC CONTACT & CONSULTATION HERO SECTION                          */}
+      {/* ========================================================================= */}
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/80 dark:border-white/10 bg-white/75 dark:bg-[#0B0C0E]/85 backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
-        {/* Header */}
-        <div className="mb-14 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-5 font-semibold">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-            Available for Select Consultation & Advisory
-          </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tight leading-[1.08] mb-5">
-            Have Questions? <span className="text-[#D4AF37]">Get in Touch.</span>
-          </h1>
-          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-7 shadow-sm max-w-2xl mx-auto">
-            <p className="text-[#54595F] text-base leading-relaxed">
-              Available for new structural engineering design, high-rise wind & seismic peer reviews, structural health evaluations, and forensic advisory.
-            </p>
-          </div>
-        </div>
+        {/* Ambient Sheen & Radiance */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#0B0C0E]/85 dark:via-[#0B0C0E]/50 dark:to-[#0B0C0E]/90 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/8 dark:bg-[#801834]/20 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/8 dark:bg-[#D4AF37]/15 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
-        {/* 3-Bento Contact Quick Strip */}
-        <div className="relative mb-12">
-          <div className="grid gap-px overflow-hidden bg-zinc-200 rounded-2xl border border-zinc-200 md:grid-cols-3 shadow-lg">
-            {/* Card 1: Email */}
-            <div className="flex items-center justify-between gap-3 bg-[#FFFFFF] p-6 transition-colors hover:bg-zinc-50 group">
-              <div className="flex items-center gap-3 overflow-hidden">
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/40 bg-[#FFFFFF] text-[#D4AF37] group-hover:scale-105 transition-transform shadow-sm">
-                  <Mail size={18} />
-                </div>
-                <div className="flex flex-col gap-y-0.5 overflow-hidden">
-                  <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
-                  <p className="text-xs font-mono text-[#54595F]/80 truncate group-hover:text-[#D4AF37] transition-colors">consult@alexandre-structural.com</p>
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={handleCopyEmail}
-                className="text-[10px] font-mono uppercase tracking-wider text-[#54595F] hover:text-[#121417] px-2.5 py-1 rounded-full bg-[#FFFFFF] hover:bg-[#D4AF37] border border-[#D4AF37] shrink-0 transition-all font-bold"
+        <div className="relative z-20 max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Column: Scope, Headline, Guarantees */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left gap-5">
+              
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                {copiedEmail ? 'Copied!' : 'Copy'}
-              </button>
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
+                  Principal Direct Access · Accepting Q4 2026 Mandates
+                </span>
+              </motion.div>
+
+              {/* Headline */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="space-y-1.5"
+              >
+                <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
+                  Let's Engineer Your{' '}
+                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                    Next
+                  </span>
+                  <br />
+                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
+                    Structural Landmark.
+                  </span>
+                </h1>
+              </motion.div>
+
+              {/* Frosted Glass Narrative Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
+              >
+                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
+                  Available for new commercial tower designs, seismic retrofit assessments, independent third-party calculation peer reviews, and forensic engineering consultations.
+                </p>
+
+                {/* Response SLA Badges */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <Clock size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold">24h Preliminary Response</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <ShieldCheck size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold">Strict NDA Confidentiality</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold">Direct PE/SE Principal Review</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Action Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-wrap items-center gap-3.5 pt-2"
+              >
+                <a
+                  href="#consultation-form"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] hover:scale-[1.02]"
+                >
+                  <Send size={14} className="text-[#D4AF37]" />
+                  Submit Project Inquiry Brief
+                </a>
+                <a
+                  href="#scope-estimator"
+                  className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-white/10 hover:bg-white dark:hover:bg-white/20 text-zinc-900 dark:text-zinc-100 border border-zinc-200/80 dark:border-white/20 backdrop-blur-xl px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all hover:scale-[1.02]"
+                >
+                  <Compass size={14} className="text-[#D4AF37]" />
+                  Launch Scope Estimator
+                </a>
+              </motion.div>
+
             </div>
 
-            {/* Card 2: Phone */}
-            <a
-              href="tel:+15550198472"
-              className="flex items-center gap-3 bg-[#FFFFFF] p-6 transition-colors hover:bg-zinc-50 group"
+            {/* Right Column: Direct Communication Channels & Telemetry */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="lg:col-span-5 flex flex-col gap-3"
             >
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/40 bg-[#FFFFFF] text-[#D4AF37] group-hover:scale-105 transition-transform shadow-sm">
-                <Phone size={18} />
-              </div>
-              <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
-                <p className="text-xs font-mono text-[#54595F]/80 group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472 (Mon-Fri 8am-6pm)</p>
-              </div>
-            </a>
+              <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/70 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-5 sm:p-6">
+                
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Direct Principal Channels</span>
+                  </div>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase">Online & Active</span>
+                </div>
 
-            {/* Card 3: Location */}
-            <div className="flex items-center gap-3 bg-[#FFFFFF] p-6">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/40 bg-[#FFFFFF] text-[#D4AF37] shadow-sm">
-                <MapPin size={18} />
+                <div className="flex flex-col gap-3">
+                  {/* Channel 1: Email */}
+                  <div className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 overflow-hidden">
+                      <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0">
+                        <Mail size={18} />
+                      </div>
+                      <div className="min-w-0">
+                        <span className="text-[10px] font-mono text-zinc-500 uppercase block">Consultation Email</span>
+                        <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 truncate block">
+                          consult@alexandre-structural.com
+                        </span>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleCopyEmail}
+                      className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 hover:text-white px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-700 hover:bg-[#801834] dark:hover:bg-[#E84855] border border-zinc-200 dark:border-white/10 transition-all shrink-0"
+                    >
+                      {copiedEmail ? 'Copied!' : 'Copy'}
+                    </button>
+                  </div>
+
+                  {/* Channel 2: Phone */}
+                  <a
+                    href="tel:+15550198472"
+                    className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] flex items-center gap-3 transition-all group"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Phone size={18} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block">Direct Line</span>
+                      <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 block">
+                        +1 (555) 019-8472 (Mon–Fri 8am–6pm EST)
+                      </span>
+                    </div>
+                  </a>
+
+                  {/* Channel 3: Office Headquarters */}
+                  <div className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0">
+                      <MapPin size={18} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block">Principal Office</span>
+                      <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 block">
+                        Metropolis City, NY (EST · GMT-5)
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-zinc-900">Office Headquarters</h4>
-                <p className="text-xs font-mono text-[#54595F]/80">New York, NY (EST · GMT-5)</p>
-              </div>
-            </div>
+            </motion.div>
+
           </div>
         </div>
+      </section>
 
-        {/* Interactive Scope & Deliverables Matrix */}
-        <div className="mb-14">
-          <StructuralScopeEstimator onApplyScope={handleApplyEstimatorScope} />
-        </div>
+      {/* ========================================================================= */}
+      {/* 2. INTERACTIVE STRUCTURAL SCOPE ESTIMATOR                                 */}
+      {/* ========================================================================= */}
+      <div id="scope-estimator" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
+        <StructuralScopeEstimator onApplyScope={handleApplyEstimatorScope} />
+      </div>
 
-        {/* Consultation Request Form Container */}
-        <div 
-          ref={formRef}
-          className="rounded-3xl border border-zinc-200 bg-[#FFFFFF] p-8 lg:p-12 shadow-xl relative transition-colors"
-        >
+      {/* ========================================================================= */}
+      {/* 3. CONSULTATION REQUEST FORM CONTAINER                                    */}
+      {/* ========================================================================= */}
+      <div 
+        id="consultation-form"
+        ref={formRef}
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 scroll-mt-24"
+      >
+        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 lg:p-12 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)] relative transition-colors">
+          
           {/* Engineering Coordinates Strip */}
-          <div className="flex items-center justify-between text-[9px] font-mono text-[#54595F]/60 uppercase tracking-widest pb-3 mb-6 border-b border-zinc-200">
+          <div className="flex items-center justify-between text-[10px] font-mono text-zinc-500 uppercase tracking-widest pb-3 mb-6 border-b border-zinc-200/80 dark:border-white/10">
             <span>MANDATE: DIRECT CLIENT INQUIRY</span>
             <span className="hidden sm:inline">REF: NY-PE-84729 / CA-SE-92041</span>
-            <span>SECURE 256-BIT SSL</span>
+            <span>SECURE 256-BIT ENCRYPTION</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-200">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-200/80 dark:border-white/10">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 mb-1 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-1 tracking-tight">
                 Structural Consultation Inquiry Brief
               </h3>
-              <p className="text-xs text-[#54595F]">
+              <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
                 Provide your project specifications or scope below for a confidential engineering review.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] bg-[#FFFFFF] px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40 font-bold shrink-0">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40 font-bold shrink-0">
               <ShieldCheck size={14} /> NDA Confidentiality Assured
             </div>
           </div>
 
           {estimatorApplied && (
-            <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-semibold flex items-center gap-2 animate-bounce">
+            <div className="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-700/60 text-emerald-800 dark:text-emerald-300 text-xs font-semibold flex items-center gap-2">
               <Check size={18} /> Parameters from Scope Estimator loaded into consultation brief!
             </div>
           )}
 
           {successMsg && (
-            <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-semibold flex items-center gap-2">
+            <div className="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-700/60 text-emerald-800 dark:text-emerald-300 text-xs font-semibold flex items-center gap-2">
               <CheckCircle2 size={18} /> {successMsg}
             </div>
           )}
 
           {errorMsg && (
-            <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-300 text-red-800 text-xs font-semibold flex items-center gap-2">
+            <div className="mb-6 p-4 rounded-2xl bg-red-50 dark:bg-red-950/40 border border-red-300 dark:border-red-700/60 text-red-800 dark:text-red-300 text-xs font-semibold flex items-center gap-2">
               <AlertCircle size={18} /> {errorMsg}
             </div>
           )}
 
           {/* Fast Scope Preset Wizard */}
-          <div className="mb-8 p-5 bg-[#FFFFFF] rounded-xl border border-zinc-200 space-y-3">
+          <div className="mb-8 p-5 bg-zinc-50/80 dark:bg-zinc-800/40 rounded-2xl border border-zinc-200/80 dark:border-white/5 space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-1.5 font-bold">
-                <Sparkles size={13} /> Quick Scope Builder (Select Mandate to Auto-Fill)
+              <span className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#E84855] flex items-center gap-1.5 font-bold">
+                <Sparkles size={13} className="text-[#D4AF37]" /> Quick Scope Builder (Select Mandate to Auto-Fill)
               </span>
-              <span className="text-[10px] font-mono text-[#54595F]/75">Click any preset to initialize inquiry brief</span>
+              <span className="text-[10px] font-mono text-zinc-500">Click any preset to initialize inquiry brief</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
@@ -254,14 +386,14 @@ export const Contact = () => {
                     key={preset.id}
                     type="button"
                     onClick={() => handleApplyPreset(preset)}
-                    className={`p-3 rounded-lg border text-left text-xs font-mono transition-all flex flex-col justify-between ${
+                    className={`p-3 rounded-xl border text-left text-xs font-mono transition-all flex flex-col justify-between ${
                       isSelected
-                        ? 'bg-[#FFFFFF] border-[#D4AF37] text-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
-                        : 'bg-[#FFFFFF] border-zinc-200 text-[#54595F] hover:border-[#D4AF37]'
+                        ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 border-transparent shadow-sm'
+                        : 'bg-white/80 dark:bg-zinc-800/80 border-zinc-200/80 dark:border-white/10 text-zinc-800 dark:text-zinc-200 hover:border-[#D4AF37]'
                     }`}
                   >
                     <span className="font-bold block truncate mb-1">{preset.title}</span>
-                    <span className="text-[9px] text-[#54595F]/70 block">{preset.type}</span>
+                    <span className={`text-[9px] block ${isSelected ? 'text-zinc-300 dark:text-zinc-700' : 'text-zinc-500'}`}>{preset.type}</span>
                   </button>
                 );
               })}
@@ -271,7 +403,7 @@ export const Contact = () => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#54595F] mb-2 font-mono font-bold">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
                   Full Name *
                 </label>
                 <input
@@ -281,12 +413,12 @@ export const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Sarah Jenkins, AIA"
-                  className="w-full bg-[#FFFFFF] rounded-xl border border-zinc-200 text-[#54595F] p-3.5 text-xs focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors shadow-sm"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#54595F] mb-2 font-mono font-bold">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
                   Email Address *
                 </label>
                 <input
@@ -296,14 +428,14 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="s.jenkins@architech.com"
-                  className="w-full bg-[#FFFFFF] rounded-xl border border-zinc-200 text-[#54595F] p-3.5 text-xs focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors shadow-sm"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#54595F] mb-2 font-mono font-bold">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
                   Phone Number
                 </label>
                 <input
@@ -312,19 +444,19 @@ export const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+1 (555) 000-0000"
-                  className="w-full bg-[#FFFFFF] rounded-xl border border-zinc-200 text-[#54595F] p-3.5 text-xs focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors shadow-sm"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-widest text-[#54595F] mb-2 font-mono font-bold">
+                <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
                   Project Classification *
                 </label>
                 <select
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
-                  className="w-full bg-[#FFFFFF] rounded-xl border border-zinc-200 text-[#54595F] p-3.5 text-xs focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors shadow-sm"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 >
                   <option value="Commercial High-Rise">Commercial High-Rise</option>
                   <option value="Infrastructure & Bridges">Infrastructure & Bridges</option>
@@ -337,7 +469,7 @@ export const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-[10px] uppercase tracking-widest text-[#54595F] mb-2 font-mono font-bold">
+              <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
                 Subject / Project Name
               </label>
               <input
@@ -346,12 +478,12 @@ export const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="e.g. Seismic lateral bracing audit for 20-story building"
-                className="w-full bg-[#FFFFFF] rounded-xl border border-zinc-200 text-[#54595F] p-3.5 text-xs focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors shadow-sm"
+                className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-[10px] uppercase tracking-widest text-[#54595F] mb-2 font-mono font-bold">
+              <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
                 Structural Project Requirements *
               </label>
               <textarea
@@ -361,21 +493,21 @@ export const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Describe building height, structural materials (concrete/steel), site location, timeline, or key technical challenges..."
-                className="w-full bg-[#FFFFFF] rounded-xl border border-zinc-200 text-[#54595F] p-3.5 text-xs focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-colors resize-none shadow-sm"
+                className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors resize-none"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 text-xs font-extrabold tracking-widest uppercase hover:bg-[#c49f2c] transition-all w-full flex justify-center items-center gap-2 shadow-lg"
+              className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold tracking-widest uppercase transition-all w-full flex justify-center items-center gap-2 shadow-[0_10px_25px_rgba(128,24,52,0.3)] hover:scale-[1.01]"
             >
-              {loading ? 'Submitting Inquiry...' : 'Send Secure Consultation Inquiry'} <Send size={14} />
+              {loading ? 'Submitting Inquiry...' : 'Send Secure Consultation Inquiry'} <Send size={14} className="text-[#D4AF37]" />
             </button>
           </form>
         </div>
-
       </div>
+
     </div>
   );
 };
