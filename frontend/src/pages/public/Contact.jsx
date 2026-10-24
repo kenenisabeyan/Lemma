@@ -22,7 +22,6 @@ import {
 import api from '../../services/api';
 import { StructuralScopeEstimator } from '../../components/engineering/StructuralScopeEstimator';
 import lemmaFour from '../../assets/lemma-four.jpg';
-import lemmaTwo from '../../assets/lemma-two.jpg';
 
 export const Contact = () => {
   const formRef = useRef(null);
@@ -38,20 +37,6 @@ export const Contact = () => {
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [showEstimator, setShowEstimator] = useState(false);
-
-  // Animated background images alternation (lemma-four and lemma-two)
-  const bgImages = [
-    { src: lemmaFour, label: 'Lemma Techane — Structural Site Inspection' },
-    { src: lemmaTwo, label: 'Lemma Techane — Civil Engineering Analysis' }
-  ];
-  const [activeBgIndex, setActiveBgIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveBgIndex((prev) => (prev + 1) % bgImages.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [bgImages.length]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -101,33 +86,23 @@ export const Contact = () => {
       {/* ========================================================================= */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
-        {/* Animated Background Layers (lemma-four and lemma-two) */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-          {bgImages.map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={false}
-              animate={{
-                opacity: activeBgIndex === idx ? 0.35 : 0,
-                scale: activeBgIndex === idx ? 1.08 : 1.0,
-              }}
-              transition={{
-                opacity: { duration: 1.8, ease: "easeInOut" },
-                scale: { duration: 7, ease: "easeInOut" }
-              }}
-              className="absolute inset-0 bg-cover bg-center will-change-transform"
-              style={{ backgroundImage: `url(${item.src})` }}
-            />
-          ))}
+        {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
+        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
+          <motion.div
+            initial={{ scale: 1.0 }}
+            animate={{ scale: 1.06 }}
+            transition={{ duration: 12, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+            className="absolute inset-0 bg-cover bg-center will-change-transform opacity-80 dark:opacity-70"
+            style={{ backgroundImage: `url(${lemmaFour})` }}
+          />
 
-          {/* Ambient Sheen & Radiant Studio Lights (Matching ResourcesPage) */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/85 to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E]/85 dark:to-[#0B0C0E] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+          {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
+          <div className="absolute inset-0 bg-white/40 dark:bg-[#0B0C0E]/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#0B0C0E]/85 dark:via-transparent dark:to-[#0B0C0E]/85 pointer-events-none" />
+          <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
 
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -325,22 +300,13 @@ export const Contact = () => {
 
                 </div>
 
-                {/* Animated Scene Indicator */}
+                {/* Scene Indicator */}
                 <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-white/10 text-[11px] font-mono text-zinc-500">
-                  <span className="flex items-center gap-1.5 truncate max-w-[260px]">
+                  <span className="flex items-center gap-1.5 truncate">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                    <span className="font-bold text-zinc-700 dark:text-zinc-300 truncate">{bgImages[activeBgIndex].label}</span>
+                    <span className="font-bold text-zinc-700 dark:text-zinc-300">Lemma Techane — Structural Inspection Site</span>
                   </span>
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    {bgImages.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setActiveBgIndex(idx)}
-                        className={`h-1.5 rounded-full transition-all cursor-pointer ${activeBgIndex === idx ? 'w-5 bg-[#801834] dark:bg-[#D4AF37]' : 'w-1.5 bg-zinc-300 dark:bg-white/30'}`}
-                        title={`Switch scene ${idx + 1}`}
-                      />
-                    ))}
-                  </div>
+                  <span className="text-[10px] text-zinc-400 font-mono">ASTU Live Base</span>
                 </div>
 
               </div>

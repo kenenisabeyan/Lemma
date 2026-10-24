@@ -135,18 +135,6 @@ export const Portfolio = () => {
             {/* Left Hero Column: Headline, Mission, Badges */}
             <div className="lg:col-span-7 flex flex-col items-start text-left gap-4 sm:gap-5">
               
-              {/* License & Portfolio Pill */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
-              >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  ASTU Civil Engineering · 5th Year Capstone Dossiers
-                </span>
-              </motion.div>
 
               {/* Main Headline */}
               <motion.div

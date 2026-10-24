@@ -17,9 +17,8 @@ import {
   Wind
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
-import { CodeComplianceMatrix } from '../../components/engineering/CodeComplianceMatrix';
-import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
+import lemmaFour from '../../assets/lemma-four.jpg';
 
 export const ServicesPage = () => {
   const navigate = useNavigate();
@@ -104,11 +103,23 @@ export const ServicesPage = () => {
         <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
-        {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
+        {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
-          <Hero3DCanvas />
+          <motion.div
+            initial={{ scale: 1.0 }}
+            animate={{ scale: 1.06 }}
+            transition={{ duration: 12, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+            className="absolute inset-0 bg-cover bg-center will-change-transform opacity-80 dark:opacity-70"
+            style={{ backgroundImage: `url(${lemmaFour})` }}
+          />
+
+          {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
+          <div className="absolute inset-0 bg-white/40 dark:bg-[#0B0C0E]/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#0B0C0E]/85 dark:via-transparent dark:to-[#0B0C0E]/85 pointer-events-none" />
+          <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
+
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -117,19 +128,6 @@ export const ServicesPage = () => {
             {/* Left Column: Scope, Headline, Value Proposition */}
             <div className="lg:col-span-7 flex flex-col items-start text-left gap-4 sm:gap-5">
               
-              {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
-              >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  ASTU Civil Engineering · 5th Year Capstone & Field Scope
-                </span>
-              </motion.div>
-
               {/* Headline */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -138,13 +136,11 @@ export const ServicesPage = () => {
                 className="space-y-1 sm:space-y-2"
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
-                  Disciplined Mechanics.{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                  <span className="text-zinc-900 dark:text-zinc-100 block select-text">
                     Comprehensive
                   </span>
-                  <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
-                    Civil & Structural Solutions.
+                  <span className="text-[#801834] dark:text-[#E84855] block select-text">
+                    Civil &amp; Structural Solutions.
                   </span>
                 </h1>
               </motion.div>
@@ -160,21 +156,7 @@ export const ServicesPage = () => {
                   5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU SoCEA). Delivering comprehensive engineering solutions across structural RC analysis, highway geometric alignments, geotechnical soil mechanics, and infrastructure design adhering to Ethiopian Building Code Standards (EBCS) and ERA manuals.
                 </p>
 
-                {/* Assurance & SLA Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 font-mono text-xs">
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold text-xs">EBCS & ERA Aligned</span>
-                  </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold text-xs">ASTU SoCEA Verified</span>
-                  </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold text-xs">Defense Ready</span>
-                  </div>
-                </div>
+
               </motion.div>
 
               {/* Signature Action Buttons (Exact Match to Home) */}
@@ -393,25 +375,7 @@ export const ServicesPage = () => {
           })}
         </div>
 
-        {/* ======================================================================= */}
-        {/* 3. CODE COMPLIANCE & MUNICIPAL STANDARDS MATRIX                         */}
-        {/* ======================================================================= */}
-        <div className="mb-24">
-          <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Ethiopian Standards & Eurocode Compliance
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Ethiopian Building Code & <span className="text-[#801834] dark:text-[#E84855]">ERA Provisions Matrix.</span>
-            </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Every structural design calculation, highway profile, and foundation verification conforms strictly with Ethiopian Building Code Standards (EBCS EN) and Ethiopian Roads Administration (ERA) specifications.
-            </p>
-          </div>
 
-          <CodeComplianceMatrix />
-        </div>
 
 
 
