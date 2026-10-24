@@ -139,7 +139,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           </h1>
 
           {/* Author Bento Badge */}
-          <div className="flex items-center gap-4 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-4 rounded-2xl border border-white/90 dark:border-white/10 shadow-sm">
+          <div className="flex items-center gap-4 py-3">
             <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-2 border-[#D4AF37] text-[#801834] dark:text-[#E84855] flex items-center justify-center font-bold text-sm shadow-xs">
               LT
             </div>
@@ -162,7 +162,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
         )}
 
         {/* Article Body Content */}
-        <div className="prose max-w-none text-base text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-6 mb-16 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 sm:p-12 rounded-3xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+        <div className="prose max-w-none text-base text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-6 mb-16">
           {article.content.split('\n\n').map((paragraph, index) => {
             if (paragraph.startsWith('### ')) {
               return (
@@ -190,7 +190,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
         </div>
 
         {/* Academic & ASTU Formal Citation Box */}
-        <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 sm:p-8 mb-16 shadow-lg">
+        <div className="p-6 sm:p-8 mb-16 border-t border-b border-zinc-200/80 dark:border-white/10">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-zinc-200/80 dark:border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
               <ShieldCheck size={16} />

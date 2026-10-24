@@ -178,19 +178,19 @@ export const Experience = () => {
                 </h1>
               </motion.div>
 
-              {/* Frosted Glass Narrative Card */}
+              {/* Narrative Content */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
+                className="w-full space-y-4"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
                   5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU SoCEA). A 5-year rigorous engineering journey across structural finite element mechanics, highway route alignments, geotechnical soil testing, and construction site internships.
                 </p>
 
                 {/* 4 Quantified Metrics */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 mt-4 border-t border-zinc-200/80 dark:border-white/10 font-mono">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                     <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
@@ -267,7 +267,7 @@ export const Experience = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col gap-4"
             >
-              <div className="relative rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] p-5 sm:p-6 overflow-hidden group">
+              <div className="relative w-full overflow-hidden group">
                 
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
@@ -495,7 +495,7 @@ export const Experience = () => {
         {/* ======================================================================= */}
         {/* 4. CREDENTIALS & CALL TO ACTION BANNER                                  */}
         {/* ======================================================================= */}
-        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
+        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
             <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-widest block mb-2 font-bold">Ready to Collaborate & Recruit</span>
             <h3 className="text-2xl lg:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Need Civil Engineering Talent or <span className="text-[#801834] dark:text-[#E84855]">Capstone Collaborations</span>?</h3>

@@ -327,7 +327,7 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Structural Metadata Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 rounded-3xl border border-white/90 dark:border-white/10 mb-12 shadow-sm">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 border-y border-zinc-200/80 dark:border-white/10 mb-12">
           <div className="p-2">
             <span className="text-[10px] font-mono uppercase text-zinc-500 block mb-1">Geographic Location</span>
             <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
@@ -458,7 +458,7 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Software Stack Used */}
-        <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
+        <div className="py-6 border-t border-zinc-200/80 dark:border-white/10 mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 tracking-widest block mb-1">
               Finite Element & BIM Software Tools Utilized
