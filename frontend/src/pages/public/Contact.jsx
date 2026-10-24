@@ -68,6 +68,13 @@ export const Contact = () => {
       type: 'Graduate Recruitment',
       subject: 'ASTU Civil Engineering 5th Year Graduate Opportunity',
       msg: 'We are looking to interview and recruit high-performing 5th-year graduating civil engineering candidates from ASTU SoCEA Class of 2026 for structural and site engineering positions.'
+    },
+    {
+      id: 'practical-site',
+      title: 'Practical Site Construction',
+      type: 'Site Supervision & QC',
+      subject: 'Practical Construction Site Supervision & Quality Control',
+      msg: 'Inquiring regarding on-site construction supervision, concrete batching & slump testing, Total Station setting out, and structural rebar pre-pour inspection with our graduating student team.'
     }
   ];
 

@@ -18,7 +18,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
-import { ValueEngineeringCalculator } from '../../components/engineering/ValueEngineeringCalculator';
 import { BeamShearMomentSolver } from '../../components/engineering/BeamShearMomentSolver';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
@@ -288,23 +287,23 @@ Phone: +251 91 123 4567
                   </a>
 
                   {/* Tool 2 */}
-                  <a
-                    href="#value-eng-tool"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group"
+                  <button
+                    onClick={() => handleDownload(defaultResources[3])}
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 text-left group"
                   >
                     <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
-                      <Activity size={20} />
+                      <FileText size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Value Engineering Calculator</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#801834] dark:text-[#E84855] font-bold">Savings</span>
+                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">RC Bar Bending Schedule (BBS)</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#801834] dark:text-[#E84855] font-bold">XLSX / BBS</span>
                       </div>
                       <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
-                        Quantify concrete volume, steel tonnage & embodied carbon reductions.
+                        Practical on-site bar cutting lengths, lap lengths &amp; steel tonnage sheet.
                       </p>
                     </div>
-                  </a>
+                  </button>
 
                   {/* Tool 3 */}
                   <button
@@ -445,25 +444,7 @@ Phone: +251 91 123 4567
           ))}
         </div>
 
-        {/* ======================================================================= */}
-        {/* 4. VALUE ENGINEERING ESTIMATOR                                          */}
-        {/* ======================================================================= */}
-        <div id="value-eng-tool" className="mb-24 scroll-mt-24">
-          <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Live Cost & Material Optimization Tool
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              <span className="text-[#801834] dark:text-[#E84855]">Value Engineering</span> & Carbon Offset Estimator.
-            </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
-            </p>
-          </div>
 
-          <ValueEngineeringCalculator />
-        </div>
 
         {/* ======================================================================= */}
         {/* 5. INTERACTIVE BEAM MECHANICS LABORATORY                                */}

@@ -96,8 +96,9 @@ export const Home = () => {
   const rotatingDisciplines = [
     'ASTU 5th Year Civil Engineering',
     'Reinforced Concrete & Shear Walls',
+    'Practical Construction & Site Supervision',
     'Highway Alignment & ERA Standards',
-    'Expansive Clay Foundation Sizing',
+    'Total Station Surveying & Concrete QC',
     'B.Sc. Graduation Capstone Defense'
   ];
   const [disciplineIndex, setDisciplineIndex] = useState(0);
@@ -112,16 +113,16 @@ export const Home = () => {
   // Fetch live settings and projects from API with fallback
   const { data: settingsData } = useFetch('/settings', {
     settings: {
-      engineerName: 'Lemma Techane',
-      title: '5th Year Civil Engineering Student | ASTU',
+      engineerName: 'Lemma Techane & Brothers',
+      title: '5th Year Civil Engineering | ASTU SoCEA',
       heroHeadlineLine1: 'Engineering Ethiopia.',
       heroHeadlineAccent: 'ASTU ',
       heroHeadlineLine2: 'Civil 5th Year.',
-      heroBio: 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.',
+      heroBio: '5th-year Civil Engineering students at Adama Science and Technology University (ASTU). Graduating together as brothers, we combine ETABS and Civil 3D design with practical site construction, concrete quality control, and field surveying across Ethiopia.',
       introVideoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-architectural-model-of-a-modern-building-41618-large.mp4',
       yearsExp: '5th Year',
       projectsCount: '25+',
-      safetyRecord: '100%',
+      safetyRecord: '100% Defense Ready',
       clientsCount: 'ASTU SoCEA'
     }
   });
@@ -233,10 +234,11 @@ export const Home = () => {
     { title: 'Hydraulic Capacity & Scour Protection for Bridges along the Modjo-Adama Transit Corridor', slug: 'hydraulic-capacity-scour-protection-bridges', category: 'Hydraulic & Highway', date: 'Aug 2026' }
   ];
 
-  // Marquee tools and building codes
+  // Marquee tools, construction skills and building codes
   const techMarquee = [
-    'ETABS 2024', 'SAP2000', 'AutoCAD Civil 3D', 'SAFE Concrete', 'Revit Structure', 'Prokon', 'ArcGIS', 'AutoCAD Detailing',
-    'EBCS EN 1992', 'EBCS EN 1998', 'ERA Highway Manual', 'Eurocode 2 & 8', 'ASTM & ACI 318'
+    'ASTU Civil 5th Year', 'Practical Site Supervision', 'Total Station Surveying', 'Concrete Slump & Cube QC',
+    'ETABS Structural', 'Rebar Detailing & BBS', 'AutoCAD Civil 3D', 'Field Density Compaction (FDT)',
+    'EBCS EN 1992', 'EBCS EN 1998', 'ERA Road Manuals', 'OCC Site Internship', 'SoCEA Brotherhood'
   ];
 
   const handleCopyEmail = () => {
@@ -755,15 +757,15 @@ export const Home = () => {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
-                Civil Engineering Built on <span className="text-[#D4AF37]">ASTU Academic Rigor.</span>
+                Civil Engineering Built on <span className="text-[#D4AF37]">Practical Construction &amp; Rigor.</span>
               </h2>
 
               <p className="text-[#54595F] text-base leading-relaxed">
-                Rooted at Adama Science and Technology University (ASTU), our 5-year civil engineering journey blends high-level mathematical theory with practical infrastructure projects. Alongside my engineering brothers, we tackle reinforced concrete design, highway alignment, and geotechnical challenges vital to Ethiopia's rapid urbanization.
+                At Adama Science and Technology University (ASTU), our 5-year journey combines design calculations with real on-site construction practice. Alongside my engineering brothers, we have completed site internships at Oromia Construction Corporation (OCC) — supervising concrete batching, slump testing, rebar detailing, and Total Station surveying for Ethiopian infrastructure.
               </p>
 
               <div className="bg-[#FFFFFF] border-l-2 border-[#D4AF37] p-5 text-sm text-[#54595F] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200">
-                "Civil engineering is the noble discipline of turning physical laws and local resources into the foundational backbone of society. As ASTU graduating students, our mission is to engineer durable, resilient infrastructure for our communities."
+                "Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
@@ -771,15 +773,15 @@ export const Home = () => {
                   <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 font-bold block">B.Sc. Civil Engineering (5th Year)</span>
-                    <span className="text-[10px] text-[#54595F]">Adama Science & Technology University (ASTU)</span>
+                    <span className="text-[10px] text-[#54595F]">Adama Science &amp; Technology University (ASTU)</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
-                  <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
+                  <HardHat className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block">100% Capstone Defense Readiness</span>
-                    <span className="text-[10px] text-[#54595F]">School of Civil Eng & Architecture (SoCEA)</span>
+                    <span className="text-xs text-zinc-900 font-bold block">Practical Construction &amp; Internship</span>
+                    <span className="text-[10px] text-[#54595F]">OCC Site Supervision &amp; ASTU Survey Camps</span>
                   </div>
                 </div>
               </div>
