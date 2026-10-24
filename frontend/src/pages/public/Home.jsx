@@ -581,60 +581,60 @@ export const Home = () => {
           <div className="mx-auto max-w-3xl text-center mb-14">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Engineering Capabilities & Performance
+              ASTU Civil Engineering Capabilities & Rigor
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
               Analyze. Calculate. <span className="text-[#D4AF37]">Deliver.</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-              Precision structural mechanics and finite element performance simulation for buildings and infrastructure designed to withstand extreme wind and seismic forces.
+              Precision structural mechanics, highway alignments, and geotechnical simulations developed by ASTU 5th-year civil engineering brothers.
             </p>
           </div>
 
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
             
-            {/* Bento Card 1: High-Rise Lateral Stability (Col 1-2) */}
+            {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
             <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
                 <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-xl"></div>
                 <Building2 size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">High-Rise Lateral Stability</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg">Multi-Story RC Structural Design</h3>
                 <p className="text-[#54595F] text-xs leading-relaxed">
-                  Dual core shear walls, perimeter belt trusses, and aerodynamic damping suppressing lateral drift in skyscrapers.
+                  Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
-                ETABS · ASCE 7-22 Wind Tunnel
+                ETABS · EBCS EN 1992 Concrete
               </div>
             </div>
 
-            {/* Bento Card 2: Non-Linear Seismic Modeling (Col 3-4) */}
+            {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
             <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
                 <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-xl"></div>
                 <Activity size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">Non-Linear Seismic Modeling</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg">Highway Alignment & ERA Standards</h3>
                 <p className="text-[#54595F] text-xs leading-relaxed">
-                  Dynamic response spectrum history analysis, viscous damper dissipation, and pushover assessments per FEMA P-58.
+                  Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
-                SAP2000 · Base Isolation
+                Civil 3D · Pavement Design
               </div>
             </div>
 
-            {/* Bento Card 3: Value Engineering Sparkline Graph (Col 5-6) */}
+            {/* Bento Card 3: Geotechnical & Foundation Sizing (Col 5-6) */}
             <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex size-8 items-center justify-center rounded-full bg-[#FEF9E7] text-[#D4AF37] border border-[#D4AF37]/30">
                     <ShieldCheck size={16} />
                   </div>
-                  <div className="font-mono text-xs font-bold text-zinc-900">100% Safety Record</div>
+                  <div className="font-mono text-xs font-bold text-zinc-900">100% Defense Readiness</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
@@ -649,13 +649,13 @@ export const Home = () => {
                 </svg>
               </div>
               <div className="relative z-10 mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">Value Engineering</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg">Geotechnical & Foundation Sizing</h3>
                 <p className="text-[#54595F] text-xs leading-relaxed">
-                  Post-tensioning and optimized finite element redistribution saving 20-30% concrete mass and steel tonnage.
+                  Raft foundations and settlement control on expansive black cotton soils in the Ethiopian Rift Valley.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
-                Peer Review · Quantity Audits
+                Expansive Soil · Mat Footings
               </div>
             </div>
 
@@ -667,16 +667,16 @@ export const Home = () => {
                     <Ruler size={20} className="text-[#D4AF37]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-semibold text-zinc-900 text-xl">3D Finite Element Simulation</h3>
+                    <h3 className="font-semibold text-zinc-900 text-xl">3D Finite Element Simulation & Code Standards</h3>
                     <p className="text-[#54595F] text-xs sm:text-sm leading-relaxed max-w-md">
-                      From ETABS building wind tunnel integration to Midas Civil bridge span dynamic response, calculations adhere to the highest international seismic and structural performance criteria.
+                      From ETABS multi-story building frame analysis to SAP2000 highway bridge girder design, calculations adhere to the highest Ethiopian and international performance criteria.
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ASCE 7-22</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">IBC 2024</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ACI 318-19</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">AISC 360</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">EBCS EN 1992</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">EBCS EN 1998</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ERA Standards</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">Eurocode 2 & 8</span>
                   </div>
                 </div>
                 <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
@@ -689,7 +689,7 @@ export const Home = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 font-mono text-[10px] text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                      ETABS v21 Live Non-Linear Stress Distribution
+                      ETABS Live Multi-Story RC Frame Stress Analysis
                     </div>
                   </div>
                 </div>
@@ -712,10 +712,10 @@ export const Home = () => {
               Live Dynamic Mechanics Simulation
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
-              Real-Time Lateral & Seismic <span className="text-[#D4AF37]">Load Path.</span>
+              Real-Time Structural & Seismic <span className="text-[#D4AF37]">Load Path.</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
-              Explore how wind aerodynamic drift, non-linear seismic ground motions, and gravitational vectors propagate through reinforced concrete cores and outrigger belt trusses down into bedrock.
+              Explore how gravity loads, wind pressures, and Rift Valley seismic motions propagate through reinforced concrete columns, shear walls, and foundation soils down to bedrock.
             </p>
           </div>
 
@@ -739,16 +739,16 @@ export const Home = () => {
                   <div className="aspect-[4/5] bg-zinc-100 overflow-hidden rounded-xl">
                     <img
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-                      alt="Lemma Senior Structural Engineer"
+                      alt="Lemma 5th Year Civil Engineering Student"
                       className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 bg-white/95 border border-zinc-200 p-4 text-xs font-mono rounded-xl shadow-md backdrop-blur-md">
                     <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
-                      <span>PE #84729-NY</span>
-                      <span>SE #92041-CA</span>
+                      <span>ASTU SoCEA</span>
+                      <span>Class of 2026</span>
                     </div>
-                    <span className="text-[10px] text-[#54595F] uppercase tracking-widest block font-medium">Licensed Structural Engineer & ASCE Fellow</span>
+                    <span className="text-[10px] text-[#54595F] uppercase tracking-widest block font-medium">Adama Science and Technology University · Civil Engineering</span>
                   </div>
                 </div>
               </div>
@@ -757,35 +757,35 @@ export const Home = () => {
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs w-max font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                Professional Background & Practice
+                Academic Journey & Engineering Brotherhood
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
-                Structural Engineering Behind <span className="text-[#D4AF37]">Visionary Architecture.</span>
+                Civil Engineering Built on <span className="text-[#D4AF37]">ASTU Academic Rigor.</span>
               </h2>
 
               <p className="text-[#54595F] text-base leading-relaxed">
-                With over 14 years of specialized structural practice across North America, I bridge the critical gap between audacious architectural imagination and uncompromising structural mechanics. My work ensures high-rise towers withstand extreme hurricane forces and heritage masonry survives intense seismic ground motion.
+                Rooted at Adama Science and Technology University (ASTU), our 5-year civil engineering journey blends high-level mathematical theory with practical infrastructure projects. Alongside my engineering brothers, we tackle reinforced concrete design, highway alignment, and geotechnical challenges vital to Ethiopia's rapid urbanization.
               </p>
 
               <div className="bg-[#FFFFFF] border-l-2 border-[#D4AF37] p-5 text-sm text-[#54595F] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200">
-                "Structural engineering should never be treated as an architectural limitation. When calculated with precision, physics becomes the catalyst that enables daring, column-free spaces."
+                "Civil engineering is the noble discipline of turning physical laws and local resources into the foundational backbone of society. As ASTU graduating students, our mission is to engineer durable, resilient infrastructure for our communities."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
                 <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
                   <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block">M.S. Structural Engineering</span>
-                    <span className="text-[10px] text-[#54595F]">Columbia University</span>
+                    <span className="text-xs text-zinc-900 font-bold block">B.Sc. Civil Engineering (5th Year)</span>
+                    <span className="text-[10px] text-[#54595F]">Adama Science & Technology University (ASTU)</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
                   <ShieldCheck className="text-[#D4AF37] w-5 h-5 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block">100% Safety Compliance</span>
-                    <span className="text-[10px] text-[#54595F]">Zero Audit Deficiencies</span>
+                    <span className="text-xs text-zinc-900 font-bold block">100% Capstone Defense Readiness</span>
+                    <span className="text-[10px] text-[#54595F]">School of Civil Eng & Architecture (SoCEA)</span>
                   </div>
                 </div>
               </div>
@@ -795,13 +795,13 @@ export const Home = () => {
                   to="/about"
                   className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] flex items-center gap-2 font-bold"
                 >
-                  Full Biography & Credentials <ArrowUpRight size={14} />
+                  Full Academic Profile & Credentials <ArrowUpRight size={14} />
                 </Link>
                 <a
                   href="/resources"
                   className="rounded-full bg-[#FFFFFF] text-[#54595F] border border-zinc-300 hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
                 >
-                  Download CV (PDF) <Download size={14} />
+                  Download Academic CV (PDF) <Download size={14} />
                 </a>
               </div>
             </div>
@@ -822,14 +822,14 @@ export const Home = () => {
                 Core Capabilities & Practice
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
-                Specialized Structural <span className="text-[#D4AF37]">Services & Advisory.</span>
+                Core Civil Engineering <span className="text-[#D4AF37]">Specializations & Capstones.</span>
               </h2>
               <p className="text-[#54595F] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
-                Comprehensive structural design, non-linear seismic assessment, and forensic building verification.
+                Comprehensive structural analysis, highway geometric modeling, and geotechnical evaluations developed at ASTU.
               </p>
             </div>
             <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 transition-colors flex items-center gap-2">
-              Explore All Services <ChevronRight size={16} />
+              Explore All Disciplines <ChevronRight size={16} />
             </Link>
           </div>
 
@@ -857,10 +857,10 @@ export const Home = () => {
       {/* ========================================================================= */}
       <section className="py-14 bg-[#FFFFFF] border-b border-zinc-200/80 transition-colors">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <StatCounter value={settings.yearsExp || '14+'} label="Years Experience" subtext="PE & SE Certified" />
-          <StatCounter value={settings.projectsCount || '180+'} label="Projects Completed" subtext="High-Rise & Infrastructure" />
-          <StatCounter value={settings.safetyRecord || '100%'} label="Structural Safety Record" subtext="Zero Critical Deficiencies" />
-          <StatCounter value={settings.clientsCount || '50+'} label="Corporate Clients" subtext="Architects & Developers" />
+          <StatCounter value={settings.yearsExp || '5th Year'} label="Academic Year" subtext="ASTU Graduating Class of 2026" />
+          <StatCounter value={settings.projectsCount || '25+'} label="Academic & Site Projects" subtext="Capstones, Labs & Internships" />
+          <StatCounter value={settings.safetyRecord || '100%'} label="Defense Readiness" subtext="Zero Critical Deficiencies" />
+          <StatCounter value={settings.clientsCount || 'ASTU SoCEA'} label="University School" subtext="Civil Eng & Architecture" />
         </div>
       </section>
 
@@ -873,13 +873,13 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                Featured Engineering Practice
+                ASTU Capstone & Field Practice
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
-                Landmark Structural <span className="text-[#D4AF37]">Projects.</span>
+                Featured Civil Engineering <span className="text-[#D4AF37]">Capstones.</span>
               </h2>
               <p className="text-[#54595F] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
-                Showcase of verified structural engineering, seismic retrofitting, and high-rise core designs.
+                Showcase of verified structural designs, highway link models, and expansive soil foundations engineered at ASTU.
               </p>
             </div>
             <Link 
@@ -914,7 +914,7 @@ export const Home = () => {
                       </span>
                     </div>
                     <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] bg-[#FFFFFF]/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200 shadow-xs font-semibold">
-                      PE-SE SEALED · {proj.year}
+                      ASTU CAPSTONE · {proj.year}
                     </div>
                   </div>
 
@@ -968,7 +968,7 @@ export const Home = () => {
                         Explore Case Study <ArrowUpRight size={13} />
                       </button>
                       <Link 
-                        to={`/projects/${proj.slug || 'nexus-commercial-tower'}`}
+                        to={`/projects/${proj.slug || 'astu-central-multipurpose-complex'}`}
                         className="text-[11px] font-mono text-[#54595F] hover:text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 font-semibold"
                       >
                         Dedicated Page →
@@ -985,18 +985,15 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 7.5 INTERACTIVE CAD & FEA BLUEPRINT INSPECTOR                             */}
       {/* ========================================================================= */}
-      {/* ========================================================================= */}
-      {/* 7.5 INTERACTIVE CAD & FEA BLUEPRINT INSPECTOR                             */}
-      {/* ========================================================================= */}
       <section className="py-20 md:py-28 bg-[#FFFFFF] border-t border-b border-zinc-200/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Multi-Layer CAD Telemetry Board
+              ASTU Multi-Layer CAD & FEA Telemetry Board
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
-              Interactive Drawing <span className="text-[#D4AF37]">Dossier & FEA Inspector.</span>
+              Interactive Capstone <span className="text-[#D4AF37]">Dossier & Structural Inspector.</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
               Toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles with certified code verification markers.
@@ -1008,7 +1005,7 @@ export const Home = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 8. ENGINEERING EDUCATION: "WHAT STRUCTURAL ENGINEERS DO"                  */}
+      {/* 8. ENGINEERING EDUCATION: "WHAT CIVIL ENGINEERS DO"                       */}
       {/* ========================================================================= */}
       <section className="py-24 bg-[#FFFFFF] border-b border-zinc-200/80 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
@@ -1016,13 +1013,13 @@ export const Home = () => {
           <div className="max-w-3xl mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Demystifying Structural Mechanics
+              Demystifying Civil Engineering at ASTU
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
-              What Does a Structural Engineer <span className="text-[#D4AF37]">Actually Do?</span>
+              What Does a Civil Engineer <span className="text-[#D4AF37]">Actually Do?</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
-              If an architect decides what a building looks like and how people live inside it, the structural engineer calculates how physics, gravity, wind, and earthquakes interact with the structure so it remains completely safe for generations.
+              While architects design functional spatial layouts, ASTU-trained civil engineers calculate the physical mechanics, soil stability, drainage, and structural frameworks to ensure communities have safe, resilient buildings and transport corridors.
             </p>
           </div>
 
@@ -1036,7 +1033,7 @@ export const Home = () => {
                   : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
               }`}
             >
-              Architect vs Engineer vs Builder
+              Architect vs Civil Engineer vs Builder
             </button>
             <button
               onClick={() => setActiveEducationTab('loadpath')}
@@ -1083,21 +1080,21 @@ export const Home = () => {
 
               <div className="rounded-2xl bg-[#FFFFFF] border-2 border-[#D4AF37] p-8 relative flex flex-col justify-between shadow-[0_0_25px_rgba(212,175,55,0.15)]">
                 <div className="absolute -top-3 right-6 bg-[#D4AF37] text-[#121417] text-[10px] font-mono font-extrabold uppercase px-3 py-0.5 tracking-wider rounded-full shadow-sm">
-                  Our Discipline
+                  Our ASTU Brotherhood
                 </div>
                 <div>
                   <div className="w-12 h-12 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-6 rounded-xl shadow-2xs">
                     <ShieldCheck size={26} />
                   </div>
                   <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-semibold">Physics & Stability</span>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-3">The Structural Engineer</h3>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">The Civil / Structural Engineer</h3>
                   <p className="text-xs text-[#54595F] leading-relaxed mb-4">
-                    Calculates how massive gravitational loads, hurricane winds, and earthquake ground shocks travel safely into the foundation without cracking or deflecting.
+                    Calculates force distributions, reinforcement rebar sizes, soil bearing capacity, and seismic safety to ensure structures remain rigid and safe under all loading conditions.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[#D4AF37]/30 text-[11px] text-[#D4AF37]">
                   <strong className="text-zinc-900 block mb-1">Key Deliverable:</strong>
-                  Stamped structural calculations, framing plans, beam/column schedules & PE/SE seals.
+                  Stamped structural calculations, reinforcement schedules, CAD drawings & EBCS compliance reports.
                 </div>
               </div>
 
@@ -1212,12 +1209,12 @@ export const Home = () => {
           {activeEducationTab === 'when' && (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'Removing Load-Bearing Walls', desc: 'Removing an interior wall requires calculating weight transfer to engineered steel beams so the upper roof does not sag.' },
-                { title: 'Adding Stories or Roof Decks', desc: 'Every added floor multiplies foundation dead load. An engineer verifies if existing columns can handle the new weight.' },
-                { title: 'Foundation Cracks & Settlement', desc: 'Differential settlement can tear drywall and jam doors. Engineers diagnose whether the issue is soil creep or shear failure.' },
-                { title: 'Commercial & Multi-Family Permitting', desc: 'City building departments legally mandate certified PE/SE structural calculation packages before granting permits.' },
-                { title: 'Seismic Retrofitting', desc: 'Older buildings built before 1994 require seismic damping upgrades to prevent brittle joint fracture during earthquakes.' },
-                { title: 'Third-Party Peer Reviews', desc: 'Developers hire independent engineers to verify calculations and eliminate redundant concrete/steel, saving millions.' }
+                { title: 'Multi-Story Building Design & Permitting', desc: 'Ensures compliance with Ethiopian Building Code Standards (EBCS) and municipal building safety guidelines before construction permits are issued.' },
+                { title: 'Expansive Black Cotton Soil Foundations', desc: 'Rift Valley expansive soils demand engineered mat or deep foundations to prevent severe foundation heave and wall cracking.' },
+                { title: 'Highway Alignment & Route Grading', desc: 'Civil 3D geometric optimization aligns roads with ERA standards, maximizing driving safety while minimizing cut-and-fill costs.' },
+                { title: 'Bridge Crossing & Culvert Hydraulics', desc: 'Hydraulic calculations determine proper flood opening sizes to prevent washouts and scour around abutments during flash rains.' },
+                { title: 'Structural Renovation & Story Additions', desc: 'Adding extra floors multiplies gravity loads. A structural audit verifies if existing concrete columns and footings can safely carry the weight.' },
+                { title: 'Value Engineering & Material Optimization', desc: 'Optimizing rebar schedules and concrete strength ratios saves developers and public agencies significant budget while guaranteeing structural safety.' }
               ].map((item, idx) => (
                 <div key={idx} className="group rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:border-[#D4AF37]/50 transition-all">
                   <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-mono font-bold uppercase mb-2">
@@ -1244,13 +1241,13 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                Industry Endorsements & Client Trust
+                Academic Endorsements & Brotherhood Trust
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
-                Verified Client <span className="text-[#D4AF37]">Testimonials.</span>
+                Faculty & Peer <span className="text-[#D4AF37]">Endorsements.</span>
               </h2>
               <p className="text-[#54595F] text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
-                Direct evaluations and technical endorsements from collaborating architects, developers, and civic engineering authorities.
+                Direct academic evaluations and technical recommendations from ASTU professors, internship supervisors, and engineering brothers.
               </p>
             </div>
 
@@ -1263,7 +1260,7 @@ export const Home = () => {
                   ))}
                 </div>
                 <span className="text-[11px] font-mono text-[#54595F] mt-1 font-semibold">
-                  5.0 ★ Rating from 40+ Projects
+                  5.0 ★ Rating from ASTU Faculty & Mentors
                 </span>
               </div>
             </div>
@@ -1291,7 +1288,7 @@ export const Home = () => {
             <div className="py-16 text-center bg-[#FFFFFF] rounded-2xl border border-zinc-200 mb-12 shadow-sm">
               <MessageSquareQuote className="mx-auto w-10 h-10 text-zinc-400 mb-2" />
               <p className="text-[#54595F] text-xs font-mono uppercase tracking-wider">
-                No client endorsements match the selected category.
+                No endorsements match the selected category.
               </p>
             </div>
           ) : (
@@ -1351,15 +1348,15 @@ export const Home = () => {
                 <ShieldCheck size={26} />
               </div>
               <div>
-                <h4 className="text-base font-bold text-zinc-900">100% Structural Safety & Peer-Review Track Record</h4>
-                <p className="text-xs text-[#54595F] mt-0.5">Every project engineered to exceed IBC, ASCE 7, and ACI standards with zero structural drift failures.</p>
+                <h4 className="text-base font-bold text-zinc-900">100% Capstone Defense & Structural Rigor Track Record</h4>
+                <p className="text-xs text-[#54595F] mt-0.5">Every project engineered in strict compliance with Ethiopian Building Code Standards (EBCS), ERA Manuals, and Eurocodes.</p>
               </div>
             </div>
             <Link
               to="/contact"
               className="rounded-full bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-[#c49f2c] transition-all shadow-sm shrink-0 inline-flex items-center gap-2"
             >
-              Request Consultation <ArrowUpRight size={14} />
+              Connect With Us <ArrowUpRight size={14} />
             </Link>
           </div>
 
@@ -1375,13 +1372,13 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                Engineering Publications & Research
+                ASTU Student Research & Technical Notes
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
-                Technical Notes & <span className="text-[#D4AF37]">Engineering Articles.</span>
+                Technical Notes & <span className="text-[#D4AF37]">Research Papers.</span>
               </h2>
               <p className="text-[#54595F] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
-                Peer-reviewed methodologies, seismic mitigation insights, and modern material specifications.
+                EBCS code evaluations, expansive black cotton soil mitigation, and hydraulic design notes.
               </p>
             </div>
             <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-zinc-900 transition-colors flex items-center gap-2">
@@ -1393,7 +1390,7 @@ export const Home = () => {
             {insights.slice(0, 3).map((article, i) => (
               <Link 
                 key={i} 
-                to={`/insights/${article.slug || 'innovations-high-strength-c80-concrete'}`} 
+                to={`/insights/${article.slug || 'mitigating-differential-settlement-expansive-soils'}`} 
                 className="flex flex-col justify-between p-6 rounded-2xl bg-[#FFFFFF] border border-zinc-200/80 hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
               >
                 <div>
@@ -1423,10 +1420,10 @@ export const Home = () => {
               Optimization Feasibility Model
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
-              Value Engineering & <span className="text-[#D4AF37]">Embodied Carbon Estimator.</span>
+              Structural Material Optimization & <span className="text-[#D4AF37]">Cost Estimator.</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
-              Estimate potential structural cost reductions, concrete volume conservation, and schedule acceleration achieved through advanced finite element redistribution and post-tensioning.
+              Estimate potential concrete volume savings and rebar optimization through advanced finite element redistribution and local Ethiopian material planning.
             </p>
           </div>
 
@@ -1442,13 +1439,13 @@ export const Home = () => {
           <div className="text-center mb-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Consultation & Engagement
+              Academic & Graduate Opportunities
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
-              Have Questions? <span className="text-[#D4AF37]">Get in Touch!</span>
+              Have Inquiries? <span className="text-[#D4AF37]">Connect with Our Team!</span>
             </h2>
             <p className="text-[#54595F] text-sm md:text-base leading-relaxed">
-              Inquire about project feasibilities, structural code compliance audits, or specialized high-rise structural design.
+              Inquire about 2026 graduate engineer recruitment, B.Sc. capstone collaborations, or civil engineering consulting.
             </p>
           </div>
 
@@ -1458,7 +1455,7 @@ export const Home = () => {
             <div className="grid gap-px overflow-hidden bg-zinc-200 rounded-2xl border border-zinc-200 md:grid-cols-3 shadow-md">
               {/* Card 1: Email */}
               <a 
-                href="mailto:consult@lemma-structural.com" 
+                href="mailto:astu.civil.lemma@gmail.com" 
                 className="flex items-center gap-3 bg-[#FFFFFF] p-5 shadow-xs transition-colors hover:bg-zinc-50 group"
               >
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
@@ -1466,13 +1463,13 @@ export const Home = () => {
                 </div>
                 <div className="flex flex-col gap-y-0.5 overflow-hidden">
                   <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
-                  <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">consult@lemma-structural.com</p>
+                  <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">astu.civil.lemma@gmail.com</p>
                 </div>
               </a>
 
               {/* Card 2: Phone */}
               <a 
-                href="tel:+15550198472" 
+                href="tel:+251911234567" 
                 className="flex items-center gap-3 bg-[#FFFFFF] p-5 shadow-xs transition-colors hover:bg-zinc-50 group"
               >
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
@@ -1480,7 +1477,7 @@ export const Home = () => {
                 </div>
                 <div className="flex flex-col gap-y-0.5">
                   <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
-                  <p className="text-xs font-mono text-[#54595F] group-hover:text-[#D4AF37] transition-colors">+1 (555) 019-8472</p>
+                  <p className="text-xs font-mono text-[#54595F] group-hover:text-[#D4AF37] transition-colors">+251 91 123 4567</p>
                 </div>
               </a>
 
@@ -1490,8 +1487,8 @@ export const Home = () => {
                   <MapPin size={18} />
                 </div>
                 <div className="flex flex-col gap-y-0.5">
-                  <h4 className="text-sm font-bold text-zinc-900">Office Headquarters</h4>
-                  <p className="text-xs font-mono text-[#54595F]">New York, NY (EST · GMT-5)</p>
+                  <h4 className="text-sm font-bold text-zinc-900">ASTU Main Campus</h4>
+                  <p className="text-xs font-mono text-[#54595F]">School of Civil Eng & Architecture (EAT · UTC+3)</p>
                 </div>
               </div>
             </div>
@@ -1501,14 +1498,14 @@ export const Home = () => {
           {/* Full Consultation Trigger Banner */}
           <div className="bg-[#FFFFFF] border border-zinc-200/90 p-8 sm:p-10 rounded-3xl text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-md">
             <div className="text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5">Ready to Evaluate Your Project's Structural Integrity?</h3>
-              <p className="text-xs sm:text-sm text-[#54595F]">Submit project drawings, lateral load requirements, or request a third-party peer review.</p>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5">Interested in Collaborating on Civil Engineering Projects?</h3>
+              <p className="text-xs sm:text-sm text-[#54595F]">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
             </div>
             <button
               onClick={() => navigate('/contact')}
               className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] shrink-0 flex items-center gap-2 active:scale-95"
             >
-              Initiate Inquiry <ArrowUpRight size={14} />
+              Connect With Us <ArrowUpRight size={14} />
             </button>
           </div>
 

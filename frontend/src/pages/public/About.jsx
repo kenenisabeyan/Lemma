@@ -65,7 +65,7 @@ export const About = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Senior Structural Engineer · NY PE #84729-SE & CA SE #61902
+                  ASTU Civil Engineering · 5th Year Graduating Class of 2026
                 </span>
               </motion.div>
 
@@ -77,13 +77,13 @@ export const About = () => {
                 className="space-y-1 sm:space-y-2"
               >
                 <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
-                  Engineered for Resilience.{' '}
+                  Engineered for Ethiopia.{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
                     Grounded
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
-                    in Physics.
+                    in ASTU Excellence.
                   </span>
                 </h1>
               </motion.div>
@@ -96,7 +96,7 @@ export const About = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  Over 14 years of professional practice delivering robust structural design solutions for high-rise commercial developments, heavy civil infrastructure, and complex architectural steel frames. My philosophy balances non-linear computational mechanics with bold spatial elegance.
+                  Graduating 5th-year Civil Engineering candidate and student cohort at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA). Our engineering journey unites advanced computational modeling (ETABS, SAP2000, Civil 3D) with rigorous field geotechnical investigations, Ethiopian standards (EBCS & ERA), and hands-on site experience across national infrastructure projects.
                 </p>
 
                 {/* Authority Badges */}
@@ -104,22 +104,22 @@ export const About = () => {
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
                     <GraduationCap size={16} className="text-[#D4AF37] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">Columbia Univ.</span>
-                      <span className="text-[9px] text-zinc-500">M.S. Structural</span>
+                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">ASTU SoCEA</span>
+                      <span className="text-[9px] text-zinc-500">B.Sc. Civil Eng. 2026</span>
                     </div>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
                     <ShieldCheck size={16} className="text-[#D4AF37] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">100% Safety</span>
-                      <span className="text-[9px] text-zinc-500">Zero Deficiencies</span>
+                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">100% Defense Ready</span>
+                      <span className="text-[9px] text-zinc-500">Capstone Excellence</span>
                     </div>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
                     <Building2 size={16} className="text-[#D4AF37] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">180+ Delivered</span>
-                      <span className="text-[9px] text-zinc-500">High-Rise & Bridges</span>
+                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">25+ Capstone Projects</span>
+                      <span className="text-[9px] text-zinc-500">RC, Highway & Soils</span>
                     </div>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export const About = () => {
                   className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
                 >
                   <ShieldCheck size={16} />
-                  <span>VERIFY PE/SE CREDENTIALS</span>
+                  <span>VERIFY ASTU ACADEMIC CREDENTIALS</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
 
@@ -148,7 +148,7 @@ export const About = () => {
                   className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
                 >
                   <Download size={14} className="text-[#D4AF37]" />
-                  <span>DOWNLOAD CV (PDF)</span>
+                  <span>DOWNLOAD DOSSIER (PDF)</span>
                 </button>
               </motion.div>
 
@@ -160,16 +160,16 @@ export const About = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">14+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Years Practice</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">$850M+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Built Value</span>
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">25+</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Structural Projects</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Safety Record</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">ASTU SoCEA Brotherhood</span>
                 </div>
               </motion.div>
 
@@ -188,10 +188,10 @@ export const About = () => {
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Active Board Licensure</span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">ASTU SoCEA Candidate</span>
                   </div>
                   <span className="text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider bg-amber-500/10 px-2 py-0.5 rounded-full border border-[#D4AF37]/30">
-                    NY PE & CA SE
+                    Class of 2026
                   </span>
                 </div>
 
@@ -199,24 +199,24 @@ export const About = () => {
                 <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner group">
                   <img
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-                    alt="Lemma Techane Senior Structural Engineer"
+                    alt="Lemma Techane & ASTU 5th Year Civil Engineering Brothers"
                     className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
                   {/* Stamp badge */}
                   <div className="absolute top-4 right-4 bg-white/95 dark:bg-zinc-900/90 border border-[#D4AF37] px-3.5 py-1 text-[11px] font-mono font-bold text-[#801834] dark:text-[#E84855] uppercase tracking-wider rounded-full shadow-md backdrop-blur-md">
-                    Lic #84729-SE
+                    ASTU/SoCEA/2026
                   </div>
 
                   {/* Bottom Portrait Caption */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <div className="flex items-center gap-1.5 text-xs font-mono text-[#D4AF37] mb-1">
                       <ShieldCheck size={14} />
-                      <span>Sealed & Verified Practice</span>
+                      <span>ASTU Verified Candidate</span>
                     </div>
-                    <h3 className="text-xl font-black text-white leading-tight">Lemma Techane, PE, SE</h3>
-                    <p className="text-xs text-zinc-300 font-mono">Senior Principal · Structural & Civil Engineering</p>
+                    <h3 className="text-xl font-black text-white leading-tight">Lemma Techane</h3>
+                    <p className="text-xs text-zinc-300 font-mono">5th Year Civil Engineering Student · ASTU SoCEA</p>
                   </div>
                 </div>
 
@@ -226,7 +226,7 @@ export const About = () => {
                     href="#pe-portal"
                     className="flex-1 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(212,175,55,0.3)] text-center cursor-pointer"
                   >
-                    <span>Open Licensure Seal Portal</span>
+                    <span>Open Student Verification Portal</span>
                     <ArrowUpRight size={13} />
                   </a>
                 </div>
@@ -249,19 +249,20 @@ export const About = () => {
         <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 sm:p-12 mb-24 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-bold">Core Practice Philosophy</span>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-bold">Core Academic & Field Philosophy</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-zinc-100 mb-6 leading-tight max-w-3xl">
-            Precision Physics Meets Architectural Geometry
+            Precision Engineering Meets Ethiopian Infrastructure
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
             <p>
-              I believe structural engineering is the invisible foundation of visionary architecture. Great engineering does not constrain architectural form; it empowers ambitious geometry through rigorous mechanical physics, spatial efficiency, and material precision.
+              We believe civil engineering is the foundation of national transformation. As 5th-year students at Adama Science and Technology University, our brotherhood bridges advanced computational theory with practical reality on Ethiopian soil — from Rift Valley seismic zones to expansive black cotton foundations.
             </p>
             <p>
-              Every design is subjected to comprehensive 3D non-linear dynamic spectrum analysis, ensuring structural integrity under extreme earthquake dynamics, hurricane-force wind drift, and long-term thermal expansion cycles.
+              Every capstone design is executed with thorough 3D structural analysis in ETABS and SAP2000, validated against EBCS EN 1992, EBCS EN 1998, and ERA Highway Geometric Design manuals for maximum safety and sustainability.
             </p>
           </div>
+        </div>
         </div>
 
         {/* ======================================================================= */}
@@ -308,7 +309,7 @@ export const About = () => {
             Professional Journey & Track Record
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-12">
-            Engineering <span className="text-[#801834] dark:text-[#E84855]">Career Progression.</span>
+            Academic & Field <span className="text-[#801834] dark:text-[#E84855]">Progression.</span>
           </h3>
 
           <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-white/10 pl-8 ml-4">
@@ -334,10 +335,10 @@ export const About = () => {
         <div className="mb-24">
           <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-bold">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-            Official Licensure & Credentials
+            Academic Honors & Technical Certifications
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
-            Licensure & <span className="text-[#801834] dark:text-[#E84855]">Board Certifications.</span>
+            Academic Credentials & <span className="text-[#801834] dark:text-[#E84855]">Certifications.</span>
           </h3>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -369,13 +370,13 @@ export const About = () => {
           <div className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Live Licensure Credential System
+              Live Academic Credential System
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Digital Seal & <span className="text-[#801834] dark:text-[#E84855]">PE/SE Verification.</span>
+              Student Credential & <span className="text-[#801834] dark:text-[#E84855]">Capstone Verification.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Verify active professional licensure credentials or generate a project-specific compliance certification package stamped with official New York PE and California SE credentials.
+              Verify ASTU 5th-year academic standing, capstone thesis credentials, and EBCS / ERA compliance records verified by the School of Civil Engineering & Architecture.
             </p>
           </div>
 
@@ -389,20 +390,20 @@ export const About = () => {
           <div className="text-left max-w-2xl">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Select Mandates</span>
+              <span>Available for Graduate Engagements & Capstone Defense</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-2">
-              Have a Structural Project in Mind?
+              Have an Infrastructure Project or Graduate Role in Mind?
             </h3>
             <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              From schematic framing layout to stamped PE/SE structural drawing sets and peer reviews — let's engineer something extraordinary together.
+              From structural RC framing analysis to highway alignments and geotechnical soil testing — let's connect and build Ethiopia's future together.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
           >
-            <span>Schedule Consultation</span>
+            <span>Connect With Us</span>
             <ArrowUpRight size={15} />
           </button>
         </div>

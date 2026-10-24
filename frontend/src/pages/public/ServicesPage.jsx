@@ -30,62 +30,62 @@ export const ServicesPage = () => {
   const servicesList = (data?.services && data.services.length > 0) ? data.services : [
     {
       id: '1',
-      title: 'Structural Analysis & Engineering Design',
+      title: 'Structural RC & Multi-Story Framing Design',
       icon: 'Building2',
-      summary: 'Advanced 3D linear and non-linear structural modeling for high-rise, commercial, and industrial facilities.',
-      description: 'Comprehensive analysis from concept schematic phase through detailed construction documentation, ensuring structural safety, efficiency, and full building code compliance.',
-      features: '["Wind and seismic dynamic response analysis","Gravity load system optimization & foundation design","3D BIM modeling and Tekla structural detailing","Code compliance auditing (IBC, ACI 318, AISC 360, ASCE 7)"]'
+      summary: 'Advanced 3D linear and dynamic modeling for multi-story residential, commercial, and mixed-use structures.',
+      description: 'Comprehensive analysis from architectural schematics through structural framing details in ETABS and SAP2000, ensuring seismic safety under EBCS EN 1998 (Zone 4) and EBCS EN 1992.',
+      features: '["3D finite element structural analysis in ETABS & SAP2000","Reinforced concrete shear wall & moment frame detailing","Earthquake response spectrum analysis (EBCS EN 1998 Zone 4)","Complete structural drawing packages & bar bending schedules"]'
     },
     {
       id: '2',
-      title: 'Reinforced Concrete & Steel Systems',
+      title: 'Highway Geometric & Pavement Engineering',
       icon: 'Layers',
-      summary: 'Specialized member detailing and steel connection specification for heavy structural frameworks.',
-      description: 'Tailored structural design for reinforced concrete cores, post-tensioned floor systems, composite steel beams, and complex truss geometries.',
-      features: '["Post-tensioned slab & beam calculations","Precast concrete structural system design","High-capacity structural steel connection detailing","Material optimization for reduced carbon footprint"]'
+      summary: 'Road alignment design, earthwork mass-haul balancing, and flexible pavement structure design in AutoCAD Civil 3D.',
+      description: 'Field-tested geometric route design adhering to Ethiopian Roads Administration (ERA) manuals, optimizing cut-fill volumes and drainage cross-sections.',
+      features: '["AutoCAD Civil 3D corridor modeling & digital terrain modeling","Horizontal & vertical curve optimization with super-elevation","Flexible & rigid pavement thickness design per ERA manuals","Culvert sizing, side drains, and hydrological runoff routing"]'
     },
     {
       id: '3',
-      title: 'Seismic Retrofitting & Structural Assessment',
+      title: 'Geotechnical Soil Investigation & Foundations',
       icon: 'ShieldCheck',
-      summary: 'Rigorous structural health evaluations, failure analysis, and earthquake resilience retrofits.',
-      description: 'Protecting legacy buildings and heritage structures through non-destructive testing, pushover analysis, and state-of-the-art seismic isolation upgrades.',
-      features: '["Non-destructive testing (NDT) & concrete coring analysis","FEMA P-58 seismic performance estimation","Base isolation and fluid viscous damper integration","Structural repair after seismic or blast events"]'
+      summary: 'Laboratory soil classification, consolidation testing, and deep/shallow foundation design on expansive soils.',
+      description: 'Rigorous geotechnical characterization of Adama and Rift Valley black cotton soils, providing lime-stabilization schemes and safe mat/pile foundation solutions.',
+      features: '["Atterberg limits, sieve analysis, and Proctor compaction testing","Direct shear, unconfined compression & consolidation testing","Bearing capacity calculations for isolated and mat footings","Expansive soil stabilization strategies per EBCS EN 1997"]'
     },
     {
       id: '4',
-      title: 'Technical Advisory & Peer Review',
+      title: 'Water Resources & Hydraulic Infrastructure',
       icon: 'Ruler',
-      summary: 'Independent third-party peer review and structural cost-optimization consulting for developers.',
-      description: 'Providing strategic technical guidance for architects, general contractors, and project owners to eliminate design redundancies and prevent construction delays.',
-      features: '["Third-party structural calculation verification","Value engineering and material quantity optimization","Expert witness & forensic structural investigation","Constructability reviews and site quality control"]'
+      summary: 'Hydrological catchment modeling, storm drainage networks, and reinforced concrete culvert engineering.',
+      description: 'Designing sustainable water conveyance structures, municipal storm drainage systems, and bridge pier hydraulic clearances.',
+      features: '["Catchment runoff peak discharge estimation (Rational & SCS methods)","Storm sewer networks & hydraulic grade line (HGL) calculations","Reinforced concrete box and pipe culvert structural design","Erosion protection and energy dissipator engineering"]'
     }
   ];
 
   const heroPillars = [
     {
-      title: 'FEA Analysis & Modeling',
-      short: 'ETABS & SAP2000 non-linear 3D dynamic simulations',
+      title: 'Structural RC & ETABS FEA',
+      short: 'EBCS EN 1992/1998 3D dynamic simulations & framing',
       icon: Building2,
-      metric: '52-Story Superstructures'
+      metric: 'B+G+10 Capstone'
     },
     {
-      title: 'Post-Tensioned Concrete & Steel',
-      short: 'Long-span structural slab & heavy steel connection design',
+      title: 'Highway Civil 3D & ERA',
+      short: 'Route geometry, super-elevation & pavement layers',
       icon: Layers,
-      metric: '35% Span Optimization'
+      metric: '45 km Trunk Route'
     },
     {
-      title: 'Seismic Retrofit & Auditing',
-      short: 'FEMA P-58 pushover curves & fluid viscous damper systems',
+      title: 'Geotechnical & Soils',
+      short: 'Expansive clay stabilization & raft foundation design',
       icon: ShieldCheck,
-      metric: 'ASCE 41-17 Compliance'
+      metric: 'Rift Valley Soils'
     },
     {
-      title: 'Peer Review & Value Eng',
-      short: 'Independent third-party verification & material reduction',
+      title: 'Surveying & Site Engineering',
+      short: 'Total Station topography, GPS & field layout camps',
       icon: Ruler,
-      metric: '15-25% Cost Savings'
+      metric: 'ASTU Field Camps'
     }
   ];
 
@@ -127,7 +127,7 @@ export const ServicesPage = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Engineering Scope of Practice · NY PE & CA SE
+                  ASTU Civil Engineering · 5th Year Capstone & Field Scope
                 </span>
               </motion.div>
 
@@ -145,7 +145,7 @@ export const ServicesPage = () => {
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
-                    Structural Solutions.
+                    Civil & Structural Solutions.
                   </span>
                 </h1>
               </motion.div>
@@ -158,22 +158,22 @@ export const ServicesPage = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  Delivering high-performance structural engineering across all phases of development — from schematic load path conception and 3D FEA numerical simulations to stamped calculation packages and constructability peer reviews.
+                  5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU SoCEA). Delivering comprehensive engineering solutions across structural RC analysis, highway geometric alignments, geotechnical soil mechanics, and infrastructure design adhering to Ethiopian Building Code Standards (EBCS) and ERA manuals.
                 </p>
 
                 {/* Assurance & SLA Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-4 mt-4 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold text-xs">PE/SE Stamped</span>
+                    <span className="font-semibold text-xs">EBCS & ERA Aligned</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold text-xs">IBC & ASCE 7-22</span>
+                    <span className="font-semibold text-xs">ASTU SoCEA Verified</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2 text-zinc-800 dark:text-zinc-200">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold text-xs">Fast Peer Review</span>
+                    <span className="font-semibold text-xs">Defense Ready</span>
                   </div>
                 </div>
               </motion.div>
@@ -190,7 +190,7 @@ export const ServicesPage = () => {
                   onClick={() => navigate('/contact')}
                   className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
                 >
-                  <span>REQUEST CONSULTATION</span>
+                  <span>CONNECT WITH US</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </button>
 
@@ -200,7 +200,7 @@ export const ServicesPage = () => {
                   className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
                 >
                   <Layers size={15} className="text-[#D4AF37]" />
-                  <span>EXPLORE 4 PILLARS</span>
+                  <span>EXPLORE 4 DISCIPLINES</span>
                 </a>
               </motion.div>
 
@@ -213,15 +213,15 @@ export const ServicesPage = () => {
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">4</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Core Services</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Core Disciplines</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">14+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Years Practice</span>
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">PE/SE Stamped</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Readiness</span>
                 </div>
               </motion.div>
 
@@ -291,7 +291,7 @@ export const ServicesPage = () => {
 
                 {/* Quick Action below pillars */}
                 <div className="mt-4 pt-3.5 border-t border-zinc-200/80 dark:border-white/10 flex items-center justify-between text-xs font-mono">
-                  <span className="text-zinc-500 text-[11px]">IBC 2024 · ASCE 7-22 · ACI 318</span>
+                  <span className="text-zinc-500 text-[11px]">EBCS EN 1992 · EBCS EN 1998 · ERA 2024</span>
                   <a
                     href="#service-modules"
                     className="font-bold text-[#801834] dark:text-[#E84855] hover:underline flex items-center gap-1"
@@ -401,13 +401,13 @@ export const ServicesPage = () => {
           <div className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Regulatory & Code Compliance Auditor
+              Ethiopian Standards & Eurocode Compliance
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Municipal Code & <span className="text-[#801834] dark:text-[#E84855]">Provisions Matrix.</span>
+              Ethiopian Building Code & <span className="text-[#801834] dark:text-[#E84855]">ERA Provisions Matrix.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Every design calculation and structural drawing package adheres strictly to the latest edition of American and international structural codes.
+              Every structural design calculation, highway profile, and foundation verification conforms strictly with Ethiopian Building Code Standards (EBCS EN) and Ethiopian Roads Administration (ERA) specifications.
             </p>
           </div>
 
@@ -427,7 +427,7 @@ export const ServicesPage = () => {
               Wind Tunnel Aerodynamics & <span className="text-[#801834] dark:text-[#E84855]">Vortex Shedding Simulator.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Test skyscraper geometries against ASCE 7-22 wind tunnel criteria. Assess corner chamfering, through-aperture venting, and ISO 10137 occupant acceleration thresholds under hurricane winds.
+              Test building and tower geometries against EBCS EN 1991 wind action criteria. Assess cross-wind drag reduction, corner chamfering, and vortex shedding dynamics under Ethiopian meteorological conditions.
             </p>
           </div>
 
@@ -439,16 +439,16 @@ export const ServicesPage = () => {
         {/* ======================================================================= */}
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
           <div className="text-left max-w-2xl">
-            <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Require Specialized Structural Analysis?</h3>
+            <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Require Civil & Structural Engineering Collaboration?</h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Let's discuss FEA dynamic modeling, IBC code certifications, post-tensioned floor systems, or third-party peer reviews for your project.
+              Let's discuss reinforced concrete analysis, ERA highway alignments, expansive soil foundation design, or capstone collaborations with our ASTU 5th-year student team.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
           >
-            <span>Schedule Consultation</span>
+            <span>Connect With Our Team</span>
             <ArrowUpRight size={15} />
           </button>
         </div>
