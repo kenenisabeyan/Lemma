@@ -31,87 +31,87 @@ export const Experience = () => {
 
   const engineeringMilestones = [
     {
-      year: '2024 - 2025',
-      title: '52-Story Dual Core Outrigger Tower (Nexus Tower)',
-      category: 'Commercial High-Rise',
-      value: '$340M Construction Value',
-      role: 'Lead Structural Engineer',
-      location: 'Metropolis Financial District, NY',
-      achievement: 'Pioneered an aerodynamic outrigger belt truss coupled with viscoelastic dampers that lowered peak wind drift acceleration by 38% under 140mph hurricane wind tunnel simulations.',
+      year: '2025 - 2026',
+      title: 'B+G+10 Mixed-Use RC Capstone Tower (Adama CBD)',
+      category: 'Structural RC & Tall Buildings',
+      value: 'ASTU Capstone Defense',
+      role: 'Lead Capstone Engineer',
+      location: 'Adama CBD, Oromia, Ethiopia',
+      achievement: 'Pioneered 3D non-linear dynamic response spectrum modeling in ETABS to design a 10-story dual shear wall-moment frame resisting Great Rift Valley Zone 4 seismic ground accelerations.',
       highlights: [
-        'Integrated C80 ultra-high strength concrete core shear walls with reduced carbon footprint mix design',
-        'Maximized column-free interior floor plates by 35% using unbonded post-tensioned slabs',
-        'Achieved LEED Platinum structural rating and zero vibration comfort complaints'
+        'EBCS EN 1998:2014 & EBCS EN 1992:2014 compliant reinforced concrete detailing',
+        'Engineered 1.2m mat raft foundation with perimeter retaining walls for expansive Adama clay',
+        'Achieved 98% defense readiness rating from ASTU SoCEA senior academic review board'
+      ]
+    },
+    {
+      year: '2025',
+      title: 'Awash River Highway Bridge Capstone Project',
+      category: 'Bridge & Hydraulic Engineering',
+      value: 'ERA & ASTU Joint Study',
+      role: 'Bridge Design Candidate',
+      location: 'Awash River Corridor, Ethiopia',
+      achievement: 'Engineered a 120-meter three-span continuous post-tensioned concrete box girder bridge traversing seasonal high-velocity river discharges.',
+      highlights: [
+        'Conducted HEC-RAS hydrological flood discharge modeling and scouring calculations',
+        'Analyzed longitudinal girder prestressing profiles and tendon losses per ERA Bridge Manual',
+        'Designed reinforced concrete pier shafts with cast-in-place drilled pile groups'
+      ]
+    },
+    {
+      year: '2024',
+      title: 'Oromia Construction Corporation (OCC) Internship',
+      category: 'Professional Site Internship',
+      value: '4-Month Field Internship',
+      role: 'Assistant Site Engineer',
+      location: 'Adama & Regional Sites, Ethiopia',
+      achievement: 'Assisted senior resident engineers in reinforcing bar inspections, slump testing, concrete cube crushing, and Total Station column axial alignment checks on commercial building sites.',
+      highlights: [
+        'Managed daily batching plant quality control records and slump cone testing',
+        'Monitored contractor bar bending schedules against approved structural drawing sets',
+        'Coordinated site safety and concrete curing protocols under hot arid climate conditions'
       ]
     },
     {
       year: '2023 - 2024',
-      title: '450m Cable-Stayed River Suspension Bridge',
-      category: 'Civil Infrastructure',
-      value: '$220M Construction Value',
-      role: 'Principal Bridge Engineer',
-      location: 'West River Transit Corridor',
-      achievement: 'Supervised full incremental launching analysis for lightweight orthotropic steel deck plates across an active navigation channel without interrupting shipping commerce.',
+      title: 'Geotechnical & Soil Mechanics Laboratory Campaign',
+      category: 'Geotechnical Soil Testing',
+      value: 'ASTU Central Geotechnical Lab',
+      role: 'Lab Lead & Researcher',
+      location: 'ASTU Main Campus, Adama',
+      achievement: 'Led laboratory testing of expansive black cotton clays across East Shoa zone, determining Atterberg limits, consolidation coefficients, and optimal lime stabilization ratios.',
       highlights: [
-        'Executed 3D non-linear dynamic seismic response history modeling in SAP2000 and Midas Civil',
-        'Integrated lead-rubber seismic bearings (LRB) at pylon abutments for 1,000-year return period resilience',
-        'Extended projected infrastructure design lifespan to 120 years'
-      ]
-    },
-    {
-      year: '2022 - 2023',
-      title: 'Solaria Geodesic 80m Cultural Dome',
-      category: 'Special Structures',
-      value: '$95M Construction Value',
-      role: 'Senior Structural Designer',
-      location: 'San Francisco, CA',
-      achievement: 'Designed column-free spherical space frame dome using Rhino Grasshopper parametric algorithms and ANSYS finite element stress concentration simulations.',
-      highlights: [
-        'Engineered custom spherical node pin joints with energy-dissipating metallic yield dampers',
-        'Validated against asymmetric snow drift and severe seismic near-fault ground motions',
-        'Received Structural Engineering Excellence Award (SEAoNY)'
-      ]
-    },
-    {
-      year: '2020 - 2022',
-      title: 'Historic 12-Story Mid-Century Steel Frame Seismic Retrofit',
-      category: 'Seismic Rehabilitation',
-      value: '$65M Construction Value',
-      role: 'Lead Forensic & Retrofit Specialist',
-      location: 'Downtown Commercial Core',
-      achievement: 'Preserved architectural heritage while bringing pre-1980 brittle welded flange moment connections up to contemporary ASCE 41-17 seismic rehabilitation standards.',
-      highlights: [
-        'Installed exterior buckling-restrained braced frames (BRBF) to minimize tenant disruption',
-        'Applied non-destructive ultrasonic testing and carbon fiber composite wraps (CFRP) on critical floor beams',
-        'Saved client an estimated $18M versus structural demolition and rebuild'
+        'Executed Proctor compaction, California Bearing Ratio (CBR), and unconfined compression tests',
+        'Formulated 4% to 6% hydrated lime chemical stabilization mixes to mitigate soil swelling',
+        'Co-authored technical laboratory reports published in ASTU departmental archive'
       ]
     }
   ];
 
   const structuralCompetencies = [
     {
-      title: 'High-Rise Lateral Stability Systems',
-      desc: 'Expertise in dual core shear walls, perimeter framed tubes, outrigger belt trusses, and tuned mass dampers (TMD) for ultra-slender architectural towers.'
+      title: 'Reinforced Concrete Structural Analysis (ETABS & SAP2000)',
+      desc: 'Expertise in 3D finite element frame modeling, shear wall core design, and response spectrum analysis compliant with EBCS EN 1992 and EBCS EN 1998.'
     },
     {
-      title: 'Performance-Based Seismic Engineering',
-      desc: 'Non-linear pushover simulations, dynamic response spectrum analyses, and FEMA P-58 probabilistic seismic damage and economic loss estimations.'
+      title: 'Highway Alignment & Route Geometry (Civil 3D)',
+      desc: 'Digital terrain modeling, horizontal/vertical curve design, super-elevation calculations, and earthwork cut/fill balancing per ERA Geometric Design Manual.'
     },
     {
-      title: 'Post-Tensioned & High-Performance Concrete',
-      desc: 'Optimization of unbonded and bonded post-tensioned flat plates, transfer girders, and C80/C90 silica fume high-strength concrete mixes (ACI 318).'
+      title: 'Geotechnical Soil Mechanics & Foundation Engineering',
+      desc: 'Laboratory classification, Atterberg limits, CBR testing, bearing capacity evaluation, and lime stabilization for expansive black cotton soils per EBCS EN 1997.'
     },
     {
-      title: 'Heavy Structural Steel & Connection Detailing',
-      desc: 'Rigorous calculation of moment connections, column splices, base plates, and braced frame gussets compliant with AISC 360 and AISC 341 seismic provisions.'
+      title: 'Hydraulic Structures & Drainage Networks',
+      desc: 'Hydrological runoff calculations using Rational and SCS methods, storm drainage sewer sizing, and reinforced concrete box/pipe culvert structural engineering.'
     },
     {
-      title: 'Forensic Engineering & Structural Health Audits',
-      desc: 'Non-destructive testing (NDT), ultrasonic pulse velocity, vibration monitoring, crack propagation mapping, and root-cause failure investigations.'
+      title: 'Field Surveying & Geodetic Layout Camps',
+      desc: 'Topographical surveying with Total Station, GPS/GNSS boundary traversing, leveling networks, and structural grid pegging conducted during ASTU surveying camps.'
     },
     {
-      title: 'Value Engineering & Material Quantity Reduction',
-      desc: 'Systematic calculation refinements that safely eliminate structural redundancies, achieving an average of 18% to 25% material cost savings.'
+      title: 'Ethiopian Standards & Engineering Specifications',
+      desc: 'Systematic application of Ethiopian Building Code Standards (EBCS EN), ERA manuals, and Ministry of Urban Development & Infrastructure guidelines.'
     }
   ];
 
@@ -155,7 +155,7 @@ export const Experience = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Career Trajectory & Milestone Records · 2012 – Present
+                  ASTU Civil Engineering · 5-Year Academic Trajectory (2021 – 2026)
                 </span>
               </motion.div>
 
@@ -167,13 +167,13 @@ export const Experience = () => {
                 className="space-y-1 sm:space-y-2"
               >
                 <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
-                  A Proven Legacy of{' '}
+                  A Dedicated Journey of{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
-                    Structural
+                    Academic
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
-                    Innovation & Scale.
+                    & Field Engineering.
                   </span>
                 </h1>
               </motion.div>
@@ -186,26 +186,26 @@ export const Experience = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  Over 14 years of verified principal engineering practice leading the analysis, wind tunnel design, seismic protection, and stamped execution of over $850M+ in constructed civil and commercial infrastructure.
+                  5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU SoCEA). A 5-year rigorous engineering journey across structural finite element mechanics, highway route alignments, geotechnical soil testing, and construction site internships.
                 </p>
 
                 {/* 4 Quantified Metrics */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 mt-4 border-t border-zinc-200/80 dark:border-white/10 font-mono">
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">$850M+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Valuation</span>
+                    <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">180+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Deliverables</span>
+                    <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">25+</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Capstones</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">14+ Yrs</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Practice</span>
+                    <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5 Yrs</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">ASTU SoCEA</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                     <span className="block text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400 font-mono">100%</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Safety Audit</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
                   </div>
                 </div>
               </motion.div>
@@ -245,16 +245,16 @@ export const Experience = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">$850M+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Built Value</span>
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">180+</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">25+</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Projects Led</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">14+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Years Practice</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
                 </div>
               </motion.div>
 
@@ -497,10 +497,10 @@ export const Experience = () => {
         {/* ======================================================================= */}
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-widest block mb-2 font-bold">Ready to Collaborate</span>
-            <h3 className="text-2xl lg:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Need an Expert <span className="text-[#801834] dark:text-[#E84855]">Structural Engineer</span> for Your Project?</h3>
+            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-widest block mb-2 font-bold">Ready to Collaborate & Recruit</span>
+            <h3 className="text-2xl lg:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Need Civil Engineering Talent or <span className="text-[#801834] dark:text-[#E84855]">Capstone Collaborations</span>?</h3>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Available for high-rise peer reviews, dynamic seismic analysis, value engineering audits, and complete construction documentation.
+              Available for graduate civil engineering positions, structural modeling projects, ERA highway alignment tasks, and technical consultations with our ASTU 5th-year student cohort.
             </p>
           </div>
 
@@ -509,14 +509,14 @@ export const Experience = () => {
               onClick={() => navigate('/resources')}
               className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
             >
-              <span>Download Full CV (PDF)</span>
+              <span>Download Student Dossier (PDF)</span>
               <Download size={14} className="text-[#D4AF37]" />
             </button>
             <button
               onClick={() => navigate('/contact')}
               className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D4AF37]"
             >
-              <span>Request Consultation</span>
+              <span>Connect With Us</span>
               <ArrowUpRight size={14} />
             </button>
           </div>

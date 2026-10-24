@@ -159,60 +159,60 @@ export const CaseStudyPage = () => {
   const fallbackProjects = [
     {
       id: '1',
-      title: 'Nexus Commercial Tower',
-      slug: 'nexus-commercial-tower',
-      category: 'Commercial High-Rise',
-      location: 'Metropolis City, NY',
-      year: '2025',
-      client: 'Apex Global Real Estate',
-      role: 'Lead Structural Engineer',
-      structuralSystem: 'Dual Core Shear Wall & Outrigger Truss System',
-      materials: 'C80 High-Strength Concrete, Grade 65 Structural Steel',
-      description: 'A 52-story state-of-the-art skyscraper featuring a striking cantilevered glass atrium and high-velocity wind damping systems.',
-      challenge: 'Designing a wind-resistant structural core for a 52-story building in a high-velocity wind zone over soft clay strata.',
-      engineeringApproach: 'Utilized ETABS wind-tunnel dynamic integration, high-performance viscoelastic dampers, and deep drilled shaft caissons extending to bedrock.',
-      solution: 'Engineered a perimeter belt truss coupled with post-tensioned floor slabs to maximize interior clear-span space by 35%.',
-      result: 'Completed 2 months ahead of schedule, achieving LEED Platinum certification and zero structural vibration compliance issues.',
+      title: 'Adama CBD Mixed-Use Commercial Tower (B+G+10)',
+      slug: 'adama-cbd-tower',
+      category: 'Structural RC & Tall Buildings',
+      location: 'Adama CBD, Oromia, Ethiopia',
+      year: '2026',
+      client: 'ASTU SoCEA Final Year Capstone Committee',
+      role: 'Lead Structural Capstone Engineer',
+      structuralSystem: 'Reinforced Concrete Dual System (Shear Walls + Moment Resisting Frames)',
+      materials: 'C-30/37 Concrete, Grade 500 High-Yield Ribbed Reinforcement Bars',
+      description: 'Comprehensive B.Sc. capstone engineering design of an 11-story mixed-use commercial tower in downtown Adama, engineered to resist seismic forces in Great East African Rift Valley Zone 4.',
+      challenge: 'High seismic ground acceleration in the Main Ethiopian Rift corridor coupled with high bearing pressure requirements on local soils.',
+      engineeringApproach: 'Conducted 3D finite element dynamic response spectrum analysis in ETABS 2022 and SAP2000, adhering strictly to Ethiopian Building Code Standards EBCS EN 1998:2014 and EBCS EN 1992:2014.',
+      solution: 'Engineered centrally coupled core shear walls, 220mm two-way floor slabs, and a 1.2m reinforced concrete mat raft foundation with perimeter retaining walls.',
+      result: 'Earned 98% defense readiness grade from ASTU School of Civil Engineering & Architecture faculty advisory board.',
       imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
-      softwareUsed: JSON.stringify(['ETABS', 'SAP2000', 'REVIT Structure', 'SAFE', 'RISA-3D'])
+      softwareUsed: JSON.stringify(['ETABS', 'SAP2000', 'AutoCAD Civil 3D', 'SAFE'])
     },
     {
       id: '2',
-      title: 'Avalon River Suspension Bridge',
-      slug: 'avalon-river-bridge',
-      category: 'Infrastructure & Bridges',
-      location: 'West River County',
-      year: '2024',
-      client: 'State Transportation Dept',
-      role: 'Principal Bridge Engineer',
-      structuralSystem: 'Steel Cable-Stayed Deck System with UHPC Pylons',
-      materials: 'Weathering Steel, Ultra-High Performance Concrete',
-      description: 'A 450-meter main span cable-stayed bridge handling 80,000 vehicles daily.',
-      challenge: 'Seismic retrofitting and deck installation without disrupting daily river and highway traffic flow.',
-      engineeringApproach: 'Implemented incremental launching method for steel deck segments and dynamic seismic response spectrum analysis in SAP2000.',
-      solution: 'Designed lightweight orthotropic steel deck plates with lead-rubber seismic isolation bearings at pylon abutments.',
-      result: 'Restored vital economic transit corridor with a projected 120-year design life.',
+      title: 'Awash River Highway Bridge Capstone',
+      slug: 'awash-river-bridge',
+      category: 'Bridge & Highway Engineering',
+      location: 'Awash River Crossing, Oromia / Afar Corridor',
+      year: '2025',
+      client: 'ERA / ASTU SoCEA Capstone Directorate',
+      role: 'Lead Bridge & Hydraulic Engineer',
+      structuralSystem: 'Post-Tensioned Concrete Box Girder & Reinforced Pier Shafts',
+      materials: 'C-40/50 High-Strength Concrete, Low-Relaxation Prestressing Strands',
+      description: 'A 120-meter three-span continuous prestressed concrete highway bridge designed across the Awash River gorge along the central freight corridor.',
+      challenge: 'Seasonal torrential flash floods, scouring risks, and long-span deflections over soft alluvial gorge deposits.',
+      engineeringApproach: 'Combined hydrological peak discharge estimation (HEC-RAS) with 3D structural longitudinal girder modeling in SAP2000 and ERA Bridge Design Manual 2024.',
+      solution: 'Designed multi-cell post-tensioned box sections with deep drilled cast-in-place concrete pile groups protected by rip-rap stone pitching.',
+      result: 'Complete calculation dossier and detailed AutoCAD drawing sheets validated by ASTU senior faculty advisors.',
       imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
-      softwareUsed: JSON.stringify(['SAP2000', 'Midas Civil', 'ANSYS', 'AutoCAD 2025'])
+      softwareUsed: JSON.stringify(['SAP2000', 'AutoCAD', 'HEC-RAS', 'Civil 3D'])
     },
     {
       id: '3',
-      title: 'Solaria Cultural Center & Dome',
-      slug: 'solaria-cultural-center',
-      category: 'Special Structures',
-      location: 'San Francisco, CA',
+      title: 'Adama-Wonji Express Highway Route & Pavement',
+      slug: 'adama-wonji-highway',
+      category: 'Bridge & Highway Engineering',
+      location: 'Adama - Wonji Corridor, Ethiopia',
       year: '2025',
-      client: 'Civic Arts Foundation',
-      role: 'Senior Structural Designer',
-      structuralSystem: 'Geodesic Steel Space Frame Dome with Tension Fabric Membrane',
-      materials: 'Architectural Glazing, Hollow Structural Sections (HSS), Stainless Steel Nodes',
-      description: 'An iconic column-free 80-meter diameter spherical dome serving as an amphitheater and museum auditorium.',
-      challenge: 'High seismic acceleration zone combined with irregular asymmetric geometry and heavy snow/wind load combinations.',
-      engineeringApproach: 'Conducted finite element geometric non-linear displacement analysis under extreme dynamic earthquake response spectra.',
-      solution: 'Engineered node connection pin joints with energy-dissipating yield dampers at foundational ring beams.',
-      result: 'Featured in Architectural Record for structural transparency and structural elegance.',
-      imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
-      softwareUsed: JSON.stringify(['ANSYS', 'Rhino Grasshopper', 'Tekla Structures', 'ETABS'])
+      client: 'Oromia Roads Authority / ASTU Academic Internship',
+      role: 'Highway & Surveying Engineer',
+      structuralSystem: 'Flexible Asphalt Concrete Pavement & Super-elevated Alignment',
+      materials: 'Hot Mix Asphalt (HMA), Crushed Stone Base Course, Lime-Stabilized Subgrade',
+      description: 'A 28-kilometer trunk road geometric design and multi-layered flexible pavement system designed using AutoCAD Civil 3D per ERA Geometric Design Manual.',
+      challenge: 'Traversing expansive black cotton soil zones prone to severe seasonal swelling and shrinkage cracks.',
+      engineeringApproach: 'Conducted comprehensive laboratory soil classification (Atterberg limits, CBR, and Proctor compaction) and mass-haul cut/fill optimization.',
+      solution: 'Specified a 400mm lime-stabilized capping layer topped with 150mm crushed stone base course and 60mm asphalt concrete surfacing.',
+      result: 'Optimized cut-and-fill earthworks by 22%, ensuring cost-effective construction and durability over a 20-year design life.',
+      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      softwareUsed: JSON.stringify(['AutoCAD Civil 3D', 'ERA Geometric Manual', 'ArcGIS'])
     }
   ];
 
@@ -322,7 +322,7 @@ export const CaseStudyPage = () => {
           {/* Engineering Blueprint Label */}
           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-white/30 text-xs font-mono shadow-md">
             <span className="text-[#801834] dark:text-[#E84855] font-bold">PROJECT CODE: {project.slug?.toUpperCase()}</span>
-            <span className="text-zinc-600 dark:text-zinc-300 hidden sm:inline font-semibold">PE/SE SEAL CERTIFIED • ASCE 7 / IBC COMPLIANT</span>
+            <span className="text-zinc-600 dark:text-zinc-300 hidden sm:inline font-semibold">ASTU SoCEA VERIFIED • EBCS EN & ERA COMPLIANT</span>
           </div>
         </div>
 
@@ -411,7 +411,7 @@ export const CaseStudyPage = () => {
             </p>
             <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 p-4 border border-zinc-200/80 dark:border-white/5 text-xs text-zinc-600 dark:text-zinc-300 flex items-center gap-3">
               <Cpu className="text-[#801834] dark:text-[#E84855] shrink-0" size={18} />
-              <span>Full non-linear dynamic spectrum analysis, gravity load redistribution modeling, and wind tunnel pressure coefficients validated against IBC seismic design criteria.</span>
+              <span>Full 3D dynamic response spectrum analysis, lateral stiffness checks, and seismic shear wall distribution validated against EBCS EN 1998 Zone 4 and EBCS EN 1992.</span>
             </div>
           </div>
 
@@ -512,16 +512,16 @@ export const CaseStudyPage = () => {
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-10 text-center shadow-xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-3">
-              Facing a <span className="text-[#801834] dark:text-[#E84855]">Complex</span> Structural Engineering Challenge?
+              Facing an <span className="text-[#801834] dark:text-[#E84855]">Ambitious</span> Civil or Structural Engineering Challenge?
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
-              Let's evaluate your project drawings, lateral load requirements, and value engineering possibilities with senior engineering rigor.
+              Connect with our ASTU 5th-year graduating civil engineering team to review technical drawings, EBCS code compliance, or explore capstone graduate collaborations.
             </p>
             <button
               onClick={() => navigate('/contact')}
               className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] inline-flex items-center gap-2 cursor-pointer"
             >
-              <span>Initiate Consultation Inquiry</span>
+              <span>Connect With Our Team</span>
               <ArrowUpRight size={16} className="text-[#121417]" />
             </button>
           </div>

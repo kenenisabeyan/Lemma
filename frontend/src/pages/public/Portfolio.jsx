@@ -366,7 +366,7 @@ export const Portfolio = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
-              placeholder="Search tower, bridge, concrete, steel..."
+              placeholder="Search capstone, RC frame, highway, soil..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 pl-10 pr-9 py-2.5 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
@@ -391,7 +391,7 @@ export const Portfolio = () => {
         {filteredProjects.length === 0 ? (
           <div className="py-24 text-center bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl rounded-3xl border border-zinc-200/80 dark:border-white/10 mb-20 shadow-xs">
             <HardHat className="w-12 h-12 text-[#D4AF37] mx-auto mb-4 opacity-75" />
-            <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No structural projects match your search.</p>
+            <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No capstone projects match your search.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
@@ -425,7 +425,7 @@ export const Portfolio = () => {
               Interactive Drawing <span className="text-[#801834] dark:text-[#E84855]">Dossier & FEA Inspector.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Examine project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
+              Examine capstone project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
             </p>
           </div>
 
@@ -439,20 +439,20 @@ export const Portfolio = () => {
           <div className="text-left max-w-2xl">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Select Mandates</span>
+              <span>Available for Graduate Recruitment & Capstone Collaborations</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-3">
-              Have a High-Stakes Project Requiring Stamped Verification?
+              Interested in Capstone Research or Engineering Recruitment?
             </h3>
             <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Available for preliminary structural feasibility review, independent FEA peer reviews, and complete PE/SE calculations packages across commercial, residential, and infrastructure portfolios.
+              Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
           >
-            <span>Schedule Consultation</span>
+            <span>Connect With Us</span>
             <ArrowUpRight size={15} />
           </button>
         </div>
