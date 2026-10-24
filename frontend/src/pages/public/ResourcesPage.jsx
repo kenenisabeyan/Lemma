@@ -97,9 +97,9 @@ CORE TECHNICAL GUIDANCE (ETHIOPIAN PRACTICE):
 4. Highway horizontal and vertical curves must strictly satisfy ERA Geometric Design Manual 2024 specifications.
 
 For academic consultation or capstone collaboration:
-Email: astu.civil.lemma@gmail.com
+Email: lemmayezedlij21@gmail.com
 Campus: ASTU Main Campus, SoCEA Building, Adama, Ethiopia
-Phone: +251 91 123 4567
+Phone: +251 934 830 919
 =====================================================`;
 
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });

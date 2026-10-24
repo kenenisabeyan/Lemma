@@ -242,7 +242,7 @@ export const Home = () => {
   ];
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('astu.civil.lemma@gmail.com');
+    navigator.clipboard.writeText('lemmayezedlij21@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -1196,7 +1196,7 @@ export const Home = () => {
           <div className="grid gap-6 md:grid-cols-3 mb-12">
             {/* Item 1: Email */}
             <a 
-              href="mailto:astu.civil.lemma@gmail.com" 
+              href="mailto:lemmayezedlij21@gmail.com" 
               className="flex items-center gap-3.5 py-4 group"
             >
               <div className="flex size-12 shrink-0 items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
@@ -1204,13 +1204,13 @@ export const Home = () => {
               </div>
               <div className="flex flex-col gap-y-0.5 overflow-hidden">
                 <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
-                <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">astu.civil.lemma@gmail.com</p>
+                <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">lemmayezedlij21@gmail.com</p>
               </div>
             </a>
 
             {/* Item 2: Phone */}
             <a 
-              href="tel:+251911234567" 
+              href="tel:+251934830919" 
               className="flex items-center gap-3.5 py-4 group"
             >
               <div className="flex size-12 shrink-0 items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
@@ -1218,7 +1218,7 @@ export const Home = () => {
               </div>
               <div className="flex flex-col gap-y-0.5">
                 <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
-                <p className="text-xs font-mono text-[#54595F] group-hover:text-[#D4AF37] transition-colors">+251 91 123 4567</p>
+                <p className="text-xs font-mono text-[#54595F] group-hover:text-[#D4AF37] transition-colors">+251 934 830 919</p>
               </div>
             </a>
 

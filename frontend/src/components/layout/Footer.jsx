@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('astu.civil.lemma@gmail.com');
+    navigator.clipboard.writeText('lemmayezedlij21@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -132,11 +132,11 @@ export const Footer = () => {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Phone className="text-[#D4AF37] w-4 h-4 shrink-0" />
-                  <a href="tel:+251911234567" className="hover:text-[#D4AF37] transition-colors font-mono">+251 91 123 4567</a>
+                  <a href="tel:+251934830919" className="hover:text-[#D4AF37] transition-colors font-mono">+251 934 830 919</a>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail className="text-[#D4AF37] w-4 h-4 shrink-0" />
-                  <a href="mailto:astu.civil.lemma@gmail.com" className="hover:text-[#D4AF37] transition-colors font-mono truncate">astu.civil.lemma@gmail.com</a>
+                  <a href="mailto:lemmayezedlij21@gmail.com" className="hover:text-[#D4AF37] transition-colors font-mono truncate">lemmayezedlij21@gmail.com</a>
                 </li>
               </ul>
             </div>

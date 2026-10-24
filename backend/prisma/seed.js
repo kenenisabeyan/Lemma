@@ -32,9 +32,11 @@ async function main() {
       projectsCount: '25+',
       safetyRecord: '100%',
       clientsCount: 'ASTU SoCEA',
-      email: 'astu.civil.lemma@gmail.com',
-      phone: '+251 91 123 4567',
-      officeAddress: 'School of Civil Engineering & Architecture, ASTU Main Campus, Adama, Ethiopia'
+      email: 'lemmayezedlij21@gmail.com',
+      phone: '+251 934 830 919',
+      officeAddress: 'School of Civil Engineering & Architecture, ASTU Main Campus, Adama, Ethiopia',
+      metaTitle: 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
+      metaDescription: 'Personal portfolio and technical civil engineering dossier of Lemma Techane and 5th-year Civil Engineering graduating cohort at Adama Science and Technology University (ASTU).'
     },
     create: {
       id: 'default',
@@ -47,9 +49,11 @@ async function main() {
       projectsCount: '25+',
       safetyRecord: '100%',
       clientsCount: 'ASTU SoCEA',
-      email: 'astu.civil.lemma@gmail.com',
-      phone: '+251 91 123 4567',
-      officeAddress: 'School of Civil Engineering & Architecture, ASTU Main Campus, Adama, Ethiopia'
+      email: 'lemmayezedlij21@gmail.com',
+      phone: '+251 934 830 919',
+      officeAddress: 'School of Civil Engineering & Architecture, ASTU Main Campus, Adama, Ethiopia',
+      metaTitle: 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
+      metaDescription: 'Personal portfolio and technical civil engineering dossier of Lemma Techane and 5th-year Civil Engineering graduating cohort at Adama Science and Technology University (ASTU).'
     }
   });
 

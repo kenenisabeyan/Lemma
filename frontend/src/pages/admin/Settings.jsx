@@ -17,8 +17,8 @@ export const Settings = () => {
     projectsCount: initialSettings.projectsCount || '25+',
     safetyRecord: initialSettings.safetyRecord || '100% Defense Readiness',
     clientsCount: initialSettings.clientsCount || 'ASTU SoCEA',
-    email: initialSettings.email || 'astu.civil.lemma@gmail.com',
-    phone: initialSettings.phone || '+251 91 123 4567',
+    email: initialSettings.email || 'lemmayezedlij21@gmail.com',
+    phone: initialSettings.phone || '+251 934 830 919',
     officeAddress: initialSettings.officeAddress || 'Main Campus, SoCEA Building, Adama Science and Technology University, Adama, Ethiopia',
     metaTitle: initialSettings.metaTitle || 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
     metaDescription: initialSettings.metaDescription || 'Academic capstone portfolio and technical dossier of 5th-year Civil Engineering students at Adama Science and Technology University (ASTU).'
