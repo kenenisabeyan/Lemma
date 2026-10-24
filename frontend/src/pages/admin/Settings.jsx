@@ -12,7 +12,7 @@ export const Settings = () => {
     engineerName: initialSettings.engineerName || 'Lemma Techane & Brothers',
     title: initialSettings.title || '5th Year Civil Engineering | ASTU SoCEA Class of 2026',
     heroTagline: initialSettings.heroTagline || 'Engineering Ethiopia. Precision in Every Structure.',
-    heroBio: initialSettings.heroBio || '5th-year graduating Civil Engineering cohort at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA). Specializing in reinforced concrete capstones, seismic design in the Great Rift Valley, ERA highway geometric modeling, and expansive soil stabilization.',
+    heroBio: initialSettings.heroBio || '5th-year Civil Engineering team at ASTU SoCEA specializing in reinforced concrete design, ERA highway modeling, and expansive soil stabilization.',
     yearsExp: initialSettings.yearsExp || '5th Year',
     projectsCount: initialSettings.projectsCount || '25+',
     safetyRecord: initialSettings.safetyRecord || '100% Defense Readiness',

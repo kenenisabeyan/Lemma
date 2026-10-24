@@ -129,11 +129,24 @@ async function main() {
     });
   }
 
-  // 4. Seed Services (Core Academic & Engineering Competencies)
+  // 4. Seed Services (8 Core Academic & Engineering Competencies)
   const servicesData = [
     {
-      title: 'Structural Analysis & Reinforced Concrete Design',
+      title: 'Structural Analysis & Engineering Design',
       icon: 'Building2',
+      summary: 'Comprehensive analysis from concept schematic phase through detailed construction documentation, ensuring structural safety, efficiency, and full building code compliance.',
+      description: 'Comprehensive analysis from concept schematic phase through detailed construction documentation, ensuring structural safety, efficiency, and full building code compliance.',
+      features: JSON.stringify([
+        'Wind and seismic dynamic response analysis',
+        'Gravity load system optimization & foundation design',
+        '3D BIM modeling and Tekla structural detailing',
+        'Code compliance auditing (IBC, ACI 318, AISC 360, ASCE 7)'
+      ]),
+      order: 1
+    },
+    {
+      title: 'Structural Analysis & Reinforced Concrete Design',
+      icon: 'Cpu',
       summary: '3D finite element structural modeling and rebar detailing for multi-story buildings per EBCS & Eurocodes.',
       description: 'Comprehensive structural analysis from preliminary conceptual schemes through detailed construction drawings, ensuring structural safety, stability, and code compliance.',
       features: JSON.stringify([
@@ -142,11 +155,24 @@ async function main() {
         'Detailed reinforcement schedules and bar bending lists in AutoCAD',
         'Compliance auditing with EBCS EN 1992 (Concrete) and EBCS EN 1998 (Seismic)'
       ]),
-      order: 1
+      order: 2
+    },
+    {
+      title: 'Reinforced Concrete & Steel Systems',
+      icon: 'Layers',
+      summary: 'Tailored structural design for reinforced concrete cores, post-tensioned floor systems, composite steel beams, and complex truss geometries.',
+      description: 'Tailored structural design for reinforced concrete cores, post-tensioned floor systems, composite steel beams, and complex truss geometries.',
+      features: JSON.stringify([
+        'Post-tensioned slab & beam calculations',
+        'Precast concrete structural system design',
+        'High-capacity structural steel connection detailing',
+        'Material optimization for reduced carbon footprint'
+      ]),
+      order: 3
     },
     {
       title: 'Highway Alignment & Geometric Design',
-      icon: 'Layers',
+      icon: 'Compass',
       summary: 'Highway corridor route selection, horizontal/vertical curvature design, and earthwork calculations using Civil 3D.',
       description: 'Engineering transportation networks adhering to Ethiopian Roads Administration (ERA) geometric and pavement standards for safe, durable roads.',
       features: JSON.stringify([
@@ -155,7 +181,20 @@ async function main() {
         'Flexible and rigid pavement thickness design per ERA manuals',
         'Roadway drainage channels, culverts, and intersection layouts'
       ]),
-      order: 2
+      order: 4
+    },
+    {
+      title: 'Seismic Retrofitting & Structural Assessment',
+      icon: 'Activity',
+      summary: 'Protecting legacy buildings and heritage structures through non-destructive testing, pushover analysis, and state-of-the-art seismic isolation upgrades.',
+      description: 'Protecting legacy buildings and heritage structures through non-destructive testing, pushover analysis, and state-of-the-art seismic isolation upgrades.',
+      features: JSON.stringify([
+        'Non-destructive testing (NDT) & concrete coring analysis',
+        'FEMA P-58 seismic performance estimation',
+        'Base isolation and fluid viscous damper integration',
+        'Structural repair after seismic or blast events'
+      ]),
+      order: 5
     },
     {
       title: 'Geotechnical Engineering & Foundation Design',
@@ -168,12 +207,25 @@ async function main() {
         'Laboratory soil testing (Atterberg limits, sieve analysis, Proctor compaction)',
         'Slope stability and retaining wall stability calculations'
       ]),
-      order: 3
+      order: 6
+    },
+    {
+      title: 'Technical Advisory & Peer Review',
+      icon: 'FileCheck2',
+      summary: 'Providing strategic technical guidance for architects, general contractors, and project owners to eliminate design redundancies and prevent construction delays.',
+      description: 'Providing strategic technical guidance for architects, general contractors, and project owners to eliminate design redundancies and prevent construction delays.',
+      features: JSON.stringify([
+        'Third-party structural calculation verification',
+        'Value engineering and material quantity optimization',
+        'Expert witness & forensic structural investigation',
+        'Constructability reviews and site quality control'
+      ]),
+      order: 7
     },
     {
       title: 'Water Resources & Infrastructure Capstone Consulting',
-      icon: 'Ruler',
-      summary: 'Hydraulic calculations, stormwater drainage networks, and academic peer reviews for engineering capstones.',
+      icon: 'Wind',
+      summary: 'Culvert and open channel hydraulic capacity sizing, quantity surveying, BOQ, and capstone presentation advisory.',
       description: 'Collaborative technical advisory with fellow engineering brothers for senior design defenses, technical documentation, and construction management.',
       features: JSON.stringify([
         'Culvert and open channel hydraulic capacity sizing',
@@ -181,7 +233,7 @@ async function main() {
         'Construction scheduling, bar charts, and project management',
         'Academic capstone presentation and technical defense advisory'
       ]),
-      order: 4
+      order: 8
     }
   ];
 

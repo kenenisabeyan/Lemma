@@ -153,7 +153,7 @@ export const ServicesPage = () => {
                 className="w-full space-y-4"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU SoCEA). Delivering comprehensive engineering solutions across structural RC analysis, highway geometric alignments, geotechnical soil mechanics, and infrastructure design adhering to Ethiopian Building Code Standards (EBCS) and ERA manuals.
+                  ASTU 5th-year civil engineering team delivering structural, highway, and geotechnical solutions compliant with EBCS and ERA standards.
                 </p>
 
 

@@ -163,7 +163,7 @@ export const Portfolio = () => {
                 className="w-full space-y-4"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  A comprehensive portfolio of 25+ academic capstone designs, field surveying expeditions, geotechnical laboratory campaigns, and infrastructure engineering dossiers executed by Lemma Techane and fellow 5th-year graduating civil engineering brothers at ASTU SoCEA (Class of 2026).
+                  Curated portfolio of 25+ capstone designs, field surveys, geotechnical studies, and infrastructure projects by Lemma Techane & ASTU civil engineering peers.
                 </p>
 
                 {/* Live Engineering KPI Badges */}

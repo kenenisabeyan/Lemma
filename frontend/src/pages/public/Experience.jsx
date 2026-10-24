@@ -186,7 +186,7 @@ export const Experience = () => {
                 className="w-full space-y-4"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU SoCEA). A 5-year rigorous engineering journey across structural finite element mechanics, highway route alignments, geotechnical soil testing, and construction site internships.
+                  ASTU 5th-year civil engineering team with 5 years of practical training in structural mechanics, highway design, soil testing, and site supervision.
                 </p>
 
                 {/* 4 Quantified Metrics */}
