@@ -3,16 +3,17 @@ import React from 'react';
 export const TechMarquee = ({ className = '' }) => {
   const techMarquee = [
     'ASTU Civil 5th Year',
+    'Practical Site Supervision',
+    'Total Station Surveying',
+    'Concrete Slump & Cube QC',
     'ETABS Structural',
-    'SAP2000 FEA',
+    'Rebar Inspection & BBS',
     'AutoCAD Civil 3D',
-    'EBCS EN 1998 Seismic',
+    'Field Density Compaction (FDT)',
     'EBCS EN 1992 Concrete',
-    'ERA Standards 2024',
-    'SAFE Foundation',
-    'Prokon Structural',
-    'Revit BIM',
+    'ERA Road Standards',
     'Geotechnical Soil Lab',
+    'OCC Site Internship',
     'SoCEA Brotherhood'
   ];
 

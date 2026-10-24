@@ -53,11 +53,11 @@ export const ServicesPage = () => {
     },
     {
       id: '4',
-      title: 'Water Resources & Hydraulic Infrastructure',
+      title: 'Practical Site Supervision & Concrete QC',
       icon: 'Ruler',
-      summary: 'Hydrological catchment modeling, storm drainage networks, and reinforced concrete culvert engineering.',
-      description: 'Designing sustainable water conveyance structures, municipal storm drainage systems, and bridge pier hydraulic clearances.',
-      features: '["Catchment runoff peak discharge estimation (Rational & SCS methods)","Storm sewer networks & hydraulic grade line (HGL) calculations","Reinforced concrete box and pipe culvert structural design","Erosion protection and energy dissipator engineering"]'
+      summary: 'On-site concrete slump testing, rebar spacing checks, Total Station setting out, and formwork inspections.',
+      description: 'Hands-on construction site supervision gained through industrial internships at Oromia Construction Corporation (OCC) and ASTU surveying field camps. Ensuring drawings are translated into physical construction with strict safety.',
+      features: '["Concrete batching oversight & slump cone workability testing","Pre-pour rebar placement, lap length, and cover block inspection","Total Station column grid setting out and elevation control","Quantity surveying, daily work logs, and material reconciliation"]'
     }
   ];
 

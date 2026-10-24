@@ -621,14 +621,14 @@ export const Home = () => {
               </div>
             </div>
 
-            {/* Bento Card 3: Geotechnical & Foundation Sizing (Col 5-6) */}
+            {/* Bento Card 3: Practical Site Supervision & Soil Testing (Col 5-6) */}
             <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex size-8 items-center justify-center rounded-full bg-[#FEF9E7] text-[#D4AF37] border border-[#D4AF37]/30">
                     <ShieldCheck size={16} />
                   </div>
-                  <div className="font-mono text-xs font-bold text-zinc-900">100% Defense Readiness</div>
+                  <div className="font-mono text-xs font-bold text-zinc-900">Practical Site Experience</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
@@ -643,13 +643,13 @@ export const Home = () => {
                 </svg>
               </div>
               <div className="relative z-10 mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">Geotechnical & Foundation Sizing</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg">Site Supervision &amp; Quality Control</h3>
                 <p className="text-[#54595F] text-xs leading-relaxed">
-                  Raft foundations and settlement control on expansive black cotton soils in the Ethiopian Rift Valley.
+                  Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
-                Expansive Soil · Mat Footings
+                Slump QC · Field Surveying · FDT
               </div>
             </div>
 
@@ -661,23 +661,23 @@ export const Home = () => {
                     <Ruler size={20} className="text-[#D4AF37]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-semibold text-zinc-900 text-xl">3D Finite Element Simulation & Code Standards</h3>
+                    <h3 className="font-semibold text-zinc-900 text-xl">Bridging Engineering Calculations with Real Site Construction</h3>
                     <p className="text-[#54595F] text-xs sm:text-sm leading-relaxed max-w-md">
-                      From ETABS multi-story building frame analysis to SAP2000 highway bridge girder design, calculations adhere to the highest Ethiopian and international performance criteria.
+                      From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
                     <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">EBCS EN 1992</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">EBCS EN 1998</span>
                     <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ERA Standards</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">Eurocode 2 & 8</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">OCC Site Internship</span>
+                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">Quality Assurance</span>
                   </div>
                 </div>
                 <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
                   <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 bg-[#FFFFFF] shadow-md group-hover:border-[#D4AF37]/50 transition-colors">
                     <img 
                       src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
-                      alt="Structural FEA Simulation" 
+                      alt="Practical Construction & Structural Detailing" 
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

@@ -19,7 +19,6 @@ import {
   Check
 } from 'lucide-react';
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
-import { PEVerificationPortal } from '../../components/engineering/PEVerificationPortal';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
 
@@ -133,11 +132,11 @@ export const About = () => {
               >
                 {/* Primary Filled Pill Button */}
                 <a
-                  href="#pe-portal"
+                  href="#practical-construction"
                   className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
                 >
-                  <ShieldCheck size={16} />
-                  <span>VERIFY ASTU ACADEMIC CREDENTIALS</span>
+                  <HardHat size={16} />
+                  <span>EXPLORE PRACTICAL SITE WORK</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
 
@@ -219,13 +218,13 @@ export const About = () => {
                   </div>
                 </div>
 
-                {/* Quick Interactive Seal Actions */}
+                {/* Quick Interactive Actions */}
                 <div className="pt-3 flex items-center justify-between gap-3">
                   <a
-                    href="#pe-portal"
+                    href="#practical-construction"
                     className="flex-1 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(212,175,55,0.3)] text-center cursor-pointer"
                   >
-                    <span>Open Student Verification Portal</span>
+                    <span>View Practical Construction Work</span>
                     <ArrowUpRight size={13} />
                   </a>
                 </div>
@@ -357,23 +356,111 @@ export const About = () => {
 
 
         {/* ======================================================================= */}
-        {/* 7. DIGITAL PE/SE SEAL VERIFICATION PORTAL                               */}
+        {/* 6. PRACTICAL SITE CONSTRUCTION & INTERNSHIP SHOWCASE                    */}
         {/* ======================================================================= */}
-        <div id="pe-portal" className="mb-24 scroll-mt-24">
+        <div id="practical-construction" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Live Academic Credential System
+              On-Site Practical Construction &amp; Internship Experience
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Student Credential & <span className="text-[#801834] dark:text-[#E84855]">Capstone Verification.</span>
+              Practical Construction <span className="text-[#801834] dark:text-[#E84855]">&amp; Field Engineering.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Verify ASTU 5th-year academic standing, capstone thesis credentials, and EBCS / ERA compliance records verified by the School of Civil Engineering & Architecture.
+              Real-world site experience during university-industry internships at Oromia Construction Corporation (OCC) and MIDROC. Bridging classroom calculations with hands-on site execution.
             </p>
           </div>
 
-          <PEVerificationPortal />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                    <CheckCircle2 size={24} />
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                    EBCS / ASTM
+                  </span>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                  Concrete Casting &amp; Slump Testing
+                </h4>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Conducted on-site slump cone tests (80–120mm workability), concrete batching inspections, standard 150mm cube sampling, and 7 &amp; 28-day compressive crushing strength tests in the ASTU materials lab.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+                Quality Assurance Verified
+              </div>
+            </div>
+
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                    <HardHat size={24} />
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                    Site Supervision
+                  </span>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                  Rebar Detailing &amp; Formwork Plumb
+                </h4>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Supervised rebar diameters, lap splice lengths, cover block positioning, 135° seismic stirrup hooks, formwork vertical plumbness, and strut bracing before major slab and column pours.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+                Pre-Pour Inspection Protocol
+              </div>
+            </div>
+
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                    <Compass size={24} />
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                    Field Surveying
+                  </span>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                  Total Station &amp; Level Setting Out
+                </h4>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Transferred permanent benchmarks, established building column gridlines, and staked out road centerline horizontal and vertical levels using digital Total Stations and optical AutoLevels.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+                Sub-Millimeter Alignment
+              </div>
+            </div>
+
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                    <Layers size={24} />
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                    ERA Specifications
+                  </span>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                  Earthworks &amp; Road Compaction
+                </h4>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Monitored deep foundation excavations in expansive black cotton soils, lime-stabilized subgrade layers, and verified road sub-base compaction density using the field sand cone test method.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+                Field Density Test (FDT) Approved
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* ======================================================================= */}

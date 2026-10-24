@@ -51,3 +51,12 @@ export const CERTIFICATIONS = [
   { title: 'Ethiopian Roads Administration (ERA) Standards Workshop', body: 'Geometric & Flexible Pavement Design Training Certification' },
   { title: 'ASTU Engineering Students Association (AESA) Executive', body: 'Academic Peer Mentorship & Technical Project Coordination' }
 ];
+
+export const PRACTICAL_CONSTRUCTION_SKILLS = [
+  { skill: 'Concrete Quality Control', tools: 'Slump Cone Test, Cube Sampling & Compressive Crushing Machine' },
+  { skill: 'Surveying & Setting Out', tools: 'Digital Total Station, Automatic Optical Level & Theodolite' },
+  { skill: 'Rebar Placement Inspection', tools: 'Bar Bending Schedules (BBS), 135° Hooks, Lap Splicing & Cover Blocks' },
+  { skill: 'Soil Compaction Verification', tools: 'Sand Replacement Cone (FDT), Proctor Test & Moisture Density' },
+  { skill: 'Quantity Surveying & Take-Off', tools: 'Bill of Quantities (BOQ), Material Requisition & MS Excel' },
+  { skill: 'Formwork & Shoring Inspection', tools: 'Plumb Bob Verticality, Strut Bracing & Scaffolding Safety' }
+];
