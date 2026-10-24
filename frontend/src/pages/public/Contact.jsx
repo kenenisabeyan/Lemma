@@ -94,21 +94,21 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-100 dark:bg-[#07090D] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
+    <div className="min-h-screen bg-white dark:bg-[#0B0C0E] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
       
       {/* ========================================================================= */}
-      {/* 1. TOP HERO BANNER (Animated Crossfading Backgrounds & Architectural Glow) */}
+      {/* 1. CINEMATIC CONTACT HERO SECTION (MATCHING RESOURCESPAGE TOOLKIT DESIGN)  */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[580px] text-white pt-36 pb-36 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black flex items-center">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Animated Background Layers (lemma-four and lemma-two) */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
           {bgImages.map((item, idx) => (
             <motion.div
               key={idx}
               initial={false}
               animate={{
-                opacity: activeBgIndex === idx ? 1 : 0,
+                opacity: activeBgIndex === idx ? 0.35 : 0,
                 scale: activeBgIndex === idx ? 1.08 : 1.0,
               }}
               transition={{
@@ -120,110 +120,231 @@ export const Contact = () => {
             />
           ))}
 
-          {/* High-Contrast Cinematic Dark Glass & Blueprint Grid Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/90" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/70" />
-          <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:28px_28px] opacity-15" />
-          
-          {/* Warm Golden Architectural Ambient Glows */}
-          <div className="absolute top-1/4 right-1/4 w-[420px] h-[420px] bg-[#D4AF37]/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-10 left-10 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+          {/* Ambient Sheen & Radiant Studio Lights (Matching ResourcesPage) */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/85 to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E]/85 dark:to-[#0B0C0E] pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+
+          {/* Precision Blueprint Vignette Edge Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="relative z-20 max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* Left Content (Heading, Description, Quick Contact Pills) */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left gap-4">
+            {/* Left Column: Scope, Headline, Bio, Badges, Buttons, KPI Stats */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left gap-5">
+              
+              {/* Badge (Matching ResourcesPage) */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
+                  ASTU Civil Engineering · Direct Consultation &amp; Inquiries
+                </span>
+              </motion.div>
 
-              {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-[1.15]">
-                <span className="text-white">Contact Lemma</span>{' '}
-                <span className="text-[#D4AF37]">Techane &amp; Brothers</span>
-              </h1>
+              {/* Headline (Matching ResourcesPage Grand Typography) */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="space-y-1.5"
+              >
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
+                  Contact Lemma.{' '}
+                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                    ASTU
+                  </span>
+                  <br />
+                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
+                    Techane &amp; Brothers.
+                  </span>
+                </h1>
+              </motion.div>
 
-              {/* Subtitle Description */}
-              <p className="text-sm sm:text-base text-zinc-300 max-w-2xl leading-relaxed">
-                Have questions about our civil engineering designs, structural calculations, capstone research, or site consultations? Send us a message or call directly.
-              </p>
+              {/* Narrative Content & Feature Badges */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="w-full space-y-4"
+              >
+                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed max-w-xl">
+                  Have questions about our civil engineering designs, structural calculations, capstone research, or site consultations? Send us a message or call directly.
+                </p>
 
-              {/* Quick Contact Action Pills */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+                {/* Toolkit Checkmark Badges */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold">Direct Mobile &amp; Telegram</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <span className="font-semibold">24-Hour Response Time</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Action Buttons (Matching ResourcesPage) */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-wrap items-center gap-4 pt-2"
+              >
                 <a
                   href="tel:+251934830919"
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/60 hover:bg-black/80 border border-[#D4AF37]/50 hover:border-[#D4AF37] text-amber-200 text-xs font-mono font-bold transition-all shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-md"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer font-mono"
                 >
-                  <Phone size={13} className="text-[#D4AF37]" />
-                  <span>+251 934 830 919</span>
+                  <span>Call +251 934 830 919</span>
+                  <Phone size={15} />
                 </a>
                 <a
                   href="mailto:lemmayezedlij21@gmail.com"
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/60 hover:bg-black/80 border border-white/20 hover:border-white/50 text-zinc-200 text-xs font-mono font-bold transition-all shadow-sm backdrop-blur-md"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
                 >
-                  <Mail size={13} className="text-amber-400" />
-                  <span>lemmayezedlij21@gmail.com</span>
+                  <span>Send Email</span>
+                  <Mail size={14} className="text-[#D4AF37]" />
                 </a>
-              </div>
+              </motion.div>
 
-              {/* Live Animated Background Status indicator */}
-              <div className="flex items-center gap-2 pt-2 text-[11px] font-mono text-zinc-400">
-                <span className="inline-block w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span>Active Scene:</span>
-                <span className="text-zinc-200 font-semibold">{bgImages[activeBgIndex].label}</span>
-                <div className="flex items-center gap-1.5 ml-2">
-                  {bgImages.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setActiveBgIndex(idx)}
-                      className={`h-1.5 rounded-full transition-all cursor-pointer ${activeBgIndex === idx ? 'w-5 bg-[#D4AF37]' : 'w-1.5 bg-white/30 hover:bg-white/60'}`}
-                      title={`Switch to background ${idx + 1}`}
-                    />
-                  ))}
+              {/* Quick KPI Stats Row (Matching ResourcesPage) */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
+              >
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-              </div>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">24h</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Direct Reply</span>
+                </div>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">ASTU</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Campus</span>
+                </div>
+              </motion.div>
 
             </div>
 
-            {/* Right Side: 2x2 Semi-Transparent Dark Glass Cards with Gold Highlights */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-              
-              {/* Location Mini Card */}
-              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-[#D4AF37]/35 shadow-[0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-[#D4AF37] hover:scale-[1.02]">
-                <div className="w-9 h-9 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center mb-2.5">
-                  <MapPin size={17} />
+            {/* Right Column: Direct Channels Launchpad (Matching ResourcesPage Launchpad) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="lg:col-span-5 flex flex-col gap-3"
+            >
+              <div className="w-full">
+                
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Direct Channels Launchpad</span>
+                  </div>
+                  <span className="text-[10px] text-zinc-500 font-mono">ASTU Live Base</span>
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] font-bold">Campus Base</span>
-                <span className="text-xs font-semibold text-zinc-100 mt-1">ASTU SoCEA, Adama</span>
-              </div>
 
-              {/* Phone Mini Card */}
-              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-amber-500/35 shadow-[0_0_20px_rgba(245,158,11,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-amber-400 hover:scale-[1.02]">
-                <div className="w-9 h-9 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center mb-2.5">
-                  <Phone size={17} />
+                <div className="flex flex-col gap-3">
+                  {/* Channel 1: Phone */}
+                  <a
+                    href="tel:+251934830919"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group shadow-xs"
+                  >
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                      <Phone size={20} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-0.5">
+                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Direct Phone Line</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">FEA Live</span>
+                      </div>
+                      <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-mono font-bold">
+                        +251 934 830 919 · 0934 830 919
+                      </p>
+                      <p className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                        Direct voice calls, SMS &amp; Telegram message channel.
+                      </p>
+                    </div>
+                  </a>
+
+                  {/* Channel 2: Email */}
+                  <a
+                    href="mailto:lemmayezedlij21@gmail.com"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group shadow-xs"
+                  >
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                      <Mail size={20} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-0.5">
+                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Engineering Inquiries</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#801834] dark:text-[#E84855] font-bold">Official / 24h</span>
+                      </div>
+                      <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-mono font-bold truncate">
+                        lemmayezedlij21@gmail.com
+                      </p>
+                      <p className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                        Full structural calculation packages &amp; capstone consultation.
+                      </p>
+                    </div>
+                  </a>
+
+                  {/* Channel 3: Campus Base */}
+                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group shadow-xs">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                      <MapPin size={20} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-0.5">
+                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Academic Base</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-bold">SoCEA Campus</span>
+                      </div>
+                      <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-bold">
+                        School of Civil Engineering &amp; Architecture
+                      </p>
+                      <p className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                        ASTU Main Campus, Adama, Oromia, Ethiopia.
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-bold">Mobile</span>
-                <span className="text-xs font-semibold text-zinc-100 mt-1">+251 934 830 919</span>
-              </div>
 
-              {/* Email Mini Card */}
-              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-orange-500/35 shadow-[0_0_20px_rgba(249,115,22,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-orange-400 hover:scale-[1.02]">
-                <div className="w-9 h-9 rounded-full bg-orange-500/20 text-orange-300 flex items-center justify-center mb-2.5">
-                  <Mail size={17} />
+                {/* Animated Scene Indicator */}
+                <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-white/10 text-[11px] font-mono text-zinc-500">
+                  <span className="flex items-center gap-1.5 truncate max-w-[260px]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="font-bold text-zinc-700 dark:text-zinc-300 truncate">{bgImages[activeBgIndex].label}</span>
+                  </span>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {bgImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveBgIndex(idx)}
+                        className={`h-1.5 rounded-full transition-all cursor-pointer ${activeBgIndex === idx ? 'w-5 bg-[#801834] dark:bg-[#D4AF37]' : 'w-1.5 bg-zinc-300 dark:bg-white/30'}`}
+                        title={`Switch scene ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-orange-300 font-bold">Email</span>
-                <span className="text-xs font-semibold text-zinc-100 mt-1 truncate max-w-full">lemmayezedlij21@gmail.com</span>
-              </div>
 
-              {/* Availability Mini Card */}
-              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-yellow-500/35 shadow-[0_0_20px_rgba(234,179,8,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-yellow-400 hover:scale-[1.02]">
-                <div className="w-9 h-9 rounded-full bg-yellow-500/20 text-yellow-300 flex items-center justify-center mb-2.5">
-                  <Clock size={17} />
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-yellow-300 font-bold">Availability</span>
-                <span className="text-xs font-semibold text-zinc-100 mt-1">Mon – Sat (Active)</span>
               </div>
-
-            </div>
+            </motion.div>
 
           </div>
         </div>
