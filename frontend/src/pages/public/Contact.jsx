@@ -244,7 +244,7 @@ export const Contact = () => {
                 </a>
                 <a
                   href="#scope-estimator"
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Scope Estimator</span>
                   <Compass size={14} className="text-[#D4AF37]" />
@@ -258,16 +258,16 @@ export const Contact = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">ASTU</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">ASTU</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">2026</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">2026</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Graduating Class</span>
                 </div>
               </motion.div>
@@ -291,12 +291,12 @@ export const Contact = () => {
                   <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase">Online &amp; Active</span>
                 </div>
 
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col divide-y divide-zinc-200/60 dark:divide-zinc-800">
                   {/* Channel 1: Email */}
-                  <div className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 flex items-center justify-between gap-3">
+                  <div className="py-4 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3 overflow-hidden">
-                      <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0">
-                        <Mail size={18} />
+                      <div className="w-10 h-10 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0">
+                        <Mail size={20} />
                       </div>
                       <div className="min-w-0">
                         <span className="text-[10px] font-mono text-zinc-500 uppercase block">Consultation &amp; Academic Email</span>
@@ -308,7 +308,7 @@ export const Contact = () => {
                     <button
                       type="button"
                       onClick={handleCopyEmail}
-                      className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 hover:text-white px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-700 hover:bg-[#801834] dark:hover:bg-[#E84855] border border-zinc-200 dark:border-white/10 transition-all shrink-0"
+                      className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] px-3 py-1.5 transition-all shrink-0 cursor-pointer"
                     >
                       {copiedEmail ? 'Copied!' : 'Copy'}
                     </button>
@@ -317,10 +317,10 @@ export const Contact = () => {
                   {/* Channel 2: Phone */}
                   <a
                     href="tel:+251911234567"
-                    className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] flex items-center gap-3 transition-all group"
+                    className="py-4 flex items-center gap-3 transition-all group"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                      <Phone size={18} />
+                    <div className="w-10 h-10 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Phone size={20} />
                     </div>
                     <div className="min-w-0">
                       <span className="text-[10px] font-mono text-zinc-500 uppercase block">Direct Line</span>
@@ -331,9 +331,9 @@ export const Contact = () => {
                   </a>
 
                   {/* Channel 3: Office Headquarters */}
-                  <div className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0">
-                      <MapPin size={18} />
+                  <div className="py-4 flex items-center gap-3">
+                    <div className="w-10 h-10 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0">
+                      <MapPin size={20} />
                     </div>
                     <div className="min-w-0">
                       <span className="text-[10px] font-mono text-zinc-500 uppercase block">Campus Headquarters</span>
@@ -411,8 +411,8 @@ export const Contact = () => {
           )}
 
           {/* Fast Scope Preset Wizard */}
-          <div className="mb-8 p-5 bg-zinc-50/80 dark:bg-zinc-800/40 rounded-2xl border border-zinc-200/80 dark:border-white/5 space-y-3">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="mb-8 space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-zinc-200/60 dark:border-white/10">
               <span className="text-xs font-mono uppercase tracking-widest text-[#801834] dark:text-[#E84855] flex items-center gap-1.5 font-bold">
                 <Sparkles size={13} className="text-[#D4AF37]" /> Quick Scope Builder (Select Mandate to Auto-Fill)
               </span>
@@ -427,14 +427,14 @@ export const Contact = () => {
                     key={preset.id}
                     type="button"
                     onClick={() => handleApplyPreset(preset)}
-                    className={`p-3 rounded-xl border text-left text-xs font-mono transition-all flex flex-col justify-between ${
+                    className={`p-3 text-left text-xs font-mono transition-all flex flex-col justify-between ${
                       isSelected
-                        ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 border-transparent shadow-sm'
-                        : 'bg-white/80 dark:bg-zinc-800/80 border-zinc-200/80 dark:border-white/10 text-zinc-800 dark:text-zinc-200 hover:border-[#D4AF37]'
+                        ? 'text-[#D4AF37] font-bold'
+                        : 'text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37]'
                     }`}
                   >
                     <span className="font-bold block truncate mb-1">{preset.title}</span>
-                    <span className={`text-[9px] block ${isSelected ? 'text-zinc-300 dark:text-zinc-700' : 'text-zinc-500'}`}>{preset.type}</span>
+                    <span className={`text-[9px] block ${isSelected ? 'text-[#D4AF37]/80' : 'text-zinc-500'}`}>{preset.type}</span>
                   </button>
                 );
               })}

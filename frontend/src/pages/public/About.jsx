@@ -140,10 +140,10 @@ export const About = () => {
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
 
-                {/* Secondary Frosted Glass Pill Button */}
+                {/* Secondary Flat Pill Button */}
                 <button
                   onClick={() => navigate('/resources')}
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-900 dark:text-zinc-100 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Download size={14} className="text-[#D4AF37]" />
                   <span>DOWNLOAD DOSSIER (PDF)</span>
@@ -157,16 +157,16 @@ export const About = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">25+</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">25+</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Structural Projects</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">ASTU SoCEA Brotherhood</span>
                 </div>
               </motion.div>
@@ -278,18 +278,18 @@ export const About = () => {
             {SOFTWARE_STACK.map((soft) => (
               <div 
                 key={soft.name} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between"
+                className="group py-4 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="flex justify-between items-center mb-3">
                     <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-mono group-hover:text-[#D4AF37] transition-colors">{soft.name}</h4>
-                    <span className="rounded-full text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 uppercase">
+                    <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
                       {soft.level}
                     </span>
                   </div>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{soft.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500 group-hover:text-[#D4AF37] transition-colors">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500 group-hover:text-[#D4AF37] transition-colors">
                   FEA Precision Verified
                 </div>
               </div>
@@ -301,7 +301,7 @@ export const About = () => {
         {/* 4. CAREER TIMELINE                                                      */}
         {/* ======================================================================= */}
         <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-3 font-bold">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Professional Journey & Track Record
           </div>
@@ -313,8 +313,8 @@ export const About = () => {
             {CAREER_TIMELINE.map((item, index) => (
               <div key={index} className="relative group">
                 <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform shadow-xs"></div>
-                <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 sm:p-7 transition-all shadow-sm">
-                  <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+                <div className="py-2 transition-all">
+                  <span className="inline-block text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                     {item.year}
                   </span>
                   <h4 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h4>
@@ -330,7 +330,7 @@ export const About = () => {
         {/* 5. LICENSURE & BOARD CERTIFICATIONS                                     */}
         {/* ======================================================================= */}
         <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-3 font-bold">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Academic Honors & Technical Certifications
           </div>
@@ -340,8 +340,8 @@ export const About = () => {
 
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
-              <div key={index} className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex items-start gap-4 transition-all shadow-sm group">
-                <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform shrink-0">
+              <div key={index} className="py-4 flex items-start gap-4 transition-all group">
+                <div className="text-[#D4AF37] shrink-0 pt-1">
                   <Award size={24} />
                 </div>
                 <div>
@@ -353,14 +353,12 @@ export const About = () => {
           </div>
         </div>
 
-
-
         {/* ======================================================================= */}
         {/* 6. PRACTICAL SITE CONSTRUCTION & INTERNSHIP SHOWCASE                    */}
         {/* ======================================================================= */}
         <div id="practical-construction" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               On-Site Practical Construction &amp; Internship Experience
             </div>
@@ -373,13 +371,13 @@ export const About = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
+            <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                  <div className="text-[#D4AF37]">
                     <CheckCircle2 size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
                     EBCS / ASTM
                   </span>
                 </div>
@@ -390,18 +388,18 @@ export const About = () => {
                   Conducted on-site slump cone tests (80–120mm workability), concrete batching inspections, standard 150mm cube sampling, and 7 &amp; 28-day compressive crushing strength tests in the ASTU materials lab.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
                 Quality Assurance Verified
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
+            <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                  <div className="text-[#D4AF37]">
                     <HardHat size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
                     Site Supervision
                   </span>
                 </div>
@@ -412,18 +410,18 @@ export const About = () => {
                   Supervised rebar diameters, lap splice lengths, cover block positioning, 135° seismic stirrup hooks, formwork vertical plumbness, and strut bracing before major slab and column pours.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
                 Pre-Pour Inspection Protocol
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
+            <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                  <div className="text-[#D4AF37]">
                     <Compass size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
                     Field Surveying
                   </span>
                 </div>
@@ -434,18 +432,18 @@ export const About = () => {
                   Transferred permanent benchmarks, established building column gridlines, and staked out road centerline horizontal and vertical levels using digital Total Stations and optical AutoLevels.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
                 Sub-Millimeter Alignment
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
+            <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
+                  <div className="text-[#D4AF37]">
                     <Layers size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/30 px-2.5 py-0.5 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
                     ERA Specifications
                   </span>
                 </div>
@@ -456,7 +454,7 @@ export const About = () => {
                   Monitored deep foundation excavations in expansive black cotton soils, lime-stabilized subgrade layers, and verified road sub-base compaction density using the field sand cone test method.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
                 Field Density Test (FDT) Approved
               </div>
             </div>

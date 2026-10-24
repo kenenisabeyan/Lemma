@@ -173,7 +173,7 @@ export const FaqPage = () => {
                 </a>
                 <a
                   href="#glossary"
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Engineering Glossary</span>
                   <BookOpen size={14} className="text-[#D4AF37]" />
@@ -187,16 +187,16 @@ export const FaqPage = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">5</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Focus Areas</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">ASTU</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">ASTU</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                 </div>
               </motion.div>
@@ -259,7 +259,7 @@ export const FaqPage = () => {
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="faq-accordion" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30 scroll-mt-24">
-        <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -273,17 +273,17 @@ export const FaqPage = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`rounded-2xl px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${
+                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'bg-gradient-to-r from-[#801834] to-[#601227] text-white shadow-md shadow-[#801834]/25 scale-[1.02]'
-                      : 'bg-zinc-100/80 dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-white/5 hover:border-[#D4AF37]'
+                      ? 'text-[#801834] dark:text-[#E84855]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
                       ? 'bg-[#D4AF37] text-zinc-950 font-black' 
-                      : 'bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400'
+                      : 'text-zinc-400'
                   }`}>
                     {count}
                   </span>
@@ -294,13 +294,13 @@ export const FaqPage = () => {
 
           {/* Search Input with Reset */}
           <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search questions, codes, fees..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 pl-10 pr-9 py-2.5 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -319,20 +319,20 @@ export const FaqPage = () => {
       {/* 3. ACCORDION LIST                                                         */}
       {/* ========================================================================= */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col gap-4 mb-24">
+        <div className="flex flex-col divide-y divide-zinc-200/60 dark:divide-zinc-800 mb-24">
           {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div 
                 key={faq.id || index} 
-                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl overflow-hidden transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
+                className="py-6 transition-all duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full p-6 sm:p-7 text-left font-black text-base sm:text-lg text-zinc-900 dark:text-zinc-100 hover:text-[#801834] dark:hover:text-[#E84855] flex justify-between items-center gap-4 transition-colors"
+                  className="w-full text-left font-black text-base sm:text-lg text-zinc-900 dark:text-zinc-100 hover:text-[#801834] dark:hover:text-[#E84855] flex justify-between items-center gap-4 transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-3.5">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-[#801834] dark:text-[#E84855]">
+                    <span className="text-[#801834] dark:text-[#E84855]">
                       <HelpCircle size={18} />
                     </span>
                     <span>{faq.question}</span>
@@ -341,9 +341,9 @@ export const FaqPage = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 sm:px-7 pb-7 pt-2 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed border-t border-zinc-200/80 dark:border-white/10 bg-zinc-50/50 dark:bg-zinc-800/30 animate-in fade-in duration-200">
-                    <p className="mb-4 leading-relaxed sm:text-base">{faq.answer}</p>
-                    <span className="rounded-full text-[10px] font-mono uppercase text-[#D4AF37] bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-1 font-bold">
+                  <div className="pt-4 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed animate-in fade-in duration-200">
+                    <p className="mb-3 leading-relaxed sm:text-base">{faq.answer}</p>
+                    <span className="text-[10px] font-mono uppercase text-[#D4AF37] font-bold">
                       Discipline: {faq.category}
                     </span>
                   </div>
@@ -363,7 +363,7 @@ export const FaqPage = () => {
         {/* ======================================================================= */}
         {/* 5. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
+        <div className="py-10 flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-zinc-200/60 dark:border-zinc-800">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
               Have a Question for Our ASTU Civil Engineering Cohort?
@@ -374,7 +374,7 @@ export const FaqPage = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
             Connect With Brothers <ArrowUpRight size={15} className="text-[#D4AF37]" />
           </button>

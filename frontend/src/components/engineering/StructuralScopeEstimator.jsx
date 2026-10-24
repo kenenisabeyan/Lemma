@@ -102,36 +102,36 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
   const storiesSliderId = useId();
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Header Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/60 dark:border-white/10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] shadow-xs mb-2 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 font-bold">
             <Sliders size={13} />
             <span>ASTU Capstone Feasibility Telemetry</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#54595F] tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#54595F] dark:text-zinc-100 tracking-tight">
             Civil Engineering Scope &amp; <span className="text-[#D4AF37]">Deliverables</span> Estimator
           </h3>
-          <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#54595F] dark:text-zinc-400 mt-1 max-w-2xl leading-relaxed">
             Configure your project parameters to estimate calculation package volume, CAD/BIM drawing sheets, design timeline, and material optimization per Ethiopian standards.
           </p>
         </div>
 
         {/* Live Stamp Badge */}
-        <div className="flex items-center gap-3 bg-[#FFFFFF] px-4 py-2.5 rounded-2xl border border-zinc-200 shrink-0">
+        <div className="flex items-center gap-3 px-3 py-2 shrink-0">
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
           <div className="text-left font-mono">
-            <span className="text-[9px] text-[#54595F]/70 block uppercase">CALC ENGINE</span>
-            <span className="text-xs font-bold text-[#54595F]">EBCS EN / ERA 2024</span>
+            <span className="text-[9px] text-[#54595F]/70 dark:text-zinc-400 block uppercase">CALC ENGINE</span>
+            <span className="text-xs font-bold text-[#54595F] dark:text-zinc-200">EBCS EN / ERA 2024</span>
           </div>
         </div>
       </div>
 
       {/* Archetype Selector Strip */}
       <div className="mb-8">
-        <label className="block text-[11px] font-mono uppercase tracking-widest text-[#54595F] mb-3 font-semibold">
+        <label className="block text-[11px] font-mono uppercase tracking-widest text-[#54595F] dark:text-zinc-400 mb-3 font-semibold">
           Step 1: Select Structural Archetype
         </label>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
@@ -143,10 +143,10 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 key={type.id}
                 type="button"
                 onClick={() => handleTypeChange(type.id)}
-                className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between group ${
+                className={`p-4 text-left transition-all duration-200 flex flex-col justify-between group ${
                   isSelected
-                    ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
-                    : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37]'
+                    ? 'text-[#D4AF37]'
+                    : 'text-[#54595F] dark:text-zinc-400 hover:text-[#D4AF37]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
@@ -181,16 +181,16 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
       <div className="grid lg:grid-cols-12 gap-8 mb-8 items-start">
         
         {/* Sliders & Spec Controls (7 Cols) */}
-        <div className="lg:col-span-7 space-y-6 bg-[#FFFFFF] p-6 rounded-2xl border border-zinc-200">
+        <div className="lg:col-span-7 space-y-6">
           
           {/* Gross Floor Area Slider */}
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label htmlFor={areaSliderId} className="text-xs font-bold text-[#54595F] flex items-center gap-2">
+              <label htmlFor={areaSliderId} className="text-xs font-bold text-[#54595F] dark:text-zinc-200 flex items-center gap-2">
                 <Compass size={14} className="text-[#D4AF37]" />
                 Gross Floor Area (GSF)
               </label>
-              <span className="text-xs font-mono font-bold text-[#D4AF37] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#D4AF37]/40 shadow-2xs">
+              <span className="text-xs font-mono font-bold text-[#D4AF37]">
                 {grossArea.toLocaleString()} sq ft
               </span>
             </div>
@@ -203,9 +203,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               value={grossArea}
               onChange={(e) => setGrossArea(Number(e.target.value))}
               aria-label="Gross Floor Area in square feet"
-              className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+              className="w-full h-2 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
-            <div className="flex justify-between text-[10px] font-mono text-[#54595F]/70 mt-1">
+            <div className="flex justify-between text-[10px] font-mono text-[#54595F]/70 dark:text-zinc-500 mt-1">
               <span>15,000 sq ft</span>
               <span>600,000 sq ft</span>
               <span>1,200,000 sq ft</span>
@@ -215,11 +215,11 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           {/* Stories Slider (if applicable) */}
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label htmlFor={storiesSliderId} className="text-xs font-bold text-[#54595F] flex items-center gap-2">
+              <label htmlFor={storiesSliderId} className="text-xs font-bold text-[#54595F] dark:text-zinc-200 flex items-center gap-2">
                 <Building2 size={14} className="text-[#D4AF37]" />
                 Structural Stories / Height
               </label>
-              <span className="text-xs font-mono font-bold text-[#D4AF37] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#D4AF37]/40 shadow-2xs">
+              <span className="text-xs font-mono font-bold text-[#D4AF37]">
                 {stories} {stories === 1 ? 'Level' : 'Stories'} (~{Math.round(stories * 13.5)} ft)
               </span>
             </div>
@@ -232,9 +232,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               value={stories}
               onChange={(e) => setStories(Number(e.target.value))}
               aria-label="Structural Stories or Height"
-              className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+              className="w-full h-2 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
-            <div className="flex justify-between text-[10px] font-mono text-[#54595F]/70 mt-1">
+            <div className="flex justify-between text-[10px] font-mono text-[#54595F]/70 dark:text-zinc-500 mt-1">
               <span>1 Story</span>
               <span>30 Stories</span>
               <span>65+ Stories</span>
@@ -242,16 +242,16 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           </div>
 
           {/* Framing System & Environmental Codes */}
-          <div className="grid sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-200">
+          <div className="grid sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-200/60 dark:border-white/10">
             
             <div>
-              <label className="block text-[10px] font-mono uppercase text-[#54595F] mb-1.5 font-semibold">
+              <label className="block text-[10px] font-mono uppercase text-[#54595F] dark:text-zinc-400 mb-1.5 font-semibold">
                 Structural System
               </label>
               <select
                 value={framingSystem}
                 onChange={(e) => setFramingSystem(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-2.5 py-2 text-xs text-[#54595F] font-medium focus:border-[#D4AF37] focus:outline-none shadow-2xs"
+                className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 py-2 text-xs text-[#54595F] dark:text-zinc-200 font-medium focus:border-[#D4AF37] focus:outline-none"
               >
                 <option value="pt-concrete">Cast-in-Place RC Frame (EBCS EN 1992)</option>
                 <option value="structural-steel">Dual System (RC Frame + Shear Walls)</option>
@@ -260,13 +260,13 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono uppercase text-[#54595F] mb-1.5 font-semibold">
+              <label className="block text-[10px] font-mono uppercase text-[#54595F] dark:text-zinc-400 mb-1.5 font-semibold">
                 Wind Velocity Zone
               </label>
               <select
                 value={windZone}
                 onChange={(e) => setWindZone(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-2.5 py-2 text-xs text-[#54595F] font-medium focus:border-[#D4AF37] focus:outline-none shadow-2xs"
+                className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 py-2 text-xs text-[#54595F] dark:text-zinc-200 font-medium focus:border-[#D4AF37] focus:outline-none"
               >
                 <option value="32m/s">32 m/s (Adama Urban Basin)</option>
                 <option value="38m/s">38 m/s (Rift Valley Corridor)</option>
@@ -275,13 +275,13 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono uppercase text-[#54595F] mb-1.5 font-semibold">
+              <label className="block text-[10px] font-mono uppercase text-[#54595F] dark:text-zinc-400 mb-1.5 font-semibold">
                 Seismic Hazard Zone
               </label>
               <select
                 value={seismicCategory}
                 onChange={(e) => setSeismicCategory(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-2.5 py-2 text-xs text-[#54595F] font-medium focus:border-[#D4AF37] focus:outline-none shadow-2xs"
+                className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 py-2 text-xs text-[#54595F] dark:text-zinc-200 font-medium focus:border-[#D4AF37] focus:outline-none"
               >
                 <option value="Zone-1">Zone 1 (Low Hazard - ag = 0.05g)</option>
                 <option value="Zone-2">Zone 2 (Moderate - ag = 0.08g)</option>
@@ -295,29 +295,29 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
         </div>
 
         {/* Live Calculated Deliverables Panel (5 Cols) */}
-        <div className="lg:col-span-5 flex flex-col justify-between bg-[#FFFFFF] p-6 rounded-2xl border-2 border-[#D4AF37]/50 shadow-md">
+        <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-200">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] flex items-center gap-1.5">
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/60 dark:border-white/10">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] dark:text-zinc-200 flex items-center gap-1.5">
                 <Sparkles size={14} className="text-[#D4AF37]" />
                 Calculated Deliverables &amp; Timeline
               </span>
-              <span className="text-[10px] font-mono bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-300 font-bold">
+              <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase">
                 FEA Calibrated
               </span>
             </div>
 
-            <div className="space-y-3.5">
+            <div className="space-y-3">
               
               {/* Calculation Package */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200">
+              <div className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#D4AF37]/10 text-[#D4AF37]">
+                  <div className="text-[#D4AF37]">
                     <FileSpreadsheet size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-[#54595F]">Capstone Calculation Book</h5>
-                    <p className="text-[10px] text-[#54595F]">Lateral drift, rebar checks per EBCS EN</p>
+                    <h5 className="text-xs font-bold text-[#54595F] dark:text-zinc-200">Capstone Calculation Book</h5>
+                    <p className="text-[10px] text-[#54595F]/80 dark:text-zinc-400">Lateral drift, rebar checks per EBCS EN</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-extrabold text-[#D4AF37]">
@@ -326,14 +326,14 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               </div>
 
               {/* BIM / AutoCAD Sheets */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200">
+              <div className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#D4AF37]/10 text-[#D4AF37]">
+                  <div className="text-[#D4AF37]">
                     <Layers size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-[#54595F]">AutoCAD / BIM Drawing Sheets</h5>
-                    <p className="text-[10px] text-[#54595F]">Structural details &amp; highway alignments</p>
+                    <h5 className="text-xs font-bold text-[#54595F] dark:text-zinc-200">AutoCAD / BIM Drawing Sheets</h5>
+                    <p className="text-[10px] text-[#54595F]/80 dark:text-zinc-400">Structural details &amp; highway alignments</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-extrabold text-[#D4AF37]">
@@ -342,33 +342,33 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               </div>
 
               {/* Delivery Timeline */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200">
+              <div className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#D4AF37]/10 text-[#D4AF37]">
+                  <div className="text-[#D4AF37]">
                     <Clock size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-[#54595F]">Academic Capstone Phase</h5>
-                    <p className="text-[10px] text-[#54595F]">Comprehensive design through defense readiness</p>
+                    <h5 className="text-xs font-bold text-[#54595F] dark:text-zinc-200">Academic Capstone Phase</h5>
+                    <p className="text-[10px] text-[#54595F]/80 dark:text-zinc-400">Comprehensive design through defense readiness</p>
                   </div>
                 </div>
-                <span className="text-xs font-mono font-extrabold text-[#54595F]">
+                <span className="text-xs font-mono font-extrabold text-[#54595F] dark:text-zinc-200">
                   {estimatedWeeks} – {estimatedWeeks + 3} weeks
                 </span>
               </div>
 
               {/* Embodied Carbon & Optimization */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+              <div className="flex items-center justify-between py-2">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-emerald-100 text-emerald-800">
+                  <div className="text-emerald-600 dark:text-emerald-400">
                     <Leaf size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-emerald-900">Embodied Carbon Savings</h5>
-                    <p className="text-[10px] text-emerald-700/80">Via material reduction &amp; slag blends</p>
+                    <h5 className="text-xs font-bold text-[#54595F] dark:text-zinc-200">Embodied Carbon Savings</h5>
+                    <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono">Via material reduction &amp; slag blends</p>
                   </div>
                 </div>
-                <span className="text-xs font-mono font-extrabold text-emerald-800">
+                <span className="text-xs font-mono font-extrabold text-emerald-600 dark:text-emerald-400">
                   ~{embodiedCarbonSavings}% CO₂
                 </span>
               </div>

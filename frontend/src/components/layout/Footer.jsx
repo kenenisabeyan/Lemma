@@ -22,12 +22,10 @@ export const Footer = () => {
         {/* ========================================================================= */}
         {/* TOP BENTO CALLOUT: AVAILABLE FOR CONSULTING                                */}
         {/* ========================================================================= */}
-        <div className="rounded-3xl bg-[#FFFFFF] dark:bg-[#111827] backdrop-blur-xs border border-zinc-200/90 dark:border-slate-800/90 p-8 sm:p-12 mb-16 shadow-[0_10px_35px_rgba(0,0,0,0.04)] dark:shadow-2xl relative overflow-hidden group hover:border-[#D4AF37]/50 dark:hover:border-[#D4AF37]/40 transition-all duration-300">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/5 dark:bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
-          
+        <div className="py-8 sm:py-10 mb-16 relative overflow-hidden">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 relative z-10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 dark:border-slate-700/80 bg-[#FEF9E7] dark:bg-[#0F172A] px-3.5 py-1 text-xs font-mono text-[#D4AF37] dark:text-[#D4AF37] mb-4 shadow-sm font-semibold">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -51,7 +49,7 @@ export const Footer = () => {
               </Link>
               <button
                 onClick={handleCopyEmail}
-                className="rounded-full border border-zinc-300 dark:border-slate-700 bg-[#FFFFFF] dark:bg-[#0F172A] hover:border-[#D4AF37] dark:hover:border-[#D4AF37] text-[#54595F] dark:text-slate-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] px-5 py-3.5 text-xs font-mono font-bold tracking-wider transition-all flex items-center justify-center gap-2 active:scale-95 w-full sm:w-auto shadow-sm"
+                className="rounded-full text-[#54595F] dark:text-slate-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] px-5 py-3.5 text-xs font-mono font-bold tracking-wider transition-all flex items-center justify-center gap-2 active:scale-95 w-full sm:w-auto cursor-pointer"
               >
                 <Copy size={13} className="text-[#D4AF37]" />
                 <span>{copiedEmail ? 'Copied to Clipboard!' : 'Copy Email'}</span>
@@ -66,10 +64,10 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-16 border-b border-zinc-200/80 dark:border-slate-800/80">
           
           {/* Col 1: Brand & Bio (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col gap-6 rounded-2xl bg-[#FFFFFF] dark:bg-[#0F172A]/90 border border-zinc-200/80 dark:border-slate-800/80 p-7 shadow-sm">
+          <div className="lg:col-span-5 flex flex-col gap-5">
             <Link to="/" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg border border-[#D4AF37] dark:border-[#D4AF37] bg-[#FFFFFF] dark:bg-[#111827] flex items-center justify-center shadow-sm">
-                <Layers className="text-[#D4AF37] dark:text-[#D4AF37] w-4 h-4" />
+              <div className="w-8 h-8 rounded-lg text-[#D4AF37] flex items-center justify-center">
+                <Layers className="text-[#D4AF37] w-5 h-5" />
               </div>
               <span className="font-extrabold text-lg tracking-wider uppercase text-zinc-900 dark:text-slate-100">
                 Lemma & Brothers<span className="text-[#D4AF37]">.</span>
@@ -79,17 +77,17 @@ export const Footer = () => {
               5th Year Civil Engineering student cohort at Adama Science and Technology University (ASTU). Passionate brothers in structural finite element modeling, reinforced concrete design, highway infrastructure, and geotechnical foundations.
             </p>
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#D4AF37]/5 px-3 py-1 rounded-full shadow-xs font-bold">
+              <span className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] font-bold">
                 EBCS, ES EN & ERA Compliant
               </span>
-              <span className="text-[10px] uppercase font-mono tracking-wider text-[#54595F] dark:text-slate-400 border border-zinc-300 dark:border-slate-700 bg-[#FFFFFF] dark:bg-transparent px-3 py-1 rounded-full shadow-xs">
-                ASTU SoCEA · Class of 2026
+              <span className="text-[10px] uppercase font-mono tracking-wider text-[#54595F] dark:text-slate-400">
+                · ASTU SoCEA Class of 2026
               </span>
             </div>
           </div>
 
           {/* Col 2: Quick Links (2 cols) */}
-          <div className="lg:col-span-2 rounded-2xl bg-[#FFFFFF] dark:bg-[#0F172A]/90 border border-zinc-200/80 dark:border-slate-800/80 p-6 flex flex-col justify-between shadow-sm">
+          <div className="lg:col-span-2 flex flex-col justify-between">
             <div>
               <h4 className="text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span> Navigation
@@ -106,7 +104,7 @@ export const Footer = () => {
           </div>
 
           {/* Col 3: Portal & Resources (2 cols) */}
-          <div className="lg:col-span-2 rounded-2xl bg-[#FFFFFF] dark:bg-[#0F172A]/90 border border-zinc-200/80 dark:border-slate-800/80 p-6 flex flex-col justify-between shadow-sm">
+          <div className="lg:col-span-2 flex flex-col justify-between">
             <div>
               <h4 className="text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span> Resources
@@ -122,7 +120,7 @@ export const Footer = () => {
           </div>
 
           {/* Col 4: Contact Details (3 cols) */}
-          <div className="lg:col-span-3 rounded-2xl bg-[#FFFFFF] dark:bg-[#0F172A]/90 border border-zinc-200/80 dark:border-slate-800/80 p-6 flex flex-col justify-between shadow-sm">
+          <div className="lg:col-span-3 flex flex-col justify-between">
             <div>
               <h4 className="text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span> Campus Location

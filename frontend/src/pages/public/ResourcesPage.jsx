@@ -219,7 +219,7 @@ Phone: +251 91 123 4567
                 </a>
                 <a
                   href="#beam-solver"
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Launch Beam Solver</span>
                   <Calculator size={14} className="text-[#D4AF37]" />
@@ -233,16 +233,16 @@ Phone: +251 91 123 4567
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">2</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">2</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">FEA Live Solvers</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">EBCS</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">EBCS</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">EN Code Verified</span>
                 </div>
               </motion.div>
@@ -339,7 +339,7 @@ Phone: +251 91 123 4567
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="resources-feed" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -353,17 +353,17 @@ Phone: +251 91 123 4567
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`rounded-2xl px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${
+                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'bg-gradient-to-r from-[#801834] to-[#601227] text-white shadow-md shadow-[#801834]/25 scale-[1.02]'
-                      : 'bg-zinc-100/80 dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-white/5 hover:border-[#D4AF37]'
+                      ? 'text-[#801834] dark:text-[#E84855]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
                       ? 'bg-[#D4AF37] text-zinc-950 font-black' 
-                      : 'bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400'
+                      : 'text-zinc-400'
                   }`}>
                     {count}
                   </span>
@@ -374,13 +374,13 @@ Phone: +251 91 123 4567
 
           {/* Search Input with Reset */}
           <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search guides, specs, calculations..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 pl-10 pr-9 py-2.5 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -398,7 +398,7 @@ Phone: +251 91 123 4567
       {/* Download Notification Toast */}
       {downloadNotification && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
-          <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-700/60 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 shadow-md">
+          <div className="py-2 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2">
             <CheckCircle2 size={16} className="text-emerald-600 dark:text-emerald-400" /> 
             {downloadNotification}
           </div>
@@ -409,18 +409,18 @@ Phone: +251 91 123 4567
       {/* 3. RESOURCE CARDS GRID                                                    */}
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid sm:grid-cols-2 gap-8 mb-24">
+        <div className="grid sm:grid-cols-2 gap-10 mb-24">
           {filteredResources.map((item, index) => (
             <div 
               key={item.id || index} 
-              className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 transition-all duration-300 flex flex-col justify-between shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
+              className="group py-6 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855] flex items-center justify-center group-hover:scale-110 transition-transform shadow-xs">
-                    <FileText size={24} />
+                <div className="flex justify-between items-start mb-4">
+                  <div className="text-[#801834] dark:text-[#E84855] group-hover:scale-110 transition-transform">
+                    <FileText size={28} />
                   </div>
-                  <span className="rounded-full text-[10px] font-mono font-extrabold text-[#D4AF37] border border-[#D4AF37]/40 px-3 py-1 uppercase tracking-wider bg-amber-500/10 shadow-xs">
+                  <span className="text-[10px] font-mono font-extrabold text-[#D4AF37] uppercase tracking-wider">
                     {item.format} • {item.fileSize || '1.8 MB'}
                   </span>
                 </div>
@@ -436,7 +436,7 @@ Phone: +251 91 123 4567
 
               <button
                 onClick={() => handleDownload(item)}
-                className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm"
+                className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-max"
               >
                 Download Document <Download size={14} className="text-[#D4AF37]" />
               </button>
