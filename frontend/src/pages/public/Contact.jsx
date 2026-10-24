@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Phone, 
   Mail, 
@@ -16,10 +16,13 @@ import {
   Instagram,
   Facebook,
   Youtube,
-  Linkedin
+  Linkedin,
+  Sparkles
 } from 'lucide-react';
 import api from '../../services/api';
 import { StructuralScopeEstimator } from '../../components/engineering/StructuralScopeEstimator';
+import lemmaFour from '../../assets/lemma-four.jpg';
+import lemmaTwo from '../../assets/lemma-two.jpg';
 
 export const Contact = () => {
   const formRef = useRef(null);
@@ -35,6 +38,20 @@ export const Contact = () => {
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [showEstimator, setShowEstimator] = useState(false);
+
+  // Animated background images alternation (lemma-four and lemma-two)
+  const bgImages = [
+    { src: lemmaFour, label: 'Lemma Techane — Structural Site Inspection' },
+    { src: lemmaTwo, label: 'Lemma Techane — Civil Engineering Analysis' }
+  ];
+  const [activeBgIndex, setActiveBgIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveBgIndex((prev) => (prev + 1) % bgImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [bgImages.length]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -77,84 +94,119 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B0F19] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
+    <div className="min-h-screen bg-zinc-100 dark:bg-[#07090D] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
       
       {/* ========================================================================= */}
-      {/* 1. TOP HERO BANNER (Rich Emerald / Forest Green Gradient Banner)          */}
+      {/* 1. TOP HERO BANNER (Animated Crossfading Backgrounds & Architectural Glow) */}
       {/* ========================================================================= */}
-      <section className="relative bg-gradient-to-r from-[#072716] via-[#0D4425] to-[#082E19] text-white pt-36 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative min-h-[580px] text-white pt-36 pb-36 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black flex items-center">
         
-        {/* Subtle Geometric Overlay & Radial Ambient Glows */}
-        <div className="absolute inset-0 bg-[radial-gradient(#22C55E_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-10 left-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Animated Background Layers (lemma-four and lemma-two) */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {bgImages.map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={false}
+              animate={{
+                opacity: activeBgIndex === idx ? 1 : 0,
+                scale: activeBgIndex === idx ? 1.08 : 1.0,
+              }}
+              transition={{
+                opacity: { duration: 1.8, ease: "easeInOut" },
+                scale: { duration: 7, ease: "easeInOut" }
+              }}
+              className="absolute inset-0 bg-cover bg-center will-change-transform"
+              style={{ backgroundImage: `url(${item.src})` }}
+            />
+          ))}
 
-        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* High-Contrast Cinematic Dark Glass & Blueprint Grid Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:28px_28px] opacity-15" />
+          
+          {/* Warm Golden Architectural Ambient Glows */}
+          <div className="absolute top-1/4 right-1/4 w-[420px] h-[420px] bg-[#D4AF37]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-10 left-10 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            {/* Left Content (Badge, Heading, Description, Quick Contact Pills) */}
+            {/* Left Content (Heading, Description, Quick Contact Pills) */}
             <div className="lg:col-span-7 flex flex-col items-start text-left gap-4">
-              
-              {/* Connect With Us Pill Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-900/60 border border-emerald-400/30 text-emerald-300 text-xs font-semibold tracking-wide">
-                <MessageSquare size={13} className="text-emerald-400" />
-                <span>CONNECT WITH US</span>
-              </div>
 
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-[1.15]">
-                <span className="text-[#FBBF24]">Contact Lemma</span>{' '}
-                <span className="text-[#4ADE80]">Techane &amp; Brothers</span>
+                <span className="text-white">Contact Lemma</span>{' '}
+                <span className="text-[#D4AF37]">Techane &amp; Brothers</span>
               </h1>
 
               {/* Subtitle Description */}
-              <p className="text-sm sm:text-base text-zinc-200/90 max-w-2xl leading-relaxed">
-                Have questions about our civil engineering designs, structural calculations, capstone research, or site consultations? Send us a message or call our offices directly.
+              <p className="text-sm sm:text-base text-zinc-300 max-w-2xl leading-relaxed">
+                Have questions about our civil engineering designs, structural calculations, capstone research, or site consultations? Send us a message or call directly.
               </p>
 
               {/* Quick Contact Action Pills */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
                   href="tel:+251934830919"
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#0B351E]/90 hover:bg-[#0E4226] border border-emerald-500/50 text-emerald-200 text-xs font-mono font-bold transition-all shadow-sm"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/60 hover:bg-black/80 border border-[#D4AF37]/50 hover:border-[#D4AF37] text-amber-200 text-xs font-mono font-bold transition-all shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-md"
                 >
-                  <Phone size={13} className="text-emerald-400" />
+                  <Phone size={13} className="text-[#D4AF37]" />
                   <span>+251 934 830 919</span>
                 </a>
                 <a
                   href="mailto:lemmayezedlij21@gmail.com"
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#0B351E]/90 hover:bg-[#0E4226] border border-amber-500/50 text-amber-200 text-xs font-mono font-bold transition-all shadow-sm"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/60 hover:bg-black/80 border border-white/20 hover:border-white/50 text-zinc-200 text-xs font-mono font-bold transition-all shadow-sm backdrop-blur-md"
                 >
                   <Mail size={13} className="text-amber-400" />
                   <span>lemmayezedlij21@gmail.com</span>
                 </a>
               </div>
 
+              {/* Live Animated Background Status indicator */}
+              <div className="flex items-center gap-2 pt-2 text-[11px] font-mono text-zinc-400">
+                <span className="inline-block w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span>Active Scene:</span>
+                <span className="text-zinc-200 font-semibold">{bgImages[activeBgIndex].label}</span>
+                <div className="flex items-center gap-1.5 ml-2">
+                  {bgImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveBgIndex(idx)}
+                      className={`h-1.5 rounded-full transition-all cursor-pointer ${activeBgIndex === idx ? 'w-5 bg-[#D4AF37]' : 'w-1.5 bg-white/30 hover:bg-white/60'}`}
+                      title={`Switch to background ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
             </div>
 
-            {/* Right Side: 2x2 Semi-Transparent Dark Glowing Glass Cards */}
+            {/* Right Side: 2x2 Semi-Transparent Dark Glass Cards with Gold Highlights */}
             <div className="lg:col-span-5 grid grid-cols-2 gap-4">
               
               {/* Location Mini Card */}
-              <div className="p-4 rounded-2xl bg-[#082E19]/70 backdrop-blur-md border border-emerald-500/30 shadow-[0_0_20px_rgba(34,197,94,0.1)] flex flex-col items-center text-center justify-center transition-all hover:border-emerald-400">
-                <div className="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center mb-2.5">
+              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-[#D4AF37]/35 shadow-[0_0_20px_rgba(212,175,55,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-[#D4AF37] hover:scale-[1.02]">
+                <div className="w-9 h-9 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center mb-2.5">
                   <MapPin size={17} />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-300 font-bold">Location</span>
-                <span className="text-xs font-semibold text-zinc-100 mt-1">ASTU Campus, Adama</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] font-bold">Campus Base</span>
+                <span className="text-xs font-semibold text-zinc-100 mt-1">ASTU SoCEA, Adama</span>
               </div>
 
               {/* Phone Mini Card */}
-              <div className="p-4 rounded-2xl bg-[#082E19]/70 backdrop-blur-md border border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.1)] flex flex-col items-center text-center justify-center transition-all hover:border-amber-400">
+              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-amber-500/35 shadow-[0_0_20px_rgba(245,158,11,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-amber-400 hover:scale-[1.02]">
                 <div className="w-9 h-9 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center mb-2.5">
                   <Phone size={17} />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-bold">Phone</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-bold">Mobile</span>
                 <span className="text-xs font-semibold text-zinc-100 mt-1">+251 934 830 919</span>
               </div>
 
               {/* Email Mini Card */}
-              <div className="p-4 rounded-2xl bg-[#082E19]/70 backdrop-blur-md border border-orange-500/30 shadow-[0_0_20px_rgba(249,115,22,0.1)] flex flex-col items-center text-center justify-center transition-all hover:border-orange-400">
+              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-orange-500/35 shadow-[0_0_20px_rgba(249,115,22,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-orange-400 hover:scale-[1.02]">
                 <div className="w-9 h-9 rounded-full bg-orange-500/20 text-orange-300 flex items-center justify-center mb-2.5">
                   <Mail size={17} />
                 </div>
@@ -162,13 +214,13 @@ export const Contact = () => {
                 <span className="text-xs font-semibold text-zinc-100 mt-1 truncate max-w-full">lemmayezedlij21@gmail.com</span>
               </div>
 
-              {/* Hours Mini Card */}
-              <div className="p-4 rounded-2xl bg-[#082E19]/70 backdrop-blur-md border border-purple-500/30 shadow-[0_0_20px_rgba(168,85,247,0.1)] flex flex-col items-center text-center justify-center transition-all hover:border-purple-400">
-                <div className="w-9 h-9 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center mb-2.5">
+              {/* Availability Mini Card */}
+              <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-yellow-500/35 shadow-[0_0_20px_rgba(234,179,8,0.15)] flex flex-col items-center text-center justify-center transition-all hover:border-yellow-400 hover:scale-[1.02]">
+                <div className="w-9 h-9 rounded-full bg-yellow-500/20 text-yellow-300 flex items-center justify-center mb-2.5">
                   <Clock size={17} />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-purple-300 font-bold">Hours</span>
-                <span className="text-xs font-semibold text-zinc-100 mt-1">8:30 AM – 5:30 PM</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-yellow-300 font-bold">Availability</span>
+                <span className="text-xs font-semibold text-zinc-100 mt-1">Mon – Sat (Active)</span>
               </div>
 
             </div>
@@ -183,17 +235,17 @@ export const Contact = () => {
       <section className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 sm:-mt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           
-          {/* Card 1: Our Location */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+          {/* Card 1: Academic Base */}
+          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D4AF37]/50 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 dark:bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center mb-4">
               <MapPin size={22} />
             </div>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
-                Our Location
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D4AF37] font-bold block mb-1">
+                Academic Base
               </span>
               <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug">
-                ASTU SoCEA Campus, Office 412
+                ASTU SoCEA Main Campus
               </h4>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
                 Adama, Oromia, Ethiopia
@@ -202,7 +254,7 @@ export const Contact = () => {
           </div>
 
           {/* Card 2: Phone Numbers */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl flex flex-col items-center justify-between">
+          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-amber-400/50 flex flex-col items-center justify-between">
             <div className="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
               <Phone size={22} />
             </div>
@@ -220,7 +272,7 @@ export const Contact = () => {
           </div>
 
           {/* Card 3: Email Address */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl flex flex-col items-center justify-between">
+          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-orange-400/50 flex flex-col items-center justify-between">
             <div className="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-4">
               <Mail size={22} />
             </div>
@@ -237,20 +289,20 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Card 4: Office Hours */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4">
+          {/* Card 4: Availability */}
+          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-yellow-400/50 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-yellow-50 dark:bg-yellow-950/50 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4">
               <Clock size={22} />
             </div>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-purple-600 dark:text-purple-400 font-bold block mb-1">
-                Office Hours
+              <span className="text-[11px] font-mono uppercase tracking-wider text-yellow-600 dark:text-yellow-400 font-bold block mb-1">
+                Availability
               </span>
               <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug">
-                Mon – Sat: 8:30 AM – 5:30 PM
+                Mon – Sat: 8:30 AM – 6:00 PM
               </h4>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                Sunday: Closed
+                Study &amp; Project Consultations
               </p>
             </div>
           </div>
@@ -271,9 +323,6 @@ export const Contact = () => {
             
             {/* Social Media Card */}
             <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-7 border border-zinc-100 dark:border-zinc-800">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-purple-600 dark:text-purple-400 font-bold block mb-1">
-                Social Platforms
-              </span>
               <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
                 Follow Us
               </h3>
@@ -287,7 +336,7 @@ export const Contact = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 transition-all border border-zinc-100 dark:border-zinc-800 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
                 >
                   <Facebook size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-600" />
                   <span className="text-[10px] font-bold">Facebook</span>
@@ -297,7 +346,7 @@ export const Contact = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 transition-all border border-zinc-100 dark:border-zinc-800 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
                 >
                   <Instagram size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-pink-600" />
                   <span className="text-[10px] font-bold">Instagram</span>
@@ -307,7 +356,7 @@ export const Contact = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 transition-all border border-zinc-100 dark:border-zinc-800 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
                 >
                   <Linkedin size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-700" />
                   <span className="text-[10px] font-bold">LinkedIn</span>
@@ -317,7 +366,7 @@ export const Contact = () => {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 transition-all border border-zinc-100 dark:border-zinc-800 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
                 >
                   <Youtube size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-red-600" />
                   <span className="text-[10px] font-bold">YouTube</span>
@@ -334,7 +383,7 @@ export const Contact = () => {
                   href="https://maps.google.com/?q=Adama+Science+and+Technology+University"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md text-zinc-800 dark:text-zinc-200 text-xs font-bold hover:text-emerald-600 shadow-sm border border-zinc-200 dark:border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md text-zinc-800 dark:text-zinc-200 text-xs font-bold hover:text-[#D4AF37] shadow-sm border border-zinc-200 dark:border-zinc-700 transition-colors"
                 >
                   <span>Open in Maps</span>
                   <ExternalLink size={12} />
@@ -365,12 +414,6 @@ export const Contact = () => {
           <div ref={formRef} className="lg:col-span-7">
             <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-8 sm:p-10 border border-zinc-100 dark:border-zinc-800">
               
-              {/* Send a Message Pill Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold tracking-wide mb-3">
-                <Send size={12} className="text-emerald-600 dark:text-emerald-400" />
-                <span>SEND A MESSAGE</span>
-              </div>
-
               {/* Form Heading & Subtitle */}
               <h2 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
                 We'd Love to Hear From You
@@ -407,7 +450,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Abebe Kebede"
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-emerald-600 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
                   />
                 </div>
 
@@ -424,7 +467,7 @@ export const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="abebe@example.com"
-                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-emerald-600 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
 
@@ -438,7 +481,7 @@ export const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="09XXXXXXXX"
-                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-emerald-600 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
@@ -452,7 +495,7 @@ export const Contact = () => {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-emerald-600 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all"
+                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all"
                   >
                     <option value="Reinforced Concrete Structure">Reinforced Concrete Structure (EBCS EN 1992)</option>
                     <option value="Highway & Transportation">Highway & Transportation Corridor (ERA 2024)</option>
@@ -475,18 +518,18 @@ export const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us how we can help you with structural calculations, site supervision, or capstone collaboration..."
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 p-4 text-xs sm:text-sm focus:border-emerald-600 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
+                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 p-4 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
                   ></textarea>
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button (Luxury Architectural Gold) */}
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#15803D] hover:bg-[#166534] active:scale-[0.99] text-white py-3.5 px-6 rounded-xl font-bold text-sm tracking-wide transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
+                  className="w-full bg-gradient-to-r from-[#D4AF37] via-[#C9A227] to-[#B89628] hover:brightness-110 active:scale-[0.99] text-zinc-950 py-3.5 px-6 rounded-xl font-black text-sm tracking-wide transition-all shadow-lg shadow-[#D4AF37]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
                 >
                   <span>{loading ? 'Sending Message...' : 'Send Message'}</span>
-                  <Send size={15} className="text-white" />
+                  <Send size={15} className="text-zinc-950" />
                 </button>
 
               </form>
@@ -504,9 +547,9 @@ export const Contact = () => {
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col items-center">
           <button
             onClick={() => setShowEstimator(!showEstimator)}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] shadow-sm transition-all"
           >
-            <Compass size={14} className="text-emerald-500" />
+            <Compass size={14} className="text-[#D4AF37]" />
             <span>{showEstimator ? 'Hide Interactive Scope Estimator' : 'Need Instant Calculations? Open Interactive Scope Estimator'}</span>
           </button>
 

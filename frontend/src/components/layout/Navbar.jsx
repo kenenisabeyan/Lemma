@@ -37,8 +37,8 @@ export const Navbar = () => {
   });
 
   const settings = settingsData?.settings || settingsData || {};
-  const brandName = settings.engineerName ? settings.engineerName.split(' ')[0] : 'Lemma';
-  const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'CIVIL ENG 5TH YEAR | ASTU';
+  const brandName = 'Lemma';
+  const brandSubtitle = 'CIVIL ENG | ASTU';
   const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80';
 
   useEffect(() => {

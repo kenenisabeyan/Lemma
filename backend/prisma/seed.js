@@ -25,7 +25,7 @@ async function main() {
     where: { id: 'default' },
     update: {
       engineerName: 'Lemma Techane',
-      title: '5th Year Civil Engineering Student | ASTU',
+      title: 'Civil Eng · ASTU',
       heroTagline: 'Engineering Ethiopia’s Tomorrow with ASTU Excellence.',
       heroBio: 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.',
       yearsExp: '5th Year',
@@ -41,7 +41,7 @@ async function main() {
     create: {
       id: 'default',
       engineerName: 'Lemma Techane',
-      title: '5th Year Civil Engineering Student | ASTU',
+      title: 'Civil Eng · ASTU',
       heroTagline: 'Engineering Ethiopia’s Tomorrow with ASTU Excellence.',
       heroBio: 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.',
       introVideoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-architectural-model-of-a-modern-building-41618-large.mp4',
