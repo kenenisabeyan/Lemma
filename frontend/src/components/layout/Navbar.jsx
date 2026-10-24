@@ -31,14 +31,14 @@ export const Navbar = () => {
   const { data: settingsData } = useFetch('/settings', {
     settings: {
       engineerName: 'Lemma',
-      title: 'Structural PE, SE',
+      title: 'Civil Eng 5th Year | ASTU',
       avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80'
     }
   });
 
   const settings = settingsData?.settings || settingsData || {};
   const brandName = settings.engineerName ? settings.engineerName.split(' ')[0] : 'Lemma';
-  const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'STRUCTURAL PE, SE';
+  const brandSubtitle = settings.title ? settings.title.toUpperCase() : 'CIVIL ENG 5TH YEAR | ASTU';
   const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80';
 
   useEffect(() => {
@@ -194,7 +194,7 @@ export const Navbar = () => {
                 {/* Status Badge */}
                 <div className="my-5 flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span>Available for Q1/Q2 2026 Projects & Advisory</span>
+                  <span>Available for 2026 Graduate Roles, Research & Projects</span>
                 </div>
 
                 {/* Navigation Links */}
@@ -258,12 +258,12 @@ export const Navbar = () => {
                   }}
                   className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#D4AF37]/25 flex items-center justify-center gap-2"
                 >
-                  Schedule Consultation <ArrowUpRight size={14} />
+                  Connect with Us <ArrowUpRight size={14} />
                 </button>
 
                 <div className="flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-400 font-mono pt-2">
-                  <span>Available Worldwide</span>
-                  <span>EST / GMT-5</span>
+                  <span>ASTU Campus, Adama</span>
+                  <span>EAT / UTC+3</span>
                 </div>
               </div>
 

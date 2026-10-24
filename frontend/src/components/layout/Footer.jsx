@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('consult@lemma-structural.com');
+    navigator.clipboard.writeText('astu.civil.lemma@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -32,13 +32,13 @@ export const Footer = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                Available for Select Consultations & High-Rise Peer Reviews
+                Available for Academic Collaborations, Capstone Research & Graduate Opportunities
               </div>
               <h3 className="text-2xl sm:text-4xl font-extrabold text-zinc-900 dark:text-slate-100 tracking-tight">
-                Let's Engineer Something <span className="text-[#D4AF37]">Resilient & Enduring.</span>
+                Engineering Ethiopia's Future with <span className="text-[#D4AF37]">ASTU Excellence.</span>
               </h3>
               <p className="mt-3 text-sm text-[#54595F] dark:text-slate-400 leading-relaxed">
-                Whether you are designing a 60-story commercial tower, evaluating seismic retrofit strategies, or requiring an independent calculation verification.
+                Collaborating on reinforced concrete structural modeling, highway and transport corridors, geotechnical soil investigations, and innovative graduation capstone engineering.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export const Footer = () => {
                 to="/contact"
                 className="rounded-full bg-[#D4AF37] text-[#121417] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-[#c49f2c] transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 active:scale-95 w-full sm:w-auto text-center font-bold"
               >
-                Request Consultation <ArrowUpRight size={14} />
+                Connect With Us <ArrowUpRight size={14} />
               </Link>
               <button
                 onClick={handleCopyEmail}
@@ -72,18 +72,18 @@ export const Footer = () => {
                 <Layers className="text-[#D4AF37] dark:text-[#D4AF37] w-4 h-4" />
               </div>
               <span className="font-extrabold text-lg tracking-wider uppercase text-zinc-900 dark:text-slate-100">
-                Lemma<span className="text-[#D4AF37]">.</span>
+                Lemma & Brothers<span className="text-[#D4AF37]">.</span>
               </span>
             </Link>
             <p className="text-[#54595F] dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
-              Licensed Senior Structural Engineer (PE, SE). Specializing in high-rise lateral stability design, seismic resilience retrofits, bridge infrastructure, and forensic structural evaluations.
+              5th Year Civil Engineering student cohort at Adama Science and Technology University (ASTU). Passionate brothers in structural finite element modeling, reinforced concrete design, highway infrastructure, and geotechnical foundations.
             </p>
             <div className="flex flex-wrap gap-2 items-center">
               <span className="text-[10px] uppercase font-mono tracking-wider text-[#D4AF37] border border-[#D4AF37]/30 bg-[#FEF9E7] dark:bg-[#D4AF37]/5 px-3 py-1 rounded-full shadow-xs font-bold">
-                IBC 2024 & ACI 318 Compliant
+                EBCS, ES EN & ERA Compliant
               </span>
               <span className="text-[10px] uppercase font-mono tracking-wider text-[#54595F] dark:text-slate-400 border border-zinc-300 dark:border-slate-700 bg-[#FFFFFF] dark:bg-transparent px-3 py-1 rounded-full shadow-xs">
-                PE #84729 · SE #92041
+                ASTU SoCEA · Class of 2026
               </span>
             </div>
           </div>
@@ -125,20 +125,20 @@ export const Footer = () => {
           <div className="lg:col-span-3 rounded-2xl bg-[#FFFFFF] dark:bg-[#0F172A]/90 border border-zinc-200/80 dark:border-slate-800/80 p-6 flex flex-col justify-between shadow-sm">
             <div>
               <h4 className="text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span> Headquarters
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span> Campus Location
               </h4>
               <ul className="flex flex-col gap-3.5 text-xs text-[#54595F] dark:text-slate-400">
                 <li className="flex items-start gap-2.5">
                   <MapPin className="text-[#D4AF37] w-4 h-4 mt-0.5 shrink-0" />
-                  <span>Suite 400, Iron Building<br/>Metropolis City, NY 10001</span>
+                  <span>School of Civil Engineering & Architecture<br/>ASTU Main Campus, Adama, Ethiopia</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Phone className="text-[#D4AF37] w-4 h-4 shrink-0" />
-                  <a href="tel:+15550198472" className="hover:text-[#D4AF37] transition-colors font-mono">+1 (555) 019-8472</a>
+                  <a href="tel:+251911234567" className="hover:text-[#D4AF37] transition-colors font-mono">+251 91 123 4567</a>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail className="text-[#D4AF37] w-4 h-4 shrink-0" />
-                  <a href="mailto:consult@lemma-structural.com" className="hover:text-[#D4AF37] transition-colors font-mono truncate">consult@lemma-structural.com</a>
+                  <a href="mailto:astu.civil.lemma@gmail.com" className="hover:text-[#D4AF37] transition-colors font-mono truncate">astu.civil.lemma@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -148,7 +148,7 @@ export const Footer = () => {
 
         {/* Bottom Sub-footer */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-[#54595F] dark:text-[#9CA3AF]">
-          <p>&copy; {new Date().getFullYear()} Lemma Structural Engineering Professional Portfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Lemma Techane & ASTU 5th Year Civil Engineering Brothers. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <button 
               onClick={scrollToTop} 

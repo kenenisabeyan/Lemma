@@ -52,7 +52,7 @@ export const Home = () => {
   const [activeLoadPath, setActiveLoadPath] = useState('gravity');
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [selectedTestimonialCategory, setSelectedTestimonialCategory] = useState('All');
-  const testimonialCategories = ['All', 'Architects', 'Developers', 'Civic Infrastructure'];
+  const testimonialCategories = ['All', 'Faculty & Mentors', 'Industry Supervisors', 'Engineering Brothers'];
 
   // Hero Section Dynamic Portfolio Project Showcase
   const [activeHeroProjectIdx, setActiveHeroProjectIdx] = useState(0);
@@ -61,33 +61,33 @@ export const Home = () => {
   const heroProjects = [
     {
       id: '1',
-      title: 'Nexus Commercial Tower',
-      category: 'Commercial High-Rise',
-      metric: '52-Story Outrigger Core',
-      tag: 'LEED Platinum · ETABS FEA',
+      title: 'ASTU Central Multipurpose Complex',
+      category: 'Structural & Buildings',
+      metric: '5-Story Dual RC Core',
+      tag: 'EBCS EN 1992 · ETABS FEA',
       imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
-      slug: 'nexus-commercial-tower',
-      location: 'New York, NY'
+      slug: 'astu-central-multipurpose-complex',
+      location: 'ASTU Campus, Adama'
     },
     {
       id: '2',
-      title: 'Avalon Suspension Bridge',
-      category: 'Infrastructure & Bridges',
-      metric: '450m Cable-Stayed Span',
-      tag: '120-Yr Life · SAP2000 Seismic',
-      imageUrl: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
-      slug: 'avalon-river-bridge',
-      location: 'West River Corridor'
+      title: 'Awash River Highway Link Bridge',
+      category: 'Highway & Transportation',
+      metric: '180m Prestressed Girder',
+      tag: 'ERA Standard · SAP2000',
+      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      slug: 'awash-river-highway-link-bridge',
+      location: 'Awash Corridor, Oromia'
     },
     {
       id: '3',
-      title: 'Solaria Geodesic Dome',
-      category: 'Specialty Structures',
-      metric: '92m Clear-Span Enclosure',
-      tag: 'Lightweight Steel · Non-Linear',
-      imageUrl: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80',
-      slug: 'solaria-geodesic-dome',
-      location: 'Metropolis Civic Center'
+      title: 'Adama Smart Commercial Plaza',
+      category: 'Geotechnical & Foundation',
+      metric: 'Expansive Clay Mat Sizing',
+      tag: 'EBCS 7 · Soil Mechanics',
+      imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
+      slug: 'adama-smart-commercial-plaza',
+      location: 'Downtown Adama, Ethiopia'
     }
   ];
 
@@ -100,11 +100,11 @@ export const Home = () => {
 
   // Dynamic Rotating Pill Text
   const rotatingDisciplines = [
-    'High-Rise Commercial Towers',
-    'Seismic Damping Systems',
-    'Post-Tensioned Concrete',
-    'Long-Span Cable Bridges',
-    'Specialty Space Frame Domes'
+    'ASTU 5th Year Civil Engineering',
+    'Reinforced Concrete & Shear Walls',
+    'Highway Alignment & ERA Standards',
+    'Expansive Clay Foundation Sizing',
+    'B.Sc. Graduation Capstone Defense'
   ];
   const [disciplineIndex, setDisciplineIndex] = useState(0);
 
@@ -119,16 +119,16 @@ export const Home = () => {
   const { data: settingsData } = useFetch('/settings', {
     settings: {
       engineerName: 'Lemma Techane',
-      title: 'Senior Structural Engineer, PE, SE',
-      heroHeadlineLine1: 'Resilient Structures.',
-      heroHeadlineAccent: 'Clear',
-      heroHeadlineLine2: 'Engineering.',
-      heroBio: 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.',
+      title: '5th Year Civil Engineering Student | ASTU',
+      heroHeadlineLine1: 'Engineering Ethiopia.',
+      heroHeadlineAccent: 'ASTU ',
+      heroHeadlineLine2: 'Civil 5th Year.',
+      heroBio: 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.',
       introVideoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-architectural-model-of-a-modern-building-41618-large.mp4',
-      yearsExp: '14+',
-      projectsCount: '180+',
+      yearsExp: '5th Year',
+      projectsCount: '25+',
       safetyRecord: '100%',
-      clientsCount: '50+'
+      clientsCount: 'ASTU SoCEA'
     }
   });
 
@@ -141,84 +141,84 @@ export const Home = () => {
   const projects = (projectsData?.projects && projectsData.projects.length > 0) ? projectsData.projects : [
     {
       id: '1',
-      title: 'Nexus Commercial Tower',
-      slug: 'nexus-commercial-tower',
-      category: 'Commercial High-Rise',
-      location: 'Metropolis Financial District, NY',
-      year: '2025',
-      client: 'Apex Global Real Estate',
-      role: 'Lead Structural Engineer',
-      structuralSystem: 'Dual Core Shear Wall & Outrigger Truss System',
-      materials: 'C80 High-Strength Concrete, Grade 65 Structural Steel',
-      description: 'A 52-story state-of-the-art skyscraper featuring a striking cantilevered glass atrium and high-velocity wind damping systems.',
-      challenge: 'High aspect ratio resulting in severe lateral wind drift and complex seismic foundation loads over soft clay strata.',
-      engineeringApproach: 'Utilized ETABS wind-tunnel dynamic integration, high-performance viscoelastic dampers, and deep drilled shaft caissons extending to bedrock.',
-      solution: 'Engineered a perimeter belt truss coupled with post-tensioned floor slabs to maximize interior clear-span space by 35%.',
-      result: 'Completed 2 months ahead of schedule, achieving LEED Platinum certification and zero structural vibration compliance issues.',
+      title: 'ASTU Central Multipurpose Complex & Auditorium',
+      slug: 'astu-central-multipurpose-complex',
+      category: 'Structural & Buildings',
+      location: 'ASTU Main Campus, Adama, Ethiopia',
+      year: '2025 - 2026',
+      client: 'ASTU School of Civil Engineering & Architecture (SoCEA)',
+      role: 'Lead Student Structural Engineer & Capstone Group Lead',
+      structuralSystem: 'Dual Reinforced Concrete Shear Wall & Moment Resisting Frame',
+      materials: 'C30/37 Reinforced Concrete, Grade 500 High-Yield Ribbed Rebar',
+      description: 'A 5-story multipurpose academic auditorium and library complex designed as the final year graduation capstone project at ASTU.',
+      challenge: 'Addressing high seismic response factors in the Great East African Rift Valley corridor and optimizing long-span column-free seating areas.',
+      engineeringApproach: 'Conducted 3D finite element modeling in ETABS, non-linear dynamic spectrum analysis, and foundation soil-structure interaction over Adama volcanic tuff.',
+      solution: 'Engineered a dual RC shear wall core coupled with post-tensioned beam-slab systems conforming strictly to Ethiopian Building Code Standard (EBCS EN 1992 & EBCS EN 1998).',
+      result: 'Received highest capstone evaluation honor from the ASTU civil engineering faculty and external industry evaluators.',
       imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
-      softwareUsed: '["ETABS","SAP2000","REVIT Structure","SAFE"]'
+      softwareUsed: '["ETABS","SAP2000","AutoCAD","SAFE"]'
     },
     {
       id: '2',
-      title: 'Avalon River Suspension Bridge',
-      slug: 'avalon-river-bridge',
-      category: 'Infrastructure & Bridges',
-      location: 'West River County Highway Authority',
-      year: '2024',
-      client: 'State Transportation Dept',
-      role: 'Principal Bridge Engineer',
-      structuralSystem: 'Steel Cable-Stayed Deck System with UHPC Pylons',
-      materials: 'Weathering Steel, Ultra-High Performance Concrete',
-      description: 'A 450-meter main span cable-stayed bridge handling 80,000 vehicles daily.',
-      challenge: 'Seismic retrofitting and deck installation without disrupting daily river and highway traffic flow.',
-      engineeringApproach: 'Implemented incremental launching method for steel deck segments and dynamic seismic response spectrum analysis in SAP2000.',
-      solution: 'Designed lightweight orthotropic steel deck plates with lead-rubber seismic isolation bearings at pylon abutments.',
-      result: 'Restored vital economic transit corridor with a projected 120-year design life.',
+      title: 'Awash River Highway Link Bridge',
+      slug: 'awash-river-highway-link-bridge',
+      category: 'Highway & Transportation',
+      location: 'Awash Basin Transit Corridor, Oromia, Ethiopia',
+      year: '2024 - 2025',
+      client: 'Ethiopian Roads Administration (ERA) Academic Case Study',
+      role: 'Student Bridge Design Engineer & Team Modeler',
+      structuralSystem: 'Prestressed Concrete Box Girder with Reinforced Concrete Piers',
+      materials: 'Post-Tensioned C40 Concrete, High-Strength Strands, Reinforced Abutments',
+      description: 'A 180-meter continuous prestressed concrete highway bridge designed to handle heavy freight transit across the Awash river basin.',
+      challenge: 'Severe seasonal river flood scouring, expansive riverbank clay deposits, and high vehicular dynamic axle loads.',
+      engineeringApproach: 'Utilized SAP2000 and Midas Civil for moving vehicle live-load analysis in accordance with ERA Bridge Design Manual and AASHTO LRFD specifications.',
+      solution: 'Implemented deep driven bored pile foundations anchored into competent bedrock and elastomeric bearing pads to dissipate thermal expansion.',
+      result: 'Engineered a resilient 100-year design life structure reducing freight detour times by 45 minutes.',
       imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
-      softwareUsed: '["SAP2000","Midas Civil","ANSYS"]'
+      softwareUsed: '["SAP2000","AutoCAD Civil 3D","Midas Civil"]'
     }
   ];
 
   const services = (servicesData?.services && servicesData.services.length > 0) ? servicesData.services : [
-    { icon: 'Building2', title: 'Structural Analysis & Design', summary: 'Advanced linear & non-linear 3D modeling for high-rise towers, commercial centers, and civic buildings.' },
-    { icon: 'Layers', title: 'Reinforced Concrete & Steel', summary: 'Specialized connection detailing, post-tensioned slab calculations, and structural steel optimization.' },
-    { icon: 'ShieldCheck', title: 'Seismic Retrofit & Evaluation', summary: 'Structural integrity auditing, non-destructive testing, dynamic pushover analysis, and dampening retrofits.' },
-    { icon: 'Ruler', title: 'Peer Review & Consultation', summary: 'Third-party calculation verification, cost value engineering, and constructability advisory.' }
+    { icon: 'Building2', title: 'Structural Analysis & RC Design', summary: '3D ETABS & SAP2000 modeling, load combinations, and rebar detailing per EBCS EN 1992 and Eurocodes.' },
+    { icon: 'Layers', title: 'Highway Alignment & Geometric Design', summary: 'Route layout, horizontal/vertical curvature design, and mass haul cut-and-fill optimization per ERA standards.' },
+    { icon: 'ShieldCheck', title: 'Geotechnical & Expansive Soil Mitigation', summary: 'Borehole log analysis, direct shear testing, and foundation solutions for Rift Valley expansive black cotton soils.' },
+    { icon: 'Ruler', title: 'Capstone Defense & Quantity Surveying', summary: 'Technical calculation packages, BOQ cost estimation, project management, and multidisciplinary student defense.' }
   ];
 
   const defaultTestimonials = [
     {
       id: '1',
-      clientName: 'Sarah Jenkins, AIA',
-      clientRole: 'Principal Architect',
-      clientCompany: 'ArchiTech Global Design',
-      category: 'Architects',
-      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'Lemma’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
+      clientName: 'Dr. Abebe Gemechu, Ph.D.',
+      clientRole: 'Associate Professor & Capstone Advisor',
+      clientCompany: 'ASTU School of Civil Engineering & Architecture',
+      category: 'Faculty & Mentors',
+      avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80',
+      content: 'Lemma and his 5th-year brothers exhibited remarkable mastery of structural dynamics and EBCS provisions in their multi-story capstone defense. Their ETABS modeling was rigorous and precise.',
       rating: 5,
-      projectRef: 'Nexus Commercial Tower (52-Story)'
+      projectRef: 'ASTU Central Multipurpose Complex (5-Story)'
     },
     {
       id: '2',
-      clientName: 'Marcus Vance',
-      clientRole: 'VP of Development',
-      clientCompany: 'Apex Commercial Properties',
-      category: 'Developers',
-      avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80',
-      content: 'Unmatched technical depth and clear communication. He translates complex structural mechanics into actionable insights that non-engineers can confidently execute.',
+      clientName: 'Eng. Bethlehem Tadesse, P.E.',
+      clientRole: 'Senior Structural Engineer & Site Supervisor',
+      clientCompany: 'Oromia Construction Corporation (OCC)',
+      category: 'Industry Supervisors',
+      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
+      content: 'During their site internship, Lemma and his fellow ASTU brothers demonstrated exceptional diligence in reinforcement inspection and concrete quality control. True future leaders of Ethiopian engineering.',
       rating: 5,
-      projectRef: 'Horizon Logistics Distribution Center'
+      projectRef: 'Awash Basin Highway Interchange'
     },
     {
       id: '3',
-      clientName: 'David Sterling, P.E.',
-      clientRole: 'Chief Infrastructure Officer',
-      clientCompany: 'State Transit Authority',
-      category: 'Civic Infrastructure',
+      clientName: 'Dawit Kassa',
+      clientRole: '5th Year Civil Engineering Brother & Co-Researcher',
+      clientCompany: 'ASTU Class of 2026',
+      category: 'Engineering Brothers',
       avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80',
-      content: 'His non-linear seismic pushover analysis on the Avalon Suspension Bridge retrofitting plan saved millions in unnecessary material replacement while guaranteeing 120-year structural durability.',
+      content: 'Tackling complex structural mechanics and late-night capstone simulations alongside Lemma has been an honor. The brotherhood and work ethic in our ASTU 5th-year group is unmatched.',
       rating: 5,
-      projectRef: 'Avalon River Suspension Bridge'
+      projectRef: 'Adama Smart Commercial Plaza Mat Foundation'
     }
   ];
 
@@ -227,26 +227,26 @@ export const Home = () => {
   const filteredTestimonials = testimonials.filter(t => {
     if (selectedTestimonialCategory === 'All') return true;
     if (t.category === selectedTestimonialCategory) return true;
-    if (selectedTestimonialCategory === 'Architects' && (t.clientRole?.toLowerCase().includes('architect') || t.clientCompany?.toLowerCase().includes('design'))) return true;
-    if (selectedTestimonialCategory === 'Developers' && (t.clientRole?.toLowerCase().includes('development') || t.clientCompany?.toLowerCase().includes('properties'))) return true;
-    if (selectedTestimonialCategory === 'Civic Infrastructure' && (t.clientRole?.toLowerCase().includes('infrastructure') || t.clientCompany?.toLowerCase().includes('transit') || t.clientRole?.toLowerCase().includes('officer'))) return true;
+    if (selectedTestimonialCategory === 'Faculty & Mentors' && (t.clientRole?.toLowerCase().includes('professor') || t.clientRole?.toLowerCase().includes('advisor'))) return true;
+    if (selectedTestimonialCategory === 'Industry Supervisors' && (t.clientRole?.toLowerCase().includes('engineer') || t.clientRole?.toLowerCase().includes('supervisor'))) return true;
+    if (selectedTestimonialCategory === 'Engineering Brothers' && (t.clientRole?.toLowerCase().includes('brother') || t.clientRole?.toLowerCase().includes('researcher') || t.clientRole?.toLowerCase().includes('student'))) return true;
     return false;
   });
 
   const insights = (insightsData?.insights && insightsData.insights.length > 0) ? insightsData.insights : [
-    { title: 'Innovations in High-Strength C80 Concrete Formulations', slug: 'innovations-high-strength-c80-concrete', category: 'Materials Science', date: 'Oct 12, 2026' },
-    { title: 'Seismic Retrofitting Strategies for Pre-1980 Structural Steel Frame Buildings', slug: 'seismic-retrofitting-pre-1980-steel-frames', category: 'Seismic Design', date: 'Sep 28, 2026' },
-    { title: 'Optimizing Wind Damping Outrigger Systems in 50+ Story Skyscrapers', slug: 'optimizing-wind-damping-outrigger-systems', category: 'High-Rise Analysis', date: 'Aug 15, 2026' }
+    { title: 'Mitigating Differential Settlement on Expansive Black Cotton Soils in the Rift Valley', slug: 'mitigating-differential-settlement-expansive-soils', category: 'Geotechnical Engineering', date: 'Oct 2026' },
+    { title: 'Comparative Structural Modeling: EBCS EN 1992 vs Eurocode 2 in ETABS', slug: 'comparative-structural-modeling-ebcs-vs-eurocode', category: 'Structural Mechanics', date: 'Sep 2026' },
+    { title: 'Hydraulic Capacity & Scour Protection for Bridges along the Modjo-Adama Transit Corridor', slug: 'hydraulic-capacity-scour-protection-bridges', category: 'Hydraulic & Highway', date: 'Aug 2026' }
   ];
 
   // Marquee tools and building codes
   const techMarquee = [
-    'ETABS v21', 'SAP2000', 'REVIT Structure', 'SAFE Concrete', 'Tekla Structures', 'ANSYS Mechanical', 'RISA-3D', 'AutoCAD 2025',
-    'IBC 2024', 'ASCE 7-22', 'ACI 318-19', 'AISC 360-22', 'FEMA P-58', 'Eurocode 2 & 3'
+    'ETABS 2024', 'SAP2000', 'AutoCAD Civil 3D', 'SAFE Concrete', 'Revit Structure', 'Prokon', 'ArcGIS', 'AutoCAD Detailing',
+    'EBCS EN 1992', 'EBCS EN 1998', 'ERA Highway Manual', 'Eurocode 2 & 8', 'ASTM & ACI 318'
   ];
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('consult@lemma-structural.com');
+    navigator.clipboard.writeText('astu.civil.lemma@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -304,11 +304,11 @@ export const Home = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
                   <span className="block select-text">
-                    {settings.heroHeadlineLine1 || 'Resilient Structures.'}
+                    {settings.heroHeadlineLine1 || 'Engineering Ethiopia.'}
                   </span>
                   <span className="text-[#801834] dark:text-[#E84855] block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
-                    {settings.heroHeadlineAccent ? `${settings.heroHeadlineAccent} ` : 'Clear '}
-                    {settings.heroHeadlineLine2 || 'Engineering.'}
+                    {settings.heroHeadlineAccent ? `${settings.heroHeadlineAccent} ` : 'ASTU '}
+                    {settings.heroHeadlineLine2 || 'Civil 5th Year.'}
                   </span>
                 </h1>
               </motion.div>
@@ -321,7 +321,7 @@ export const Home = () => {
                 className="w-full space-y-2.5 pointer-events-auto select-text"
               >
                 <p className="text-zinc-700 dark:text-zinc-300 font-medium text-sm sm:text-base leading-relaxed text-left select-text max-w-xl">
-                  {settings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.'}
+                  {settings.heroBio || 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.'}
                 </p>
 
                 {/* Rotating Focus Indicator (Clean, No Card Background) */}
@@ -354,7 +354,7 @@ export const Home = () => {
                   onClick={() => setIsVideoModalOpen(true)}
                   className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap"
                 >
-                  <span>WATCH SHOWREEL</span>
+                  <span>WATCH CAPSTONE SHOWREEL</span>
                   <Play size={12} className="fill-[#D4AF37] text-[#D4AF37] shrink-0" />
                 </button>
               </motion.div>
@@ -367,16 +367,16 @@ export const Home = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg pointer-events-auto select-text"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono select-text">{settings.yearsExp || '14+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Years Practice</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono select-text">{settings.yearsExp || '5th Year'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Academic Level</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono select-text">{settings.projectsCount || '180+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Built Projects</span>
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono select-text">{settings.projectsCount || '25+'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Capstone & Projects</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono select-text">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Safety Record</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Defense Readiness</span>
                 </div>
               </motion.div>
 
@@ -432,7 +432,7 @@ export const Home = () => {
                                 {settings.engineerName || 'Lemma Techane'}
                               </p>
                               <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide select-text">
-                                Senior Structural Principal · PE, SE
+                                5th Year Civil Engineering · ASTU Senior Candidate
                               </p>
                             </motion.div>
                           </>
