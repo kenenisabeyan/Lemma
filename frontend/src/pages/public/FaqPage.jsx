@@ -137,7 +137,7 @@ export const FaqPage = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Authoritative answers regarding our 5th-year graduating civil engineering curriculum, capstone design methodologies, EBCS EN building code compliance, and professional industry collaboration.
+                  Clear answers about our 5th-year Civil Engineering capstone, our student brotherhood at ASTU, the codes we design by, and future opportunities.
                 </p>
 
                 {/* Key Guidance Badges */}

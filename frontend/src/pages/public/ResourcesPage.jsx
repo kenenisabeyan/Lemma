@@ -150,7 +150,8 @@ Phone: +251 91 123 4567
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
-                              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+              >
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · 5th Year Capstone Toolkit &amp; Calculation Sheets
                 </span>
@@ -183,7 +184,7 @@ Phone: +251 91 123 4567
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Download authentic capstone design guides, EBCS EN building code checklists, AutoCAD Civil 3D highway corridor details, and launch interactive browser-based beam solvers and structural estimators built by ASTU 5th-year brothers.
+                  Download our 5th-year capstone checklists, Ethiopian code sheets, and road design templates, or test our interactive beam calculator.
                 </p>
 
                 {/* Toolkit Badges */}

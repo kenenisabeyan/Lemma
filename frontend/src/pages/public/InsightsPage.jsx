@@ -139,7 +139,7 @@ export const InsightsPage = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Technical research, laboratory test syntheses, and computational design methodologies developed by Lemma Techane and 5th-year civil engineering brothers at Adama Science and Technology University (ASTU SoCEA) for Ethiopian infrastructure.
+                  Practical engineering research, lab testing insights, and design notes written by ASTU 5th-year students for Ethiopian building and highway projects.
                 </p>
 
                 {/* Authority Badges */}

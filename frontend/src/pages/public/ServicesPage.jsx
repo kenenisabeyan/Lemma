@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { CodeComplianceMatrix } from '../../components/engineering/CodeComplianceMatrix';
-import { WindTunnelSimulator } from '../../components/engineering/WindTunnelSimulator';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
 
@@ -414,25 +413,7 @@ export const ServicesPage = () => {
           <CodeComplianceMatrix />
         </div>
 
-        {/* ======================================================================= */}
-        {/* 4. BOUNDARY LAYER WIND TUNNEL & AERODYNAMICS SECTION                    */}
-        {/* ======================================================================= */}
-        <div className="mb-24">
-          <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-sm mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-              Wind Engineering & Boundary Layer Modeling
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Wind Tunnel Aerodynamics & <span className="text-[#801834] dark:text-[#E84855]">Vortex Shedding Simulator.</span>
-            </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Test building and tower geometries against EBCS EN 1991 wind action criteria. Assess cross-wind drag reduction, corner chamfering, and vortex shedding dynamics under Ethiopian meteorological conditions.
-            </p>
-          </div>
 
-          <WindTunnelSimulator />
-        </div>
 
         {/* ======================================================================= */}
         {/* 5. BOTTOM CONSULTATION BANNER                                           */}

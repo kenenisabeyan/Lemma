@@ -20,7 +20,6 @@ import {
 } from 'lucide-react';
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
 import { PEVerificationPortal } from '../../components/engineering/PEVerificationPortal';
-import { EngineeringPrinciplesMatrix } from '../../components/engineering/EngineeringPrinciplesMatrix';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
 
@@ -96,7 +95,7 @@ export const About = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  Graduating 5th-year Civil Engineering candidate and student cohort at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA). Our engineering journey unites advanced computational modeling (ETABS, SAP2000, Civil 3D) with rigorous field geotechnical investigations, Ethiopian standards (EBCS & ERA), and hands-on site experience across national infrastructure projects.
+                  We are 5th-year Civil Engineering students at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture. Walking this path together as brothers, we combine computer modeling in ETABS, SAP2000, and Civil 3D with hands-on site experience and Ethiopian standards to build safe, lasting infrastructure.
                 </p>
 
                 {/* Authority Badges */}
@@ -256,10 +255,10 @@ export const About = () => {
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
             <p>
-              We believe civil engineering is the foundation of national transformation. As 5th-year students at Adama Science and Technology University, our brotherhood bridges advanced computational theory with practical reality on Ethiopian soil — from Rift Valley seismic zones to expansive black cotton foundations.
+              We believe civil engineering shapes communities. As 5th-year students at ASTU, we study and work together as brothers to solve real local challenges — from earthquake forces in the Rift Valley to building on expansive black cotton soils.
             </p>
             <p>
-              Every capstone design is executed with thorough 3D structural analysis in ETABS and SAP2000, validated against EBCS EN 1992, EBCS EN 1998, and ERA Highway Geometric Design manuals for maximum safety and sustainability.
+              Every capstone design is modeled in ETABS, SAP2000, or Civil 3D, and checked against Ethiopian Building Code Standards (EBCS) and ERA manuals to ensure safety, durability, and cost efficiency.
             </p>
           </div>
         </div>
@@ -355,12 +354,7 @@ export const About = () => {
           </div>
         </div>
 
-        {/* ======================================================================= */}
-        {/* 6. ENGINEERING PRINCIPLES MATRIX                                        */}
-        {/* ======================================================================= */}
-        <div className="mb-24">
-          <EngineeringPrinciplesMatrix />
-        </div>
+
 
         {/* ======================================================================= */}
         {/* 7. DIGITAL PE/SE SEAL VERIFICATION PORTAL                               */}
