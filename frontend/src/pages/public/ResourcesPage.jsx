@@ -82,7 +82,7 @@ ASTU CIVIL ENGINEERING TECHNICAL RESOURCE
 Title: ${item.title}
 Category: ${item.category}
 Standard: EBCS EN 1990 / 1991 / 1992 / 1998 & ERA Standards 2024
-Authors: Lemma Techane & 5th Year Civil Engineering Brothers
+Authors: Lemma Amensisa & 5th Year Civil Engineering Brothers
 Institution: Adama Science and Technology University (ASTU) · SoCEA
 Academic Year: 5th Year Graduating Candidates · Class of 2026
 =====================================================

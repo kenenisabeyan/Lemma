@@ -198,7 +198,7 @@ export const About = () => {
                 <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner group">
                   <img
                     src={lemmaImg}
-                    alt="Lemma Techane & ASTU 5th Year Civil Engineering Brothers"
+                    alt="Lemma Amensisa & ASTU 5th Year Civil Engineering Brothers"
                     className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
@@ -214,7 +214,7 @@ export const About = () => {
                       <ShieldCheck size={14} />
                       <span>ASTU Verified Candidate</span>
                     </div>
-                    <h3 className="text-xl font-black text-white leading-tight">Lemma Techane</h3>
+                    <h3 className="text-xl font-black text-white leading-tight">Lemma Amensisa</h3>
                     <p className="text-xs text-zinc-300 font-mono">5th Year Civil Engineering Student · ASTU SoCEA</p>
                   </div>
                 </div>

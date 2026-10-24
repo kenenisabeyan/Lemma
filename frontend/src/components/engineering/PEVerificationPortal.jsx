@@ -35,7 +35,7 @@ export const PEVerificationPortal = () => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(
-      `ASTU SoCEA Academic & Capstone Verification\nCandidate: Lemma Techane & 5th Year Brothers\nInstitution: Adama Science and Technology University (ASTU)\nProject: ${projectName}\nAuthority: ${jurisdiction}\nToken: ${verificationHash}`
+      `ASTU SoCEA Academic & Capstone Verification\nCandidate: Lemma Amensisa & 5th Year Brothers\nInstitution: Adama Science and Technology University (ASTU)\nProject: ${projectName}\nAuthority: ${jurisdiction}\nToken: ${verificationHash}`
     );
     setCopiedToken(true);
     setTimeout(() => setCopiedToken(false), 3000);
@@ -179,7 +179,7 @@ export const PEVerificationPortal = () => {
             {/* Certificate Body */}
             <div className="py-4 space-y-4 text-xs">
               <p className="text-[#54595F] leading-relaxed italic">
-                "This certifies that the structural analysis, finite element mathematical modeling, geotechnical soil investigations, and construction documentation for the specified project have been conducted by Lemma Techane & fellow 5th-year engineering brothers in rigorous accordance with Ethiopian standards (EBCS & ERA) under academic faculty supervision."
+                "This certifies that the structural analysis, finite element mathematical modeling, geotechnical soil investigations, and construction documentation for the specified project have been conducted by Lemma Amensisa & fellow 5th-year engineering brothers in rigorous accordance with Ethiopian standards (EBCS & ERA) under academic faculty supervision."
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 py-2 text-[11px] font-mono">
@@ -221,7 +221,7 @@ export const PEVerificationPortal = () => {
                     <textPath href="#curve" startOffset="3%">ASTU CIVIL ENG · 5TH YR</textPath>
                   </text>
                   <text x="50" y="50" textAnchor="middle" fill="#D4AF37" fontSize="5" fontFamily="monospace" fontWeight="bold">
-                    LEMMA TECHANE
+                    LEMMA AMENSISA
                   </text>
                   <text x="50" y="58" textAnchor="middle" fill="#D4AF37" fontSize="4.2" fontFamily="monospace">
                     ASTU / SoCEA
@@ -233,7 +233,7 @@ export const PEVerificationPortal = () => {
               </div>
 
               <div className="text-xs font-mono">
-                <div className="text-zinc-900 font-bold text-sm">Lemma Techane & Brothers</div>
+                <div className="text-zinc-900 font-bold text-sm">Lemma Amensisa & Brothers</div>
                 <div className="text-[10px] text-[#54595F]">5th Year Civil Engineering Candidates</div>
                 <div className="text-[10px] text-[#D4AF37] font-semibold mt-0.5">ASTU SoCEA · Adama Science & Tech Univ.</div>
                 <div className="text-[9px] text-[#54595F] mt-1">Date: {timestamp}</div>

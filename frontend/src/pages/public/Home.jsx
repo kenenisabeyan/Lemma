@@ -114,7 +114,7 @@ export const Home = () => {
   // Fetch live settings and projects from API with fallback
   const { data: settingsData } = useFetch('/settings', {
     settings: {
-      engineerName: 'Lemma Techane & Brothers',
+      engineerName: 'Lemma Amensisa & Brothers',
       title: '5th Year Civil Engineering | ASTU SoCEA',
       heroHeadlineLine1: 'Engineering Ethiopia.',
       heroHeadlineAccent: 'ASTU ',
@@ -400,7 +400,7 @@ export const Home = () => {
                     >
                       <img
                         src={settings.avatarUrl || lemmaImg}
-                        alt="Lemma Techane"
+                        alt="Lemma Amensisa"
                         className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
                       />
 
@@ -423,7 +423,7 @@ export const Home = () => {
                               className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-black/75 backdrop-blur-md pointer-events-auto select-text"
                             >
                               <p className="text-xs font-bold text-white leading-tight select-text">
-                                {settings.engineerName || 'Lemma Techane'}
+                                {settings.engineerName || 'Lemma Amensisa'}
                               </p>
                               <p className="text-[10px] text-[#D4AF37] font-semibold tracking-wide select-text">
                                 5th Year Civil Engineering · ASTU Senior Candidate

@@ -13,7 +13,7 @@ async function main() {
     update: {},
     create: {
       email: 'admin@engineering.com',
-      name: 'Lemma Techane',
+      name: 'Lemma Amensisa',
       password: hashedPassword,
       role: 'ADMIN'
     }
@@ -24,7 +24,7 @@ async function main() {
   await prisma.siteSettings.upsert({
     where: { id: 'default' },
     update: {
-      engineerName: 'Lemma Techane',
+      engineerName: 'Lemma Amensisa',
       title: 'Civil Eng · ASTU',
       heroTagline: 'Engineering Ethiopia’s Tomorrow with ASTU Excellence.',
       heroBio: 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.',
@@ -35,12 +35,12 @@ async function main() {
       email: 'lemmayezedlij21@gmail.com',
       phone: '+251 934 830 919',
       officeAddress: 'School of Civil Engineering & Architecture, ASTU Main Campus, Adama, Ethiopia',
-      metaTitle: 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
-      metaDescription: 'Personal portfolio and technical civil engineering dossier of Lemma Techane and 5th-year Civil Engineering graduating cohort at Adama Science and Technology University (ASTU).'
+      metaTitle: 'Lemma Amensisa & Brothers | 5th Year Civil Engineering at ASTU',
+      metaDescription: 'Personal portfolio and technical civil engineering dossier of Lemma Amensisa and 5th-year Civil Engineering graduating cohort at Adama Science and Technology University (ASTU).'
     },
     create: {
       id: 'default',
-      engineerName: 'Lemma Techane',
+      engineerName: 'Lemma Amensisa',
       title: 'Civil Eng · ASTU',
       heroTagline: 'Engineering Ethiopia’s Tomorrow with ASTU Excellence.',
       heroBio: 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.',
@@ -52,8 +52,8 @@ async function main() {
       email: 'lemmayezedlij21@gmail.com',
       phone: '+251 934 830 919',
       officeAddress: 'School of Civil Engineering & Architecture, ASTU Main Campus, Adama, Ethiopia',
-      metaTitle: 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
-      metaDescription: 'Personal portfolio and technical civil engineering dossier of Lemma Techane and 5th-year Civil Engineering graduating cohort at Adama Science and Technology University (ASTU).'
+      metaTitle: 'Lemma Amensisa & Brothers | 5th Year Civil Engineering at ASTU',
+      metaDescription: 'Personal portfolio and technical civil engineering dossier of Lemma Amensisa and 5th-year Civil Engineering graduating cohort at Adama Science and Technology University (ASTU).'
     }
   });
 

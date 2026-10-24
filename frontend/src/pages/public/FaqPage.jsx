@@ -37,7 +37,7 @@ export const FaqPage = () => {
     },
     {
       id: '2',
-      question: 'How do Lemma Techane and the 5th-year student brothers collaborate?',
+      question: 'How do Lemma Amensisa and the 5th-year student brothers collaborate?',
       answer: 'Our cohort works as an integrated engineering design team. We combine specialized strengths across ETABS structural modeling, AutoCAD Civil 3D corridor geometry, SAP2000 finite element bridge analysis, and ASTU geotechnical soil mechanics lab testing.',
       category: 'Student Cohort'
     },

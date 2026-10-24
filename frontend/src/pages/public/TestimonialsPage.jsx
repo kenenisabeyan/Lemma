@@ -33,7 +33,7 @@ export const TestimonialsPage = () => {
       clientCompany: 'ASTU School of Civil Engineering & Architecture (SoCEA)',
       category: 'Academic Faculty',
       avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80',
-      content: 'Lemma Techane and his 5th-year brothers demonstrated exemplary structural rigor on their B+G+10 RC tower capstone. Their mastery of ETABS seismic modeling per EBCS EN 1998 sets a benchmark for graduating engineers.',
+      content: 'Lemma Amensisa and his 5th-year brothers demonstrated exemplary structural rigor on their B+G+10 RC tower capstone. Their mastery of ETABS seismic modeling per EBCS EN 1998 sets a benchmark for graduating engineers.',
       rating: 5
     },
     {

@@ -141,11 +141,11 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           {/* Author Bento Badge */}
           <div className="flex items-center gap-4 py-3">
             <div className="w-10 h-10 rounded-full text-[#D4AF37] border border-[#D4AF37] flex items-center justify-center font-bold text-sm">
-              LT
+              LA
             </div>
             <div>
               <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
-                Lemma Techane &amp; Brothers
+                Lemma Amensisa &amp; Brothers
                 <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· ASTU SoCEA 5th Year</span>
               </h4>
               <p className="text-xs text-zinc-500 dark:text-zinc-400">5th Year Civil Engineering Candidates · Class of 2026 · ASTU</p>
@@ -200,13 +200,13 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           </div>
 
           <div className="py-3 font-mono text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
-            Techane, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
+            Amensisa, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
           </div>
 
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => {
-                navigator.clipboard.writeText(`Techane, L. & Brothers (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Capstone Archive, Adama, Ethiopia.`);
+                navigator.clipboard.writeText(`Amensisa, L. & Brothers (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Capstone Archive, Adama, Ethiopia.`);
                 setCopiedCitation(true);
                 setTimeout(() => setCopiedCitation(false), 2500);
               }}
@@ -216,7 +216,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             </button>
             <button
               onClick={() => {
-                const text = `=====================================================\nASTU CIVIL ENGINEERING TECHNICAL NOTE\nTitle: ${article.title}\nAuthors: Lemma Techane & 5th Year Civil Engineering Brothers\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
+                const text = `=====================================================\nASTU CIVIL ENGINEERING TECHNICAL NOTE\nTitle: ${article.title}\nAuthors: Lemma Amensisa & 5th Year Civil Engineering Brothers\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
                 const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');

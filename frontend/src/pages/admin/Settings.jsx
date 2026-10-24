@@ -9,7 +9,7 @@ export const Settings = () => {
   const initialSettings = data?.settings || {};
 
   const [formData, setFormData] = useState({
-    engineerName: initialSettings.engineerName || 'Lemma Techane & Brothers',
+    engineerName: initialSettings.engineerName || 'Lemma Amensisa & Brothers',
     title: initialSettings.title || '5th Year Civil Engineering | ASTU SoCEA Class of 2026',
     heroTagline: initialSettings.heroTagline || 'Engineering Ethiopia. Precision in Every Structure.',
     heroBio: initialSettings.heroBio || '5th-year Civil Engineering team at ASTU SoCEA specializing in reinforced concrete design, ERA highway modeling, and expansive soil stabilization.',
@@ -20,7 +20,7 @@ export const Settings = () => {
     email: initialSettings.email || 'lemmayezedlij21@gmail.com',
     phone: initialSettings.phone || '+251 934 830 919',
     officeAddress: initialSettings.officeAddress || 'Main Campus, SoCEA Building, Adama Science and Technology University, Adama, Ethiopia',
-    metaTitle: initialSettings.metaTitle || 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
+    metaTitle: initialSettings.metaTitle || 'Lemma Amensisa & Brothers | 5th Year Civil Engineering at ASTU',
     metaDescription: initialSettings.metaDescription || 'Academic capstone portfolio and technical dossier of 5th-year Civil Engineering students at Adama Science and Technology University (ASTU).'
   });
 
@@ -288,9 +288,9 @@ export const Settings = () => {
                 Live Google Search Result Preview
               </span>
               <div className="font-sans">
-                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://astu-civil.edu.et/lemma-techane</span>
+                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://astu-civil.edu.et/lemma-amensisa</span>
                 <h4 className="text-base text-[#8AB4F8] hover:underline cursor-pointer font-medium leading-snug">
-                  {formData.metaTitle || 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU'}
+                  {formData.metaTitle || 'Lemma Amensisa & Brothers | 5th Year Civil Engineering at ASTU'}
                 </h4>
                 <p className="text-xs text-[#BDC1C6] mt-1 line-clamp-2 leading-relaxed">
                   {formData.metaDescription || 'Academic capstone portfolio and technical dossier of 5th-year Civil Engineering students at Adama Science and Technology University (ASTU).'}

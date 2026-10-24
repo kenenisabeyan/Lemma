@@ -124,7 +124,7 @@ model Inquiry {
 
 model SiteSettings {
   id             String   @id @default("default")
-  engineerName   String   @default("Lemma Techane")
+  engineerName   String   @default("Lemma Amensisa")
   title          String   @default("Principal Structural Engineer, PE, SE")
   heroTagline    String   @default("Precision in Every Structure.")
   heroBio        String   @default("Ensuring structural integrity, safety, and innovation for complex architectural designs. Bridging the gap between visionary aesthetics and physical reality.")

@@ -138,7 +138,7 @@ export const Contact = () => {
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
-                    Techane &amp; Brothers.
+                    Amensisa &amp; Brothers.
                   </span>
                 </h1>
               </motion.div>
@@ -304,7 +304,7 @@ export const Contact = () => {
                 <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-white/10 text-[11px] font-mono text-zinc-500">
                   <span className="flex items-center gap-1.5 truncate">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                    <span className="font-bold text-zinc-700 dark:text-zinc-300">Lemma Techane — Structural Inspection Site</span>
+                    <span className="font-bold text-zinc-700 dark:text-zinc-300">Lemma Amensisa — Structural Inspection Site</span>
                   </span>
                   <span className="text-[10px] text-zinc-400 font-mono">ASTU Live Base</span>
                 </div>
@@ -371,7 +371,7 @@ export const Contact = () => {
                 lemmayezedlij21@gmail.com
               </h4>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 truncate max-w-full">
-                Lemma Techane Civil Engineering
+                Lemma Amensisa Civil Engineering
               </p>
             </div>
           </div>

@@ -163,7 +163,7 @@ export const Portfolio = () => {
                 className="w-full space-y-4"
               >
                 <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  Curated portfolio of 25+ capstone designs, field surveys, geotechnical studies, and infrastructure projects by Lemma Techane & ASTU civil engineering peers.
+                  Curated portfolio of 25+ capstone designs, field surveys, geotechnical studies, and infrastructure projects by Lemma Amensisa & ASTU civil engineering peers.
                 </p>
 
                 {/* Live Engineering KPI Badges */}

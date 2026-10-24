@@ -41,7 +41,7 @@ export const ManageFaqs = () => {
     {
       id: '2',
       question: 'Who are the student engineers behind this portfolio?',
-      answer: 'We are a brotherhood of 5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA), led by Lemma Techane (Class of 2026). We collaborate on structural, geotechnical, and highway engineering challenges.',
+      answer: 'We are a brotherhood of 5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA), led by Lemma Amensisa (Class of 2026). We collaborate on structural, geotechnical, and highway engineering challenges.',
       category: 'Cohort'
     },
     {

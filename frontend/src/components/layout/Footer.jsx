@@ -53,7 +53,7 @@ export const Footer = () => {
               </div>
               <div className="flex flex-col text-left">
                 <span className="font-black text-xl tracking-tight text-white leading-tight">
-                  Lemma <span className="font-light text-white/95">Techane</span>
+                  Lemma <span className="font-light text-white/95">Amensisa</span>
                 </span>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#7DD3FC] font-extrabold">
                   CIVIL ENG · ASTU
@@ -271,7 +271,7 @@ export const Footer = () => {
         {/* ========================================================================= */}
         <div className="pt-6 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/85">
           <p className="text-center md:text-left">
-            &copy; {new Date().getFullYear()} Lemma Techane. All rights reserved. Built with precision civil engineering.
+            &copy; {new Date().getFullYear()} Lemma Amensisa. All rights reserved. Built with precision civil engineering.
           </p>
 
           <div className="flex items-center gap-6 text-xs">
