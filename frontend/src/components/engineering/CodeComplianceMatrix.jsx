@@ -90,7 +90,7 @@ export const CodeComplianceMatrix = () => {
   const currentCode = codesData[activeCode] || codesData['EBCS EN 1998:2015'];
 
   return (
-    <div className="rounded-3xl bg-white/90 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 sm:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 sm:py-8 relative overflow-hidden transition-colors duration-200">
       
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 relative z-10">
@@ -108,7 +108,7 @@ export const CodeComplianceMatrix = () => {
         </div>
 
         {/* Code Selector Pills */}
-        <div className="flex flex-wrap gap-2 bg-zinc-100/80 dark:bg-zinc-800/60 p-1.5 rounded-2xl">
+        <div className="flex flex-wrap gap-2 p-1.5 rounded-2xl">
           {Object.keys(codesData).map((codeKey) => (
             <button
               key={codeKey}
@@ -126,7 +126,7 @@ export const CodeComplianceMatrix = () => {
       </div>
 
       {/* Risk Category & SDC Selectors */}
-      <div className="grid sm:grid-cols-2 gap-4 mb-8 bg-zinc-50 dark:bg-zinc-800/40 p-4 rounded-2xl relative z-10 font-mono text-xs">
+      <div className="grid sm:grid-cols-2 gap-4 mb-8 relative z-10 font-mono text-xs">
         <div className="flex items-center justify-between gap-4">
           <span className="text-[#54595F] dark:text-zinc-400 uppercase font-bold text-[10px]">Building Risk Category:</span>
           <div className="flex gap-1.5">
@@ -137,7 +137,7 @@ export const CodeComplianceMatrix = () => {
                 className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   riskCategory === rc
                     ? 'bg-[#D4AF37] text-[#121417] shadow-2xs'
-                    : 'bg-white dark:bg-zinc-800 text-[#54595F] dark:text-zinc-300 hover:text-[#D4AF37]'
+                    : 'bg-zinc-100 dark:bg-zinc-800 text-[#54595F] dark:text-zinc-300 hover:text-[#D4AF37]'
                 }`}
               >
                 Cat {rc}
@@ -156,7 +156,7 @@ export const CodeComplianceMatrix = () => {
                 className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   seismicCategory === sdc
                     ? 'bg-[#D4AF37] text-[#121417] shadow-2xs'
-                    : 'bg-white dark:bg-zinc-800 text-[#54595F] dark:text-zinc-300 hover:text-[#D4AF37]'
+                    : 'bg-zinc-100 dark:bg-zinc-800 text-[#54595F] dark:text-zinc-300 hover:text-[#D4AF37]'
                 }`}
               >
                 {sdc}
@@ -182,7 +182,7 @@ export const CodeComplianceMatrix = () => {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {currentCode.parameters.map((param, i) => (
-              <div key={i} className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 flex flex-col justify-between shadow-xs">
+              <div key={i} className="p-4 flex flex-col justify-between">
                 <div>
                   <span className="text-[10px] font-mono uppercase text-[#54595F]/80 dark:text-zinc-400 block mb-1 font-semibold">
                     {param.label}
@@ -200,7 +200,7 @@ export const CodeComplianceMatrix = () => {
         </div>
 
         {/* Right Column: Code Checklist & Certification Stamp (5 cols) */}
-        <div className="lg:col-span-5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/40 p-6 sm:p-7 flex flex-col justify-between shadow-xs">
+        <div className="lg:col-span-5 p-6 sm:p-7 flex flex-col justify-between">
           <div>
             <h5 className="text-xs font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-4 flex items-center gap-2">
               <ShieldCheck size={16} /> Engineering Verification Audit

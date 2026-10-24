@@ -344,7 +344,7 @@ export const ServicesPage = () => {
             return (
               <div 
                 key={srv.id || index} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-7 sm:p-10 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] relative overflow-hidden"
+                className="group py-8 transition-all duration-300 relative"
               >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
@@ -367,7 +367,7 @@ export const ServicesPage = () => {
                       {srv.description || srv.summary}
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-3.5 bg-zinc-50/80 dark:bg-zinc-800/40 p-5 rounded-2xl">
+                    <div className="grid sm:grid-cols-2 gap-3.5 pt-2">
                       {features.map((feat, i) => (
                         <div key={i} className="flex items-start gap-2.5">
                           <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0 mt-0.5" />
