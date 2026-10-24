@@ -249,11 +249,10 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
-      
-      {/* ========================================================================= */}
+          {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-white dark:bg-[#0B0C0E] bg-cad-grid transition-colors">
         
         {/* Luminous White Glass Frosted Sheen & Reflection Layers */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
@@ -274,10 +273,10 @@ export const Home = () => {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
         </div>
 
-        {/* Floating Translucent Accent Ring */}
+        {/* Floating Accent Ring */}
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-4 h-4 rounded-full border-2 border-white/80 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md shadow-xs animate-pulse hidden sm:block z-10"
+          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-3 h-3 rounded-full bg-[#D4AF37]/40 animate-pulse hidden sm:block z-10"
         />
 
         {/* Hero Content Container - Split 2-Column Professional Architecture */}
@@ -289,8 +288,6 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
-
-
               {/* Main Headline (Left Aligned) */}
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
@@ -298,11 +295,11 @@ export const Home = () => {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="space-y-1 sm:space-y-1.5 pointer-events-auto select-text"
               >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   <span className="block select-text">
                     {settings.heroHeadlineLine1 || 'Engineering Ethiopia.'}
                   </span>
-                  <span className="text-[#801834] dark:text-[#E84855] block drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                  <span className="text-[#801834] dark:text-[#E84855] block select-text">
                     {settings.heroHeadlineAccent ? `${settings.heroHeadlineAccent} ` : 'ASTU '}
                     {settings.heroHeadlineLine2 || 'Civil 5th Year.'}
                   </span>
@@ -339,16 +336,16 @@ export const Home = () => {
                 {/* Primary Filled Pill Button */}
                 <button
                   onClick={() => navigate('/projects')}
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37] shrink-0 whitespace-nowrap"
+                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 group cursor-pointer shrink-0 whitespace-nowrap"
                 >
                   <span>EXPLORE PROJECTS</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
 
-                {/* Secondary Frosted Glass Pill Button */}
+                {/* Secondary Frosted Pill Button */}
                 <button
                   onClick={() => setIsVideoModalOpen(true)}
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap"
+                  className="rounded-full text-zinc-900 dark:text-zinc-100 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap"
                 >
                   <span>WATCH CAPSTONE SHOWREEL</span>
                   <Play size={12} className="fill-[#D4AF37] text-[#D4AF37] shrink-0" />
@@ -360,17 +357,17 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg pointer-events-auto select-text"
+                className="grid grid-cols-3 gap-4 pt-1 w-full max-w-lg pointer-events-auto select-text"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
+                <div className="py-1 text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono select-text">{settings.yearsExp || '5th Year'}</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Academic Level</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
+                <div className="py-1 text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono select-text">{settings.projectsCount || '25+'}</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Capstone & Projects</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left select-text">
+                <div className="py-1 text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono select-text">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Defense Readiness</span>
                 </div>
@@ -387,18 +384,18 @@ export const Home = () => {
                 {/* Visual Composition Container */}
                 <div className="relative w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
                   
-                  {/* 1. Professional Engineer Portrait Card (Clean Image, Text on Hover Only) */}
+                  {/* 1. Professional Engineer Portrait Card */}
                   <motion.div
                     initial={{ opacity: 0, x: 25 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative z-10 w-full sm:w-[58%] lg:w-[57%] xl:w-[58%] rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2.5 sm:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] group overflow-hidden"
+                    className="relative z-10 w-full sm:w-[58%] lg:w-[57%] xl:w-[58%] group overflow-hidden"
                   >
                     {/* Engineer Portrait Photo - Taller Vertical Frame */}
                     <div 
                       onMouseEnter={() => setIsEngineerHovered(true)}
                       onMouseLeave={() => setIsEngineerHovered(false)}
-                      className="relative aspect-[3/4.6] sm:aspect-[3/4.7] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
+                      className="relative aspect-[3/4.6] sm:aspect-[3/4.7] rounded-2xl overflow-hidden cursor-pointer"
                     >
                       <img
                         src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
@@ -422,12 +419,12 @@ export const Home = () => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: 8 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-white/95 dark:bg-black/85 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-sm pointer-events-auto select-text"
+                              className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-black/75 backdrop-blur-md pointer-events-auto select-text"
                             >
-                              <p className="text-xs font-bold text-zinc-900 dark:text-white leading-tight select-text">
+                              <p className="text-xs font-bold text-white leading-tight select-text">
                                 {settings.engineerName || 'Lemma Techane'}
                               </p>
-                              <p className="text-[10px] text-[#801834] dark:text-[#D4AF37] font-semibold tracking-wide select-text">
+                              <p className="text-[10px] text-[#D4AF37] font-semibold tracking-wide select-text">
                                 5th Year Civil Engineering · ASTU Senior Candidate
                               </p>
                             </motion.div>
@@ -437,18 +434,18 @@ export const Home = () => {
                     </div>
                   </motion.div>
 
-                  {/* 2. Layered Portfolio Project Showcase Card (Clean Image, Text on Hover Only) */}
+                  {/* 2. Layered Portfolio Project Showcase Card */}
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.35 }}
-                    className="relative z-20 w-full sm:w-[68%] lg:w-[67%] xl:w-[68%] sm:-ml-12 sm:mt-14 lg:mt-16 rounded-3xl bg-white/90 dark:bg-zinc-900/75 backdrop-blur-2xl border border-white/95 dark:border-white/20 p-2.5 sm:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.14),inset_0_1px_2px_rgba(255,255,255,0.95)] group select-text"
+                    className="relative z-20 w-full sm:w-[68%] lg:w-[67%] xl:w-[68%] sm:-ml-12 sm:mt-14 lg:mt-16 group select-text"
                   >
                     {/* Project Preview Image - Taller Vertical Frame */}
                     <div 
                       onMouseEnter={() => setIsProjectHovered(true)}
                       onMouseLeave={() => setIsProjectHovered(false)}
-                      className="relative aspect-[16/13] sm:aspect-[16/13.5] rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-inner cursor-pointer"
+                      className="relative aspect-[16/13] sm:aspect-[16/13.5] rounded-2xl overflow-hidden cursor-pointer"
                       onClick={() => {
                         const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
                         setSelectedCaseStudy(matched);
@@ -483,7 +480,7 @@ export const Home = () => {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -6 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono font-semibold text-white pointer-events-auto select-text"
+                              className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-mono font-semibold text-white pointer-events-auto select-text"
                             >
                               {heroProjects[activeHeroProjectIdx].metric}
                             </motion.div>
@@ -492,7 +489,7 @@ export const Home = () => {
                               animate={{ opacity: 1, scale: 1 }}
                               exit={{ opacity: 0, scale: 0.8 }}
                               transition={{ duration: 0.25 }}
-                              className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md text-zinc-900 dark:text-white shadow-xs pointer-events-none"
+                              className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-black/60 backdrop-blur-md text-white pointer-events-none"
                             >
                               <ArrowUpRight size={13} />
                             </motion.div>
@@ -522,10 +519,10 @@ export const Home = () => {
                           key={proj.id}
                           onClick={() => setActiveHeroProjectIdx(idx)}
                           aria-label={proj.title}
-                          className={`relative w-14 h-8 sm:w-16 sm:h-9 rounded-xl overflow-hidden transition-all duration-300 border-2 cursor-pointer ${
+                          className={`relative w-14 h-8 sm:w-16 sm:h-9 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer ${
                             activeHeroProjectIdx === idx
-                              ? 'border-[#D4AF37] ring-2 ring-[#D4AF37]/40 scale-105 shadow-md'
-                              : 'border-white/70 dark:border-white/20 opacity-50 hover:opacity-100 hover:scale-102'
+                              ? 'ring-2 ring-[#D4AF37] scale-105'
+                              : 'opacity-50 hover:opacity-100 hover:scale-102'
                           }`}
                         >
                           <img
@@ -550,7 +547,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 2. INFINITE MARQUEE TICKER                                                */}
       {/* ========================================================================= */}
-      <section aria-label="Software Stack & Standards" className="border-y border-zinc-200/80 bg-[#FFFFFF] py-4 overflow-hidden transition-colors">
+      <section aria-label="Software Stack & Standards" className="py-4 overflow-hidden transition-colors">
         <div className="mx-auto max-w-6xl [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="overflow-hidden">
             <div className="animate-marquee flex items-center gap-10">
@@ -571,11 +568,11 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-[#FFFFFF] relative transition-colors border-b border-zinc-200/80">
+      <section className="py-20 md:py-24 relative transition-colors">
         <div className="max-w-5xl mx-auto px-6">
           
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               ASTU Civil Engineering Capabilities & Rigor
             </div>
@@ -587,12 +584,11 @@ export const Home = () => {
             </p>
           </div>
 
-          <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6">
+          <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border-4 border-dashed border-[#D4AF37]/40 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-xl"></div>
+            <div className="group relative overflow-hidden py-6 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
+              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#FEF9E7]/60 text-[#D4AF37] group-hover:scale-105 transition-transform mb-6">
                 <Building2 size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
@@ -601,15 +597,14 @@ export const Home = () => {
                   Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 ETABS · EBCS EN 1992 Concrete
               </div>
             </div>
 
             {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-              <div className="relative mx-auto flex size-28 items-center justify-center rounded-full border border-[#D4AF37]/40 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-4 group-hover:scale-105 transition-transform mb-6">
-                <div className="absolute inset-0 z-10 scale-125 bg-radial from-[#D4AF37]/20 via-transparent to-transparent blur-xl"></div>
+            <div className="group relative overflow-hidden py-6 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
+              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#FEF9E7]/60 text-[#D4AF37] group-hover:scale-105 transition-transform mb-6">
                 <Activity size={36} className="text-[#D4AF37] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
@@ -618,17 +613,17 @@ export const Home = () => {
                   Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 Civil 3D · Pavement Design
               </div>
             </div>
 
             {/* Bento Card 3: Practical Site Supervision & Soil Testing (Col 5-6) */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] px-8 pt-8 pb-6 sm:col-span-2 md:col-span-2 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+            <div className="group relative overflow-hidden py-6 sm:col-span-2 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
               <div className="min-h-28 relative flex flex-col justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="flex size-8 items-center justify-center rounded-full bg-[#FEF9E7] text-[#D4AF37] border border-[#D4AF37]/30">
-                    <ShieldCheck size={16} />
+                  <div className="flex size-8 items-center justify-center rounded-full text-[#D4AF37]">
+                    <ShieldCheck size={18} />
                   </div>
                   <div className="font-mono text-xs font-bold text-zinc-900">Practical Site Experience</div>
                 </div>
@@ -650,17 +645,17 @@ export const Home = () => {
                   Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-zinc-200 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 text-[10px] font-mono text-[#D4AF37] text-center uppercase tracking-widest font-semibold">
                 Slump QC · Field Surveying · FDT
               </div>
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] sm:col-span-2 md:col-span-6 p-0 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+            <div className="group relative overflow-hidden sm:col-span-2 md:col-span-6 p-0 transition-all duration-300">
               <div className="grid h-full sm:grid-cols-2 items-center">
-                <div className="relative z-10 space-y-6 py-8 ps-8 pe-6">
-                  <div className="flex size-12 items-center justify-center rounded-full border border-[#D4AF37]/30 bg-[#FEF9E7] shadow-xs outline outline-zinc-200 outline-offset-2">
-                    <Ruler size={20} className="text-[#D4AF37]" />
+                <div className="relative z-10 space-y-6 py-6 pe-6">
+                  <div className="flex size-10 items-center justify-center rounded-full text-[#D4AF37]">
+                    <Ruler size={22} className="text-[#D4AF37]" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-semibold text-zinc-900 text-xl">Bridging Engineering Calculations with Real Site Construction</h3>
@@ -668,22 +663,25 @@ export const Home = () => {
                       From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">EBCS EN 1992</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">ERA Standards</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">OCC Site Internship</span>
-                    <span className="rounded-full bg-[#FFFFFF] border border-zinc-200 px-3 py-1 font-mono text-[10px] text-[#54595F] uppercase font-semibold">Quality Assurance</span>
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    <span className="font-mono text-xs text-[#54595F] uppercase font-semibold">EBCS EN 1992</span>
+                    <span className="text-zinc-300">·</span>
+                    <span className="font-mono text-xs text-[#54595F] uppercase font-semibold">ERA Standards</span>
+                    <span className="text-zinc-300">·</span>
+                    <span className="font-mono text-xs text-[#54595F] uppercase font-semibold">OCC Site Internship</span>
+                    <span className="text-zinc-300">·</span>
+                    <span className="font-mono text-xs text-[#54595F] uppercase font-semibold">Quality Assurance</span>
                   </div>
                 </div>
-                <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden p-6 flex items-center justify-center">
-                  <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-200 bg-[#FFFFFF] shadow-md group-hover:border-[#D4AF37]/50 transition-colors">
+                <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden py-4 flex items-center justify-center">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden group-hover:scale-102 transition-transform">
                     <img 
                       src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
                       alt="Practical Construction & Structural Detailing" 
                       className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-200 font-mono text-[10px] text-[#D4AF37] flex items-center gap-2 shadow-sm font-semibold">
+                    <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg font-mono text-[10px] text-white flex items-center gap-2 font-semibold">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                       ETABS Live Multi-Story RC Frame Stress Analysis
                     </div>
@@ -700,10 +698,10 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 3.5 INTERACTIVE LOAD PATH & STRUCTURAL TELEMETRY SIMULATOR                */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#FFFFFF] border-t border-b border-zinc-200/80 relative transition-colors">
+      <section className="py-20 md:py-28 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Dynamic Mechanics Simulation
             </div>
@@ -722,36 +720,33 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 4. ABOUT ME SECTION                                                       */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#FFFFFF] border-b border-zinc-200/80 relative transition-colors">
+      <section className="py-24 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5 relative">
               <div className="relative">
-                {/* Decorative Outer Mask Frame */}
-                <div aria-hidden="true" className="-inset-4 absolute rounded-[2rem] border border-[#D4AF37]/25 pointer-events-none"></div>
-
-                <div className="relative border border-zinc-200/90 p-2.5 bg-[#FFFFFF] rounded-2xl shadow-lg group hover:border-[#D4AF37]/50 transition-all duration-300">
-                  <div className="aspect-[4/5] bg-zinc-100 overflow-hidden rounded-xl">
+                <div className="relative rounded-2xl group transition-all duration-300">
+                  <div className="aspect-[4/5] overflow-hidden rounded-2xl">
                     <img
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
                       alt="Lemma 5th Year Civil Engineering Student"
                       className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 border border-zinc-200 p-4 text-xs font-mono rounded-xl shadow-md backdrop-blur-md">
+                  <div className="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 text-xs font-mono rounded-xl text-white">
                     <div className="flex justify-between items-center text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
                       <span>ASTU SoCEA</span>
                       <span>Class of 2026</span>
                     </div>
-                    <span className="text-[10px] text-[#54595F] uppercase tracking-widest block font-medium">Adama Science and Technology University · Civil Engineering</span>
+                    <span className="text-[10px] text-zinc-300 uppercase tracking-widest block font-medium">Adama Science and Technology University · Civil Engineering</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs w-max font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] w-max font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 Academic Journey & Engineering Brotherhood
               </div>
@@ -764,21 +759,21 @@ export const Home = () => {
                 At Adama Science and Technology University (ASTU), our 5-year journey combines design calculations with real on-site construction practice. Alongside my engineering brothers, we have completed site internships at Oromia Construction Corporation (OCC) — supervising concrete batching, slump testing, rebar detailing, and Total Station surveying for Ethiopian infrastructure.
               </p>
 
-              <div className="bg-[#FFFFFF] border-l-2 border-[#D4AF37] p-5 text-sm text-[#54595F] italic leading-relaxed rounded-r-xl border-y border-r border-zinc-200">
+              <div className="border-l-2 border-[#D4AF37] pl-5 py-2 text-sm text-[#54595F] italic leading-relaxed">
                 "Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction."
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
-                  <GraduationCap className="text-[#D4AF37] w-5 h-5 shrink-0" />
+                <div className="flex items-center gap-3 py-3">
+                  <GraduationCap className="text-[#D4AF37] w-6 h-6 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 font-bold block">B.Sc. Civil Engineering (5th Year)</span>
                     <span className="text-[10px] text-[#54595F]">Adama Science &amp; Technology University (ASTU)</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 bg-[#FFFFFF] p-4 border border-zinc-200/90 rounded-2xl shadow-xs">
-                  <HardHat className="text-[#D4AF37] w-5 h-5 shrink-0" />
+                <div className="flex items-center gap-3 py-3">
+                  <HardHat className="text-[#D4AF37] w-6 h-6 shrink-0" />
                   <div>
                     <span className="text-xs text-zinc-900 font-bold block">Practical Construction &amp; Internship</span>
                     <span className="text-[10px] text-[#54595F]">OCC Site Supervision &amp; ASTU Survey Camps</span>
@@ -789,13 +784,13 @@ export const Home = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/about"
-                  className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] flex items-center gap-2 font-bold"
+                  className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all flex items-center gap-2 font-bold"
                 >
                   Full Academic Profile & Credentials <ArrowUpRight size={14} />
                 </Link>
                 <a
                   href="/resources"
-                  className="rounded-full bg-[#FFFFFF] text-[#54595F] border border-zinc-300 hover:border-[#D4AF37] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                  className="rounded-full text-[#54595F] hover:text-[#D4AF37] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2"
                 >
                   Download Academic CV (PDF) <Download size={14} />
                 </a>
@@ -809,11 +804,11 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 5. EXPERTISE / SERVICES SECTION                                           */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#FFFFFF] relative transition-colors border-b border-zinc-200/80">
+      <section className="py-24 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 Core Capabilities & Practice
               </div>
@@ -829,17 +824,17 @@ export const Home = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((srv, index) => (
-              <div key={index} className="group rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_6px_25px_rgba(0,0,0,0.03)] flex flex-col justify-between">
+              <div key={index} className="group py-6 transition-all duration-300 flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-[#FEF9E7] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform rounded-xl shadow-xs">
-                    <Building2 size={24} />
+                  <div className="w-12 h-12 text-[#D4AF37] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Building2 size={28} />
                   </div>
                   <h4 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D4AF37] transition-colors">{srv.title}</h4>
                   <p className="text-[#54595F] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4 border-t border-zinc-200">
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] group-hover:text-[#D4AF37] flex items-center gap-1.5 pt-4">
                   Scope & Deliverables <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
@@ -851,7 +846,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 6. STATISTICS ROW                                                         */}
       {/* ========================================================================= */}
-      <section className="py-14 bg-[#FFFFFF] border-b border-zinc-200/80 transition-colors">
+      <section className="py-14 transition-colors">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           <StatCounter value={settings.yearsExp || '5th Year'} label="Academic Year" subtext="ASTU Graduating Class of 2026" />
           <StatCounter value={settings.projectsCount || '25+'} label="Academic & Site Projects" subtext="Capstones, Labs & Internships" />
@@ -863,11 +858,11 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 7. FEATURED PROJECTS CASE STUDIES                                         */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-24 bg-[#FFFFFF] relative transition-colors border-b border-zinc-200/80" id="projects">
+      <section className="py-20 md:py-24 relative transition-colors" id="projects">
         <div className="max-w-5xl mx-auto px-6 space-y-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4 border-b border-zinc-200/80">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 ASTU Capstone & Field Practice
               </div>
@@ -880,13 +875,13 @@ export const Home = () => {
             </div>
             <Link 
               to="/projects" 
-              className="rounded-full border border-zinc-300 bg-[#FFFFFF] text-[#54595F] hover:border-[#D4AF37] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max shadow-xs"
+              className="rounded-full text-[#54595F] hover:text-[#D4AF37] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max"
             >
               Browse All Projects <ChevronRight size={14} />
             </Link>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-12">
             {projects.slice(0, 3).map((proj) => {
               const softwareList = typeof proj.softwareUsed === 'string'
                 ? JSON.parse(proj.softwareUsed || '[]')
@@ -895,27 +890,27 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] md:grid-cols-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:border-[#D4AF37]/50 transition-all duration-300"
+                  className="group grid overflow-hidden md:grid-cols-2 py-6 gap-6"
                 >
                   {/* Left Column Image */}
-                  <div className="relative overflow-hidden border-b border-zinc-200 md:border-b-0 md:border-r min-h-[280px]">
+                  <div className="relative overflow-hidden rounded-2xl min-h-[280px]">
                     <img 
                       src={proj.imageUrl} 
                       alt={proj.title}
                       className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] grayscale opacity-85 group-hover:grayscale-0"
                     />
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="rounded-full bg-[#FFFFFF]/95 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+                      <span className="rounded-full bg-black/60 backdrop-blur-md text-[#D4AF37] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
                         {proj.category}
                       </span>
                     </div>
-                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-[#54595F] bg-[#FFFFFF]/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-zinc-200 shadow-xs font-semibold">
+                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-white bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md font-semibold">
                       ASTU CAPSTONE · {proj.year}
                     </div>
                   </div>
 
                   {/* Right Column Content */}
-                  <div className="flex flex-col gap-4 p-6 md:p-8 justify-between">
+                  <div className="flex flex-col gap-4 py-2 justify-between">
                     <div>
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#54595F] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
                         <span className="text-[#D4AF37] flex items-center gap-1">
@@ -944,22 +939,22 @@ export const Home = () => {
                         </li>
                       </ul>
 
-                      <div className="flex flex-wrap gap-1.5 pt-1">
+                      <div className="flex flex-wrap gap-2 pt-1">
                         {softwareList.slice(0, 4).map((soft) => (
                           <span 
                             key={soft}
-                            className="inline-flex items-center rounded-full border border-zinc-200 bg-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] text-[#54595F] shadow-2xs font-semibold"
+                            className="font-mono text-xs text-[#54595F] font-semibold"
                           >
-                            {soft}
+                            #{soft}
                           </span>
                         ))}
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-4 border-t border-zinc-200 flex items-center justify-between">
+                    <div className="mt-4 pt-4 flex items-center justify-between">
                       <button
                         onClick={() => setSelectedCaseStudy(proj)}
-                        className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
+                        className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
                       >
                         Explore Case Study <ArrowUpRight size={13} />
                       </button>
@@ -981,10 +976,10 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 7.5 INTERACTIVE CAD & FEA BLUEPRINT INSPECTOR                             */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#FFFFFF] border-t border-b border-zinc-200/80 relative transition-colors">
+      <section className="py-20 md:py-28 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               ASTU Multi-Layer CAD & FEA Telemetry Board
             </div>
@@ -1003,13 +998,13 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 8. CLIENT TRUST & TESTIMONIALS                                            */}
       {/* ========================================================================= */}
-      <section id="testimonials" className="py-24 bg-[#FFFFFF] border-b border-zinc-200/80 transition-colors scroll-mt-20">
+      <section id="testimonials" className="py-24 relative transition-colors scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 Academic & Field Endorsements
               </div>
@@ -1022,7 +1017,7 @@ export const Home = () => {
             </div>
 
             {/* Quick Proof Metrics Strip */}
-            <div className="flex items-center gap-4 bg-[#FFFFFF] border border-zinc-200/90 rounded-2xl p-4 shadow-sm shrink-0">
+            <div className="flex items-center gap-4 py-2 shrink-0">
               <div className="flex flex-col">
                 <div className="flex items-center gap-1 text-[#D4AF37]">
                   {[...Array(5)].map((_, i) => (
@@ -1044,8 +1039,8 @@ export const Home = () => {
                 onClick={() => setSelectedTestimonialCategory(cat)}
                 className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedTestimonialCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105 font-extrabold'
-                    : 'bg-[#FFFFFF] text-[#54595F] border border-zinc-200/90 hover:text-zinc-900 hover:border-[#D4AF37]'
+                    ? 'bg-[#D4AF37] text-[#121417] scale-105 font-extrabold'
+                    : 'text-[#54595F] hover:text-zinc-900'
                 }`}
               >
                 {cat}
@@ -1055,18 +1050,18 @@ export const Home = () => {
 
           {/* Testimonials Cards Grid */}
           {filteredTestimonials.length === 0 ? (
-            <div className="py-16 text-center bg-[#FFFFFF] rounded-2xl border border-zinc-200 mb-12 shadow-sm">
+            <div className="py-16 text-center mb-12">
               <MessageSquareQuote className="mx-auto w-10 h-10 text-zinc-400 mb-2" />
               <p className="text-[#54595F] text-xs font-mono uppercase tracking-wider">
                 No endorsements match the selected category.
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {filteredTestimonials.map((t, idx) => (
                 <div 
                   key={t.id || idx} 
-                  className="group rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-8 relative flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:border-[#D4AF37]/50 transition-all duration-300 hover:-translate-y-1"
+                  className="group py-6 relative flex flex-col justify-between transition-all duration-300"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-6">
@@ -1083,15 +1078,15 @@ export const Home = () => {
                     </p>
 
                     {t.projectRef && (
-                      <div className="mb-6 px-3 py-1.5 rounded-lg bg-[#FFFFFF] border border-zinc-200/80 text-[11px] font-mono text-[#54595F] flex items-center gap-1.5">
+                      <div className="mb-4 text-[11px] font-mono text-[#54595F] flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
                         <span className="truncate">Ref: {t.projectRef}</span>
                       </div>
                     )}
                   </div>
 
-                  <div className="flex items-center gap-3.5 border-t border-zinc-200 pt-5">
-                    <div className="w-11 h-11 rounded-full bg-zinc-100 border-2 border-[#D4AF37]/60 overflow-hidden flex items-center justify-center font-bold text-[#D4AF37] text-xs shadow-xs shrink-0">
+                  <div className="flex items-center gap-3.5 pt-4">
+                    <div className="w-11 h-11 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D4AF37] text-xs shrink-0">
                       {t.avatarUrl ? (
                         <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
                       ) : (
@@ -1101,7 +1096,7 @@ export const Home = () => {
                     <div className="overflow-hidden">
                       <h5 className="text-zinc-900 font-bold text-sm truncate">{t.clientName}</h5>
                       <p className="text-[#54595F] text-xs truncate">{t.clientRole}</p>
-                      <span className="inline-block rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 px-2 py-0.5 text-[9px] font-mono text-[#D4AF37] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
+                      <span className="inline-block text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider mt-0.5 font-bold truncate max-w-full">
                         {t.clientCompany}
                       </span>
                     </div>
@@ -1112,10 +1107,10 @@ export const Home = () => {
           )}
 
           {/* Consultation Prompt / Trust Banner */}
-          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200/90 p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center shrink-0">
-                <ShieldCheck size={26} />
+              <div className="w-12 h-12 text-[#D4AF37] flex items-center justify-center shrink-0">
+                <ShieldCheck size={28} />
               </div>
               <div>
                 <h4 className="text-base font-bold text-zinc-900">ASTU 5th-Year Capstone Defense Ready</h4>
@@ -1124,7 +1119,7 @@ export const Home = () => {
             </div>
             <Link
               to="/contact"
-              className="rounded-full bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-[#c49f2c] transition-all shadow-sm shrink-0 inline-flex items-center gap-2"
+              className="rounded-full bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-[#c49f2c] transition-all shrink-0 inline-flex items-center gap-2"
             >
               Connect With Us <ArrowUpRight size={14} />
             </Link>
@@ -1136,11 +1131,11 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 9. LATEST ENGINEERING INSIGHTS                                            */}
       {/* ========================================================================= */}
-      <section className="py-24 bg-[#FFFFFF] border-b border-zinc-200/80 transition-colors">
+      <section className="py-24 relative transition-colors">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 ASTU Student Research & Technical Notes
               </div>
@@ -1156,21 +1151,21 @@ export const Home = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {insights.slice(0, 3).map((article, i) => (
               <Link 
                 key={i} 
                 to={`/insights/${article.slug || 'mitigating-differential-settlement-expansive-soils'}`} 
-                className="flex flex-col justify-between p-6 rounded-2xl bg-[#FFFFFF] border border-zinc-200/80 hover:border-[#D4AF37]/50 transition-all duration-300 group shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
+                className="flex flex-col justify-between py-6 group transition-all duration-300"
               >
                 <div>
-                  <div className="p-3 bg-[#FFFFFF] text-[#D4AF37] border border-zinc-200 w-max mb-4 rounded-xl shadow-2xs">
-                    <FileText size={20} />
+                  <div className="text-[#D4AF37] w-max mb-3">
+                    <FileText size={24} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#D4AF37] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
                   <h5 className="text-base font-bold text-zinc-900 group-hover:text-[#D4AF37] transition-colors mb-4">{article.title}</h5>
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#54595F] group-hover:text-[#D4AF37] flex items-center gap-1 pt-4 border-t border-zinc-200">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#54595F] group-hover:text-[#D4AF37] flex items-center gap-1 pt-4">
                   Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </Link>
@@ -1182,10 +1177,10 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 11. CONTACT BENTO STRIP                                                   */}
       {/* ========================================================================= */}
-      <section className="py-20 bg-[#FFFFFF] border-t border-zinc-200/80 transition-colors" id="contact">
+      <section className="py-20 relative transition-colors" id="contact">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-[#FFFFFF] px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-semibold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Academic & Graduate Opportunities
             </div>
@@ -1197,61 +1192,57 @@ export const Home = () => {
             </p>
           </div>
 
-          {/* 3-Bento Contact Strip */}
-          <div className="relative mb-10">
-            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 -top-px left-0 right-0"></div>
-            <div className="grid gap-px overflow-hidden bg-zinc-200 rounded-2xl border border-zinc-200 md:grid-cols-3 shadow-md">
-              {/* Card 1: Email */}
-              <a 
-                href="mailto:astu.civil.lemma@gmail.com" 
-                className="flex items-center gap-3 bg-[#FFFFFF] p-5 shadow-xs transition-colors hover:bg-zinc-50 group"
-              >
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
-                  <Mail size={18} />
-                </div>
-                <div className="flex flex-col gap-y-0.5 overflow-hidden">
-                  <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
-                  <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">astu.civil.lemma@gmail.com</p>
-                </div>
-              </a>
+          {/* 3-Column Direct Contact Info */}
+          <div className="grid gap-6 md:grid-cols-3 mb-12">
+            {/* Item 1: Email */}
+            <a 
+              href="mailto:astu.civil.lemma@gmail.com" 
+              className="flex items-center gap-3.5 py-4 group"
+            >
+              <div className="flex size-12 shrink-0 items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <Mail size={22} />
+              </div>
+              <div className="flex flex-col gap-y-0.5 overflow-hidden">
+                <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
+                <p className="text-xs font-mono text-[#54595F] truncate group-hover:text-[#D4AF37] transition-colors">astu.civil.lemma@gmail.com</p>
+              </div>
+            </a>
 
-              {/* Card 2: Phone */}
-              <a 
-                href="tel:+251911234567" 
-                className="flex items-center gap-3 bg-[#FFFFFF] p-5 shadow-xs transition-colors hover:bg-zinc-50 group"
-              >
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] group-hover:scale-105 transition-transform">
-                  <Phone size={18} />
-                </div>
-                <div className="flex flex-col gap-y-0.5">
-                  <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
-                  <p className="text-xs font-mono text-[#54595F] group-hover:text-[#D4AF37] transition-colors">+251 91 123 4567</p>
-                </div>
-              </a>
+            {/* Item 2: Phone */}
+            <a 
+              href="tel:+251911234567" 
+              className="flex items-center gap-3.5 py-4 group"
+            >
+              <div className="flex size-12 shrink-0 items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
+                <Phone size={22} />
+              </div>
+              <div className="flex flex-col gap-y-0.5">
+                <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
+                <p className="text-xs font-mono text-[#54595F] group-hover:text-[#D4AF37] transition-colors">+251 91 123 4567</p>
+              </div>
+            </a>
 
-              {/* Card 3: Location */}
-              <div className="flex items-center gap-3 bg-[#FFFFFF] p-5 shadow-xs">
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
-                  <MapPin size={18} />
-                </div>
-                <div className="flex flex-col gap-y-0.5">
-                  <h4 className="text-sm font-bold text-zinc-900">ASTU Main Campus</h4>
-                  <p className="text-xs font-mono text-[#54595F]">School of Civil Eng & Architecture (EAT · UTC+3)</p>
-                </div>
+            {/* Item 3: Location */}
+            <div className="flex items-center gap-3.5 py-4">
+              <div className="flex size-12 shrink-0 items-center justify-center text-[#D4AF37]">
+                <MapPin size={22} />
+              </div>
+              <div className="flex flex-col gap-y-0.5">
+                <h4 className="text-sm font-bold text-zinc-900">ASTU Main Campus</h4>
+                <p className="text-xs font-mono text-[#54595F]">School of Civil Eng & Architecture (EAT · UTC+3)</p>
               </div>
             </div>
-            <div aria-hidden="true" className="pointer-events-none absolute h-px bg-zinc-200 -bottom-px left-0 right-0"></div>
           </div>
 
           {/* Full Consultation Trigger Banner */}
-          <div className="bg-[#FFFFFF] border border-zinc-200/90 p-8 sm:p-10 rounded-3xl text-center flex flex-col sm:flex-row justify-between items-center gap-6 shadow-md">
+          <div className="py-10 text-center flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="text-left">
               <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5">Interested in Collaborating on Civil Engineering Projects?</h3>
               <p className="text-xs sm:text-sm text-[#54595F]">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] shrink-0 flex items-center gap-2 active:scale-95"
+              className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 active:scale-95"
             >
               Connect With Us <ArrowUpRight size={14} />
             </button>

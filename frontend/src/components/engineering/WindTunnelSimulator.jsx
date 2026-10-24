@@ -90,10 +90,10 @@ export const WindTunnelSimulator = () => {
   }, [isTunnelActive, windSpeedMph]);
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 lg:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Header Banner */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold">
             <Wind size={14} className="animate-pulse" />
@@ -110,9 +110,9 @@ export const WindTunnelSimulator = () => {
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={() => setIsTunnelActive(!isTunnelActive)}
-            className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-xs ${
+            className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all ${
               isTunnelActive
-                ? 'bg-[#FFFFFF] text-[#54595F] border border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#121417]'
+                ? 'bg-zinc-200 text-[#54595F] hover:bg-[#D4AF37] hover:text-[#121417]'
                 : 'bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c]'
             }`}
           >
@@ -147,10 +147,10 @@ export const WindTunnelSimulator = () => {
                 <button
                   key={key}
                   onClick={() => setTowerShape(key)}
-                  className={`p-3.5 rounded-xl border text-left transition-all relative ${
+                  className={`p-3.5 rounded-xl text-left transition-all relative ${
                     isSelected
-                      ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-xs'
-                      : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37] text-[#54595F]'
+                      ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37]'
+                      : 'hover:bg-zinc-100 text-[#54595F]'
                   }`}
                 >
                   <div className="flex justify-between items-center mb-1">
@@ -167,7 +167,7 @@ export const WindTunnelSimulator = () => {
           </div>
 
           {/* Wind Velocity Slider */}
-          <div className="bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 space-y-2">
+          <div className="py-3 space-y-2">
             <div className="flex justify-between items-center text-xs font-mono">
               <span className="text-[#54595F] flex items-center gap-1.5 font-semibold">
                 <Sliders size={13} className="text-[#D4AF37]" /> Gradient Wind Speed:
@@ -192,7 +192,7 @@ export const WindTunnelSimulator = () => {
         </div>
 
         {/* Right Column: Shape Aerodynamics Explainer */}
-        <div className="lg:col-span-7 bg-[#FFFFFF] p-6 rounded-2xl border border-zinc-200 flex flex-col justify-between shadow-xs">
+        <div className="lg:col-span-7 py-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold">
@@ -204,7 +204,7 @@ export const WindTunnelSimulator = () => {
             <p className="text-xs text-[#54595F] leading-relaxed mb-4">{currentShape.description}</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-200 text-xs font-mono">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono">
             <div>
               <span className="text-[#54595F]/75 block text-[10px] font-semibold">DRAG COEFFICIENT ($C_d$):</span>
               <span className="text-[#D4AF37] font-bold text-sm">{currentShape.dragCoeff}</span>
@@ -228,7 +228,7 @@ export const WindTunnelSimulator = () => {
       <div className="relative z-10 grid lg:grid-cols-12 gap-6 items-stretch my-6">
         
         {/* Left Column: Visual Wind Tunnel Canvas / SVG */}
-        <div className="lg:col-span-8 bg-[#121417] rounded-2xl border border-zinc-300 p-6 relative overflow-hidden flex flex-col justify-between min-h-[340px] shadow-sm">
+        <div className="lg:col-span-8 bg-[#121417] rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between min-h-[340px]">
           
           <div className="flex items-center justify-between text-xs font-mono">
             <span className="flex items-center gap-2 text-zinc-300">
@@ -307,7 +307,7 @@ export const WindTunnelSimulator = () => {
           </div>
 
           {/* Base Flow Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-zinc-700 text-xs font-mono">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 text-xs font-mono">
             <div>
               <span className="text-zinc-400 block text-[10px]">DYNAMIC WIND PRESSURE ($q_z$):</span>
               <span className="text-[#06B6D4] font-bold">{dynamicPressureKPa.toFixed(2)} kPa ({Math.round(dynamicPressureKPa * 20.885)} psf)</span>
@@ -320,7 +320,7 @@ export const WindTunnelSimulator = () => {
         </div>
 
         {/* Right Column: ISO 10137 Human Comfort & Motion Assessment */}
-        <div className="lg:col-span-4 bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 flex flex-col justify-between shadow-xs">
+        <div className="lg:col-span-4 py-4 flex flex-col justify-between">
           
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] block mb-2 font-semibold">
@@ -333,7 +333,7 @@ export const WindTunnelSimulator = () => {
               Wind turbulence causes upper stories to sway. ISO 10137 mandates peak horizontal acceleration remain under 15 milli-g to prevent occupant nausea.
             </p>
 
-            <div className="bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 space-y-3 shadow-xs">
+            <div className="py-2 space-y-3">
               <div className="flex justify-between items-center text-xs font-mono">
                 <span className="text-[#54595F]">Calculated Acceleration:</span>
                 <span className={`text-base font-bold ${passesISO ? 'text-emerald-600' : 'text-rose-600'}`}>
@@ -358,8 +358,8 @@ export const WindTunnelSimulator = () => {
           </div>
 
           <div className="space-y-3 mt-4">
-            <div className={`p-3 rounded-xl border text-xs font-mono flex items-start gap-2.5 ${
-              passesISO ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-rose-50 border-rose-200 text-rose-700'
+            <div className={`p-3 rounded-xl text-xs font-mono flex items-start gap-2.5 ${
+              passesISO ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'
             }`}>
               {passesISO ? <CheckCircle2 size={16} className="shrink-0 mt-0.5" /> : <AlertTriangle size={16} className="shrink-0 mt-0.5" />}
               <div className="leading-snug">
@@ -368,7 +368,7 @@ export const WindTunnelSimulator = () => {
               </div>
             </div>
 
-            <div className="pt-3 border-t border-zinc-200 flex items-center justify-between text-[10px] font-mono text-[#54595F]">
+            <div className="pt-3 flex items-center justify-between text-[10px] font-mono text-[#54595F]">
               <span className="flex items-center gap-1 text-[#D4AF37]">
                 <ShieldCheck size={12} /> Stamped PE Review
               </span>

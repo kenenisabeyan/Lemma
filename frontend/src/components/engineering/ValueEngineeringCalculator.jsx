@@ -39,15 +39,15 @@ export const ValueEngineeringCalculator = () => {
   const weeksSaved = Math.round(mult.weeks * (stories / 40));
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200/90 p-6 sm:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Background blueprint subtle grid */}
       <div className="absolute inset-0 bg-cad-grid opacity-20 pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 relative z-10">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-4 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-2 font-semibold">
             <Calculator size={13} className="text-[#D4AF37]" />
             Value Engineering & Carbon Optimization Matrix
           </div>
@@ -71,13 +71,13 @@ export const ValueEngineeringCalculator = () => {
             <label className="block text-[10px] font-mono uppercase text-[#54595F] tracking-wider mb-2 font-bold">
               Select Proposed Structural Framing System
             </label>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2.5">
               <button
                 onClick={() => setStructuralSystem('post-tensioned')}
-                className={`p-3 rounded-xl border text-left transition-all font-mono text-xs ${
+                className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'post-tensioned'
-                    ? 'bg-[#D4AF37]/15 border-2 border-[#D4AF37] text-[#121417] shadow-xs font-bold'
-                    : 'bg-[#FFFFFF] border-zinc-200 text-[#54595F] hover:text-zinc-900 hover:border-zinc-300'
+                    ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37] text-[#121417] font-bold'
+                    : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
                 }`}
               >
                 <div className="font-semibold text-zinc-900 text-xs">Post-Tensioned Flat Slabs</div>
@@ -86,10 +86,10 @@ export const ValueEngineeringCalculator = () => {
 
               <button
                 onClick={() => setStructuralSystem('outrigger')}
-                className={`p-3 rounded-xl border text-left transition-all font-mono text-xs ${
+                className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'outrigger'
-                    ? 'bg-[#D4AF37]/15 border-2 border-[#D4AF37] text-[#121417] shadow-xs font-bold'
-                    : 'bg-[#FFFFFF] border-zinc-200 text-[#54595F] hover:text-zinc-900 hover:border-zinc-300'
+                    ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37] text-[#121417] font-bold'
+                    : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
                 }`}
               >
                 <div className="font-semibold text-zinc-900 text-xs">Core & Outrigger Trusses</div>
@@ -98,10 +98,10 @@ export const ValueEngineeringCalculator = () => {
 
               <button
                 onClick={() => setStructuralSystem('steel-composite')}
-                className={`p-3 rounded-xl border text-left transition-all font-mono text-xs ${
+                className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'steel-composite'
-                    ? 'bg-[#D4AF37]/15 border-2 border-[#D4AF37] text-[#121417] shadow-xs font-bold'
-                    : 'bg-[#FFFFFF] border-zinc-200 text-[#54595F] hover:text-zinc-900 hover:border-zinc-300'
+                    ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37] text-[#121417] font-bold'
+                    : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
                 }`}
               >
                 <div className="font-semibold text-zinc-900 text-xs">Composite Steel Moment Frame</div>
@@ -110,10 +110,10 @@ export const ValueEngineeringCalculator = () => {
 
               <button
                 onClick={() => setStructuralSystem('base-isolation')}
-                className={`p-3 rounded-xl border text-left transition-all font-mono text-xs ${
+                className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'base-isolation'
-                    ? 'bg-[#D4AF37]/15 border-2 border-[#D4AF37] text-[#121417] shadow-xs font-bold'
-                    : 'bg-[#FFFFFF] border-zinc-200 text-[#54595F] hover:text-zinc-900 hover:border-zinc-300'
+                    ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37] text-[#121417] font-bold'
+                    : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
                 }`}
               >
                 <div className="font-semibold text-zinc-900 text-xs">Base Isolation & Viscous Dampers</div>
@@ -123,8 +123,8 @@ export const ValueEngineeringCalculator = () => {
           </div>
 
           {/* Slider 1: Stories */}
-          <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-zinc-200">
-            <div className="flex justify-between items-center text-xs font-mono text-[#54595F] mb-2">
+          <div className="py-2 space-y-2">
+            <div className="flex justify-between items-center text-xs font-mono text-[#54595F] mb-1">
               <span className="uppercase font-bold tracking-wider flex items-center gap-1.5 text-zinc-800">
                 <Building2 size={14} className="text-[#D4AF37]" /> Building Height
               </span>
@@ -139,7 +139,7 @@ export const ValueEngineeringCalculator = () => {
               onChange={(e) => setStories(Number(e.target.value))}
               className="w-full accent-[#D4AF37] h-2 bg-zinc-200 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[10px] font-mono text-[#54595F] mt-1.5">
+            <div className="flex justify-between text-[10px] font-mono text-[#54595F] mt-1">
               <span>10 Stories (Low-Rise)</span>
               <span>40 Stories (Tower)</span>
               <span>75 Stories (Supertall)</span>
@@ -147,8 +147,8 @@ export const ValueEngineeringCalculator = () => {
           </div>
 
           {/* Slider 2: Average Floor Plate */}
-          <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-zinc-200">
-            <div className="flex justify-between items-center text-xs font-mono text-[#54595F] mb-2">
+          <div className="py-2 space-y-2">
+            <div className="flex justify-between items-center text-xs font-mono text-[#54595F] mb-1">
               <span className="uppercase font-bold tracking-wider flex items-center gap-1.5 text-zinc-800">
                 <Layers size={14} className="text-[#D4AF37]" /> Floor Plate Area
               </span>
@@ -163,7 +163,7 @@ export const ValueEngineeringCalculator = () => {
               onChange={(e) => setFloorArea(Number(e.target.value))}
               className="w-full accent-[#D4AF37] h-2 bg-zinc-200 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[10px] font-mono text-[#54595F] mt-1.5">
+            <div className="flex justify-between text-[10px] font-mono text-[#54595F] mt-1">
               <span>6,000 sq ft</span>
               <span>Total GFA: {(totalArea / 1000).toFixed(0)}k sq ft</span>
               <span>35,000 sq ft</span>
@@ -175,20 +175,20 @@ export const ValueEngineeringCalculator = () => {
         {/* Right Column: Calculated Results Bento (6 cols) */}
         <div className="lg:col-span-6 flex flex-col justify-between gap-6">
           
-          <div className="rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-8 shadow-sm">
+          <div className="py-4">
             <span className="text-xs font-mono uppercase font-bold text-[#D4AF37] tracking-widest block mb-1">
               Estimated Construction Capital Savings
             </span>
             <div className="text-4xl sm:text-5xl font-extrabold text-zinc-900 font-mono tracking-tight mb-2">
               ${(estimatedSavingsUSD / 1000000).toFixed(2)}M <span className="text-sm text-emerald-600 font-normal">USD</span>
             </div>
-            <p className="text-xs text-[#54595F] font-mono leading-relaxed">
+            <p className="text-xs text-[#54595F] font-mono leading-relaxed mb-6">
               Achieved through member slenderness optimization, post-tensioned tendon layout, and finite element stress redistribution.
             </p>
 
             {/* Metrics Grid */}
-            <div className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-zinc-200 font-mono">
-              <div className="p-3 bg-[#FFFFFF] rounded-xl border border-zinc-200/80 shadow-2xs">
+            <div className="grid grid-cols-2 gap-4 font-mono">
+              <div className="py-2">
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#54595F] mb-1">
                   <TrendingDown size={11} className="text-emerald-600" /> Concrete Volume
                 </div>
@@ -198,7 +198,7 @@ export const ValueEngineeringCalculator = () => {
                 <div className="text-[10px] text-[#D4AF37] font-semibold mt-0.5">Reduced Dead Load</div>
               </div>
 
-              <div className="p-3 bg-[#FFFFFF] rounded-xl border border-zinc-200/80 shadow-2xs">
+              <div className="py-2">
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#54595F] mb-1">
                   <TrendingDown size={11} className="text-emerald-600" /> Steel Tonnage
                 </div>
@@ -208,7 +208,7 @@ export const ValueEngineeringCalculator = () => {
                 <div className="text-[10px] text-[#D4AF37] font-semibold mt-0.5">Optimized Sections</div>
               </div>
 
-              <div className="p-3 bg-[#FFFFFF] rounded-xl border border-zinc-200/80 shadow-2xs">
+              <div className="py-2">
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#54595F] mb-1">
                   <Leaf size={11} className="text-emerald-600" /> Embodied Carbon
                 </div>
@@ -218,7 +218,7 @@ export const ValueEngineeringCalculator = () => {
                 <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">LEED Carbon Credits</div>
               </div>
 
-              <div className="p-3 bg-[#FFFFFF] rounded-xl border border-zinc-200/80 shadow-2xs">
+              <div className="py-2">
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#54595F] mb-1">
                   <Clock size={11} className="text-[#D4AF37]" /> Schedule Offset
                 </div>
@@ -231,7 +231,7 @@ export const ValueEngineeringCalculator = () => {
           </div>
 
           {/* CTA Box */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-[#FFFFFF] border border-zinc-200 shadow-xs">
+          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-xs font-mono font-bold text-zinc-900 uppercase">
                 Want a Capstone Quantity &amp; Value Engineering Review?
@@ -242,7 +242,7 @@ export const ValueEngineeringCalculator = () => {
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-6 py-3 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-sm shrink-0 flex items-center gap-1.5"
+              className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-6 py-3 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-1.5"
             >
               Connect With Brothers <ArrowUpRight size={13} />
             </button>

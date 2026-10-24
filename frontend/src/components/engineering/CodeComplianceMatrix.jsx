@@ -136,8 +136,8 @@ export const CodeComplianceMatrix = () => {
                 onClick={() => setRiskCategory(rc)}
                 className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   riskCategory === rc
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-2xs'
-                    : 'bg-zinc-100 dark:bg-zinc-800 text-[#54595F] dark:text-zinc-300 hover:text-[#D4AF37]'
+                    ? 'text-[#D4AF37] font-extrabold'
+                    : 'text-[#54595F] dark:text-zinc-400 hover:text-[#D4AF37]'
                 }`}
               >
                 Cat {rc}
@@ -155,8 +155,8 @@ export const CodeComplianceMatrix = () => {
                 onClick={() => setSeismicCategory(sdc)}
                 className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   seismicCategory === sdc
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-2xs'
-                    : 'bg-zinc-100 dark:bg-zinc-800 text-[#54595F] dark:text-zinc-300 hover:text-[#D4AF37]'
+                    ? 'text-[#D4AF37] font-extrabold'
+                    : 'text-[#54595F] dark:text-zinc-400 hover:text-[#D4AF37]'
                 }`}
               >
                 {sdc}
@@ -206,9 +206,9 @@ export const CodeComplianceMatrix = () => {
               <ShieldCheck size={16} /> Engineering Verification Audit
             </h5>
 
-            <div className="flex flex-col gap-3 font-mono text-xs mb-6">
+            <div className="flex flex-col gap-2 font-mono text-xs mb-6">
               {currentCode.checklist.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-2.5 rounded-lg bg-white dark:bg-zinc-800 shadow-2xs">
+                <div key={idx} className="flex items-start gap-2.5 py-1.5">
                   <CheckCircle2 size={14} className="text-emerald-600 shrink-0 mt-0.5" />
                   <span className="text-[#54595F] dark:text-zinc-300 text-[11px] leading-snug">{item}</span>
                 </div>

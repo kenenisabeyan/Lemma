@@ -274,31 +274,31 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Back Link & Action Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-zinc-200/80 dark:border-white/10">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-4">
           <Link to="/projects" className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#801834] dark:hover:text-[#E84855] transition-colors">
             <ArrowLeft size={16} /> Back to All Projects
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <button
               onClick={handleCopyLink}
-              className="rounded-full bg-white/85 dark:bg-white/10 text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] border border-white/90 dark:border-white/20 backdrop-blur-xl px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-[0_4px_15px_rgba(0,0,0,0.04)] cursor-pointer"
+              className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] flex items-center gap-2 transition-colors cursor-pointer"
             >
-              <Share2 size={13} className="text-[#D4AF37]" /> {copied ? 'Link Copied!' : 'Share Case Study'}
+              <Share2 size={14} className="text-[#D4AF37]" /> {copied ? 'Link Copied!' : 'Share Case Study'}
             </button>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-6 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer"
+              className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] hover:underline flex items-center gap-1 cursor-pointer"
             >
               <span>Consult On Scope</span>
-              <ArrowUpRight size={14} className="text-[#121417]" />
+              <ArrowUpRight size={14} className="text-[#D4AF37]" />
             </button>
           </div>
         </div>
 
         {/* Hero Header */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D4AF37] mb-3 font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
             Structural Case Study · {project.category}
           </div>
@@ -311,7 +311,7 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Main Project Feature Image */}
-        <div className="relative aspect-[16/9] rounded-3xl bg-zinc-900 border border-zinc-200/80 dark:border-white/10 overflow-hidden mb-10 group shadow-xl">
+        <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 group">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -320,33 +320,33 @@ export const CaseStudyPage = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           
           {/* Engineering Blueprint Label */}
-          <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-white/30 text-xs font-mono shadow-md">
-            <span className="text-[#801834] dark:text-[#E84855] font-bold">PROJECT CODE: {project.slug?.toUpperCase()}</span>
-            <span className="text-zinc-600 dark:text-zinc-300 hidden sm:inline font-semibold">ASTU SoCEA VERIFIED • EBCS EN & ERA COMPLIANT</span>
+          <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center p-3 text-xs font-mono text-white">
+            <span className="text-[#D4AF37] font-bold">PROJECT CODE: {project.slug?.toUpperCase()}</span>
+            <span className="text-zinc-300 hidden sm:inline font-semibold">ASTU SoCEA VERIFIED • EBCS EN & ERA COMPLIANT</span>
           </div>
         </div>
 
         {/* Structural Metadata Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 border-y border-zinc-200/80 dark:border-white/10 mb-12">
-          <div className="p-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 mb-12">
+          <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 block mb-1">Geographic Location</span>
             <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <MapPin size={14} className="text-[#D4AF37]" /> {project.location}
             </span>
           </div>
-          <div className="p-2">
+          <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 block mb-1">Completion Year</span>
             <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Calendar size={14} className="text-[#D4AF37]" /> {project.year}
             </span>
           </div>
-          <div className="p-2">
+          <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 block mb-1">Structural Role</span>
             <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <ShieldCheck size={14} className="text-[#D4AF37]" /> {project.role || 'Lead Structural Engineer'}
             </span>
           </div>
-          <div className="p-2">
+          <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 block mb-1">Client / Authority</span>
             <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Building size={14} className="text-[#D4AF37]" /> {project.client || 'Private Developer'}
@@ -355,9 +355,9 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* System & Material Specifications Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 shadow-sm">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#E84855] mb-3 flex items-center gap-2">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#E84855] mb-2 flex items-center gap-2">
               <Layers size={16} /> Lateral & Gravity Structural System
             </h3>
             <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
@@ -365,8 +365,8 @@ export const CaseStudyPage = () => {
             </p>
           </div>
 
-          <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 shadow-sm">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#E84855] mb-3 flex items-center gap-2">
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#801834] dark:text-[#E84855] mb-2 flex items-center gap-2">
               <Building size={16} /> Primary Materials Specified
             </h3>
             <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
@@ -376,62 +376,62 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* 5-STEP CASE STUDY NARRATIVE */}
-        <div className="flex flex-col gap-6 mb-16">
+        <div className="flex flex-col gap-8 mb-16">
           
           {/* Step 1: Overview */}
-          <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
+          <div className="py-4 border-l-2 border-[#D4AF37] pl-6">
+            <span className="inline-block text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase mb-2">
               Phase 01 • Context & Scope
             </span>
-            <h2 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-4">1. Project Overview & Architectural Vision</h2>
+            <h2 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-3">1. Project Overview & Architectural Vision</h2>
             <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
               {project.description}
             </p>
           </div>
 
           {/* Step 2: Challenge */}
-          <div className="rounded-3xl bg-red-500/5 dark:bg-red-950/20 border border-red-200 dark:border-red-900/40 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-red-500/10 border border-red-300 dark:border-red-700 px-3 py-0.5 text-xs font-mono text-red-600 dark:text-red-400 font-bold tracking-widest uppercase mb-3">
+          <div className="py-4 border-l-2 border-red-500 pl-6">
+            <span className="inline-block text-xs font-mono text-red-600 dark:text-red-400 font-bold tracking-widest uppercase mb-2">
               Phase 02 • Technical Boundary
             </span>
-            <h2 className="text-xl font-black text-red-600 dark:text-red-400 mb-4">2. The Structural Engineering Challenge</h2>
+            <h2 className="text-xl font-black text-red-600 dark:text-red-400 mb-3">2. The Structural Engineering Challenge</h2>
             <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
               {project.challenge}
             </p>
           </div>
 
           {/* Step 3: Engineering Approach */}
-          <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase mb-3">
+          <div className="py-4 border-l-2 border-[#D4AF37] pl-6">
+            <span className="inline-block text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase mb-2">
               Phase 03 • Mechanics & Simulation
             </span>
-            <h2 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-4">3. Engineering Approach & FEA Modeling</h2>
-            <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed mb-6">
+            <h2 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-3">3. Engineering Approach & FEA Modeling</h2>
+            <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
               {project.engineeringApproach}
             </p>
-            <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 p-4 border border-zinc-200/80 dark:border-white/5 text-xs text-zinc-600 dark:text-zinc-300 flex items-center gap-3">
+            <div className="py-2 text-xs text-zinc-600 dark:text-zinc-300 flex items-center gap-3">
               <Cpu className="text-[#801834] dark:text-[#E84855] shrink-0" size={18} />
               <span>Full 3D dynamic response spectrum analysis, lateral stiffness checks, and seismic shear wall distribution validated against EBCS EN 1998 Zone 4 and EBCS EN 1992.</span>
             </div>
           </div>
 
           {/* Step 4: Solution */}
-          <div className="rounded-3xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-emerald-500/10 border border-emerald-300 dark:border-emerald-700 px-3 py-0.5 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3">
+          <div className="py-4 border-l-2 border-emerald-500 pl-6">
+            <span className="inline-block text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase mb-2">
               Phase 04 • Implementation
             </span>
-            <h2 className="text-xl font-black text-emerald-700 dark:text-emerald-300 mb-4">4. Innovative Structural Solution Implemented</h2>
+            <h2 className="text-xl font-black text-emerald-700 dark:text-emerald-300 mb-3">4. Innovative Structural Solution Implemented</h2>
             <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
               {project.solution}
             </p>
           </div>
 
           {/* Step 5: Result */}
-          <div className="rounded-3xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40 p-8 shadow-sm">
-            <span className="inline-block rounded-full bg-emerald-500/10 border border-emerald-300 dark:border-emerald-700 px-3 py-0.5 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3 flex items-center gap-2 w-max">
+          <div className="py-4 border-l-2 border-emerald-500 pl-6">
+            <span className="inline-block text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase mb-2 flex items-center gap-2 w-max">
               <CheckCircle2 size={16} /> Phase 05 • Performance Verification
             </span>
-            <h2 className="text-xl font-black text-emerald-700 dark:text-emerald-300 mb-4">5. Quantified Performance Result</h2>
+            <h2 className="text-xl font-black text-emerald-700 dark:text-emerald-300 mb-3">5. Quantified Performance Result</h2>
             <p className="text-base sm:text-lg text-zinc-900 dark:text-zinc-100 font-bold leading-relaxed">
               {project.result}
             </p>
@@ -442,7 +442,7 @@ export const CaseStudyPage = () => {
         {/* Interactive Drawing Dossier & Multi-Layer CAD Board */}
         <div className="mb-16">
           <div className="mb-8 text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono font-bold text-[#D4AF37] shadow-xs mb-3">
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#D4AF37] mb-2 uppercase tracking-wider">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
@@ -458,7 +458,7 @@ export const CaseStudyPage = () => {
         </div>
 
         {/* Software Stack Used */}
-        <div className="py-6 border-t border-zinc-200/80 dark:border-white/10 mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="py-6 mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <span className="text-[10px] font-mono uppercase text-zinc-500 tracking-widest block mb-1">
               Finite Element & BIM Software Tools Utilized
@@ -466,10 +466,10 @@ export const CaseStudyPage = () => {
             <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">Computational Engineering Stack</h4>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {softwareList.map((soft) => (
-              <span key={soft} className="rounded-full text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-white/10 px-3 py-1 font-bold">
-                {soft}
+              <span key={soft} className="text-xs font-mono text-zinc-700 dark:text-zinc-300 font-bold">
+                • {soft}
               </span>
             ))}
           </div>
@@ -477,7 +477,7 @@ export const CaseStudyPage = () => {
 
         {/* Related Projects Section */}
         {relatedProjects.length > 0 && (
-          <div className="border-t border-zinc-200/80 dark:border-white/10 pt-12 mb-16">
+          <div className="pt-8 mb-16">
             <div className="flex justify-between items-center mb-8">
               <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100">
                 Explore <span className="text-[#801834] dark:text-[#E84855]">Related Case Studies</span>
@@ -487,12 +487,12 @@ export const CaseStudyPage = () => {
               </Link>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {relatedProjects.map((rel) => (
                 <Link
                   key={rel.id}
                   to={`/projects/${rel.slug}`}
-                  className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 hover:border-[#D4AF37]/50 p-6 transition-all group flex flex-col justify-between shadow-sm hover:shadow-xl"
+                  className="p-4 transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
@@ -509,7 +509,7 @@ export const CaseStudyPage = () => {
         )}
 
         {/* Bottom Consultation CTA */}
-        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-10 text-center shadow-xl relative overflow-hidden">
+        <div className="py-12 text-center relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-3">
               Facing an <span className="text-[#801834] dark:text-[#E84855]">Ambitious</span> Civil or Structural Engineering Challenge?
@@ -519,10 +519,9 @@ export const CaseStudyPage = () => {
             </p>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] inline-flex items-center gap-2 cursor-pointer"
+              className="text-xs sm:text-sm font-mono font-bold tracking-widest uppercase text-[#D4AF37] hover:underline inline-flex items-center gap-2 cursor-pointer"
             >
-              <span>Connect With Our Team</span>
-              <ArrowUpRight size={16} className="text-[#121417]" />
+              <span>Connect With Our Team →</span>
             </button>
           </div>
         </div>

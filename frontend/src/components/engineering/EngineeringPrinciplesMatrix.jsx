@@ -97,19 +97,13 @@ export const EngineeringPrinciplesMatrix = () => {
   const currentPrinciple = principles.find(p => p.id === activeTab) || principles[0];
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] bg-cad-grid border border-zinc-200/90 p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
-      {/* Decorative Technical Corner Marks */}
-      <div className="absolute top-3 left-3 text-[10px] font-mono text-zinc-300 pointer-events-none select-none">+</div>
-      <div className="absolute top-3 right-3 text-[10px] font-mono text-zinc-300 pointer-events-none select-none">+</div>
-      <div className="absolute bottom-3 left-3 text-[10px] font-mono text-zinc-300 pointer-events-none select-none">+</div>
-      <div className="absolute bottom-3 right-3 text-[10px] font-mono text-zinc-300 pointer-events-none select-none">+</div>
-
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/80">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] shadow-xs mb-2 font-bold">
-            <Cpu size={13} />
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D4AF37] mb-2 font-bold uppercase tracking-wider">
+            <Cpu size={14} />
             <span>Core Mathematical & Mechanical Standards</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
@@ -121,17 +115,17 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Code Standard Stamp */}
-        <div className="flex items-center gap-3 bg-[#FFFFFF] px-4 py-2 rounded-2xl border border-zinc-200 shrink-0 font-mono text-xs">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#D4AF37]"></div>
+        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs">
+          <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
           <div>
-            <span className="text-[9px] text-[#54595F] block uppercase">MANDATE</span>
-            <span className="font-bold text-zinc-800">ASCE 7 / AISC / ACI</span>
+            <span className="text-[9px] text-[#54595F] block uppercase tracking-wider">MANDATE</span>
+            <span className="font-bold text-zinc-800">ASCE 7 / AISC / ACI / EBCS</span>
           </div>
         </div>
       </div>
 
       {/* Principles Tabs */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {principles.map((principle) => {
           const Icon = principle.icon;
           const isActive = activeTab === principle.id;
@@ -139,17 +133,17 @@ export const EngineeringPrinciplesMatrix = () => {
             <button
               key={principle.id}
               onClick={() => setActiveTab(principle.id)}
-              className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between ${
+              className={`p-3 text-left transition-all duration-200 flex flex-col justify-between cursor-pointer ${
                 isActive
-                  ? 'bg-[#D4AF37]/15 border-2 border-[#D4AF37] shadow-sm'
-                  : 'bg-[#FFFFFF] border-zinc-200/80 hover:border-zinc-300'
+                  ? 'border-l-2 border-[#D4AF37] pl-4'
+                  : 'pl-4 border-l-2 border-transparent hover:border-zinc-300'
               }`}
             >
-              <div className="flex items-center justify-between mb-3">
-                <div className={`p-2 rounded-xl transition-colors ${
+              <div className="flex items-center justify-between mb-2">
+                <div className={`p-1.5 rounded-lg transition-colors ${
                   isActive 
-                    ? 'bg-[#D4AF37] text-[#121417]' 
-                    : 'bg-[#FFFFFF] text-[#54595F] border border-zinc-200'
+                    ? 'text-[#D4AF37]' 
+                    : 'text-[#54595F]'
                 }`}>
                   <Icon size={18} />
                 </div>
@@ -158,7 +152,7 @@ export const EngineeringPrinciplesMatrix = () => {
                 </span>
               </div>
               <h4 className={`text-xs font-bold leading-snug ${
-                isActive ? 'text-zinc-900 font-extrabold' : 'text-zinc-800'
+                isActive ? 'text-zinc-900 font-extrabold' : 'text-zinc-700'
               }`}>
                 {principle.title}
               </h4>
@@ -168,8 +162,8 @@ export const EngineeringPrinciplesMatrix = () => {
       </div>
 
       {/* Principle Detail Dossier */}
-      <div className="bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 lg:p-8">
-        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 pb-6 mb-6 border-b border-zinc-200/80">
+      <div className="py-2">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 pb-4 mb-6">
           <div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4AF37] font-bold">
               Governing Code: {currentPrinciple.code}
@@ -184,7 +178,7 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Mathematical Equation & Physics Panel */}
-        <div className="mb-6 p-5 rounded-xl bg-[#FFFFFF] border border-zinc-200 shadow-2xs">
+        <div className="mb-6 py-3">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#54595F] font-bold">
               Key Mechanics Formulation
@@ -193,26 +187,26 @@ export const EngineeringPrinciplesMatrix = () => {
               Deterministic Limit State
             </span>
           </div>
-          <div className="p-4 rounded-lg bg-[#FFFFFF] border border-zinc-200 text-center font-mono text-sm sm:text-base font-bold text-[#D4AF37] overflow-x-auto">
+          <div className="py-3 text-center font-mono text-sm sm:text-base font-bold text-[#D4AF37] overflow-x-auto">
             <code>{currentPrinciple.formula}</code>
           </div>
-          <p className="text-[11px] font-mono text-[#54595F] mt-2 text-center">
+          <p className="text-[11px] font-mono text-[#54595F] mt-1 text-center">
             {currentPrinciple.formulaDesc}
           </p>
         </div>
 
         {/* Implementation Specifications & Metrics Grid */}
-        <div className="grid md:grid-cols-12 gap-6 items-start">
+        <div className="grid md:grid-cols-12 gap-8 items-start">
           
           {/* Engineering Specifications (7 Cols) */}
           <div className="md:col-span-7 space-y-3">
             <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block">
               Practical Structural Application
             </span>
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               {currentPrinciple.details.map((detail, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200">
-                  <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0 mt-0.5" />
+                <div key={idx} className="flex items-start gap-2.5 py-1.5">
+                  <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0 mt-0.5" />
                   <p className="text-xs text-[#54595F] leading-relaxed font-medium">
                     {detail}
                   </p>
@@ -226,9 +220,9 @@ export const EngineeringPrinciplesMatrix = () => {
             <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block">
               Benchmark Verification Metrics
             </span>
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               {currentPrinciple.metrics.map((metric, idx) => (
-                <div key={idx} className="flex items-center justify-between p-3.5 rounded-xl bg-[#FFFFFF] border border-zinc-200">
+                <div key={idx} className="flex items-center justify-between py-2">
                   <span className="text-xs font-semibold text-[#54595F]">
                     {metric.label}
                   </span>

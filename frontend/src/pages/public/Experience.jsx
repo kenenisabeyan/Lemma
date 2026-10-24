@@ -328,13 +328,13 @@ export const Experience = () => {
       <div id="experience-tabs" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
         
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap gap-2 mb-12 bg-white/90 dark:bg-zinc-900/80 backdrop-blur-2xl p-2 rounded-3xl border border-white/90 dark:border-white/10 w-max shadow-md">
+        <div className="flex flex-wrap gap-2 mb-12 border-b border-zinc-200/60 dark:border-zinc-800 pb-3">
           <button
             onClick={() => setActiveTab('milestones')}
-            className={`px-5 py-2.5 rounded-2xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeTab === 'milestones'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-[0_4px_15px_rgba(212,175,55,0.35)] scale-[1.02]'
-                : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800'
+                ? 'text-[#801834] dark:text-[#E84855] border-b-2 border-[#D4AF37]'
+                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
             }`}
           >
             Major Project Milestones
@@ -342,10 +342,10 @@ export const Experience = () => {
 
           <button
             onClick={() => setActiveTab('timeline')}
-            className={`px-5 py-2.5 rounded-2xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeTab === 'timeline'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-[0_4px_15px_rgba(212,175,55,0.35)] scale-[1.02]'
-                : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800'
+                ? 'text-[#801834] dark:text-[#E84855] border-b-2 border-[#D4AF37]'
+                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
             }`}
           >
             Career Timeline & Roles
@@ -353,10 +353,10 @@ export const Experience = () => {
 
           <button
             onClick={() => setActiveTab('competencies')}
-            className={`px-5 py-2.5 rounded-2xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeTab === 'competencies'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-[0_4px_15px_rgba(212,175,55,0.35)] scale-[1.02]'
-                : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800'
+                ? 'text-[#801834] dark:text-[#E84855] border-b-2 border-[#D4AF37]'
+                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
             }`}
           >
             Core Competencies
@@ -365,19 +365,19 @@ export const Experience = () => {
 
         {/* Tab 1: Major Milestones */}
         {activeTab === 'milestones' && (
-          <div className="flex flex-col gap-8 mb-24">
+          <div className="flex flex-col divide-y divide-zinc-200/60 dark:divide-zinc-800 mb-24">
             {engineeringMilestones.map((item, index) => (
               <div 
                 key={index} 
-                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 sm:p-10 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)]"
+                className="py-8 transition-all duration-300"
               >
-                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-6 pb-6 border-b border-zinc-200/80 dark:border-white/10">
+                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-4">
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase">
                         {item.year}
                       </span>
-                      <span className="text-[10px] uppercase font-mono tracking-wider bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-white/10 px-3 py-1 rounded-full font-bold">
+                      <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-bold">
                         {item.category}
                       </span>
                     </div>
@@ -385,17 +385,17 @@ export const Experience = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-xs font-mono bg-amber-500/10 text-[#801834] dark:text-[#E84855] border border-[#D4AF37]/40 px-3.5 py-1 rounded-full font-extrabold">
+                    <span className="text-xs font-mono text-[#801834] dark:text-[#E84855] font-extrabold">
                       {item.value}
                     </span>
-                    <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-white/10 px-3 py-1 rounded-full flex items-center gap-1.5">
+                    <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
                       <MapPin size={12} className="text-[#D4AF37]" /> {item.location}
                     </span>
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-xs uppercase font-mono font-bold text-[#801834] dark:text-[#E84855] tracking-wider mb-2">
+                <div className="mb-4">
+                  <h4 className="text-xs uppercase font-mono font-bold text-[#801834] dark:text-[#E84855] tracking-wider mb-1">
                     Structural Achievement & Technical Innovation
                   </h4>
                   <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
@@ -403,8 +403,8 @@ export const Experience = () => {
                   </p>
                 </div>
 
-                <div className="bg-zinc-50/80 dark:bg-zinc-800/40 p-6 rounded-2xl border border-zinc-200/80 dark:border-white/5">
-                  <h5 className="text-[11px] font-mono uppercase text-zinc-500 tracking-wider mb-3 font-bold">Key Technical Scope:</h5>
+                <div className="pt-2">
+                  <h5 className="text-[11px] font-mono uppercase text-zinc-500 tracking-wider mb-2 font-bold">Key Technical Scope:</h5>
                   <div className="grid md:grid-cols-3 gap-3">
                     {item.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs text-zinc-700 dark:text-zinc-300">
@@ -426,21 +426,21 @@ export const Experience = () => {
               {CAREER_TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
                   <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform"></div>
-                  <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)]">
-                    <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-1 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+                  <div className="py-2 transition-all duration-300">
+                    <span className="inline-block text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
                       {item.year}
                     </span>
                     <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h3>
-                    <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                       <Building2 size={13} className="text-[#D4AF37]" /> {item.company}
                     </p>
-                    <p className="text-sm text-zinc-700 dark:text-zinc-300 max-w-3xl leading-relaxed mb-5">
+                    <p className="text-sm text-zinc-700 dark:text-zinc-300 max-w-3xl leading-relaxed mb-4">
                       {item.description}
                     </p>
                     <div className="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-600 dark:text-zinc-400 font-bold">
-                      <span className="rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 px-3 py-1">Direct Client Coordination</span>
-                      <span className="rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 px-3 py-1">Code Authority Submissions</span>
-                      <span className="rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 px-3 py-1">Multi-Disciplinary BIM</span>
+                      <span>• Direct Client Coordination</span>
+                      <span>• Code Authority Submissions</span>
+                      <span>• Multi-Disciplinary BIM</span>
                     </div>
                   </div>
                 </div>
@@ -451,20 +451,20 @@ export const Experience = () => {
 
         {/* Tab 3: Core Competencies */}
         {activeTab === 'competencies' && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             {structuralCompetencies.map((comp, index) => (
               <div 
                 key={index} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] flex flex-col justify-between"
+                className="group py-4 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855] flex items-center justify-center font-mono font-bold text-sm mb-6 group-hover:scale-110 transition-transform">
+                  <div className="font-mono font-bold text-sm text-[#801834] dark:text-[#E84855] mb-2">
                     0{index + 1}
                   </div>
-                  <h4 className="text-lg font-black text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors">{comp.title}</h4>
+                  <h4 className="text-lg font-black text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors">{comp.title}</h4>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{comp.desc}</p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-zinc-200/80 dark:border-white/10 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D4AF37] font-bold">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D4AF37] font-bold">
                   <ShieldCheck size={13} /> Rigorous Engineering Verified
                 </div>
               </div>
@@ -477,7 +477,7 @@ export const Experience = () => {
         {/* ======================================================================= */}
         <div id="shake-table" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
               Live Physics & Non-Linear Dynamics
             </div>
@@ -507,7 +507,7 @@ export const Experience = () => {
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <button
               onClick={() => navigate('/resources')}
-              className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+              className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Download Student Dossier (PDF)</span>
               <Download size={14} className="text-[#D4AF37]" />

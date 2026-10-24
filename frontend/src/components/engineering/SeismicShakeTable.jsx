@@ -155,10 +155,10 @@ export const SeismicShakeTable = () => {
     : 0;
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 lg:p-10 shadow-xl relative overflow-hidden">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Header Banner */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold">
             <Activity size={14} className="animate-pulse" />
@@ -175,10 +175,10 @@ export const SeismicShakeTable = () => {
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={() => setIsSimulating(!isSimulating)}
-            className={`rounded-full px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-md ${
+            className={`rounded-full px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all ${
               isSimulating
                 ? 'bg-rose-500 text-white hover:bg-rose-600'
-                : 'bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] hover:scale-105'
+                : 'bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c]'
             }`}
           >
             {isSimulating ? (
@@ -212,10 +212,10 @@ export const SeismicShakeTable = () => {
                 <button
                   key={key}
                   onClick={() => { setSelectedEarthquake(key); setIsSimulating(false); }}
-                  className={`p-3.5 rounded-xl border text-left transition-all relative ${
+                  className={`p-3.5 rounded-xl text-left transition-all relative ${
                     isSelected
-                      ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
-                      : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37] text-[#54595F]'
+                      ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37]'
+                      : 'hover:bg-zinc-100 text-[#54595F]'
                   }`}
                 >
                   <div className="flex justify-between items-center mb-1">
@@ -230,7 +230,7 @@ export const SeismicShakeTable = () => {
           </div>
 
           {/* PGA Multiplier Slider */}
-          <div className="bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 space-y-2">
+          <div className="py-3 space-y-2">
             <div className="flex justify-between items-center text-xs font-mono">
               <span className="text-[#54595F] flex items-center gap-1.5 font-bold">
                 <Sliders size={13} className="text-[#D4AF37]" /> Ground Motion Intensity:
@@ -273,10 +273,10 @@ export const SeismicShakeTable = () => {
                 <button
                   key={sys.id}
                   onClick={() => setDampingSystem(sys.id)}
-                  className={`p-4 rounded-xl border text-left transition-all flex flex-col justify-between ${
+                  className={`p-4 rounded-xl text-left transition-all flex flex-col justify-between ${
                     isSelected
-                      ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
-                      : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37]'
+                      ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37]'
+                      : 'hover:bg-zinc-100 text-[#54595F]'
                   }`}
                 >
                   <div>
@@ -303,7 +303,7 @@ export const SeismicShakeTable = () => {
       <div className="relative z-10 grid lg:grid-cols-12 gap-6 items-stretch my-6">
         
         {/* Left Column: Animated Dynamic Structural Tower */}
-        <div className="lg:col-span-7 bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
+        <div className="lg:col-span-7 py-4 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
           
           {/* Status HUD Overlays */}
           <div className="flex items-center justify-between text-xs font-mono">
@@ -311,7 +311,7 @@ export const SeismicShakeTable = () => {
               <span className={`w-2.5 h-2.5 rounded-full ${isSimulating ? 'bg-rose-500 animate-ping' : 'bg-emerald-500'}`}></span>
               Status: <strong className="text-[#54595F]">{isSimulating ? 'SEISMIC MOTION INJECTED' : 'STATIC EQUILIBRIUM'}</strong>
             </span>
-            <span className="text-[10px] text-[#D4AF37] bg-[#FFFFFF] border border-[#D4AF37]/40 px-2.5 py-1 rounded-md font-bold">
+            <span className="text-[10px] text-[#D4AF37] font-bold">
               Tower H = 160m (40 Stories) · $T_1 = 2.45s$
             </span>
           </div>
@@ -330,7 +330,7 @@ export const SeismicShakeTable = () => {
             </div>
 
             {/* Bedrock Strata Indicator */}
-            <div className="absolute bottom-0 w-full h-3 border-t border-zinc-200 flex justify-between px-4 text-[8px] font-mono text-[#54595F]/75">
+            <div className="absolute bottom-0 w-full h-3 flex justify-between px-4 text-[8px] font-mono text-[#54595F]/75">
               <span>SOLID BEDROCK ANCHOR</span>
               <span>PGA = {activePGA}g</span>
             </div>
@@ -418,7 +418,7 @@ export const SeismicShakeTable = () => {
           </div>
 
           {/* Real-Time Telemetry Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-zinc-200 text-xs font-mono">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 text-xs font-mono">
             <div>
               <span className="text-[#54595F]/75 block text-[10px]">CURRENT ROOF DRIFT:</span>
               <span className={`font-bold ${parseFloat(metrics.driftVal) > 1.5 ? 'text-rose-600' : 'text-[#D4AF37]'}`}>
@@ -431,7 +431,7 @@ export const SeismicShakeTable = () => {
             </div>
             <div>
               <span className="text-[#54595F]/75 block text-[10px]">STRUCTURAL STATUS:</span>
-              <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold border ${metrics.damageBadgeColor}`}>
+              <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold ${metrics.damageBadgeColor}`}>
                 {metrics.damageLevel}
               </span>
             </div>
@@ -439,7 +439,7 @@ export const SeismicShakeTable = () => {
         </div>
 
         {/* Right Column: Comparative Spectral Acceleration Plot & Performance Metrics */}
-        <div className="lg:col-span-5 bg-[#FFFFFF] rounded-2xl border border-zinc-200 p-6 flex flex-col justify-between shadow-sm">
+        <div className="lg:col-span-5 py-4 flex flex-col justify-between">
           
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -450,7 +450,7 @@ export const SeismicShakeTable = () => {
             </div>
 
             {/* Response Spectrum Graph (SVG) */}
-            <div className="bg-[#FFFFFF] p-3 rounded-xl border border-zinc-200 relative">
+            <div className="py-2 relative">
               <svg viewBox="0 0 240 110" className="w-full h-24">
                 {/* Axis lines */}
                 <line x1="25" y1="10" x2="25" y2="95" stroke="#CBD5E1" strokeWidth="1" />
@@ -487,7 +487,7 @@ export const SeismicShakeTable = () => {
                 <text x="210" y="105" fill="#888" fontSize="7" fontFamily="monospace">Period $T$</text>
               </svg>
 
-              <div className="flex justify-between items-center text-[10px] font-mono text-[#54595F] mt-1 pt-1 border-t border-zinc-100">
+              <div className="flex justify-between items-center text-[10px] font-mono text-[#54595F] mt-1 pt-1">
                 <span className="flex items-center gap-1.5"><span className="w-2 h-0.5 bg-rose-500"></span> Fixed Base Envelope</span>
                 <span className="flex items-center gap-1.5"><span className="w-2 h-0.5 bg-[#D4AF37]"></span> Mitigated Envelope</span>
               </div>
@@ -496,22 +496,22 @@ export const SeismicShakeTable = () => {
 
           {/* Performance Impact Summary */}
           <div className="space-y-2.5 my-4">
-            <div className="flex justify-between items-center text-xs font-mono bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+            <div className="flex justify-between items-center text-xs font-mono py-2">
               <span className="text-[#54595F]">Peak Lateral Drift Reduction:</span>
               <span className="text-emerald-600 font-bold">-{metrics.driftReduction}%</span>
             </div>
-            <div className="flex justify-between items-center text-xs font-mono bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+            <div className="flex justify-between items-center text-xs font-mono py-2">
               <span className="text-[#54595F]">Base Shear Acceleration Reduction:</span>
               <span className="text-emerald-600 font-bold">-{metrics.shearReduction}%</span>
             </div>
-            <div className="flex justify-between items-center text-xs font-mono bg-[#FFFFFF] p-2.5 rounded-lg border border-zinc-200">
+            <div className="flex justify-between items-center text-xs font-mono py-2">
               <span className="text-[#54595F]">Effective System Damping:</span>
               <span className="text-[#D4AF37] font-bold">{metrics.dampingRatio}</span>
             </div>
           </div>
 
           {/* Code Reference Stamp */}
-          <div className="pt-3 border-t border-zinc-200 flex items-center justify-between text-[10px] font-mono text-[#54595F]">
+          <div className="pt-3 flex items-center justify-between text-[10px] font-mono text-[#54595F]">
             <span className="flex items-center gap-1 text-[#D4AF37] font-bold">
               <ShieldCheck size={13} /> FEMA P-58 Validated
             </span>

@@ -67,15 +67,15 @@ export const BlueprintInspector = () => {
   const currentHotspot = hotspots.find((h) => h.id === selectedHotspot) || hotspots[0];
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200/90 p-6 sm:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Background blueprint subtle grid */}
       <div className="absolute inset-0 bg-cad-grid opacity-20 pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-2 font-semibold">
             <Compass size={13} className="text-[#D4AF37]" />
             Multi-Layer Engineering Drawing Inspector
           </div>
@@ -88,12 +88,12 @@ export const BlueprintInspector = () => {
         </div>
 
         {/* Layer Switcher Tabs */}
-        <div className="flex bg-[#FFFFFF] p-1.5 rounded-2xl border border-zinc-200">
+        <div className="flex gap-2">
           <button
             onClick={() => setActiveLayer('render')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'render'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
+                ? 'bg-[#D4AF37] text-[#121417]'
                 : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
@@ -103,7 +103,7 @@ export const BlueprintInspector = () => {
             onClick={() => setActiveLayer('wireframe')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'wireframe'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
+                ? 'bg-[#D4AF37] text-[#121417]'
                 : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
@@ -113,7 +113,7 @@ export const BlueprintInspector = () => {
             onClick={() => setActiveLayer('rebar')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'rebar'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
+                ? 'bg-[#D4AF37] text-[#121417]'
                 : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
@@ -126,7 +126,7 @@ export const BlueprintInspector = () => {
       <div className="grid lg:grid-cols-12 gap-8 items-stretch relative z-10">
         
         {/* Left Column: Visual Canvas with Clickable Hotspots (7 cols) */}
-        <div className="lg:col-span-7 rounded-2xl bg-zinc-950 border border-zinc-300 overflow-hidden relative min-h-[460px] flex items-center justify-center shadow-md group">
+        <div className="lg:col-span-7 rounded-2xl overflow-hidden relative min-h-[460px] flex items-center justify-center group bg-zinc-950">
           
           {/* Layer 1: Architecture Image */}
           {activeLayer === 'render' && (
@@ -218,13 +218,13 @@ export const BlueprintInspector = () => {
                   style={{ top: h.y, left: h.x, transform: 'translate(-50%, -50%)' }}
                   className={`group/btn absolute flex items-center justify-center rounded-full transition-all duration-300 ${
                     isSelected
-                      ? 'w-9 h-9 bg-[#D4AF37] text-[#121417] shadow-[0_0_20px_rgba(212,175,55,0.7)] scale-110 ring-4 ring-[#D4AF37]/30'
-                      : 'w-7 h-7 bg-[#FFFFFF] border border-[#D4AF37] text-[#D4AF37] hover:scale-125 shadow-md'
+                      ? 'w-9 h-9 bg-[#D4AF37] text-[#121417] scale-110'
+                      : 'w-7 h-7 bg-white text-[#D4AF37] hover:scale-125'
                   }`}
                   title={h.title}
                 >
                   <Crosshair size={isSelected ? 16 : 13} />
-                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-black/90 border border-zinc-700 text-white opacity-0 group-hover/btn:opacity-100 transition-opacity pointer-events-none">
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-black/90 text-white opacity-0 group-hover/btn:opacity-100 transition-opacity pointer-events-none">
                     Node #{h.id}
                   </span>
                 </button>
@@ -233,7 +233,7 @@ export const BlueprintInspector = () => {
           </div>
 
           {/* Technical Corner Stamp Block */}
-          <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[9px] font-mono text-zinc-300 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-zinc-700 z-20">
+          <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[9px] font-mono text-zinc-300 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl z-20">
             <span>DRAWING: S-104 (SCHEMATIC ELEVATION)</span>
             <span className="text-[#D4AF37] font-bold">CLICK NODES 1-4 TO INSPECT</span>
             <span>SCALE: 1:500</span>
@@ -242,14 +242,14 @@ export const BlueprintInspector = () => {
         </div>
 
         {/* Right Column: Node Engineering Specification Telemetry (5 cols) */}
-        <div className="lg:col-span-5 rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
+        <div className="lg:col-span-5 py-4 flex flex-col justify-between">
           
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 text-[#D4AF37] px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-wider shadow-2xs">
+              <span className="text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider">
                 Inspection Node #{currentHotspot.id}
               </span>
-              <span className="text-emerald-700 font-mono font-bold text-xs bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+              <span className="text-emerald-700 font-mono font-bold text-xs bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                 <CheckCircle2 size={12} /> {currentHotspot.stressRatio}
               </span>
             </div>
@@ -262,21 +262,21 @@ export const BlueprintInspector = () => {
               Spec: <span className="text-zinc-800">{currentHotspot.spec}</span>
             </div>
 
-            <p className="text-xs text-[#54595F] leading-relaxed bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 mb-6 shadow-2xs">
+            <p className="text-xs text-[#54595F] leading-relaxed mb-6">
               {currentHotspot.description}
             </p>
           </div>
 
           {/* Technical Details Grid */}
           <div className="flex flex-col gap-3 font-mono text-xs">
-            <div className="p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200 flex justify-between items-center shadow-2xs">
+            <div className="py-2 flex justify-between items-center">
               <span className="text-[#54595F] text-[10px] uppercase font-semibold">Design Capacity</span>
               <span className="text-zinc-900 font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.capacity}
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200 flex justify-between items-center shadow-2xs">
+            <div className="py-2 flex justify-between items-center">
               <span className="text-[#54595F] text-[10px] uppercase font-semibold">Compliance Code</span>
               <span className="text-[#D4AF37] font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.code}
@@ -284,7 +284,7 @@ export const BlueprintInspector = () => {
             </div>
 
             {/* ASTU SoCEA Seal */}
-            <div className="pt-4 border-t border-zinc-200 flex items-center justify-between text-[11px] text-[#54595F]">
+            <div className="pt-4 flex items-center justify-between text-[11px] text-[#54595F]">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#D4AF37]" /> ASTU SoCEA Capstone Detail
               </span>

@@ -102,15 +102,15 @@ export const LoadPathSimulator = () => {
   const metrics = getMetrics();
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200/90 p-6 sm:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Background blueprint subtle grid */}
       <div className="absolute inset-0 bg-cad-grid opacity-20 pointer-events-none"></div>
 
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-6 border-b border-zinc-200 relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-2 font-semibold">
             <Gauge size={13} className="text-[#D4AF37]" />
             Interactive Structural Finite Element Simulator
           </div>
@@ -123,13 +123,13 @@ export const LoadPathSimulator = () => {
         </div>
 
         {/* Load Mode Selector Pills */}
-        <div className="flex flex-wrap gap-2 bg-[#FFFFFF] p-1.5 rounded-2xl border border-zinc-200">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setLoadMode('wind')}
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'wind'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
-                : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
+                ? 'bg-[#D4AF37] text-[#121417]'
+                : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
             <Wind size={13} /> Wind Lateral
@@ -138,8 +138,8 @@ export const LoadPathSimulator = () => {
             onClick={() => setLoadMode('seismic')}
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'seismic'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
-                : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
+                ? 'bg-[#D4AF37] text-[#121417]'
+                : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
             <Activity size={13} /> Seismic NLRHA
@@ -148,8 +148,8 @@ export const LoadPathSimulator = () => {
             onClick={() => setLoadMode('gravity')}
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'gravity'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
-                : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
+                ? 'bg-[#D4AF37] text-[#121417]'
+                : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
             <ArrowDown size={13} /> Gravity Path
@@ -158,8 +158,8 @@ export const LoadPathSimulator = () => {
             onClick={() => setLoadMode('thermal')}
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'thermal'
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm'
-                : 'text-[#54595F] hover:text-zinc-900 hover:bg-zinc-100'
+                ? 'bg-[#D4AF37] text-[#121417]'
+                : 'text-[#54595F] hover:text-zinc-900'
             }`}
           >
             <Zap size={13} /> Thermal & Creep
@@ -171,7 +171,7 @@ export const LoadPathSimulator = () => {
       <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
         
         {/* Left Column: Interactive Vector Diagram (5 cols) */}
-        <div className="lg:col-span-5 rounded-2xl bg-[#FFFFFF] border border-zinc-200 p-6 relative overflow-hidden flex flex-col items-center justify-between min-h-[420px] shadow-xs">
+        <div className="lg:col-span-5 py-4 relative overflow-hidden flex flex-col items-center justify-between min-h-[420px]">
           
           {/* Top Crosshair Badge */}
           <div className="w-full flex justify-between items-center text-[10px] font-mono text-[#54595F]">
@@ -289,7 +289,7 @@ export const LoadPathSimulator = () => {
           </div>
 
           {/* Interactive Intensity Slider */}
-          <div className="w-full pt-4 border-t border-zinc-200">
+          <div className="w-full pt-4">
             <div className="flex justify-between items-center text-[10px] font-mono text-[#54595F] mb-1.5">
               <span className="flex items-center gap-1 font-semibold">
                 <Sliders size={11} className="text-[#D4AF37]" /> FORCE INTENSITY FACTOR
@@ -315,7 +315,7 @@ export const LoadPathSimulator = () => {
               <span className="text-xs font-mono font-bold uppercase text-[#D4AF37] tracking-wider">
                 {metrics.title}
               </span>
-              <span className={`text-[10px] font-mono font-extrabold uppercase px-3 py-1 rounded-full border shadow-2xs ${metrics.statusColor}`}>
+              <span className={`text-[10px] font-mono font-extrabold uppercase px-3 py-1 rounded-full ${metrics.statusColor}`}>
                 {metrics.status}
               </span>
             </div>
@@ -327,32 +327,32 @@ export const LoadPathSimulator = () => {
               {metrics.primaryLabel} · <span className="text-[#D4AF37] font-semibold">{metrics.codeClause}</span>
             </p>
 
-            <p className="text-xs sm:text-sm text-[#54595F] leading-relaxed bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 mb-6 shadow-xs">
+            <p className="text-xs sm:text-sm text-[#54595F] leading-relaxed mb-6">
               {metrics.explanation}
             </p>
           </div>
 
           {/* Telemetry Metrics Bento 4-Box */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono">
-            <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-zinc-200 shadow-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono">
+            <div className="py-2">
               <span className="text-[9px] uppercase text-[#54595F] block mb-1">Base Shear ($V_b$)</span>
               <span className="text-base font-extrabold text-zinc-900 block">{metrics.baseShear}</span>
               <span className="text-[9px] text-[#D4AF37] font-semibold block mt-0.5">Reaction Force</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-zinc-200 shadow-xs">
+            <div className="py-2">
               <span className="text-[9px] uppercase text-[#54595F] block mb-1">Roof Drift Ratio</span>
               <span className="text-base font-extrabold text-zinc-900 block">{metrics.driftRatio}</span>
               <span className="text-[9px] text-emerald-600 font-semibold block mt-0.5">Limit H/400</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-zinc-200 shadow-xs">
+            <div className="py-2">
               <span className="text-[9px] uppercase text-[#54595F] block mb-1">Overturning (M_OT)</span>
               <span className="text-base font-extrabold text-zinc-900 block truncate">{metrics.overturning}</span>
               <span className="text-[9px] text-[#D4AF37] font-semibold block mt-0.5">Foundation Moment</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-zinc-200 shadow-xs">
+            <div className="py-2">
               <span className="text-[9px] uppercase text-[#54595F] block mb-1">Energy Dissipation</span>
               <span className="text-base font-extrabold text-emerald-600 block">{metrics.dissipation}</span>
               <span className="text-[9px] text-[#54595F] block mt-0.5">Supplemental</span>
@@ -360,7 +360,7 @@ export const LoadPathSimulator = () => {
           </div>
 
           {/* Stamped Verification Bar */}
-          <div className="pt-4 border-t border-zinc-200 flex flex-wrap justify-between items-center text-xs font-mono text-[#54595F] gap-2">
+          <div className="pt-4 flex flex-wrap justify-between items-center text-xs font-mono text-[#54595F] gap-2">
             <div className="flex items-center gap-2">
               <ShieldCheck size={14} className="text-[#D4AF37]" />
               <span>FEA Solver Model: ETABS v21 / SAP2000 Non-Linear Dynamic Engine</span>

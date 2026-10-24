@@ -104,16 +104,16 @@ export const EngineeringGlossary = () => {
   });
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 lg:p-10 shadow-xl relative overflow-hidden">
+    <div className="py-6 relative overflow-hidden">
       
       {/* Header */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold">
             <BookOpen size={14} className="animate-pulse" />
             <span>Authoritative Structural Engineering Knowledge Base</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#54595F] tracking-tight">
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight">
             Structural Engineering Glossary & <span className="text-[#D4AF37]">Code Formula</span> Reference
           </h3>
           <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
@@ -123,27 +123,27 @@ export const EngineeringGlossary = () => {
 
         {/* Search input */}
         <div className="relative w-full lg:w-72 shrink-0">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" size={15} />
+          <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-zinc-400" size={15} />
           <input 
             type="text"
             placeholder="Search formulas or terms..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[#FFFFFF] rounded-full border border-zinc-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] text-xs text-[#54595F] placeholder:text-[#54595F]/50 pl-9 pr-4 py-2.5 outline-none font-mono transition-colors shadow-sm"
+            className="w-full bg-transparent border-b border-zinc-300 focus:border-[#D4AF37] text-xs text-zinc-900 placeholder:text-zinc-400 pl-6 pr-4 py-2 outline-none font-mono transition-colors"
           />
         </div>
       </div>
 
-      {/* Category Pills */}
-      <div className="relative z-10 flex flex-wrap gap-2 my-6">
+      {/* Category Tabs */}
+      <div className="relative z-10 flex flex-wrap gap-4 my-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`rounded-full px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
+            className={`pb-1 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeCategory === cat
-                ? 'bg-[#D4AF37] text-[#121417] shadow-sm scale-105'
-                : 'bg-[#FFFFFF] text-[#54595F] border border-zinc-200 hover:border-[#D4AF37]'
+                ? 'text-[#D4AF37] border-b-2 border-[#D4AF37]'
+                : 'text-[#54595F] hover:text-zinc-900 border-b-2 border-transparent'
             }`}
           >
             {cat}
@@ -151,18 +151,14 @@ export const EngineeringGlossary = () => {
         ))}
       </div>
 
-      {/* Grid of Glossary Cards */}
-      <div className="relative z-10 grid md:grid-cols-2 gap-4 my-6">
+      {/* Grid of Glossary Items */}
+      <div className="relative z-10 grid md:grid-cols-2 gap-8 my-6">
         {filtered.map((item, idx) => {
           const isExpanded = selectedTerm === item.term;
           return (
             <div
               key={idx}
-              className={`rounded-2xl border p-5 transition-all duration-300 flex flex-col justify-between ${
-                isExpanded
-                  ? 'bg-[#FFFFFF] border-[#D4AF37] ring-1 ring-[#D4AF37] shadow-sm'
-                  : 'bg-[#FFFFFF] border-zinc-200 hover:border-[#D4AF37]'
-              }`}
+              className="py-4 transition-all duration-200 flex flex-col justify-between"
             >
               <div>
                 <div className="flex justify-between items-start gap-3 mb-2">
@@ -170,17 +166,17 @@ export const EngineeringGlossary = () => {
                     <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-1 font-bold">
                       {item.category}
                     </span>
-                    <h4 className="text-base font-bold text-[#54595F] hover:text-[#D4AF37] transition-colors">
+                    <h4 className="text-base font-bold text-zinc-900 hover:text-[#D4AF37] transition-colors">
                       {item.term}
                     </h4>
                   </div>
-                  <span className="rounded-full bg-[#FFFFFF] border border-[#D4AF37]/40 text-[9px] font-mono text-[#D4AF37] px-2.5 py-1 shrink-0 font-bold">
+                  <span className="text-[10px] font-mono text-[#D4AF37] shrink-0 font-bold">
                     {item.code.split(' ')[0]}
                   </span>
                 </div>
 
-                {/* Formula Callout Box */}
-                <div className="bg-[#FFFFFF] px-3.5 py-2 rounded-xl border border-zinc-200 my-3 font-mono text-xs text-[#D4AF37] font-bold flex items-center justify-between">
+                {/* Formula Callout */}
+                <div className="py-2 font-mono text-xs text-[#D4AF37] font-bold flex items-center justify-between">
                   <span>{item.formula}</span>
                   <span className="text-[9px] text-[#54595F]/75 uppercase">{item.code}</span>
                 </div>
@@ -191,12 +187,12 @@ export const EngineeringGlossary = () => {
 
                 {/* Expanded Detailed Breakdown */}
                 {isExpanded && (
-                  <div className="mt-4 pt-4 border-t border-zinc-200 space-y-3 animate-in fade-in duration-200 text-xs">
+                  <div className="mt-4 pt-3 space-y-3 animate-in fade-in duration-200 text-xs">
                     <div>
-                      <strong className="text-[#54595F] block mb-1">Engineering Mechanics:</strong>
+                      <strong className="text-zinc-900 block mb-1">Engineering Mechanics:</strong>
                       <p className="text-[#54595F] leading-relaxed">{item.explanation}</p>
                     </div>
-                    <div className="bg-[#FFFFFF] p-3 rounded-xl border border-[#D4AF37]/40 text-[11px]">
+                    <div className="py-2 text-[11px]">
                       <strong className="text-[#D4AF37] block mb-0.5 font-bold">Practical Impact on Job Site:</strong>
                       <p className="text-[#54595F] leading-relaxed">{item.significance}</p>
                     </div>
@@ -204,11 +200,11 @@ export const EngineeringGlossary = () => {
                 )}
               </div>
 
-              <div className="mt-4 pt-3 border-t border-zinc-200 flex items-center justify-between">
+              <div className="mt-4 pt-3 flex items-center justify-between">
                 <button
                   type="button"
                   onClick={() => setSelectedTerm(isExpanded ? null : item.term)}
-                  className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] hover:underline transition-colors flex items-center gap-1"
+                  className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] hover:underline transition-colors flex items-center gap-1 cursor-pointer"
                 >
                   {isExpanded ? 'Collapse Details' : 'Deep Technical Breakdown →'}
                 </button>
@@ -222,7 +218,7 @@ export const EngineeringGlossary = () => {
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 pt-4 border-t border-zinc-200 flex flex-wrap items-center justify-between text-[11px] font-mono text-[#54595F]/75 gap-4">
+      <div className="relative z-10 pt-6 flex flex-wrap items-center justify-between text-[11px] font-mono text-[#54595F]/75 gap-4">
         <div className="flex items-center gap-2">
           <ShieldCheck size={14} className="text-[#D4AF37]" />
           <span>Curated under EBCS EN 1990 to 1998 and ERA 2024 Standards</span>

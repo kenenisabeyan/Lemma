@@ -42,7 +42,7 @@ export const PEVerificationPortal = () => {
   };
 
   return (
-    <div className="rounded-3xl bg-[#FFFFFF] bg-cad-grid border border-zinc-200/90 p-6 lg:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
+    <div className="py-6 relative overflow-hidden transition-colors duration-200">
       {/* Background Subtle Stamp Watermark */}
       <div 
         aria-hidden="true" 
@@ -54,7 +54,7 @@ export const PEVerificationPortal = () => {
       ></div>
 
       {/* Header */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-zinc-200/80">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37]">
             <Award size={14} className="animate-pulse" />
@@ -69,12 +69,12 @@ export const PEVerificationPortal = () => {
         </div>
 
         {/* Live Standing Badges */}
-        <div className="flex flex-wrap gap-2 shrink-0">
-          <div className="rounded-xl bg-[#FFFFFF] border border-zinc-200/80 px-3.5 py-2 text-xs font-mono shadow-xs">
+        <div className="flex flex-wrap gap-4 shrink-0 font-mono text-xs">
+          <div>
             <span className="text-[10px] text-[#54595F] uppercase block">ASTU SoCEA</span>
             <span className="text-[#D4AF37] font-bold">5TH YEAR B.SC. · CANDIDATE</span>
           </div>
-          <div className="rounded-xl bg-[#FFFFFF] border border-zinc-200/80 px-3.5 py-2 text-xs font-mono shadow-xs">
+          <div>
             <span className="text-[10px] text-[#54595F] uppercase block">Class of 2026</span>
             <span className="text-[#D4AF37] font-bold">DEFENSE READY · VERIFIED</span>
           </div>
@@ -85,7 +85,7 @@ export const PEVerificationPortal = () => {
       <div className="relative z-10 grid lg:grid-cols-12 gap-8 my-8 items-stretch">
         
         {/* Left Column: Form Controls */}
-        <div className="lg:col-span-5 flex flex-col justify-between space-y-4 bg-[#FFFFFF] p-6 rounded-2xl border border-zinc-200/80">
+        <div className="lg:col-span-5 flex flex-col justify-between space-y-4 py-4">
           <div className="space-y-4">
             <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 font-bold">
               <Compass size={14} /> Project Parameters for Academic Certification
@@ -98,7 +98,7 @@ export const PEVerificationPortal = () => {
                 type="text" 
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-3.5 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#D4AF37] font-medium shadow-2xs"
+                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D4AF37] font-medium"
               />
             </div>
 
@@ -108,7 +108,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-3.5 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
               >
                 <option value="Adama Science & Technology University (ASTU SoCEA)">Adama Science & Technology University (ASTU SoCEA)</option>
                 <option value="Ethiopian Construction Authority (ECA) / Adama City Administration">Ethiopian Construction Authority (ECA) / Adama City Administration</option>
@@ -124,7 +124,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={systemType}
                 onChange={(e) => setSystemType(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-3.5 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
               >
                 <option value="Reinforced Concrete Dual Frame (Shear Walls + Moment Frames)">Reinforced Concrete Dual Frame (Shear Walls + Moment Frames)</option>
                 <option value="Prestressed Concrete Bridge Girder + Abutments">Prestressed Concrete Bridge Girder + Abutments</option>
@@ -139,7 +139,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={designStandard}
                 onChange={(e) => setDesignStandard(e.target.value)}
-                className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-3.5 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#D4AF37] shadow-2xs"
+                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
               >
                 <option value="EBCS EN 1992:2014 (Design of Concrete Structures)">EBCS EN 1992:2014 (Design of Concrete Structures)</option>
                 <option value="EBCS EN 1998:2014 (Design of Structures for Earthquake Resistance - Zone 4)">EBCS EN 1998:2014 (Design of Structures for Earthquake Resistance - Zone 4)</option>
@@ -149,10 +149,10 @@ export const PEVerificationPortal = () => {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-zinc-200">
+          <div className="pt-4">
             <button
               onClick={() => setIsGenerated(true)}
-              className="w-full rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
+              className="w-full rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2"
             >
               <FileCheck2 size={15} /> Update Capstone Verification Dossier
             </button>
@@ -160,17 +160,11 @@ export const PEVerificationPortal = () => {
         </div>
 
         {/* Right Column: Formal Stamped Certificate */}
-        <div className="lg:col-span-7 bg-[#FFFFFF] rounded-2xl border-2 border-[#D4AF37] p-8 shadow-sm relative flex flex-col justify-between">
+        <div className="lg:col-span-7 py-6 flex flex-col justify-between">
           
-          {/* Decorative Corner Badges */}
-          <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]"></div>
-          <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]"></div>
-          <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]"></div>
-          <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]"></div>
-
           <div>
             {/* Certificate Header */}
-            <div className="text-center pb-6 border-b border-zinc-200 relative">
+            <div className="text-center pb-6 relative">
               <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-[0.25em] block mb-1 font-bold">
                 ADAMA SCIENCE AND TECHNOLOGY UNIVERSITY · SCHOOL OF CIVIL ENGINEERING & ARCHITECTURE
               </span>
@@ -183,12 +177,12 @@ export const PEVerificationPortal = () => {
             </div>
 
             {/* Certificate Body */}
-            <div className="py-6 space-y-4 text-xs">
+            <div className="py-4 space-y-4 text-xs">
               <p className="text-[#54595F] leading-relaxed italic">
                 "This certifies that the structural analysis, finite element mathematical modeling, geotechnical soil investigations, and construction documentation for the specified project have been conducted by Lemma Techane & fellow 5th-year engineering brothers in rigorous accordance with Ethiopian standards (EBCS & ERA) under academic faculty supervision."
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-3 bg-[#FFFFFF] p-4 rounded-xl border border-zinc-200 text-[11px] font-mono shadow-2xs">
+              <div className="grid sm:grid-cols-2 gap-4 py-2 text-[11px] font-mono">
                 <div>
                   <span className="text-[#54595F] block text-[9px] font-semibold">PROJECT DESIGNATION:</span>
                   <span className="text-zinc-900 font-bold">{projectName || 'B+G+10 RC Capstone Tower'}</span>
@@ -210,7 +204,7 @@ export const PEVerificationPortal = () => {
           </div>
 
           {/* Certificate Footer: Official Seal & Cryptographic Token */}
-          <div className="pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
             
             {/* Circular PE/SE Official Seal (SVG) */}
             <div className="flex items-center gap-4">
@@ -250,13 +244,13 @@ export const PEVerificationPortal = () => {
             <div className="flex flex-col gap-2 shrink-0">
               <button
                 onClick={handlePrint}
-                className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] border border-[#D4AF37] px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs"
+                className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2"
               >
                 <Printer size={13} /> Print Stamped Certificate
               </button>
               <button
                 onClick={handleCopy}
-                className="rounded-full bg-[#FFFFFF] text-[#54595F] border border-zinc-200 hover:text-zinc-900 px-4 py-1.5 text-[10px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 justify-center shadow-xs"
+                className="rounded-full text-[#54595F] hover:text-[#D4AF37] px-4 py-1.5 text-[10px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 justify-center"
               >
                 {copiedToken ? (
                   <>
@@ -273,7 +267,7 @@ export const PEVerificationPortal = () => {
           </div>
 
           {/* Cryptographic Digital Watermark */}
-          <div className="mt-4 pt-3 border-t border-zinc-200 flex items-center justify-between text-[9px] font-mono text-[#54595F]">
+          <div className="mt-4 pt-3 flex items-center justify-between text-[9px] font-mono text-[#54595F]">
             <span className="flex items-center gap-1">
               <Lock size={10} className="text-emerald-600" /> Academic Digital Verification Hash: {verificationHash}
             </span>
