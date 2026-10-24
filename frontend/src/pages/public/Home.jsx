@@ -39,6 +39,7 @@ import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { LoadPathSimulator } from '../../components/engineering/LoadPathSimulator';
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 import { CaseStudyModal } from './CaseStudy';
+import lemmaImg from '../../assets/lemma.JPG';
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -398,7 +399,7 @@ export const Home = () => {
                       className="relative aspect-[3/4.6] sm:aspect-[3/4.7] rounded-2xl overflow-hidden cursor-pointer"
                     >
                       <img
-                        src={settings.avatarUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"}
+                        src={settings.avatarUrl || lemmaImg}
                         alt="Lemma Techane"
                         className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
                       />
@@ -729,7 +730,7 @@ export const Home = () => {
                 <div className="relative rounded-2xl group transition-all duration-300">
                   <div className="aspect-[4/5] overflow-hidden rounded-2xl">
                     <img
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                      src={settings.avatarUrl || lemmaImg}
                       alt="Lemma 5th Year Civil Engineering Student"
                       className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />

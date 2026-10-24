@@ -18,6 +18,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../hooks/useAuth';
 import { useTheme } from '../../context/ThemeContext';
 import { useFetch } from '../../hooks/useFetch';
+import lemmaImg from '../../assets/lemma.JPG';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,14 +33,14 @@ export const Navbar = () => {
     settings: {
       engineerName: 'Lemma',
       title: 'Civil Eng 5th Year | ASTU',
-      avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80'
+      avatarUrl: lemmaImg
     }
   });
 
   const settings = settingsData?.settings || settingsData || {};
   const brandName = 'Lemma';
   const brandSubtitle = 'CIVIL ENG | ASTU';
-  const avatarImage = settings.avatarUrl || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80';
+  const avatarImage = settings.avatarUrl || lemmaImg;
 
   useEffect(() => {
     const handleScroll = () => {

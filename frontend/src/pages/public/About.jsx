@@ -21,6 +21,7 @@ import {
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
+import lemmaImg from '../../assets/lemma.JPG';
 
 export const About = () => {
   const navigate = useNavigate();
@@ -196,7 +197,7 @@ export const About = () => {
                 {/* Portrait with Holographic Seal Watermark */}
                 <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner group">
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                    src={lemmaImg}
                     alt="Lemma Techane & ASTU 5th Year Civil Engineering Brothers"
                     className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
