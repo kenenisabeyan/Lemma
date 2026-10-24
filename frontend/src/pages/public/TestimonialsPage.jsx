@@ -28,45 +28,45 @@ export const TestimonialsPage = () => {
   const defaultTestimonials = [
     {
       id: '1',
-      clientName: 'Sarah Jenkins, AIA',
-      clientRole: 'Principal Architect',
-      clientCompany: 'ArchiTech Global Design',
-      category: 'Architects',
-      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'Lemma’s approach to the foundation redesign on the Nexus Tower saved us 4 months of schedule time while exceeding safety margins. A true master of structural elegance.',
+      clientName: 'Dr. Dawit Mengistu, PhD',
+      clientRole: 'Associate Professor & Capstone Advisor',
+      clientCompany: 'ASTU School of Civil Engineering & Architecture (SoCEA)',
+      category: 'Academic Faculty',
+      avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80',
+      content: 'Lemma Techane and his 5th-year brothers demonstrated exemplary structural rigor on their B+G+10 RC tower capstone. Their mastery of ETABS seismic modeling per EBCS EN 1998 sets a benchmark for graduating engineers.',
       rating: 5
     },
     {
       id: '2',
-      clientName: 'Marcus Vance',
-      clientRole: 'VP of Development',
-      clientCompany: 'Apex Commercial Properties',
-      category: 'Developers',
-      avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80',
-      content: 'Unmatched technical depth and clear communication. He translates complex structural mechanics into actionable insights that non-engineers can confidently execute.',
+      clientName: 'Eng. Tigist Bekele, PE',
+      clientRole: 'Senior Highway Design Engineer',
+      clientCompany: 'Oromia Construction Corporation (OCC)',
+      category: 'Industry Mentors',
+      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
+      content: 'During their university internship, Lemma and his team performed highway corridor alignments using AutoCAD Civil 3D and verified earthwork balancing with exceptional attention to ERA standards.',
       rating: 5
     },
     {
       id: '3',
-      clientName: 'David Sterling, P.E.',
-      clientRole: 'Chief Infrastructure Officer',
-      clientCompany: 'State Transit Authority',
-      category: 'Civic Infrastructure',
+      clientName: 'Yonas Tadesse',
+      clientRole: '5th Year Civil Engineering Colleague',
+      clientCompany: 'ASTU SoCEA Brotherhood · Class of 2026',
+      category: 'Student Cohort',
       avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80',
-      content: 'His non-linear seismic pushover analysis on the Avalon Suspension Bridge retrofitting plan saved millions in unnecessary material replacement while guaranteeing 120-year structural durability.',
+      content: 'Collaborating with Lemma across 5 years of rigorous structural mechanics, surveying field camps, and late-night capstone modeling built an unbreakable brotherhood of engineering excellence.',
       rating: 5
     }
   ];
 
   const testimonials = data?.testimonials?.length ? data.testimonials : defaultTestimonials;
-  const categories = ['All', 'Architects', 'Developers', 'Civic Infrastructure'];
+  const categories = ['All', 'Academic Faculty', 'Industry Mentors', 'Student Cohort'];
 
   const filteredTestimonials = testimonials.filter(t => {
     const roleMatches = selectedCategory === 'All' || 
       t.category === selectedCategory ||
-      (selectedCategory === 'Architects' && (t.clientRole?.toLowerCase().includes('architect') || t.clientCompany?.toLowerCase().includes('design'))) ||
-      (selectedCategory === 'Developers' && (t.clientRole?.toLowerCase().includes('development') || t.clientCompany?.toLowerCase().includes('properties'))) ||
-      (selectedCategory === 'Civic Infrastructure' && (t.clientRole?.toLowerCase().includes('infrastructure') || t.clientCompany?.toLowerCase().includes('transit')));
+      (selectedCategory === 'Academic Faculty' && (t.category === 'Academic Faculty' || t.clientRole?.toLowerCase().includes('professor') || t.clientCompany?.toLowerCase().includes('astu'))) ||
+      (selectedCategory === 'Industry Mentors' && (t.category === 'Industry Mentors' || t.clientRole?.toLowerCase().includes('engineer') || t.clientCompany?.toLowerCase().includes('oromia') || t.clientCompany?.toLowerCase().includes('corporation'))) ||
+      (selectedCategory === 'Student Cohort' && (t.category === 'Student Cohort' || t.clientRole?.toLowerCase().includes('colleague') || t.clientCompany?.toLowerCase().includes('brotherhood')));
 
     const textMatches = searchQuery === '' ||
       t.clientName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -119,7 +119,7 @@ export const TestimonialsPage = () => {
                   ))}
                 </div>
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  5.0 ★ Rating · Client Trust & Peer Endorsements
+                  5.0 ★ Rating · ASTU Faculty &amp; Industry Endorsements
                 </span>
               </motion.div>
 
@@ -133,11 +133,11 @@ export const TestimonialsPage = () => {
                 <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
                   Validated by{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
-                    Architects
+                    ASTU Faculty
                   </span>
                   <br />
-                  & <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
-                    Commercial Developers.
+                  &amp; <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
+                    Infrastructure Leaders.
                   </span>
                 </h1>
               </motion.div>
@@ -150,22 +150,22 @@ export const TestimonialsPage = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Real project reviews and technical recommendations from visionary AIA architects, commercial property developers, and civil transportation officers who count on our calculations to stand the test of time.
+                  Academic endorsements, internship supervisor evaluations, and peer testimonials from university professors and industry engineers who have witnessed the dedication and technical capability of our graduating brotherhood.
                 </p>
 
                 {/* Trust Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">50+ Corporate Clients</span>
+                    <span className="font-semibold">ASTU SoCEA Verified</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">100% On-Time Stamped Sets</span>
+                    <span className="font-semibold">100% Defense Readiness</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">Zero Rework Orders</span>
+                    <span className="font-semibold">OCC Internship Honors</span>
                   </div>
                 </div>
               </motion.div>
@@ -188,7 +188,7 @@ export const TestimonialsPage = () => {
                   onClick={() => navigate('/contact')}
                   className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
                 >
-                  <span>Partner With Us</span>
+                  <span>Connect With Us</span>
                   <Building2 size={14} className="text-[#D4AF37]" />
                 </button>
               </motion.div>
@@ -201,16 +201,16 @@ export const TestimonialsPage = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">50+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Corporate Clients</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">5.0★</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Avg. Rating</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Faculty Score</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">Zero</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Rework Orders</span>
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">ASTU</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                 </div>
               </motion.div>
 
@@ -405,17 +405,17 @@ export const TestimonialsPage = () => {
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
-              Deliver Your Vision with <span className="text-[#801834] dark:text-[#E84855]">Structural Excellence</span>
+              Collaborate with Our <span className="text-[#801834] dark:text-[#E84855]">ASTU Civil Engineering Cohort</span>
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Join reputable developers, architects, and institutions who trust our engineering precision to safeguard their capital and structural assets.
+              Whether you represent an engineering consultancy seeking top graduating talent or a project team needing capstone modeling, Lemma and the brothers are ready to contribute.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Start Project Consultation <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#D4AF37]" />
           </button>
         </div>
 

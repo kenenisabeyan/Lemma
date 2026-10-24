@@ -22,79 +22,79 @@ export const LoadPathSimulator = () => {
   const getMetrics = () => {
     switch (loadMode) {
       case 'wind':
-        const windSpeed = Math.round(90 + (intensity * 0.7)); // 97 to 160 mph
+        const windSpeed = Math.round(28 + (intensity * 0.15)); // 28 to 43 m/s
         const baseShear = Math.round(2400 + (intensity * 38)); // kN
         const driftRatio = Math.round(650 - (intensity * 2.2)); // H/650 to H/430
         const overturning = Math.round(18000 + (intensity * 240)); // kN*m
         const damperDissipation = Math.round(20 + (intensity * 0.45)); // %
         const isPass = driftRatio >= 400;
         return {
-          title: 'ASCE 7-22 Lateral Wind Tunnel Response',
-          primaryMetric: `${windSpeed} MPH`,
-          primaryLabel: 'Design Wind Speed (100-Yr Return)',
+          title: 'EBCS EN 1991-1-4 Lateral Wind Actions',
+          primaryMetric: `${windSpeed} m/s`,
+          primaryLabel: 'Basic Wind Velocity (Adama Rift Corridor)',
           baseShear: `${baseShear.toLocaleString()} kN`,
           driftRatio: `H / ${driftRatio}`,
           overturning: `${overturning.toLocaleString()} kN·m`,
-          dissipation: `${damperDissipation}% Outrigger Damping`,
+          dissipation: `${damperDissipation}% RC Frame Dissipation`,
           status: isPass ? 'COMPLIANT' : 'WARNING (EXCEEDS LIMIT)',
           statusColor: isPass ? 'text-emerald-700 dark:text-emerald-400 border-emerald-300 dark:border-emerald-500/50 bg-emerald-50 dark:bg-emerald-950/40' : 'text-amber-700 dark:text-amber-400 border-amber-300 dark:border-amber-500/50 bg-amber-50 dark:bg-amber-950/40',
-          codeClause: 'ASCE 7-22 Chapter 26-31 & ISO 10137 Human Comfort',
-          explanation: 'Wind pressure strikes the windward curtain wall and transfers to horizontal floor diaphragms, which engage the central shear wall core coupled with exterior megacolumn belt trusses.'
+          codeClause: 'EBCS EN 1991-1-4 Section 4 & ISO 10137 Habitability',
+          explanation: 'Wind pressure strikes the building envelope and transfers to horizontal RC floor diaphragms, which engage the central RC core walls and perimeter frame columns.'
         };
 
       case 'seismic':
-        const pga = (0.2 + (intensity * 0.005)).toFixed(2); // 0.25g to 0.70g
+        const pga = (0.12 + (intensity * 0.001)).toFixed(2); // 0.12g to 0.22g
         const seismicBaseShear = Math.round(3100 + (intensity * 45));
-        const ductilityRatio = (3.2 + (intensity * 0.02)).toFixed(1);
-        const interstoryDrift = (0.8 + (intensity * 0.012)).toFixed(2);
-        const isSeismicPass = parseFloat(interstoryDrift) <= 2.0;
+        const ductilityRatio = (3.0 + (intensity * 0.015)).toFixed(1);
+        const interstoryDrift = (0.6 + (intensity * 0.008)).toFixed(2);
+        const isSeismicPass = parseFloat(interstoryDrift) <= 1.0;
         return {
-          title: 'Non-Linear Dynamic Ground Motion (NLRHA)',
+          title: 'EBCS EN 1998 Seismic Dynamic Response (Zone 4)',
           primaryMetric: `${pga}g PGA`,
-          primaryLabel: 'Peak Ground Acceleration (MCE_R)',
+          primaryLabel: 'Design Ground Acceleration (Rift Valley)',
           baseShear: `${seismicBaseShear.toLocaleString()} kN`,
           driftRatio: `${interstoryDrift}% Inelastic Drift`,
           overturning: `${(seismicBaseShear * 12.4).toFixed(0)} kN·m`,
-          dissipation: `${ductilityRatio} Hysteretic Ductility`,
+          dissipation: `${ductilityRatio} DCM Behavior Factor q`,
           status: isSeismicPass ? 'COMPLIANT' : 'EXCEEDS DRIFT LIMIT',
           statusColor: isSeismicPass ? 'text-emerald-700 dark:text-emerald-400 border-emerald-300 dark:border-emerald-500/50 bg-emerald-50 dark:bg-emerald-950/40' : 'text-red-700 dark:text-red-400 border-red-300 dark:border-red-500/50 bg-red-50 dark:bg-red-950/40',
-          codeClause: 'ASCE 7-22 Section 16 & FEMA P-58 Performance Level',
-          explanation: 'Seismic ground acceleration transmits upward through bedrock socket caissons. Base isolation bearings and plastic hinge zones dissipate seismic energy via controlled hysteretic yield.'
+          codeClause: 'EBCS EN 1998-1:2015 Section 4 (DCM Detailing)',
+          explanation: 'Seismic ground acceleration propagates through foundation pad footings. Dual system shear wall plastic hinge zones dissipate seismic energy via controlled ductile rebar yield.'
         };
 
       case 'thermal':
-        const tempDelta = Math.round(20 + (intensity * 0.5)); // deg F
-        const axialShortening = Math.round(18 + (intensity * 0.6)); // mm
-        const creepCoeff = (1.4 + (intensity * 0.012)).toFixed(2);
+        const tempDelta = Math.round(15 + (intensity * 0.3)); // deg C
+        const axialShortening = Math.round(10 + (intensity * 0.2)); // mm
+        const creepCoeff = (1.8 + (intensity * 0.01)).toFixed(2);
         return {
-          title: 'Long-Term Creep & Differential Shortening',
-          primaryMetric: `Δ${tempDelta}°F`,
-          primaryLabel: 'Seasonal Thermal Gradient Range',
+          title: 'EBCS EN 1992 Long-Term Creep & Shrinkage',
+          primaryMetric: `Δ${tempDelta}°C`,
+          primaryLabel: 'Seasonal Ambient Temperature Gradient',
           baseShear: '420 kN Residual',
-          driftRatio: `${axialShortening} mm Shortening`,
+          driftRatio: `${axialShortening} mm Differential`,
           overturning: '5,200 kN·m',
-          dissipation: `${creepCoeff} Creep Coefficient`,
+          dissipation: `${creepCoeff} Creep Coefficient φ`,
           status: 'CAMBER COMPENSATED',
           statusColor: 'text-emerald-700 dark:text-emerald-400 border-emerald-300 dark:border-emerald-500/50 bg-emerald-50 dark:bg-emerald-950/40',
-          codeClause: 'ACI 209R-92 & CEB-FIP Model Code Staged Casting',
-          explanation: 'Differential axial shortening between massive central concrete core walls and slender composite steel megacolumns is calculated across 30 years and compensated via pre-set floor slab casting cambers.'
+          codeClause: 'EBCS EN 1992-1-1 Section 3.1 & Annex B',
+          explanation: 'Differential axial deformation between RC shear core walls and columns is evaluated across 30 years and compensated via pre-set floor slab casting cambers.'
         };
 
       default: // gravity
         const deadLoadTotal = Math.round(62000 + (intensity * 480)); // kN
-        const caissonPressure = Math.round(1800 + (intensity * 14)); // kPa
+        const soilPressure = Math.round(180 + (intensity * 0.5)); // kPa
         return {
-          title: 'Direct Gravity & Tributary Load Distribution',
+          title: 'EBCS EN 1990 / 1992 Gravity Load Distribution',
           primaryMetric: `${(deadLoadTotal / 1000).toFixed(1)}k kN`,
           primaryLabel: 'Total Accumulated Gravity Dead + Live Load',
           baseShear: 'N/A (Pure Axial)',
           driftRatio: '0.04% Vertical Axial Strain',
           overturning: 'Pure Compression',
-          dissipation: `${caissonPressure} kPa Net Caisson Stress`,
+          dissipation: `${soilPressure} kPa Foundation Ground Stress`,
           status: 'COMPLIANT',
           statusColor: 'text-emerald-700 dark:text-emerald-400 border-emerald-300 dark:border-emerald-500/50 bg-emerald-50 dark:bg-emerald-950/40',
-          codeClause: 'ACI 318-19 Chapter 11 & AISC 360-22 Member Design',
-          explanation: 'Floor plate live loads are gathered by post-tensioned flat slabs, transferred into perimeter transfer girders, and directed down through high-strength C80 core walls into drilled shaft bedrock caissons.'
+          codeClause: 'EBCS EN 1990 Basis of Design & EBCS EN 1992 RC Framing',
+          explanation: 'Floor plate live and dead loads are gathered by solid two-way RC slabs, transferred into beams, and directed down through columns into isolated footings.'
         };
     }
   };
@@ -366,7 +366,7 @@ export const LoadPathSimulator = () => {
               <span>FEA Solver Model: ETABS v21 / SAP2000 Non-Linear Dynamic Engine</span>
             </div>
             <span className="text-[#D4AF37] font-semibold text-[11px]">
-              PE #84729-SE VERIFIED
+              ASTU SoCEA VERIFIED
             </span>
           </div>
 

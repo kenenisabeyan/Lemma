@@ -472,7 +472,7 @@ export const ManageProjects = () => {
                 required
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                placeholder="e.g. Apex High-Rise Tower"
+                placeholder="e.g. Adama CBD B+G+10 Mixed-Use Tower"
                 className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
               />
             </div>
@@ -485,11 +485,11 @@ export const ManageProjects = () => {
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                 className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
               >
-                <option value="Commercial High-Rise">Commercial High-Rise</option>
-                <option value="Infrastructure & Bridges">Infrastructure & Bridges</option>
-                <option value="Special Structures">Special Structures</option>
-                <option value="Seismic Rehabilitation">Seismic Rehabilitation</option>
-                <option value="Residential & Mixed-Use">Residential & Mixed-Use</option>
+                <option value="Reinforced Concrete High-Rise">Reinforced Concrete High-Rise</option>
+                <option value="Highway & Bridge Infrastructure">Highway & Bridge Infrastructure</option>
+                <option value="Geotechnical & Soil Mechanics">Geotechnical & Soil Mechanics</option>
+                <option value="Hydraulic & Water Resources">Hydraulic & Water Resources</option>
+                <option value="Academic Capstone (ASTU)">Academic Capstone (ASTU)</option>
               </select>
             </div>
           </div>
@@ -504,7 +504,7 @@ export const ManageProjects = () => {
                 required
                 value={formData.location}
                 onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                placeholder="e.g. Metropolis, NY"
+                placeholder="e.g. Adama, Oromia, Ethiopia"
                 className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
               />
             </div>
@@ -516,7 +516,7 @@ export const ManageProjects = () => {
                 type="text"
                 value={formData.year}
                 onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                placeholder="2025"
+                placeholder="2026"
                 className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
               />
             </div>

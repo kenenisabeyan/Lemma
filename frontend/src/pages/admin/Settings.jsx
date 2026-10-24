@@ -9,19 +9,19 @@ export const Settings = () => {
   const initialSettings = data?.settings || {};
 
   const [formData, setFormData] = useState({
-    engineerName: initialSettings.engineerName || 'Lemma Techane',
-    title: initialSettings.title || 'Senior Structural Engineer, PE, SE',
-    heroTagline: initialSettings.heroTagline || 'Precision in Every Structure.',
-    heroBio: initialSettings.heroBio || 'Ensuring structural integrity, seismic safety, and architectural elegance for high-rise towers, infrastructure bridges, and complex commercial developments.',
-    yearsExp: initialSettings.yearsExp || '14+',
-    projectsCount: initialSettings.projectsCount || '180+',
-    safetyRecord: initialSettings.safetyRecord || '100%',
-    clientsCount: initialSettings.clientsCount || '50+',
-    email: initialSettings.email || 'consult@lemma-structural.com',
-    phone: initialSettings.phone || '+1 (555) 019-8472',
-    officeAddress: initialSettings.officeAddress || 'Suite 400, Iron Building, Metropolis City, NY 10001',
-    metaTitle: initialSettings.metaTitle || 'Lemma - Senior Structural Engineer & Consultant',
-    metaDescription: initialSettings.metaDescription || 'Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.'
+    engineerName: initialSettings.engineerName || 'Lemma Techane & Brothers',
+    title: initialSettings.title || '5th Year Civil Engineering | ASTU SoCEA Class of 2026',
+    heroTagline: initialSettings.heroTagline || 'Engineering Ethiopia. Precision in Every Structure.',
+    heroBio: initialSettings.heroBio || '5th-year graduating Civil Engineering cohort at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA). Specializing in reinforced concrete capstones, seismic design in the Great Rift Valley, ERA highway geometric modeling, and expansive soil stabilization.',
+    yearsExp: initialSettings.yearsExp || '5th Year',
+    projectsCount: initialSettings.projectsCount || '25+',
+    safetyRecord: initialSettings.safetyRecord || '100% Defense Readiness',
+    clientsCount: initialSettings.clientsCount || 'ASTU SoCEA',
+    email: initialSettings.email || 'astu.civil.lemma@gmail.com',
+    phone: initialSettings.phone || '+251 91 123 4567',
+    officeAddress: initialSettings.officeAddress || 'Main Campus, SoCEA Building, Adama Science and Technology University, Adama, Ethiopia',
+    metaTitle: initialSettings.metaTitle || 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU',
+    metaDescription: initialSettings.metaDescription || 'Academic capstone portfolio and technical dossier of 5th-year Civil Engineering students at Adama Science and Technology University (ASTU).'
   });
 
   const [loading, setLoading] = useState(false);
@@ -288,12 +288,12 @@ export const Settings = () => {
                 Live Google Search Result Preview
               </span>
               <div className="font-sans">
-                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://lemma-structural.com</span>
+                <span className="text-[11px] text-[#9CA3AF] block mb-0.5">https://astu-civil.edu.et/lemma-techane</span>
                 <h4 className="text-base text-[#8AB4F8] hover:underline cursor-pointer font-medium leading-snug">
-                  {formData.metaTitle || 'Lemma - Senior Structural Engineer & Consultant'}
+                  {formData.metaTitle || 'Lemma Techane & Brothers | 5th Year Civil Engineering at ASTU'}
                 </h4>
                 <p className="text-xs text-[#BDC1C6] mt-1 line-clamp-2 leading-relaxed">
-                  {formData.metaDescription || 'Professional structural engineering portfolio featuring high-rise analysis, seismic retrofitting, concrete & steel design case studies.'}
+                  {formData.metaDescription || 'Academic capstone portfolio and technical dossier of 5th-year Civil Engineering students at Adama Science and Technology University (ASTU).'}
                 </p>
               </div>
             </div>

@@ -12,82 +12,82 @@ import {
 } from 'lucide-react';
 
 export const CodeComplianceMatrix = () => {
-  const [activeCode, setActiveCode] = useState('ASCE 7-22');
+  const [activeCode, setActiveCode] = useState('EBCS EN 1998:2015');
   const [riskCategory, setRiskCategory] = useState('III'); // 'I', 'II', 'III', 'IV'
   const [seismicCategory, setSeismicCategory] = useState('D'); // 'A', 'B', 'C', 'D', 'E', 'F'
 
   const codesData = {
-    'ASCE 7-22': {
-      title: 'ASCE 7-22: Minimum Design Loads for Buildings & Other Structures',
-      organization: 'American Society of Civil Engineers',
-      primaryScope: 'Wind Tunnel Integration, Dynamic Seismic Response History, Lateral Soil Pressures',
+    'EBCS EN 1998:2015': {
+      title: 'EBCS EN 1998:2015: Design of Structures for Earthquake Resistance (Ethiopia)',
+      organization: 'Ethiopian Building Code Standards / MoUDC',
+      primaryScope: 'Seismic Zoning (Rift Valley Zone 4), Lateral Storey Drift, Dual RC Shear Wall Detailing',
       parameters: [
-        { label: 'Wind Velocity Limit', value: '140 mph (3-Sec Gust)', note: 'Calculated at gradient height for Exposure B/C' },
-        { label: 'Allowable Story Drift', value: '0.015 h_sx (1.5%)', note: 'Based on Risk Category III criteria' },
-        { label: 'Seismic Importance Factor (I_e)', value: riskCategory === 'IV' ? '1.50' : riskCategory === 'III' ? '1.25' : '1.00', note: 'Mandates higher ductility & non-linear peer review' },
-        { label: 'Redundancy Factor (ρ)', value: '1.30 Required', note: 'Enforced for Seismic Design Category D, E, F' }
+        { label: 'Peak Ground Acceleration (ag)', value: '0.15g - 0.20g (Zone 4)', note: 'Calculated for Adama / Great Rift Valley active tectonic fault corridor' },
+        { label: 'Allowable Storey Drift', value: 'dr · ν ≤ 0.010 h (1.0%)', note: 'Based on ductile non-structural element damage limitation' },
+        { label: 'Behavior Factor (q)', value: riskCategory === 'IV' ? '3.0 (DCM Core)' : '3.6 (Dual System)', note: 'Ductility Class Medium RC frames with coupled shear walls' },
+        { label: 'Torsional Sensitivity', value: 'rx/ls ≥ 1.0 Verified', note: 'Prevents excessive torsional vibration modes during seismic shock' }
       ],
       checklist: [
-        'Non-linear dynamic response spectrum procedure verified (Section 16.2)',
-        'Diaphragm in-plane flexure and transfer forces analyzed (Section 12.10)',
-        'Accidental torsional eccentricity included with dynamic amplification',
-        'P-Delta secondary geometric non-linear displacement effects verified'
+        'Modal response spectrum procedure verified with 90% participating mass',
+        'Accidental eccentricity 5% diaphragm floor dimension included',
+        'Shear wall boundary confinement ties detailed per Section 5.4.3',
+        'P-Delta second order effects sensitivity coefficient θ < 0.10 confirmed'
       ]
     },
-    'IBC 2024': {
-      title: 'IBC 2024: International Building Code Structural Provisions',
-      organization: 'International Code Council (ICC)',
-      primaryScope: 'Municipal Permitting, Special Inspections, Live Load Reductions, Structural Testing',
+    'EBCS EN 1992:2015': {
+      title: 'EBCS EN 1992:2015: Design of Reinforced Concrete Structures',
+      organization: 'Ethiopian Standards Agency (ESA) & MoUDC',
+      primaryScope: 'Ultimate Limit State (ULS), Serviceability (SLS), Rebar Anchorage, Crack Widths',
       parameters: [
-        { label: 'Municipal Peer Review', value: 'Mandatory (> 240ft)', note: 'Third-party PE/SE stamped review required' },
-        { label: 'Live Load Reduction', value: 'Allowable up to 50%', note: 'Calculated via cumulative tributary influence area' },
-        { label: 'Foundation Factor of Safety', value: 'F.S. ≥ 2.5', note: 'Against overturning and geotechnical slope sliding' },
-        { label: 'Special Inspections', value: 'Continuous Level 1', note: 'High-strength bolting, CJP welding & post-tensioning' }
+        { label: 'Concrete Class', value: 'C25/30 to C35/45', note: 'Specified for columns, transfer beams, and floor slabs in Ethiopia' },
+        { label: 'Steel Yield Strength (fyk)', value: '500 MPa (Grade 60 Ribbed)', note: 'Class B/C high-ductility ribbed rebar manufactured in Ethiopia' },
+        { label: 'Max Crack Width (wk)', value: 'wk ≤ 0.30 mm', note: 'Serviceability limit for internal/external environmental exposure' },
+        { label: 'Minimum Rebar Cover', value: 'c_nom = 35 - 50 mm', note: 'Foundation footings in contact with aggressive soil: 50mm' }
       ],
       checklist: [
-        'Special inspection schedule signed by licensed engineer of record (Chapter 17)',
-        'Soil-structure interaction report integrated with geotechnical borings',
-        'Fire-resistance rating for primary structural frame verified (Table 601)',
-        'Structural observation plan submitted for city building permit review'
+        'Beam-column joint shear check verified per EBCS EN 1992-1-1',
+        'Punching shear reinforcement rails installed around flat slab columns',
+        'Bar curtailment and lap length lap stagger rules satisfied',
+        'Long-term creep and shrinkage deflection calculated per Section 7.4'
       ]
     },
-    'ACI 318-19': {
-      title: 'ACI 318-19: Building Code Requirements for Structural Concrete',
-      organization: 'American Concrete Institute',
-      primaryScope: 'Cast-in-Place Concrete, Post-Tensioned Slabs, Shear Wall Boundary Elements, Couplers',
+    'ERA Manual 2024': {
+      title: 'ERA Manual 2024: Ethiopian Roads Administration Standards',
+      organization: 'Ethiopian Roads Administration (ERA)',
+      primaryScope: 'Geometric Route Alignment, Super-elevation, Culvert Hydraulics, Pavement Layers',
       parameters: [
-        { label: 'Concrete Compressive (f\'c)', value: 'C80 (80 MPa / 11,600 psi)', note: 'Specified for high-rise central shear wall core' },
-        { label: 'Boundary Element Ties', value: '135° Seismic Hooks', note: 'Confines concrete core against high axial compression' },
-        { label: 'Unbonded Tendon Stress', value: 'f_ps = 1,860 MPa', note: 'Grade 270 low-relaxation 7-wire strand' },
-        { label: 'Minimum Rebar Elongation', value: '≥ 12% Ductility', note: 'ASTM A706 Grade 60/80 weldable seismic rebar' }
+        { label: 'Design Standard', value: 'DC6 / DC7 Asphalt Concrete', note: 'Standard for major federal highway links and arterial routes' },
+        { label: 'Design Speed', value: '80 - 100 km/h (Flat/Rolling)', note: 'Reduced to 50 km/h in mountainous Rift Valley terrain' },
+        { label: 'Max Super-elevation (e_max)', value: '8.0% ERA Standard', note: 'Transitioned smoothly along spiral easement curves' },
+        { label: 'Stopping Sight Distance', value: 'SSD ≥ 160m (at 90 km/h)', note: 'Minimum sight clearance on both horizontal and crest vertical curves' }
       ],
       checklist: [
-        'Shear wall coupling beam diagonal cross-reinforcement detailed (Chapter 18)',
-        'Punching shear reinforcement rails installed at slab-column interfaces',
-        'Creep and shrinkage camber calculated per CEB-FIP / ACI 209 formulations',
-        'Crack control reinforcement verified for exposure durability (Section 24.3)'
+        'AutoCAD Civil 3D horizontal spiral curves meet ERA Table 4.1',
+        'Vertical curve K-values verified for crest and sag headlight comfort',
+        'Hydraulic design of standard reinforced concrete box culverts verified',
+        'Mass-haul diagram balanced to minimize borrow pit haulage distance'
       ]
     },
-    'AISC 360-22': {
-      title: 'AISC 360-22 & AISC 341: Structural Steel Specification & Seismic Provisions',
-      organization: 'American Institute of Steel Construction',
-      primaryScope: 'Heavy Structural Steel Framing, Welded Moment Connections, BRBF Systems, Column Splices',
+    'EBCS EN 1997:2015': {
+      title: 'EBCS EN 1997:2015: Geotechnical Foundation Design',
+      organization: 'Ethiopian Standards Agency / MoUDC',
+      primaryScope: 'Expansive Black Cotton Soil, Bearing Capacity, Differential Settlement, Strap Footings',
       parameters: [
-        { label: 'Structural Steel Grade', value: 'ASTM A992 (Fy = 50 ksi)', note: 'Wide flange beams and composite megacolumns' },
-        { label: 'Column Splice Capacity', value: '100% Minimum Plastic Moment', note: 'Staggered 4 feet above finished floor line' },
-        { label: 'Connection Ductility', value: '0.04 Radian Rotation', note: 'Qualified per AISC 358 pre-qualified moment connections' },
-        { label: 'Bolt Tensioning', value: 'ASTM F3125 Grade A325/A490', note: 'Pre-tensioned slip-critical high-strength bolts' }
+        { label: 'Allowable Bearing (q_all)', value: '180 - 250 kPa', note: 'Typical dense gravelly silty strata underlying Adama town' },
+        { label: 'Free Swell Index (FSI)', value: 'FSI > 80% (High Swell)', note: 'Requires soil replacement or moisture barrier isolation' },
+        { label: 'Differential Settlement', value: 'δ/L ≤ 1/500 Limit', note: 'Controlled using reinforced grade tie beams & strap foundations' },
+        { label: 'Safety Factor (ULS)', value: 'γ_R;v = 1.40 (Design Approach 1)', note: 'Geotechnical resistance factor against ground bearing failure' }
       ],
       checklist: [
-        'Reduced Beam Section (RBS / Dogbone) cuts verified to protect column face',
-        'Continuity and doubler plates designed for beam-to-column panel zones',
-        'Buckling-restrained braces (BRBF) hysteretic testing verified per AISC 341',
-        'Composite steel deck shear stud spacing calculated for diaphragm shear'
+        'Standard Penetration Test (SPT N-values) correlated with soil profiles',
+        'Expansive soil chemical stabilization or 1.5m cut-and-replace verified',
+        'Isolated footing strap beams designed to absorb overturning moments',
+        'Groundwater table fluctuation evaluated for sub-base moisture stability'
       ]
     }
   };
 
-  const currentCode = codesData[activeCode] || codesData['ASCE 7-22'];
+  const currentCode = codesData[activeCode] || codesData['EBCS EN 1998:2015'];
 
   return (
     <div className="rounded-3xl bg-[#FFFFFF] border border-zinc-200 p-6 sm:p-10 shadow-lg relative overflow-hidden transition-colors duration-200">
@@ -97,13 +97,13 @@ export const CodeComplianceMatrix = () => {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-xs font-semibold">
             <FileCheck2 size={13} className="text-[#D4AF37]" />
-            Regulatory Building Code & Municipal Compliance Auditor
+            Regulatory Building Code &amp; ERA Compliance Matrix
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#54595F] tracking-tight">
-            Code Compliance Matrix & <span className="text-[#D4AF37]">Seismic Criteria</span>
+            EBCS EN &amp; ERA <span className="text-[#D4AF37]">Compliance Auditor</span>
           </h3>
           <p className="text-xs sm:text-sm text-[#54595F] font-mono mt-1">
-            Audit structural design parameters against ASCE 7-22, IBC 2024, ACI 318, and AISC 360 standards
+            Audit structural and infrastructure parameters against EBCS EN 1998, EBCS EN 1992, ERA 2024, and EBCS EN 1997 standards
           </p>
         </div>
 
@@ -218,7 +218,7 @@ export const CodeComplianceMatrix = () => {
 
           <div className="pt-4 border-t border-zinc-200 flex items-center justify-between text-xs font-mono text-[#54595F]">
             <span>Audit Status: <span className="text-emerald-600 font-bold">100% Code Verified</span></span>
-            <span className="text-[#D4AF37] font-bold">PE #84729 / SE #92041</span>
+            <span className="text-[#D4AF37] font-bold">ASTU SoCEA Verified · Class of 2026</span>
           </div>
         </div>
 

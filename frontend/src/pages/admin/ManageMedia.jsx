@@ -15,12 +15,12 @@ export const ManageMedia = () => {
 
   const presetReels = [
     {
-      title: 'Metropolis Skyline High-Rise Reel',
+      title: 'Adama Skyline B+G+10 Capstone Reel',
       url: 'https://assets.mixkit.co/videos/preview/mixkit-modern-city-skyscrapers-and-buildings-41551-large.mp4',
-      badge: 'Skyscraper'
+      badge: 'RC High-Rise'
     },
     {
-      title: 'Suspension Bridge Transit Dynamic Reel',
+      title: 'Awash River Highway Bridge Infrastructure Reel',
       url: 'https://assets.mixkit.co/videos/preview/mixkit-suspension-bridge-seen-from-below-43288-large.mp4',
       badge: 'Infrastructure'
     },

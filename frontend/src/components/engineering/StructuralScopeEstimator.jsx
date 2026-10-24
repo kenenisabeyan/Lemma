@@ -28,35 +28,35 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
   const buildingTypes = [
     {
       id: 'high-rise',
-      name: 'High-Rise Tower',
+      name: 'Multi-Story RC Frame (B+G+10)',
       icon: Building2,
-      defaultStories: 32,
-      defaultArea: 320000,
-      desc: 'Commercial or residential towers requiring 3D ETABS lateral drift & wind acceleration optimization.'
+      defaultStories: 11,
+      defaultArea: 85000,
+      desc: 'Commercial & residential towers requiring ETABS 3D lateral shear wall and EBCS EN 1998 seismic analysis.'
     },
     {
       id: 'bridge',
-      name: 'Bridge / Civil Span',
+      name: 'Awash River Highway Bridge',
       icon: Activity,
       defaultStories: 1,
-      defaultArea: 85000,
-      desc: 'Cable-stayed, post-tensioned segmental box, or steel truss infrastructure under AASHTO LRFD.'
+      defaultArea: 45000,
+      desc: 'Prestressed concrete girder / continuous RC deck slab over river gorges per ERA Bridge Design Manual.'
     },
     {
-      id: 'long-span',
-      name: 'Long-Span Roof / Dome',
+      id: 'highway',
+      name: 'ERA Highway Alignment',
       icon: Layers,
-      defaultStories: 2,
-      defaultArea: 140000,
-      desc: 'Column-free space frames, sports arenas, tensile fabric roofs, and custom architectural steel nodes.'
+      defaultStories: 1,
+      defaultArea: 120000,
+      desc: 'AutoCAD Civil 3D geometric corridor, super-elevation, and earthwork mass-haul balancing.'
     },
     {
-      id: 'retrofit',
-      name: 'Seismic Retrofit Audit',
+      id: 'foundation',
+      name: 'Expansive Soil Foundation',
       icon: ShieldCheck,
-      defaultStories: 14,
-      defaultArea: 180000,
-      desc: 'Nonlinear pushover analysis (ASCE 41), buckling-restrained braces (BRBs), and base isolation.'
+      defaultStories: 5,
+      defaultArea: 35000,
+      desc: 'Isolated footings with stiffened strap beams over active black cotton clay formations in Adama.'
     }
   ];
 
@@ -79,18 +79,18 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
   const handleApply = () => {
     const selectedTypeObj = buildingTypes.find(t => t.id === buildingType);
     const scopeData = {
-      projectType: buildingType === 'high-rise' ? 'Commercial High-Rise' 
+      projectType: buildingType === 'high-rise' ? 'Reinforced Concrete Structure' 
         : buildingType === 'bridge' ? 'Infrastructure & Bridges' 
-        : buildingType === 'long-span' ? 'Special Structure / Dome' 
-        : 'Seismic Retrofit Audit',
-      subject: `${selectedTypeObj?.name || 'Structural'} - ${stories > 1 ? `${stories} Stories, ` : ''}${grossArea.toLocaleString()} GSF Preliminary Design`,
-      message: `Project Scope Estimator Summary:
+        : buildingType === 'highway' ? 'Highway & Transportation' 
+        : 'Geotechnical & Soil Mechanics',
+      subject: `${selectedTypeObj?.name || 'Structural'} - ${stories > 1 ? `${stories} Stories, ` : ''}${grossArea.toLocaleString()} GSF Design Study`,
+      message: `ASTU Capstone Scope Estimator Summary:
 • Archetype: ${selectedTypeObj?.name}
 • Scale: ${stories} Stories / ${grossArea.toLocaleString()} Gross Sq Ft
-• Framing System: ${framingSystem === 'pt-concrete' ? 'Post-Tensioned High-Strength Concrete' : framingSystem === 'structural-steel' ? 'Structural Steel Frame with Composite Deck' : 'Mass Timber & Glulam Hybrid'}
+• Framing System: ${framingSystem === 'pt-concrete' ? 'Cast-in-Place RC Frame (EBCS EN 1992)' : framingSystem === 'structural-steel' ? 'Dual System (RC Frame + Shear Walls)' : 'Composite Steel / Precast Girders'}
 • Environmental Mandates: Wind ${windZone} | Seismic ${seismicCategory}
-• Expected Deliverables: ~${calcPages} Pages Stamped Calcs, ~${calcDrawings} Revit Sheets, ~${estimatedWeeks} Weeks Engineering Schedule
-• Key Objectives: Code compliance review (IBC/ASCE 7), 3D FEA modal analysis, foundation design, and embodied carbon / value engineering optimization.`
+• Expected Deliverables: ~${calcPages} Pages Calculation Sheets, ~${calcDrawings} CAD/BIM Drawings, ~${estimatedWeeks} Weeks Design Duration
+• Key Objectives: Code compliance audit (EBCS EN 1990-1998 / ERA 2024), 3D ETABS modal analysis, expansive soil foundation design, and material quantity optimization.`
     };
 
     if (onApplyScope) {
@@ -109,13 +109,13 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#FFFFFF] px-3.5 py-1 text-xs font-mono text-[#D4AF37] shadow-xs mb-2 font-bold">
             <Sliders size={13} />
-            <span>Interactive Feasibility Telemetry</span>
+            <span>ASTU Capstone Feasibility Telemetry</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#54595F] tracking-tight">
-            Instant Structural Scope & <span className="text-[#D4AF37]">Deliverables</span> Estimator
+            Civil Engineering Scope &amp; <span className="text-[#D4AF37]">Deliverables</span> Estimator
           </h3>
           <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
-            Configure your project parameters to estimate calculation package volume, BIM model deliverables, design timeline, and material optimization opportunities.
+            Configure your project parameters to estimate calculation package volume, CAD/BIM drawing sheets, design timeline, and material optimization per Ethiopian standards.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
           <div className="text-left font-mono">
             <span className="text-[9px] text-[#54595F]/70 block uppercase">CALC ENGINE</span>
-            <span className="text-xs font-bold text-[#54595F]">ASCE 7-22 / IBC 2024</span>
+            <span className="text-xs font-bold text-[#54595F]">EBCS EN / ERA 2024</span>
           </div>
         </div>
       </div>
@@ -253,9 +253,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 onChange={(e) => setFramingSystem(e.target.value)}
                 className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-2.5 py-2 text-xs text-[#54595F] font-medium focus:border-[#D4AF37] focus:outline-none shadow-2xs"
               >
-                <option value="pt-concrete">Post-Tensioned Concrete</option>
-                <option value="structural-steel">Composite Steel Frame</option>
-                <option value="mass-timber">Mass Timber / Hybrid</option>
+                <option value="pt-concrete">Cast-in-Place RC Frame (EBCS EN 1992)</option>
+                <option value="structural-steel">Dual System (RC Frame + Shear Walls)</option>
+                <option value="mass-timber">Composite Steel / Precast Girders</option>
               </select>
             </div>
 
@@ -268,25 +268,25 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 onChange={(e) => setWindZone(e.target.value)}
                 className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-2.5 py-2 text-xs text-[#54595F] font-medium focus:border-[#D4AF37] focus:outline-none shadow-2xs"
               >
-                <option value="115mph">115 mph (Standard Urban)</option>
-                <option value="130mph">130 mph (Coastal / Inland)</option>
-                <option value="160mph">160+ mph (Hurricane Category 4/5)</option>
+                <option value="32m/s">32 m/s (Adama Urban Basin)</option>
+                <option value="38m/s">38 m/s (Rift Valley Corridor)</option>
+                <option value="42m/s">42+ m/s (Highland Escarpment)</option>
               </select>
             </div>
 
             <div>
               <label className="block text-[10px] font-mono uppercase text-[#54595F] mb-1.5 font-semibold">
-                Seismic Design Cat.
+                Seismic Hazard Zone
               </label>
               <select
                 value={seismicCategory}
                 onChange={(e) => setSeismicCategory(e.target.value)}
                 className="w-full bg-[#FFFFFF] border border-zinc-200 rounded-xl px-2.5 py-2 text-xs text-[#54595F] font-medium focus:border-[#D4AF37] focus:outline-none shadow-2xs"
               >
-                <option value="SDC-B">SDC B (Low Hazard)</option>
-                <option value="SDC-C">SDC C (Moderate)</option>
-                <option value="SDC-D">SDC D (High Hazard / Active Fault)</option>
-                <option value="SDC-E/F">SDC E/F (Near-Fault Rupture)</option>
+                <option value="Zone-1">Zone 1 (Low Hazard - ag = 0.05g)</option>
+                <option value="Zone-2">Zone 2 (Moderate - ag = 0.08g)</option>
+                <option value="Zone-4">Zone 4 (Adama / Rift Valley - ag = 0.15g)</option>
+                <option value="Zone-4+">Zone 4+ (Main Rift Fault - ag = 0.20g)</option>
               </select>
             </div>
 
@@ -300,7 +300,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-200">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#54595F] flex items-center gap-1.5">
                 <Sparkles size={14} className="text-[#D4AF37]" />
-                Calculated Deliverables & Timeline
+                Calculated Deliverables &amp; Timeline
               </span>
               <span className="text-[10px] font-mono bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-300 font-bold">
                 FEA Calibrated
@@ -316,8 +316,8 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                     <FileSpreadsheet size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-[#54595F]">Structural Calculation Book</h5>
-                    <p className="text-[10px] text-[#54595F]">Wind drift, P-Delta, foundation caissons</p>
+                    <h5 className="text-xs font-bold text-[#54595F]">Capstone Calculation Book</h5>
+                    <p className="text-[10px] text-[#54595F]">Lateral drift, rebar checks per EBCS EN</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-extrabold text-[#D4AF37]">
@@ -325,15 +325,15 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 </span>
               </div>
 
-              {/* BIM / Revit Sheets */}
+              {/* BIM / AutoCAD Sheets */}
               <div className="flex items-center justify-between p-3 rounded-xl bg-[#FFFFFF] border border-zinc-200">
                 <div className="flex items-center gap-2.5">
                   <div className="p-1.5 rounded-lg bg-[#D4AF37]/10 text-[#D4AF37]">
                     <Layers size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-[#54595F]">BIM Drawings (LOD 350-400)</h5>
-                    <p className="text-[10px] text-[#54595F]">Revit 2026 3D structural model</p>
+                    <h5 className="text-xs font-bold text-[#54595F]">AutoCAD / BIM Drawing Sheets</h5>
+                    <p className="text-[10px] text-[#54595F]">Structural details &amp; highway alignments</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-extrabold text-[#D4AF37]">
@@ -348,8 +348,8 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                     <Clock size={16} />
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-[#54595F]">Estimated Engineering Phase</h5>
-                    <p className="text-[10px] text-[#54595F]">Schematic through stamped permit set</p>
+                    <h5 className="text-xs font-bold text-[#54595F]">Academic Capstone Phase</h5>
+                    <p className="text-[10px] text-[#54595F]">Comprehensive design through defense readiness</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-extrabold text-[#54595F]">
@@ -365,7 +365,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                   </div>
                   <div>
                     <h5 className="text-xs font-bold text-emerald-900">Embodied Carbon Savings</h5>
-                    <p className="text-[10px] text-emerald-700/80">Via material reduction & slag blends</p>
+                    <p className="text-[10px] text-emerald-700/80">Via material reduction &amp; slag blends</p>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-extrabold text-emerald-800">
@@ -383,7 +383,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               onClick={handleApply}
               className="w-full rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] py-3.5 px-6 text-xs font-extrabold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
             >
-              Apply Scope to Consultation Brief <ArrowRight size={14} />
+              Apply Scope to Inquiry Brief <ArrowRight size={14} />
             </button>
             <p className="text-[10px] font-mono text-center text-[#54595F]/80 mt-2">
               Populates your parameters directly into the confidential inquiry form below.

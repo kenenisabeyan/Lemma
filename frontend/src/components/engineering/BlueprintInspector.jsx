@@ -22,45 +22,45 @@ export const BlueprintInspector = () => {
       id: 1,
       x: '50%',
       y: '35%',
-      title: 'Multistage Belt Outrigger Truss (L32)',
-      spec: 'Grade 65 Steel (AISC 360-22)',
-      code: 'ASCE 7-22 Section 12.8 / AISC 341',
-      description: 'Couples the central C80 concrete shear wall core to perimeter composite megacolumns, reversing bending moments and reducing base overturning moment by 28%.',
+      title: 'Dual System RC Coupled Shear Wall (L8)',
+      spec: 'C30/37 Concrete & S500 Rebar (EBCS EN 1992)',
+      code: 'EBCS EN 1998 Section 5.4 / Dual System',
+      description: 'Couples the central RC shear wall core to perimeter portal frames, reversing bending moments and dissipating seismic base shear across the Rift Valley tectonic axis.',
       stressRatio: '0.74 (PASS)',
-      capacity: '42,000 kN Tension/Compression Couple'
+      capacity: '28,000 kN Shear Resistance'
     },
     {
       id: 2,
       x: '50%',
       y: '58%',
-      title: 'Viscoelastic Fluid Viscous Dampers (FVD)',
-      spec: 'Taylor Devices 850 kN Capacity',
-      code: 'ASCE 7-22 Chapter 18 Supplemental Damping',
-      description: 'Provides velocity-dependent supplemental damping that suppresses vortex-shedding accelerations below ISO 10137 occupant comfort limits during 140mph wind events.',
+      title: 'Ductile Moment-Resisting Beam-Column Joints',
+      spec: '135° Seismic Confinement Ties (Φ10 @ 100mm)',
+      code: 'EBCS EN 1998 Ductility Class Medium (DCM)',
+      description: 'Provides rotational ductility and confines column concrete core against high seismic axial loads, ensuring a strong-column weak-beam hierarchy.',
       stressRatio: '0.62 (PASS)',
-      capacity: '24% Equivalent Viscous Damping'
+      capacity: 'High Ductility Class DCM Compliance'
     },
     {
       id: 3,
       x: '30%',
       y: '72%',
-      title: 'Post-Tensioned Unbonded Flat Plate',
-      spec: '0.6" Grade 270 Low-Relaxation Tendons',
-      code: 'ACI 318-19 Chapter 24 Serviceability',
-      description: 'Extends column-free clear span to 14.5 meters while maintaining a slender 220mm floor plate thickness, eliminating falsework deflection.',
+      title: 'Reinforced Concrete Solid Two-Way Slab',
+      spec: '200mm Thickness with Ribbed Grade 60 Rebar',
+      code: 'EBCS EN 1992-1-1 Serviceability Deflection',
+      description: 'Cast-in-place two-way solid slab with top and bottom reinforcement meshes, maintaining rigid diaphragm behavior under horizontal wind and earthquake loads.',
       stressRatio: '0.68 (PASS)',
-      capacity: 'Deflection Limit: L/480 (Calculated: L/620)'
+      capacity: 'Deflection Limit: L/250 (Calculated: L/480)'
     },
     {
       id: 4,
       x: '50%',
       y: '90%',
-      title: 'Drilled Shaft Bedrock Socket Caissons',
-      spec: '2.4m Diameter Cast-in-Place Concrete',
-      code: 'IBC 2024 Section 1810 & Geotechnical Standard',
-      description: 'Deep foundation caissons socketed 6.5 meters into Manhattan Schist bedrock providing 48 MPa end-bearing capacity and overturning uplift resistance.',
+      title: 'Dense Stratum Footing with Grade Tie Beams',
+      spec: 'Reinforced Concrete Pad Footing (3.2m x 3.2m)',
+      code: 'EBCS EN 1997 Geotechnical Standard',
+      description: 'Isolated pad footings seated onto dense volcanic agglomerate / ignimbrite strata with strap beams to resist differential settlement in expansive soil.',
       stressRatio: '0.55 (PASS)',
-      capacity: '85,000 kN Ultimate Axial Compression'
+      capacity: '220 kPa Allowable Ground Bearing'
     }
   ];
 
@@ -283,12 +283,12 @@ export const BlueprintInspector = () => {
               </span>
             </div>
 
-            {/* PE / SE Seal */}
+            {/* ASTU SoCEA Seal */}
             <div className="pt-4 border-t border-zinc-200 flex items-center justify-between text-[11px] text-[#54595F]">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck size={14} className="text-[#D4AF37]" /> Licensed Stamped Detail
+                <ShieldCheck size={14} className="text-[#D4AF37]" /> ASTU SoCEA Capstone Detail
               </span>
-              <span className="text-[#D4AF37] font-bold">PE #84729-SE</span>
+              <span className="text-[#D4AF37] font-bold">EBCS EN VERIFIED</span>
             </div>
           </div>
 

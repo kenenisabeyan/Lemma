@@ -30,7 +30,7 @@ export const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    projectType: 'Commercial High-Rise',
+    projectType: 'Reinforced Concrete Structure',
     subject: '',
     message: ''
   });
@@ -42,32 +42,32 @@ export const Contact = () => {
 
   const scopePresets = [
     {
-      id: 'high-rise',
-      title: 'High-Rise Tower Lateral Design',
-      type: 'Commercial High-Rise',
-      subject: 'New High-Rise Tower Lateral Stability (Wind & Seismic Analysis)',
-      msg: 'We require structural design for a proposed high-rise development. Scope includes 3D ETABS modeling, lateral force resisting system (shear walls + outriggers), ASCE 7-22 wind drift verification, and deep foundation caissons.'
+      id: 'capstone-rc',
+      title: 'B+G+10 RC Capstone Design',
+      type: 'Reinforced Concrete Structure',
+      subject: 'ASTU B+G+10 Commercial Building Structural Analysis (EBCS EN 1992/1998)',
+      msg: 'Inquiry regarding capstone analysis for a B+G+10 mixed-use building in Adama CBD. Scope includes 3D ETABS modeling, dual system shear walls, seismic response spectrum (Zone 4 Rift Valley), and expansive soil foundation design.'
     },
     {
-      id: 'peer-review',
-      title: 'Third-Party Independent Peer Review',
-      type: 'Peer Review / Value Engineering',
-      subject: 'Independent Structural Peer Review & IBC Code Verification',
-      msg: 'We are seeking an independent third-party structural engineer to audit the structural calculation package, member sizing, and lateral wind/seismic response spectrum calculations prior to municipal permit submittal.'
+      id: 'highway-era',
+      title: 'ERA Highway Geometric Alignment',
+      type: 'Highway & Transportation',
+      subject: 'AutoCAD Civil 3D Highway Corridor Modeling per ERA Standards',
+      msg: 'We require technical collaboration on highway horizontal/vertical geometry, earthwork mass-haul balancing, and drainage culvert hydraulic modeling per Ethiopian Roads Administration manuals.'
     },
     {
-      id: 'retrofit',
-      title: 'Seismic Vulnerability & Retrofit Audit',
-      type: 'Seismic Retrofit Audit',
-      subject: 'Seismic Evaluation & Non-Linear Retrofit Design (ASCE 41)',
-      msg: 'We need a seismic assessment and rehabilitation design for an existing commercial building. Scope includes non-destructive testing verification, pushover analysis, and supplemental damping/brace specifications.'
+      id: 'soil-foundation',
+      title: 'Rift Valley Soil Mechanics',
+      type: 'Geotechnical Engineering',
+      subject: 'Expansive Black Cotton Soil Investigation & Foundation Sizing',
+      msg: 'Seeking consultation on soil stabilization methodologies, Atterberg limit evaluations, and isolated vs. strap footing designs over expansive Rift Valley clay formations.'
     },
     {
-      id: 'value-eng',
-      title: 'Value Engineering & Quantity Optimization',
-      type: 'Peer Review / Value Engineering',
-      subject: 'Value Engineering Review for Concrete & Steel Reductions',
-      msg: 'We are evaluating the structural design to identify material optimizations. We would like a review of floor slab post-tensioning, column rebar ratios, and transfer girder configurations to reduce embodied carbon and overall construction costs.'
+      id: 'grad-recruitment',
+      title: 'Graduate Recruitment / Roles',
+      type: 'Graduate Recruitment',
+      subject: 'ASTU Civil Engineering 5th Year Graduate Opportunity',
+      msg: 'We are looking to interview and recruit high-performing 5th-year graduating civil engineering candidates from ASTU SoCEA Class of 2026 for structural and site engineering positions.'
     }
   ];
 
@@ -114,7 +114,7 @@ export const Contact = () => {
           name: '',
           email: '',
           phone: '',
-          projectType: 'Commercial High-Rise',
+          projectType: 'Reinforced Concrete Structure',
           subject: '',
           message: ''
         });
@@ -129,7 +129,7 @@ export const Contact = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('consult@lemma-structural.com');
+    navigator.clipboard.writeText('astu.civil.lemma@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -170,7 +170,7 @@ export const Contact = () => {
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Principal Direct Access · Accepting Q4 2026 Mandates
+                  ASTU Civil Engineering · 5th Year Candidates Direct Access
                 </span>
               </motion.div>
 
@@ -182,13 +182,13 @@ export const Contact = () => {
                 className="space-y-1.5"
               >
                 <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
-                  Let's Engineer Your{' '}
+                  Let's Engineer Ethiopia's{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
                     Next
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
-                    Structural Landmark.
+                    Infrastructure Landmark.
                   </span>
                 </h1>
               </motion.div>
@@ -201,22 +201,22 @@ export const Contact = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Available for new commercial tower designs, seismic retrofit assessments, independent third-party calculation peer reviews, and forensic engineering consultations.
+                  Connect directly with Lemma Techane and the 5th-year graduating civil engineering cohort at ASTU SoCEA for capstone collaboration, structural design reviews, and graduate recruitment.
                 </p>
 
                 {/* Response SLA Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <Clock size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">24h Preliminary Response</span>
+                    <span className="font-semibold">24h Student Response</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <ShieldCheck size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">Strict NDA Confidentiality</span>
+                    <span className="font-semibold">ASTU SoCEA Verified</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">Direct PE/SE Principal Review</span>
+                    <span className="font-semibold">Direct Candidate Access</span>
                   </div>
                 </div>
               </motion.div>
@@ -252,16 +252,16 @@ export const Contact = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">24h</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Response Time</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">NDA</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Strict Confidentiality</span>
+                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">ASTU</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">PE/SE</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Direct Access</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">2026</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Graduating Class</span>
                 </div>
               </motion.div>
 
@@ -279,9 +279,9 @@ export const Contact = () => {
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Direct Principal Channels</span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Direct Student Channels</span>
                   </div>
-                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase">Online & Active</span>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase">Online &amp; Active</span>
                 </div>
 
                 <div className="flex flex-col gap-3">
@@ -292,9 +292,9 @@ export const Contact = () => {
                         <Mail size={18} />
                       </div>
                       <div className="min-w-0">
-                        <span className="text-[10px] font-mono text-zinc-500 uppercase block">Consultation Email</span>
+                        <span className="text-[10px] font-mono text-zinc-500 uppercase block">Consultation &amp; Academic Email</span>
                         <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 truncate block">
-                          consult@lemma-structural.com
+                          astu.civil.lemma@gmail.com
                         </span>
                       </div>
                     </div>
@@ -309,7 +309,7 @@ export const Contact = () => {
 
                   {/* Channel 2: Phone */}
                   <a
-                    href="tel:+15550198472"
+                    href="tel:+251911234567"
                     className="p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] flex items-center gap-3 transition-all group"
                   >
                     <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
@@ -318,7 +318,7 @@ export const Contact = () => {
                     <div className="min-w-0">
                       <span className="text-[10px] font-mono text-zinc-500 uppercase block">Direct Line</span>
                       <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 block">
-                        +1 (555) 019-8472 (Mon–Fri 8am–6pm EST)
+                        +251 91 123 4567 (Mon–Sat 8am–6pm EAT)
                       </span>
                     </div>
                   </a>
@@ -329,9 +329,9 @@ export const Contact = () => {
                       <MapPin size={18} />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] font-mono text-zinc-500 uppercase block">Principal Office</span>
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block">Campus Headquarters</span>
                       <span className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 block">
-                        Metropolis City, NY (EST · GMT-5)
+                        ASTU Main Campus, SoCEA Building, Adama, Ethiopia
                       </span>
                     </div>
                   </div>
@@ -366,22 +366,22 @@ export const Contact = () => {
           
           {/* Engineering Coordinates Strip */}
           <div className="flex items-center justify-between text-[10px] font-mono text-zinc-500 uppercase tracking-widest pb-3 mb-6 border-b border-zinc-200/80 dark:border-white/10">
-            <span>MANDATE: DIRECT CLIENT INQUIRY</span>
-            <span className="hidden sm:inline">REF: NY-PE-84729 / CA-SE-92041</span>
-            <span>SECURE 256-BIT ENCRYPTION</span>
+            <span>MANDATE: ASTU SoCEA 5TH YEAR COHORT</span>
+            <span className="hidden sm:inline">REF: ASTU-CIVIL-2026 / EBCS-EN</span>
+            <span>ADAMA, ETHIOPIA</span>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-200/80 dark:border-white/10">
             <div>
               <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-1 tracking-tight">
-                Structural Consultation Inquiry Brief
+                ASTU Civil Engineering Consultation &amp; Inquiry Brief
               </h3>
               <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-                Provide your project specifications or scope below for a confidential engineering review.
+                Connect with our student cohort for capstone design review, structural drafting, or industry opportunities.
               </p>
             </div>
             <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40 font-bold shrink-0">
-              <ShieldCheck size={14} /> NDA Confidentiality Assured
+              <ShieldCheck size={14} /> ASTU SoCEA Verification Assured
             </div>
           </div>
 
@@ -446,7 +446,7 @@ export const Contact = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="e.g. Sarah Jenkins, AIA"
+                  placeholder="e.g. Eng. Dawit Kebede"
                   className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
@@ -461,7 +461,7 @@ export const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="s.jenkins@architech.com"
+                  placeholder="d.kebede@consultancy.et"
                   className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
@@ -477,7 +477,7 @@ export const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+251 91 000 0000"
                   className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 />
               </div>
@@ -492,12 +492,12 @@ export const Contact = () => {
                   onChange={handleChange}
                   className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
                 >
-                  <option value="Commercial High-Rise">Commercial High-Rise</option>
-                  <option value="Infrastructure & Bridges">Infrastructure & Bridges</option>
-                  <option value="Special Structure / Dome">Special Structure / Dome</option>
-                  <option value="Seismic Retrofit Audit">Seismic Retrofit Audit</option>
-                  <option value="Peer Review / Value Engineering">Peer Review / Value Engineering</option>
-                  <option value="Forensic Structural Evaluation">Forensic Structural Evaluation</option>
+                  <option value="Reinforced Concrete Structure">Reinforced Concrete Structure</option>
+                  <option value="Highway &amp; Transportation">Highway &amp; Transportation</option>
+                  <option value="Hydraulic &amp; Water Resources">Hydraulic &amp; Water Resources</option>
+                  <option value="Geotechnical &amp; Soil Mechanics">Geotechnical &amp; Soil Mechanics</option>
+                  <option value="Graduate Recruitment">Graduate Recruitment</option>
+                  <option value="Independent Capstone Review">Independent Capstone Review</option>
                 </select>
               </div>
             </div>
@@ -511,14 +511,14 @@ export const Contact = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="e.g. Seismic lateral bracing audit for 20-story building"
+                placeholder="e.g. ASTU B+G+10 Capstone ETABS Model Review"
                 className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors"
               />
             </div>
 
             <div>
               <label className="block text-[10px] uppercase tracking-widest text-zinc-700 dark:text-zinc-300 mb-2 font-mono font-bold">
-                Structural Project Requirements *
+                Project / Collaboration Details *
               </label>
               <textarea
                 name="message"
@@ -526,7 +526,7 @@ export const Contact = () => {
                 rows="4"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Describe building height, structural materials (concrete/steel), site location, timeline, or key technical challenges..."
+                placeholder="Describe your project type, location in Ethiopia (e.g. Adama, Addis Ababa), applicable EBCS standards, or recruitment mandate..."
                 className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-zinc-100 p-3.5 text-xs focus:border-[#D4AF37] focus:outline-none transition-colors resize-none"
               ></textarea>
             </div>
@@ -536,7 +536,7 @@ export const Contact = () => {
               disabled={loading}
               className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold tracking-widest uppercase transition-all w-full flex justify-center items-center gap-2 shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] cursor-pointer disabled:opacity-50"
             >
-              {loading ? 'Submitting Inquiry...' : 'Send Secure Consultation Inquiry'} <Send size={14} className="text-[#121417]" />
+              {loading ? 'Submitting Inquiry...' : 'Send Inquiry to ASTU Brothers'} <Send size={14} className="text-[#121417]" />
             </button>
           </form>
         </div>

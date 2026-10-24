@@ -2,20 +2,18 @@ import React from 'react';
 
 export const TechMarquee = ({ className = '' }) => {
   const techMarquee = [
-    'Tekla Structures',
-    'ANSYS Mechanical',
-    'RISA-3D',
-    'AutoCAD 2025',
-    'IBC 2024',
-    'ASCE 7-22',
-    'ACI 318-19',
-    'AISC 360-22',
-    'ETABS v21',
-    'SAP2000',
-    'REVIT Structure',
-    'SAFE Concrete',
-    'FEMA P-58',
-    'Eurocode 2 & 3'
+    'ASTU Civil 5th Year',
+    'ETABS Structural',
+    'SAP2000 FEA',
+    'AutoCAD Civil 3D',
+    'EBCS EN 1998 Seismic',
+    'EBCS EN 1992 Concrete',
+    'ERA Standards 2024',
+    'SAFE Foundation',
+    'Prokon Structural',
+    'Revit BIM',
+    'Geotechnical Soil Lab',
+    'SoCEA Brotherhood'
   ];
 
   return (

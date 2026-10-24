@@ -37,35 +37,35 @@ export const ManageResources = () => {
   const defaultResources = [
     {
       id: '1',
-      title: 'High-Rise Structural Design Checklist (IBC 2024 & ASCE 7-22)',
+      title: 'ASTU B+G+10 RC Capstone Structural Design Checklist (EBCS EN 1990-1998)',
       category: 'Design Guides',
       format: 'PDF',
-      fileSize: '2.4 MB',
-      description: 'Comprehensive audit template covering lateral drift limits, outrigger truss geometry, and seismic response spectrum factors.'
+      fileSize: '3.4 MB',
+      description: 'Comprehensive academic audit template for multi-story RC framing, lateral drift limit checks, EBCS EN 1998 seismic shear, and beam-column joint ductile detailing.'
     },
     {
       id: '2',
-      title: 'Seismic Evaluation & Retrofit Guide for Concrete Structures',
+      title: 'Rift Valley Expansive Black Cotton Soil Mitigation Guide (Adama Basin)',
       category: 'Technical Specifications',
       format: 'PDF',
-      fileSize: '4.1 MB',
-      description: 'Step-by-step guidance on non-destructive coring, pushover curve validation, and fiber-reinforced polymer (FRP) application.'
+      fileSize: '4.8 MB',
+      description: 'Geotechnical investigation manual detailing Free Swell Index (FSI) testing, lime stabilization ratios, and foundation grade-tie beam sizing.'
     },
     {
       id: '3',
-      title: 'Structural Steel Connection Detailing Reference Sheet',
+      title: 'ERA Highway Geometric Alignment & Cross-Section Sheets (AutoCAD Civil 3D)',
       category: 'CAD / BIM Templates',
-      format: 'PDF / DWG',
-      fileSize: '8.7 MB',
-      description: 'Moment frame connection details, beam-to-column stiffener plates, and shear tab calculation formulas.'
+      format: 'DWG / PDF',
+      fileSize: '12.5 MB',
+      description: 'Standard Ethiopian Roads Administration (ERA 2024) rural link templates, super-elevation runoff charts, and mass-haul earthwork profiles.'
     },
     {
       id: '4',
-      title: 'Post-Tensioned Concrete Floor Slab Thickness Estimator',
+      title: 'EBCS EN 1992-1-1 Reinforced Concrete Beam & Column BBS Calculator',
       category: 'Engineering Calculations',
-      format: 'PDF / XLS',
-      fileSize: '1.2 MB',
-      description: 'Empirical formulation matrix for unbonded post-tensioned tendon spacing and deflection limits.'
+      format: 'XLSX / PDF',
+      fileSize: '2.1 MB',
+      description: 'Spreadsheet tool developed by ASTU 5th-year students for bar bending schedules (BBS), rebar tonnage estimation, and crack-width limit checks.'
     }
   ];
 

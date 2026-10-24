@@ -234,17 +234,17 @@ export const ValueEngineeringCalculator = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-[#FFFFFF] border border-zinc-200 shadow-xs">
             <div>
               <div className="text-xs font-mono font-bold text-zinc-900 uppercase">
-                Want a Certified Peer Review Feasibility Audit?
+                Want a Capstone Quantity &amp; Value Engineering Review?
               </div>
               <div className="text-[11px] text-[#54595F] font-mono mt-0.5">
-                Send structural drawings for an independent quantity audit and stamp verification.
+                Consult with our ASTU 5th-year student cohort for independent rebar tonnage and concrete volume audit.
               </div>
             </div>
             <button
               onClick={() => navigate('/contact')}
               className="rounded-full bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c] px-6 py-3 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-sm shrink-0 flex items-center gap-1.5"
             >
-              Request Audit <ArrowUpRight size={13} />
+              Connect With Brothers <ArrowUpRight size={13} />
             </button>
           </div>
 

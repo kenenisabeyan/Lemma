@@ -34,38 +34,38 @@ export const ManageFaqs = () => {
   const defaultFaqs = [
     {
       id: '1',
-      question: 'What is the role of a Structural Engineer vs an Architect?',
-      answer: 'While architects design the visual aesthetics, interior layouts, spatial functionality, and exterior envelope of a building, structural engineers are responsible for calculating force vectors, gravity loads, wind shear, and seismic mechanics to ensure the building remains safe, rigid, and standing under extreme conditions.',
-      category: 'General'
+      question: 'What is the focus of your 5th-Year Capstone Project at ASTU?',
+      answer: 'Our graduating capstone investigates the comprehensive structural analysis and seismic-resistant design of a B+G+10 reinforced concrete mixed-use building in Adama CBD. We model three-dimensional lateral load resistance using ETABS and SAFE in compliance with EBCS EN 1998:2015 (Seismic Zone 4).',
+      category: 'Capstone'
     },
     {
       id: '2',
-      question: 'When do I need to hire a licensed Structural Engineer (PE/SE)?',
-      answer: 'You require a licensed structural engineer whenever you build new high-rise or commercial structures, modify load-bearing walls, add additional stories to an existing building, perform seismic retrofitting, repair foundation cracks, or design bridge/infrastructure systems requiring city building permit approval.',
-      category: 'Consultation'
+      question: 'Who are the student engineers behind this portfolio?',
+      answer: 'We are a brotherhood of 5th-year graduating civil engineering candidates at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture (SoCEA), led by Lemma Techane (Class of 2026). We collaborate on structural, geotechnical, and highway engineering challenges.',
+      category: 'Cohort'
     },
     {
       id: '3',
-      question: 'What is non-linear dynamic seismic analysis?',
-      answer: 'Non-linear dynamic analysis is a sophisticated computerized finite element simulation (FEA) that models how a structural framework deforms and absorbs energy during a real earthquake ground motion recording. It allows us to optimize damper placement and save structural material.',
-      category: 'Technical'
+      question: 'Which design codes and engineering standards do you design with?',
+      answer: 'All structural calculations strictly adhere to the Ethiopian Building Code Standards harmonized with Eurocodes (EBCS EN 1990 for basis of design, EBCS EN 1991 for loadings, EBCS EN 1992 for concrete structures, and EBCS EN 1998 for earthquake resistance). Highway models conform to the Ethiopian Roads Administration (ERA 2024) manuals.',
+      category: 'Codes & Standards'
     },
     {
       id: '4',
-      question: 'How long does a typical structural peer review or evaluation take?',
-      answer: 'A standard peer review or structural assessment takes between 1 to 3 weeks depending on the complexity of the building drawings, finite element calculations, and whether non-destructive site testing (NDT) is required.',
-      category: 'Process'
+      question: 'Are you available for graduate civil engineering roles or field internships?',
+      answer: 'Yes! As graduating 5th-year seniors (Class of 2026), we are preparing for final academic defense and actively seeking full-time structural engineering, site supervision, highway modeling, and project management opportunities across Ethiopia and East Africa.',
+      category: 'Career'
     },
     {
       id: '5',
-      question: 'Can structural engineering lower construction material costs?',
-      answer: 'Yes. Through value engineering, advanced post-tensioning, and optimized steel member sizing, high-performance structural engineering frequently reduces concrete volume and structural steel weight by 15% to 30%, saving developers substantial capital.',
-      category: 'Cost & Value'
+      question: 'How do you handle expansive black cotton soils prevalent in Adama?',
+      answer: 'Adama Rift Valley soils exhibit Free Swell Indices exceeding 80%. Our geotechnical mitigation strategy includes a 1.5m cut-and-replace using granular selected material, lime/cement stabilization, continuous perimeter apron drainage, and isolated footings interconnected by stiffened grade tie beams.',
+      category: 'Geotechnical'
     }
   ];
 
   const faqs = data?.faqs?.length ? data.faqs : defaultFaqs;
-  const categories = ['All', 'General', 'Consultation', 'Technical', 'Process', 'Cost & Value'];
+  const categories = ['All', 'Capstone', 'Cohort', 'Codes & Standards', 'Career', 'Geotechnical'];
 
   const filteredFaqs = faqs.filter(faq => {
     const matchesCat = selectedCategory === 'All' || faq.category === selectedCategory;
