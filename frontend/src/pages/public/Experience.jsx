@@ -227,10 +227,10 @@ export const Experience = () => {
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
 
-                {/* Secondary Frosted Glass Pill Button */}
+                {/* Secondary Pill Button */}
                 <a
                   href="#shake-table"
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Activity size={15} className="text-[#D4AF37]" />
                   <span>SEISMIC SHAKE TABLE</span>
@@ -244,16 +244,16 @@ export const Experience = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">25+</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">25+</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Projects Led</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
                 </div>
               </motion.div>

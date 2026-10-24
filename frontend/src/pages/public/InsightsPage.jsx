@@ -175,7 +175,7 @@ export const InsightsPage = () => {
                 </a>
                 <button
                   onClick={() => navigate('/resources')}
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Engineering Tools</span>
                   <Sparkles size={14} className="text-[#D4AF37]" />
@@ -189,16 +189,16 @@ export const InsightsPage = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">12+</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">12+</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Research Papers</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">3</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">3</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Focus Disciplines</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">Free</span>
+                <div className="py-2 text-left">
+                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">Free</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Open Access</span>
                 </div>
               </motion.div>
@@ -271,7 +271,7 @@ export const InsightsPage = () => {
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="articles-feed" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -285,17 +285,17 @@ export const InsightsPage = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`rounded-2xl px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${
+                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'bg-gradient-to-r from-[#801834] to-[#601227] text-white shadow-md shadow-[#801834]/25 scale-[1.02]'
-                      : 'bg-zinc-100/80 dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-white/5 hover:border-[#D4AF37]'
+                      ? 'text-[#801834] dark:text-[#E84855]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
                       ? 'bg-[#D4AF37] text-zinc-950 font-black' 
-                      : 'bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400'
+                      : 'text-zinc-400'
                   }`}>
                     {count}
                   </span>
@@ -306,13 +306,13 @@ export const InsightsPage = () => {
 
           {/* Search Input with Reset */}
           <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search research papers, EBCS codes, ERA manuals..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 pl-10 pr-9 py-2.5 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -332,27 +332,27 @@ export const InsightsPage = () => {
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {filteredArticles.length === 0 ? (
-          <div className="py-24 text-center bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl rounded-3xl border border-zinc-200/80 dark:border-white/10 mb-16 shadow-xs">
+          <div className="py-24 text-center mb-16">
             <BookOpen className="mx-auto w-12 h-12 text-[#D4AF37] mb-3 opacity-75" />
             <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No technical publications match your query.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2 text-xs font-mono uppercase font-bold"
+              className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
             >
               Reset Filters
             </button>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
             {filteredArticles.map((item) => (
               <Link
                 key={item.id}
                 to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
-                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
+                className="transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden"
               >
                 <div>
-                  <div className="aspect-[16/10] bg-zinc-900 overflow-hidden relative">
+                  <div className="aspect-[16/10] bg-zinc-900 overflow-hidden relative rounded-2xl mb-4">
                     {item.imageUrl && (
                       <img 
                         src={item.imageUrl} 
@@ -361,19 +361,19 @@ export const InsightsPage = () => {
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[#801834] dark:text-[#E84855] border border-white/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-xs">
+                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[#801834] dark:text-[#E84855] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
                       {item.category}
                     </span>
                   </div>
 
-                  <div className="p-7">
-                    <div className="flex items-center gap-3 text-[10px] font-mono text-zinc-500 dark:text-zinc-400 mb-3 uppercase tracking-wider">
+                  <div>
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-zinc-500 dark:text-zinc-400 mb-2 uppercase tracking-wider">
                       <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D4AF37]" /> {item.publishedAt}</span>
                       <span>·</span>
                       <span className="flex items-center gap-1"><Clock size={12} className="text-[#D4AF37]" /> {item.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors mb-3 leading-snug">
+                    <h3 className="text-lg font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors mb-2 leading-snug">
                       {item.title}
                     </h3>
 
@@ -383,8 +383,8 @@ export const InsightsPage = () => {
                   </div>
                 </div>
 
-                <div className="p-7 pt-0 border-t border-zinc-200/80 dark:border-white/10 mt-2">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors flex items-center gap-1.5 pt-4">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors flex items-center gap-1.5">
                     Read Technical Paper <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </div>
