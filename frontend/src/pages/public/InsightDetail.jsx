@@ -145,10 +145,10 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             </div>
             <div>
               <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
-                Lemma Techane, PE, SE
-                <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· Verified Author</span>
+                Lemma Techane &amp; Brothers
+                <span className="text-[10px] text-[#D4AF37] font-mono font-bold">· ASTU SoCEA 5th Year</span>
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">Principal Structural Engineer & Technical Director</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">5th Year Civil Engineering Candidates · Class of 2026 · ASTU</p>
             </div>
           </div>
         </div>
@@ -189,34 +189,34 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           })}
         </div>
 
-        {/* Academic & ASCE Formal Citation Box */}
+        {/* Academic & ASTU Formal Citation Box */}
         <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 sm:p-8 mb-16 shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-zinc-200/80 dark:border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
               <ShieldCheck size={16} />
-              <span className="font-bold uppercase tracking-wider">Formal Peer-Reviewed Reference</span>
+              <span className="font-bold uppercase tracking-wider">Formal Capstone &amp; Academic Reference</span>
             </div>
-            <span className="text-[10px] font-mono text-zinc-500">ASCE Style Citation Specification</span>
+            <span className="text-[10px] font-mono text-zinc-500">ASTU SoCEA Reference Format</span>
           </div>
 
           <div className="bg-zinc-50 dark:bg-zinc-800/80 p-4 rounded-2xl border border-zinc-200/80 dark:border-white/10 font-mono text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
-            Techane, A. (2026). "{article.title}". <em>Journal of High-Rise Structural Practice & Mechanics</em>, Vol. 14, pp. 112–128. NY PE #84729 / CA SE #92041.
+            Techane, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
           </div>
 
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => {
-                navigator.clipboard.writeText(`Techane, A. (2026). "${article.title}". Journal of High-Rise Structural Practice & Mechanics, Vol. 14, pp. 112-128.`);
+                navigator.clipboard.writeText(`Techane, L. & Brothers (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Capstone Archive, Adama, Ethiopia.`);
                 setCopiedCitation(true);
                 setTimeout(() => setCopiedCitation(false), 2500);
               }}
               className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white text-xs font-mono font-bold uppercase tracking-wider px-4 py-2.5 transition-all flex items-center gap-1.5"
             >
-              <Copy size={13} className="text-[#D4AF37]" /> {copiedCitation ? 'Citation Copied!' : 'Copy ASCE Citation'}
+              <Copy size={13} className="text-[#D4AF37]" /> {copiedCitation ? 'Citation Copied!' : 'Copy ASTU Citation'}
             </button>
             <button
               onClick={() => {
-                const text = `=====================================================\nTECHNICAL ENGINEERING NOTE\nTitle: ${article.title}\nAuthor: Lemma Techane, PE, SE\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
+                const text = `=====================================================\nASTU CIVIL ENGINEERING TECHNICAL NOTE\nTitle: ${article.title}\nAuthors: Lemma Techane & 5th Year Civil Engineering Brothers\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
                 const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
@@ -240,13 +240,13 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             <h4 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-1">
               Have questions about this <span className="text-[#801834] dark:text-[#E84855]">engineering methodology?</span>
             </h4>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">Directly discuss structural modeling or FEA review for your project.</p>
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">Directly discuss EBCS compliance, structural modeling, or capstone collaboration with our ASTU student team.</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-widest transition-all shadow-md shrink-0 relative z-10"
           >
-            Inquire With Engineer
+            Connect With Brothers
           </button>
         </div>
 

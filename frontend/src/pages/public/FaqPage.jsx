@@ -31,38 +31,38 @@ export const FaqPage = () => {
   const defaultFaqs = [
     {
       id: '1',
-      question: 'What is the role of a Structural Engineer vs an Architect?',
-      answer: 'While architects design the visual aesthetics, interior layouts, spatial functionality, and exterior envelope of a building, structural engineers are responsible for calculating force vectors, gravity loads, wind shear, and seismic mechanics to ensure the building remains safe, rigid, and standing under extreme conditions.',
-      category: 'General'
+      question: 'What does the 5th-Year Civil Engineering Capstone at ASTU entail?',
+      answer: 'At Adama Science and Technology University (ASTU) School of Civil Engineering & Architecture (SoCEA), 5th-year students undertake comprehensive capstone engineering theses spanning multi-story reinforced concrete structural analysis, seismic resistance under Rift Valley geology, highway alignment per ERA standards, and geotechnical soil stabilization.',
+      category: 'Capstone & Academics'
     },
     {
       id: '2',
-      question: 'When do I need to hire a licensed Structural Engineer (PE/SE)?',
-      answer: 'You require a licensed structural engineer whenever you build new high-rise or commercial structures, modify load-bearing walls, add additional stories to an existing building, perform seismic retrofitting, repair foundation cracks, or design bridge/infrastructure systems requiring city building permit approval.',
-      category: 'Consultation'
+      question: 'How do Lemma Techane and the 5th-year student brothers collaborate?',
+      answer: 'Our cohort works as an integrated engineering design team. We combine specialized strengths across ETABS structural modeling, AutoCAD Civil 3D corridor geometry, SAP2000 finite element bridge analysis, and ASTU geotechnical soil mechanics lab testing.',
+      category: 'Student Cohort'
     },
     {
       id: '3',
-      question: 'What is non-linear dynamic seismic analysis?',
-      answer: 'Non-linear dynamic analysis is a sophisticated computerized finite element simulation (FEA) that models how a structural framework deforms and absorbs energy during a real earthquake ground motion recording. It allows us to optimize damper placement and save structural material.',
-      category: 'Technical'
+      question: 'What building codes and highway standards govern your ASTU engineering designs?',
+      answer: 'Our engineering work strictly adheres to the Ethiopian Building Code Standards (EBCS EN 1990 to 1998, harmonized with Eurocodes) and Ethiopian Roads Administration (ERA 2013/2024) Geometric, Pavement, and Drainage Design Manuals.',
+      category: 'EBCS & Standards'
     },
     {
       id: '4',
-      question: 'How long does a typical structural peer review or evaluation take?',
-      answer: 'A standard peer review or structural assessment takes between 1 to 3 weeks depending on the complexity of the building drawings, finite element calculations, and whether non-destructive site testing (NDT) is required.',
-      category: 'Process'
+      question: 'Are the ASTU 5th-year candidates available for post-graduation recruitment and project roles?',
+      answer: 'Yes. Our graduating civil engineering cohort (Class of 2026) is completing final thesis defenses and actively seeking structural engineering, highway infrastructure, and construction management roles with engineering consultancies and contractors across Ethiopia.',
+      category: 'Recruitment'
     },
     {
       id: '5',
-      question: 'Can structural engineering lower construction material costs?',
-      answer: 'Yes. Through value engineering, advanced post-tensioning, and optimized steel member sizing, high-performance structural engineering frequently reduces concrete volume and structural steel weight by 15% to 30%, saving developers substantial capital.',
-      category: 'Cost & Value'
+      question: 'How do you tackle expansive black cotton soil prevalent in the Adama / Rift Valley region?',
+      answer: 'Through ASTU materials and soil laboratory investigations, we analyze Atterberg limits and free swell index, specifying lime/cement chemical stabilization, moisture barrier membranes, and isolated pad footings tied with stiffened grade/strap beams.',
+      category: 'Technical Lab'
     }
   ];
 
   const faqs = (data?.faqs && data.faqs.length > 0) ? data.faqs : defaultFaqs;
-  const categories = ['All', 'General', 'Consultation', 'Technical', 'Process', 'Cost & Value'];
+  const categories = ['All', 'Capstone & Academics', 'Student Cohort', 'EBCS & Standards', 'Recruitment', 'Technical Lab'];
 
   const filteredFaqs = faqs.filter(faq => {
     const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
@@ -108,7 +108,7 @@ export const FaqPage = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Technical Knowledge Base · Building Codes & Consultation FAQ
+                  ASTU Civil Engineering · 5th Year Capstone &amp; Academic Inquiry FAQ
                 </span>
               </motion.div>
 
@@ -125,7 +125,7 @@ export const FaqPage = () => {
                     Clarity
                   </span>
                   <br />
-                  on Codes & <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">Engineering.</span>
+                  on Codes &amp; <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">ASTU Civil.</span>
                 </h1>
               </motion.div>
 
@@ -137,22 +137,22 @@ export const FaqPage = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Clear, rigorous answers to critical structural questions — detailing municipal permit workflows, seismic performance standards, value engineering cost reductions, and PE/SE certification requirements.
+                  Authoritative answers regarding our 5th-year graduating civil engineering curriculum, capstone design methodologies, EBCS EN building code compliance, and professional industry collaboration.
                 </p>
 
                 {/* Key Guidance Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">PE vs Architect Clarified</span>
+                    <span className="font-semibold">ASTU SoCEA Class of 2026</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">15-30% Cost Reduction</span>
+                    <span className="font-semibold">EBCS EN &amp; ERA Compliant</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">1-3 Wk Fast Reviews</span>
+                    <span className="font-semibold">Final Defense Readiness</span>
                   </div>
                 </div>
               </motion.div>
@@ -188,16 +188,16 @@ export const FaqPage = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">25+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Answered FAQs</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Topic Categories</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Focus Areas</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">PE/SE</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Direct Answers</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">ASTU</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                 </div>
               </motion.div>
 
@@ -366,17 +366,17 @@ export const FaqPage = () => {
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
-              Have a Question About Your Specific Structural Plan?
+              Have a Question for Our ASTU Civil Engineering Cohort?
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Every building geometry and soil condition presents unique physics. Reach out directly for preliminary structural feasibility review.
+              Whether inquiring about our capstone structural calculation models, highway route designs, or career recruitment opportunities, reach out directly to Lemma and the brothers.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Inquire About Your Project <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#D4AF37]" />
           </button>
         </div>
 

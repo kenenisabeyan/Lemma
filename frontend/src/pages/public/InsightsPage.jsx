@@ -28,38 +28,38 @@ export const InsightsPage = () => {
   const defaultArticles = [
     {
       id: '1',
-      title: 'Innovations in High-Strength C80 Concrete Formulations & Creep Mechanics',
-      slug: 'innovations-high-strength-c80-concrete',
-      category: 'Materials Engineering',
-      excerpt: 'Examining long-term elastic modulus development, shrinkage dynamics, and hydration heat dissipation in 50+ story high-rise core walls.',
-      readTime: '6 min read',
+      title: 'EBCS EN 1998 Seismic Design Provisions for Multi-Story RC Frames in Great Rift Valley',
+      slug: 'ebcs-en-1998-seismic-design-rift-valley',
+      category: 'Seismic & Structural',
+      excerpt: 'Evaluating dynamic response spectrum calculations, inter-story drift limits, and ductility detailing for reinforced concrete buildings in Ethiopia Seismic Zone 4.',
+      readTime: '7 min read',
       publishedAt: 'Oct 12, 2026',
       imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80'
     },
     {
       id: '2',
-      title: 'Seismic Retrofitting Strategies for Pre-1980 Commercial Frame Buildings',
-      slug: 'seismic-retrofitting-pre-1980-steel-frames',
-      category: 'Seismic Resilience',
-      excerpt: 'Comparing post-tensioned shear walls vs dynamic fluid viscous dampers under ASCE 41-17 retrofitting standards.',
-      readTime: '8 min read',
+      title: 'Expansive Black Cotton Soil Stabilization with Hydrated Lime in Adama Subgrades',
+      slug: 'expansive-black-cotton-soil-stabilization-adama',
+      category: 'Geotechnical Engineering',
+      excerpt: 'Experimental laboratory investigation of Atterberg limits, swell pressure reduction, and CBR improvement using 4% to 6% lime admixtures in East Shoa soils.',
+      readTime: '6 min read',
       publishedAt: 'Sep 28, 2026',
       imageUrl: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80'
     },
     {
       id: '3',
-      title: 'Optimizing Steel Frameworks for Reduced Carbon Footprint',
-      slug: 'optimizing-wind-damping-outrigger-systems',
-      category: 'Sustainable Engineering',
-      excerpt: 'Quantifying embodied carbon reduction through high-yield ASTM A992 structural steel optimization and cellular beam design.',
-      readTime: '5 min read',
+      title: 'AutoCAD Civil 3D Highway Route Alignment & Mass-Haul Optimization per ERA Manuals',
+      slug: 'autocad-civil-3d-highway-alignment-era',
+      category: 'Highway & Transportation',
+      excerpt: 'Balancing cut and fill earthwork volumes while enforcing minimum stopping sight distances and transition curves on Ethiopian trunk corridors.',
+      readTime: '8 min read',
       publishedAt: 'Aug 15, 2026',
       imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80'
     }
   ];
 
   const articles = data?.insights?.length ? data.insights : defaultArticles;
-  const categories = ['All', 'Materials Engineering', 'Seismic Resilience', 'Sustainable Engineering', 'Technical Note'];
+  const categories = ['All', 'Seismic & Structural', 'Geotechnical Engineering', 'Highway & Transportation', 'Technical Note'];
 
   const filteredArticles = articles.filter(item => {
     const matchesCat = selectedCategory === 'All' || item.category === selectedCategory;
@@ -108,7 +108,7 @@ export const InsightsPage = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Applied Mechanics & Technical Research Papers
+                  ASTU Civil Engineering · 5th Year Technical Research Papers
                 </span>
               </motion.div>
 
@@ -126,7 +126,7 @@ export const InsightsPage = () => {
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
-                    Structural Analysis.
+                    Civil & Structural Analysis.
                   </span>
                 </h1>
               </motion.div>
@@ -139,18 +139,18 @@ export const InsightsPage = () => {
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Translating advanced structural physics, non-linear finite element mechanics, and concrete chemistry into practical, code-compliant methodologies for practicing engineers and visionary architects.
+                  Technical research, laboratory test syntheses, and computational design methodologies developed by Lemma Techane and 5th-year civil engineering brothers at Adama Science and Technology University (ASTU SoCEA) for Ethiopian infrastructure.
                 </p>
 
                 {/* Authority Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <BookOpen size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">Peer-Reviewed Papers</span>
+                    <span className="font-semibold">ASTU SoCEA Capstones</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <ShieldCheck size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">ASCE 7 & IBC Commentary</span>
+                    <span className="font-semibold">EBCS & ERA Commentary</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <Layers size={15} className="text-[#D4AF37] shrink-0" />
@@ -309,7 +309,7 @@ export const InsightsPage = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
-              placeholder="Search research papers, ASCE codes..."
+              placeholder="Search research papers, EBCS codes, ERA manuals..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-2xl border border-zinc-200 dark:border-white/10 pl-10 pr-9 py-2.5 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
@@ -348,7 +348,7 @@ export const InsightsPage = () => {
             {filteredArticles.map((item) => (
               <Link
                 key={item.id}
-                to={`/insights/${item.slug || 'innovations-high-strength-c80-concrete'}`}
+                to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
                 className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
               >
                 <div>
@@ -399,17 +399,17 @@ export const InsightsPage = () => {
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
-              Applying <span className="text-[#801834] dark:text-[#E84855]">Advanced Structural Research</span> to Real Builds
+              Applying <span className="text-[#801834] dark:text-[#E84855]">Advanced Engineering Research</span> to Real Infrastructure
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Need an expert finite element analysis, ASCE 41 seismic evaluation, or code-compliance technical audit for your upcoming project?
+              Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from our ASTU 5th-year student cohort?
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Request Consultation <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Our Team <ArrowUpRight size={15} className="text-[#D4AF37]" />
           </button>
         </div>
 

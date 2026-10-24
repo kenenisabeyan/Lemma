@@ -34,35 +34,35 @@ export const ResourcesPage = () => {
   const defaultResources = [
     {
       id: '1',
-      title: 'High-Rise Structural Design Checklist (IBC 2024 & ASCE 7-22)',
+      title: 'ASTU B+G+10 Capstone RC Design Checklist (EBCS EN 1992 & 1998)',
       category: 'Design Guides',
       format: 'PDF',
       fileSize: '2.4 MB',
-      description: 'Comprehensive audit template covering lateral drift limits, outrigger truss geometry, and seismic response spectrum factors.'
+      description: 'Comprehensive structural audit sheet covering lateral drift limits, ductility class medium (DCM) shear walls, and Great Rift Valley seismic spectrum.'
     },
     {
       id: '2',
-      title: 'Seismic Evaluation & Retrofit Guide for Concrete Structures',
+      title: 'Rift Valley Expansive Black Cotton Soil Foundation Guide',
       category: 'Technical Specifications',
       format: 'PDF',
-      fileSize: '4.1 MB',
-      description: 'Step-by-step guidance on non-destructive coring, pushover curve validation, and fiber-reinforced polymer (FRP) application.'
+      fileSize: '3.8 MB',
+      description: 'ASTU geotechnical lab procedures for free swell index, lime/cement stabilization, and isolated footing vs. strap beam design.'
     },
     {
       id: '3',
-      title: 'Structural Steel Connection Detailing Reference Sheet',
+      title: 'ERA Highway Geometric & Cross-Section CAD/BIM Detail Sheets',
       category: 'CAD / BIM Templates',
       format: 'PDF / DWG',
-      fileSize: '8.7 MB',
-      description: 'Moment frame connection details, beam-to-column stiffener plates, and shear tab calculation formulas.'
+      fileSize: '9.2 MB',
+      description: 'AutoCAD Civil 3D templates for Ethiopian Roads Administration DC6 standard, super-elevation transitions, and standard box culverts.'
     },
     {
       id: '4',
-      title: 'Post-Tensioned Concrete Floor Slab Thickness Estimator',
+      title: 'Reinforced Concrete Beam & Column Bar Bending Schedule (BBS) Calculator',
       category: 'Engineering Calculations',
       format: 'PDF / XLS',
-      fileSize: '1.2 MB',
-      description: 'Empirical formulation matrix for unbonded post-tensioned tendon spacing and deflection limits.'
+      fileSize: '1.4 MB',
+      description: 'Automated Excel formulation for rebar cutting lengths, lap lengths per EBCS EN 1992-1-1, and steel tonnage estimation.'
     }
   ];
 
@@ -79,26 +79,28 @@ export const ResourcesPage = () => {
 
   const handleDownload = (item) => {
     const content = `=====================================================
-STRUCTURAL ENGINEERING TECHNICAL RESOURCE
+ASTU CIVIL ENGINEERING TECHNICAL RESOURCE
 Title: ${item.title}
 Category: ${item.category}
-Standard: IBC 2024 / ASCE 7-22 / ACI 318
-Author: Lemma Techane, PE, SE
-License: NY PE #84729 | CA SE #92041
+Standard: EBCS EN 1990 / 1991 / 1992 / 1998 & ERA Standards 2024
+Authors: Lemma Techane & 5th Year Civil Engineering Brothers
+Institution: Adama Science and Technology University (ASTU) · SoCEA
+Academic Year: 5th Year Graduating Candidates · Class of 2026
 =====================================================
 
 DESCRIPTION:
 ${item.description}
 
-CORE TECHNICAL GUIDANCE:
-1. Verify soil-structure interaction parameters with geotechnical boring data.
-2. Ensure minimum ductile rebar elongation limits per ACI 318-19 Chapter 18.
-3. Apply wind drift limitation H/400 for 10-year wind return period.
-4. Non-linear dynamic analyses must adhere to ASCE 7-22 Section 16.
+CORE TECHNICAL GUIDANCE (ETHIOPIAN PRACTICE):
+1. Verify Rift Valley seismic zone design acceleration (Zone 4) per EBCS EN 1998-1:2015.
+2. Ensure minimum ductile rebar elongation limits and confinement links per EBCS EN 1992-1-1.
+3. Test expansive black cotton soil active clay swell index before final foundation footing sizing.
+4. Highway horizontal and vertical curves must strictly satisfy ERA Geometric Design Manual 2024 specifications.
 
-For consultation or project verification:
-Email: consult@lemma-structural.com
-Phone: +1 (555) 019-8472
+For academic consultation or capstone collaboration:
+Email: astu.civil.lemma@gmail.com
+Campus: ASTU Main Campus, SoCEA Building, Adama, Ethiopia
+Phone: +251 91 123 4567
 =====================================================`;
 
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
@@ -148,10 +150,9 @@ Phone: +1 (555) 019-8472
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
-              >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Open Engineering Toolkit · Verified Calculation Sheets & Checklists
+                  ASTU Civil Engineering · 5th Year Capstone Toolkit &amp; Calculation Sheets
                 </span>
               </motion.div>
 
@@ -165,7 +166,7 @@ Phone: +1 (555) 019-8472
                 <h1 className="font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100 drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)] dark:drop-shadow-[0_20px_45px_rgba(0,0,0,0.6)]">
                   Calculated Precision.{' '}
                   <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
-                    Open
+                    ASTU
                   </span>
                   <br />
                   <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
@@ -182,14 +183,14 @@ Phone: +1 (555) 019-8472
                 className="w-full rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.08)] p-6 sm:p-7"
               >
                 <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Download professional design guides, IBC 2024 building code checklists, CAD moment connection details, and launch interactive browser-based beam solvers and value engineering estimators.
+                  Download authentic capstone design guides, EBCS EN building code checklists, AutoCAD Civil 3D highway corridor details, and launch interactive browser-based beam solvers and structural estimators built by ASTU 5th-year brothers.
                 </p>
 
                 {/* Toolkit Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-5 border-t border-zinc-200/80 dark:border-white/10 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">IBC 2024 & ASCE 7-22</span>
+                    <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
@@ -197,7 +198,7 @@ Phone: +1 (555) 019-8472
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                     <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
-                    <span className="font-semibold">Instant Direct Downloads</span>
+                    <span className="font-semibold">Instant Capstone Downloads</span>
                   </div>
                 </div>
               </motion.div>
@@ -233,16 +234,16 @@ Phone: +1 (555) 019-8472
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">4+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Free Downloads</span>
+                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">2</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">FEA Live Solvers</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">IBC</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">2024 Code Verified</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">EBCS</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">EN Code Verified</span>
                 </div>
               </motion.div>
 
@@ -314,11 +315,11 @@ Phone: +1 (555) 019-8472
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">IBC 2024 Audit Checklist</span>
+                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">EBCS EN Capstone Audit Checklist</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-bold">PDF / 2.4 MB</span>
                       </div>
                       <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
-                        One-click direct download of the official high-rise design checklist.
+                        One-click direct download of the official ASTU 5th-year structural design checklist.
                       </p>
                     </div>
                   </button>
@@ -476,7 +477,7 @@ Phone: +1 (555) 019-8472
               <span className="text-[#801834] dark:text-[#E84855]">Beam Shear, Moment</span> & Deflection Laboratory.
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against AISC 360-22 and IBC limits.
+              Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against EBCS EN 1992 and design standards.
             </p>
           </div>
 
@@ -488,19 +489,19 @@ Phone: +1 (555) 019-8472
         {/* ======================================================================= */}
         <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 lg:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-bold">Tailored Specifications</span>
+            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
             <h4 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
-              Need Project-Specific Structural Calculations or CAD Details?
+              Need Capstone Calculations, Soil Test Reviews, or Civil 3D Corridors?
             </h4>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              I provide custom finite element analysis models, calculation packages for municipal permit submittals, and site-specific seismic retrofitting plans.
+              Our ASTU 5th-year graduating civil engineering team provides finite element analysis models, EBCS compliant calculation sheets, and AutoCAD Civil 3D highway drawings.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Request Custom Calc Package <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#D4AF37]" />
           </button>
         </div>
 
