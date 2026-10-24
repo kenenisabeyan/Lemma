@@ -344,16 +344,16 @@ export const ServicesPage = () => {
             return (
               <div 
                 key={srv.id || index} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-7 sm:p-10 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] relative overflow-hidden"
+                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-7 sm:p-10 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] relative overflow-hidden"
               >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                       <Icon size={30} />
                     </div>
                     <div>
-                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 px-3 py-0.5 text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest mb-2 font-extrabold">
+                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-0.5 text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest mb-2 font-extrabold">
                         Module 0{index + 1}
                       </span>
                       <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors leading-snug">
@@ -367,7 +367,7 @@ export const ServicesPage = () => {
                       {srv.description || srv.summary}
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-3.5 bg-zinc-50/80 dark:bg-zinc-800/40 p-5 rounded-2xl border border-zinc-200/80 dark:border-white/5">
+                    <div className="grid sm:grid-cols-2 gap-3.5 bg-zinc-50/80 dark:bg-zinc-800/40 p-5 rounded-2xl">
                       {features.map((feat, i) => (
                         <div key={i} className="flex items-start gap-2.5">
                           <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0 mt-0.5" />

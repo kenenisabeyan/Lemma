@@ -278,7 +278,7 @@ export const TestimonialsPage = () => {
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="testimonials-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-white/90 dark:border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
+        <div className="bg-white/95 dark:bg-zinc-900/90 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -361,7 +361,7 @@ export const TestimonialsPage = () => {
             {filteredTestimonials.map((t) => (
               <div 
                 key={t.id} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 relative flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
+                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 relative flex flex-col justify-between transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
               >
                 <div>
                   <div className="flex justify-between items-center mb-6">
@@ -402,7 +402,7 @@ export const TestimonialsPage = () => {
         {/* ======================================================================= */}
         {/* 4. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="rounded-3xl border border-white/90 dark:border-white/10 bg-gradient-to-br from-white/90 via-white/80 to-amber-50/40 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-950/90 backdrop-blur-2xl p-8 sm:p-12 flex flex-col sm:flex-row justify-between items-center gap-8 shadow-xl">
+        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
               Collaborate with Our <span className="text-[#801834] dark:text-[#E84855]">ASTU Civil Engineering Cohort</span>

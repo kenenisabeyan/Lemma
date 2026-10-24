@@ -278,7 +278,7 @@ export const About = () => {
             {SOFTWARE_STACK.map((soft) => (
               <div 
                 key={soft.name} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between"
+                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between"
               >
                 <div>
                   <div className="flex justify-between items-center mb-4">
@@ -313,7 +313,7 @@ export const About = () => {
             {CAREER_TIMELINE.map((item, index) => (
               <div key={index} className="relative group">
                 <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform shadow-xs"></div>
-                <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 sm:p-7 hover:border-[#D4AF37]/50 transition-all shadow-sm">
+                <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 sm:p-7 transition-all shadow-sm">
                   <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-0.5 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                     {item.year}
                   </span>
@@ -340,7 +340,7 @@ export const About = () => {
 
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
-              <div key={index} className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex items-start gap-4 hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+              <div key={index} className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex items-start gap-4 transition-all shadow-sm group">
                 <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform shrink-0">
                   <Award size={24} />
                 </div>
@@ -373,7 +373,7 @@ export const About = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
@@ -395,7 +395,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
@@ -417,7 +417,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">
@@ -439,7 +439,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all shadow-sm group">
+            <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-6 flex flex-col justify-between transition-all shadow-sm group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-zinc-100 dark:bg-zinc-800 text-[#D4AF37] border border-zinc-200 dark:border-white/10 rounded-2xl group-hover:scale-105 transition-transform">

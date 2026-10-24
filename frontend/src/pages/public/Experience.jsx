@@ -369,7 +369,7 @@ export const Experience = () => {
             {engineeringMilestones.map((item, index) => (
               <div 
                 key={index} 
-                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 sm:p-10 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]"
+                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 sm:p-10 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)]"
               >
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-6 pb-6 border-b border-zinc-200/80 dark:border-white/10">
                   <div>
@@ -426,7 +426,7 @@ export const Experience = () => {
               {CAREER_TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
                   <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform"></div>
-                  <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)]">
+                  <div className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)]">
                     <span className="inline-block rounded-full bg-amber-500/10 border border-[#D4AF37]/40 px-3 py-1 text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
                       {item.year}
                     </span>
@@ -455,7 +455,7 @@ export const Experience = () => {
             {structuralCompetencies.map((comp, index) => (
               <div 
                 key={index} 
-                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05),inset_0_1px_2px_rgba(255,255,255,0.95)] flex flex-col justify-between"
+                className="group rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl p-8 transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855] flex items-center justify-center font-mono font-bold text-sm mb-6 group-hover:scale-110 transition-transform">

@@ -325,14 +325,14 @@ export const FaqPage = () => {
             return (
               <div 
                 key={faq.id || index} 
-                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/90 dark:border-white/10 overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/50 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
+                className="rounded-3xl bg-white/85 dark:bg-zinc-900/60 backdrop-blur-2xl overflow-hidden transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full p-6 sm:p-7 text-left font-black text-base sm:text-lg text-zinc-900 dark:text-zinc-100 hover:text-[#801834] dark:hover:text-[#E84855] flex justify-between items-center gap-4 transition-colors"
                 >
                   <span className="flex items-center gap-3.5">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-[#801834] dark:text-[#E84855]">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-[#801834] dark:text-[#E84855]">
                       <HelpCircle size={18} />
                     </span>
                     <span>{faq.question}</span>
