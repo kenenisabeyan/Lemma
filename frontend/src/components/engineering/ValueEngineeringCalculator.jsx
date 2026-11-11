@@ -51,7 +51,7 @@ export const ValueEngineeringCalculator = () => {
             <Calculator size={13} className="text-[#D3AE36]" />
             Value Engineering & Carbon Optimization Matrix
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
             Structural Capital & Carbon Estimator
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1">
@@ -77,10 +77,10 @@ export const ValueEngineeringCalculator = () => {
                 className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'post-tensioned'
                     ? 'bg-[#D3AE36]/15 ring-2 ring-[#D3AE36] text-[#12151C] font-bold'
-                    : 'text-[#1E2025] hover:text-zinc-900 hover:bg-zinc-100'
+                    : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA] hover:bg-zinc-100'
                 }`}
               >
-                <div className="font-semibold text-zinc-900 text-xs">Post-Tensioned Flat Slabs</div>
+                <div className="font-semibold text-zinc-900 text-xs dark:text-[#F8F9FA]">Post-Tensioned Flat Slabs</div>
                 <div className="text-[10px] text-[#1E2025] mt-0.5">High clear-spans, low slab thickness</div>
               </button>
 
@@ -89,10 +89,10 @@ export const ValueEngineeringCalculator = () => {
                 className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'outrigger'
                     ? 'bg-[#D3AE36]/15 ring-2 ring-[#D3AE36] text-[#12151C] font-bold'
-                    : 'text-[#1E2025] hover:text-zinc-900 hover:bg-zinc-100'
+                    : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA] hover:bg-zinc-100'
                 }`}
               >
-                <div className="font-semibold text-zinc-900 text-xs">Core & Outrigger Trusses</div>
+                <div className="font-semibold text-zinc-900 text-xs dark:text-[#F8F9FA]">Core & Outrigger Trusses</div>
                 <div className="text-[10px] text-[#1E2025] mt-0.5">Slender towers & high wind zones</div>
               </button>
 
@@ -101,10 +101,10 @@ export const ValueEngineeringCalculator = () => {
                 className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'steel-composite'
                     ? 'bg-[#D3AE36]/15 ring-2 ring-[#D3AE36] text-[#12151C] font-bold'
-                    : 'text-[#1E2025] hover:text-zinc-900 hover:bg-zinc-100'
+                    : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA] hover:bg-zinc-100'
                 }`}
               >
-                <div className="font-semibold text-zinc-900 text-xs">Composite Steel Moment Frame</div>
+                <div className="font-semibold text-zinc-900 text-xs dark:text-[#F8F9FA]">Composite Steel Moment Frame</div>
                 <div className="text-[10px] text-[#1E2025] mt-0.5">Seismic ductility & fast erection</div>
               </button>
 
@@ -113,10 +113,10 @@ export const ValueEngineeringCalculator = () => {
                 className={`p-3 rounded-xl text-left transition-all font-mono text-xs ${
                   structuralSystem === 'base-isolation'
                     ? 'bg-[#D3AE36]/15 ring-2 ring-[#D3AE36] text-[#12151C] font-bold'
-                    : 'text-[#1E2025] hover:text-zinc-900 hover:bg-zinc-100'
+                    : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA] hover:bg-zinc-100'
                 }`}
               >
-                <div className="font-semibold text-zinc-900 text-xs">Base Isolation & Viscous Dampers</div>
+                <div className="font-semibold text-zinc-900 text-xs dark:text-[#F8F9FA]">Base Isolation & Viscous Dampers</div>
                 <div className="text-[10px] text-[#1E2025] mt-0.5">Critical facilities & maximum resilience</div>
               </button>
             </div>
@@ -125,7 +125,7 @@ export const ValueEngineeringCalculator = () => {
           {/* Slider 1: Stories */}
           <div className="py-2 space-y-2">
             <div className="flex justify-between items-center text-xs font-mono text-[#1E2025] mb-1">
-              <span className="uppercase font-bold tracking-wider flex items-center gap-1.5 text-zinc-800">
+              <span className="uppercase font-bold tracking-wider flex items-center gap-1.5 text-zinc-800 dark:text-[#F8F9FA]">
                 <Building2 size={14} className="text-[#D3AE36]" /> Building Height
               </span>
               <span className="text-[#D3AE36] font-bold text-sm">{stories} Stories ({Math.round(stories * 3.8)}m)</span>
@@ -149,7 +149,7 @@ export const ValueEngineeringCalculator = () => {
           {/* Slider 2: Average Floor Plate */}
           <div className="py-2 space-y-2">
             <div className="flex justify-between items-center text-xs font-mono text-[#1E2025] mb-1">
-              <span className="uppercase font-bold tracking-wider flex items-center gap-1.5 text-zinc-800">
+              <span className="uppercase font-bold tracking-wider flex items-center gap-1.5 text-zinc-800 dark:text-[#F8F9FA]">
                 <Layers size={14} className="text-[#D3AE36]" /> Floor Plate Area
               </span>
               <span className="text-[#D3AE36] font-bold text-sm">{floorArea.toLocaleString()} SQ FT</span>
@@ -179,7 +179,7 @@ export const ValueEngineeringCalculator = () => {
             <span className="text-xs font-mono uppercase font-bold text-[#D3AE36] tracking-widest block mb-1">
               Estimated Construction Capital Savings
             </span>
-            <div className="text-4xl sm:text-5xl font-extrabold text-zinc-900 font-mono tracking-tight mb-2">
+            <div className="text-4xl sm:text-5xl font-extrabold text-zinc-900 font-mono tracking-tight mb-2 dark:text-[#F8F9FA]">
               ${(estimatedSavingsUSD / 1000000).toFixed(2)}M <span className="text-sm text-emerald-600 font-normal">USD</span>
             </div>
             <p className="text-xs text-[#1E2025] font-mono leading-relaxed mb-6">
@@ -192,7 +192,7 @@ export const ValueEngineeringCalculator = () => {
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
                   <TrendingDown size={11} className="text-emerald-600" /> Concrete Volume
                 </div>
-                <div className="text-lg font-extrabold text-zinc-900">
+                <div className="text-lg font-extrabold text-zinc-900 dark:text-[#F8F9FA]">
                   {concreteSavedM3.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]">m³</span>
                 </div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">Reduced Dead Load</div>
@@ -202,7 +202,7 @@ export const ValueEngineeringCalculator = () => {
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
                   <TrendingDown size={11} className="text-emerald-600" /> Steel Tonnage
                 </div>
-                <div className="text-lg font-extrabold text-zinc-900">
+                <div className="text-lg font-extrabold text-zinc-900 dark:text-[#F8F9FA]">
                   {steelSavedTons.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]">tons</span>
                 </div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">Optimized Sections</div>
@@ -222,7 +222,7 @@ export const ValueEngineeringCalculator = () => {
                 <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
                   <Clock size={11} className="text-[#D3AE36]" /> Schedule Offset
                 </div>
-                <div className="text-lg font-extrabold text-zinc-900">
+                <div className="text-lg font-extrabold text-zinc-900 dark:text-[#F8F9FA]">
                   {weeksSaved} <span className="text-xs font-normal text-[#1E2025]">Weeks</span>
                 </div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">Earlier Substantial Date</div>
@@ -233,7 +233,7 @@ export const ValueEngineeringCalculator = () => {
           {/* CTA Box */}
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <div className="text-xs font-mono font-bold text-zinc-900 uppercase">
+              <div className="text-xs font-mono font-bold text-zinc-900 uppercase dark:text-[#F8F9FA]">
                 Want a Capstone Quantity &amp; Value Engineering Review?
               </div>
               <div className="text-[11px] text-[#1E2025] font-mono mt-0.5">

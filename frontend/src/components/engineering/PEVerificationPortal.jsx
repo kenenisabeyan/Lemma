@@ -60,7 +60,7 @@ export const PEVerificationPortal = () => {
             <Award size={14} className="animate-pulse" />
             <span>ASTU SoCEA Capstone & Academic Verification Portal</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight">
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
             Official ASTU 5th Year Civil Engineering Verification System
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
@@ -168,7 +168,7 @@ export const PEVerificationPortal = () => {
               <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-[0.25em] block mb-1 font-bold">
                 ADAMA SCIENCE AND TECHNOLOGY UNIVERSITY · SCHOOL OF CIVIL ENGINEERING & ARCHITECTURE
               </span>
-              <h4 className="text-xl sm:text-2xl font-extrabold text-zinc-900 tracking-wide uppercase font-serif">
+              <h4 className="text-xl sm:text-2xl font-extrabold text-zinc-900 tracking-wide uppercase font-serif dark:text-[#F8F9FA]">
                 Certificate of Capstone Structural Verification
               </h4>
               <p className="text-[11px] font-mono text-[#1E2025] mt-1">
@@ -185,7 +185,7 @@ export const PEVerificationPortal = () => {
               <div className="grid sm:grid-cols-2 gap-4 py-2 text-[11px] font-mono">
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">PROJECT DESIGNATION:</span>
-                  <span className="text-zinc-900 font-bold">{projectName || 'B+G+10 RC Capstone Tower'}</span>
+                  <span className="text-zinc-900 font-bold dark:text-[#F8F9FA]">{projectName || 'B+G+10 RC Capstone Tower'}</span>
                 </div>
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">SUPERVISING BODY:</span>
@@ -193,7 +193,7 @@ export const PEVerificationPortal = () => {
                 </div>
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">STRUCTURAL SYSTEM:</span>
-                  <span className="text-zinc-900">{systemType}</span>
+                  <span className="text-zinc-900 dark:text-[#F8F9FA]">{systemType}</span>
                 </div>
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">GOVERNING ETHIOPIAN CODE:</span>
@@ -233,7 +233,7 @@ export const PEVerificationPortal = () => {
               </div>
 
               <div className="text-xs font-mono">
-                <div className="text-zinc-900 font-bold text-sm">Lemma Amensisa & Brothers</div>
+                <div className="text-zinc-900 font-bold text-sm dark:text-[#F8F9FA]">Lemma Amensisa & Brothers</div>
                 <div className="text-[10px] text-[#1E2025]">5th Year Civil Engineering Candidates</div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">ASTU SoCEA · Adama Science & Tech Univ.</div>
                 <div className="text-[9px] text-[#1E2025] mt-1">Date: {timestamp}</div>

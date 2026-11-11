@@ -577,7 +577,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ASTU Civil Engineering Capabilities & Rigor
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
               Analyze. Calculate. <span className="text-[#D3AE36]">Deliver.</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
@@ -593,7 +593,7 @@ export const Home = () => {
                 <Building2 size={36} className="text-[#D3AE36] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">Multi-Story RC Structural Design</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg dark:text-[#F8F9FA]">Multi-Story RC Structural Design</h3>
                 <p className="text-[#1E2025] text-xs leading-relaxed">
                   Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
                 </p>
@@ -609,7 +609,7 @@ export const Home = () => {
                 <Activity size={36} className="text-[#D3AE36] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">Highway Alignment & ERA Standards</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg dark:text-[#F8F9FA]">Highway Alignment & ERA Standards</h3>
                 <p className="text-[#1E2025] text-xs leading-relaxed">
                   Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
                 </p>
@@ -626,7 +626,7 @@ export const Home = () => {
                   <div className="flex size-8 items-center justify-center rounded-full text-[#D3AE36]">
                     <ShieldCheck size={18} />
                   </div>
-                  <div className="font-mono text-xs font-bold text-zinc-900">Practical Site Experience</div>
+                  <div className="font-mono text-xs font-bold text-zinc-900 dark:text-[#F8F9FA]">Practical Site Experience</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
@@ -641,7 +641,7 @@ export const Home = () => {
                 </svg>
               </div>
               <div className="relative z-10 mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg">Site Supervision &amp; Quality Control</h3>
+                <h3 className="font-semibold text-zinc-900 text-lg dark:text-[#F8F9FA]">Site Supervision &amp; Quality Control</h3>
                 <p className="text-[#1E2025] text-xs leading-relaxed">
                   Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
                 </p>
@@ -659,7 +659,7 @@ export const Home = () => {
                     <Ruler size={22} className="text-[#D3AE36]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-semibold text-zinc-900 text-xl">Bridging Engineering Calculations with Real Site Construction</h3>
+                    <h3 className="font-semibold text-zinc-900 text-xl dark:text-[#F8F9FA]">Bridging Engineering Calculations with Real Site Construction</h3>
                     <p className="text-[#1E2025] text-xs sm:text-sm leading-relaxed max-w-md">
                       From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
                     </p>
@@ -706,7 +706,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Live Dynamic Mechanics Simulation
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
               Real-Time Structural & Seismic <span className="text-[#D3AE36]">Load Path.</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
@@ -752,7 +752,7 @@ export const Home = () => {
                 Academic Journey & Engineering Brotherhood
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
                 Civil Engineering Built on <span className="text-[#D3AE36]">Practical Construction &amp; Rigor.</span>
               </h2>
 
@@ -768,7 +768,7 @@ export const Home = () => {
                 <div className="flex items-center gap-3 py-3">
                   <GraduationCap className="text-[#D3AE36] w-6 h-6 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block">B.Sc. Civil Engineering (5th Year)</span>
+                    <span className="text-xs text-zinc-900 font-bold block dark:text-[#F8F9FA]">B.Sc. Civil Engineering (5th Year)</span>
                     <span className="text-[10px] text-[#1E2025]">Adama Science &amp; Technology University (ASTU)</span>
                   </div>
                 </div>
@@ -776,7 +776,7 @@ export const Home = () => {
                 <div className="flex items-center gap-3 py-3">
                   <HardHat className="text-[#D3AE36] w-6 h-6 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block">Practical Construction &amp; Internship</span>
+                    <span className="text-xs text-zinc-900 font-bold block dark:text-[#F8F9FA]">Practical Construction &amp; Internship</span>
                     <span className="text-[10px] text-[#1E2025]">OCC Site Supervision &amp; ASTU Survey Camps</span>
                   </div>
                 </div>
@@ -813,14 +813,14 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 Core Capabilities & Practice
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
                 Core Civil Engineering <span className="text-[#D3AE36]">Specializations & Capstones.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 Comprehensive structural analysis, highway geometric modeling, and geotechnical evaluations developed at ASTU.
               </p>
             </div>
-            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-zinc-900 transition-colors flex items-center gap-2">
+            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-zinc-900 transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
               Explore All Disciplines <ChevronRight size={16} />
             </Link>
           </div>
@@ -832,7 +832,7 @@ export const Home = () => {
                   <div className="w-12 h-12 text-[#D3AE36] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Building2 size={28} />
                   </div>
-                  <h4 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D3AE36] transition-colors">{srv.title}</h4>
+                  <h4 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
                   <p className="text-[#1E2025] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
                 <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] group-hover:text-[#D3AE36] flex items-center gap-1.5 pt-4">
@@ -867,7 +867,7 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 ASTU Capstone & Field Practice
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
                 Featured Civil Engineering <span className="text-[#D3AE36]">Capstones.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
@@ -921,7 +921,7 @@ export const Home = () => {
                         <span>{proj.year}</span>
                       </div>
                       
-                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug">
+                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug dark:text-[#F8F9FA]">
                         {proj.title}
                       </h3>
                       
@@ -932,11 +932,11 @@ export const Home = () => {
                       <ul className="space-y-1.5 text-[#1E2025] text-xs mb-4">
                         <li className="flex gap-2">
                           <span aria-hidden="true" className="text-[#D3AE36] font-bold">—</span>
-                          <span><strong className="text-zinc-900">System:</strong> {proj.structuralSystem}</span>
+                          <span><strong className="text-zinc-900 dark:text-[#F8F9FA]">System:</strong> {proj.structuralSystem}</span>
                         </li>
                         <li className="flex gap-2">
                           <span aria-hidden="true" className="text-[#D3AE36] font-bold">—</span>
-                          <span><strong className="text-zinc-900">Result:</strong> {proj.result}</span>
+                          <span><strong className="text-zinc-900 dark:text-[#F8F9FA]">Result:</strong> {proj.result}</span>
                         </li>
                       </ul>
 
@@ -984,7 +984,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ASTU Multi-Layer CAD & FEA Telemetry Board
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
               Interactive Capstone <span className="text-[#D3AE36]">Dossier & Structural Inspector.</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
@@ -1009,7 +1009,7 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 Academic & Field Endorsements
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
                 Faculty & Peer <span className="text-[#D3AE36]">Endorsements.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
@@ -1041,7 +1041,7 @@ export const Home = () => {
                 className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedTestimonialCategory === cat
                     ? 'bg-[#D3AE36] text-[#12151C] scale-105 font-extrabold'
-                    : 'text-[#1E2025] hover:text-zinc-900'
+                    : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
                 }`}
               >
                 {cat}
@@ -1074,7 +1074,7 @@ export const Home = () => {
                       <Quote className="text-zinc-300 w-8 h-8 group-hover:text-[#D3AE36]/40 transition-colors" />
                     </div>
 
-                    <p className="text-zinc-800 text-sm leading-relaxed mb-6 italic font-light">
+                    <p className="text-zinc-800 text-sm leading-relaxed mb-6 italic font-light dark:text-[#F8F9FA]">
                       "{t.content}"
                     </p>
 
@@ -1095,7 +1095,7 @@ export const Home = () => {
                       )}
                     </div>
                     <div className="overflow-hidden">
-                      <h5 className="text-zinc-900 font-bold text-sm truncate">{t.clientName}</h5>
+                      <h5 className="text-zinc-900 font-bold text-sm truncate dark:text-[#F8F9FA]">{t.clientName}</h5>
                       <p className="text-[#1E2025] text-xs truncate">{t.clientRole}</p>
                       <span className="inline-block text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-0.5 font-bold truncate max-w-full">
                         {t.clientCompany}
@@ -1114,7 +1114,7 @@ export const Home = () => {
                 <ShieldCheck size={28} />
               </div>
               <div>
-                <h4 className="text-base font-bold text-zinc-900">ASTU 5th-Year Capstone Defense Ready</h4>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
                 <p className="text-xs text-[#1E2025] mt-0.5">All designs adhere to Ethiopian Building Code Standards (EBCS) and ERA Manuals.</p>
               </div>
             </div>
@@ -1140,14 +1140,14 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 ASTU Student Research & Technical Notes
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
                 Technical Notes & <span className="text-[#D3AE36]">Research Papers.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 EBCS code evaluations, expansive black cotton soil mitigation, and hydraulic design notes.
               </p>
             </div>
-            <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-zinc-900 transition-colors flex items-center gap-2">
+            <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-zinc-900 transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
               Browse All Articles <ChevronRight size={16} />
             </Link>
           </div>
@@ -1164,7 +1164,7 @@ export const Home = () => {
                     <FileText size={24} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
-                  <h5 className="text-base font-bold text-zinc-900 group-hover:text-[#D3AE36] transition-colors mb-4">{article.title}</h5>
+                  <h5 className="text-base font-bold text-zinc-900 group-hover:text-[#D3AE36] transition-colors mb-4 dark:text-[#F8F9FA]">{article.title}</h5>
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#1E2025] group-hover:text-[#D3AE36] flex items-center gap-1 pt-4">
                   Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -1185,7 +1185,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Academic & Graduate Opportunities
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
               Have Inquiries? <span className="text-[#D3AE36]">Connect with Our Team!</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
@@ -1204,7 +1204,7 @@ export const Home = () => {
                 <Mail size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5 overflow-hidden">
-                <h4 className="text-sm font-bold text-zinc-900">Send an Email</h4>
+                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#F8F9FA]">Send an Email</h4>
                 <p className="text-xs font-mono text-[#1E2025] truncate group-hover:text-[#D3AE36] transition-colors">lemmayezedlij21@gmail.com</p>
               </div>
             </a>
@@ -1218,7 +1218,7 @@ export const Home = () => {
                 <Phone size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-zinc-900">Call Direct</h4>
+                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#F8F9FA]">Call Direct</h4>
                 <p className="text-xs font-mono text-[#1E2025] group-hover:text-[#D3AE36] transition-colors">+251 934 830 919</p>
               </div>
             </a>
@@ -1229,7 +1229,7 @@ export const Home = () => {
                 <MapPin size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-zinc-900">ASTU Main Campus</h4>
+                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#F8F9FA]">ASTU Main Campus</h4>
                 <p className="text-xs font-mono text-[#1E2025]">School of Civil Eng & Architecture (EAT · UTC+3)</p>
               </div>
             </div>
@@ -1238,7 +1238,7 @@ export const Home = () => {
           {/* Full Consultation Trigger Banner */}
           <div className="py-10 text-center flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5">Interested in Collaborating on Civil Engineering Projects?</h3>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5 dark:text-[#F8F9FA]">Interested in Collaborating on Civil Engineering Projects?</h3>
               <p className="text-xs sm:text-sm text-[#1E2025]">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
             </div>
             <button

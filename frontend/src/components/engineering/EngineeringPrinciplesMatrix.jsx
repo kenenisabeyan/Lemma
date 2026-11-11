@@ -106,7 +106,7 @@ export const EngineeringPrinciplesMatrix = () => {
             <Cpu size={14} />
             <span>Core Mathematical & Mechanical Standards</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
             Structural Design Principles & Code Matrix
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
@@ -119,7 +119,7 @@ export const EngineeringPrinciplesMatrix = () => {
           <div className="w-2 h-2 rounded-full bg-[#D3AE36]"></div>
           <div>
             <span className="text-[9px] text-[#1E2025] block uppercase tracking-wider">MANDATE</span>
-            <span className="font-bold text-zinc-800">ASCE 7 / AISC / ACI / EBCS</span>
+            <span className="font-bold text-zinc-800 dark:text-[#F8F9FA]">ASCE 7 / AISC / ACI / EBCS</span>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ export const EngineeringPrinciplesMatrix = () => {
                 </span>
               </div>
               <h4 className={`text-xs font-bold leading-snug ${
-                isActive ? 'text-zinc-900 font-extrabold' : 'text-zinc-700'
+                isActive ? 'text-zinc-900 dark:text-[#F8F9FA] font-extrabold' : 'text-zinc-700'
               }`}>
                 {principle.title}
               </h4>
@@ -168,7 +168,7 @@ export const EngineeringPrinciplesMatrix = () => {
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#D3AE36] font-bold">
               Governing Code: {currentPrinciple.code}
             </span>
-            <h4 className="text-xl sm:text-2xl font-black text-zinc-900 tracking-tight mt-1">
+            <h4 className="text-xl sm:text-2xl font-black text-zinc-900 tracking-tight mt-1 dark:text-[#F8F9FA]">
               {currentPrinciple.title}
             </h4>
             <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-3xl leading-relaxed">
@@ -200,7 +200,7 @@ export const EngineeringPrinciplesMatrix = () => {
           
           {/* Engineering Specifications (7 Cols) */}
           <div className="md:col-span-7 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block">
+            <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block dark:text-[#F8F9FA]">
               Practical Structural Application
             </span>
             <div className="space-y-2">
@@ -217,7 +217,7 @@ export const EngineeringPrinciplesMatrix = () => {
 
           {/* Key Design Limits & Benchmark Metrics (5 Cols) */}
           <div className="md:col-span-5 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block">
+            <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block dark:text-[#F8F9FA]">
               Benchmark Verification Metrics
             </span>
             <div className="space-y-2">

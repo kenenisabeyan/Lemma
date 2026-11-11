@@ -114,7 +114,7 @@ export const LoadPathSimulator = () => {
             <Gauge size={13} className="text-[#D3AE36]" />
             Interactive Structural Finite Element Simulator
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
             Structural Load Path & Drift Mechanics
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1 max-w-2xl">
@@ -129,7 +129,7 @@ export const LoadPathSimulator = () => {
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'wind'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900'
+                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
             }`}
           >
             <Wind size={13} /> Wind Lateral
@@ -139,7 +139,7 @@ export const LoadPathSimulator = () => {
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'seismic'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900'
+                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
             }`}
           >
             <Activity size={13} /> Seismic NLRHA
@@ -149,7 +149,7 @@ export const LoadPathSimulator = () => {
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'gravity'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900'
+                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
             }`}
           >
             <ArrowDown size={13} /> Gravity Path
@@ -159,7 +159,7 @@ export const LoadPathSimulator = () => {
             className={`rounded-xl px-3.5 py-2 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               loadMode === 'thermal'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900'
+                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
             }`}
           >
             <Zap size={13} /> Thermal & Creep
@@ -320,7 +320,7 @@ export const LoadPathSimulator = () => {
               </span>
             </div>
 
-            <h4 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 font-mono mb-1">
+            <h4 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 font-mono mb-1 dark:text-[#F8F9FA]">
               {metrics.primaryMetric}
             </h4>
             <p className="text-xs text-[#1E2025] font-mono mb-4">
@@ -336,19 +336,19 @@ export const LoadPathSimulator = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono">
             <div className="py-2">
               <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Base Shear ($V_b$)</span>
-              <span className="text-base font-extrabold text-zinc-900 block">{metrics.baseShear}</span>
+              <span className="text-base font-extrabold text-zinc-900 block dark:text-[#F8F9FA]">{metrics.baseShear}</span>
               <span className="text-[9px] text-[#D3AE36] font-semibold block mt-0.5">Reaction Force</span>
             </div>
 
             <div className="py-2">
               <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Roof Drift Ratio</span>
-              <span className="text-base font-extrabold text-zinc-900 block">{metrics.driftRatio}</span>
+              <span className="text-base font-extrabold text-zinc-900 block dark:text-[#F8F9FA]">{metrics.driftRatio}</span>
               <span className="text-[9px] text-emerald-600 font-semibold block mt-0.5">Limit H/400</span>
             </div>
 
             <div className="py-2">
               <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Overturning (M_OT)</span>
-              <span className="text-base font-extrabold text-zinc-900 block truncate">{metrics.overturning}</span>
+              <span className="text-base font-extrabold text-zinc-900 block truncate dark:text-[#F8F9FA]">{metrics.overturning}</span>
               <span className="text-[9px] text-[#D3AE36] font-semibold block mt-0.5">Foundation Moment</span>
             </div>
 
