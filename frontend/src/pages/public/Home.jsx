@@ -1075,7 +1075,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ASTU Multi-Layer CAD & FEA Telemetry Board
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Interactive Capstone <span className="text-[#D3AE36]">Dossier & Structural Inspector.</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
@@ -1100,7 +1100,7 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 Academic & Field Endorsements
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Faculty & Peer <span className="text-[#D3AE36]">Endorsements.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
@@ -1132,7 +1132,7 @@ export const Home = () => {
                 className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   selectedTestimonialCategory === cat
                     ? 'bg-[#D3AE36] text-[#12151C] scale-105 font-extrabold'
-                    : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
+                    : 'text-[#1E2025] hover:text-[#D3AE36] dark:text-[#F8F9FA]'
                 }`}
               >
                 {cat}
@@ -1143,7 +1143,7 @@ export const Home = () => {
           {/* Testimonials Cards Grid */}
           {filteredTestimonials.length === 0 ? (
             <div className="py-16 text-center mb-12">
-              <MessageSquareQuote className="mx-auto w-10 h-10 text-zinc-400 mb-2" />
+              <MessageSquareQuote className="mx-auto w-10 h-10 text-[#D3AE36]/60 mb-2" />
               <p className="text-[#1E2025] text-xs font-mono uppercase tracking-wider">
                 No endorsements match the selected category.
               </p>
@@ -1162,10 +1162,10 @@ export const Home = () => {
                           <Star key={i} size={15} fill="#D3AE36" className="text-[#D3AE36]" />
                         ))}
                       </div>
-                      <Quote className="text-zinc-300 w-8 h-8 group-hover:text-[#D3AE36]/40 transition-colors" />
+                      <Quote className="text-[#31394D] w-8 h-8 group-hover:text-[#D3AE36]/40 transition-colors" />
                     </div>
 
-                    <p className="text-zinc-800 text-sm leading-relaxed mb-6 italic font-light dark:text-[#F8F9FA]">
+                    <p className="text-[#1E2025] text-sm leading-relaxed mb-6 italic font-light dark:text-[#F8F9FA]">
                       "{t.content}"
                     </p>
 
@@ -1178,7 +1178,7 @@ export const Home = () => {
                   </div>
 
                   <div className="flex items-center gap-3.5 pt-4">
-                    <div className="w-11 h-11 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D3AE36] text-xs shrink-0">
+                    <div className="w-11 h-11 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D3AE36] text-xs shrink-0 bg-[#D3AE36]/10 border border-[#D3AE36]/30">
                       {t.avatarUrl ? (
                         <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
                       ) : (
@@ -1186,8 +1186,8 @@ export const Home = () => {
                       )}
                     </div>
                     <div className="overflow-hidden">
-                      <h5 className="text-zinc-900 font-bold text-sm truncate dark:text-[#F8F9FA]">{t.clientName}</h5>
-                      <p className="text-[#1E2025] text-xs truncate">{t.clientRole}</p>
+                      <h5 className="text-[#1E2025] font-bold text-sm truncate dark:text-[#F8F9FA]">{t.clientName}</h5>
+                      <p className="text-[#1E2025]/80 text-xs truncate dark:text-[#F8F9FA]/80">{t.clientRole}</p>
                       <span className="inline-block text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-0.5 font-bold truncate max-w-full">
                         {t.clientCompany}
                       </span>
@@ -1205,7 +1205,7 @@ export const Home = () => {
                 <ShieldCheck size={28} />
               </div>
               <div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
+                <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
                 <p className="text-xs text-[#1E2025] mt-0.5">All designs adhere to Ethiopian Building Code Standards (EBCS) and ERA Manuals.</p>
               </div>
             </div>
@@ -1231,14 +1231,14 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 ASTU Student Research & Technical Notes
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Technical Notes & <span className="text-[#D3AE36]">Research Papers.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 EBCS code evaluations, expansive black cotton soil mitigation, and hydraulic design notes.
               </p>
             </div>
-            <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-zinc-900 transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
+            <Link to="/insights" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-[#1E2025] transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
               Browse All Articles <ChevronRight size={16} />
             </Link>
           </div>
@@ -1255,7 +1255,7 @@ export const Home = () => {
                     <FileText size={24} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
-                  <h5 className="text-base font-bold text-zinc-900 group-hover:text-[#D3AE36] transition-colors mb-4 dark:text-[#F8F9FA]">{article.title}</h5>
+                  <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-4 dark:text-[#F8F9FA]">{article.title}</h5>
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#1E2025] group-hover:text-[#D3AE36] flex items-center gap-1 pt-4">
                   Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -1276,7 +1276,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Academic & Graduate Opportunities
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Have Inquiries? <span className="text-[#D3AE36]">Connect with Our Team!</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
@@ -1295,7 +1295,7 @@ export const Home = () => {
                 <Mail size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5 overflow-hidden">
-                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#F8F9FA]">Send an Email</h4>
+                <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">Send an Email</h4>
                 <p className="text-xs font-mono text-[#1E2025] truncate group-hover:text-[#D3AE36] transition-colors">lemmayezedlij21@gmail.com</p>
               </div>
             </a>
@@ -1309,7 +1309,7 @@ export const Home = () => {
                 <Phone size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#F8F9FA]">Call Direct</h4>
+                <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">Call Direct</h4>
                 <p className="text-xs font-mono text-[#1E2025] group-hover:text-[#D3AE36] transition-colors">+251 934 830 919</p>
               </div>
             </a>
@@ -1320,7 +1320,7 @@ export const Home = () => {
                 <MapPin size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5">
-                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#F8F9FA]">ASTU Main Campus</h4>
+                <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU Main Campus</h4>
                 <p className="text-xs font-mono text-[#1E2025]">School of Civil Eng & Architecture (EAT · UTC+3)</p>
               </div>
             </div>
@@ -1329,7 +1329,7 @@ export const Home = () => {
           {/* Full Consultation Trigger Banner */}
           <div className="py-10 text-center flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-900 mb-1.5 dark:text-[#F8F9FA]">Interested in Collaborating on Civil Engineering Projects?</h3>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#1E2025] mb-1.5 dark:text-[#F8F9FA]">Interested in Collaborating on Civil Engineering Projects?</h3>
               <p className="text-xs sm:text-sm text-[#1E2025]">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
             </div>
             <button
@@ -1351,7 +1351,7 @@ export const Home = () => {
       {/* INTRO VIDEO MODAL */}
       {isVideoModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-          <div className="relative w-full max-w-4xl bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] p-2 rounded-xl shadow-2xl">
+          <div className="relative w-full max-w-4xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] p-2 rounded-xl shadow-2xl">
             <button
               onClick={() => setIsVideoModalOpen(false)}
               className="absolute -top-10 right-0 text-[#F8F9FA] hover:text-[#D3AE36] transition-colors cursor-pointer"

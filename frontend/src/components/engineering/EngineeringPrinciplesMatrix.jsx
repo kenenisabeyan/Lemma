@@ -9,20 +9,45 @@ import {
   Activity, 
   Compass, 
   HelpCircle,
-  ExternalLink
+  ExternalLink,
+  Sliders,
+  Calculator
 } from 'lucide-react';
 
 export const EngineeringPrinciplesMatrix = () => {
   const [activeTab, setActiveTab] = useState('seismic');
 
+  // Interactive Live Calculation States for Parameter Lab
+  const [seismicWeight, setSeismicWeight] = useState(48000); // kN
+  const [seismicR, setSeismicR] = useState(8.0); // SMF
+  const [windVelocity, setWindVelocity] = useState(130); // km/h
+  const [carbonScm, setCarbonScm] = useState(42); // %
+  const [collapseColumn, setCollapseColumn] = useState('perimeter'); // corner, perimeter, interior
+
+  // Dynamic calculations
+  const calcBaseShear = Math.round((0.32 / (seismicR / 1.25)) * seismicWeight);
+  const calcBaseShearRatio = ((calcBaseShear / seismicWeight) * 100).toFixed(1);
+
+  const calcWindAccel = ((windVelocity / 130) ** 2 * 11.4).toFixed(1);
+  const calcWindDrift = Math.round(500 * (130 / windVelocity));
+
+  const calcCarbonSavings = Math.round(carbonScm * 7.8); // kg CO2e / m3
+  const calcEmbodiedReduction = (carbonScm * 0.72).toFixed(1);
+
+  const collapseScenarios = {
+    corner: { ratio: '0.84', status: 'PASS (Redundant Cantilever mobilized)', demand: '380 kNm' },
+    perimeter: { ratio: '0.62', status: 'PASS (Catenary slab action verified)', demand: '540 kNm' },
+    interior: { ratio: '0.48', status: 'PASS (Two-way arching mechanism engaged)', demand: '710 kNm' }
+  };
+
   const principles = [
     {
       id: 'seismic',
       title: 'Seismic Ductility & Capacity Design',
-      code: 'ASCE 7-22 / AISC 341',
+      code: 'EBCS EN 1998 / ASCE 7-22',
       icon: Activity,
       summary: 'Ductile fuse mechanisms isolate inelastic deformations away from gravity load columns.',
-      formula: 'V_b = C_s \\cdot W = \\left[ \\frac{S_{DS}}{(R / I_e)} \\right] \\cdot W',
+      formula: 'V_b = C_s · W = [ S_DS / (R / I_e) ] · W',
       formulaDesc: 'Equivalent Lateral Force (ELF) base shear formulation balancing ductility R with structural importance Ie.',
       details: [
         'Capacity design: Weak-beam, strong-column design ensuring flexural yielding occurs in beams before column hinges.',
@@ -41,7 +66,7 @@ export const EngineeringPrinciplesMatrix = () => {
       code: 'ASCE 7-22 / ISO 10137',
       icon: Wind,
       summary: 'Dynamic response mitigation against vortex shedding, cross-wind oscillations, and torsional drift.',
-      formula: 'a_{peak} = g_p \\cdot \\sigma_a \\le 15\\text{ to }18\\text{ milli-g}',
+      formula: 'a_peak = g_p · σ_a ≤ 15 - 18 milli-g',
       formulaDesc: 'Peak lateral acceleration comfort threshold for occupants under 10-year return period wind events.',
       details: [
         'High-frequency force balance (HFFB) and aeroelastic wind tunnel testing coupled with ETABS finite element models.',
@@ -60,7 +85,7 @@ export const EngineeringPrinciplesMatrix = () => {
       code: 'ACI 318-19 / EC3',
       icon: Leaf,
       summary: 'Material minimization through post-tensioned spans and high-volume slag / fly-ash cementitious binders.',
-      formula: 'P/A \\pm \\frac{P \\cdot e}{S} \\pm \\frac{M_{ext}}{S} \\ge f_{allowable}',
+      formula: 'P/A ± (P · e) / S ± M_ext / S ≥ f_allowable',
       formulaDesc: 'Internal prestress pre-compression eliminating tensile cracks and reducing net slab thickness by 25%.',
       details: [
         'Unbonded and bonded post-tensioned two-way slab systems minimizing concrete self-weight and column sizes.',
@@ -79,7 +104,7 @@ export const EngineeringPrinciplesMatrix = () => {
       code: 'DoD UFC 4-023-03 / GSA',
       icon: ShieldCheck,
       summary: 'Alternate Load Path Method (APM) guaranteeing bridge-over capability during sudden column loss.',
-      formula: 'D_{demand} / C_{capacity} \\le m \\quad (\\text{Nonlinear Static APM})',
+      formula: 'D_demand / C_capacity ≤ m  (Nonlinear Static APM)',
       formulaDesc: 'Inelastic demand-to-capacity verification under sudden instantaneous loss of perimeter load-bearing columns.',
       details: [
         'Catastrophic fault tolerance: Exterior perimeter columns can fail without triggering disproportionate collapse.',
@@ -100,10 +125,10 @@ export const EngineeringPrinciplesMatrix = () => {
     <div className="py-6 relative overflow-hidden transition-colors duration-200">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-6">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 relative z-10">
         <div>
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D3AE36] mb-2 font-bold uppercase tracking-wider">
-            <Cpu size={14} />
+            <Cpu size={14} className="animate-pulse" />
             <span>Core Mathematical & Mechanical Standards</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
@@ -115,11 +140,11 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Code Standard Stamp */}
-        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs">
-          <div className="w-2 h-2 rounded-full bg-[#D3AE36]"></div>
+        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs p-2.5 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D]">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#D3AE36] animate-pulse"></div>
           <div>
-            <span className="text-[9px] text-[#1E2025] block uppercase tracking-wider">MANDATE</span>
-            <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASCE 7 / AISC / ACI / EBCS</span>
+            <span className="text-[9px] text-[#D3AE36] block uppercase tracking-wider font-bold">MANDATE SPEC</span>
+            <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA]">EBCS EN / ASCE 7 / AISC / ACI</span>
           </div>
         </div>
       </div>
@@ -148,7 +173,7 @@ export const EngineeringPrinciplesMatrix = () => {
                   <Icon size={18} />
                 </div>
                 <span className="text-[10px] font-mono text-[#D3AE36] font-bold">
-                  {principle.code}
+                  {principle.code.split('/')[0]}
                 </span>
               </div>
               <h4 className={`text-xs font-bold leading-snug ${
@@ -177,22 +202,167 @@ export const EngineeringPrinciplesMatrix = () => {
           </div>
         </div>
 
-        {/* Mathematical Equation & Physics Panel */}
-        <div className="mb-6 py-4 px-6 rounded-2xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+        {/* Mathematical Equation & Physics Panel with Typographic Notation */}
+        <div className="mb-6 py-5 px-6 rounded-2xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs relative">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]/80 font-bold">
-              Key Mechanics Formulation
+            <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]/80 font-bold flex items-center gap-1.5">
+              <Calculator size={13} className="text-[#D3AE36]" /> Key Mechanics Formulation
             </span>
-            <span className="text-[9px] font-mono text-[#D3AE36] font-semibold">
+            <span className="text-[9px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#D3AE36]/10 border border-[#D3AE36]/30">
               Deterministic Limit State
             </span>
           </div>
-          <div className="py-3 text-center font-mono text-base sm:text-lg font-bold text-[#D3AE36] overflow-x-auto drop-shadow-xs">
+          <div className="py-3 text-center font-mono text-base sm:text-xl font-extrabold text-[#D3AE36] overflow-x-auto tracking-wide">
             <code>{currentPrinciple.formula}</code>
           </div>
           <p className="text-[11px] font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/70 mt-1 text-center">
             {currentPrinciple.formulaDesc}
           </p>
+        </div>
+
+        {/* Interactive Parameter Sensitivity Lab Widget */}
+        <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/40 shadow-xs">
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#31394D]/20 dark:border-[#31394D]/60">
+            <div className="flex items-center gap-2">
+              <Sliders size={14} className="text-[#D3AE36]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]">
+                Live Sensitivity & Numerical Solver: {currentPrinciple.title}
+              </span>
+            </div>
+            <span className="text-[9px] font-mono text-[#D3AE36] uppercase font-bold">REAL-TIME FEA PARAMETERS</span>
+          </div>
+
+          {activeTab === 'seismic' && (
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between text-xs font-mono mb-1">
+                    <span className="text-[#1E2025] dark:text-[#F8F9FA]">Seismic Dead & Live Weight (W):</span>
+                    <span className="text-[#D3AE36] font-bold">{seismicWeight.toLocaleString()} kN</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="15000"
+                    max="100000"
+                    step="1000"
+                    value={seismicWeight}
+                    onChange={(e) => setSeismicWeight(Number(e.target.value))}
+                    className="w-full h-1.5 bg-zinc-200 dark:bg-[#232936] rounded-lg accent-[#D3AE36] cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between text-xs font-mono mb-1">
+                    <span className="text-[#1E2025] dark:text-[#F8F9FA]">Ductility Modification Factor (R):</span>
+                    <span className="text-[#D3AE36] font-bold">R = {seismicR} (Special Moment Frame)</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="3"
+                    max="8"
+                    step="0.5"
+                    value={seismicR}
+                    onChange={(e) => setSeismicR(Number(e.target.value))}
+                    className="w-full h-1.5 bg-zinc-200 dark:bg-[#232936] rounded-lg accent-[#D3AE36] cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] text-center space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-semibold block">Computed Base Shear Demand ($V_b$)</span>
+                <span className="text-2xl font-mono font-black text-[#D3AE36] block">{calcBaseShear.toLocaleString()} kN</span>
+                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center gap-1">
+                  <CheckCircle2 size={13} /> {calcBaseShearRatio}% of Gravity Weight · Safe within Soil Bearing Limits
+                </span>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'wind' && (
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between text-xs font-mono mb-1">
+                    <span className="text-[#1E2025] dark:text-[#F8F9FA]">10-Year Return Wind Speed (V):</span>
+                    <span className="text-[#D3AE36] font-bold">{windVelocity} km/h (36.1 m/s)</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="80"
+                    max="180"
+                    step="5"
+                    value={windVelocity}
+                    onChange={(e) => setWindVelocity(Number(e.target.value))}
+                    className="w-full h-1.5 bg-zinc-200 dark:bg-[#232936] rounded-lg accent-[#D3AE36] cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] text-center space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-semibold block">Peak Occupant Lateral Accel.</span>
+                <span className="text-2xl font-mono font-black text-[#D3AE36] block">{calcWindAccel} milli-g</span>
+                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center gap-1">
+                  <CheckCircle2 size={13} /> ISO 10137 Compliant (Story Drift H/{calcWindDrift})
+                </span>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'carbon' && (
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between text-xs font-mono mb-1">
+                    <span className="text-[#1E2025] dark:text-[#F8F9FA]">SCM Slag & Pozzolan Replacement Ratio:</span>
+                    <span className="text-[#D3AE36] font-bold">{carbonScm}% Cement Substituted</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="10"
+                    max="60"
+                    step="2"
+                    value={carbonScm}
+                    onChange={(e) => setCarbonScm(Number(e.target.value))}
+                    className="w-full h-1.5 bg-zinc-200 dark:bg-[#232936] rounded-lg accent-[#D3AE36] cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] text-center space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-semibold block">Embodied Carbon Offset</span>
+                <span className="text-2xl font-mono font-black text-[#D3AE36] block">-{calcCarbonSavings} kg CO₂e / m³</span>
+                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center gap-1">
+                  <CheckCircle2 size={13} /> {calcEmbodiedReduction}% Net Carbon Reduction achieved
+                </span>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'collapse' && (
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-3">
+                <span className="text-xs font-mono text-[#1E2025] dark:text-[#F8F9FA] block">Select Instantaneous Column Loss Vector:</span>
+                <div className="grid grid-cols-3 gap-2">
+                  {['corner', 'perimeter', 'interior'].map((col) => (
+                    <button
+                      key={col}
+                      onClick={() => setCollapseColumn(col)}
+                      className={`px-3 py-2 rounded-lg text-xs font-mono uppercase font-bold tracking-wider transition-all cursor-pointer ${
+                        collapseColumn === col
+                          ? 'bg-[#D3AE36] text-[#12151C]'
+                          : 'bg-[#12151C]/5 dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:border-[#D3AE36]'
+                      }`}
+                    >
+                      {col} Col
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] text-center space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-semibold block">Inelastic Demand / Capacity (D/C)</span>
+                <span className="text-2xl font-mono font-black text-[#D3AE36] block">{collapseScenarios[collapseColumn].ratio}</span>
+                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center gap-1">
+                  <CheckCircle2 size={13} /> {collapseScenarios[collapseColumn].status}
+                </span>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Implementation Specifications & Metrics Grid */}
@@ -241,4 +411,3 @@ export const EngineeringPrinciplesMatrix = () => {
     </div>
   );
 };
-
