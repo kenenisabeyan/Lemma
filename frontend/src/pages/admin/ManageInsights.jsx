@@ -83,7 +83,7 @@ export const ManageInsights = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -91,11 +91,11 @@ export const ManageInsights = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Publications & Engineering Notes CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Technical Insights
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -105,7 +105,7 @@ export const ManageInsights = () => {
 
           <button
             onClick={handleOpenAdd}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2 shrink-0"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2 shrink-0"
           >
             <Plus size={16} /> Publish Article
           </button>
@@ -113,23 +113,23 @@ export const ManageInsights = () => {
 
         {/* Metric Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total Publications</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{insights.length}</span>
-              <BookOpen size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{insights.length}</span>
+              <BookOpen size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Technical Notes</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D4AF37]">
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D3AE36]">
                 {insights.filter(i => i.category === 'Technical Note').length || insights.length}
               </span>
-              <FileText size={18} className="text-[#D4AF37]" />
+              <FileText size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Status</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">Live</span>
@@ -139,7 +139,7 @@ export const ManageInsights = () => {
         </div>
 
         {/* Search & Category Filter Pills */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#232936] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
             {categories.map((cat) => (
               <button
@@ -147,8 +147,8 @@ export const ManageInsights = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_12px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_0_12px_rgba(211,174,54,0.35)]'
+                    : 'bg-[#12151C] text-[#9CA3AF] border border-[#333] hover:text-[#F8F9FA]'
                 }`}
               >
                 {cat}
@@ -163,16 +163,16 @@ export const ManageInsights = () => {
               placeholder="Search articles by title or excerpt..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-[#12151C] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#666] focus:border-[#D3AE36] focus:outline-none transition-colors font-mono"
             />
           </div>
         </div>
 
         {/* Articles List / Bento Cards */}
         {filteredInsights.length === 0 ? (
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333] p-12 text-center">
+          <div className="rounded-2xl bg-[#232936] border border-[#333] p-12 text-center">
             <FileText className="mx-auto w-12 h-12 text-[#9CA3AF]/40 mb-3" />
-            <h4 className="text-sm font-mono font-bold uppercase text-[#EAEAEA]">No publications found</h4>
+            <h4 className="text-sm font-mono font-bold uppercase text-[#F8F9FA]">No publications found</h4>
             <p className="text-xs text-[#9CA3AF] mt-1">Try another search filter or publish a new article.</p>
           </div>
         ) : (
@@ -180,19 +180,19 @@ export const ManageInsights = () => {
             {filteredInsights.map((item) => (
               <div 
                 key={item.id} 
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl"
+                className="group rounded-2xl bg-[#232936] border border-[#333]/80 p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:border-[#D3AE36]/50 transition-all duration-300 shadow-xl"
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="rounded-full bg-[#121417] border border-[#D4AF37]/40 px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#D4AF37] uppercase tracking-wider">
+                    <span className="rounded-full bg-[#12151C] border border-[#D3AE36]/40 px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#D3AE36] uppercase tracking-wider">
                       {item.category}
                     </span>
                     <span className="text-[10px] font-mono text-[#9CA3AF] flex items-center gap-1">
-                      <Clock size={11} className="text-[#D4AF37]" /> {item.readTime}
+                      <Clock size={11} className="text-[#D3AE36]" /> {item.readTime}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors leading-snug">
+                  <h3 className="text-lg font-bold text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors leading-snug">
                     {item.title}
                   </h3>
 
@@ -204,7 +204,7 @@ export const ManageInsights = () => {
                 <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
                   <button
                     onClick={() => handleOpenEdit(item)}
-                    className="rounded-xl p-2.5 bg-[#121417] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all shadow-sm"
+                    className="rounded-xl p-2.5 bg-[#12151C] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] hover:scale-105 active:scale-95 transition-all shadow-sm"
                     title="Edit Article"
                   >
                     <Edit2 size={14} />
@@ -241,7 +241,7 @@ export const ManageInsights = () => {
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
               placeholder="e.g. Non-Linear Pushover Analysis under ASCE 7-22 Seismic Provisions"
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
             />
           </div>
 
@@ -253,7 +253,7 @@ export const ManageInsights = () => {
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               >
                 <option value="Technical Note">Technical Note</option>
                 <option value="Code Compliance">Code Compliance</option>
@@ -270,7 +270,7 @@ export const ManageInsights = () => {
                 value={formData.readTime}
                 onChange={(e) => setFormData({ ...formData, readTime: e.target.value })}
                 placeholder="e.g. 6 min read"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
           </div>
@@ -285,7 +285,7 @@ export const ManageInsights = () => {
               value={formData.excerpt}
               onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
               placeholder="Brief summary displayed on article cards..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
             ></textarea>
           </div>
 
@@ -298,13 +298,13 @@ export const ManageInsights = () => {
               value={formData.content}
               onChange={(e) => setFormData({ ...formData, content: e.target.value })}
               placeholder="In-depth equations, engineering methodologies, and code references..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans leading-relaxed"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans leading-relaxed"
             ></textarea>
           </div>
 
           <button 
             type="submit" 
-            className="rounded-full bg-[#D4AF37] text-[#121417] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)]"
           >
             {editingId ? 'Update Technical Article' : 'Publish Technical Article'}
           </button>

@@ -17,7 +17,7 @@ export const BlueprintReveal = ({ children, className = '' }) => {
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible" xmlns="http://www.w3.org/2000/svg">
         <motion.path
           d="M 0,0 L 40,0 M 0,0 L 0,40"
-          stroke="#D4AF37"
+          stroke="#D3AE36"
           strokeWidth="2"
           fill="none"
           initial="hidden"
@@ -27,7 +27,7 @@ export const BlueprintReveal = ({ children, className = '' }) => {
         />
         <motion.path
           d="M 100%,0 L calc(100% - 40px),0 M 100%,0 L 100%,40"
-          stroke="#D4AF37"
+          stroke="#D3AE36"
           strokeWidth="2"
           fill="none"
           initial="hidden"

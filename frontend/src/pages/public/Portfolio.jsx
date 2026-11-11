@@ -107,26 +107,26 @@ export const Portfolio = () => {
   const spotlightProject = allProjects[spotlightIndex % allProjects.length];
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-[#12151C] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* CINEMATIC PORTFOLIO HERO SECTION                                          */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
         
         {/* Subtle Ambient Studio Lights (Wine & Gold) */}
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -145,11 +145,11 @@ export const Portfolio = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   Engineering Reality.{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
                     Built by
                   </span>
                   <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
+                  <span className="text-[#D3AE36] opacity-95 inline-block select-text">
                     ASTU Civil 5th Year.
                   </span>
                 </h1>
@@ -169,7 +169,7 @@ export const Portfolio = () => {
                 {/* Live Engineering KPI Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
@@ -181,7 +181,7 @@ export const Portfolio = () => {
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">ASTU</span>
+                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">ASTU</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export const Portfolio = () => {
                 {/* Primary Filled Pill Button */}
                 <a
                   href="#project-grid"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
                 >
                   <Filter size={15} />
                   <span>FILTER 25+ CAPSTONES</span>
@@ -207,9 +207,9 @@ export const Portfolio = () => {
                 {/* Secondary Pill Button */}
                 <a
                   href="#cad-inspector"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
-                  <Compass size={15} className="text-[#D4AF37]" />
+                  <Compass size={15} className="text-[#D3AE36]" />
                   <span>LAUNCH CAD INSPECTOR</span>
                 </a>
               </motion.div>
@@ -228,7 +228,7 @@ export const Portfolio = () => {
                 {/* Header ribbon */}
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Landmark Spotlight</span>
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -238,7 +238,7 @@ export const Portfolio = () => {
                         onClick={() => setSpotlightIndex(idx)}
                         className={`w-2 h-2 rounded-full transition-all ${
                           spotlightIndex === idx 
-                            ? 'w-6 bg-[#D4AF37]' 
+                            ? 'w-6 bg-[#D3AE36]' 
                             : 'bg-zinc-300 dark:bg-zinc-700 hover:bg-zinc-400'
                         }`}
                         title={`Select spotlight ${idx + 1}`}
@@ -260,7 +260,7 @@ export const Portfolio = () => {
                     {spotlightProject.category}
                   </div>
 
-                  <div className="absolute top-3 right-3 bg-[#D4AF37] text-zinc-950 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-extrabold uppercase shadow-sm">
+                  <div className="absolute top-3 right-3 bg-[#D3AE36] text-zinc-950 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-extrabold uppercase shadow-sm">
                     {spotlightProject.year}
                   </div>
 
@@ -269,7 +269,7 @@ export const Portfolio = () => {
                       {spotlightProject.title}
                     </h3>
                     <p className="text-zinc-300 text-xs font-mono flex items-center gap-1">
-                      <MapPin size={12} className="text-[#D4AF37]" />
+                      <MapPin size={12} className="text-[#D3AE36]" />
                       {spotlightProject.location}
                     </p>
                   </div>
@@ -287,17 +287,17 @@ export const Portfolio = () => {
                   <div className="flex items-center gap-2 pt-1">
                     <button
                       onClick={() => setSelectedProject(spotlightProject)}
-                      className="flex-1 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(212,175,55,0.3)] cursor-pointer"
+                      className="flex-1 rounded-xl bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(211,174,54,0.3)] cursor-pointer"
                     >
                       <span>Inspect Case Study</span>
                       <ArrowUpRight size={13} />
                     </button>
                     <button
                       onClick={() => setSpotlightIndex((prev) => (prev + 1) % allProjects.length)}
-                      className="rounded-xl border border-zinc-200 dark:border-white/10 hover:border-[#D4AF37] bg-white/80 dark:bg-white/5 p-2.5 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer"
+                      className="rounded-xl border border-zinc-200 dark:border-white/10 hover:border-[#D3AE36] bg-white/80 dark:bg-white/5 p-2.5 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer"
                       title="Next Landmark"
                     >
-                      <Sparkles size={16} className="text-[#D4AF37]" />
+                      <Sparkles size={16} className="text-[#D3AE36]" />
                     </button>
                   </div>
                 </div>
@@ -332,14 +332,14 @@ export const Portfolio = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#801834] dark:text-[#E84855]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                      ? 'text-[#D3AE36]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
                   }`}
                 >
                   <span>{cat}</span>
                   <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D4AF37] text-zinc-950 font-black' 
+                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
                       : 'text-zinc-400'
                   }`}>
                     {count}
@@ -357,7 +357,7 @@ export const Portfolio = () => {
               placeholder="Search capstone, RC frame, highway, soil..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -378,12 +378,12 @@ export const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {filteredProjects.length === 0 ? (
           <div className="py-24 text-center mb-20">
-            <HardHat className="w-12 h-12 text-[#D4AF37] mx-auto mb-4 opacity-75" />
+            <HardHat className="w-12 h-12 text-[#D3AE36] mx-auto mb-4 opacity-75" />
             <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No capstone projects match your search.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
+              className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
             >
               Reset Filters
             </button>
@@ -405,12 +405,12 @@ export const Portfolio = () => {
         {/* ======================================================================= */}
         <div id="cad-inspector" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Interactive Drawing <span className="text-[#801834] dark:text-[#E84855]">Dossier & FEA Inspector.</span>
+              Interactive Drawing <span className="text-[#D3AE36]">Dossier & FEA Inspector.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
               Examine capstone project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
@@ -425,7 +425,7 @@ export const Portfolio = () => {
         {/* ======================================================================= */}
         <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-left max-w-2xl">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-bold">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] mb-2 font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Available for Graduate Recruitment & Capstone Collaborations</span>
             </div>
@@ -438,7 +438,7 @@ export const Portfolio = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
             <span>Connect With Us</span>
             <ArrowUpRight size={15} />

@@ -95,14 +95,14 @@ export const WindTunnelSimulator = () => {
       {/* Header Banner */}
       <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4">
         <div>
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold">
+          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] font-semibold">
             <Wind size={14} className="animate-pulse" />
             <span>Boundary Layer Wind Tunnel Laboratory (BLWT)</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#54595F] tracking-tight">
-            High-Rise Wind Aerodynamics & <span className="text-[#D4AF37]">Vortex Shedding</span> Simulator
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#1E2025] tracking-tight">
+            High-Rise Wind Aerodynamics & <span className="text-[#D3AE36]">Vortex Shedding</span> Simulator
           </h3>
-          <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
             Simulate aerodynamic wind flow past skyscraper geometries. Evaluate boundary layer separation, across-wind lock-in frequencies, and ISO 10137 occupant acceleration limits.
           </p>
         </div>
@@ -112,8 +112,8 @@ export const WindTunnelSimulator = () => {
             onClick={() => setIsTunnelActive(!isTunnelActive)}
             className={`rounded-full px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 transition-all ${
               isTunnelActive
-                ? 'bg-zinc-200 text-[#54595F] hover:bg-[#D4AF37] hover:text-[#121417]'
-                : 'bg-[#D4AF37] text-[#121417] hover:bg-[#c49f2c]'
+                ? 'bg-zinc-200 text-[#1E2025] hover:bg-[#D3AE36] hover:text-[#12151C]'
+                : 'bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F]'
             }`}
           >
             {isTunnelActive ? (
@@ -134,8 +134,8 @@ export const WindTunnelSimulator = () => {
         
         {/* Left Column: Aerodynamic Shape Selection */}
         <div className="lg:col-span-5 space-y-4">
-          <label className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 font-semibold">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+          <label className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] flex items-center gap-2 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span>
             1. Select Skyscraper Cross-Section Geometry
           </label>
 
@@ -149,18 +149,18 @@ export const WindTunnelSimulator = () => {
                   onClick={() => setTowerShape(key)}
                   className={`p-3.5 rounded-xl text-left transition-all relative ${
                     isSelected
-                      ? 'bg-[#D4AF37]/15 ring-2 ring-[#D4AF37]'
-                      : 'hover:bg-zinc-100 text-[#54595F]'
+                      ? 'bg-[#D3AE36]/15 ring-2 ring-[#D3AE36]'
+                      : 'hover:bg-zinc-100 text-[#1E2025]'
                   }`}
                 >
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[10px] font-mono text-[#D4AF37] font-bold">Cd = {shp.dragCoeff}</span>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold">Cd = {shp.dragCoeff}</span>
                     <span className={`text-[8px] font-mono px-1.5 py-0.5 rounded font-bold ${shp.comfortPass ? 'text-emerald-700 bg-emerald-100' : 'text-rose-700 bg-rose-100'}`}>
                       {shp.comfortPass ? 'PASS' : 'EXCEED'}
                     </span>
                   </div>
-                  <h4 className="text-xs font-bold text-[#54595F] truncate">{shp.name}</h4>
-                  <span className="text-[9px] font-mono text-[#54595F]/75 block mt-0.5">{shp.vortexSeverity}</span>
+                  <h4 className="text-xs font-bold text-[#1E2025] truncate">{shp.name}</h4>
+                  <span className="text-[9px] font-mono text-[#1E2025]/75 block mt-0.5">{shp.vortexSeverity}</span>
                 </button>
               );
             })}
@@ -169,10 +169,10 @@ export const WindTunnelSimulator = () => {
           {/* Wind Velocity Slider */}
           <div className="py-3 space-y-2">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-[#54595F] flex items-center gap-1.5 font-semibold">
-                <Sliders size={13} className="text-[#D4AF37]" /> Gradient Wind Speed:
+              <span className="text-[#1E2025] flex items-center gap-1.5 font-semibold">
+                <Sliders size={13} className="text-[#D3AE36]" /> Gradient Wind Speed:
               </span>
-              <span className="text-[#D4AF37] font-bold">{windSpeedMph} mph ({Math.round(windSpeedMph * 1.60934)} km/h)</span>
+              <span className="text-[#D3AE36] font-bold">{windSpeedMph} mph ({Math.round(windSpeedMph * 1.60934)} km/h)</span>
             </div>
             <input 
               type="range"
@@ -181,9 +181,9 @@ export const WindTunnelSimulator = () => {
               step="5"
               value={windSpeedMph}
               onChange={(e) => setWindSpeedMph(parseInt(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
             />
-            <div className="flex justify-between text-[10px] font-mono text-[#54595F]/70">
+            <div className="flex justify-between text-[10px] font-mono text-[#1E2025]/70">
               <span>80 mph (10-Yr Return)</span>
               <span>120 mph (ASCE 7 Design)</span>
               <span>175 mph (Cat 5 Hurricane)</span>
@@ -195,26 +195,26 @@ export const WindTunnelSimulator = () => {
         <div className="lg:col-span-7 py-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-semibold">
                 Aerodynamic Boundary Layer Profile
               </span>
-              <span className="text-[10px] font-mono text-[#54595F]/75">ASCE 7-22 CHAPTER 31</span>
+              <span className="text-[10px] font-mono text-[#1E2025]/75">ASCE 7-22 CHAPTER 31</span>
             </div>
-            <h4 className="text-lg font-bold text-[#54595F] mb-2">{currentShape.name}</h4>
-            <p className="text-xs text-[#54595F] leading-relaxed mb-4">{currentShape.description}</p>
+            <h4 className="text-lg font-bold text-[#1E2025] mb-2">{currentShape.name}</h4>
+            <p className="text-xs text-[#1E2025] leading-relaxed mb-4">{currentShape.description}</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono">
             <div>
-              <span className="text-[#54595F]/75 block text-[10px] font-semibold">DRAG COEFFICIENT ($C_d$):</span>
-              <span className="text-[#D4AF37] font-bold text-sm">{currentShape.dragCoeff}</span>
+              <span className="text-[#1E2025]/75 block text-[10px] font-semibold">DRAG COEFFICIENT ($C_d$):</span>
+              <span className="text-[#D3AE36] font-bold text-sm">{currentShape.dragCoeff}</span>
             </div>
             <div>
-              <span className="text-[#54595F]/75 block text-[10px] font-semibold">STROUHAL NUMBER ($St$):</span>
-              <span className="text-[#54595F] font-bold text-sm">{currentShape.strouhal}</span>
+              <span className="text-[#1E2025]/75 block text-[10px] font-semibold">STROUHAL NUMBER ($St$):</span>
+              <span className="text-[#1E2025] font-bold text-sm">{currentShape.strouhal}</span>
             </div>
             <div>
-              <span className="text-[#54595F]/75 block text-[10px] font-semibold">VORTEX MITIGATION:</span>
+              <span className="text-[#1E2025]/75 block text-[10px] font-semibold">VORTEX MITIGATION:</span>
               <span className={`font-bold text-xs ${currentShape.comfortPass ? 'text-emerald-600' : 'text-rose-600'}`}>
                 {currentShape.comfortPass ? 'Optimized' : 'High Lock-In'}
               </span>
@@ -228,14 +228,14 @@ export const WindTunnelSimulator = () => {
       <div className="relative z-10 grid lg:grid-cols-12 gap-6 items-stretch my-6">
         
         {/* Left Column: Visual Wind Tunnel Canvas / SVG */}
-        <div className="lg:col-span-8 bg-[#121417] rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between min-h-[340px]">
+        <div className="lg:col-span-8 bg-[#12151C] rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between min-h-[340px]">
           
           <div className="flex items-center justify-between text-xs font-mono">
             <span className="flex items-center gap-2 text-zinc-300">
               <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
               Flow: <strong className="text-cyan-400">ATMOSPHERIC BOUNDARY LAYER</strong>
             </span>
-            <span className="text-[10px] font-mono text-[#D4AF37]">
+            <span className="text-[10px] font-mono text-[#D3AE36]">
               Velocity V = {windSpeedMph} mph · Gradient Height Z_g = 450m
             </span>
           </div>
@@ -262,26 +262,26 @@ export const WindTunnelSimulator = () => {
 
               {/* Tower Cross Section (Top-down view) */}
               {towerShape === 'square' && (
-                <rect x="175" y="70" width="60" height="60" fill="#181A1E" stroke="#EF4444" strokeWidth="2.5" />
+                <rect x="175" y="70" width="60" height="60" fill="#232936" stroke="#EF4444" strokeWidth="2.5" />
               )}
 
               {towerShape === 'chamfered' && (
                 <polygon 
                   points="185,70 225,70 235,80 235,120 225,130 185,130 175,120 175,80" 
-                  fill="#181A1E" 
-                  stroke="#D4AF37" 
+                  fill="#232936" 
+                  stroke="#D3AE36" 
                   strokeWidth="2.5" 
                 />
               )}
 
               {towerShape === 'elliptical' && (
-                <ellipse cx="205" cy="100" rx="35" ry="25" fill="#181A1E" stroke="#10B981" strokeWidth="2.5" />
+                <ellipse cx="205" cy="100" rx="35" ry="25" fill="#232936" stroke="#10B981" strokeWidth="2.5" />
               )}
 
               {towerShape === 'vented' && (
                 <g>
-                  <rect x="175" y="70" width="22" height="60" fill="#181A1E" stroke="#10B981" strokeWidth="2" />
-                  <rect x="213" y="70" width="22" height="60" fill="#181A1E" stroke="#10B981" strokeWidth="2" />
+                  <rect x="175" y="70" width="22" height="60" fill="#232936" stroke="#10B981" strokeWidth="2" />
+                  <rect x="213" y="70" width="22" height="60" fill="#232936" stroke="#10B981" strokeWidth="2" />
                   {/* Vent Slot in Middle */}
                   <line x1="197" y1="70" x2="213" y2="70" stroke="#06B6D4" strokeWidth="1" strokeDasharray="2 2" />
                   <line x1="197" y1="130" x2="213" y2="130" stroke="#06B6D4" strokeWidth="1" strokeDasharray="2 2" />
@@ -289,12 +289,12 @@ export const WindTunnelSimulator = () => {
               )}
 
               {/* Wake Vortices (Leeward Swirls) */}
-              <circle cx="270" cy="80" r="10" fill="none" stroke={towerShape === 'square' ? '#EF4444' : '#D4AF37'} strokeWidth="1" strokeDasharray="3 3" opacity="0.7" />
-              <circle cx="310" cy="120" r="14" fill="none" stroke={towerShape === 'square' ? '#EF4444' : '#D4AF37'} strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
-              <circle cx="355" cy="85" r="18" fill="none" stroke={towerShape === 'square' ? '#EF4444' : '#D4AF37'} strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
+              <circle cx="270" cy="80" r="10" fill="none" stroke={towerShape === 'square' ? '#EF4444' : '#D3AE36'} strokeWidth="1" strokeDasharray="3 3" opacity="0.7" />
+              <circle cx="310" cy="120" r="14" fill="none" stroke={towerShape === 'square' ? '#EF4444' : '#D3AE36'} strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
+              <circle cx="355" cy="85" r="18" fill="none" stroke={towerShape === 'square' ? '#EF4444' : '#D3AE36'} strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
 
               {/* Center Tower Label */}
-              <text x="205" y="104" textAnchor="middle" fill="#EAEAEA" fontSize="7" fontFamily="monospace" fontWeight="bold">
+              <text x="205" y="104" textAnchor="middle" fill="#F8F9FA" fontSize="7" fontFamily="monospace" fontWeight="bold">
                 TOWER CORE
               </text>
               <text x="50" y="20" fill="#06B6D4" fontSize="8" fontFamily="monospace">
@@ -314,7 +314,7 @@ export const WindTunnelSimulator = () => {
             </div>
             <div>
               <span className="text-zinc-400 block text-[10px]">TOTAL BASE SHEAR (V_wind):</span>
-              <span className="text-[#D4AF37] font-bold">{baseShearKn.toLocaleString()} kN</span>
+              <span className="text-[#D3AE36] font-bold">{baseShearKn.toLocaleString()} kN</span>
             </div>
           </div>
         </div>
@@ -323,19 +323,19 @@ export const WindTunnelSimulator = () => {
         <div className="lg:col-span-4 py-4 flex flex-col justify-between">
           
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] block mb-2 font-semibold">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] block mb-2 font-semibold">
               Occupant Comfort Criteria
             </span>
-            <h4 className="text-base font-bold text-[#54595F] mb-1">
+            <h4 className="text-base font-bold text-[#1E2025] mb-1">
               Top Floor Acceleration (a_max)
             </h4>
-            <p className="text-xs text-[#54595F] leading-relaxed mb-4">
+            <p className="text-xs text-[#1E2025] leading-relaxed mb-4">
               Wind turbulence causes upper stories to sway. ISO 10137 mandates peak horizontal acceleration remain under 15 milli-g to prevent occupant nausea.
             </p>
 
             <div className="py-2 space-y-3">
               <div className="flex justify-between items-center text-xs font-mono">
-                <span className="text-[#54595F]">Calculated Acceleration:</span>
+                <span className="text-[#1E2025]">Calculated Acceleration:</span>
                 <span className={`text-base font-bold ${passesISO ? 'text-emerald-600' : 'text-rose-600'}`}>
                   {topAccelerationMg} mg
                 </span>
@@ -349,9 +349,9 @@ export const WindTunnelSimulator = () => {
                 ></div>
               </div>
 
-              <div className="flex justify-between text-[10px] font-mono text-[#54595F]/75">
+              <div className="flex justify-between text-[10px] font-mono text-[#1E2025]/75">
                 <span>0 mg (Calm)</span>
-                <span className="text-[#D4AF37] font-semibold">15 mg (ISO Limit)</span>
+                <span className="text-[#D3AE36] font-semibold">15 mg (ISO Limit)</span>
                 <span>25+ mg</span>
               </div>
             </div>
@@ -364,12 +364,12 @@ export const WindTunnelSimulator = () => {
               {passesISO ? <CheckCircle2 size={16} className="shrink-0 mt-0.5" /> : <AlertTriangle size={16} className="shrink-0 mt-0.5" />}
               <div className="leading-snug">
                 <strong className="block mb-0.5">{passesISO ? 'ISO 10137 Compliant' : 'Exceeds Comfort Threshold'}</strong>
-                <span className="text-[11px] text-[#54595F]">{currentShape.comfortVerdict}</span>
+                <span className="text-[11px] text-[#1E2025]">{currentShape.comfortVerdict}</span>
               </div>
             </div>
 
-            <div className="pt-3 flex items-center justify-between text-[10px] font-mono text-[#54595F]">
-              <span className="flex items-center gap-1 text-[#D4AF37]">
+            <div className="pt-3 flex items-center justify-between text-[10px] font-mono text-[#1E2025]">
+              <span className="flex items-center gap-1 text-[#D3AE36]">
                 <ShieldCheck size={12} /> Stamped PE Review
               </span>
               <span>ETABS & RWDI TUNNEL VERIFIED</span>

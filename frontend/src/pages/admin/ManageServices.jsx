@@ -21,10 +21,10 @@ export const ManageServices = () => {
 
   const getServiceIcon = (iconName) => {
     switch (iconName) {
-      case 'Layers': return <Layers size={22} className="text-[#D4AF37]" />;
-      case 'ShieldCheck': return <ShieldCheck size={22} className="text-[#D4AF37]" />;
-      case 'Ruler': return <Ruler size={22} className="text-[#D4AF37]" />;
-      default: return <Building2 size={22} className="text-[#D4AF37]" />;
+      case 'Layers': return <Layers size={22} className="text-[#D3AE36]" />;
+      case 'ShieldCheck': return <ShieldCheck size={22} className="text-[#D3AE36]" />;
+      case 'Ruler': return <Ruler size={22} className="text-[#D3AE36]" />;
+      default: return <Building2 size={22} className="text-[#D3AE36]" />;
     }
   };
 
@@ -88,7 +88,7 @@ export const ManageServices = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -96,11 +96,11 @@ export const ManageServices = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Engineering Capabilities CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Engineering Services
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -110,7 +110,7 @@ export const ManageServices = () => {
 
           <button
             onClick={handleOpenAdd}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2 shrink-0"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2 shrink-0"
           >
             <Plus size={16} /> Add Service Module
           </button>
@@ -118,25 +118,25 @@ export const ManageServices = () => {
 
         {/* Metric Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total Service Modules</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{services.length}</span>
-              <Wrench size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{services.length}</span>
+              <Wrench size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Publicly Published</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">{services.length}</span>
               <Sparkles size={18} className="text-emerald-400" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Scope of Practice</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">Full Phase</span>
-              <span className="text-xs font-mono text-[#D4AF37] px-2 py-0.5 rounded-full bg-[#121417] border border-[#D4AF37]/30">Design-to-Site</span>
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">Full Phase</span>
+              <span className="text-xs font-mono text-[#D3AE36] px-2 py-0.5 rounded-full bg-[#12151C] border border-[#D3AE36]/30">Design-to-Site</span>
             </div>
           </div>
         </div>
@@ -151,19 +151,19 @@ export const ManageServices = () => {
             return (
               <div 
                 key={srv.id} 
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl"
+                className="group rounded-2xl bg-[#232936] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D3AE36]/50 transition-all duration-300 shadow-xl"
               >
                 <div>
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#121417] border border-[#D4AF37]/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                      <div className="w-12 h-12 rounded-xl bg-[#12151C] border border-[#D3AE36]/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
                         {getServiceIcon(srv.icon)}
                       </div>
                       <div>
-                        <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block">
+                        <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest block">
                           Module 0{index + 1}
                         </span>
-                        <h3 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors leading-snug">
+                        <h3 className="text-base font-bold text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors leading-snug">
                           {srv.title}
                         </h3>
                       </div>
@@ -176,10 +176,10 @@ export const ManageServices = () => {
 
                   {/* Bulleted feature chips */}
                   {features.length > 0 && (
-                    <div className="flex flex-col gap-1.5 bg-[#121417] p-3 rounded-xl border border-[#2D3137] mb-4">
+                    <div className="flex flex-col gap-1.5 bg-[#12151C] p-3 rounded-xl border border-[#2D3137] mb-4">
                       {features.slice(0, 3).map((feat, i) => (
-                        <div key={i} className="flex items-center gap-2 text-[11px] text-[#EAEAEA]">
-                          <CheckCircle2 size={12} className="text-[#D4AF37] shrink-0" />
+                        <div key={i} className="flex items-center gap-2 text-[11px] text-[#F8F9FA]">
+                          <CheckCircle2 size={12} className="text-[#D3AE36] shrink-0" />
                           <span className="truncate">{feat}</span>
                         </div>
                       ))}
@@ -194,7 +194,7 @@ export const ManageServices = () => {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => handleOpenEdit(srv)}
-                      className="rounded-xl p-2 bg-[#121417] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all shadow-sm"
+                      className="rounded-xl p-2 bg-[#12151C] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] hover:scale-105 active:scale-95 transition-all shadow-sm"
                       title="Edit Service"
                     >
                       <Edit2 size={13} />
@@ -232,7 +232,7 @@ export const ManageServices = () => {
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 placeholder="e.g. Seismic Retrofitting & Structural Assessment"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
               />
             </div>
 
@@ -243,7 +243,7 @@ export const ManageServices = () => {
               <select
                 value={formData.icon}
                 onChange={(e) => setFormData({ ...formData, icon: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               >
                 <option value="Building2">Building2 (High-Rise)</option>
                 <option value="Layers">Layers (Concrete / Steel)</option>
@@ -263,7 +263,7 @@ export const ManageServices = () => {
               value={formData.summary}
               onChange={(e) => setFormData({ ...formData, summary: e.target.value })}
               placeholder="High-level engineering overview displayed on cards..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
             ></textarea>
           </div>
 
@@ -276,7 +276,7 @@ export const ManageServices = () => {
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               placeholder="Full engineering scope, methods, and deliverables..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
             ></textarea>
           </div>
 
@@ -289,13 +289,13 @@ export const ManageServices = () => {
               value={formData.features}
               onChange={(e) => setFormData({ ...formData, features: e.target.value })}
               placeholder="FEA pushover analysis, Gravity load optimization, Code compliance"
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
             />
           </div>
 
           <button 
             type="submit" 
-            className="rounded-full bg-[#D4AF37] text-[#121417] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)]"
           >
             {editingId ? 'Update Service Module' : 'Publish Service Module'}
           </button>

@@ -75,14 +75,14 @@ export const BlueprintInspector = () => {
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D4AF37] mb-2 font-semibold">
-            <Compass size={13} className="text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-2 font-semibold">
+            <Compass size={13} className="text-[#D3AE36]" />
             Multi-Layer Engineering Drawing Inspector
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
             CAD Elevation & Stress Layer Discretization
           </h3>
-          <p className="text-xs sm:text-sm text-[#54595F] font-mono mt-1">
+          <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1">
             Toggle between architectural render, structural FEA wireframe, and rebar post-tensioning placement.
           </p>
         </div>
@@ -93,8 +93,8 @@ export const BlueprintInspector = () => {
             onClick={() => setActiveLayer('render')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'render'
-                ? 'bg-[#D4AF37] text-[#121417]'
-                : 'text-[#54595F] hover:text-zinc-900'
+                ? 'bg-[#D3AE36] text-[#12151C]'
+                : 'text-[#1E2025] hover:text-zinc-900'
             }`}
           >
             <Eye size={13} /> 1. Architecture
@@ -103,8 +103,8 @@ export const BlueprintInspector = () => {
             onClick={() => setActiveLayer('wireframe')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'wireframe'
-                ? 'bg-[#D4AF37] text-[#121417]'
-                : 'text-[#54595F] hover:text-zinc-900'
+                ? 'bg-[#D3AE36] text-[#12151C]'
+                : 'text-[#1E2025] hover:text-zinc-900'
             }`}
           >
             <Layers size={13} /> 2. FEA Wireframe
@@ -113,8 +113,8 @@ export const BlueprintInspector = () => {
             onClick={() => setActiveLayer('rebar')}
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'rebar'
-                ? 'bg-[#D4AF37] text-[#121417]'
-                : 'text-[#54595F] hover:text-zinc-900'
+                ? 'bg-[#D3AE36] text-[#12151C]'
+                : 'text-[#1E2025] hover:text-zinc-900'
             }`}
           >
             <Ruler size={13} /> 3. Rebar & PT
@@ -160,13 +160,13 @@ export const BlueprintInspector = () => {
               <svg viewBox="0 0 300 420" className="w-full h-full max-w-[260px] overflow-visible">
                 {/* Outrigger Trusses */}
                 <rect x="70" y="40" width="160" height="340" fill="none" stroke="#262A30" strokeWidth="1.5" />
-                <rect x="110" y="40" width="80" height="340" fill="#181A1E" stroke="#D4AF37" strokeWidth="2" />
+                <rect x="110" y="40" width="80" height="340" fill="#232936" stroke="#D3AE36" strokeWidth="2" />
                 
                 {/* Horizontal Belt Trusses */}
-                <line x1="70" y1="130" x2="230" y2="130" stroke="#D4AF37" strokeWidth="2.5" />
-                <line x1="70" y1="240" x2="230" y2="240" stroke="#D4AF37" strokeWidth="2.5" />
-                <line x1="70" y1="130" x2="110" y2="170" stroke="#D4AF37" strokeWidth="1.5" strokeDasharray="3 3" />
-                <line x1="230" y1="130" x2="190" y2="170" stroke="#D4AF37" strokeWidth="1.5" strokeDasharray="3 3" />
+                <line x1="70" y1="130" x2="230" y2="130" stroke="#D3AE36" strokeWidth="2.5" />
+                <line x1="70" y1="240" x2="230" y2="240" stroke="#D3AE36" strokeWidth="2.5" />
+                <line x1="70" y1="130" x2="110" y2="170" stroke="#D3AE36" strokeWidth="1.5" strokeDasharray="3 3" />
+                <line x1="230" y1="130" x2="190" y2="170" stroke="#D3AE36" strokeWidth="1.5" strokeDasharray="3 3" />
                 
                 {/* Floor Slabs */}
                 {[70, 100, 160, 190, 220, 270, 310, 340].map((y) => (
@@ -175,7 +175,7 @@ export const BlueprintInspector = () => {
 
                 {/* Axial Load Compression Vectors */}
                 <line x1="150" y1="45" x2="150" y2="375" stroke="#10B981" strokeWidth="1.5" strokeDasharray="4 4" />
-                <text x="150" y="30" textAnchor="middle" fill="#D4AF37" fontSize="8" fontFamily="monospace">ETABS WIREFRAME DISCRETIZATION</text>
+                <text x="150" y="30" textAnchor="middle" fill="#D3AE36" fontSize="8" fontFamily="monospace">ETABS WIREFRAME DISCRETIZATION</text>
               </svg>
             </motion.div>
           )}
@@ -186,7 +186,7 @@ export const BlueprintInspector = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 bg-[#0B0C0E] p-8 flex items-center justify-center"
+              className="absolute inset-0 bg-[#12151C] p-8 flex items-center justify-center"
             >
               <div className="absolute inset-0 bg-grid-pattern opacity-15"></div>
               
@@ -195,9 +195,9 @@ export const BlueprintInspector = () => {
                 <rect x="90" y="50" width="120" height="320" fill="none" stroke="#F59E0B" strokeWidth="1.5" strokeDasharray="2 2" />
                 {[70, 100, 130, 160, 190, 220, 250, 280, 310, 340].map((y) => (
                   <g key={y}>
-                    <line x1="90" y1={y} x2="210" y2={y} stroke="#D4AF37" strokeWidth="2" />
-                    <circle cx="95" cy={y} r="2.5" fill="#D4AF37" />
-                    <circle cx="205" cy={y} r="2.5" fill="#D4AF37" />
+                    <line x1="90" y1={y} x2="210" y2={y} stroke="#D3AE36" strokeWidth="2" />
+                    <circle cx="95" cy={y} r="2.5" fill="#D3AE36" />
+                    <circle cx="205" cy={y} r="2.5" fill="#D3AE36" />
                   </g>
                 ))}
                 {/* Post tensioning parabolic tendon */}
@@ -218,8 +218,8 @@ export const BlueprintInspector = () => {
                   style={{ top: h.y, left: h.x, transform: 'translate(-50%, -50%)' }}
                   className={`group/btn absolute flex items-center justify-center rounded-full transition-all duration-300 ${
                     isSelected
-                      ? 'w-9 h-9 bg-[#D4AF37] text-[#121417] scale-110'
-                      : 'w-7 h-7 bg-white text-[#D4AF37] hover:scale-125'
+                      ? 'w-9 h-9 bg-[#D3AE36] text-[#12151C] scale-110'
+                      : 'w-7 h-7 bg-white text-[#D3AE36] hover:scale-125'
                   }`}
                   title={h.title}
                 >
@@ -235,7 +235,7 @@ export const BlueprintInspector = () => {
           {/* Technical Corner Stamp Block */}
           <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[9px] font-mono text-zinc-300 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl z-20">
             <span>DRAWING: S-104 (SCHEMATIC ELEVATION)</span>
-            <span className="text-[#D4AF37] font-bold">CLICK NODES 1-4 TO INSPECT</span>
+            <span className="text-[#D3AE36] font-bold">CLICK NODES 1-4 TO INSPECT</span>
             <span>SCALE: 1:500</span>
           </div>
 
@@ -246,7 +246,7 @@ export const BlueprintInspector = () => {
           
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="text-[#D4AF37] text-xs font-mono font-bold uppercase tracking-wider">
+              <span className="text-[#D3AE36] text-xs font-mono font-bold uppercase tracking-wider">
                 Inspection Node #{currentHotspot.id}
               </span>
               <span className="text-emerald-700 font-mono font-bold text-xs bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
@@ -258,11 +258,11 @@ export const BlueprintInspector = () => {
               {currentHotspot.title}
             </h4>
 
-            <div className="text-xs font-mono text-[#D4AF37] mb-4 font-semibold">
+            <div className="text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               Spec: <span className="text-zinc-800">{currentHotspot.spec}</span>
             </div>
 
-            <p className="text-xs text-[#54595F] leading-relaxed mb-6">
+            <p className="text-xs text-[#1E2025] leading-relaxed mb-6">
               {currentHotspot.description}
             </p>
           </div>
@@ -270,25 +270,25 @@ export const BlueprintInspector = () => {
           {/* Technical Details Grid */}
           <div className="flex flex-col gap-3 font-mono text-xs">
             <div className="py-2 flex justify-between items-center">
-              <span className="text-[#54595F] text-[10px] uppercase font-semibold">Design Capacity</span>
+              <span className="text-[#1E2025] text-[10px] uppercase font-semibold">Design Capacity</span>
               <span className="text-zinc-900 font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.capacity}
               </span>
             </div>
 
             <div className="py-2 flex justify-between items-center">
-              <span className="text-[#54595F] text-[10px] uppercase font-semibold">Compliance Code</span>
-              <span className="text-[#D4AF37] font-bold text-right text-[11px] truncate max-w-[200px]">
+              <span className="text-[#1E2025] text-[10px] uppercase font-semibold">Compliance Code</span>
+              <span className="text-[#D3AE36] font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.code}
               </span>
             </div>
 
             {/* ASTU SoCEA Seal */}
-            <div className="pt-4 flex items-center justify-between text-[11px] text-[#54595F]">
+            <div className="pt-4 flex items-center justify-between text-[11px] text-[#1E2025]">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck size={14} className="text-[#D4AF37]" /> ASTU SoCEA Capstone Detail
+                <ShieldCheck size={14} className="text-[#D3AE36]" /> ASTU SoCEA Capstone Detail
               </span>
-              <span className="text-[#D4AF37] font-bold">EBCS EN VERIFIED</span>
+              <span className="text-[#D3AE36] font-bold">EBCS EN VERIFIED</span>
             </div>
           </div>
 

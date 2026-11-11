@@ -27,26 +27,26 @@ export const About = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-[#12151C] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC ABOUT & CREDENTIALS HERO SECTION                             */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
 
         {/* Subtle Ambient Studio Lights */}
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -62,7 +62,7 @@ export const About = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · 5th Year Graduating Class of 2026
                 </span>
@@ -77,11 +77,11 @@ export const About = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   Engineered for Ethiopia.{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
                     Grounded
                   </span>
                   <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
+                  <span className="text-[#D3AE36] opacity-95 inline-block select-text">
                     in ASTU Excellence.
                   </span>
                 </h1>
@@ -101,21 +101,21 @@ export const About = () => {
                 {/* Authority Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 font-mono text-xs">
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
-                    <GraduationCap size={16} className="text-[#D4AF37] shrink-0" />
+                    <GraduationCap size={16} className="text-[#D3AE36] shrink-0" />
                     <div>
                       <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">ASTU SoCEA</span>
                       <span className="text-[9px] text-zinc-500">B.Sc. Civil Eng. 2026</span>
                     </div>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
-                    <ShieldCheck size={16} className="text-[#D4AF37] shrink-0" />
+                    <ShieldCheck size={16} className="text-[#D3AE36] shrink-0" />
                     <div>
                       <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">100% Defense Ready</span>
                       <span className="text-[9px] text-zinc-500">Capstone Excellence</span>
                     </div>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
-                    <Building2 size={16} className="text-[#D4AF37] shrink-0" />
+                    <Building2 size={16} className="text-[#D3AE36] shrink-0" />
                     <div>
                       <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">25+ Capstone Projects</span>
                       <span className="text-[9px] text-zinc-500">RC, Highway & Soils</span>
@@ -134,7 +134,7 @@ export const About = () => {
                 {/* Primary Filled Pill Button */}
                 <a
                   href="#practical-construction"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
                 >
                   <HardHat size={16} />
                   <span>EXPLORE PRACTICAL SITE WORK</span>
@@ -144,9 +144,9 @@ export const About = () => {
                 {/* Secondary Flat Pill Button */}
                 <button
                   onClick={() => navigate('/resources')}
-                  className="rounded-full text-zinc-900 dark:text-zinc-100 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-900 dark:text-zinc-100 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
-                  <Download size={14} className="text-[#D4AF37]" />
+                  <Download size={14} className="text-[#D3AE36]" />
                   <span>DOWNLOAD DOSSIER (PDF)</span>
                 </button>
               </motion.div>
@@ -163,11 +163,11 @@ export const About = () => {
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">25+</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">25+</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Structural Projects</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">100%</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">ASTU SoCEA Brotherhood</span>
                 </div>
               </motion.div>
@@ -189,7 +189,7 @@ export const About = () => {
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">ASTU SoCEA Candidate</span>
                   </div>
-                  <span className="text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider bg-amber-500/10 px-2 py-0.5 rounded-full border border-[#D4AF37]/30">
+                  <span className="text-[10px] text-[#D3AE36] font-bold uppercase tracking-wider bg-amber-500/10 px-2 py-0.5 rounded-full border border-[#D3AE36]/30">
                     Class of 2026
                   </span>
                 </div>
@@ -204,13 +204,13 @@ export const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
                   {/* Stamp badge */}
-                  <div className="absolute top-4 right-4 bg-white/95 dark:bg-zinc-900/90 border border-[#D4AF37] px-3.5 py-1 text-[11px] font-mono font-bold text-[#801834] dark:text-[#E84855] uppercase tracking-wider rounded-full shadow-md backdrop-blur-md">
+                  <div className="absolute top-4 right-4 bg-white/95 dark:bg-zinc-900/90 border border-[#D3AE36] px-3.5 py-1 text-[11px] font-mono font-bold text-[#D3AE36] uppercase tracking-wider rounded-full shadow-md backdrop-blur-md">
                     ASTU/SoCEA/2026
                   </div>
 
                   {/* Bottom Portrait Caption */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="flex items-center gap-1.5 text-xs font-mono text-[#D4AF37] mb-1">
+                    <div className="flex items-center gap-1.5 text-xs font-mono text-[#D3AE36] mb-1">
                       <ShieldCheck size={14} />
                       <span>ASTU Verified Candidate</span>
                     </div>
@@ -223,7 +223,7 @@ export const About = () => {
                 <div className="pt-3 flex items-center justify-between gap-3">
                   <a
                     href="#practical-construction"
-                    className="flex-1 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(212,175,55,0.3)] text-center cursor-pointer"
+                    className="flex-1 rounded-xl bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(211,174,54,0.3)] text-center cursor-pointer"
                   >
                     <span>View Practical Construction Work</span>
                     <ArrowUpRight size={13} />
@@ -247,8 +247,8 @@ export const About = () => {
         
         <div className="mb-24">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-bold">Core Academic & Field Philosophy</span>
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-bold">Core Academic & Field Philosophy</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-zinc-100 mb-6 leading-tight max-w-3xl">
             Precision Engineering Meets Ethiopian Infrastructure
@@ -267,12 +267,12 @@ export const About = () => {
         {/* 3. SOFTWARE & FEA PROFICIENCY                                           */}
         {/* ======================================================================= */}
         <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-3 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             Technical Toolkit & Simulation
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
-            Software & <span className="text-[#801834] dark:text-[#E84855]">FEA Numerical Modeling.</span>
+            Software & <span className="text-[#D3AE36]">FEA Numerical Modeling.</span>
           </h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -283,14 +283,14 @@ export const About = () => {
               >
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-mono group-hover:text-[#D4AF37] transition-colors">{soft.name}</h4>
-                    <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
+                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-mono group-hover:text-[#D3AE36] transition-colors">{soft.name}</h4>
+                    <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
                       {soft.level}
                     </span>
                   </div>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{soft.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500 group-hover:text-[#D4AF37] transition-colors">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500 group-hover:text-[#D3AE36] transition-colors">
                   FEA Precision Verified
                 </div>
               </div>
@@ -302,20 +302,20 @@ export const About = () => {
         {/* 4. CAREER TIMELINE                                                      */}
         {/* ======================================================================= */}
         <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-3 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             Professional Journey & Track Record
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-12">
-            Academic & Field <span className="text-[#801834] dark:text-[#E84855]">Progression.</span>
+            Academic & Field <span className="text-[#D3AE36]">Progression.</span>
           </h3>
 
           <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-white/10 pl-8 ml-4">
             {CAREER_TIMELINE.map((item, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform shadow-xs"></div>
+                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
                 <div className="py-2 transition-all">
-                  <span className="inline-block text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-2">
+                  <span className="inline-block text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider mb-2">
                     {item.year}
                   </span>
                   <h4 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h4>
@@ -331,22 +331,22 @@ export const About = () => {
         {/* 5. LICENSURE & BOARD CERTIFICATIONS                                     */}
         {/* ======================================================================= */}
         <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-3 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             Academic Honors & Technical Certifications
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
-            Academic Credentials & <span className="text-[#801834] dark:text-[#E84855]">Certifications.</span>
+            Academic Credentials & <span className="text-[#D3AE36]">Certifications.</span>
           </h3>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
               <div key={index} className="py-4 flex items-start gap-4 transition-all group">
-                <div className="text-[#D4AF37] shrink-0 pt-1">
+                <div className="text-[#D3AE36] shrink-0 pt-1">
                   <Award size={24} />
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-1 group-hover:text-[#D4AF37] transition-colors">{cert.title}</h4>
+                  <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-1 group-hover:text-[#D3AE36] transition-colors">{cert.title}</h4>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{cert.body}</p>
                 </div>
               </div>
@@ -359,12 +359,12 @@ export const About = () => {
         {/* ======================================================================= */}
         <div id="practical-construction" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               On-Site Practical Construction &amp; Internship Experience
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Practical Construction <span className="text-[#801834] dark:text-[#E84855]">&amp; Field Engineering.</span>
+              Practical Construction <span className="text-[#D3AE36]">&amp; Field Engineering.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
               Real-world site experience during university-industry internships at Oromia Construction Corporation (OCC) and MIDROC. Bridging classroom calculations with hands-on site execution.
@@ -375,14 +375,14 @@ export const About = () => {
             <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D4AF37]">
+                  <div className="text-[#D3AE36]">
                     <CheckCircle2 size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
                     EBCS / ASTM
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Concrete Casting &amp; Slump Testing
                 </h4>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -397,14 +397,14 @@ export const About = () => {
             <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D4AF37]">
+                  <div className="text-[#D3AE36]">
                     <HardHat size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
                     Site Supervision
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Rebar Detailing &amp; Formwork Plumb
                 </h4>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -419,14 +419,14 @@ export const About = () => {
             <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D4AF37]">
+                  <div className="text-[#D3AE36]">
                     <Compass size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
                     Field Surveying
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Total Station &amp; Level Setting Out
                 </h4>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -441,14 +441,14 @@ export const About = () => {
             <div className="py-4 flex flex-col justify-between transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D4AF37]">
+                  <div className="text-[#D3AE36]">
                     <Layers size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase">
+                  <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
                     ERA Specifications
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D4AF37] transition-colors">
+                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Earthworks &amp; Road Compaction
                 </h4>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -467,7 +467,7 @@ export const About = () => {
         {/* ======================================================================= */}
         <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-left max-w-2xl">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-bold">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] mb-2 font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Available for Graduate Engagements & Capstone Defense</span>
             </div>
@@ -480,7 +480,7 @@ export const About = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
             <span>Connect With Us</span>
             <ArrowUpRight size={15} />

@@ -69,7 +69,7 @@ export const ManageInquiries = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -77,11 +77,11 @@ export const ManageInquiries = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               Consultation CRM & Client Inquiries
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Consultation Inquiries
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -92,38 +92,38 @@ export const ManageInquiries = () => {
 
         {/* Metric Stats Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total Inquiries</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{inquiries.length}</span>
-              <Inbox size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{inquiries.length}</span>
+              <Inbox size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">New Action Required</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">{newCount}</span>
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">In Review</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-amber-400">{inReviewCount}</span>
               <Clock size={18} className="text-amber-400" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Responded</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#9CA3AF]">{respondedCount}</span>
-              <CheckCircle2 size={18} className="text-[#D4AF37]" />
+              <CheckCircle2 size={18} className="text-[#D3AE36]" />
             </div>
           </div>
         </div>
 
         {/* Filter Pills + Search */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#232936] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
             {statuses.map((st) => (
               <button
@@ -131,8 +131,8 @@ export const ManageInquiries = () => {
                 onClick={() => setSelectedStatus(st)}
                 className={`rounded-full px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                   selectedStatus === st
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_12px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_0_12px_rgba(211,174,54,0.35)]'
+                    : 'bg-[#12151C] text-[#9CA3AF] border border-[#333] hover:text-[#F8F9FA]'
                 }`}
               >
                 {st}
@@ -147,16 +147,16 @@ export const ManageInquiries = () => {
               placeholder="Search by client, email, message..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-[#12151C] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#666] focus:border-[#D3AE36] focus:outline-none transition-colors font-mono"
             />
           </div>
         </div>
 
         {/* Inquiries Cards */}
         {filteredInquiries.length === 0 ? (
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333] p-12 text-center">
+          <div className="rounded-2xl bg-[#232936] border border-[#333] p-12 text-center">
             <Inbox className="mx-auto w-12 h-12 text-[#9CA3AF]/40 mb-3" />
-            <h4 className="text-sm font-mono font-bold uppercase text-[#EAEAEA]">No consultation records found</h4>
+            <h4 className="text-sm font-mono font-bold uppercase text-[#F8F9FA]">No consultation records found</h4>
             <p className="text-xs text-[#9CA3AF] mt-1">All incoming project inquiries from the contact page will appear here.</p>
           </div>
         ) : (
@@ -164,33 +164,33 @@ export const ManageInquiries = () => {
             {filteredInquiries.map((inq) => (
               <div 
                 key={inq.id} 
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col gap-5 hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl"
+                className="group rounded-2xl bg-[#232936] border border-[#333]/80 p-6 flex flex-col gap-5 hover:border-[#D3AE36]/50 transition-all duration-300 shadow-xl"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#26282D] pb-5">
                   <div className="flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-[#121417] border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] font-mono font-bold text-sm shadow-md">
+                    <div className="w-11 h-11 rounded-xl bg-[#12151C] border border-[#D3AE36]/50 flex items-center justify-center text-[#D3AE36] font-mono font-bold text-sm shadow-md">
                       {inq.name ? inq.name.substring(0, 2).toUpperCase() : 'IN'}
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <h3 className="text-base font-bold text-[#EAEAEA]">{inq.name}</h3>
-                        <span className="rounded-full bg-[#121417] border border-[#D4AF37]/30 text-[#D4AF37] px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase">
+                        <h3 className="text-base font-bold text-[#F8F9FA]">{inq.name}</h3>
+                        <span className="rounded-full bg-[#12151C] border border-[#D3AE36]/30 text-[#D3AE36] px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase">
                           {inq.projectType || 'General Consultation'}
                         </span>
                       </div>
                       <div className="text-xs text-[#9CA3AF] flex flex-wrap items-center gap-4 mt-1 font-mono">
                         <button
                           onClick={() => handleCopyEmail(inq.id, inq.email)}
-                          className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-colors"
+                          className="flex items-center gap-1.5 hover:text-[#D3AE36] transition-colors"
                           title="Copy Email"
                         >
-                          <Mail size={12} className="text-[#D4AF37]" />
+                          <Mail size={12} className="text-[#D3AE36]" />
                           <span>{inq.email}</span>
                           {copiedId === inq.id && <span className="text-emerald-400 text-[10px]">Copied!</span>}
                         </button>
                         {inq.phone && (
                           <span className="flex items-center gap-1.5">
-                            <Phone size={12} className="text-[#D4AF37]" />
+                            <Phone size={12} className="text-[#D3AE36]" />
                             <span>{inq.phone}</span>
                           </span>
                         )}
@@ -208,7 +208,7 @@ export const ManageInquiries = () => {
                           ? 'bg-emerald-950/60 text-emerald-400 border-emerald-500/50 shadow-[0_0_10px_rgba(52,211,153,0.15)]' 
                           : inq.status === 'IN_REVIEW'
                           ? 'bg-amber-950/60 text-amber-400 border-amber-500/50'
-                          : 'bg-[#121417] text-[#9CA3AF] border-[#333]'
+                          : 'bg-[#12151C] text-[#9CA3AF] border-[#333]'
                       }`}
                     >
                       <option value="NEW">Status: NEW</option>
@@ -228,11 +228,11 @@ export const ManageInquiries = () => {
 
                 <div>
                   {inq.subject && (
-                    <div className="text-xs font-mono font-bold text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <div className="text-xs font-mono font-bold text-[#D3AE36] uppercase tracking-wider mb-2">
                       Subject: {inq.subject}
                     </div>
                   )}
-                  <p className="text-xs text-[#EAEAEA] bg-[#121417] p-4 rounded-xl border border-[#2D3137] leading-relaxed font-sans">
+                  <p className="text-xs text-[#F8F9FA] bg-[#12151C] p-4 rounded-xl border border-[#2D3137] leading-relaxed font-sans">
                     {inq.message}
                   </p>
                 </div>

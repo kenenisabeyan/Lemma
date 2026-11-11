@@ -109,14 +109,14 @@ export const EngineeringGlossary = () => {
       {/* Header */}
       <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6">
         <div>
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold">
+          <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] font-bold">
             <BookOpen size={14} className="animate-pulse" />
             <span>Authoritative Structural Engineering Knowledge Base</span>
           </div>
           <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight">
-            Structural Engineering Glossary & <span className="text-[#D4AF37]">Code Formula</span> Reference
+            Structural Engineering Glossary & <span className="text-[#D3AE36]">Code Formula</span> Reference
           </h3>
-          <p className="text-xs sm:text-sm text-[#54595F] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
             Plain-English explanations, governing mathematical formulas, and legal building code citations for architects, developers, and project teams.
           </p>
         </div>
@@ -129,7 +129,7 @@ export const EngineeringGlossary = () => {
             placeholder="Search formulas or terms..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-transparent border-b border-zinc-300 focus:border-[#D4AF37] text-xs text-zinc-900 placeholder:text-zinc-400 pl-6 pr-4 py-2 outline-none font-mono transition-colors"
+            className="w-full bg-transparent border-b border-zinc-300 focus:border-[#D3AE36] text-xs text-zinc-900 placeholder:text-zinc-400 pl-6 pr-4 py-2 outline-none font-mono transition-colors"
           />
         </div>
       </div>
@@ -142,8 +142,8 @@ export const EngineeringGlossary = () => {
             onClick={() => setActiveCategory(cat)}
             className={`pb-1 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeCategory === cat
-                ? 'text-[#D4AF37] border-b-2 border-[#D4AF37]'
-                : 'text-[#54595F] hover:text-zinc-900 border-b-2 border-transparent'
+                ? 'text-[#D3AE36] border-b-2 border-[#D3AE36]'
+                : 'text-[#1E2025] hover:text-zinc-900 border-b-2 border-transparent'
             }`}
           >
             {cat}
@@ -163,25 +163,25 @@ export const EngineeringGlossary = () => {
               <div>
                 <div className="flex justify-between items-start gap-3 mb-2">
                   <div>
-                    <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-1 font-bold">
+                    <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-1 font-bold">
                       {item.category}
                     </span>
-                    <h4 className="text-base font-bold text-zinc-900 hover:text-[#D4AF37] transition-colors">
+                    <h4 className="text-base font-bold text-zinc-900 hover:text-[#D3AE36] transition-colors">
                       {item.term}
                     </h4>
                   </div>
-                  <span className="text-[10px] font-mono text-[#D4AF37] shrink-0 font-bold">
+                  <span className="text-[10px] font-mono text-[#D3AE36] shrink-0 font-bold">
                     {item.code.split(' ')[0]}
                   </span>
                 </div>
 
                 {/* Formula Callout */}
-                <div className="py-2 font-mono text-xs text-[#D4AF37] font-bold flex items-center justify-between">
+                <div className="py-2 font-mono text-xs text-[#D3AE36] font-bold flex items-center justify-between">
                   <span>{item.formula}</span>
-                  <span className="text-[9px] text-[#54595F]/75 uppercase">{item.code}</span>
+                  <span className="text-[9px] text-[#1E2025]/75 uppercase">{item.code}</span>
                 </div>
 
-                <p className="text-xs text-[#54595F] leading-relaxed mb-3">
+                <p className="text-xs text-[#1E2025] leading-relaxed mb-3">
                   {item.summary}
                 </p>
 
@@ -190,11 +190,11 @@ export const EngineeringGlossary = () => {
                   <div className="mt-4 pt-3 space-y-3 animate-in fade-in duration-200 text-xs">
                     <div>
                       <strong className="text-zinc-900 block mb-1">Engineering Mechanics:</strong>
-                      <p className="text-[#54595F] leading-relaxed">{item.explanation}</p>
+                      <p className="text-[#1E2025] leading-relaxed">{item.explanation}</p>
                     </div>
                     <div className="py-2 text-[11px]">
-                      <strong className="text-[#D4AF37] block mb-0.5 font-bold">Practical Impact on Job Site:</strong>
-                      <p className="text-[#54595F] leading-relaxed">{item.significance}</p>
+                      <strong className="text-[#D3AE36] block mb-0.5 font-bold">Practical Impact on Job Site:</strong>
+                      <p className="text-[#1E2025] leading-relaxed">{item.significance}</p>
                     </div>
                   </div>
                 )}
@@ -204,11 +204,11 @@ export const EngineeringGlossary = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedTerm(isExpanded ? null : item.term)}
-                  className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] hover:underline transition-colors flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:underline transition-colors flex items-center gap-1 cursor-pointer"
                 >
                   {isExpanded ? 'Collapse Details' : 'Deep Technical Breakdown →'}
                 </button>
-                <span className="text-[10px] font-mono text-[#54595F]/75">
+                <span className="text-[10px] font-mono text-[#1E2025]/75">
                   {item.code}
                 </span>
               </div>
@@ -218,12 +218,12 @@ export const EngineeringGlossary = () => {
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 pt-6 flex flex-wrap items-center justify-between text-[11px] font-mono text-[#54595F]/75 gap-4">
+      <div className="relative z-10 pt-6 flex flex-wrap items-center justify-between text-[11px] font-mono text-[#1E2025]/75 gap-4">
         <div className="flex items-center gap-2">
-          <ShieldCheck size={14} className="text-[#D4AF37]" />
+          <ShieldCheck size={14} className="text-[#D3AE36]" />
           <span>Curated under EBCS EN 1990 to 1998 and ERA 2024 Standards</span>
         </div>
-        <div className="text-[#D4AF37] font-bold">
+        <div className="text-[#D3AE36] font-bold">
           ASTU SoCEA 5th Year Brotherhood Verified
         </div>
       </div>

@@ -117,24 +117,24 @@ Phone: +251 934 830 919
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-white transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC RESOURCES & TOOLKIT HERO SECTION                             */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Ambient Sheen & Radiant Studio Lights */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -150,7 +150,7 @@ Phone: +251 934 830 919
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · 5th Year Capstone Toolkit &amp; Calculation Sheets
                 </span>
@@ -165,7 +165,7 @@ Phone: +251 934 830 919
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
                   ASTU{' '}
-                  <span className="text-[#801834] dark:text-[#E84855]">
+                  <span className="text-[#D3AE36]">
                     Engineering Toolkit.
                   </span>
                 </h1>
@@ -185,15 +185,15 @@ Phone: +251 934 830 919
                 {/* Toolkit Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">2 Interactive FEA Solvers</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">Instant Capstone Downloads</span>
                   </div>
                 </div>
@@ -208,17 +208,17 @@ Phone: +251 934 830 919
               >
                 <a
                   href="#resources-feed"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer"
                 >
                   <span>Download Resources</span>
                   <FileText size={15} />
                 </a>
                 <a
                   href="#beam-solver"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Launch Beam Solver</span>
-                  <Calculator size={14} className="text-[#D4AF37]" />
+                  <Calculator size={14} className="text-[#D3AE36]" />
                 </a>
               </motion.div>
 
@@ -234,11 +234,11 @@ Phone: +251 934 830 919
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">2</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">2</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">FEA Live Solvers</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">EBCS</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">EBCS</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">EN Code Verified</span>
                 </div>
               </motion.div>
@@ -256,7 +256,7 @@ Phone: +251 934 830 919
                 
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Interactive Tools Launchpad</span>
                   </div>
                   <span className="text-[10px] text-zinc-500 font-mono">Live Solvers</span>
@@ -266,9 +266,9 @@ Phone: +251 934 830 919
                   {/* Tool 1 */}
                   <a
                     href="#beam-solver"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Calculator size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -285,15 +285,15 @@ Phone: +251 934 830 919
                   {/* Tool 2 */}
                   <button
                     onClick={() => handleDownload(defaultResources[3])}
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 text-left group"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <FileText size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
                         <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">RC Bar Bending Schedule (BBS)</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#801834] dark:text-[#E84855] font-bold">XLSX / BBS</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/20 text-[#D3AE36] font-bold">XLSX / BBS</span>
                       </div>
                       <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
                         Practical on-site bar cutting lengths, lap lengths &amp; steel tonnage sheet.
@@ -304,9 +304,9 @@ Phone: +251 934 830 919
                   {/* Tool 3 */}
                   <button
                     onClick={() => handleDownload(defaultResources[0])}
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 text-left group"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Download size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -351,14 +351,14 @@ Phone: +251 934 830 919
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#801834] dark:text-[#E84855]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                      ? 'text-[#D3AE36]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
                   }`}
                 >
                   <span>{cat}</span>
                   <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D4AF37] text-zinc-950 font-black' 
+                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
                       : 'text-zinc-400'
                   }`}>
                     {count}
@@ -376,7 +376,7 @@ Phone: +251 934 830 919
               placeholder="Search guides, specs, calculations..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -413,16 +413,16 @@ Phone: +251 934 830 919
             >
               <div>
                 <div className="flex justify-between items-start mb-4">
-                  <div className="text-[#801834] dark:text-[#E84855] group-hover:scale-110 transition-transform">
+                  <div className="text-[#D3AE36] group-hover:scale-110 transition-transform">
                     <FileText size={28} />
                   </div>
-                  <span className="text-[10px] font-mono font-extrabold text-[#D4AF37] uppercase tracking-wider">
+                  <span className="text-[10px] font-mono font-extrabold text-[#D3AE36] uppercase tracking-wider">
                     {item.format} • {item.fileSize || '1.8 MB'}
                   </span>
                 </div>
 
                 <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
-                <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors mb-3 leading-snug">
+                <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors mb-3 leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
@@ -432,9 +432,9 @@ Phone: +251 934 830 919
 
               <button
                 onClick={() => handleDownload(item)}
-                className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#801834] dark:hover:bg-[#E84855] hover:text-white transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-max"
+                className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#D3AE36] dark:hover:bg-[#E84855] hover:text-white transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-max"
               >
-                Download Document <Download size={14} className="text-[#D4AF37]" />
+                Download Document <Download size={14} className="text-[#D3AE36]" />
               </button>
             </div>
           ))}
@@ -447,12 +447,12 @@ Phone: +251 934 830 919
         {/* ======================================================================= */}
         <div id="beam-solver" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Computational Structural Analysis
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              <span className="text-[#801834] dark:text-[#E84855]">Beam Shear, Moment</span> & Deflection Laboratory.
+              <span className="text-[#D3AE36]">Beam Shear, Moment</span> & Deflection Laboratory.
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
               Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against EBCS EN 1992 and design standards.
@@ -467,7 +467,7 @@ Phone: +251 934 830 919
         {/* ======================================================================= */}
         <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
             <h4 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
               Need Capstone Calculations, Soil Test Reviews, or Civil 3D Corridors?
             </h4>
@@ -477,9 +477,9 @@ Phone: +251 934 830 919
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#D3AE36]" />
           </button>
         </div>
 

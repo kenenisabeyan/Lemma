@@ -172,7 +172,7 @@ export const ManageProjects = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -180,11 +180,11 @@ export const ManageProjects = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Engineering Portfolio CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Projects & Case Studies
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -194,17 +194,17 @@ export const ManageProjects = () => {
 
           <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
             {/* View Mode Toggle */}
-            <div className="flex bg-[#181A1E] p-1 rounded-xl border border-[#333]">
+            <div className="flex bg-[#232936] p-1 rounded-xl border border-[#333]">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-all ${viewMode === 'grid' ? 'bg-[#D4AF37] text-[#121417]' : 'text-[#9CA3AF] hover:text-[#EAEAEA]'}`}
+                className={`p-2 rounded-lg transition-all ${viewMode === 'grid' ? 'bg-[#D3AE36] text-[#12151C]' : 'text-[#9CA3AF] hover:text-[#F8F9FA]'}`}
                 title="Grid Card View"
               >
                 <LayoutGrid size={16} />
               </button>
               <button
                 onClick={() => setViewMode('table')}
-                className={`p-2 rounded-lg transition-all ${viewMode === 'table' ? 'bg-[#D4AF37] text-[#121417]' : 'text-[#9CA3AF] hover:text-[#EAEAEA]'}`}
+                className={`p-2 rounded-lg transition-all ${viewMode === 'table' ? 'bg-[#D3AE36] text-[#12151C]' : 'text-[#9CA3AF] hover:text-[#F8F9FA]'}`}
                 title="Table View"
               >
                 <TableIcon size={16} />
@@ -213,7 +213,7 @@ export const ManageProjects = () => {
 
             <button
               onClick={handleOpenAdd}
-              className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2"
+              className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2"
             >
               <Plus size={16} /> New Case Study
             </button>
@@ -222,42 +222,42 @@ export const ManageProjects = () => {
 
         {/* Quick Metric Stats Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total Case Studies</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{projects.length}</span>
-              <FolderKanban size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{projects.length}</span>
+              <FolderKanban size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Featured on Home</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">{featuredCount}</span>
               <Sparkles size={18} className="text-emerald-400" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">High-Rise Towers</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">
                 {projects.filter(p => p.category?.includes('High-Rise')).length}
               </span>
-              <Layers size={18} className="text-[#D4AF37]" />
+              <Layers size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Infrastructure</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">
                 {projects.filter(p => p.category?.includes('Bridges') || p.category?.includes('Infrastructure')).length}
               </span>
-              <span className="text-xs font-mono text-[#D4AF37] px-2 py-0.5 rounded-full bg-[#121417] border border-[#D4AF37]/30">Active</span>
+              <span className="text-xs font-mono text-[#D3AE36] px-2 py-0.5 rounded-full bg-[#12151C] border border-[#D3AE36]/30">Active</span>
             </div>
           </div>
         </div>
 
         {/* Search & Category Filter Pills */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#232936] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
             {categories.map((cat) => (
               <button
@@ -265,8 +265,8 @@ export const ManageProjects = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_12px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_0_12px_rgba(211,174,54,0.35)]'
+                    : 'bg-[#12151C] text-[#9CA3AF] border border-[#333] hover:text-[#F8F9FA]'
                 }`}
               >
                 {cat}
@@ -281,16 +281,16 @@ export const ManageProjects = () => {
               placeholder="Filter by title, system, location..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-[#12151C] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#666] focus:border-[#D3AE36] focus:outline-none transition-colors font-mono"
             />
           </div>
         </div>
 
         {/* Content View: Grid or Table */}
         {filteredProjects.length === 0 ? (
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333] p-12 text-center">
+          <div className="rounded-2xl bg-[#232936] border border-[#333] p-12 text-center">
             <FolderKanban className="mx-auto w-12 h-12 text-[#9CA3AF]/40 mb-3" />
-            <h4 className="text-sm font-mono font-bold uppercase text-[#EAEAEA]">No projects found</h4>
+            <h4 className="text-sm font-mono font-bold uppercase text-[#F8F9FA]">No projects found</h4>
             <p className="text-xs text-[#9CA3AF] mt-1 max-w-sm mx-auto">
               No structural case studies match the selected criteria. Try resetting filters or add a new project.
             </p>
@@ -301,11 +301,11 @@ export const ManageProjects = () => {
             {filteredProjects.map((proj) => (
               <div 
                 key={proj.id}
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 overflow-hidden hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between shadow-xl"
+                className="group rounded-2xl bg-[#232936] border border-[#333]/80 overflow-hidden hover:border-[#D3AE36]/50 transition-all duration-300 flex flex-col justify-between shadow-xl"
               >
                 <div>
                   {/* Image Banner */}
-                  <div className="relative h-44 bg-[#121417] overflow-hidden">
+                  <div className="relative h-44 bg-[#12151C] overflow-hidden">
                     {proj.imageUrl ? (
                       <img 
                         src={proj.imageUrl} 
@@ -317,7 +317,7 @@ export const ManageProjects = () => {
                         No Image Assigned
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#181A1E] via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#232936] via-transparent to-transparent"></div>
 
                     {/* Featured Badge */}
                     <div className="absolute top-3 right-3">
@@ -333,11 +333,11 @@ export const ManageProjects = () => {
                     </div>
 
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                      <span className="rounded-full bg-black/75 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] font-mono font-bold px-3 py-1 uppercase backdrop-blur-md">
+                      <span className="rounded-full bg-black/75 border border-[#D3AE36]/30 text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase backdrop-blur-md">
                         {proj.category}
                       </span>
                       {proj.year && (
-                        <span className="text-[11px] font-mono text-[#EAEAEA] bg-black/60 px-2 py-0.5 rounded-full border border-white/10">
+                        <span className="text-[11px] font-mono text-[#F8F9FA] bg-black/60 px-2 py-0.5 rounded-full border border-white/10">
                           {proj.year}
                         </span>
                       )}
@@ -346,7 +346,7 @@ export const ManageProjects = () => {
 
                   {/* Body Content */}
                   <div className="p-5">
-                    <h3 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors leading-snug mb-2">
+                    <h3 className="text-base font-bold text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors leading-snug mb-2">
                       {proj.title}
                     </h3>
                     <p className="text-xs text-[#9CA3AF] font-mono mb-3 line-clamp-1">
@@ -355,21 +355,21 @@ export const ManageProjects = () => {
 
                     <div className="flex items-center gap-3 text-[11px] text-[#9CA3AF] font-mono border-t border-[#26282D] pt-3">
                       <span className="flex items-center gap-1 truncate">
-                        <MapPin size={12} className="text-[#D4AF37] shrink-0" /> {proj.location || 'Site Location'}
+                        <MapPin size={12} className="text-[#D3AE36] shrink-0" /> {proj.location || 'Site Location'}
                       </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Footer Controls */}
-                <div className="p-4 bg-[#14161A] border-t border-[#26282D] flex items-center justify-between">
+                <div className="p-4 bg-[#12151C] border-t border-[#26282D] flex items-center justify-between">
                   <span className="text-[10px] font-mono text-[#666] uppercase">
                     ID: #{proj.id?.toString().substring(0, 6)}
                   </span>
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => handleOpenEdit(proj)}
-                      className="rounded-xl p-2 bg-[#181A1E] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all shadow-sm"
+                      className="rounded-xl p-2 bg-[#232936] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] hover:scale-105 active:scale-95 transition-all shadow-sm"
                       title="Edit Case Study"
                     >
                       <Edit2 size={14} />
@@ -388,9 +388,9 @@ export const ManageProjects = () => {
           </div>
         ) : (
           /* Table View */
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 overflow-x-auto shadow-xl mb-12">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 overflow-x-auto shadow-xl mb-12">
             <table className="w-full text-left text-xs font-mono">
-              <thead className="bg-[#121417] border-b border-[#333] uppercase text-[#9CA3AF]">
+              <thead className="bg-[#12151C] border-b border-[#333] uppercase text-[#9CA3AF]">
                 <tr>
                   <th className="p-4">Project Title</th>
                   <th className="p-4">Category</th>
@@ -402,8 +402,8 @@ export const ManageProjects = () => {
               </thead>
               <tbody className="divide-y divide-[#26282D]">
                 {filteredProjects.map((proj) => (
-                  <tr key={proj.id} className="hover:bg-[#121417]/50 transition-colors">
-                    <td className="p-4 text-[#EAEAEA]">
+                  <tr key={proj.id} className="hover:bg-[#12151C]/50 transition-colors">
+                    <td className="p-4 text-[#F8F9FA]">
                       <div className="flex items-center gap-3">
                         {proj.imageUrl && (
                           <img src={proj.imageUrl} alt="" className="w-11 h-9 rounded-lg object-cover border border-[#333]" />
@@ -414,7 +414,7 @@ export const ManageProjects = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="p-4 text-[#D4AF37] whitespace-nowrap">{proj.category}</td>
+                    <td className="p-4 text-[#D3AE36] whitespace-nowrap">{proj.category}</td>
                     <td className="p-4 text-[#9CA3AF] whitespace-nowrap">{proj.location}</td>
                     <td className="p-4 text-[#9CA3AF]">{proj.year || '—'}</td>
                     <td className="p-4">
@@ -430,7 +430,7 @@ export const ManageProjects = () => {
                       <div className="flex justify-end gap-2">
                         <button
                           onClick={() => handleOpenEdit(proj)}
-                          className="rounded-xl p-2 bg-[#121417] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] transition-all"
+                          className="rounded-xl p-2 bg-[#12151C] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] transition-all"
                           title="Edit Project"
                         >
                           <Edit2 size={13} />
@@ -473,7 +473,7 @@ export const ManageProjects = () => {
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 placeholder="e.g. Adama CBD B+G+10 Mixed-Use Tower"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
               />
             </div>
             <div>
@@ -483,7 +483,7 @@ export const ManageProjects = () => {
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               >
                 <option value="Reinforced Concrete High-Rise">Reinforced Concrete High-Rise</option>
                 <option value="Highway & Bridge Infrastructure">Highway & Bridge Infrastructure</option>
@@ -505,7 +505,7 @@ export const ManageProjects = () => {
                 value={formData.location}
                 onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                 placeholder="e.g. Adama, Oromia, Ethiopia"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
             <div>
@@ -517,7 +517,7 @@ export const ManageProjects = () => {
                 value={formData.year}
                 onChange={(e) => setFormData({ ...formData, year: e.target.value })}
                 placeholder="2026"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
             <div>
@@ -529,7 +529,7 @@ export const ManageProjects = () => {
                 value={formData.client}
                 onChange={(e) => setFormData({ ...formData, client: e.target.value })}
                 placeholder="Apex Global Group"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
           </div>
@@ -545,7 +545,7 @@ export const ManageProjects = () => {
                 placeholder="e.g. Dual Core Shear Wall & Outrigger Truss"
                 value={formData.structuralSystem}
                 onChange={(e) => setFormData({ ...formData, structuralSystem: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
             <div>
@@ -557,15 +557,15 @@ export const ManageProjects = () => {
                 placeholder="e.g. C80 High-Strength Concrete, Grade 65 Steel"
                 value={formData.materials}
                 onChange={(e) => setFormData({ ...formData, materials: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
           </div>
 
           {/* Case Study Narrative Fields */}
-          <div className="rounded-2xl bg-[#121417] border border-[#2D3137] p-5 flex flex-col gap-4">
-            <h4 className="text-xs font-bold uppercase text-[#D4AF37] tracking-wider flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
+          <div className="rounded-2xl bg-[#12151C] border border-[#2D3137] p-5 flex flex-col gap-4">
+            <h4 className="text-xs font-bold uppercase text-[#D3AE36] tracking-wider flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
               Detailed Engineering Narrative (Case Study)
             </h4>
 
@@ -576,7 +576,7 @@ export const ManageProjects = () => {
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                 placeholder="Summary of architectural program and structural volume..."
-                className="w-full bg-[#181A1E] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+                className="w-full bg-[#232936] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
               ></textarea>
             </div>
 
@@ -587,7 +587,7 @@ export const ManageProjects = () => {
                 value={formData.challenge}
                 onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
                 placeholder="Geotechnical soil strata, wind shear or seismic acceleration hurdles..."
-                className="w-full bg-[#181A1E] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+                className="w-full bg-[#232936] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
               ></textarea>
             </div>
 
@@ -598,7 +598,7 @@ export const ManageProjects = () => {
                 value={formData.engineeringApproach}
                 onChange={(e) => setFormData({ ...formData, engineeringApproach: e.target.value })}
                 placeholder="Finite element dynamic simulations, damper tuning, wind tunnel tests..."
-                className="w-full bg-[#181A1E] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+                className="w-full bg-[#232936] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
               ></textarea>
             </div>
 
@@ -609,7 +609,7 @@ export const ManageProjects = () => {
                 value={formData.solution}
                 onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
                 placeholder="Specific structural details deployed on site..."
-                className="w-full bg-[#181A1E] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+                className="w-full bg-[#232936] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
               ></textarea>
             </div>
 
@@ -620,7 +620,7 @@ export const ManageProjects = () => {
                 value={formData.result}
                 onChange={(e) => setFormData({ ...formData, result: e.target.value })}
                 placeholder="Reduced steel weight by 18%, saved 3 months schedule, LEED Platinum..."
-                className="w-full bg-[#181A1E] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+                className="w-full bg-[#232936] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
               ></textarea>
             </div>
           </div>
@@ -635,7 +635,7 @@ export const ManageProjects = () => {
                 placeholder="ETABS, SAP2000, REVIT Structure"
                 value={formData.softwareUsed}
                 onChange={(e) => setFormData({ ...formData, softwareUsed: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
             <div>
@@ -646,28 +646,28 @@ export const ManageProjects = () => {
                 type="file"
                 accept="image/*"
                 onChange={(e) => setImageFile(e.target.files[0])}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-2.5 text-[#9CA3AF] text-xs file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-mono file:bg-[#181A1E] file:text-[#D4AF37]"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-2.5 text-[#9CA3AF] text-xs file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-mono file:bg-[#232936] file:text-[#D3AE36]"
               />
             </div>
           </div>
 
           {/* Featured Toggle Switch */}
-          <div className="flex items-center gap-3 p-4 rounded-xl bg-[#121417] border border-[#2D3137]">
+          <div className="flex items-center gap-3 p-4 rounded-xl bg-[#12151C] border border-[#2D3137]">
             <input
               type="checkbox"
               id="isFeatured"
               checked={formData.isFeatured}
               onChange={(e) => setFormData({ ...formData, isFeatured: e.target.checked })}
-              className="w-4 h-4 accent-[#D4AF37] rounded"
+              className="w-4 h-4 accent-[#D3AE36] rounded"
             />
-            <label htmlFor="isFeatured" className="text-xs uppercase font-bold text-[#EAEAEA] cursor-pointer">
+            <label htmlFor="isFeatured" className="text-xs uppercase font-bold text-[#F8F9FA] cursor-pointer">
               Feature this project on public Homepage Showcase
             </label>
           </div>
 
           <button
             type="submit"
-            className="rounded-full bg-[#D4AF37] text-[#121417] py-3.5 text-xs font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] py-3.5 text-xs font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)]"
           >
             {editingId ? 'Update Structural Case Study' : 'Publish Structural Case Study'}
           </button>

@@ -146,7 +146,7 @@ export const Moveable3DHeroCards = () => {
               scale: 1.1, 
               zIndex: 50,
               cursor: 'grabbing',
-              boxShadow: '0 30px 60px -12px rgba(128, 24, 52, 0.5)'
+              boxShadow: '0 30px 60px -12px rgba(211,174,54, 0.5)'
             }}
             className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/85 dark:bg-[#232936]/80 backdrop-blur-2xl border border-white/90 dark:border-[#232936] p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >

@@ -79,12 +79,12 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0B0C0E] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
+    <div className="min-h-screen bg-white dark:bg-[#12151C] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC CONTACT HERO SECTION (MATCHING RESOURCESPAGE TOOLKIT DESIGN)  */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -97,12 +97,12 @@ export const Contact = () => {
           />
 
           {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
-          <div className="absolute inset-0 bg-white/40 dark:bg-[#0B0C0E]/70 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#0B0C0E]/85 dark:via-transparent dark:to-[#0B0C0E]/85 pointer-events-none" />
+          <div className="absolute inset-0 bg-white/40 dark:bg-[#12151C]/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#12151C]/85 dark:via-transparent dark:to-[#12151C]/85 pointer-events-none" />
           <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
 
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -118,7 +118,7 @@ export const Contact = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · Direct Consultation &amp; Inquiries
                 </span>
@@ -133,11 +133,11 @@ export const Contact = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
                   Contact Lemma.{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
                     ASTU
                   </span>
                   <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
+                  <span className="text-[#D3AE36] opacity-95 inline-block">
                     Amensisa &amp; Brothers.
                   </span>
                 </h1>
@@ -157,15 +157,15 @@ export const Contact = () => {
                 {/* Toolkit Checkmark Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">Direct Mobile &amp; Telegram</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">24-Hour Response Time</span>
                   </div>
                 </div>
@@ -180,17 +180,17 @@ export const Contact = () => {
               >
                 <a
                   href="tel:+251934830919"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer font-mono"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer font-mono"
                 >
                   <span>Call +251 934 830 919</span>
                   <Phone size={15} />
                 </a>
                 <a
                   href="mailto:lemmayezedlij21@gmail.com"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
                 >
                   <span>Send Email</span>
-                  <Mail size={14} className="text-[#D4AF37]" />
+                  <Mail size={14} className="text-[#D3AE36]" />
                 </a>
               </motion.div>
 
@@ -206,11 +206,11 @@ export const Contact = () => {
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">24h</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">24h</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Direct Reply</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">ASTU</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">ASTU</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Campus</span>
                 </div>
               </motion.div>
@@ -228,7 +228,7 @@ export const Contact = () => {
                 
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Direct Channels Launchpad</span>
                   </div>
                   <span className="text-[10px] text-zinc-500 font-mono">ASTU Live Base</span>
@@ -238,9 +238,9 @@ export const Contact = () => {
                   {/* Channel 1: Phone */}
                   <a
                     href="tel:+251934830919"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Phone size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -260,15 +260,15 @@ export const Contact = () => {
                   {/* Channel 2: Email */}
                   <a
                     href="mailto:lemmayezedlij21@gmail.com"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Mail size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
                         <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Engineering Inquiries</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#801834] dark:text-[#E84855] font-bold">Official / 24h</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/20 text-[#D3AE36] font-bold">Official / 24h</span>
                       </div>
                       <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-mono font-bold truncate">
                         lemmayezedlij21@gmail.com
@@ -280,8 +280,8 @@ export const Contact = () => {
                   </a>
 
                   {/* Channel 3: Campus Base */}
-                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all flex items-start gap-3.5 group shadow-xs">
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#801834] dark:text-[#E84855] group-hover:scale-105 transition-transform shrink-0">
+                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <MapPin size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -303,7 +303,7 @@ export const Contact = () => {
                 {/* Scene Indicator */}
                 <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-white/10 text-[11px] font-mono text-zinc-500">
                   <span className="flex items-center gap-1.5 truncate">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-700 dark:text-zinc-300">Lemma Amensisa — Structural Inspection Site</span>
                   </span>
                   <span className="text-[10px] text-zinc-400 font-mono">ASTU Live Base</span>
@@ -323,12 +323,12 @@ export const Contact = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           
           {/* Card 1: Academic Base */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D4AF37]/50 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 dark:bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center mb-4">
+          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/50 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#D3AE36]/20 text-[#D3AE36] flex items-center justify-center mb-4">
               <MapPin size={22} />
             </div>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D4AF37] font-bold block mb-1">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
                 Academic Base
               </span>
               <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug">
@@ -423,7 +423,7 @@ export const Contact = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
                 >
                   <Facebook size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-600" />
                   <span className="text-[10px] font-bold">Facebook</span>
@@ -433,7 +433,7 @@ export const Contact = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
                 >
                   <Instagram size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-pink-600" />
                   <span className="text-[10px] font-bold">Instagram</span>
@@ -443,7 +443,7 @@ export const Contact = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
                 >
                   <Linkedin size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-700" />
                   <span className="text-[10px] font-bold">LinkedIn</span>
@@ -453,7 +453,7 @@ export const Contact = () => {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D4AF37]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
                 >
                   <Youtube size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-red-600" />
                   <span className="text-[10px] font-bold">YouTube</span>
@@ -470,7 +470,7 @@ export const Contact = () => {
                   href="https://maps.google.com/?q=Adama+Science+and+Technology+University"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md text-zinc-800 dark:text-zinc-200 text-xs font-bold hover:text-[#D4AF37] shadow-sm border border-zinc-200 dark:border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md text-zinc-800 dark:text-zinc-200 text-xs font-bold hover:text-[#D3AE36] shadow-sm border border-zinc-200 dark:border-zinc-700 transition-colors"
                 >
                   <span>Open in Maps</span>
                   <ExternalLink size={12} />
@@ -537,7 +537,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Abebe Kebede"
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
                   />
                 </div>
 
@@ -554,7 +554,7 @@ export const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="abebe@example.com"
-                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
 
@@ -568,7 +568,7 @@ export const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="09XXXXXXXX"
-                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
@@ -582,7 +582,7 @@ export const Contact = () => {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all"
+                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all"
                   >
                     <option value="Reinforced Concrete Structure">Reinforced Concrete Structure (EBCS EN 1992)</option>
                     <option value="Highway & Transportation">Highway & Transportation Corridor (ERA 2024)</option>
@@ -605,7 +605,7 @@ export const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us how we can help you with structural calculations, site supervision, or capstone collaboration..."
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 p-4 text-xs sm:text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
+                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 p-4 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
                   ></textarea>
                 </div>
 
@@ -613,7 +613,7 @@ export const Contact = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-[#D4AF37] via-[#C9A227] to-[#B89628] hover:brightness-110 active:scale-[0.99] text-zinc-950 py-3.5 px-6 rounded-xl font-black text-sm tracking-wide transition-all shadow-lg shadow-[#D4AF37]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
+                  className="w-full bg-gradient-to-r from-[#D3AE36] via-[#C9A227] to-[#B89628] hover:brightness-110 active:scale-[0.99] text-zinc-950 py-3.5 px-6 rounded-xl font-black text-sm tracking-wide transition-all shadow-lg shadow-[#D3AE36]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
                 >
                   <span>{loading ? 'Sending Message...' : 'Send Message'}</span>
                   <Send size={15} className="text-zinc-950" />
@@ -634,9 +634,9 @@ export const Contact = () => {
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col items-center">
           <button
             onClick={() => setShowEstimator(!showEstimator)}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] shadow-sm transition-all"
           >
-            <Compass size={14} className="text-[#D4AF37]" />
+            <Compass size={14} className="text-[#D3AE36]" />
             <span>{showEstimator ? 'Hide Interactive Scope Estimator' : 'Need Instant Calculations? Open Interactive Scope Estimator'}</span>
           </button>
 

@@ -50,7 +50,7 @@ export const Settings = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -58,11 +58,11 @@ export const Settings = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Global Configurations & SEO CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Site Settings & SEO
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -80,8 +80,8 @@ export const Settings = () => {
         <form onSubmit={handleSubmit} className="flex flex-col gap-8 max-w-5xl mb-12">
           
           {/* Section 1: Professional Identity */}
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
-            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D3AE36] tracking-wider mb-6 flex items-center gap-2">
               <Globe size={18} /> 1. Professional Identity & Hero Copy
             </h3>
 
@@ -95,7 +95,7 @@ export const Settings = () => {
                   name="engineerName"
                   value={formData.engineerName}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm font-bold"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm font-bold"
                 />
               </div>
               <div>
@@ -107,7 +107,7 @@ export const Settings = () => {
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@ export const Settings = () => {
                 name="heroTagline"
                 value={formData.heroTagline}
                 onChange={handleChange}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
               />
             </div>
 
@@ -134,14 +134,14 @@ export const Settings = () => {
                 name="heroBio"
                 value={formData.heroBio}
                 onChange={handleChange}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans leading-relaxed text-xs"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans leading-relaxed text-xs"
               ></textarea>
             </div>
           </div>
 
           {/* Section 2: Metric Stat Counters */}
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
-            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D3AE36] tracking-wider mb-6 flex items-center gap-2">
               <Sparkles size={18} /> 2. Public Metric Stat Counters
             </h3>
 
@@ -156,7 +156,7 @@ export const Settings = () => {
                   value={formData.yearsExp}
                   onChange={handleChange}
                   placeholder="14+"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-bold text-center text-sm"
                 />
               </div>
               <div>
@@ -169,7 +169,7 @@ export const Settings = () => {
                   value={formData.projectsCount}
                   onChange={handleChange}
                   placeholder="180+"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-bold text-center text-sm"
                 />
               </div>
               <div>
@@ -182,7 +182,7 @@ export const Settings = () => {
                   value={formData.safetyRecord}
                   onChange={handleChange}
                   placeholder="100%"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-emerald-400 focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-emerald-400 focus:border-[#D3AE36] focus:outline-none transition-colors font-bold text-center text-sm"
                 />
               </div>
               <div>
@@ -195,62 +195,62 @@ export const Settings = () => {
                   value={formData.clientsCount}
                   onChange={handleChange}
                   placeholder="50+"
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-bold text-center text-sm"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-bold text-center text-sm"
                 />
               </div>
             </div>
           </div>
 
           {/* Section 3: Contact & Office Coordinates */}
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
-            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D3AE36] tracking-wider mb-6 flex items-center gap-2">
               <Building2 size={18} /> 3. Contact Coordinates & Office
             </h3>
 
             <div className="grid sm:grid-cols-2 gap-5 mb-5 font-mono text-xs">
               <div>
                 <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold flex items-center gap-1.5">
-                  <Mail size={12} className="text-[#D4AF37]" /> Official Consultation Email
+                  <Mail size={12} className="text-[#D3AE36]" /> Official Consultation Email
                 </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
                 />
               </div>
               <div>
                 <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold flex items-center gap-1.5">
-                  <Phone size={12} className="text-[#D4AF37]" /> Telephone / Office Direct
+                  <Phone size={12} className="text-[#D3AE36]" /> Telephone / Office Direct
                 </label>
                 <input
                   type="text"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
                 />
               </div>
             </div>
 
             <div className="font-mono text-xs">
               <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold flex items-center gap-1.5">
-                <MapPin size={12} className="text-[#D4AF37]" /> Physical Office Address
+                <MapPin size={12} className="text-[#D3AE36]" /> Physical Office Address
               </label>
               <input
                 type="text"
                 name="officeAddress"
                 value={formData.officeAddress}
                 onChange={handleChange}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
           </div>
 
           {/* Section 4: SEO Metadata with Live Google Search Snippet Preview */}
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
-            <h3 className="text-sm font-mono font-bold uppercase text-[#D4AF37] tracking-wider mb-6 flex items-center gap-2">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-6 sm:p-8 shadow-xl">
+            <h3 className="text-sm font-mono font-bold uppercase text-[#D3AE36] tracking-wider mb-6 flex items-center gap-2">
               <Search size={18} /> 4. Global Search Engine Optimization (SEO)
             </h3>
 
@@ -264,7 +264,7 @@ export const Settings = () => {
                   name="metaTitle"
                   value={formData.metaTitle}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
                 />
               </div>
 
@@ -277,14 +277,14 @@ export const Settings = () => {
                   name="metaDescription"
                   value={formData.metaDescription}
                   onChange={handleChange}
-                  className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+                  className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
                 ></textarea>
               </div>
             </div>
 
             {/* Live Search Engine Snippet Preview */}
-            <div className="rounded-xl bg-[#121417] border border-[#2D3137] p-5">
-              <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-wider block mb-2 font-bold">
+            <div className="rounded-xl bg-[#12151C] border border-[#2D3137] p-5">
+              <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">
                 Live Google Search Result Preview
               </span>
               <div className="font-sans">
@@ -304,7 +304,7 @@ export const Settings = () => {
             <button
               type="submit"
               disabled={loading}
-              className="rounded-full bg-[#D4AF37] text-[#121417] px-8 py-4 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2"
+              className="rounded-full bg-[#D3AE36] text-[#12151C] px-8 py-4 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2"
             >
               <Save size={16} />
               {loading ? 'Saving Configurations...' : 'Save Site Settings & SEO'}

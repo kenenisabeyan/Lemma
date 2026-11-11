@@ -73,24 +73,24 @@ export const FaqPage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-white transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC FAQ & CLIENT ADVISORY HERO SECTION                           */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Ambient Sheen & Radiant Studio Lights */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -106,7 +106,7 @@ export const FaqPage = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · 5th Year Capstone &amp; Academic Inquiry FAQ
                 </span>
@@ -121,11 +121,11 @@ export const FaqPage = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
                   Demystifying Physics.{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
                     Clarity
                   </span>
                   <br />
-                  on Codes &amp; <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">ASTU Civil.</span>
+                  on Codes &amp; <span className="text-[#D3AE36] opacity-95 inline-block">ASTU Civil.</span>
                 </h1>
               </motion.div>
 
@@ -143,15 +143,15 @@ export const FaqPage = () => {
                 {/* Key Guidance Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">ASTU SoCEA Class of 2026</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">EBCS EN &amp; ERA Compliant</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">Final Defense Readiness</span>
                   </div>
                 </div>
@@ -166,17 +166,17 @@ export const FaqPage = () => {
               >
                 <a
                   href="#faq-accordion"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer"
                 >
                   <span>Explore Questions</span>
                   <HelpCircle size={15} />
                 </a>
                 <a
                   href="#glossary"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Engineering Glossary</span>
-                  <BookOpen size={14} className="text-[#D4AF37]" />
+                  <BookOpen size={14} className="text-[#D3AE36]" />
                 </a>
               </motion.div>
 
@@ -192,11 +192,11 @@ export const FaqPage = () => {
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">5</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">5</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Focus Areas</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">ASTU</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">ASTU</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
                 </div>
               </motion.div>
@@ -214,7 +214,7 @@ export const FaqPage = () => {
                 
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Top Consultation Inquiries</span>
                   </div>
                   <span className="text-[10px] text-zinc-500 font-mono">Quick Answer</span>
@@ -230,12 +230,12 @@ export const FaqPage = () => {
                         const el = document.getElementById('faq-accordion');
                         if (el) el.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D4AF37] transition-all text-left group"
+                      className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all text-left group"
                     >
-                      <span className="text-[10px] font-mono text-[#801834] dark:text-[#E84855] uppercase tracking-wider block mb-1 font-bold">
+                      <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-1 font-bold">
                         {f.category} Discipline
                       </span>
-                      <h4 className="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#D4AF37] transition-colors line-clamp-1 mb-1">
+                      <h4 className="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] transition-colors line-clamp-1 mb-1">
                         {f.question}
                       </h4>
                       <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
@@ -275,14 +275,14 @@ export const FaqPage = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#801834] dark:text-[#E84855]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                      ? 'text-[#D3AE36]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
                   }`}
                 >
                   <span>{cat}</span>
                   <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D4AF37] text-zinc-950 font-black' 
+                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
                       : 'text-zinc-400'
                   }`}>
                     {count}
@@ -300,7 +300,7 @@ export const FaqPage = () => {
               placeholder="Search questions, codes, fees..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -329,21 +329,21 @@ export const FaqPage = () => {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full text-left font-black text-base sm:text-lg text-zinc-900 dark:text-zinc-100 hover:text-[#801834] dark:hover:text-[#E84855] flex justify-between items-center gap-4 transition-colors cursor-pointer"
+                  className="w-full text-left font-black text-base sm:text-lg text-zinc-900 dark:text-zinc-100 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-3.5">
-                    <span className="text-[#801834] dark:text-[#E84855]">
+                    <span className="text-[#D3AE36]">
                       <HelpCircle size={18} />
                     </span>
                     <span>{faq.question}</span>
                   </span>
-                  <ChevronDown size={20} className={`text-[#D4AF37] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={20} className={`text-[#D3AE36] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {isOpen && (
                   <div className="pt-4 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed animate-in fade-in duration-200">
                     <p className="mb-3 leading-relaxed sm:text-base">{faq.answer}</p>
-                    <span className="text-[10px] font-mono uppercase text-[#D4AF37] font-bold">
+                    <span className="text-[10px] font-mono uppercase text-[#D3AE36] font-bold">
                       Discipline: {faq.category}
                     </span>
                   </div>
@@ -374,9 +374,9 @@ export const FaqPage = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#D3AE36]" />
           </button>
         </div>
 

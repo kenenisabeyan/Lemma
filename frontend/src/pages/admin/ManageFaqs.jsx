@@ -127,7 +127,7 @@ export const ManageFaqs = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -135,11 +135,11 @@ export const ManageFaqs = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Client Education & Knowledge Base CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Client FAQs
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -149,7 +149,7 @@ export const ManageFaqs = () => {
 
           <button
             onClick={handleOpenAdd}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2 shrink-0"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2 shrink-0"
           >
             <Plus size={16} /> Add FAQ Item
           </button>
@@ -168,23 +168,23 @@ export const ManageFaqs = () => {
 
         {/* Metric Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total FAQ Items</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{faqs.length}</span>
-              <HelpCircle size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{faqs.length}</span>
+              <HelpCircle size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Topic Categories</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D4AF37]">
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D3AE36]">
                 {categories.length - 1}
               </span>
-              <Sparkles size={18} className="text-[#D4AF37]" />
+              <Sparkles size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Live Status</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">Active</span>
@@ -194,7 +194,7 @@ export const ManageFaqs = () => {
         </div>
 
         {/* Search & Category Filter Pills */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#232936] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
             {categories.map((cat) => (
               <button
@@ -202,8 +202,8 @@ export const ManageFaqs = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_12px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_0_12px_rgba(211,174,54,0.35)]'
+                    : 'bg-[#12151C] text-[#9CA3AF] border border-[#333] hover:text-[#F8F9FA]'
                 }`}
               >
                 {cat}
@@ -218,7 +218,7 @@ export const ManageFaqs = () => {
               placeholder="Search questions or answers..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-[#12151C] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#666] focus:border-[#D3AE36] focus:outline-none transition-colors font-mono"
             />
           </div>
         </div>
@@ -228,11 +228,11 @@ export const ManageFaqs = () => {
           {filteredFaqs.map((faq, index) => (
             <div 
               key={faq.id} 
-              className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl"
+              className="group rounded-2xl bg-[#232936] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D3AE36]/50 transition-all duration-300 shadow-xl"
             >
               <div>
                 <div className="flex justify-between items-start mb-3">
-                  <span className="rounded-full bg-[#121417] border border-[#D4AF37]/40 px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#D4AF37] uppercase tracking-wider">
+                  <span className="rounded-full bg-[#12151C] border border-[#D3AE36]/40 px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#D3AE36] uppercase tracking-wider">
                     {faq.category || 'General'}
                   </span>
                   <span className="text-[10px] font-mono text-[#666]">
@@ -240,11 +240,11 @@ export const ManageFaqs = () => {
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-2.5 leading-snug">
+                <h3 className="text-base font-bold text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors mb-2.5 leading-snug">
                   {faq.question}
                 </h3>
 
-                <p className="text-xs text-[#9CA3AF] leading-relaxed bg-[#121417] p-4 rounded-xl border border-[#2D3137]">
+                <p className="text-xs text-[#9CA3AF] leading-relaxed bg-[#12151C] p-4 rounded-xl border border-[#2D3137]">
                   {faq.answer}
                 </p>
               </div>
@@ -252,7 +252,7 @@ export const ManageFaqs = () => {
               <div className="flex items-center justify-end gap-2 border-t border-[#26282D] pt-4 mt-4">
                 <button
                   onClick={() => handleEdit(faq)}
-                  className="rounded-xl p-2 bg-[#121417] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all shadow-sm"
+                  className="rounded-xl p-2 bg-[#12151C] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] hover:scale-105 active:scale-95 transition-all shadow-sm"
                   title="Edit FAQ"
                 >
                   <Edit2 size={13} />
@@ -290,7 +290,7 @@ export const ManageFaqs = () => {
                 value={formData.question}
                 onChange={(e) => setFormData({ ...formData, question: e.target.value })}
                 placeholder="e.g. When do I require a stamped PE/SE structural calculation package?"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
               />
             </div>
 
@@ -301,7 +301,7 @@ export const ManageFaqs = () => {
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               >
                 <option value="General">General</option>
                 <option value="Consultation">Consultation</option>
@@ -322,13 +322,13 @@ export const ManageFaqs = () => {
               value={formData.answer}
               onChange={(e) => setFormData({ ...formData, answer: e.target.value })}
               placeholder="Provide a concise, professional answer addressing permitting, calculations, code references, or safety requirements..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans leading-relaxed"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans leading-relaxed"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="rounded-full bg-[#D4AF37] text-[#121417] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)]"
           >
             {editId ? 'Update FAQ Item' : 'Publish FAQ Item'}
           </button>

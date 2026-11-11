@@ -88,20 +88,20 @@ export const ServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-[#12151C] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* CINEMATIC SERVICES HERO SECTION                                           */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
 
         {/* Subtle Ambient Studio Lights */}
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -114,12 +114,12 @@ export const ServicesPage = () => {
           />
 
           {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
-          <div className="absolute inset-0 bg-white/40 dark:bg-[#0B0C0E]/70 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#0B0C0E]/85 dark:via-transparent dark:to-[#0B0C0E]/85 pointer-events-none" />
+          <div className="absolute inset-0 bg-white/40 dark:bg-[#12151C]/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#12151C]/85 dark:via-transparent dark:to-[#12151C]/85 pointer-events-none" />
           <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
 
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -139,7 +139,7 @@ export const ServicesPage = () => {
                   <span className="text-zinc-900 dark:text-zinc-100 block select-text">
                     Comprehensive
                   </span>
-                  <span className="text-[#801834] dark:text-[#E84855] block select-text">
+                  <span className="text-[#D3AE36] block select-text">
                     Civil &amp; Structural Solutions.
                   </span>
                 </h1>
@@ -169,7 +169,7 @@ export const ServicesPage = () => {
                 {/* Primary Filled Pill Button */}
                 <button
                   onClick={() => navigate('/contact')}
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
                 >
                   <span>CONNECT WITH US</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -178,9 +178,9 @@ export const ServicesPage = () => {
                 {/* Secondary Frosted Glass Pill Button */}
                 <a
                   href="#service-modules"
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D4AF37] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D3AE36] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
                 >
-                  <Layers size={15} className="text-[#D4AF37]" />
+                  <Layers size={15} className="text-[#D3AE36]" />
                   <span>EXPLORE 4 DISCIPLINES</span>
                 </a>
               </motion.div>
@@ -197,11 +197,11 @@ export const ServicesPage = () => {
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Core Disciplines</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D4AF37] font-mono">100%</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Readiness</span>
                 </div>
               </motion.div>
@@ -219,7 +219,7 @@ export const ServicesPage = () => {
                 
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Practice Pillars Matrix</span>
                   </div>
                   <span className="text-[10px] text-zinc-500 font-mono">Select Module</span>
@@ -237,14 +237,14 @@ export const ServicesPage = () => {
                         onClick={() => setActiveHeroTab(idx)}
                         className={`text-left p-3.5 rounded-2xl border transition-all flex items-start gap-3.5 cursor-pointer ${
                           isActive
-                            ? 'bg-[#D4AF37] text-[#121417] border-[#D4AF37] shadow-[0_6px_20px_rgba(212,175,55,0.35)] scale-[1.01]'
+                            ? 'bg-[#D3AE36] text-[#12151C] border-[#D3AE36] shadow-[0_6px_20px_rgba(211,174,54,0.35)] scale-[1.01]'
                             : 'bg-white/70 dark:bg-zinc-800/50 hover:bg-white dark:hover:bg-zinc-800 border-zinc-200/70 dark:border-white/10 text-zinc-800 dark:text-zinc-200'
                         }`}
                       >
                         <div className={`p-2.5 rounded-xl border shrink-0 ${
                           isActive
-                            ? 'bg-zinc-950/15 border-zinc-950/20 text-[#121417]'
-                            : 'bg-zinc-100 dark:bg-zinc-700/60 border-zinc-200/60 dark:border-white/5 text-[#801834] dark:text-[#E84855]'
+                            ? 'bg-zinc-950/15 border-zinc-950/20 text-[#12151C]'
+                            : 'bg-zinc-100 dark:bg-zinc-700/60 border-zinc-200/60 dark:border-white/5 text-[#D3AE36]'
                         }`}>
                           <Icon size={18} />
                         </div>
@@ -275,7 +275,7 @@ export const ServicesPage = () => {
                   <span className="text-zinc-500 text-[11px]">EBCS EN 1992 · EBCS EN 1998 · ERA 2024</span>
                   <a
                     href="#service-modules"
-                    className="font-bold text-[#801834] dark:text-[#E84855] hover:underline flex items-center gap-1"
+                    className="font-bold text-[#D3AE36] hover:underline flex items-center gap-1"
                   >
                     View Full Specifications <ArrowRight size={12} />
                   </a>
@@ -297,12 +297,12 @@ export const ServicesPage = () => {
       <div id="service-modules" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
         
         <div className="mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] shadow-xs mb-4 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             Technical Specifications & Scope
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-            Four Core <span className="text-[#801834] dark:text-[#E84855]">Engineering Capabilities.</span>
+            Four Core <span className="text-[#D3AE36]">Engineering Capabilities.</span>
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
             Every deliverable follows rigorous structural physics and finite element verification, delivering stamped engineering packages for developers, architects, and institutions.
@@ -331,14 +331,14 @@ export const ServicesPage = () => {
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-[#801834] dark:text-[#E84855] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-[#D3AE36] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                       <Icon size={30} />
                     </div>
                     <div>
-                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-0.5 text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest mb-2 font-extrabold">
+                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
                         Module 0{index + 1}
                       </span>
-                      <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors leading-snug">
+                      <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors leading-snug">
                         {srv.title}
                       </h3>
                     </div>
@@ -352,7 +352,7 @@ export const ServicesPage = () => {
                     <div className="grid sm:grid-cols-2 gap-3.5 pt-2">
                       {features.map((feat, i) => (
                         <div key={i} className="flex items-start gap-2.5">
-                          <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0 mt-0.5" />
+                          <CheckCircle2 size={16} className="text-[#D3AE36] shrink-0 mt-0.5" />
                           <span className="text-xs text-zinc-700 dark:text-zinc-300 font-medium leading-snug">{feat}</span>
                         </div>
                       ))}
@@ -361,7 +361,7 @@ export const ServicesPage = () => {
                     <div className="pt-2 flex flex-wrap items-center gap-3">
                       <button
                         onClick={() => navigate('/contact')}
-                        className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] text-[#121417] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(212,175,55,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
+                        className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(211,174,54,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
                       >
                         <span>Request Service Consultation</span>
                         <ArrowUpRight size={14} />
@@ -391,7 +391,7 @@ export const ServicesPage = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D4AF37]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
             <span>Connect With Our Team</span>
             <ArrowUpRight size={15} />

@@ -118,26 +118,26 @@ export const Experience = () => {
   const activeMilestone = engineeringMilestones[selectedMilestoneIdx];
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D4AF37] selection:text-[#121417] transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-[#12151C] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC EXPERIENCE & TRACK RECORD HERO SECTION                       */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
 
         {/* Subtle Ambient Studio Lights */}
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -153,7 +153,7 @@ export const Experience = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · 5-Year Academic Trajectory (2021 – 2026)
                 </span>
@@ -168,11 +168,11 @@ export const Experience = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   A Dedicated Journey of{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)] select-text">
+                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
                     Academic
                   </span>
                   <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block select-text">
+                  <span className="text-[#D3AE36] opacity-95 inline-block select-text">
                     & Field Engineering.
                   </span>
                 </h1>
@@ -192,7 +192,7 @@ export const Experience = () => {
                 {/* 4 Quantified Metrics */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                   </div>
                   <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
@@ -220,7 +220,7 @@ export const Experience = () => {
                 {/* Primary Filled Pill Button */}
                 <a
                   href="#experience-tabs"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D4AF37]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
                 >
                   <Briefcase size={15} />
                   <span>INSPECT MILESTONES</span>
@@ -230,9 +230,9 @@ export const Experience = () => {
                 {/* Secondary Pill Button */}
                 <a
                   href="#shake-table"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
-                  <Activity size={15} className="text-[#D4AF37]" />
+                  <Activity size={15} className="text-[#D3AE36]" />
                   <span>SEISMIC SHAKE TABLE</span>
                 </a>
               </motion.div>
@@ -245,7 +245,7 @@ export const Experience = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">5th</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="py-2 text-left">
@@ -253,7 +253,7 @@ export const Experience = () => {
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Projects Led</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">100%</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
                 </div>
               </motion.div>
@@ -271,10 +271,10 @@ export const Experience = () => {
                 
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Milestone Spotlight</span>
                   </div>
-                  <span className="text-[10px] font-mono text-[#D4AF37] font-bold">
+                  <span className="text-[10px] font-mono text-[#D3AE36] font-bold">
                     {activeMilestone.year}
                   </span>
                 </div>
@@ -290,7 +290,7 @@ export const Experience = () => {
                     {activeMilestone.achievement}
                   </p>
                   <div className="flex items-center justify-between pt-2 border-t border-zinc-200/60 dark:border-white/5 text-[11px] font-mono font-bold">
-                    <span className="text-[#801834] dark:text-[#E84855]">{activeMilestone.value}</span>
+                    <span className="text-[#D3AE36]">{activeMilestone.value}</span>
                     <span className="text-zinc-500">{activeMilestone.role}</span>
                   </div>
                 </div>
@@ -303,7 +303,7 @@ export const Experience = () => {
                       onClick={() => setSelectedMilestoneIdx(idx)}
                       className={`p-2 rounded-xl text-center font-mono text-[10px] font-bold uppercase transition-all cursor-pointer ${
                         selectedMilestoneIdx === idx
-                          ? 'bg-[#D4AF37] text-[#121417] shadow-sm font-extrabold'
+                          ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
                           : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
                       }`}
                     >
@@ -333,8 +333,8 @@ export const Experience = () => {
             onClick={() => setActiveTab('milestones')}
             className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeTab === 'milestones'
-                ? 'text-[#801834] dark:text-[#E84855] border-b-2 border-[#D4AF37]'
-                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                ? 'text-[#D3AE36] border-b-2 border-[#D3AE36]'
+                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
             }`}
           >
             Major Project Milestones
@@ -344,8 +344,8 @@ export const Experience = () => {
             onClick={() => setActiveTab('timeline')}
             className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeTab === 'timeline'
-                ? 'text-[#801834] dark:text-[#E84855] border-b-2 border-[#D4AF37]'
-                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                ? 'text-[#D3AE36] border-b-2 border-[#D3AE36]'
+                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
             }`}
           >
             Career Timeline & Roles
@@ -355,8 +355,8 @@ export const Experience = () => {
             onClick={() => setActiveTab('competencies')}
             className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeTab === 'competencies'
-                ? 'text-[#801834] dark:text-[#E84855] border-b-2 border-[#D4AF37]'
-                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                ? 'text-[#D3AE36] border-b-2 border-[#D3AE36]'
+                : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
             }`}
           >
             Core Competencies
@@ -374,7 +374,7 @@ export const Experience = () => {
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-4">
                   <div>
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xs font-mono text-[#D4AF37] font-bold tracking-widest uppercase">
+                      <span className="text-xs font-mono text-[#D3AE36] font-bold tracking-widest uppercase">
                         {item.year}
                       </span>
                       <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-bold">
@@ -385,17 +385,17 @@ export const Experience = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-xs font-mono text-[#801834] dark:text-[#E84855] font-extrabold">
+                    <span className="text-xs font-mono text-[#D3AE36] font-extrabold">
                       {item.value}
                     </span>
                     <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
-                      <MapPin size={12} className="text-[#D4AF37]" /> {item.location}
+                      <MapPin size={12} className="text-[#D3AE36]" /> {item.location}
                     </span>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <h4 className="text-xs uppercase font-mono font-bold text-[#801834] dark:text-[#E84855] tracking-wider mb-1">
+                  <h4 className="text-xs uppercase font-mono font-bold text-[#D3AE36] tracking-wider mb-1">
                     Structural Achievement & Technical Innovation
                   </h4>
                   <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
@@ -408,7 +408,7 @@ export const Experience = () => {
                   <div className="grid md:grid-cols-3 gap-3">
                     {item.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs text-zinc-700 dark:text-zinc-300">
-                        <CheckCircle2 size={15} className="text-[#D4AF37] shrink-0 mt-0.5" />
+                        <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
                         <span>{h}</span>
                       </div>
                     ))}
@@ -425,14 +425,14 @@ export const Experience = () => {
             <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-white/10 pl-8 ml-4">
               {CAREER_TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D4AF37] group-hover:scale-125 transition-transform"></div>
+                  <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D3AE36] group-hover:scale-125 transition-transform"></div>
                   <div className="py-2 transition-all duration-300">
-                    <span className="inline-block text-xs font-mono text-[#D4AF37] font-bold uppercase tracking-wider mb-1">
+                    <span className="inline-block text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider mb-1">
                       {item.year}
                     </span>
                     <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h3>
                     <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-                      <Building2 size={13} className="text-[#D4AF37]" /> {item.company}
+                      <Building2 size={13} className="text-[#D3AE36]" /> {item.company}
                     </p>
                     <p className="text-sm text-zinc-700 dark:text-zinc-300 max-w-3xl leading-relaxed mb-4">
                       {item.description}
@@ -458,13 +458,13 @@ export const Experience = () => {
                 className="group py-4 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="font-mono font-bold text-sm text-[#801834] dark:text-[#E84855] mb-2">
+                  <div className="font-mono font-bold text-sm text-[#D3AE36] mb-2">
                     0{index + 1}
                   </div>
-                  <h4 className="text-lg font-black text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors">{comp.title}</h4>
+                  <h4 className="text-lg font-black text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors">{comp.title}</h4>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{comp.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D4AF37] font-bold">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D3AE36] font-bold">
                   <ShieldCheck size={13} /> Rigorous Engineering Verified
                 </div>
               </div>
@@ -477,12 +477,12 @@ export const Experience = () => {
         {/* ======================================================================= */}
         <div id="shake-table" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D4AF37] mb-4 font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Live Physics & Non-Linear Dynamics
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Dynamic Seismic <span className="text-[#801834] dark:text-[#E84855]">Shake Table Laboratory.</span>
+              Dynamic Seismic <span className="text-[#D3AE36]">Shake Table Laboratory.</span>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
               Experience how high-performance structural systems withstand historical earthquake accelerograms through advanced base isolation, viscous fluid dampers, and tuned mass dampers.
@@ -497,8 +497,8 @@ export const Experience = () => {
         {/* ======================================================================= */}
         <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D4AF37] tracking-widest block mb-2 font-bold">Ready to Collaborate & Recruit</span>
-            <h3 className="text-2xl lg:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Need Civil Engineering Talent or <span className="text-[#801834] dark:text-[#E84855]">Capstone Collaborations</span>?</h3>
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-widest block mb-2 font-bold">Ready to Collaborate & Recruit</span>
+            <h3 className="text-2xl lg:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Need Civil Engineering Talent or <span className="text-[#D3AE36]">Capstone Collaborations</span>?</h3>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Available for graduate civil engineering positions, structural modeling projects, ERA highway alignment tasks, and technical consultations with our ASTU 5th-year student cohort.
             </p>
@@ -507,14 +507,14 @@ export const Experience = () => {
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <button
               onClick={() => navigate('/resources')}
-              className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Download Student Dossier (PDF)</span>
-              <Download size={14} className="text-[#D4AF37]" />
+              <Download size={14} className="text-[#D3AE36]" />
             </button>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D4AF37]"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D3AE36]"
             >
               <span>Connect With Us</span>
               <ArrowUpRight size={14} />

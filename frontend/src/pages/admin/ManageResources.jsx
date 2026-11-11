@@ -139,7 +139,7 @@ export const ManageResources = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -147,11 +147,11 @@ export const ManageResources = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Downloadable Docs & Templates CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Engineering Resources
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -161,7 +161,7 @@ export const ManageResources = () => {
 
           <button
             onClick={handleOpenAdd}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2 shrink-0"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2 shrink-0"
           >
             <Plus size={16} /> Add Document
           </button>
@@ -180,23 +180,23 @@ export const ManageResources = () => {
 
         {/* Metric Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total Resources</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{resources.length}</span>
-              <FileText size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{resources.length}</span>
+              <FileText size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Calculation Sheets</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D4AF37]">
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D3AE36]">
                 {resources.filter(r => r.category === 'Engineering Calculations').length || 2}
               </span>
-              <Sparkles size={18} className="text-[#D4AF37]" />
+              <Sparkles size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Public Access</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">Available</span>
@@ -206,7 +206,7 @@ export const ManageResources = () => {
         </div>
 
         {/* Search & Category Filter Pills */}
-        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-[#232936] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none items-center">
             {categories.map((cat) => (
               <button
@@ -214,8 +214,8 @@ export const ManageResources = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-[#D4AF37] text-[#121417] shadow-[0_0_12px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#121417] text-[#9CA3AF] border border-[#333] hover:text-[#EAEAEA]'
+                    ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_0_12px_rgba(211,174,54,0.35)]'
+                    : 'bg-[#12151C] text-[#9CA3AF] border border-[#333] hover:text-[#F8F9FA]'
                 }`}
               >
                 {cat}
@@ -230,7 +230,7 @@ export const ManageResources = () => {
               placeholder="Search resource files or formulas..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-[#12151C] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#666] focus:border-[#D3AE36] focus:outline-none transition-colors font-mono"
             />
           </div>
         </div>
@@ -240,22 +240,22 @@ export const ManageResources = () => {
           {filteredResources.map((item) => (
             <div 
               key={item.id} 
-              className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl"
+              className="group rounded-2xl bg-[#232936] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D3AE36]/50 transition-all duration-300 shadow-xl"
             >
               <div>
                 <div className="flex justify-between items-start mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#121417] border border-[#D4AF37]/40 text-[#D4AF37] flex items-center justify-center group-hover:scale-105 transition-transform shadow-md">
+                  <div className="w-11 h-11 rounded-xl bg-[#12151C] border border-[#D3AE36]/40 text-[#D3AE36] flex items-center justify-center group-hover:scale-105 transition-transform shadow-md">
                     <FileText size={20} />
                   </div>
-                  <span className="rounded-full text-[10px] font-mono font-bold text-[#D4AF37] border border-[#D4AF37]/30 px-3 py-1 uppercase tracking-wider bg-[#121417]">
+                  <span className="rounded-full text-[10px] font-mono font-bold text-[#D3AE36] border border-[#D3AE36]/30 px-3 py-1 uppercase tracking-wider bg-[#12151C]">
                     {item.format} • {item.fileSize || '2.5 MB'}
                   </span>
                 </div>
 
-                <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest block mb-1.5">
+                <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest block mb-1.5">
                   {item.category}
                 </span>
-                <h3 className="text-base font-bold text-[#EAEAEA] group-hover:text-[#D4AF37] transition-colors mb-2 leading-snug">
+                <h3 className="text-base font-bold text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors mb-2 leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-xs text-[#9CA3AF] leading-relaxed mb-4">
@@ -270,7 +270,7 @@ export const ManageResources = () => {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => handleEdit(item)}
-                    className="rounded-xl p-2 bg-[#121417] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all shadow-sm"
+                    className="rounded-xl p-2 bg-[#12151C] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] hover:scale-105 active:scale-95 transition-all shadow-sm"
                     title="Edit Resource"
                   >
                     <Edit2 size={13} />
@@ -309,7 +309,7 @@ export const ManageResources = () => {
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 placeholder="e.g. High-Rise Lateral Drift Calculation Sheet"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-sm"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-sm"
               />
             </div>
 
@@ -320,7 +320,7 @@ export const ManageResources = () => {
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               >
                 <option value="Design Guides">Design Guides</option>
                 <option value="Technical Specifications">Technical Specifications</option>
@@ -340,7 +340,7 @@ export const ManageResources = () => {
                 value={formData.format}
                 onChange={(e) => setFormData({ ...formData, format: e.target.value })}
                 placeholder="PDF / DWG"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
             <div>
@@ -352,7 +352,7 @@ export const ManageResources = () => {
                 value={formData.fileSize}
                 onChange={(e) => setFormData({ ...formData, fileSize: e.target.value })}
                 placeholder="e.g. 3.4 MB"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors"
               />
             </div>
           </div>
@@ -367,13 +367,13 @@ export const ManageResources = () => {
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               placeholder="Outline IBC codes, ASCE guidelines, calculation equations, and target engineering disciplines..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="rounded-full bg-[#D4AF37] text-[#121417] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)]"
           >
             {editId ? 'Update Resource Document' : 'Publish Resource Document'}
           </button>

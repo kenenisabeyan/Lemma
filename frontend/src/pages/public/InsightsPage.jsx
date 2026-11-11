@@ -73,24 +73,24 @@ export const InsightsPage = () => {
   const featuredArticle = articles[0] || defaultArticles[0];
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#801834] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-white transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC INSIGHTS & WHITEPAPERS HERO SECTION                          */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B0C0E] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Ambient Glow & Radiant Light Dome */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#0B0C0E] dark:via-[#0B0C0E] dark:to-[#0B0C0E] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#801834]/[0.02] dark:bg-[#801834]/15 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D4AF37]/[0.02] dark:bg-[#D4AF37]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#0B0C0E] dark:via-[#0B0C0E]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -106,7 +106,7 @@ export const InsightsPage = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
               >
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · 5th Year Technical Research Papers
                 </span>
@@ -121,11 +121,11 @@ export const InsightsPage = () => {
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
                   Applied Research.{' '}
-                  <span className="text-[#801834] dark:text-[#E84855] drop-shadow-[0_4px_20px_rgba(128,24,52,0.3)]">
+                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
                     Rigorous
                   </span>
                   <br />
-                  <span className="text-[#801834] dark:text-[#E84855] opacity-95 inline-block">
+                  <span className="text-[#D3AE36] opacity-95 inline-block">
                     Civil & Structural Analysis.
                   </span>
                 </h1>
@@ -145,15 +145,15 @@ export const InsightsPage = () => {
                 {/* Authority Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <BookOpen size={15} className="text-[#D4AF37] shrink-0" />
+                    <BookOpen size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">ASTU SoCEA Capstones</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <ShieldCheck size={15} className="text-[#D4AF37] shrink-0" />
+                    <ShieldCheck size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">EBCS & ERA Commentary</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <Layers size={15} className="text-[#D4AF37] shrink-0" />
+                    <Layers size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">Free Open Access</span>
                   </div>
                 </div>
@@ -168,17 +168,17 @@ export const InsightsPage = () => {
               >
                 <a
                   href="#articles-feed"
-                  className="rounded-full bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(212,175,55,0.35)] hover:shadow-[0_14px_32px_rgba(212,175,55,0.5)] border border-[#D4AF37] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer"
                 >
                   <span>Explore Research</span>
                   <ArrowRight size={15} />
                 </a>
                 <button
                   onClick={() => navigate('/resources')}
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D4AF37] dark:hover:text-[#D4AF37] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Engineering Tools</span>
-                  <Sparkles size={14} className="text-[#D4AF37]" />
+                  <Sparkles size={14} className="text-[#D3AE36]" />
                 </button>
               </motion.div>
 
@@ -194,11 +194,11 @@ export const InsightsPage = () => {
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Research Papers</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#801834] dark:text-[#E84855] font-mono">3</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">3</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Focus Disciplines</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D4AF37] font-mono">Free</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">Free</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Open Access</span>
                 </div>
               </motion.div>
@@ -216,10 +216,10 @@ export const InsightsPage = () => {
                 
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Featured Whitepaper</span>
                   </div>
-                  <span className="text-[10px] text-[#D4AF37] font-bold uppercase">
+                  <span className="text-[10px] text-[#D3AE36] font-bold uppercase">
                     {featuredArticle.readTime}
                   </span>
                 </div>
@@ -232,13 +232,13 @@ export const InsightsPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
-                  <span className="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 text-[#801834] dark:text-[#E84855] border border-white/30 text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase shadow-xs">
+                  <span className="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 text-[#D3AE36] border border-white/30 text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase shadow-xs">
                     {featuredArticle.category}
                   </span>
 
                   <div className="absolute bottom-3 left-3 right-3 text-white">
                     <span className="text-[10px] font-mono text-zinc-300 flex items-center gap-1 mb-1">
-                      <Calendar size={11} className="text-[#D4AF37]" /> {featuredArticle.publishedAt}
+                      <Calendar size={11} className="text-[#D3AE36]" /> {featuredArticle.publishedAt}
                     </span>
                     <h3 className="font-extrabold text-base sm:text-lg leading-tight line-clamp-2">
                       {featuredArticle.title}
@@ -252,9 +252,9 @@ export const InsightsPage = () => {
 
                 <Link
                   to={`/insights/${featuredArticle.slug || 'innovations-high-strength-c80-concrete'}`}
-                  className="rounded-2xl bg-[#D4AF37] hover:bg-[#c49f2c] active:scale-95 text-[#121417] px-4 py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(212,175,55,0.25)] hover:shadow-[0_12px_28px_rgba(212,175,55,0.4)] cursor-pointer"
+                  className="rounded-2xl bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-4 py-3 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(211,174,54,0.25)] hover:shadow-[0_12px_28px_rgba(211,174,54,0.4)] cursor-pointer"
                 >
-                  Read Complete Paper <ArrowRight size={13} className="text-[#121417]" />
+                  Read Complete Paper <ArrowRight size={13} className="text-[#12151C]" />
                 </Link>
 
               </div>
@@ -287,14 +287,14 @@ export const InsightsPage = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#801834] dark:text-[#E84855]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D4AF37]'
+                      ? 'text-[#D3AE36]'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
                   }`}
                 >
                   <span>{cat}</span>
                   <span className={`text-[10px] px-1.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D4AF37] text-zinc-950 font-black' 
+                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
                       : 'text-zinc-400'
                   }`}>
                     {count}
@@ -312,7 +312,7 @@ export const InsightsPage = () => {
               placeholder="Search research papers, EBCS codes, ERA manuals..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
@@ -333,7 +333,7 @@ export const InsightsPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {filteredArticles.length === 0 ? (
           <div className="py-24 text-center mb-16">
-            <BookOpen className="mx-auto w-12 h-12 text-[#D4AF37] mb-3 opacity-75" />
+            <BookOpen className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
             <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No technical publications match your query.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
@@ -361,19 +361,19 @@ export const InsightsPage = () => {
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[#801834] dark:text-[#E84855] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
+                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
                       {item.category}
                     </span>
                   </div>
 
                   <div>
                     <div className="flex items-center gap-3 text-[10px] font-mono text-zinc-500 dark:text-zinc-400 mb-2 uppercase tracking-wider">
-                      <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D4AF37]" /> {item.publishedAt}</span>
+                      <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D3AE36]" /> {item.publishedAt}</span>
                       <span>·</span>
-                      <span className="flex items-center gap-1"><Clock size={12} className="text-[#D4AF37]" /> {item.readTime}</span>
+                      <span className="flex items-center gap-1"><Clock size={12} className="text-[#D3AE36]" /> {item.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors mb-2 leading-snug">
+                    <h3 className="text-lg font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors mb-2 leading-snug">
                       {item.title}
                     </h3>
 
@@ -384,7 +384,7 @@ export const InsightsPage = () => {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37] group-hover:text-[#801834] dark:group-hover:text-[#E84855] transition-colors flex items-center gap-1.5">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors flex items-center gap-1.5">
                     Read Technical Paper <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </div>
@@ -399,7 +399,7 @@ export const InsightsPage = () => {
         <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
-              Applying <span className="text-[#801834] dark:text-[#E84855]">Advanced Engineering Research</span> to Real Infrastructure
+              Applying <span className="text-[#D3AE36]">Advanced Engineering Research</span> to Real Infrastructure
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from our ASTU 5th-year student cohort?
@@ -407,9 +407,9 @@ export const InsightsPage = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-gradient-to-r from-[#801834] to-[#601227] hover:from-[#601227] hover:to-[#450d1c] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(128,24,52,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Connect With Our Team <ArrowUpRight size={15} className="text-[#D4AF37]" />
+            Connect With Our Team <ArrowUpRight size={15} className="text-[#D3AE36]" />
           </button>
         </div>
 

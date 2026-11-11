@@ -74,7 +74,7 @@ export const ManageTestimonials = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#121417] text-[#EAEAEA]">
+    <div className="flex min-h-screen bg-[#12151C] text-[#F8F9FA]">
       <AdminSidebar />
 
       <main className="flex-1 pt-16 lg:pt-8 p-4 sm:p-8 overflow-y-auto">
@@ -82,11 +82,11 @@ export const ManageTestimonials = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-[#26282D]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#181A1E] px-3.5 py-1 text-xs font-mono text-[#D4AF37] mb-2 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 bg-[#232936] px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Client Trust & Reviews CMS
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#EAEAEA] uppercase tracking-wider">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#F8F9FA] uppercase tracking-wider">
               Client Testimonials
             </h1>
             <p className="text-xs font-mono text-[#9CA3AF] mt-1">
@@ -96,7 +96,7 @@ export const ManageTestimonials = () => {
 
           <button
             onClick={handleOpenAdd}
-            className="rounded-full bg-[#D4AF37] text-[#121417] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center gap-2 shrink-0"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)] flex items-center gap-2 shrink-0"
           >
             <Plus size={16} /> Add Endorsement
           </button>
@@ -104,21 +104,21 @@ export const ManageTestimonials = () => {
 
         {/* Metric Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Total Testimonials</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#EAEAEA]">{testimonials.length}</span>
-              <MessageSquareQuote size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#F8F9FA]">{testimonials.length}</span>
+              <MessageSquareQuote size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">5-Star Endorsements</span>
             <div className="flex items-baseline justify-between">
-              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D4AF37]">{fiveStarCount}</span>
-              <Sparkles size={18} className="text-[#D4AF37]" />
+              <span className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D3AE36]">{fiveStarCount}</span>
+              <Sparkles size={18} className="text-[#D3AE36]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333]/80 p-5 shadow-lg">
+          <div className="rounded-2xl bg-[#232936] border border-[#333]/80 p-5 shadow-lg">
             <span className="text-[10px] font-mono uppercase text-[#9CA3AF] tracking-wider block mb-1">Client Satisfaction</span>
             <div className="flex items-baseline justify-between">
               <span className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">100%</span>
@@ -128,7 +128,7 @@ export const ManageTestimonials = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center gap-4 mb-8 bg-[#181A1E] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
+        <div className="flex items-center gap-4 mb-8 bg-[#232936] p-3 rounded-2xl border border-[#333]/80 shadow-xl">
           <div className="relative flex-1">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] w-4 h-4" />
             <input
@@ -136,16 +136,16 @@ export const ManageTestimonials = () => {
               placeholder="Search by client name, firm or testimonial text..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#121417] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#EAEAEA] placeholder:text-[#666] focus:border-[#D4AF37] focus:outline-none transition-colors font-mono"
+              className="w-full bg-[#12151C] rounded-full border border-[#333] pl-10 pr-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#666] focus:border-[#D3AE36] focus:outline-none transition-colors font-mono"
             />
           </div>
         </div>
 
         {/* Testimonials Bento Cards */}
         {filteredTestimonials.length === 0 ? (
-          <div className="rounded-2xl bg-[#181A1E] border border-[#333] p-12 text-center">
+          <div className="rounded-2xl bg-[#232936] border border-[#333] p-12 text-center">
             <MessageSquareQuote className="mx-auto w-12 h-12 text-[#9CA3AF]/40 mb-3" />
-            <h4 className="text-sm font-mono font-bold uppercase text-[#EAEAEA]">No endorsements found</h4>
+            <h4 className="text-sm font-mono font-bold uppercase text-[#F8F9FA]">No endorsements found</h4>
             <p className="text-xs text-[#9CA3AF] mt-1">Try another search or add a new client endorsement.</p>
           </div>
         ) : (
@@ -153,32 +153,32 @@ export const ManageTestimonials = () => {
             {filteredTestimonials.map((t) => (
               <div 
                 key={t.id} 
-                className="group rounded-2xl bg-[#181A1E] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all duration-300 shadow-xl"
+                className="group rounded-2xl bg-[#232936] border border-[#333]/80 p-6 flex flex-col justify-between hover:border-[#D3AE36]/50 transition-all duration-300 shadow-xl"
               >
                 <div>
                   <div className="flex justify-between items-center mb-4">
-                    <div className="flex gap-1 text-[#D4AF37]">
+                    <div className="flex gap-1 text-[#D3AE36]">
                       {[...Array(t.rating || 5)].map((_, i) => (
-                        <Star key={i} size={14} fill="#D4AF37" className="text-[#D4AF37]" />
+                        <Star key={i} size={14} fill="#D3AE36" className="text-[#D3AE36]" />
                       ))}
                     </div>
-                    <Quote size={18} className="text-[#D4AF37]/40 group-hover:text-[#D4AF37] transition-colors" />
+                    <Quote size={18} className="text-[#D3AE36]/40 group-hover:text-[#D3AE36] transition-colors" />
                   </div>
 
-                  <p className="text-xs text-[#EAEAEA] italic mb-6 leading-relaxed bg-[#121417] p-4 rounded-xl border border-[#2D3137]">
+                  <p className="text-xs text-[#F8F9FA] italic mb-6 leading-relaxed bg-[#12151C] p-4 rounded-xl border border-[#2D3137]">
                     "{t.content}"
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between border-t border-[#26282D] pt-4 mt-2">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#121417] border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] font-mono font-bold text-xs shadow-sm">
+                    <div className="w-10 h-10 rounded-full bg-[#12151C] border border-[#D3AE36]/50 flex items-center justify-center text-[#D3AE36] font-mono font-bold text-xs shadow-sm">
                       {t.clientName ? t.clientName.substring(0, 2).toUpperCase() : 'CL'}
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#EAEAEA] font-mono">{t.clientName}</h4>
+                      <h4 className="text-xs font-bold text-[#F8F9FA] font-mono">{t.clientName}</h4>
                       <p className="text-[10px] text-[#9CA3AF] font-mono mt-0.5">
-                        {t.clientRole} • <span className="text-[#D4AF37]">{t.clientCompany}</span>
+                        {t.clientRole} • <span className="text-[#D3AE36]">{t.clientCompany}</span>
                       </p>
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export const ManageTestimonials = () => {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => handleOpenEdit(t)}
-                      className="rounded-xl p-2 bg-[#121417] text-[#D4AF37] border border-[#333] hover:border-[#D4AF37] hover:scale-105 active:scale-95 transition-all shadow-sm"
+                      className="rounded-xl p-2 bg-[#12151C] text-[#D3AE36] border border-[#333] hover:border-[#D3AE36] hover:scale-105 active:scale-95 transition-all shadow-sm"
                       title="Edit Testimonial"
                     >
                       <Edit2 size={13} />
@@ -222,7 +222,7 @@ export const ManageTestimonials = () => {
                 value={formData.clientName}
                 onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
                 placeholder="e.g. Sarah Jenkins, AIA"
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
               />
             </div>
             <div>
@@ -232,7 +232,7 @@ export const ManageTestimonials = () => {
                 placeholder="e.g. Principal Architect / VP Development"
                 value={formData.clientRole}
                 onChange={(e) => setFormData({ ...formData, clientRole: e.target.value })}
-                className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+                className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
               />
             </div>
           </div>
@@ -244,14 +244,14 @@ export const ManageTestimonials = () => {
               placeholder="e.g. ArchiTech Global Design"
               value={formData.clientCompany}
               onChange={(e) => setFormData({ ...formData, clientCompany: e.target.value })}
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans"
             />
           </div>
 
           {/* Interactive Star Rating Selector */}
           <div>
             <label className="block uppercase text-[#9CA3AF] text-[10px] tracking-wider mb-1.5 font-bold">Rating Score</label>
-            <div className="flex items-center gap-2 bg-[#121417] p-3 rounded-xl border border-[#333] w-max">
+            <div className="flex items-center gap-2 bg-[#12151C] p-3 rounded-xl border border-[#333] w-max">
               {[1, 2, 3, 4, 5].map((star) => (
                 <button
                   type="button"
@@ -261,12 +261,12 @@ export const ManageTestimonials = () => {
                 >
                   <Star
                     size={20}
-                    fill={star <= formData.rating ? "#D4AF37" : "none"}
-                    className={star <= formData.rating ? "text-[#D4AF37]" : "text-[#444]"}
+                    fill={star <= formData.rating ? "#D3AE36" : "none"}
+                    className={star <= formData.rating ? "text-[#D3AE36]" : "text-[#444]"}
                   />
                 </button>
               ))}
-              <span className="text-xs font-bold text-[#D4AF37] ml-2 font-mono">
+              <span className="text-xs font-bold text-[#D3AE36] ml-2 font-mono">
                 {formData.rating} of 5 Stars
               </span>
             </div>
@@ -280,13 +280,13 @@ export const ManageTestimonials = () => {
               value={formData.content}
               onChange={(e) => setFormData({ ...formData, content: e.target.value })}
               placeholder="Enter the client review praising engineering precision, schedule delivery, or FEA capabilities..."
-              className="w-full bg-[#121417] rounded-xl border border-[#333] p-3 text-[#EAEAEA] focus:border-[#D4AF37] focus:outline-none transition-colors font-sans text-xs"
+              className="w-full bg-[#12151C] rounded-xl border border-[#333] p-3 text-[#F8F9FA] focus:border-[#D3AE36] focus:outline-none transition-colors font-sans text-xs"
             ></textarea>
           </div>
 
           <button 
             type="submit" 
-            className="rounded-full bg-[#D4AF37] text-[#121417] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            className="rounded-full bg-[#D3AE36] text-[#12151C] py-3.5 font-mono font-extrabold uppercase tracking-widest hover:bg-white hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_rgba(211,174,54,0.25)]"
           >
             {editingId ? 'Update Client Testimonial' : 'Publish Client Testimonial'}
           </button>
