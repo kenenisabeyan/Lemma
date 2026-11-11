@@ -29,7 +29,8 @@ import {
   Layers3, 
   ArrowRight,
   Star,
-  MessageSquareQuote
+  MessageSquareQuote,
+  Users
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { StatCounter } from '../../components/engineering/StatCounter';
@@ -40,9 +41,60 @@ import { LoadPathSimulator } from '../../components/engineering/LoadPathSimulato
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 import { CaseStudyModal } from './CaseStudy';
 import lemmaImg from '../../assets/lemma.JPG';
+import lemmaTwoImg from '../../assets/lemma-two.jpg';
+import lemmaThreeImg from '../../assets/lemma-three.jpg';
+import lemmaFourImg from '../../assets/lemma-four.jpg';
+import li2Img from '../../assets/li2.jpg';
+import li3Img from '../../assets/li3.jpg';
 
 export const Home = () => {
   const navigate = useNavigate();
+  const [activeBrotherIndex, setActiveBrotherIndex] = useState(0);
+
+  const brotherhoodMembers = [
+    {
+      name: 'Lemma Amensisa',
+      role: 'Senior Capstone Lead & Structural Dynamics',
+      sub: 'Adama Science & Technology University · SoCEA',
+      img: lemmaImg,
+      badge: 'Team Lead · Class of 2026'
+    },
+    {
+      name: 'Structural Modeling Cohort',
+      role: 'ETABS 3D Seismic & Beam-Column Joint Detailing',
+      sub: 'EBCS EN 1998 Seismic Ductility · Eurocode 2',
+      img: lemmaTwoImg,
+      badge: 'FEA Specialist'
+    },
+    {
+      name: 'Highway Infrastructure Specialist',
+      role: 'Civil 3D Geometric Corridor & Mass-Haul',
+      sub: 'ERA 2024 Road Standards · Earthwork Balance',
+      img: lemmaThreeImg,
+      badge: 'ERA Certified'
+    },
+    {
+      name: 'Geotechnical & Foundation Engineer',
+      role: 'Expansive Clay Soil Stabilization & Caisson Piles',
+      sub: 'EBCS EN 1997 Geotechnical · Lime Mitigation',
+      img: lemmaFourImg,
+      badge: 'Soil & Bedrock Lead'
+    },
+    {
+      name: 'Site QC & Field Supervision Officer',
+      role: 'Total Station Surveying & Concrete Slump/Cube QC',
+      sub: 'OCC Site Internship · Bar Bending Schedules (BBS)',
+      img: li2Img,
+      badge: 'Site QC Trainee'
+    },
+    {
+      name: 'Hydraulic & Water Resources Engineer',
+      role: 'Corridor Drainage, Culverts & Watershed Runoff',
+      sub: 'Hydraulic Modeling · Flood Risk Mitigation',
+      img: li3Img,
+      badge: 'Drainage Lead'
+    }
+  ];
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -728,19 +780,50 @@ export const Home = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative">
                 <div className="relative rounded-2xl group transition-all duration-300">
-                  <div className="aspect-[4/5] overflow-hidden rounded-2xl">
+                  <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-zinc-950 border border-zinc-200/80 dark:border-[#232936] shadow-xl">
                     <img
-                      src={settings.avatarUrl || lemmaImg}
-                      alt="Lemma 5th Year Civil Engineering Student"
-                      className="w-full h-full object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      src={brotherhoodMembers[activeBrotherIndex].img}
+                      alt={brotherhoodMembers[activeBrotherIndex].name}
+                      className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 text-xs font-mono rounded-xl text-white">
+                  <div className="absolute bottom-4 left-4 right-4 bg-[#12151C]/85 backdrop-blur-md p-4 text-xs font-mono rounded-xl text-white border border-[#232936]">
                     <div className="flex justify-between items-center text-[#D3AE36] font-bold uppercase tracking-wider mb-1">
-                      <span>ASTU SoCEA</span>
-                      <span>Class of 2026</span>
+                      <span>{brotherhoodMembers[activeBrotherIndex].name}</span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#D3AE36]/15 border border-[#D3AE36]/30">
+                        {brotherhoodMembers[activeBrotherIndex].badge}
+                      </span>
                     </div>
-                    <span className="text-[10px] text-zinc-300 uppercase tracking-widest block font-medium">Adama Science and Technology University · Civil Engineering</span>
+                    <span className="text-[11px] text-[#F8F9FA] block font-semibold">
+                      {brotherhoodMembers[activeBrotherIndex].role}
+                    </span>
+                    <span className="text-[9px] text-[#F8F9FA]/60 uppercase tracking-widest block font-medium mt-0.5">
+                      {brotherhoodMembers[activeBrotherIndex].sub}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Brotherhood Thumbnail Switcher Strip */}
+                <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-[#232936] flex items-center justify-between gap-2 overflow-x-auto pb-1 scrollbar-none">
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-[#D3AE36] uppercase font-bold shrink-0">
+                    <Users size={13} />
+                    <span>Cohort:</span>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    {brotherhoodMembers.map((b, idx) => (
+                      <button
+                        key={b.name}
+                        onClick={() => setActiveBrotherIndex(idx)}
+                        title={`${b.name} · ${b.role}`}
+                        className={`relative w-8 h-8 rounded-lg overflow-hidden border transition-all cursor-pointer ${
+                          activeBrotherIndex === idx
+                            ? 'border-[#D3AE36] ring-2 ring-[#D3AE36]/50 scale-110 shadow-md'
+                            : 'border-zinc-300 dark:border-[#31394D] opacity-60 hover:opacity-100 hover:border-[#D3AE36]'
+                        }`}
+                      >
+                        <img src={b.img} alt={b.name} className="w-full h-full object-cover" />
+                      </button>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -785,15 +868,22 @@ export const Home = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/about"
-                  className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all flex items-center gap-2 font-bold"
+                  className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all flex items-center gap-2 font-bold shadow-md shadow-[#D3AE36]/20"
                 >
-                  Full Academic Profile & Credentials <ArrowUpRight size={14} />
+                  Full Academic Profile <ArrowUpRight size={14} />
+                </Link>
+                <Link
+                  to="/about#brotherhood"
+                  className="rounded-full bg-[#FFFFFF] dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:border-[#D3AE36] border border-zinc-200/90 dark:border-[#31394D] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
+                >
+                  <Users size={14} className="text-[#D3AE36]" />
+                  <span>Meet Our Brotherhood Cohort</span>
                 </Link>
                 <a
                   href="/resources"
-                  className="rounded-full text-[#1E2025] hover:text-[#D3AE36] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2"
+                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA]/80 hover:text-[#D3AE36] px-5 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2"
                 >
-                  Download Academic CV (PDF) <Download size={14} />
+                  CV (PDF) <Download size={14} />
                 </a>
               </div>
             </div>

@@ -16,15 +16,99 @@ import {
   FileCheck2, 
   Sparkles,
   Building2,
-  Check
+  Check,
+  Users,
+  Target,
+  Layers,
+  MapPin
 } from 'lucide-react';
 import { SOFTWARE_STACK, CAREER_TIMELINE, CERTIFICATIONS } from '../../utils/constants';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
 import { TechMarquee } from '../../components/common/TechMarquee';
 import lemmaImg from '../../assets/lemma.JPG';
+import lemmaTwoImg from '../../assets/lemma-two.jpg';
+import lemmaThreeImg from '../../assets/lemma-three.jpg';
+import lemmaFourImg from '../../assets/lemma-four.jpg';
+import li2Img from '../../assets/li2.jpg';
+import li3Img from '../../assets/li3.jpg';
 
 export const About = () => {
   const navigate = useNavigate();
+
+  const brotherhoodCohort = [
+    {
+      id: 'lemma',
+      name: 'Lemma Amensisa',
+      role: 'Senior Capstone Lead & Structural Dynamics',
+      focus: 'Multi-story RC Dual Frame, ETABS 3D Seismic Analysis & Project Integration',
+      image: lemmaImg,
+      badge: 'ASTU SoCEA Lead · 2026',
+      badgeColor: 'bg-[#D3AE36]/15 text-[#D3AE36] border-[#D3AE36]/40',
+      standards: ['EBCS EN 1998', 'ETABS 21', 'Eurocode 2'],
+      stat: '100% Defense Ready',
+      quote: 'Engineered for resilience, tested on site, built with brotherhood.'
+    },
+    {
+      id: 'structural',
+      name: 'Structural Modeling Cohort',
+      role: 'FEA Computing & Beam-Column Joint Detailing',
+      focus: 'Bending moment distribution, shear wall stress tensors & SAP2000 calculations',
+      image: lemmaTwoImg,
+      badge: 'FEA Specialist · ASTU',
+      badgeColor: 'bg-[#232936] text-[#D3AE36] border-[#D3AE36]/30',
+      standards: ['SAP2000 v24', 'ACI 318', 'SAFE Slab'],
+      stat: '0.015h Drift Pass',
+      quote: 'Eliminating torsional eccentricities before concrete is ever poured.'
+    },
+    {
+      id: 'highway',
+      name: 'Highway Infrastructure Specialist',
+      role: 'Geometric Road Alignment & Mass-Haul Engineering',
+      focus: 'Civil 3D horizontal/vertical profiling, ERA DC6 standards & earthwork balance',
+      image: lemmaThreeImg,
+      badge: 'ERA Certified · 2026',
+      badgeColor: 'bg-[#232936] text-emerald-400 border-emerald-500/30',
+      standards: ['AutoCAD Civil 3D', 'ERA 2024', 'AASHTO'],
+      stat: '14.8 km Corridor Done',
+      quote: 'Balancing mass-haul diagrams for economical corridor transit.'
+    },
+    {
+      id: 'geotech',
+      name: 'Geotechnical & Foundation Engineer',
+      role: 'Expansive Soil Stabilization & Deep Piles',
+      focus: 'Rift Valley black cotton clay mitigation, lime stabilization & pile cap design',
+      image: lemmaFourImg,
+      badge: 'Soils & Subgrade Lead',
+      badgeColor: 'bg-[#232936] text-[#D3AE36] border-[#D3AE36]/30',
+      standards: ['EBCS EN 1997', 'FDT Density', 'Terzaghi Bearing'],
+      stat: '220 kPa Bearing Pass',
+      quote: 'Deep foundational safety anchored into volcanic bedrock.'
+    },
+    {
+      id: 'survey',
+      name: 'Site QC & Field Supervision Officer',
+      role: 'Total Station Surveying & Concrete Quality Batching',
+      focus: 'Slump testing, rebar BBS inspection, 135° hook verification & OCC site training',
+      image: li2Img,
+      badge: 'OCC Site Internship',
+      badgeColor: 'bg-[#232936] text-[#D3AE36] border-[#D3AE36]/30',
+      standards: ['Digital Total Station', 'Slump Cone QC', 'Bar Bending (BBS)'],
+      stat: '100% Pour Sign-off',
+      quote: 'Inspecting every rebar diameter and formwork plumbness on site.'
+    },
+    {
+      id: 'hydraulics',
+      name: 'Hydraulic & Water Resources Engineer',
+      role: 'Drainage Corridor & Watershed Storm Modeling',
+      focus: 'Culvert sizing, catchment runoff coefficient, and sediment retention works',
+      image: li3Img,
+      badge: 'Water Works Division',
+      badgeColor: 'bg-[#232936] text-cyan-400 border-cyan-500/30',
+      standards: ['HEC-RAS', 'Rational Runoff', 'ERA Drainage'],
+      stat: '50-Yr Storm Return',
+      quote: 'Protecting highway embankments against severe seasonal monsoon runoff.'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-[#12151C] transition-colors duration-200">
@@ -459,6 +543,115 @@ export const About = () => {
                 Field Density Test (FDT) Approved
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* ======================================================================= */}
+        {/* 7.5 ASTU SoCEA CIVIL ENGINEERING BROTHERHOOD (id="brotherhood")          */}
+        {/* ======================================================================= */}
+        <div id="brotherhood" className="mb-24 scroll-mt-24">
+          <div className="mx-auto max-w-3xl text-center mb-14">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#232936] bg-[#FFFFFF] dark:bg-[#232936] px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+              ASTU SoCEA Civil Engineering Brotherhood · Class of 2026
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 dark:text-[#F8F9FA] tracking-tight mb-4">
+              United in Rigor. <span className="text-[#D3AE36]">Graduating as Brother Engineers.</span>
+            </h2>
+            <p className="text-sm sm:text-base text-[#1E2025]/85 dark:text-[#F8F9FA]/80 max-w-2xl mx-auto leading-relaxed">
+              From 1st-year statics to 5th-year multi-story ETABS capstone defense, total station surveying camps in Adama, and field internships at OCC — meet the engineers who stand shoulder to shoulder with Lemma Amensisa.
+            </p>
+          </div>
+
+          {/* 6-Card Brotherhood Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {brotherhoodCohort.map((member) => (
+              <div
+                key={member.id}
+                className="group relative rounded-2xl bg-[#FFFFFF] dark:bg-[#232936] border border-zinc-200/90 dark:border-[#31394D] p-5 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between cad-bracket-corners"
+              >
+                <div>
+                  {/* Photo Thumbnail with Blueprint & Vignette */}
+                  <div className="relative aspect-[16/11] rounded-xl overflow-hidden mb-4 bg-zinc-900 border border-zinc-200/50 dark:border-white/10">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
+
+                    {/* Corner Crosshairs */}
+                    <span className="absolute top-2 left-2 text-[8px] font-mono text-white/50 tracking-widest">+</span>
+                    <span className="absolute top-2 right-2 text-[8px] font-mono text-white/50 tracking-widest">+</span>
+                    <span className="absolute bottom-2 left-2 text-[8px] font-mono text-white/50 tracking-widest">+</span>
+                    <span className="absolute bottom-2 right-2 text-[8px] font-mono text-white/50 tracking-widest">+</span>
+
+                    {/* Badge */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className={`px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md ${member.badgeColor}`}>
+                        {member.badge}
+                      </span>
+                    </div>
+
+                    {/* Live Stat in Photo */}
+                    <div className="absolute bottom-3 right-3 z-10 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-mono text-[#D3AE36] font-bold">
+                      {member.stat}
+                    </div>
+                  </div>
+
+                  {/* Header & Role */}
+                  <h3 className="text-lg font-extrabold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors leading-snug">
+                    {member.name}
+                  </h3>
+                  <p className="text-xs font-mono text-[#D3AE36] font-semibold mt-1 mb-2">
+                    {member.role}
+                  </p>
+
+                  {/* Focus narrative */}
+                  <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/75 leading-relaxed mb-4">
+                    {member.focus}
+                  </p>
+
+                  {/* Standards Pills */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {member.standards.map((std) => (
+                      <span
+                        key={std}
+                        className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/80 border border-zinc-200 dark:border-[#31394D]"
+                      >
+                        {std}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Card Quote Strip */}
+                <div className="pt-3 border-t border-zinc-200/70 dark:border-[#31394D] text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/70 italic flex items-center justify-between">
+                  <span className="truncate">"{member.quote}"</span>
+                  <ArrowUpRight size={14} className="text-[#D3AE36] shrink-0 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Brotherhood Cohort Endorsement Strip */}
+          <div className="mt-8 p-6 rounded-2xl bg-[#FFFFFF] dark:bg-[#232936] border border-[#D3AE36]/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#D3AE36]/15 border border-[#D3AE36]/40 flex items-center justify-center text-[#D3AE36] shrink-0">
+                <Users size={18} />
+              </div>
+              <div>
+                <span className="font-extrabold uppercase text-[#1E2025] dark:text-[#F8F9FA] block">ASTU SoCEA Capstone Cohort Certified</span>
+                <span className="text-[#1E2025]/70 dark:text-[#F8F9FA]/70">Multidisciplinary final-year student engineering cohort ready for national infrastructure projects.</span>
+              </div>
+            </div>
+            <button
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-5 py-2.5 font-bold uppercase tracking-wider text-xs transition-all shadow-md shrink-0 flex items-center gap-1.5"
+            >
+              <span>Recruit Our Team</span>
+              <ArrowUpRight size={14} />
+            </button>
           </div>
         </div>
 
