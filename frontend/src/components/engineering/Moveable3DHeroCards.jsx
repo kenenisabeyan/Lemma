@@ -56,9 +56,9 @@ export const Moveable3DHeroCards = () => {
       metric: 'HEAVY TRUCK AXLE HL-93 PASS',
       image: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
       icon: Compass,
-      accent: 'border-cyan-500',
-      accentBg: 'bg-cyan-500',
-      accentText: 'text-cyan-500',
+      accent: 'border-[#D3AE36]',
+      accentBg: 'bg-[#D3AE36]',
+      accentText: 'text-[#D3AE36]',
       defaultPos: 'top-12 right-4 2xl:right-12',
       visibility: 'hidden xl:block',
       depthMultiplier: -18,
@@ -73,9 +73,9 @@ export const Moveable3DHeroCards = () => {
       metric: 'MASS-HAUL BALANCED · 90 KM/H',
       image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80',
       icon: ShieldCheck,
-      accent: 'border-emerald-500',
-      accentBg: 'bg-emerald-500',
-      accentText: 'text-emerald-500',
+      accent: 'border-[#D3AE36]',
+      accentBg: 'bg-[#D3AE36]',
+      accentText: 'text-[#D3AE36]',
       defaultPos: 'bottom-10 left-4 2xl:left-12',
       visibility: 'hidden md:block',
       depthMultiplier: 16,
@@ -90,9 +90,9 @@ export const Moveable3DHeroCards = () => {
       metric: 'ALLOWABLE BEARING: 220 KPA',
       image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80',
       icon: Activity,
-      accent: 'border-amber-500',
-      accentBg: 'bg-amber-500',
-      accentText: 'text-amber-500',
+      accent: 'border-[#D3AE36]',
+      accentBg: 'bg-[#D3AE36]',
+      accentText: 'text-[#D3AE36]',
       defaultPos: 'bottom-8 right-4 2xl:right-12',
       visibility: 'hidden md:block',
       depthMultiplier: -18,
@@ -148,7 +148,7 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(211,174,54, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/85 dark:bg-[#232936]/80 backdrop-blur-2xl border border-white/90 dark:border-[#232936] p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/90 dark:bg-[#232936]/90 backdrop-blur-2xl border border-white/90 dark:border-[#31394D] hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] hover:shadow-[0_20px_45px_rgba(211,174,54,0.18)] dark:hover:shadow-[0_20px_45px_rgba(211,174,54,0.25)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
             <div className="relative overflow-hidden rounded-xl bg-zinc-950/80 backdrop-blur-xs aspect-[16/10] border border-white/20 dark:border-white/10">
