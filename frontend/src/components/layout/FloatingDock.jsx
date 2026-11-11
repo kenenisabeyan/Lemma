@@ -66,7 +66,7 @@ export const FloatingDock = () => {
 
               {/* Tooltip */}
               {activeTooltip === item.name && (
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-zinc-900 dark:bg-[#12151C] border border-zinc-700 dark:border-[#232936] text-[10px] font-mono font-bold uppercase tracking-wider text-[#D3AE36] shadow-lg whitespace-nowrap animate-in fade-in duration-200 pointer-events-none">
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-[#12151C] border border-[#31394D] text-[10px] font-mono font-bold uppercase tracking-wider text-[#D3AE36] shadow-lg whitespace-nowrap animate-in fade-in duration-200 pointer-events-none">
                   {item.name}
                 </div>
               )}

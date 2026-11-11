@@ -93,22 +93,22 @@ export const PEVerificationPortal = () => {
 
             {/* Project Name */}
             <div className="space-y-1">
-              <label className="text-[11px] font-mono text-[#1E2025] block font-semibold">Capstone / Field Designation:</label>
+              <label className="text-[11px] font-mono text-[#1E2025] dark:text-[#F8F9FA]/90 block font-semibold">Capstone / Field Designation:</label>
               <input 
                 type="text" 
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D3AE36] font-medium"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36] font-medium"
               />
             </div>
 
             {/* Jurisdiction */}
             <div className="space-y-1">
-              <label className="text-[11px] font-mono text-[#1E2025] block font-semibold">Supervising Faculty / Institutional Authority:</label>
+              <label className="text-[11px] font-mono text-[#1E2025] dark:text-[#F8F9FA]/90 block font-semibold">Supervising Faculty / Institutional Authority:</label>
               <select 
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D3AE36]"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
               >
                 <option value="Adama Science & Technology University (ASTU SoCEA)">Adama Science & Technology University (ASTU SoCEA)</option>
                 <option value="Ethiopian Construction Authority (ECA) / Adama City Administration">Ethiopian Construction Authority (ECA) / Adama City Administration</option>
@@ -120,11 +120,11 @@ export const PEVerificationPortal = () => {
 
             {/* Structural System */}
             <div className="space-y-1">
-              <label className="text-[11px] font-mono text-[#1E2025] block font-semibold">Structural Lateral Resisting & Framing System:</label>
+              <label className="text-[11px] font-mono text-[#1E2025] dark:text-[#F8F9FA]/90 block font-semibold">Structural Lateral Resisting & Framing System:</label>
               <select 
                 value={systemType}
                 onChange={(e) => setSystemType(e.target.value)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D3AE36]"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
               >
                 <option value="Reinforced Concrete Dual Frame (Shear Walls + Moment Frames)">Reinforced Concrete Dual Frame (Shear Walls + Moment Frames)</option>
                 <option value="Prestressed Concrete Bridge Girder + Abutments">Prestressed Concrete Bridge Girder + Abutments</option>
@@ -135,11 +135,11 @@ export const PEVerificationPortal = () => {
 
             {/* Design Standards */}
             <div className="space-y-1">
-              <label className="text-[11px] font-mono text-[#1E2025] block font-semibold">Governing Ethiopian Standards & Eurocodes:</label>
+              <label className="text-[11px] font-mono text-[#1E2025] dark:text-[#F8F9FA]/90 block font-semibold">Governing Ethiopian Standards & Eurocodes:</label>
               <select 
                 value={designStandard}
                 onChange={(e) => setDesignStandard(e.target.value)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800/40 rounded-xl px-3.5 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#D3AE36]"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
               >
                 <option value="EBCS EN 1992:2014 (Design of Concrete Structures)">EBCS EN 1992:2014 (Design of Concrete Structures)</option>
                 <option value="EBCS EN 1998:2014 (Design of Structures for Earthquake Resistance - Zone 4)">EBCS EN 1998:2014 (Design of Structures for Earthquake Resistance - Zone 4)</option>
@@ -185,7 +185,7 @@ export const PEVerificationPortal = () => {
               <div className="grid sm:grid-cols-2 gap-4 py-2 text-[11px] font-mono">
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">PROJECT DESIGNATION:</span>
-                  <span className="text-zinc-900 font-bold dark:text-[#F8F9FA]">{projectName || 'B+G+10 RC Capstone Tower'}</span>
+                  <span className="text-[#1E2025] font-bold dark:text-[#F8F9FA]">{projectName || 'B+G+10 RC Capstone Tower'}</span>
                 </div>
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">SUPERVISING BODY:</span>
@@ -193,7 +193,7 @@ export const PEVerificationPortal = () => {
                 </div>
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">STRUCTURAL SYSTEM:</span>
-                  <span className="text-zinc-900 dark:text-[#F8F9FA]">{systemType}</span>
+                  <span className="text-[#1E2025] dark:text-[#F8F9FA]">{systemType}</span>
                 </div>
                 <div>
                   <span className="text-[#1E2025] block text-[9px] font-semibold">GOVERNING ETHIOPIAN CODE:</span>
@@ -233,7 +233,7 @@ export const PEVerificationPortal = () => {
               </div>
 
               <div className="text-xs font-mono">
-                <div className="text-zinc-900 font-bold text-sm dark:text-[#F8F9FA]">Lemma Amensisa & Brothers</div>
+                <div className="text-[#1E2025] font-bold text-sm dark:text-[#F8F9FA]">Lemma Amensisa & Brothers</div>
                 <div className="text-[10px] text-[#1E2025]">5th Year Civil Engineering Candidates</div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">ASTU SoCEA · Adama Science & Tech Univ.</div>
                 <div className="text-[9px] text-[#1E2025] mt-1">Date: {timestamp}</div>

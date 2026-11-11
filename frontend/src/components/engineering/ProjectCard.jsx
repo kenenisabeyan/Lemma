@@ -15,7 +15,7 @@ export const ProjectCard = ({ project, onClick }) => {
     >
       <div>
         {/* Project Thumbnail Image with Blueprint Crosshairs Overlay */}
-        <div className="relative aspect-[16/10] bg-zinc-900 overflow-hidden rounded-2xl mb-4">
+        <div className="relative aspect-[16/10] bg-[#12151C] border border-zinc-200/80 dark:border-[#31394D] overflow-hidden rounded-2xl mb-4">
           <img
             src={project.imageUrl}
             alt={project.title}

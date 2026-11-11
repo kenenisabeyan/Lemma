@@ -151,7 +151,7 @@ export const Moveable3DHeroCards = () => {
             className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/90 dark:bg-[#232936]/90 backdrop-blur-2xl border border-white/90 dark:border-[#31394D] hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] hover:shadow-[0_20px_45px_rgba(211,174,54,0.18)] dark:hover:shadow-[0_20px_45px_rgba(211,174,54,0.25)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
-            <div className="relative overflow-hidden rounded-xl bg-zinc-950/80 backdrop-blur-xs aspect-[16/10] border border-white/20 dark:border-white/10">
+            <div className="relative overflow-hidden rounded-xl bg-[#12151C]/90 backdrop-blur-xs aspect-[16/10] border border-white/20 dark:border-[#31394D]">
               
               {/* Photorealistic Architectural Engineering Image */}
               <img 
@@ -200,16 +200,16 @@ export const Moveable3DHeroCards = () => {
             {/* Bottom Card Footer Details */}
             <div className="pt-3 px-1 flex items-center justify-between text-xs">
               <div className="overflow-hidden">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-600 dark:text-zinc-400 block truncate font-medium">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-600 dark:text-[#F8F9FA]/70 block truncate font-medium">
                   {card.project}
                 </span>
-                <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1">
+                <span className="text-[11px] font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1">
                   <span className={`w-1.5 h-1.5 rounded-full ${card.accentBg}`}></span>
                   {card.metric}
                 </span>
               </div>
 
-              <div className="text-[9px] font-mono text-zinc-700 dark:text-zinc-300 border border-white/80 dark:border-white/20 px-2 py-1 rounded-md bg-white/70 dark:bg-white/10 backdrop-blur-md uppercase tracking-widest shrink-0 font-semibold shadow-2xs">
+              <div className="text-[9px] font-mono text-[#1E2025] dark:text-[#F8F9FA]/80 border border-zinc-200 dark:border-[#31394D] px-2 py-1 rounded-md bg-white/70 dark:bg-[#12151C]/60 backdrop-blur-md uppercase tracking-widest shrink-0 font-semibold shadow-2xs">
                 FEA Verified
               </div>
             </div>

@@ -87,7 +87,7 @@ export const Navbar = () => {
           >
             {/* Avatar with Live Green Status Dot */}
             <div className="relative shrink-0">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-zinc-300 dark:border-[#232936] shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-zinc-300 dark:border-[#31394D] shadow-sm group-hover:scale-105 transition-transform">
                 <img 
                   src={avatarImage} 
                   alt={brandName}
@@ -103,7 +103,7 @@ export const Navbar = () => {
 
             {/* Name + Subtitle in Gold */}
             <div className="flex flex-col text-left">
-              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-900 dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-tight">
+              <span className="font-extrabold tracking-wider text-sm sm:text-base text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-tight">
                 {brandName}
               </span>
               <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#D3AE36] uppercase mt-0.5 leading-none">
@@ -119,13 +119,13 @@ export const Navbar = () => {
             <button
               onClick={toggleTheme}
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white dark:bg-[#232936] border border-zinc-200/90 dark:border-[#232936] text-zinc-800 dark:text-[#F8F9FA] shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white dark:bg-[#232936] border border-zinc-200/90 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none cursor-pointer"
               title={isDark ? "Light mode" : "Dark mode"}
             >
               {isDark ? (
                 <Sun size={17} className="text-[#D3AE36]" />
               ) : (
-                <Moon size={17} className="text-zinc-700" />
+                <Moon size={17} className="text-[#1E2025]" />
               )}
             </button>
 
@@ -164,19 +164,19 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 260 }}
-              className="relative z-10 w-full max-w-md bg-[#FFFFFF] dark:bg-[#12151C] border-l border-zinc-200 dark:border-[#232936] shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
+              className="relative z-10 w-full max-w-md bg-[#FFFFFF] dark:bg-[#12151C] border-l border-zinc-200 dark:border-[#31394D] shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
             >
               {/* Drawer Top */}
               <div>
-                <div className="flex items-center justify-between pb-6 border-b border-zinc-200 dark:border-[#232936]">
+                <div className="flex items-center justify-between pb-6 border-b border-zinc-200 dark:border-[#31394D]">
                   <div className="flex items-center gap-3">
                     <img 
                       src={avatarImage} 
                       alt={brandName}
-                      className="w-10 h-10 rounded-full object-cover border border-zinc-300 dark:border-[#232936]" 
+                      className="w-10 h-10 rounded-full object-cover border border-zinc-300 dark:border-[#31394D]" 
                     />
                     <div>
-                      <h3 className="font-extrabold text-sm text-zinc-900 dark:text-[#F8F9FA]">{brandName}</h3>
+                      <h3 className="font-extrabold text-sm text-[#1E2025] dark:text-[#F8F9FA]">{brandName}</h3>
                       <p className="text-[10px] font-bold tracking-wider text-[#D3AE36] uppercase">
                         {brandSubtitle}
                       </p>
@@ -186,7 +186,7 @@ export const Navbar = () => {
                   <button
                     onClick={() => setMenuOpen(false)}
                     aria-label="Close menu"
-                    className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-[#232936] border border-zinc-200 dark:border-[#232936] text-zinc-700 dark:text-[#F8F9FA] hover:scale-105 active:scale-95 transition-all"
+                    className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] hover:scale-105 active:scale-95 transition-all cursor-pointer"
                   >
                     <X size={18} />
                   </button>

@@ -119,7 +119,7 @@ export const EngineeringPrinciplesMatrix = () => {
           <div className="w-2 h-2 rounded-full bg-[#D3AE36]"></div>
           <div>
             <span className="text-[9px] text-[#1E2025] block uppercase tracking-wider">MANDATE</span>
-            <span className="font-bold text-zinc-800 dark:text-[#F8F9FA]">ASCE 7 / AISC / ACI / EBCS</span>
+            <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASCE 7 / AISC / ACI / EBCS</span>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ export const EngineeringPrinciplesMatrix = () => {
                 </span>
               </div>
               <h4 className={`text-xs font-bold leading-snug ${
-                isActive ? 'text-zinc-900 dark:text-[#F8F9FA] font-extrabold' : 'text-zinc-700 dark:text-zinc-400'
+                isActive ? 'text-[#1E2025] dark:text-[#F8F9FA] font-extrabold' : 'text-[#1E2025]/80 dark:text-[#F8F9FA]/70'
               }`}>
                 {principle.title}
               </h4>
@@ -200,7 +200,7 @@ export const EngineeringPrinciplesMatrix = () => {
           
           {/* Engineering Specifications (7 Cols) */}
           <div className="md:col-span-7 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block dark:text-[#F8F9FA]">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
               Practical Structural Application
             </span>
             <div className="space-y-2">
@@ -217,7 +217,7 @@ export const EngineeringPrinciplesMatrix = () => {
 
           {/* Key Design Limits & Benchmark Metrics (5 Cols) */}
           <div className="md:col-span-5 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-zinc-800 font-bold block dark:text-[#F8F9FA]">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
               Benchmark Verification Metrics
             </span>
             <div className="space-y-2">

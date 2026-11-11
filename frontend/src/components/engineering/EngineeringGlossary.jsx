@@ -129,7 +129,7 @@ export const EngineeringGlossary = () => {
             placeholder="Search formulas or terms..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-transparent border-b border-zinc-300 focus:border-[#D3AE36] text-xs text-zinc-900 placeholder:text-zinc-400 pl-6 pr-4 py-2 outline-none font-mono transition-colors dark:text-[#F8F9FA]"
+            className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] focus:border-[#D3AE36] text-xs text-[#1E2025] placeholder:text-zinc-400 pl-6 pr-4 py-2 outline-none font-mono transition-colors dark:text-[#F8F9FA]"
           />
         </div>
       </div>
@@ -143,7 +143,7 @@ export const EngineeringGlossary = () => {
             className={`pb-1 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeCategory === cat
                 ? 'text-[#D3AE36] border-b-2 border-[#D3AE36]'
-                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA] border-b-2 border-transparent'
+                : 'text-[#1E2025] hover:text-[#D3AE36] dark:text-[#F8F9FA] dark:hover:text-[#D3AE36] border-b-2 border-transparent'
             }`}
           >
             {cat}
