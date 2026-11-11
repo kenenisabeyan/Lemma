@@ -150,21 +150,21 @@ export const Contact = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed max-w-xl">
-                  Have questions about our civil engineering designs, structural calculations, capstone research, or site consultations? Send us a message or call directly.
+                <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-sm sm:text-base leading-relaxed max-w-xl">
+                  Connect directly with <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU 5th-Year Civil Engineering Team</strong>. Available for graduate roles, B.Sc. capstone collaborations, and structural site consultations across Ethiopia.
                 </p>
 
                 {/* Toolkit Checkmark Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                  <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
                     <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
                   </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                  <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
                     <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">Direct Mobile &amp; Telegram</span>
                   </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                  <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
                     <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
                     <span className="font-semibold">24-Hour Response Time</span>
                   </div>

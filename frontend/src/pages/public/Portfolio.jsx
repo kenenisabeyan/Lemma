@@ -162,27 +162,45 @@ export const Portfolio = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  Curated portfolio of 25+ capstone designs, field surveys, geotechnical studies, and infrastructure projects by Lemma Amensisa & ASTU civil engineering peers.
-                </p>
+                <div className="space-y-2 max-w-xl">
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
+                    Curated portfolio of 25+ capstone designs, field surveys, and infrastructure projects by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU Civil Engineering Brothers</strong>. Precision mechanics compliant with EBCS EN and ERA manuals.
+                  </p>
+
+                  {/* Micro-Bullet Highlights */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">RC Towers:</strong> B+G+10 ETABS Dynamic
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Highways:</strong> Civil 3D &amp; ERA 2024
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Live Engineering KPI Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Academic Year</span>
                   </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">25+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Capstones</span>
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                    <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">25+</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Capstones</span>
                   </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                    <span className="block text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400 font-mono">100%</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Defense Ready</span>
                   </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">ASTU</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Brotherhood</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">SoCEA Brotherhood</span>
                   </div>
                 </div>
               </motion.div>
@@ -207,7 +225,7 @@ export const Portfolio = () => {
                 {/* Secondary Pill Button */}
                 <a
                   href="#cad-inspector"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer border border-transparent hover:border-[#31394D]/30"
                 >
                   <Compass size={15} className="text-[#D3AE36]" />
                   <span>LAUNCH CAD INSPECTOR</span>
@@ -316,7 +334,7 @@ export const Portfolio = () => {
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="project-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -330,17 +348,17 @@ export const Portfolio = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
+                  className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 rounded-full cursor-pointer ${
                     isSelected
-                      ? 'text-[#D3AE36]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
+                      ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
+                      : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:bg-[#12151C]/5 dark:hover:bg-[#232936]'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
-                      : 'text-zinc-400'
+                      ? 'bg-[#12151C] text-[#F8F9FA] font-black' 
+                      : 'bg-[#12151C]/10 dark:bg-[#12151C] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
                   }`}>
                     {count}
                   </span>
@@ -351,18 +369,18 @@ export const Portfolio = () => {
 
           {/* Search Input with Reset */}
           <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
             <input
               type="text"
               placeholder="Search capstone, RC frame, highway, soil..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] pl-9 pr-9 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
+              className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-[#F8F9FA]"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#1E2025]/60 dark:text-[#F8F9FA]/60 hover:text-[#D3AE36] cursor-pointer"
               >
                 <X size={14} />
               </button>
@@ -409,10 +427,10 @@ export const Portfolio = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
-              Interactive Drawing <span className="text-[#D3AE36]">Dossier & FEA Inspector.</span>
+            <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
+              Interactive Drawing <span className="text-[#D3AE36]">Dossier &amp; FEA Inspector.</span>
             </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
               Examine capstone project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
             </p>
           </div>
@@ -423,16 +441,16 @@ export const Portfolio = () => {
         {/* ======================================================================= */}
         {/* 5. HIGH-STAKES CONSULTATION BANNER                                      */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="py-12 border-t border-[#31394D]/25 dark:border-[#31394D] flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-left max-w-2xl">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] mb-2 font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Graduate Recruitment & Capstone Collaborations</span>
+              <span>Available for Graduate Recruitment &amp; Capstone Collaborations</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-3">
+            <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-3">
               Interested in Capstone Research or Engineering Recruitment?
             </h3>
-            <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-xs md:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
               Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
             </p>
           </div>
