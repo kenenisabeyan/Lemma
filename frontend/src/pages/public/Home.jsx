@@ -33,6 +33,7 @@ import {
   Users
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
+import { TechMarquee } from '../../components/common/TechMarquee';
 import { StatCounter } from '../../components/engineering/StatCounter';
 import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { EngineeringCanvas } from '../../components/engineering/EngineeringCanvas';
@@ -317,8 +318,8 @@ export const Home = () => {
           <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none"></div>
           <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
           
-          {/* 3D Interactive Three.js High-Rise Civil Engineering Process Model */}
-          <div className="absolute inset-0">
+          {/* 3D Interactive Three.js High-Rise Civil Engineering Process Model (Subtle Atmospheric Ambient) */}
+          <div className="absolute inset-0 opacity-30 dark:opacity-40">
             <Hero3DCanvas />
           </div>
 
@@ -341,6 +342,12 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
+              {/* Status Badge Pill */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/30 shadow-xs text-xs font-mono font-bold text-[#D3AE36]">
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+                <span>ASTU SoCEA Civil Engineering · Class of 2026</span>
+              </div>
+
               {/* Main Headline (Left Aligned) */}
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
@@ -348,7 +355,7 @@ export const Home = () => {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="space-y-1 sm:space-y-1.5 pointer-events-auto select-text"
               >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
+                <h1 className="font-extrabold text-3xl sm:text-4xl md:text-[2.6rem] xl:text-[2.9rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
                   <span className="block select-text">
                     {settings.heroHeadlineLine1 || 'Engineering Ethiopia.'}
                   </span>
@@ -411,187 +418,141 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-4 pt-1 w-full max-w-lg pointer-events-auto select-text"
+                className="grid grid-cols-3 gap-3 pt-2 w-full max-w-lg pointer-events-auto select-text"
               >
-                <div className="py-1 text-left select-text">
+                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] shadow-xs text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono select-text">{settings.yearsExp || '5th Year'}</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Academic Level</span>
                 </div>
-                <div className="py-1 text-left select-text">
+                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] shadow-xs text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono select-text">{settings.projectsCount || '25+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Capstone & Projects</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Capstone Works</span>
                 </div>
-                <div className="py-1 text-left select-text">
+                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] shadow-xs text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono select-text">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Defense Readiness</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Defense Ready</span>
                 </div>
               </motion.div>
 
             </div>
 
             {/* --------------------------------------------------------------- */}
-            {/* RIGHT COLUMN: Professional Portrait & Portfolio Images Showcase */}
+            {/* RIGHT COLUMN: Master Architectural Capstone Showcase DIV        */}
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 relative flex flex-col items-center justify-center pointer-events-auto">
-              <div className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-none flex flex-col items-center">
-                
-                {/* Visual Composition Container */}
-                <div className="relative w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
-                  
-                  {/* 1. Professional Engineer Portrait Card */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 25 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative z-10 w-full sm:w-[58%] lg:w-[57%] xl:w-[58%] group overflow-hidden"
-                  >
-                    {/* Engineer Portrait Photo - Taller Vertical Frame */}
-                    <div 
-                      onMouseEnter={() => setIsEngineerHovered(true)}
-                      onMouseLeave={() => setIsEngineerHovered(false)}
-                      className="relative aspect-[3/4.6] sm:aspect-[3/4.7] rounded-2xl overflow-hidden cursor-pointer"
-                    >
-                      <img
-                        src={settings.avatarUrl || lemmaImg}
-                        alt="Lemma Amensisa"
-                        className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
-                      />
-
-                      {/* Smooth Hover Overlay - Never rendered before hover */}
-                      <AnimatePresence>
-                        {isEngineerHovered && (
-                          <>
-                            <motion.div
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              transition={{ duration: 0.25 }}
-                              className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"
-                            />
-                            <motion.div
-                              initial={{ opacity: 0, y: 8 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: 8 }}
-                              transition={{ duration: 0.25 }}
-                              className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-black/75 backdrop-blur-md pointer-events-auto select-text"
-                            >
-                              <p className="text-xs font-bold text-white leading-tight select-text">
-                                {settings.engineerName || 'Lemma Amensisa'}
-                              </p>
-                              <p className="text-[10px] text-[#D3AE36] font-semibold tracking-wide select-text">
-                                5th Year Civil Engineering · ASTU Senior Candidate
-                              </p>
-                            </motion.div>
-                          </>
-                        )}
-                      </AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative w-full max-w-lg lg:max-w-xl mx-auto rounded-3xl bg-white dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] p-5 sm:p-6 shadow-2xl transition-all"
+              >
+                {/* Header Profile & Verification Bar */}
+                <div className="flex items-center justify-between pb-4 border-b border-[#31394D]/20 dark:border-[#31394D]/50">
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={settings.avatarUrl || lemmaImg} 
+                      alt="Lemma Amensisa" 
+                      className="w-11 h-11 rounded-full object-cover object-top border-2 border-[#D3AE36] shadow-sm shrink-0" 
+                    />
+                    <div>
+                      <span className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] block leading-tight">
+                        {settings.engineerName || 'Lemma Amensisa'}
+                      </span>
+                      <span className="text-[10px] font-mono text-[#D3AE36] font-semibold block mt-0.5">
+                        ASTU Civil Engineering · Class of 2026
+                      </span>
                     </div>
-                  </motion.div>
+                  </div>
 
-                  {/* 2. Layered Portfolio Project Showcase Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.35 }}
-                    className="relative z-20 w-full sm:w-[68%] lg:w-[67%] xl:w-[68%] sm:-ml-12 sm:mt-14 lg:mt-16 group select-text"
-                  >
-                    {/* Project Preview Image - Taller Vertical Frame */}
-                    <div 
-                      onMouseEnter={() => setIsProjectHovered(true)}
-                      onMouseLeave={() => setIsProjectHovered(false)}
-                      className="relative aspect-[16/13] sm:aspect-[16/13.5] rounded-2xl overflow-hidden cursor-pointer"
-                      onClick={() => {
-                        const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
-                        setSelectedCaseStudy(matched);
-                      }}
-                    >
-                      <AnimatePresence mode="wait">
-                        <motion.img
-                          key={activeHeroProjectIdx}
-                          src={heroProjects[activeHeroProjectIdx].imageUrl}
-                          alt={heroProjects[activeHeroProjectIdx].title}
-                          initial={{ opacity: 0, scale: 1.05 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.95 }}
-                          transition={{ duration: 0.35 }}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </AnimatePresence>
-
-                      {/* Smooth Hover Overlay - Never rendered before hover */}
-                      <AnimatePresence>
-                        {isProjectHovered && (
-                          <>
-                            <motion.div
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              transition={{ duration: 0.25 }}
-                              className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"
-                            />
-                            <motion.div
-                              initial={{ opacity: 0, y: -6 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: -6 }}
-                              transition={{ duration: 0.25 }}
-                              className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-mono font-semibold text-white pointer-events-auto select-text"
-                            >
-                              {heroProjects[activeHeroProjectIdx].metric}
-                            </motion.div>
-                            <motion.div
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              exit={{ opacity: 0, scale: 0.8 }}
-                              transition={{ duration: 0.25 }}
-                              className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-black/60 backdrop-blur-md text-white pointer-events-none"
-                            >
-                              <ArrowUpRight size={13} />
-                            </motion.div>
-                            <motion.div
-                              initial={{ opacity: 0, y: 8 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: 8 }}
-                              transition={{ duration: 0.25 }}
-                              className="absolute bottom-2.5 left-2.5 right-2.5 pointer-events-auto select-text"
-                            >
-                              <p className="text-[10px] uppercase font-mono tracking-wider text-[#D3AE36] font-semibold select-text">
-                                {heroProjects[activeHeroProjectIdx].category}
-                              </p>
-                              <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate select-text">
-                                {heroProjects[activeHeroProjectIdx].title}
-                              </h4>
-                            </motion.div>
-                          </>
-                        )}
-                      </AnimatePresence>
-                    </div>
-
-                    {/* Interactive Project Switcher (Pure Thumbnails, No Text) */}
-                    <div className="mt-2.5 flex items-center justify-center gap-2.5">
-                      {heroProjects.map((proj, idx) => (
-                        <button
-                          key={proj.id}
-                          onClick={() => setActiveHeroProjectIdx(idx)}
-                          aria-label={proj.title}
-                          className={`relative w-14 h-8 sm:w-16 sm:h-9 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer ${
-                            activeHeroProjectIdx === idx
-                              ? 'ring-2 ring-[#D3AE36] scale-105'
-                              : 'opacity-50 hover:opacity-100 hover:scale-102'
-                          }`}
-                        >
-                          <img
-                            src={proj.imageUrl}
-                            alt={proj.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </button>
-                      ))}
-                    </div>
-                  </motion.div>
-
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5 shrink-0">
+                    <ShieldCheck size={13} />
+                    <span>EBCS VERIFIED</span>
+                  </span>
                 </div>
 
-              </div>
+                {/* Main Visual Display Frame */}
+                <div 
+                  className="relative aspect-[16/10] rounded-2xl overflow-hidden my-4 border border-[#31394D]/25 dark:border-[#31394D] group cursor-pointer shadow-md"
+                  onClick={() => {
+                    const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
+                    setSelectedCaseStudy(matched);
+                  }}
+                >
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={activeHeroProjectIdx}
+                      src={heroProjects[activeHeroProjectIdx].imageUrl}
+                      alt={heroProjects[activeHeroProjectIdx].title}
+                      initial={{ opacity: 0, scale: 1.04 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 1 }}
+                      transition={{ duration: 0.35 }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </AnimatePresence>
+
+                  {/* Top-Right Expand Badge */}
+                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-mono text-white font-semibold flex items-center gap-1 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all">
+                    <span>View Case Study</span>
+                    <ArrowUpRight size={12} className="text-[#D3AE36]" />
+                  </div>
+
+                  {/* Permanent High-Contrast Caption Overlay */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 flex flex-col justify-end pointer-events-none">
+                    <span className="text-[10px] font-mono text-[#D3AE36] uppercase font-bold tracking-wider mb-0.5">
+                      {heroProjects[activeHeroProjectIdx].category} · {heroProjects[activeHeroProjectIdx].location}
+                    </span>
+                    <h4 className="text-sm sm:text-base font-extrabold text-white leading-snug drop-shadow-sm">
+                      {heroProjects[activeHeroProjectIdx].title}
+                    </h4>
+                    <span className="text-[11px] font-mono text-white/80 mt-1">
+                      {heroProjects[activeHeroProjectIdx].tag} · {heroProjects[activeHeroProjectIdx].metric}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Clean Project Switcher Tabs (3 Clear Cards) */}
+                <div className="grid grid-cols-3 gap-2.5 my-2">
+                  {heroProjects.map((proj, idx) => {
+                    const isSelected = activeHeroProjectIdx === idx;
+                    return (
+                      <button
+                        key={proj.id}
+                        onClick={() => setActiveHeroProjectIdx(idx)}
+                        className={`p-2 rounded-xl text-left transition-all duration-200 flex items-center gap-2 cursor-pointer border ${
+                          isSelected
+                            ? 'bg-[#D3AE36]/10 dark:bg-[#D3AE36]/15 border-[#D3AE36] ring-1 ring-[#D3AE36]'
+                            : 'bg-[#12151C]/5 dark:bg-[#232936] border-[#31394D]/30 dark:border-[#31394D] opacity-75 hover:opacity-100 hover:border-[#D3AE36]/60'
+                        }`}
+                      >
+                        <div className="w-9 h-9 rounded-lg overflow-hidden shrink-0 border border-[#31394D]/40">
+                          <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover" />
+                        </div>
+                        <div className="overflow-hidden min-w-0">
+                          <span className="text-[10px] font-bold text-[#1E2025] dark:text-[#F8F9FA] block truncate leading-tight">
+                            {proj.title.split(' ')[0]} {proj.title.split(' ')[1]}
+                          </span>
+                          <span className="text-[9px] font-mono text-[#D3AE36] block truncate">
+                            {proj.category.split(' ')[0]}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Card Footer Telemetry */}
+                <div className="mt-3 pt-3 border-t border-[#31394D]/20 dark:border-[#31394D]/50 flex items-center justify-between text-[11px] font-mono">
+                  <span className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                    Defense Capstone 2026
+                  </span>
+                  <span className="text-[#D3AE36] font-bold">
+                    EBCS EN 1998 ZONE 4 PASS
+                  </span>
+                </div>
+
+              </motion.div>
             </div>
 
           </div>
@@ -601,23 +562,7 @@ export const Home = () => {
       {/* ========================================================================= */}
       {/* 2. INFINITE MARQUEE TICKER                                                */}
       {/* ========================================================================= */}
-      <section aria-label="Software Stack & Standards" className="py-4 overflow-hidden transition-colors">
-        <div className="mx-auto max-w-6xl [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="overflow-hidden">
-            <div className="animate-marquee flex items-center gap-10">
-              {techMarquee.concat(techMarquee).map((tool, idx) => (
-                <span 
-                  key={idx} 
-                  className="group flex items-center gap-2 whitespace-nowrap font-mono text-[#1E2025] text-xs uppercase tracking-wider transition-colors hover:text-[#D3AE36]"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36] group-hover:scale-125 transition-transform"></span>
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <TechMarquee />
 
       {/* ========================================================================= */}
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
@@ -641,105 +586,91 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
-            <div className="group relative overflow-hidden py-6 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
-              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-105 transition-transform mb-6">
-                <Building2 size={36} className="text-[#D3AE36] relative z-20" />
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+              <div>
+                <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-5">
+                  <Building2 size={32} className="text-[#D3AE36]" />
+                </div>
+                <div className="space-y-2 text-center">
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Multi-Story RC Structural Design</h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80">
+                    Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
+                  </p>
+                </div>
               </div>
-              <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Multi-Story RC Structural Design</h3>
-                <p className="text-[#1E2025] text-xs leading-relaxed">
-                  Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
                 ETABS · EBCS EN 1992 Concrete
               </div>
             </div>
 
             {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
-            <div className="group relative overflow-hidden py-6 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
-              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-105 transition-transform mb-6">
-                <Activity size={36} className="text-[#D3AE36] relative z-20" />
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+              <div>
+                <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-5">
+                  <Activity size={32} className="text-[#D3AE36]" />
+                </div>
+                <div className="space-y-2 text-center">
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Highway Alignment & ERA Standards</h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80">
+                    Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
+                  </p>
+                </div>
               </div>
-              <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Highway Alignment & ERA Standards</h3>
-                <p className="text-[#1E2025] text-xs leading-relaxed">
-                  Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
                 Civil 3D · Pavement Design
               </div>
             </div>
 
             {/* Bento Card 3: Practical Site Supervision & Soil Testing (Col 5-6) */}
-            <div className="group relative overflow-hidden py-6 sm:col-span-2 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
-              <div className="min-h-28 relative flex flex-col justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="flex size-8 items-center justify-center rounded-full text-[#D3AE36]">
-                    <ShieldCheck size={18} />
-                  </div>
-                  <div className="font-mono text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA]">Practical Site Experience</div>
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
+              <div>
+                <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-5">
+                  <ShieldCheck size={32} className="text-[#D3AE36]" />
                 </div>
-                {/* Sparkline SVG Curve */}
-                <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
-                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15" stroke="#D3AE36" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-                  <path d="M3 90 C 45 60, 75 80, 110 40 C 145 10, 180 70, 220 30 C 255 10, 280 25, 298 15 L298 110 L3 110 Z" fill="url(#goldGradBento)" opacity="0.15" />
-                  <defs>
-                    <linearGradient id="goldGradBento" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stopColor="#D3AE36" />
-                      <stop offset="100%" stopColor="transparent" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                <div className="space-y-2 text-center">
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Site Supervision & Quality Control</h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80">
+                    Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
+                  </p>
+                </div>
               </div>
-              <div className="relative z-10 mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Site Supervision &amp; Quality Control</h3>
-                <p className="text-[#1E2025] text-xs leading-relaxed">
-                  Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-semibold">
+              <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
                 Slump QC · Field Surveying · FDT
               </div>
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="group relative overflow-hidden sm:col-span-2 md:col-span-6 p-0 transition-all duration-300">
-              <div className="grid h-full sm:grid-cols-2 items-center">
-                <div className="relative z-10 space-y-6 py-6 pe-6">
-                  <div className="flex size-10 items-center justify-center rounded-full text-[#D3AE36]">
-                    <Ruler size={22} className="text-[#D3AE36]" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="font-semibold text-[#1E2025] text-xl dark:text-[#F8F9FA]">Bridging Engineering Calculations with Real Site Construction</h3>
-                    <p className="text-[#1E2025] text-xs sm:text-sm leading-relaxed max-w-md">
-                      From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">EBCS EN 1992</span>
-                    <span className="text-[#31394D]">·</span>
-                    <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">ERA Standards</span>
-                    <span className="text-[#31394D]">·</span>
-                    <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">OCC Site Internship</span>
-                    <span className="text-[#31394D]">·</span>
-                    <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">Quality Assurance</span>
-                  </div>
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-9 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-6 grid sm:grid-cols-2 gap-8 items-center group">
+              <div className="space-y-5">
+                <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36]">
+                  <Ruler size={24} className="text-[#D3AE36]" />
                 </div>
-                <div className="relative aspect-video sm:aspect-auto h-full min-h-[240px] overflow-hidden py-4 flex items-center justify-center">
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden group-hover:scale-102 transition-transform">
-                    <img 
-                      src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
-                      alt="Practical Construction & Structural Detailing" 
-                      className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg font-mono text-[10px] text-white flex items-center gap-2 font-semibold">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                      ETABS Live Multi-Story RC Frame Stress Analysis
-                    </div>
-                  </div>
+                <div className="space-y-2">
+                  <h3 className="font-extrabold text-[#1E2025] text-xl sm:text-2xl dark:text-[#F8F9FA] leading-tight">
+                    Bridging Engineering Calculations with Real Site Construction
+                  </h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 max-w-md">
+                    From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2.5 pt-2">
+                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">EBCS EN 1992</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">ERA Standards</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">OCC Site Internship</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">Quality Assurance</span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden aspect-video sm:aspect-auto h-full min-h-[240px] border border-[#31394D]/25 dark:border-[#31394D] shadow-md">
+                <img 
+                  src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80" 
+                  alt="Practical Construction & Structural Detailing" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 filter brightness-95 contrast-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 text-white font-mono text-xs flex justify-between items-center">
+                  <span className="font-bold text-[#D3AE36]">OCC Reinforced Concrete Site</span>
+                  <span className="text-[10px] text-white/80">Adama, Ethiopia</span>
                 </div>
               </div>
             </div>
@@ -916,18 +847,22 @@ export const Home = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {services.map((srv, index) => (
-              <div key={index} className="group py-6 transition-all duration-300 flex flex-col justify-between">
+              <div 
+                key={index} 
+                className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
+              >
                 <div>
-                  <div className="w-12 h-12 text-[#D3AE36] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Building2 size={28} />
+                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <Building2 size={26} />
                   </div>
-                  <h4 className="text-xl font-bold text-[#1E2025] mb-3 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
-                  <p className="text-[#1E2025] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
+                  <h4 className="text-xl font-bold text-[#1E2025] mb-2.5 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
+                  <p className="text-[#1E2025]/80 text-sm leading-relaxed mb-6 dark:text-[#F8F9FA]/80">{srv.summary || srv.description}</p>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] group-hover:text-[#D3AE36] flex items-center gap-1.5 pt-4">
-                  Scope & Deliverables <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
+                  <span>Scope & Deliverables</span>
+                  <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             ))}
@@ -1149,11 +1084,11 @@ export const Home = () => {
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
               {filteredTestimonials.map((t, idx) => (
                 <div 
                   key={t.id || idx} 
-                  className="group py-6 relative flex flex-col justify-between transition-all duration-300"
+                  className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-6">
@@ -1165,19 +1100,19 @@ export const Home = () => {
                       <Quote className="text-[#31394D] w-8 h-8 group-hover:text-[#D3AE36]/40 transition-colors" />
                     </div>
 
-                    <p className="text-[#1E2025] text-sm leading-relaxed mb-6 italic font-light dark:text-[#F8F9FA]">
+                    <p className="text-[#1E2025]/90 text-sm leading-relaxed mb-6 italic font-light dark:text-[#F8F9FA]/90">
                       "{t.content}"
                     </p>
 
                     {t.projectRef && (
-                      <div className="mb-4 text-[11px] font-mono text-[#1E2025] flex items-center gap-1.5">
+                      <div className="mb-4 text-[11px] font-mono text-[#D3AE36] flex items-center gap-1.5 font-semibold">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
                         <span className="truncate">Ref: {t.projectRef}</span>
                       </div>
                     )}
                   </div>
 
-                  <div className="flex items-center gap-3.5 pt-4">
+                  <div className="flex items-center gap-3.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
                     <div className="w-11 h-11 rounded-full overflow-hidden flex items-center justify-center font-bold text-[#D3AE36] text-xs shrink-0 bg-[#D3AE36]/10 border border-[#D3AE36]/30">
                       {t.avatarUrl ? (
                         <img src={t.avatarUrl} alt={t.clientName} className="w-full h-full object-cover" />
@@ -1187,7 +1122,7 @@ export const Home = () => {
                     </div>
                     <div className="overflow-hidden">
                       <h5 className="text-[#1E2025] font-bold text-sm truncate dark:text-[#F8F9FA]">{t.clientName}</h5>
-                      <p className="text-[#1E2025]/80 text-xs truncate dark:text-[#F8F9FA]/80">{t.clientRole}</p>
+                      <p className="text-[#1E2025]/75 text-xs truncate dark:text-[#F8F9FA]/75">{t.clientRole}</p>
                       <span className="inline-block text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-0.5 font-bold truncate max-w-full">
                         {t.clientCompany}
                       </span>
@@ -1243,22 +1178,23 @@ export const Home = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {insights.slice(0, 3).map((article, i) => (
               <Link 
                 key={i} 
                 to={`/insights/${article.slug || 'mitigating-differential-settlement-expansive-soils'}`} 
-                className="flex flex-col justify-between py-6 group transition-all duration-300"
+                className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
               >
                 <div>
-                  <div className="text-[#D3AE36] w-max mb-3">
+                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <FileText size={24} />
                   </div>
-                  <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-semibold">{article.category} • {article.date || 'Oct 2026'}</span>
-                  <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-4 dark:text-[#F8F9FA]">{article.title}</h5>
+                  <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-bold">{article.category} • {article.date || 'Oct 2026'}</span>
+                  <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-4 dark:text-[#F8F9FA] leading-snug">{article.title}</h5>
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#1E2025] group-hover:text-[#D3AE36] flex items-center gap-1 pt-4">
-                  Read Technical Paper <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
+                  <span>Read Technical Paper</span>
+                  <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </Link>
             ))}
@@ -1284,44 +1220,44 @@ export const Home = () => {
             </p>
           </div>
 
-          {/* 3-Column Direct Contact Info */}
+          {/* 3-Column Direct Contact Info Cards */}
           <div className="grid gap-6 md:grid-cols-3 mb-12">
             {/* Item 1: Email */}
             <a 
               href="mailto:lemmayezedlij21@gmail.com" 
-              className="flex items-center gap-3.5 py-4 group"
+              className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4 group"
             >
-              <div className="flex size-12 shrink-0 items-center justify-center text-[#D3AE36] group-hover:scale-105 transition-transform">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
                 <Mail size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5 overflow-hidden">
                 <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">Send an Email</h4>
-                <p className="text-xs font-mono text-[#1E2025] truncate group-hover:text-[#D3AE36] transition-colors">lemmayezedlij21@gmail.com</p>
+                <p className="text-xs font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80 truncate group-hover:text-[#D3AE36] transition-colors">lemmayezedlij21@gmail.com</p>
               </div>
             </a>
 
             {/* Item 2: Phone */}
             <a 
               href="tel:+251934830919" 
-              className="flex items-center gap-3.5 py-4 group"
+              className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4 group"
             >
-              <div className="flex size-12 shrink-0 items-center justify-center text-[#D3AE36] group-hover:scale-105 transition-transform">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
                 <Phone size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5">
                 <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">Call Direct</h4>
-                <p className="text-xs font-mono text-[#1E2025] group-hover:text-[#D3AE36] transition-colors">+251 934 830 919</p>
+                <p className="text-xs font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80 group-hover:text-[#D3AE36] transition-colors">+251 934 830 919</p>
               </div>
             </a>
 
             {/* Item 3: Location */}
-            <div className="flex items-center gap-3.5 py-4">
-              <div className="flex size-12 shrink-0 items-center justify-center text-[#D3AE36]">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#D3AE36]/10 text-[#D3AE36]">
                 <MapPin size={22} />
               </div>
               <div className="flex flex-col gap-y-0.5">
                 <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU Main Campus</h4>
-                <p className="text-xs font-mono text-[#1E2025]">School of Civil Eng & Architecture (EAT · UTC+3)</p>
+                <p className="text-xs font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80">School of Civil Eng & Architecture</p>
               </div>
             </div>
           </div>
