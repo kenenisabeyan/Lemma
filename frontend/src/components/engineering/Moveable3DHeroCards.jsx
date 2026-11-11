@@ -39,9 +39,9 @@ export const Moveable3DHeroCards = () => {
       metric: 'RIFT VALLEY SEISMIC ZONE 4 PASS',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
       icon: Building2,
-      accent: 'border-[#801834] dark:border-[#D4AF37]',
-      accentBg: 'bg-[#801834] dark:bg-[#D4AF37]',
-      accentText: 'text-[#801834] dark:text-[#D4AF37]',
+      accent: 'border-[#D3AE36]',
+      accentBg: 'bg-[#D3AE36]',
+      accentText: 'text-[#D3AE36]',
       defaultPos: 'top-8 left-4 2xl:left-12',
       visibility: 'hidden xl:block',
       depthMultiplier: 20,
@@ -148,7 +148,7 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(128, 24, 52, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/85 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/90 dark:border-white/20 p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-60 sm:w-64 lg:w-72 rounded-2xl bg-white/85 dark:bg-[#232936]/80 backdrop-blur-2xl border border-white/90 dark:border-[#232936] p-3 shadow-[0_16px_40px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
             <div className="relative overflow-hidden rounded-xl bg-zinc-950/80 backdrop-blur-xs aspect-[16/10] border border-white/20 dark:border-white/10">
@@ -172,7 +172,7 @@ export const Moveable3DHeroCards = () => {
 
               {/* Moveable Badge Chip with Grab Icon */}
               <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-black/40 backdrop-blur-md border border-white/20 text-[10px] font-mono text-white font-bold shadow-sm">
-                <Move size={10} className="text-[#D4AF37] animate-pulse" />
+                <Move size={10} className="text-[#D3AE36] animate-pulse" />
                 <span className="tracking-wider">MOVEABLE 3D</span>
               </div>
 
@@ -184,7 +184,7 @@ export const Moveable3DHeroCards = () => {
               {/* Lower Inner Metadata */}
               <div className="absolute bottom-2.5 inset-x-2.5 flex items-end justify-between">
                 <div>
-                  <span className="text-[10px] font-mono text-[#D4AF37] block font-bold tracking-wider">
+                  <span className="text-[10px] font-mono text-[#D3AE36] block font-bold tracking-wider">
                     {card.code}
                   </span>
                   <h4 className="text-xs font-extrabold text-white tracking-tight drop-shadow-sm">

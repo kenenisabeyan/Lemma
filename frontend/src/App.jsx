@@ -57,7 +57,7 @@ const ScrollToTop = () => {
 // Protected Admin Route Component
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  if (loading) return <div className="min-h-screen bg-[#121417] text-[#D4AF37] flex items-center justify-center font-mono">Verifying Credentials...</div>;
+  if (loading) return <div className="min-h-screen bg-[#12151C] text-[#D3AE36] flex items-center justify-center font-mono">Verifying Credentials...</div>;
   if (!user) return <Navigate to="/admin/login" replace />;
   return children;
 };
@@ -79,14 +79,14 @@ const PublicLayout = ({ children }) => {
 
   return (
     <>
-      {/* Top Reading Progress Bar (like alazar.dev) */}
+      {/* Top Reading Progress Bar */}
       <div
         aria-hidden="true"
-        className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] pointer-events-none transition-transform duration-75 ease-out shadow-[0_0_10px_rgba(212,175,55,0.7)]"
+        className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-[#D3AE36] via-[#F5E7B2] to-[#D3AE36] pointer-events-none transition-transform duration-75 ease-out shadow-[0_0_10px_rgba(211,174,54,0.7)]"
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
       <Navbar />
-      <main className="bg-[#FFFFFF] dark:bg-[#0B0F19] min-h-screen text-[#54595F] dark:text-slate-100 transition-colors duration-200">{children}</main>
+      <main className="bg-[#F8F9FA] dark:bg-[#12151C] min-h-screen text-[#1E2025] dark:text-[#F8F9FA] transition-colors duration-200">{children}</main>
       <FloatingDock />
       <Footer />
     </>
@@ -128,11 +128,11 @@ export default function App() {
 
         {/* Custom 404 Route */}
         <Route path="*" element={
-          <div className="min-h-screen bg-[#FFFFFF] dark:bg-[#0B0F19] text-[#54595F] dark:text-slate-100 flex flex-col items-center justify-center p-6 text-center transition-colors">
-            <h1 className="text-8xl font-extrabold text-[#D4AF37] font-mono">404</h1>
-            <p className="text-xl font-bold uppercase tracking-wider mt-4 text-zinc-900 dark:text-white">Structural Boundary Not Found</p>
-            <p className="text-xs text-[#54595F] dark:text-[#9CA3AF] mt-2 mb-6">The requested engineering route does not exist in the blueprint schema.</p>
-            <a href="/" className="bg-[#D4AF37] text-[#121417] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#c49f2c] transition-colors rounded-full shadow-md">
+          <div className="min-h-screen bg-[#F8F9FA] dark:bg-[#12151C] text-[#1E2025] dark:text-[#F8F9FA] flex flex-col items-center justify-center p-6 text-center transition-colors">
+            <h1 className="text-8xl font-extrabold text-[#D3AE36] font-mono">404</h1>
+            <p className="text-xl font-bold uppercase tracking-wider mt-4 text-[#1E2025] dark:text-[#F8F9FA]">Structural Boundary Not Found</p>
+            <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/70 mt-2 mb-6">The requested engineering route does not exist in the blueprint schema.</p>
+            <a href="/" className="bg-[#D3AE36] text-[#12151C] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#C29F2F] transition-colors rounded-full shadow-md">
               Return to Homepage
             </a>
           </div>

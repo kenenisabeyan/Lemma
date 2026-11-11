@@ -8,29 +8,42 @@ export default {
   theme: {
     extend: {
       colors: {
+        brand: {
+          gold: "#D3AE36",
+          "gold-hover": "#C29F2F",
+          "gold-light": "#F5E7B2",
+          "gold-dark": "#9E7F1E",
+          obsidian: "#12151C",
+          "obsidian-dark": "#0B0D12",
+          navy: "#232936",
+          "navy-light": "#2D3445",
+          "navy-border": "#31394D",
+          alabaster: "#F8F9FA",
+          charcoal: "#1E2025",
+          "charcoal-muted": "#4B505C"
+        },
         engineering: {
-          bg: "#121417",
-          surface: "#1E2125",
-          card: "#181A1E",
-          gold: "#D4AF37",
-          "gold-light": "#F3E5AB",
-          "gold-dark": "#9A7B1C",
-          text: "#EAEAEA",
-          muted: "#9CA3AF",
-          border: "#333333"
+          bg: "#12151C",
+          surface: "#232936",
+          card: "#232936",
+          gold: "#D3AE36",
+          "gold-light": "#F5E7B2",
+          "gold-dark": "#9E7F1E",
+          text: "#F8F9FA",
+          muted: "#94A3B8",
+          border: "#232936"
         },
         architectural: {
-          canvas: "#FFFFFF",
+          canvas: "#F8F9FA",
           surface: "#FFFFFF",
-          subtle: "#F8F9FA",
-          "wine-tint": "#FAF0F3",
-          "slate-tint": "#F1F5F9",
-          "warm-tint": "#FAF8F5",
-          border: "#E4E4E7",
-          wine: "#801834",
-          "wine-dark": "#671229",
-          "wine-light": "#A32446",
-          gold: "#D4AF37"
+          subtle: "#F1F3F5",
+          border: "#E2E5EA",
+          gold: "#D3AE36",
+          "gold-dark": "#C29F2F",
+          obsidian: "#12151C",
+          navy: "#232936",
+          charcoal: "#1E2025",
+          alabaster: "#F8F9FA"
         }
       },
       fontFamily: {
@@ -38,9 +51,9 @@ export default {
         mono: ['JetBrains Mono', 'Courier New', 'monospace']
       },
       backgroundImage: {
-        'blueprint-grid': 'linear-gradient(to right, rgba(128,24,52,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(128,24,52,0.06) 1px, transparent 1px)',
-        'light-grid': 'linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px)',
-        'dark-grid': 'linear-gradient(to right, #26292E 1px, transparent 1px), linear-gradient(to bottom, #26292E 1px, transparent 1px)'
+        'blueprint-grid': 'linear-gradient(to right, rgba(211,174,54,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(211,174,54,0.06) 1px, transparent 1px)',
+        'light-grid': 'linear-gradient(to right, rgba(30,32,37,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(30,32,37,0.04) 1px, transparent 1px)',
+        'dark-grid': 'linear-gradient(to right, #232936 1px, transparent 1px), linear-gradient(to bottom, #232936 1px, transparent 1px)'
       }
     },
   },

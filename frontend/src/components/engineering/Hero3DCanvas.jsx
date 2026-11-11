@@ -19,8 +19,8 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // 1. SCENE, CAMERA, RENDERER
     const scene = new THREE.Scene();
 
-    // Atmospheric depth fog that seamlessly dissolves the 3D model into the white glass background
-    const bgColor = isDark ? 0x0B0C0E : 0xFFFFFF;
+    // Atmospheric depth fog that seamlessly dissolves the 3D model into Deep Obsidian dark or Alabaster light background
+    const bgColor = isDark ? 0x12151C : 0xF8F9FA;
     scene.fog = new THREE.FogExp2(bgColor, 0.016);
 
     const camera = new THREE.PerspectiveCamera(
@@ -46,20 +46,20 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const rootAssembly = new THREE.Group();
     scene.add(rootAssembly);
 
-    // 2. PALETTE DEFINITIONS (Harmonized to match #FAF9F6 light and #0B0C0E dark backgrounds)
+    // 2. PALETTE DEFINITIONS (Brand Palette: Gold #D3AE36, Obsidian #12151C, Slate Navy #232936, Alabaster #F8F9FA, Charcoal #1E2025)
     const steelPrimary = isDark ? 0x94A3B8 : 0x475569;      // Slate architectural steel
-    const accentWine = isDark ? 0xBE123C : 0x801834;        // Signature burgundy matching headline
-    const champagneGold = isDark ? 0xD4AF37 : 0xB89745;     // Muted architectural gold/bronze
-    const concreteColor = isDark ? 0x0F172A : 0xE8E5DE;     // Blends seamlessly into bedrock & floor
-    const wireColor = isDark ? 0x334155 : 0xCBD5E1;         // Subterranean grid
-    const bedrockColor = isDark ? 0x1E293B : 0xDDD8CF;      // Deep strata grid
-    const braceColor = isDark ? 0x38BDF8 : 0x64748B;        // Tension cables
+    const accentWine = isDark ? 0xD3AE36 : 0xD3AE36;        // Brand Gold accent
+    const champagneGold = 0xD3AE36;                          // Brand Gold metal
+    const concreteColor = isDark ? 0x232936 : 0xE8EAEF;     // Slate Navy in dark mode
+    const wireColor = isDark ? 0x232936 : 0xCBD5E1;         // Subterranean grid
+    const bedrockColor = isDark ? 0x1E2025 : 0xDDD8CF;      // Deep strata grid
+    const braceColor = isDark ? 0xD3AE36 : 0x64748B;        // Tension cables with gold highlights
 
     // Stress gradient colors for FEA mode (refined architectural tone)
-    const feaLow = isDark ? 0x38BDF8 : 0x64748B;      // Low stress: Slate
+    const feaLow = isDark ? 0x94A3B8 : 0x64748B;      // Low stress: Slate
     const feaNominal = isDark ? 0x10B981 : 0x2E7D32;  // Nominal: Deep emerald
-    const feaWarning = isDark ? 0xF59E0B : 0xB89745;  // High shear: Warm bronze
-    const feaCritical = isDark ? 0xEF4444 : 0x801834; // Peak moment: Burgundy wine
+    const feaWarning = isDark ? 0xD3AE36 : 0xB89745;  // High shear: Brand Gold
+    const feaCritical = isDark ? 0xEF4444 : 0xDC2626; // Peak moment: Red alert
 
     // Structural Geometry Parameters
     const floorCount = 14;
@@ -77,7 +77,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
     rootAssembly.add(substructureGroup);
 
     // Bedrock Geological Basal Grid (GL -28.0m)
-    const bedrockGrid = new THREE.GridHelper(36, 18, isDark ? 0x334155 : 0xC7C1B5, bedrockColor);
+    const bedrockGrid = new THREE.GridHelper(36, 18, isDark ? 0x232936 : 0xC7C1B5, bedrockColor);
     bedrockGrid.position.y = -totalHeight / 2 - 4.5;
     bedrockGrid.material.transparent = true;
     bedrockGrid.material.opacity = isDark ? 0.3 : 0.2;

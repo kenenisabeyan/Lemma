@@ -11,9 +11,9 @@ export const Button = ({
   const base = 'rounded-full font-mono font-extrabold uppercase tracking-wider transition-all duration-300 inline-flex items-center justify-center gap-2 border active:scale-95 shadow-md';
 
   const variants = {
-    primary: 'bg-[#D4AF37] text-[#121417] border-[#D4AF37] hover:bg-[#c49f2c] hover:scale-105 shadow-[0_4px_16px_rgba(212,175,55,0.3)] font-bold',
-    secondary: 'bg-[#FFFFFF] dark:bg-[#181A1E] text-[#54595F] dark:text-[#EAEAEA] border-zinc-200/90 dark:border-[#333]/80 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] hover:text-[#D4AF37] dark:hover:text-[#D4AF37] hover:scale-105 shadow-sm',
-    outline: 'bg-transparent text-[#D4AF37] border-[#D4AF37] hover:bg-[#D4AF37]/10 hover:scale-105 font-bold',
+    primary: 'bg-[#D3AE36] text-[#12151C] border-[#D3AE36] hover:bg-[#C29F2F] hover:scale-105 shadow-[0_4px_16px_rgba(211,174,54,0.35)] font-bold',
+    secondary: 'bg-[#FFFFFF] dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] border-zinc-200/90 dark:border-[#232936] hover:border-[#D3AE36] dark:hover:border-[#D3AE36] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:scale-105 shadow-sm',
+    outline: 'bg-transparent text-[#D3AE36] border-[#D3AE36] hover:bg-[#D3AE36]/10 hover:scale-105 font-bold',
     danger: 'bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 border-red-200 dark:border-red-500/30 hover:bg-red-600 hover:text-white hover:scale-105'
   };
 
