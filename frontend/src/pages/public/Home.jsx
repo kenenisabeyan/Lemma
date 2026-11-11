@@ -373,27 +373,34 @@ export const Home = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="w-full space-y-3 pointer-events-auto select-text"
               >
-                <div className="space-y-2 max-w-xl">
-                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-normal text-sm sm:text-base leading-relaxed text-left select-text">
-                    {settings.heroBio ? settings.heroBio : (
-                      <>
-                        Final-year Civil Engineering team at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. Graduating brothers engineering resilient infrastructure through 3D structural modeling and verified site execution.
-                      </>
-                    )}
+                {/* Structured Architectural Executive Bio DIV */}
+                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
+                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                      ASTU SoCEA · Class of 2026 Brotherhood
+                    </span>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
+                      5th-Year Capstone
+                    </span>
+                  </div>
+
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-xs sm:text-sm leading-relaxed text-left select-text">
+                    Final-year Civil Engineering team at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. Graduating together as brothers, we combine ETABS and Civil 3D design with practical site construction, concrete quality control, and field surveying across Ethiopia.
                   </p>
 
                   {/* Micro-Bullet Executive Highlights */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">RC Structures:</strong> EBCS EN 1992
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">RC Structures:</strong> EBCS EN 1992
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Corridors &amp; QC:</strong> ERA &amp; OCC Site
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Corridors &amp; QC:</strong> ERA &amp; OCC Site
                       </span>
                     </div>
                   </div>
@@ -608,89 +615,107 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
               <div>
-                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-4">
-                  <Building2 size={28} className="text-[#D3AE36]" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
+                    <Building2 size={24} className="text-[#D3AE36]" />
+                  </div>
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-bold">
+                    EBCS EN 1992
+                  </span>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] text-center">Multi-Story RC Structural Design</h3>
-                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 text-center">
-                    Dual core shear walls and moment frames compliant with <span className="text-[#D3AE36] font-bold">EBCS EN 1992</span> &amp; <span className="text-[#D3AE36] font-bold">Eurocode 2</span>.
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] leading-snug">Multi-Story RC Structural Design</h3>
+                  <p className="text-[#1E2025]/80 text-xs leading-relaxed dark:text-[#F8F9FA]/80">
+                    Dual core shear walls and moment frames compliant with <strong className="text-[#D3AE36] font-semibold">EBCS EN 1992</strong> &amp; <strong className="text-[#D3AE36] font-semibold">Eurocode 2</strong>.
                   </p>
-                  {/* Structured Editorial Spec Micro-List */}
-                  <div className="space-y-1.5 pt-2 text-[11px] text-[#1E2025]/85 dark:text-[#F8F9FA]/80 font-mono">
-                    <div className="flex items-center gap-1.5">
+                  {/* Structured Architectural Spec Micro-Box */}
+                  <div className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span>3D dynamic response spectrum</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">3D dynamic response spectrum</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span>Ductility Class High (DCH) drift pass</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Ductility Class High (DCH) drift pass</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
-                ETABS · EBCS EN 1992 Concrete
+              <div className="mt-5 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between text-[10px] font-mono font-bold">
+                <span className="text-[#D3AE36]">ETABS · FEA Sizing</span>
+                <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">01 / 03</span>
               </div>
             </div>
 
             {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
               <div>
-                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-4">
-                  <Activity size={28} className="text-[#D3AE36]" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
+                    <Activity size={24} className="text-[#D3AE36]" />
+                  </div>
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-bold">
+                    ERA 2024 Code
+                  </span>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] text-center">Highway Alignment &amp; ERA Standards</h3>
-                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 text-center">
-                    Route geometric layout and cut-and-fill optimization adhering strictly to <span className="text-[#D3AE36] font-bold">ERA 2024</span> manuals.
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] leading-snug">Highway Alignment &amp; ERA Standards</h3>
+                  <p className="text-[#1E2025]/80 text-xs leading-relaxed dark:text-[#F8F9FA]/80">
+                    Route geometric layout and cut-and-fill optimization adhering strictly to <strong className="text-[#D3AE36] font-semibold">ERA 2024</strong> manuals.
                   </p>
-                  {/* Structured Editorial Spec Micro-List */}
-                  <div className="space-y-1.5 pt-2 text-[11px] text-[#1E2025]/85 dark:text-[#F8F9FA]/80 font-mono">
-                    <div className="flex items-center gap-1.5">
+                  {/* Structured Architectural Spec Micro-Box */}
+                  <div className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span>Civil 3D corridor &amp; profile design</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Civil 3D corridor &amp; profile design</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span>Mass-haul cut/fill volumetric balance</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Mass-haul volumetric balance</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
-                Civil 3D · Pavement Design
+              <div className="mt-5 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between text-[10px] font-mono font-bold">
+                <span className="text-[#D3AE36]">Civil 3D · Pavements</span>
+                <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">02 / 03</span>
               </div>
             </div>
 
             {/* Bento Card 3: Practical Site Supervision & Soil Testing (Col 5-6) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
               <div>
-                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-4">
-                  <ShieldCheck size={28} className="text-[#D3AE36]" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
+                    <ShieldCheck size={24} className="text-[#D3AE36]" />
+                  </div>
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-bold">
+                    OCC Field QA/QC
+                  </span>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] text-center">Site Supervision &amp; Quality Control</h3>
-                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 text-center">
-                    Field inspection conducted during <span className="text-[#D3AE36] font-bold">OCC Site Internships</span> and ASTU geodetic survey camps.
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] leading-snug">Site Supervision &amp; Quality Control</h3>
+                  <p className="text-[#1E2025]/80 text-xs leading-relaxed dark:text-[#F8F9FA]/80">
+                    Field inspection conducted during <strong className="text-[#D3AE36] font-semibold">OCC Site Internships</strong> and ASTU geodetic survey camps.
                   </p>
-                  {/* Structured Editorial Spec Micro-List */}
-                  <div className="space-y-1.5 pt-2 text-[11px] text-[#1E2025]/85 dark:text-[#F8F9FA]/80 font-mono">
-                    <div className="flex items-center gap-1.5">
+                  {/* Structured Architectural Spec Micro-Box */}
+                  <div className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span>Slump cone (80–120mm) &amp; cube crush QC</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Slump test (80–120mm) &amp; cube QC</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span>Rebar spacing, lap lengths &amp; 135° hooks</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Rebar spacing, lap lengths &amp; 135° hooks</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
-                Slump QC · Field Surveying · FDT
+              <div className="mt-5 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between text-[10px] font-mono font-bold">
+                <span className="text-[#D3AE36]">Slump QC · Field Survey · FDT</span>
+                <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">03 / 03</span>
               </div>
             </div>
 
@@ -881,20 +906,24 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 pt-1">
-                <div className="flex items-center gap-3 py-2">
-                  <GraduationCap className="text-[#D3AE36] w-5 h-5 shrink-0" />
+              <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
+                <div className="p-3.5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
+                  <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
                   <div>
                     <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">B.Sc. Civil Engineering (5th Year)</span>
-                    <span className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">Adama Science &amp; Technology University (ASTU)</span>
+                    <span className="text-[10px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">Adama Science &amp; Technology University</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 py-2">
-                  <HardHat className="text-[#D3AE36] w-5 h-5 shrink-0" />
+                <div className="p-3.5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
+                  <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0">
+                    <HardHat className="w-5 h-5" />
+                  </div>
                   <div>
-                    <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">Practical Construction &amp; Internship</span>
-                    <span className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">OCC Site Supervision &amp; ASTU Survey Camps</span>
+                    <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">Practical Site Internship</span>
+                    <span className="text-[10px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">OCC Supervision &amp; Geodetic Survey Camps</span>
                   </div>
                 </div>
               </div>
@@ -953,18 +982,35 @@ export const Home = () => {
             {services.map((srv, index) => (
               <div 
                 key={index} 
-                className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <Building2 size={26} />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Building2 size={24} />
+                    </div>
+                    <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-bold uppercase tracking-wider">
+                      Specialization 0{index + 1}
+                    </span>
                   </div>
                   <h4 className="text-xl font-bold text-[#1E2025] mb-2.5 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
-                  <p className="text-[#1E2025]/80 text-sm leading-relaxed mb-6 dark:text-[#F8F9FA]/80">{srv.summary || srv.description}</p>
+                  <p className="text-[#1E2025]/80 text-sm leading-relaxed mb-4 dark:text-[#F8F9FA]/80">{srv.summary || srv.description}</p>
+                  
+                  {/* Structured Technical Specification DIV Card */}
+                  <div className="p-3.5 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs mb-5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#D3AE36] font-bold">✦ Standard:</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">EBCS EN, ERA 2024 &amp; ASTM Standards</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#D3AE36] font-bold">✦ Execution:</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">3D Modeling, Field Testing &amp; BBS Calculation</span>
+                    </div>
+                  </div>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
-                  <span>Scope &amp; Deliverables</span>
-                  <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:text-[#C29F2F] flex items-center justify-between pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
+                  <span>Explore Scope &amp; Deliverables</span>
+                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             ))}

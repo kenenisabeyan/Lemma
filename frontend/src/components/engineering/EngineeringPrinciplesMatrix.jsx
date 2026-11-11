@@ -122,25 +122,25 @@ export const EngineeringPrinciplesMatrix = () => {
   const currentPrinciple = principles.find(p => p.id === activeTab) || principles[0];
 
   return (
-    <div className="py-6 relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm relative overflow-hidden transition-colors duration-200">
       
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 border-b border-zinc-100 dark:border-[#31394D]/50 relative z-10">
         <div>
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D3AE36] mb-2 font-bold uppercase tracking-wider">
             <Cpu size={14} className="animate-pulse" />
-            <span>Core Mathematical & Mechanical Standards</span>
+            <span>Core Mathematical &amp; Mechanical Standards</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-            Structural Design Principles & Code Matrix
+            Structural Design Principles &amp; <span className="text-[#D3AE36]">Code Matrix</span>
           </h3>
-          <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 mt-1 max-w-2xl leading-relaxed">
             The mathematical, physics-based frameworks governing our structural calculations, nonlinear dynamic simulations, and carbon footprint reduction models.
           </p>
         </div>
 
         {/* Code Standard Stamp */}
-        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs p-2.5 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D]">
+        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D]">
           <div className="w-2.5 h-2.5 rounded-full bg-[#D3AE36] animate-pulse"></div>
           <div>
             <span className="text-[9px] text-[#D3AE36] block uppercase tracking-wider font-bold">MANDATE SPEC</span>
@@ -366,18 +366,28 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Implementation Specifications & Metrics Grid */}
-        <div className="grid md:grid-cols-12 gap-8 items-start">
+        <div className="grid md:grid-cols-12 gap-6 items-start">
           
           {/* Engineering Specifications (7 Cols) */}
           <div className="md:col-span-7 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
-              Practical Structural Application
-            </span>
-            <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
+                Practical Structural Application
+              </span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-semibold">
+                EBCS EN Field Methods
+              </span>
+            </div>
+            <div className="space-y-2.5">
               {currentPrinciple.details.map((detail, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 py-1.5">
-                  <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
-                  <p className="text-xs text-[#1E2025] dark:text-[#F8F9FA]/80 leading-relaxed font-medium">
+                <div 
+                  key={idx} 
+                  className="p-3.5 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 flex items-start gap-3 text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 transition-all hover:border-[#D3AE36]/50 shadow-sm"
+                >
+                  <div className="p-1 rounded-lg bg-[#D3AE36]/10 text-[#D3AE36] shrink-0 mt-0.5">
+                    <CheckCircle2 size={14} className="stroke-[2.5]" />
+                  </div>
+                  <p className="text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed font-medium">
                     {detail}
                   </p>
                 </div>
@@ -387,16 +397,24 @@ export const EngineeringPrinciplesMatrix = () => {
 
           {/* Key Design Limits & Benchmark Metrics (5 Cols) */}
           <div className="md:col-span-5 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
-              Benchmark Verification Metrics
-            </span>
-            <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
+                Benchmark Verification Metrics
+              </span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#12151C]/10 dark:bg-[#232936] text-[#1E2025]/70 dark:text-[#F8F9FA]/70 border border-[#31394D]/40 font-semibold">
+                Lab Verified
+              </span>
+            </div>
+            <div className="space-y-2.5">
               {currentPrinciple.metrics.map((metric, idx) => (
-                <div key={idx} className="flex items-center justify-between py-2 border-b border-[#31394D]/20 dark:border-[#31394D]/60 last:border-none">
-                  <span className="text-xs font-semibold text-[#1E2025] dark:text-[#F8F9FA]/80">
+                <div 
+                  key={idx} 
+                  className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 flex items-center justify-between gap-3 text-xs shadow-sm hover:border-[#D3AE36]/50 transition-all"
+                >
+                  <span className="text-xs font-semibold text-[#1E2025] dark:text-[#F8F9FA]/90">
                     {metric.label}
                   </span>
-                  <span className="text-xs font-mono font-extrabold text-[#D3AE36]">
+                  <span className="text-xs font-mono font-extrabold text-[#D3AE36] px-2.5 py-1 rounded-lg bg-[#D3AE36]/10 border border-[#D3AE36]/30">
                     {metric.value}
                   </span>
                 </div>
