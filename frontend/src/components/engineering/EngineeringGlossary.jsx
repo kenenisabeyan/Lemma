@@ -113,7 +113,7 @@ export const EngineeringGlossary = () => {
             <BookOpen size={14} className="animate-pulse" />
             <span>Authoritative Structural Engineering Knowledge Base</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Structural Engineering Glossary & <span className="text-[#D3AE36]">Code Formula</span> Reference
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
@@ -123,13 +123,13 @@ export const EngineeringGlossary = () => {
 
         {/* Search input */}
         <div className="relative w-full lg:w-72 shrink-0">
-          <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-zinc-400" size={15} />
+          <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-[#1E2025]/50 dark:text-[#F8F9FA]/50" size={15} />
           <input 
             type="text"
             placeholder="Search formulas or terms..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] focus:border-[#D3AE36] text-xs text-[#1E2025] placeholder:text-zinc-400 pl-6 pr-4 py-2 outline-none font-mono transition-colors dark:text-[#F8F9FA]"
+            className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] focus:border-[#D3AE36] text-xs text-[#1E2025] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 pl-6 pr-4 py-2 outline-none font-mono transition-colors dark:text-[#F8F9FA]"
           />
         </div>
       </div>
@@ -166,7 +166,7 @@ export const EngineeringGlossary = () => {
                     <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-1 font-bold">
                       {item.category}
                     </span>
-                    <h4 className="text-base font-bold text-zinc-900 hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">
+                    <h4 className="text-base font-bold text-[#1E2025] hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">
                       {item.term}
                     </h4>
                   </div>
@@ -189,7 +189,7 @@ export const EngineeringGlossary = () => {
                 {isExpanded && (
                   <div className="mt-4 pt-3 space-y-3 animate-in fade-in duration-200 text-xs">
                     <div>
-                      <strong className="text-zinc-900 block mb-1 dark:text-[#F8F9FA]">Engineering Mechanics:</strong>
+                      <strong className="text-[#1E2025] block mb-1 dark:text-[#F8F9FA]">Engineering Mechanics:</strong>
                       <p className="text-[#1E2025] leading-relaxed">{item.explanation}</p>
                     </div>
                     <div className="py-2 text-[11px]">

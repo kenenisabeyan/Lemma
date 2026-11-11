@@ -60,7 +60,7 @@ export const PEVerificationPortal = () => {
             <Award size={14} className="animate-pulse" />
             <span>ASTU SoCEA Capstone & Academic Verification Portal</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Official ASTU 5th Year Civil Engineering Verification System
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
@@ -98,7 +98,7 @@ export const PEVerificationPortal = () => {
                 type="text" 
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36] font-medium"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36] font-medium"
               />
             </div>
 
@@ -108,7 +108,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value)}
-                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
               >
                 <option value="Adama Science & Technology University (ASTU SoCEA)">Adama Science & Technology University (ASTU SoCEA)</option>
                 <option value="Ethiopian Construction Authority (ECA) / Adama City Administration">Ethiopian Construction Authority (ECA) / Adama City Administration</option>
@@ -124,7 +124,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={systemType}
                 onChange={(e) => setSystemType(e.target.value)}
-                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
               >
                 <option value="Reinforced Concrete Dual Frame (Shear Walls + Moment Frames)">Reinforced Concrete Dual Frame (Shear Walls + Moment Frames)</option>
                 <option value="Prestressed Concrete Bridge Girder + Abutments">Prestressed Concrete Bridge Girder + Abutments</option>
@@ -139,7 +139,7 @@ export const PEVerificationPortal = () => {
               <select 
                 value={designStandard}
                 onChange={(e) => setDesignStandard(e.target.value)}
-                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
+                className="w-full bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] rounded-xl px-3.5 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] focus:outline-none focus:border-[#D3AE36]"
               >
                 <option value="EBCS EN 1992:2014 (Design of Concrete Structures)">EBCS EN 1992:2014 (Design of Concrete Structures)</option>
                 <option value="EBCS EN 1998:2014 (Design of Structures for Earthquake Resistance - Zone 4)">EBCS EN 1998:2014 (Design of Structures for Earthquake Resistance - Zone 4)</option>
@@ -168,7 +168,7 @@ export const PEVerificationPortal = () => {
               <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-[0.25em] block mb-1 font-bold">
                 ADAMA SCIENCE AND TECHNOLOGY UNIVERSITY · SCHOOL OF CIVIL ENGINEERING & ARCHITECTURE
               </span>
-              <h4 className="text-xl sm:text-2xl font-extrabold text-zinc-900 tracking-wide uppercase font-serif dark:text-[#F8F9FA]">
+              <h4 className="text-xl sm:text-2xl font-extrabold text-[#1E2025] tracking-wide uppercase font-serif dark:text-[#F8F9FA]">
                 Certificate of Capstone Structural Verification
               </h4>
               <p className="text-[11px] font-mono text-[#1E2025] mt-1">

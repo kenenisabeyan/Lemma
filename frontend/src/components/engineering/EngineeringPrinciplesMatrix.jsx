@@ -106,7 +106,7 @@ export const EngineeringPrinciplesMatrix = () => {
             <Cpu size={14} />
             <span>Core Mathematical & Mechanical Standards</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Structural Design Principles & Code Matrix
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">
@@ -136,7 +136,7 @@ export const EngineeringPrinciplesMatrix = () => {
               className={`p-3.5 text-left transition-all duration-200 flex flex-col justify-between cursor-pointer rounded-xl ${
                 isActive
                   ? 'bg-[#FFFFFF] dark:bg-[#232936] border-l-2 border-[#D3AE36] shadow-sm'
-                  : 'border-l-2 border-transparent hover:border-zinc-300 dark:hover:border-[#31394D] hover:bg-zinc-100/50 dark:hover:bg-[#232936]/40'
+                  : 'border-l-2 border-transparent hover:border-[#31394D]/60 dark:hover:border-[#31394D] hover:bg-[#12151C]/5 dark:hover:bg-[#232936]/40'
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -168,7 +168,7 @@ export const EngineeringPrinciplesMatrix = () => {
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#D3AE36] font-bold">
               Governing Code: {currentPrinciple.code}
             </span>
-            <h4 className="text-xl sm:text-2xl font-black text-zinc-900 tracking-tight mt-1 dark:text-[#F8F9FA]">
+            <h4 className="text-xl sm:text-2xl font-black text-[#1E2025] tracking-tight mt-1 dark:text-[#F8F9FA]">
               {currentPrinciple.title}
             </h4>
             <p className="text-xs sm:text-sm text-[#1E2025] dark:text-[#F8F9FA]/80 mt-1 max-w-3xl leading-relaxed">
@@ -178,7 +178,7 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Mathematical Equation & Physics Panel */}
-        <div className="mb-6 py-4 px-6 rounded-2xl bg-zinc-50 dark:bg-[#232936] border border-zinc-200/80 dark:border-[#31394D] shadow-xs">
+        <div className="mb-6 py-4 px-6 rounded-2xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]/80 font-bold">
               Key Mechanics Formulation
@@ -222,7 +222,7 @@ export const EngineeringPrinciplesMatrix = () => {
             </span>
             <div className="space-y-2">
               {currentPrinciple.metrics.map((metric, idx) => (
-                <div key={idx} className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-[#31394D]/60 last:border-none">
+                <div key={idx} className="flex items-center justify-between py-2 border-b border-[#31394D]/20 dark:border-[#31394D]/60 last:border-none">
                   <span className="text-xs font-semibold text-[#1E2025] dark:text-[#F8F9FA]/80">
                     {metric.label}
                   </span>

@@ -79,7 +79,7 @@ export const BlueprintInspector = () => {
             <Compass size={13} className="text-[#D3AE36]" />
             Multi-Layer Engineering Drawing Inspector
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             CAD Elevation & Stress Layer Discretization
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1">
@@ -94,7 +94,7 @@ export const BlueprintInspector = () => {
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'render'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
+                : 'text-[#1E2025] hover:text-[#D3AE36] dark:text-[#F8F9FA]'
             }`}
           >
             <Eye size={13} /> 1. Architecture
@@ -104,7 +104,7 @@ export const BlueprintInspector = () => {
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'wireframe'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
+                : 'text-[#1E2025] hover:text-[#D3AE36] dark:text-[#F8F9FA]'
             }`}
           >
             <Layers size={13} /> 2. FEA Wireframe
@@ -114,7 +114,7 @@ export const BlueprintInspector = () => {
             className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
               activeLayer === 'rebar'
                 ? 'bg-[#D3AE36] text-[#12151C]'
-                : 'text-[#1E2025] hover:text-zinc-900 dark:text-[#F8F9FA]'
+                : 'text-[#1E2025] hover:text-[#D3AE36] dark:text-[#F8F9FA]'
             }`}
           >
             <Ruler size={13} /> 3. Rebar & PT
@@ -126,7 +126,7 @@ export const BlueprintInspector = () => {
       <div className="grid lg:grid-cols-12 gap-8 items-stretch relative z-10">
         
         {/* Left Column: Visual Canvas with Clickable Hotspots (7 cols) */}
-        <div className="lg:col-span-7 rounded-2xl overflow-hidden relative min-h-[460px] flex items-center justify-center group bg-zinc-950">
+        <div className="lg:col-span-7 rounded-2xl overflow-hidden relative min-h-[460px] flex items-center justify-center group bg-[#12151C]">
           
           {/* Layer 1: Architecture Image */}
           {activeLayer === 'render' && (
@@ -233,7 +233,7 @@ export const BlueprintInspector = () => {
           </div>
 
           {/* Technical Corner Stamp Block */}
-          <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[9px] font-mono text-zinc-300 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl z-20">
+          <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[9px] font-mono text-[#F8F9FA]/80 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-xl z-20">
             <span>DRAWING: S-104 (SCHEMATIC ELEVATION)</span>
             <span className="text-[#D3AE36] font-bold">CLICK NODES 1-4 TO INSPECT</span>
             <span>SCALE: 1:500</span>
@@ -254,12 +254,12 @@ export const BlueprintInspector = () => {
               </span>
             </div>
 
-            <h4 className="text-xl sm:text-2xl font-bold text-zinc-900 mb-2 leading-snug dark:text-[#F8F9FA]">
+            <h4 className="text-xl sm:text-2xl font-bold text-[#1E2025] mb-2 leading-snug dark:text-[#F8F9FA]">
               {currentHotspot.title}
             </h4>
 
             <div className="text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
-              Spec: <span className="text-zinc-800 dark:text-[#F8F9FA]">{currentHotspot.spec}</span>
+              Spec: <span className="text-[#1E2025] dark:text-[#F8F9FA]">{currentHotspot.spec}</span>
             </div>
 
             <p className="text-xs text-[#1E2025] leading-relaxed mb-6">
@@ -271,7 +271,7 @@ export const BlueprintInspector = () => {
           <div className="flex flex-col gap-3 font-mono text-xs">
             <div className="py-2 flex justify-between items-center">
               <span className="text-[#1E2025] text-[10px] uppercase font-semibold">Design Capacity</span>
-              <span className="text-zinc-900 font-bold text-right text-[11px] truncate max-w-[200px] dark:text-[#F8F9FA]">
+              <span className="text-[#1E2025] font-bold text-right text-[11px] truncate max-w-[200px] dark:text-[#F8F9FA]">
                 {currentHotspot.capacity}
               </span>
             </div>

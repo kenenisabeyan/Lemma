@@ -121,7 +121,7 @@ export const BeamShearMomentSolver = () => {
             <Calculator size={14} className="animate-pulse" />
             <span>Interactive Euler-Bernoulli Structural Mechanics Solver</span>
           </div>
-          <h3 className="text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+          <h3 className="text-2xl lg:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Beam Shear ($V$), Bending Moment ($M$) & <span className="text-[#D3AE36]">Deflection ($\Delta$)</span> Laboratory
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-2xl leading-relaxed">

@@ -114,7 +114,7 @@ export const LoadPathSimulator = () => {
             <Gauge size={13} className="text-[#D3AE36]" />
             Interactive Structural Finite Element Simulator
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Structural Load Path & Drift Mechanics
           </h3>
           <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1 max-w-2xl">
