@@ -366,18 +366,40 @@ export const Home = () => {
                 </h1>
               </motion.div>
 
-              {/* Narrative Bio & Focus (Clean Typography without Background Box) */}
+              {/* Narrative Bio & Focus (Executive Editorial Layout) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full space-y-2.5 pointer-events-auto select-text"
+                className="w-full space-y-3 pointer-events-auto select-text"
               >
-                <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-medium text-sm sm:text-base leading-relaxed text-left select-text max-w-xl">
-                  {settings.heroBio || 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.'}
-                </p>
+                <div className="space-y-2 max-w-xl">
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-normal text-sm sm:text-base leading-relaxed text-left select-text">
+                    {settings.heroBio ? settings.heroBio : (
+                      <>
+                        Final-year Civil Engineering team at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. Graduating brothers engineering resilient infrastructure through 3D structural modeling and verified site execution.
+                      </>
+                    )}
+                  </p>
 
-                {/* Rotating Focus Indicator (Clean, No Card Background) */}
+                  {/* Micro-Bullet Executive Highlights */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">RC Structures:</strong> EBCS EN 1992
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Corridors &amp; QC:</strong> ERA &amp; OCC Site
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rotating Focus Indicator */}
                 <div className="flex items-center gap-2 text-xs font-mono select-text pt-0.5">
                   <span className="font-semibold text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
                   <span className="font-bold text-[#D3AE36] underline decoration-[#D3AE36] decoration-2 underline-offset-4 select-text">
@@ -578,24 +600,35 @@ export const Home = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Analyze. Calculate. <span className="text-[#D3AE36]">Deliver.</span>
             </h2>
-            <p className="text-[#1E2025] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-              Precision structural mechanics, highway alignments, and geotechnical simulations developed by ASTU 5th-year civil engineering brothers.
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              Precision finite element mechanics, highway alignments, and geotechnical simulations engineered by <strong className="text-[#D3AE36] font-bold">ASTU 5th-year civil engineering brothers</strong>.
             </p>
           </div>
 
           <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
               <div>
-                <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-5">
-                  <Building2 size={32} className="text-[#D3AE36]" />
+                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-4">
+                  <Building2 size={28} className="text-[#D3AE36]" />
                 </div>
-                <div className="space-y-2 text-center">
-                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Multi-Story RC Structural Design</h3>
-                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80">
-                    Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
+                <div className="space-y-3">
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] text-center">Multi-Story RC Structural Design</h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 text-center">
+                    Dual core shear walls and moment frames compliant with <span className="text-[#D3AE36] font-bold">EBCS EN 1992</span> &amp; <span className="text-[#D3AE36] font-bold">Eurocode 2</span>.
                   </p>
+                  {/* Structured Editorial Spec Micro-List */}
+                  <div className="space-y-1.5 pt-2 text-[11px] text-[#1E2025]/85 dark:text-[#F8F9FA]/80 font-mono">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span>3D dynamic response spectrum</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span>Ductility Class High (DCH) drift pass</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
@@ -604,16 +637,27 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
               <div>
-                <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-5">
-                  <Activity size={32} className="text-[#D3AE36]" />
+                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-4">
+                  <Activity size={28} className="text-[#D3AE36]" />
                 </div>
-                <div className="space-y-2 text-center">
-                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Highway Alignment & ERA Standards</h3>
-                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80">
-                    Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
+                <div className="space-y-3">
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] text-center">Highway Alignment &amp; ERA Standards</h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 text-center">
+                    Route geometric layout and cut-and-fill optimization adhering strictly to <span className="text-[#D3AE36] font-bold">ERA 2024</span> manuals.
                   </p>
+                  {/* Structured Editorial Spec Micro-List */}
+                  <div className="space-y-1.5 pt-2 text-[11px] text-[#1E2025]/85 dark:text-[#F8F9FA]/80 font-mono">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span>Civil 3D corridor &amp; profile design</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span>Mass-haul cut/fill volumetric balance</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
@@ -622,16 +666,27 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 3: Practical Site Supervision & Soil Testing (Col 5-6) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
               <div>
-                <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-5">
-                  <ShieldCheck size={32} className="text-[#D3AE36]" />
+                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform mb-4">
+                  <ShieldCheck size={28} className="text-[#D3AE36]" />
                 </div>
-                <div className="space-y-2 text-center">
-                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Site Supervision & Quality Control</h3>
-                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80">
-                    Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
+                <div className="space-y-3">
+                  <h3 className="font-bold text-[#1E2025] text-lg dark:text-[#F8F9FA] text-center">Site Supervision &amp; Quality Control</h3>
+                  <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 text-center">
+                    Field inspection conducted during <span className="text-[#D3AE36] font-bold">OCC Site Internships</span> and ASTU geodetic survey camps.
                   </p>
+                  {/* Structured Editorial Spec Micro-List */}
+                  <div className="space-y-1.5 pt-2 text-[11px] text-[#1E2025]/85 dark:text-[#F8F9FA]/80 font-mono">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span>Slump cone (80–120mm) &amp; cube crush QC</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span>Rebar spacing, lap lengths &amp; 135° hooks</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="mt-6 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] text-center uppercase tracking-widest font-bold">
@@ -641,19 +696,32 @@ export const Home = () => {
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
             <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-9 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-6 grid sm:grid-cols-2 gap-8 items-center group">
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36]">
                   <Ruler size={24} className="text-[#D3AE36]" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="font-extrabold text-[#1E2025] text-xl sm:text-2xl dark:text-[#F8F9FA] leading-tight">
-                    Bridging Engineering Calculations with Real Site Construction
+                    Bridging Office Calculations with Real Site Construction
                   </h3>
                   <p className="text-[#1E2025]/80 text-xs sm:text-sm leading-relaxed dark:text-[#F8F9FA]/80 max-w-md">
-                    From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
+                    From finite element modeling in <strong className="text-[#D3AE36] font-semibold">ETABS</strong> and <strong className="text-[#D3AE36] font-semibold">Civil 3D</strong> to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-2.5 pt-2">
+
+                {/* Structured Value Strip */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs">
+                  <div className="p-3 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30">
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] block text-xs">01. FEA Computer Modeling</span>
+                    <span className="text-[10px] text-[#1E2025]/70 dark:text-[#F8F9FA]/70">ETABS 3D seismic &amp; frame dynamics</span>
+                  </div>
+                  <div className="p-3 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30">
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] block text-xs">02. Field QA/QC Supervision</span>
+                    <span className="text-[10px] text-[#1E2025]/70 dark:text-[#F8F9FA]/70">Slump testing, BBS &amp; Total Station</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-1">
                   <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">EBCS EN 1992</span>
                   <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">ERA Standards</span>
                   <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">OCC Site Internship</span>
@@ -771,25 +839,59 @@ export const Home = () => {
                 Civil Engineering Built on <span className="text-[#D3AE36]">Practical Construction &amp; Rigor.</span>
               </h2>
 
-              <p className="text-[#1E2025] text-base leading-relaxed">
-                At Adama Science and Technology University (ASTU), our 5-year journey combines design calculations with real on-site construction practice. Alongside my engineering brothers, we have completed site internships at Oromia Construction Corporation (OCC) — supervising concrete batching, slump testing, rebar detailing, and Total Station surveying for Ethiopian infrastructure.
+              {/* Editorial Lead Paragraph */}
+              <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed">
+                At <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>, our 5-year curriculum fuses advanced structural modeling with real on-site field practice. Graduating as civil engineering brothers, we turn complex design codes into durable, buildable physical assets.
               </p>
 
-              <div className="border-l-2 border-[#D3AE36] pl-5 py-2 text-sm text-[#1E2025] italic leading-relaxed">
-                "Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction."
+              {/* 2-Column Technical Experience DIV Cards */}
+              <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
+                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+                  <div className="flex items-center gap-2 mb-2">
+                    <GraduationCap className="text-[#D3AE36] w-5 h-5 shrink-0" />
+                    <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
+                      ASTU Capstone Rigor
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed">
+                    5th-year multidisciplinary capstone projects compliant with <span className="text-[#D3AE36] font-semibold">EBCS EN 1990–1998</span> and ERA geometric road standards.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+                  <div className="flex items-center gap-2 mb-2">
+                    <HardHat className="text-[#D3AE36] w-5 h-5 shrink-0" />
+                    <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
+                      OCC Site Supervision
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed">
+                    Industrial internships at <span className="text-[#D3AE36] font-semibold">Oromia Construction Corp</span> — supervising concrete batching, slump cone QC, and Total Station setting-out.
+                  </p>
+                </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center gap-3 py-3">
-                  <GraduationCap className="text-[#D3AE36] w-6 h-6 shrink-0" />
+              {/* Executive Architectural Pull-Quote DIV */}
+              <div className="relative p-4 sm:p-5 rounded-2xl bg-[#D3AE36]/5 dark:bg-[#232936]/60 border-l-4 border-[#D3AE36] border-y border-r border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                <p className="text-xs sm:text-sm text-[#1E2025] dark:text-[#F8F9FA] italic leading-relaxed font-serif">
+                  “Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction.”
+                </p>
+                <div className="mt-2 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider font-bold">
+                  — Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4 pt-1">
+                <div className="flex items-center gap-3 py-2">
+                  <GraduationCap className="text-[#D3AE36] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">B.Sc. Civil Engineering (5th Year)</span>
                     <span className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">Adama Science &amp; Technology University (ASTU)</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 py-3">
-                  <HardHat className="text-[#D3AE36] w-6 h-6 shrink-0" />
+                <div className="flex items-center gap-3 py-2">
+                  <HardHat className="text-[#D3AE36] w-5 h-5 shrink-0" />
                   <div>
                     <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">Practical Construction &amp; Internship</span>
                     <span className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">OCC Site Supervision &amp; ASTU Survey Camps</span>
@@ -836,9 +938,9 @@ export const Home = () => {
                 Core Capabilities & Practice
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Core Civil Engineering <span className="text-[#D3AE36]">Specializations & Capstones.</span>
+                Core Civil Engineering <span className="text-[#D3AE36]">Specializations &amp; Capstones.</span>
               </h2>
-              <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+              <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 Comprehensive structural analysis, highway geometric modeling, and geotechnical evaluations developed at ASTU.
               </p>
             </div>
@@ -861,7 +963,7 @@ export const Home = () => {
                   <p className="text-[#1E2025]/80 text-sm leading-relaxed mb-6 dark:text-[#F8F9FA]/80">{srv.summary || srv.description}</p>
                 </div>
                 <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
-                  <span>Scope & Deliverables</span>
+                  <span>Scope &amp; Deliverables</span>
                   <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
@@ -876,9 +978,9 @@ export const Home = () => {
       <section className="py-14 transition-colors">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           <StatCounter value={settings.yearsExp || '5th Year'} label="Academic Year" subtext="ASTU Graduating Class of 2026" />
-          <StatCounter value={settings.projectsCount || '25+'} label="Academic & Site Projects" subtext="Capstones, Labs & Internships" />
+          <StatCounter value={settings.projectsCount || '25+'} label="Academic &amp; Site Projects" subtext="Capstones, Labs &amp; Internships" />
           <StatCounter value={settings.safetyRecord || '100%'} label="Defense Readiness" subtext="Zero Critical Deficiencies" />
-          <StatCounter value={settings.clientsCount || 'ASTU SoCEA'} label="University School" subtext="Civil Eng & Architecture" />
+          <StatCounter value={settings.clientsCount || 'ASTU SoCEA'} label="University School" subtext="Civil Eng &amp; Architecture" />
         </div>
       </section>
 
@@ -891,18 +993,18 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                ASTU Capstone & Field Practice
+                ASTU Capstone &amp; Field Practice
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Featured Civil Engineering <span className="text-[#D3AE36]">Capstones.</span>
               </h2>
-              <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+              <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 Showcase of verified structural designs, highway link models, and expansive soil foundations engineered at ASTU.
               </p>
             </div>
             <Link 
               to="/projects" 
-              className="rounded-full text-[#1E2025] hover:text-[#D3AE36] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max"
+              className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max"
             >
               Browse All Projects <ChevronRight size={14} />
             </Link>
@@ -939,7 +1041,7 @@ export const Home = () => {
                   {/* Right Column Content */}
                   <div className="flex flex-col gap-4 py-2 justify-between">
                     <div>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#1E2025] text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75 text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
                         <span className="text-[#D3AE36] flex items-center gap-1">
                           <MapPin size={12} /> {proj.location}
                         </span>
@@ -951,26 +1053,27 @@ export const Home = () => {
                         {proj.title}
                       </h3>
                       
-                      <p className="text-[#1E2025] text-xs sm:text-sm leading-relaxed mb-4">
+                      <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-xs sm:text-sm leading-relaxed mb-4">
                         {proj.description}
                       </p>
 
-                      <ul className="space-y-1.5 text-[#1E2025] text-xs mb-4">
-                        <li className="flex gap-2">
-                          <span aria-hidden="true" className="text-[#D3AE36] font-bold">—</span>
-                          <span><strong className="text-[#1E2025] dark:text-[#F8F9FA]">System:</strong> {proj.structuralSystem}</span>
-                        </li>
-                        <li className="flex gap-2">
-                          <span aria-hidden="true" className="text-[#D3AE36] font-bold">—</span>
-                          <span><strong className="text-[#1E2025] dark:text-[#F8F9FA]">Result:</strong> {proj.result}</span>
-                        </li>
-                      </ul>
+                      {/* Structured Technical Specs Box */}
+                      <div className="p-3.5 rounded-2xl bg-white/70 dark:bg-[#12151C]/70 border border-[#31394D]/25 dark:border-[#31394D] space-y-2 mb-4 text-xs font-mono">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D3AE36] font-bold text-[11px] shrink-0 uppercase tracking-wider">System:</span>
+                          <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs font-medium font-sans">{proj.structuralSystem}</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D3AE36] font-bold text-[11px] shrink-0 uppercase tracking-wider">Result:</span>
+                          <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs font-medium font-sans">{proj.result}</span>
+                        </div>
+                      </div>
 
                       <div className="flex flex-wrap gap-2 pt-1">
                         {softwareList.slice(0, 4).map((soft) => (
                           <span 
                             key={soft}
-                            className="font-mono text-xs text-[#1E2025] font-semibold"
+                            className="px-2.5 py-1 rounded-md bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 font-mono text-xs text-[#D3AE36] font-semibold"
                           >
                             #{soft}
                           </span>
@@ -987,7 +1090,7 @@ export const Home = () => {
                       </button>
                       <Link 
                         to={`/projects/${proj.slug || 'astu-central-multipurpose-complex'}`}
-                        className="text-[11px] font-mono text-[#1E2025] hover:text-[#D3AE36] uppercase tracking-wider flex items-center gap-1 font-semibold"
+                        className="text-[11px] font-mono text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] uppercase tracking-wider flex items-center gap-1 font-semibold"
                       >
                         Dedicated Page →
                       </Link>
@@ -1008,12 +1111,12 @@ export const Home = () => {
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              ASTU Multi-Layer CAD & FEA Telemetry Board
+              ASTU Multi-Layer CAD &amp; FEA Telemetry Board
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
-              Interactive Capstone <span className="text-[#D3AE36]">Dossier & Structural Inspector.</span>
+              Interactive Capstone <span className="text-[#D3AE36]">Dossier &amp; Structural Inspector.</span>
             </h2>
-            <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
               Toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles with certified code verification markers.
             </p>
           </div>
@@ -1033,12 +1136,12 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                Academic & Field Endorsements
+                Academic &amp; Field Endorsements
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Faculty & Peer <span className="text-[#D3AE36]">Endorsements.</span>
+                Faculty &amp; Peer <span className="text-[#D3AE36]">Endorsements.</span>
               </h2>
-              <p className="text-[#1E2025] text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
+              <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
                 Recommendations and academic reviews from ASTU faculty, internship supervisors, and student brothers.
               </p>
             </div>
@@ -1051,8 +1154,8 @@ export const Home = () => {
                     <Star key={i} size={14} fill="#D3AE36" className="text-[#D3AE36]" />
                   ))}
                 </div>
-                <span className="text-[11px] font-mono text-[#1E2025] mt-1 font-semibold">
-                  5.0 ★ Rating from ASTU Faculty & Mentors
+                <span className="text-[11px] font-mono text-[#1E2025]/85 dark:text-[#F8F9FA]/85 mt-1 font-semibold">
+                  5.0 ★ Rating from ASTU Faculty &amp; Mentors
                 </span>
               </div>
             </div>
@@ -1141,7 +1244,7 @@ export const Home = () => {
               </div>
               <div>
                 <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
-                <p className="text-xs text-[#1E2025] mt-0.5">All designs adhere to Ethiopian Building Code Standards (EBCS) and ERA Manuals.</p>
+                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 mt-0.5">All designs adhere to Ethiopian Building Code Standards (EBCS) and ERA Manuals.</p>
               </div>
             </div>
             <Link
@@ -1164,12 +1267,12 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                ASTU Student Research & Technical Notes
+                ASTU Student Research &amp; Technical Notes
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Technical Notes & <span className="text-[#D3AE36]">Research Papers.</span>
+                Technical Notes &amp; <span className="text-[#D3AE36]">Research Papers.</span>
               </h2>
-              <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+              <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 EBCS code evaluations, expansive black cotton soil mitigation, and hydraulic design notes.
               </p>
             </div>
@@ -1190,7 +1293,10 @@ export const Home = () => {
                     <FileText size={24} />
                   </div>
                   <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-bold">{article.category} • {article.date || 'Oct 2026'}</span>
-                  <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-4 dark:text-[#F8F9FA] leading-snug">{article.title}</h5>
+                  <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-3 dark:text-[#F8F9FA] leading-snug">{article.title}</h5>
+                  <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed mb-4 line-clamp-2">
+                    {article.summary || article.excerpt || 'Technical analysis and design procedures compliant with Ethiopian Building Code Standards (EBCS).'}
+                  </p>
                 </div>
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
                   <span>Read Technical Paper</span>
@@ -1210,12 +1316,12 @@ export const Home = () => {
           <div className="text-center mb-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              Academic & Graduate Opportunities
+              Academic &amp; Graduate Opportunities
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Have Inquiries? <span className="text-[#D3AE36]">Connect with Our Team!</span>
             </h2>
-            <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
               Inquire about 2026 graduate engineer recruitment, B.Sc. capstone collaborations, or civil engineering consulting.
             </p>
           </div>
@@ -1257,7 +1363,7 @@ export const Home = () => {
               </div>
               <div className="flex flex-col gap-y-0.5">
                 <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU Main Campus</h4>
-                <p className="text-xs font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80">School of Civil Eng & Architecture</p>
+                <p className="text-xs font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80">School of Civil Eng &amp; Architecture</p>
               </div>
             </div>
           </div>
@@ -1266,11 +1372,11 @@ export const Home = () => {
           <div className="py-10 text-center flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="text-left">
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#1E2025] mb-1.5 dark:text-[#F8F9FA]">Interested in Collaborating on Civil Engineering Projects?</h3>
-              <p className="text-xs sm:text-sm text-[#1E2025]">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
+              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 active:scale-95"
+              className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 active:scale-95 cursor-pointer"
             >
               Connect With Us <ArrowUpRight size={14} />
             </button>

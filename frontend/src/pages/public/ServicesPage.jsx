@@ -301,15 +301,15 @@ export const ServicesPage = () => {
             <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             Technical Specifications & Scope
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
             Four Core <span className="text-[#D3AE36]">Engineering Capabilities.</span>
           </h2>
-          <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-            Every deliverable follows rigorous structural physics and finite element verification, delivering stamped engineering packages for developers, architects, and institutions.
+          <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
+            Every deliverable adheres to rigorous structural mechanics and finite element verification, delivering code-compliant design packages for Ethiopian infrastructure.
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 mb-24">
+        <div className="flex flex-col gap-6 sm:gap-8 mb-24">
           {servicesList.map((srv, index) => {
             const features = typeof srv.features === 'string'
               ? JSON.parse(srv.features || '[]')
@@ -326,34 +326,34 @@ export const ServicesPage = () => {
             return (
               <div 
                 key={srv.id || index} 
-                className="group py-8 transition-all duration-300 relative"
+                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 relative"
               >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-[#D3AE36]/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                       <Icon size={30} />
                     </div>
                     <div>
-                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
+                      <span className="inline-block rounded-full bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
                         Module 0{index + 1}
                       </span>
-                      <h3 className="text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
+                      <h3 className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
                         {srv.title}
                       </h3>
                     </div>
                   </div>
 
-                  <div className="lg:col-span-8 flex flex-col gap-6">
-                    <p className="text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
+                  <div className="lg:col-span-8 flex flex-col gap-5">
+                    <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm sm:text-base leading-relaxed">
                       {srv.description || srv.summary}
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-3.5 pt-2">
+                    <div className="grid sm:grid-cols-2 gap-3 pt-1">
                       {features.map((feat, i) => (
-                        <div key={i} className="flex items-start gap-2.5">
-                          <CheckCircle2 size={16} className="text-[#D3AE36] shrink-0 mt-0.5" />
-                          <span className="text-xs text-zinc-700 dark:text-zinc-300 font-medium leading-snug">{feat}</span>
+                        <div key={i} className="flex items-start gap-2.5 p-2 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C]/60 border border-[#31394D]/20 dark:border-[#31394D]/40">
+                          <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
+                          <span className="text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-medium leading-snug">{feat}</span>
                         </div>
                       ))}
                     </div>

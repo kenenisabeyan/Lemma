@@ -178,31 +178,31 @@ export const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  We are 5th-year Civil Engineering students at Adama Science and Technology University (ASTU), School of Civil Engineering & Architecture. Walking this path together as brothers, we combine computer modeling in ETABS, SAP2000, and Civil 3D with hands-on site experience and Ethiopian standards to build safe, lasting infrastructure.
+                <p className="text-[#1E2025] dark:text-[#F8F9FA] font-medium text-sm sm:text-base leading-relaxed text-left">
+                  We are 5th-year Civil Engineering students at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>, School of Civil Engineering &amp; Architecture. Walking this path together as brothers, we fuse computational modeling in <span className="text-[#D3AE36] font-semibold">ETABS, SAP2000, and Civil 3D</span> with hands-on site supervision to engineer safe, resilient infrastructure across Ethiopia.
                 </p>
 
                 {/* Authority Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 font-mono text-xs">
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
-                    <GraduationCap size={16} className="text-[#D3AE36] shrink-0" />
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/70 dark:bg-[#232936]/80 backdrop-blur-xl border border-zinc-200/80 dark:border-[#31394D] flex items-center gap-2.5 text-[#1E2025] dark:text-[#F8F9FA] shadow-xs">
+                    <GraduationCap size={18} className="text-[#D3AE36] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">ASTU SoCEA</span>
-                      <span className="text-[9px] text-zinc-500">B.Sc. Civil Eng. 2026</span>
+                      <span className="font-bold block text-xs">ASTU SoCEA</span>
+                      <span className="text-[10px] text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">B.Sc. Civil Eng. 2026</span>
                     </div>
                   </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
-                    <ShieldCheck size={16} className="text-[#D3AE36] shrink-0" />
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/70 dark:bg-[#232936]/80 backdrop-blur-xl border border-zinc-200/80 dark:border-[#31394D] flex items-center gap-2.5 text-[#1E2025] dark:text-[#F8F9FA] shadow-xs">
+                    <ShieldCheck size={18} className="text-[#D3AE36] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">100% Defense Ready</span>
-                      <span className="text-[9px] text-zinc-500">Capstone Excellence</span>
+                      <span className="font-bold block text-xs">100% Defense Ready</span>
+                      <span className="text-[10px] text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Capstone Excellence</span>
                     </div>
                   </div>
-                  <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 flex items-center gap-2.5 text-zinc-800 dark:text-zinc-200">
-                    <Building2 size={16} className="text-[#D3AE36] shrink-0" />
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/70 dark:bg-[#232936]/80 backdrop-blur-xl border border-zinc-200/80 dark:border-[#31394D] flex items-center gap-2.5 text-[#1E2025] dark:text-[#F8F9FA] shadow-xs">
+                    <Building2 size={18} className="text-[#D3AE36] shrink-0" />
                     <div>
-                      <span className="font-bold block text-zinc-900 dark:text-zinc-100 text-xs">25+ Capstone Projects</span>
-                      <span className="text-[9px] text-zinc-500">RC, Highway & Soils</span>
+                      <span className="font-bold block text-xs">25+ Capstones</span>
+                      <span className="text-[10px] text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">RC, Highway &amp; Soils</span>
                     </div>
                   </div>
                 </div>
@@ -332,18 +332,55 @@ export const About = () => {
         <div className="mb-24">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-bold">Core Academic & Field Philosophy</span>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-bold">Core Academic &amp; Field Philosophy</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-zinc-100 mb-6 leading-tight max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-6 leading-tight max-w-3xl">
             Precision Engineering Meets Ethiopian Infrastructure
           </h2>
-          <div className="grid lg:grid-cols-2 gap-8 text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
-            <p>
-              We believe civil engineering shapes communities. As 5th-year students at ASTU, we study and work together as brothers to solve real local challenges — from earthquake forces in the Rift Valley to building on expansive black cotton soils.
-            </p>
-            <p>
-              Every capstone design is modeled in ETABS, SAP2000, or Civil 3D, and checked against Ethiopian Building Code Standards (EBCS) and ERA manuals to ensure safety, durability, and cost efficiency.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-6 pt-2">
+            <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center font-bold">
+                    <Target size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-base text-[#1E2025] dark:text-[#F8F9FA]">Context-Driven Civil Engineering</h4>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider">Rift Valley &amp; Local Geologies</span>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/80 leading-relaxed mb-4">
+                  We believe civil engineering shapes communities. As 5th-year students at ASTU, we study and work together as brothers to solve real local challenges — from earthquake forces in the Great Rift Valley to foundation design on expansive black cotton soils.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center gap-3 text-xs font-mono text-[#D3AE36] font-bold">
+                <span>✦ Seismic Ductility Class High</span>
+                <span>·</span>
+                <span>✦ Expansive Soil Stabilization</span>
+              </div>
+            </div>
+
+            <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center font-bold">
+                    <Layers size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-base text-[#1E2025] dark:text-[#F8F9FA]">Computational Rigor &amp; National Codes</h4>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider">EBCS &amp; ERA Certified</span>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/80 leading-relaxed mb-4">
+                  Every capstone design is modeled in ETABS, SAP2000, or Civil 3D, and checked against Ethiopian Building Code Standards (EBCS EN 1990–1998) and ERA manuals to ensure safety, durability, and cost efficiency.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center gap-3 text-xs font-mono text-[#D3AE36] font-bold">
+                <span>✦ Finite Element Verification</span>
+                <span>·</span>
+                <span>✦ Standard Bar Bending Schedules</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -447,41 +484,51 @@ export const About = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               On-Site Practical Construction &amp; Internship Experience
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
               Practical Construction <span className="text-[#D3AE36]">&amp; Field Engineering.</span>
             </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
-              Real-world site experience during university-industry internships at Oromia Construction Corporation (OCC) and MIDROC. Bridging classroom calculations with hands-on site execution.
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
+              Real-world site experience during university-industry internships at <strong className="text-[#D3AE36] font-bold">Oromia Construction Corporation (OCC)</strong>. Bridging classroom calculations with hands-on site execution.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="py-4 flex flex-col justify-between transition-all group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D3AE36]">
+                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
                     <CheckCircle2 size={24} />
                   </div>
                   <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
                     EBCS / ASTM
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
+                <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Concrete Casting &amp; Slump Testing
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Conducted on-site slump cone tests (80–120mm workability), concrete batching inspections, standard 150mm cube sampling, and 7 &amp; 28-day compressive crushing strength tests in the ASTU materials lab.
+                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">
+                  Supervised batching and consistency checks for structural grade concrete pours:
                 </p>
+                <div className="space-y-1.5 text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>80–120mm slump cone verification</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>7 &amp; 28-day 150mm cube crush tests</span>
+                  </div>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
+              <div className="mt-4 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-bold">
                 Quality Assurance Verified
               </div>
             </div>
 
-            <div className="py-4 flex flex-col justify-between transition-all group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D3AE36]">
+                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
                     <HardHat size={24} />
                   </div>
                   <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
@@ -491,19 +538,29 @@ export const About = () => {
                 <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Rebar Detailing &amp; Formwork Plumb
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-                  Supervised rebar diameters, lap splice lengths, cover block positioning, 135° seismic stirrup hooks, formwork vertical plumbness, and strut bracing before major slab and column pours.
+                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">
+                  Pre-pour inspections ensuring full structural drawings and BBS compliance:
                 </p>
+                <div className="space-y-1.5 text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>135° seismic stirrup hooks &amp; splices</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>Cover blocks &amp; vertical strut plumb</span>
+                  </div>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
+              <div className="mt-4 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-bold">
                 Pre-Pour Inspection Protocol
               </div>
             </div>
 
-            <div className="py-4 flex flex-col justify-between transition-all group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D3AE36]">
+                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Compass size={24} />
                   </div>
                   <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
@@ -513,19 +570,29 @@ export const About = () => {
                 <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Total Station &amp; Level Setting Out
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-                  Transferred permanent benchmarks, established building column gridlines, and staked out road centerline horizontal and vertical levels using digital Total Stations and optical AutoLevels.
+                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">
+                  Geodetic alignment from benchmark to construction gridlines:
                 </p>
+                <div className="space-y-1.5 text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>Column gridline &amp; axis triangulation</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>AutoLevel vertical bench transfer</span>
+                  </div>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
+              <div className="mt-4 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-bold">
                 Sub-Millimeter Alignment
               </div>
             </div>
 
-            <div className="py-4 flex flex-col justify-between transition-all group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#D3AE36]">
+                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Layers size={24} />
                   </div>
                   <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
@@ -535,11 +602,21 @@ export const About = () => {
                 <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Earthworks &amp; Road Compaction
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-                  Monitored deep foundation excavations in expansive black cotton soils, lime-stabilized subgrade layers, and verified road sub-base compaction density using the field sand cone test method.
+                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">
+                  Subgrade compaction and expansive soil mitigation:
                 </p>
+                <div className="space-y-1.5 text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>Sand cone Field Density Tests (FDT)</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>Lime stabilization for black cotton clay</span>
+                  </div>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
+              <div className="mt-4 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-bold">
                 Field Density Test (FDT) Approved
               </div>
             </div>
