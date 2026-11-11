@@ -225,12 +225,12 @@ export const TestimonialsPage = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col gap-4"
             >
-              <div className="relative w-full overflow-hidden group">
+              <div className="relative w-full rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm group">
                 
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-100 dark:border-[#31394D]/50 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Spotlight Endorsement</span>
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Spotlight Endorsement</span>
                   </div>
                   <Quote size={18} className="text-[#D3AE36]" />
                 </div>
@@ -241,26 +241,28 @@ export const TestimonialsPage = () => {
                   ))}
                 </div>
 
-                <p className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base leading-relaxed mb-6 italic font-light">
-                  "{featuredTestimonial.content}"
-                </p>
+                <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-5">
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed italic font-light">
+                    "{featuredTestimonial.content}"
+                  </p>
+                </div>
 
-                <div className="flex items-center gap-3.5 border-t border-zinc-200/80 dark:border-white/10 pt-4">
+                <div className="flex items-center gap-3.5 border-t border-zinc-100 dark:border-[#31394D]/50 pt-4">
                   {featuredTestimonial.avatarUrl ? (
                     <img
                       src={featuredTestimonial.avatarUrl}
                       alt={featuredTestimonial.clientName}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-[#D3AE36]/60 shadow-sm"
+                      className="w-12 h-12 rounded-full object-cover border-2 border-[#D3AE36] shadow-xs"
                     />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-800 border-2 border-[#D3AE36]/60 flex items-center justify-center text-[#D3AE36] font-bold text-xs">
+                    <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-[#12151C] border-2 border-[#D3AE36] flex items-center justify-center text-[#D3AE36] font-bold text-xs">
                       CL
                     </div>
                   )}
                   <div className="overflow-hidden">
-                    <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate">{featuredTestimonial.clientName}</h4>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">{featuredTestimonial.clientRole}</p>
-                    <span className="inline-block rounded-full bg-amber-500/10 border border-[#D3AE36]/40 px-2.5 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold">
+                    <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] truncate">{featuredTestimonial.clientName}</h4>
+                    <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60 truncate">{featuredTestimonial.clientRole}</p>
+                    <span className="inline-block rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/40 px-2.5 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold">
                       {featuredTestimonial.clientCompany}
                     </span>
                   </div>
@@ -280,7 +282,7 @@ export const TestimonialsPage = () => {
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="testimonials-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-[#31394D] pb-6">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -289,9 +291,9 @@ export const TestimonialsPage = () => {
                 ? testimonials.length
                 : testimonials.filter(t => {
                     if (t.category === cat) return true;
-                    if (cat === 'Architects' && (t.clientRole?.toLowerCase().includes('architect') || t.clientCompany?.toLowerCase().includes('design'))) return true;
-                    if (cat === 'Developers' && (t.clientRole?.toLowerCase().includes('development') || t.clientCompany?.toLowerCase().includes('properties'))) return true;
-                    if (cat === 'Civic Infrastructure' && (t.clientRole?.toLowerCase().includes('infrastructure') || t.clientCompany?.toLowerCase().includes('transit'))) return true;
+                    if (cat === 'Academic Faculty' && (t.category === 'Academic Faculty' || t.clientRole?.toLowerCase().includes('professor') || t.clientCompany?.toLowerCase().includes('astu'))) return true;
+                    if (cat === 'Industry Mentors' && (t.category === 'Industry Mentors' || t.clientRole?.toLowerCase().includes('engineer') || t.clientCompany?.toLowerCase().includes('oromia') || t.clientCompany?.toLowerCase().includes('corporation'))) return true;
+                    if (cat === 'Student Cohort' && (t.category === 'Student Cohort' || t.clientRole?.toLowerCase().includes('colleague') || t.clientCompany?.toLowerCase().includes('brotherhood')));
                     return false;
                   }).length;
               const isSelected = selectedCategory === cat;
@@ -300,17 +302,17 @@ export const TestimonialsPage = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#D3AE36]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
+                      ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
+                      : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
-                      : 'text-zinc-400'
+                      ? 'bg-[#12151C] text-[#D3AE36] font-black' 
+                      : 'bg-zinc-200 dark:bg-[#12151C] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
                   }`}>
                     {count}
                   </span>
@@ -320,19 +322,19 @@ export const TestimonialsPage = () => {
           </div>
 
           {/* Search Input with Reset */}
-          <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+          <div className="relative min-w-[280px] sm:min-w-[340px]">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500 w-4 h-4" />
             <input
               type="text"
               placeholder="Search by client, firm, or quote..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
+              className="w-full bg-white dark:bg-[#232936] border border-[#31394D]/30 rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all shadow-xs"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-[#F8F9FA]"
               >
                 <X size={14} />
               </button>
@@ -347,51 +349,55 @@ export const TestimonialsPage = () => {
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {filteredTestimonials.length === 0 ? (
-          <div className="py-24 text-center mb-16">
+          <div className="py-24 text-center mb-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 p-8">
             <MessageSquareQuote className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
-            <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No client endorsements match the selected criteria.</p>
-            <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No endorsements match the selected criteria.</p>
+            <p className="text-zinc-500 dark:text-[#F8F9FA]/60 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-6 py-2.5 text-xs font-mono uppercase font-bold cursor-pointer"
             >
               Reset Filters
             </button>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             {filteredTestimonials.map((t) => (
               <div 
                 key={t.id} 
-                className="group py-6 relative flex flex-col justify-between transition-all duration-300"
+                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="flex justify-between items-center mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/40">
                     <div className="flex gap-1 text-[#D3AE36]">
                       {[...Array(t.rating || 5)].map((_, i) => (
                         <Star key={i} size={15} fill="#D3AE36" className="text-[#D3AE36]" />
                       ))}
                     </div>
-                    <Quote size={20} className="text-[#D3AE36]/40 dark:text-[#D3AE36]/40 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors" />
+                    <div className="p-2 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-110 transition-transform">
+                      <Quote size={16} />
+                    </div>
                   </div>
 
-                  <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed mb-6 italic font-light">
-                    "{t.content}"
-                  </p>
+                  <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-6">
+                    <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm leading-relaxed italic font-light">
+                      "{t.content}"
+                    </p>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-3.5 border-t border-zinc-200/60 dark:border-zinc-800 pt-4">
+                <div className="flex items-center gap-3.5 border-t border-zinc-100 dark:border-[#31394D]/50 pt-4">
                   {t.avatarUrl ? (
-                    <img src={t.avatarUrl} alt={t.clientName} className="w-11 h-11 rounded-full object-cover" />
+                    <img src={t.avatarUrl} alt={t.clientName} className="w-12 h-12 rounded-full object-cover border-2 border-[#D3AE36] shadow-2xs" />
                   ) : (
-                    <div className="w-11 h-11 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-[#D3AE36] font-bold text-xs">
+                    <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-[#12151C] border-2 border-[#D3AE36] flex items-center justify-center text-[#D3AE36] font-bold text-xs">
                       {t.clientName ? t.clientName.substring(0, 2).toUpperCase() : 'CL'}
                     </div>
                   )}
                   <div className="overflow-hidden">
-                    <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate">{t.clientName}</h4>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">{t.clientRole}</p>
-                    <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block font-bold">
+                    <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] truncate">{t.clientName}</h4>
+                    <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60 truncate">{t.clientRole}</p>
+                    <span className="inline-block rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
                       {t.clientCompany}
                     </span>
                   </div>
@@ -404,19 +410,23 @@ export const TestimonialsPage = () => {
         {/* ======================================================================= */}
         {/* 4. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
+        <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
               Collaborate with Our <span className="text-[#D3AE36]">ASTU Civil Engineering Cohort</span>
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
               Whether you represent an engineering consultancy seeking top graduating talent or a project team needing capstone modeling, Lemma and the brothers are ready to contribute.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
+          </button>
+        </div>
             Connect With Brothers <ArrowUpRight size={15} className="text-[#D3AE36]" />
           </button>
         </div>

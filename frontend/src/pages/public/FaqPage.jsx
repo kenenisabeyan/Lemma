@@ -398,9 +398,6 @@ export const FaqPage = () => {
             Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
-          </button>
-        </div>
 
       </div>
     </div>
