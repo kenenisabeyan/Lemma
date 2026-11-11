@@ -217,14 +217,14 @@ export const InsightsPage = () => {
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Featured Whitepaper</span>
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Featured Whitepaper</span>
                   </div>
                   <span className="text-[10px] text-[#D3AE36] font-bold uppercase">
                     {featuredArticle.readTime}
                   </span>
                 </div>
 
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner mb-4">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#12151C] shadow-inner border border-zinc-200/80 dark:border-[#31394D] mb-4">
                   <img
                     src={featuredArticle.imageUrl}
                     alt={featuredArticle.title}
@@ -232,11 +232,11 @@ export const InsightsPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
-                  <span className="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 text-[#D3AE36] border border-white/30 text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase shadow-xs">
+                  <span className="absolute top-3 left-3 bg-white/90 dark:bg-[#12151C]/90 text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase shadow-xs">
                     {featuredArticle.category}
                   </span>
 
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <div className="absolute bottom-3 left-3 right-3 text-[#F8F9FA]">
                     <span className="text-[10px] font-mono text-zinc-300 flex items-center gap-1 mb-1">
                       <Calendar size={11} className="text-[#D3AE36]" /> {featuredArticle.publishedAt}
                     </span>
@@ -246,7 +246,7 @@ export const InsightsPage = () => {
                   </div>
                 </div>
 
-                <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed mb-4 line-clamp-2">
+                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed mb-4 line-clamp-2">
                   {featuredArticle.excerpt}
                 </p>
 
@@ -334,11 +334,11 @@ export const InsightsPage = () => {
         {filteredArticles.length === 0 ? (
           <div className="py-24 text-center mb-16">
             <BookOpen className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
-            <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No technical publications match your query.</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No technical publications match your query.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
+              className="rounded-full bg-[#12151C] dark:bg-[#F8F9FA] text-[#F8F9FA] dark:text-[#12151C] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
             >
               Reset Filters
             </button>
@@ -352,7 +352,7 @@ export const InsightsPage = () => {
                 className="transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden"
               >
                 <div>
-                  <div className="aspect-[16/10] bg-zinc-900 overflow-hidden relative rounded-2xl mb-4">
+                  <div className="aspect-[16/10] bg-[#12151C] overflow-hidden relative rounded-2xl mb-4 border border-zinc-200/80 dark:border-[#31394D]">
                     {item.imageUrl && (
                       <img 
                         src={item.imageUrl} 
@@ -361,30 +361,30 @@ export const InsightsPage = () => {
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
+                    <span className="absolute top-4 left-4 rounded-full bg-white/90 dark:bg-[#12151C]/90 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
                       {item.category}
                     </span>
                   </div>
 
                   <div>
-                    <div className="flex items-center gap-3 text-[10px] font-mono text-zinc-500 dark:text-zinc-400 mb-2 uppercase tracking-wider">
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60 mb-2 uppercase tracking-wider">
                       <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D3AE36]" /> {item.publishedAt}</span>
                       <span>·</span>
                       <span className="flex items-center gap-1"><Clock size={12} className="text-[#D3AE36]" /> {item.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors mb-2 leading-snug">
+                    <h3 className="text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2 leading-snug">
                       {item.title}
                     </h3>
 
-                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-3">
+                    <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed line-clamp-3">
                       {item.excerpt}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors flex items-center gap-1.5">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D]">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors flex items-center gap-1.5">
                     Read Technical Paper <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </div>
@@ -396,20 +396,20 @@ export const InsightsPage = () => {
         {/* ======================================================================= */}
         {/* 4. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
+        <div className="py-12 border-t border-zinc-200/80 dark:border-[#31394D] flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
               Applying <span className="text-[#D3AE36]">Advanced Engineering Research</span> to Real Infrastructure
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
               Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from our ASTU 5th-year student cohort?
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Connect With Our Team <ArrowUpRight size={15} className="text-[#D3AE36]" />
+            Connect With Our Team <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
 

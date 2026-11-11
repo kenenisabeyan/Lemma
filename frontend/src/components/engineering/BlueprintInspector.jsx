@@ -151,7 +151,7 @@ export const BlueprintInspector = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 bg-[#0E1013] p-8 flex items-center justify-center"
+              className="absolute inset-0 bg-[#12151C] p-8 flex items-center justify-center"
             >
               {/* Blueprint Grid Lines */}
               <div className="absolute inset-0 bg-grid-pattern opacity-25"></div>
@@ -159,7 +159,7 @@ export const BlueprintInspector = () => {
               {/* Wireframe Vector Skyscraper Model */}
               <svg viewBox="0 0 300 420" className="w-full h-full max-w-[260px] overflow-visible">
                 {/* Outrigger Trusses */}
-                <rect x="70" y="40" width="160" height="340" fill="none" stroke="#262A30" strokeWidth="1.5" />
+                <rect x="70" y="40" width="160" height="340" fill="none" stroke="#31394D" strokeWidth="1.5" />
                 <rect x="110" y="40" width="80" height="340" fill="#232936" stroke="#D3AE36" strokeWidth="2" />
                 
                 {/* Horizontal Belt Trusses */}
@@ -170,7 +170,7 @@ export const BlueprintInspector = () => {
                 
                 {/* Floor Slabs */}
                 {[70, 100, 160, 190, 220, 270, 310, 340].map((y) => (
-                  <line key={y} x1="70" y1={y} x2="230" y2={y} stroke="#333842" strokeWidth="1" />
+                  <line key={y} x1="70" y1={y} x2="230" y2={y} stroke="#31394D" strokeWidth="1" />
                 ))}
 
                 {/* Axial Load Compression Vectors */}
@@ -218,8 +218,8 @@ export const BlueprintInspector = () => {
                   style={{ top: h.y, left: h.x, transform: 'translate(-50%, -50%)' }}
                   className={`group/btn absolute flex items-center justify-center rounded-full transition-all duration-300 ${
                     isSelected
-                      ? 'w-9 h-9 bg-[#D3AE36] text-[#12151C] scale-110'
-                      : 'w-7 h-7 bg-white text-[#D3AE36] hover:scale-125'
+                      ? 'w-9 h-9 bg-[#D3AE36] text-[#12151C] scale-110 shadow-lg shadow-[#D3AE36]/30'
+                      : 'w-7 h-7 bg-white dark:bg-[#232936] text-[#D3AE36] border border-[#D3AE36]/40 hover:scale-125'
                   }`}
                   title={h.title}
                 >

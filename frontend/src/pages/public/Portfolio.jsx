@@ -248,7 +248,7 @@ export const Portfolio = () => {
                 </div>
 
                 {/* Spotlight Image & Badge */}
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#12151C] shadow-inner border border-zinc-200/80 dark:border-[#31394D]">
                   <img
                     src={spotlightProject.imageUrl}
                     alt={spotlightProject.title}
@@ -256,15 +256,15 @@ export const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
                   
-                  <div className="absolute top-3 left-3 bg-white/90 dark:bg-zinc-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/30 text-[10px] font-mono font-bold text-zinc-900 dark:text-zinc-100 uppercase">
+                  <div className="absolute top-3 left-3 bg-white/90 dark:bg-[#12151C]/90 backdrop-blur-md px-3 py-1 rounded-full border border-white/30 text-[10px] font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase">
                     {spotlightProject.category}
                   </div>
 
-                  <div className="absolute top-3 right-3 bg-[#D3AE36] text-zinc-950 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-extrabold uppercase shadow-sm">
+                  <div className="absolute top-3 right-3 bg-[#D3AE36] text-[#12151C] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-extrabold uppercase shadow-sm">
                     {spotlightProject.year}
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <div className="absolute bottom-3 left-3 right-3 text-[#F8F9FA]">
                     <h3 className="font-extrabold text-lg sm:text-xl drop-shadow-md leading-tight mb-1">
                       {spotlightProject.title}
                     </h3>
@@ -280,7 +280,7 @@ export const Portfolio = () => {
                   <div className="flex items-start justify-between gap-2 text-xs">
                     <div>
                       <span className="text-[10px] text-zinc-500 uppercase font-mono block">Structural System</span>
-                      <span className="font-bold text-zinc-800 dark:text-zinc-200 line-clamp-1">{spotlightProject.structuralSystem}</span>
+                      <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] line-clamp-1">{spotlightProject.structuralSystem}</span>
                     </div>
                   </div>
 
@@ -294,7 +294,7 @@ export const Portfolio = () => {
                     </button>
                     <button
                       onClick={() => setSpotlightIndex((prev) => (prev + 1) % allProjects.length)}
-                      className="rounded-xl border border-zinc-200 dark:border-white/10 hover:border-[#D3AE36] bg-white/80 dark:bg-white/5 p-2.5 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer"
+                      className="rounded-xl border border-zinc-200 dark:border-[#31394D] hover:border-[#D3AE36] bg-white/80 dark:bg-[#232936] p-2.5 text-zinc-600 dark:text-[#F8F9FA]/80 hover:text-zinc-900 dark:hover:text-[#D3AE36] transition-all cursor-pointer"
                       title="Next Landmark"
                     >
                       <Sparkles size={16} className="text-[#D3AE36]" />
@@ -357,12 +357,12 @@ export const Portfolio = () => {
               placeholder="Search capstone, RC frame, highway, soil..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] pl-9 pr-9 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-[#F8F9FA]"
               >
                 <X size={14} />
               </button>
@@ -379,7 +379,7 @@ export const Portfolio = () => {
         {filteredProjects.length === 0 ? (
           <div className="py-24 text-center mb-20">
             <HardHat className="w-12 h-12 text-[#D3AE36] mx-auto mb-4 opacity-75" />
-            <p className="text-zinc-900 dark:text-zinc-100 text-base font-bold mb-1">No capstone projects match your search.</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No capstone projects match your search.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}

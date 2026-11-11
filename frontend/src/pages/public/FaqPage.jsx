@@ -230,15 +230,15 @@ export const FaqPage = () => {
                         const el = document.getElementById('faq-accordion');
                         if (el) el.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all text-left group"
+                      className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all text-left group shadow-xs cursor-pointer"
                     >
                       <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-1 font-bold">
                         {f.category} Discipline
                       </span>
-                      <h4 className="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] transition-colors line-clamp-1 mb-1">
+                      <h4 className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] transition-colors line-clamp-1 mb-1">
                         {f.question}
                       </h4>
-                      <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
+                      <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 line-clamp-1">
                         {f.answer}
                       </p>
                     </button>
@@ -300,12 +300,12 @@ export const FaqPage = () => {
               placeholder="Search questions, codes, fees..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
+              className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] pl-9 pr-9 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-[#F8F9FA]"
               >
                 <X size={14} />
               </button>
@@ -319,7 +319,7 @@ export const FaqPage = () => {
       {/* 3. ACCORDION LIST                                                         */}
       {/* ========================================================================= */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col divide-y divide-zinc-200/60 dark:divide-zinc-800 mb-24">
+        <div className="flex flex-col divide-y divide-zinc-200/60 dark:divide-[#31394D] mb-24">
           {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
@@ -329,7 +329,7 @@ export const FaqPage = () => {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full text-left font-black text-base sm:text-lg text-zinc-900 dark:text-zinc-100 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
+                  className="w-full text-left font-black text-base sm:text-lg text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-3.5">
                     <span className="text-[#D3AE36]">
@@ -341,7 +341,7 @@ export const FaqPage = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="pt-4 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed animate-in fade-in duration-200">
+                  <div className="pt-4 text-sm text-zinc-700 dark:text-[#F8F9FA]/85 leading-relaxed animate-in fade-in duration-200">
                     <p className="mb-3 leading-relaxed sm:text-base">{faq.answer}</p>
                     <span className="text-[10px] font-mono uppercase text-[#D3AE36] font-bold">
                       Discipline: {faq.category}
@@ -363,20 +363,20 @@ export const FaqPage = () => {
         {/* ======================================================================= */}
         {/* 5. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="py-10 flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-zinc-200/60 dark:border-zinc-800">
+        <div className="py-10 flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-zinc-200/60 dark:border-[#31394D]">
           <div className="text-left max-w-2xl">
-            <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
               Have a Question for Our ASTU Civil Engineering Cohort?
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
               Whether inquiring about our capstone structural calculation models, highway route designs, or career recruitment opportunities, reach out directly to Lemma and the brothers.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#D3AE36]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
 

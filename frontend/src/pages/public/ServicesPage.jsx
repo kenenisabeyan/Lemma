@@ -238,13 +238,13 @@ export const ServicesPage = () => {
                         className={`text-left p-3.5 rounded-2xl border transition-all flex items-start gap-3.5 cursor-pointer ${
                           isActive
                             ? 'bg-[#D3AE36] text-[#12151C] border-[#D3AE36] shadow-[0_6px_20px_rgba(211,174,54,0.35)] scale-[1.01]'
-                            : 'bg-white/70 dark:bg-zinc-800/50 hover:bg-white dark:hover:bg-zinc-800 border-zinc-200/70 dark:border-white/10 text-zinc-800 dark:text-zinc-200'
+                            : 'bg-white/70 dark:bg-[#232936]/80 hover:bg-white dark:hover:bg-[#232936] border-zinc-200/70 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA]'
                         }`}
                       >
                         <div className={`p-2.5 rounded-xl border shrink-0 ${
                           isActive
                             ? 'bg-zinc-950/15 border-zinc-950/20 text-[#12151C]'
-                            : 'bg-zinc-100 dark:bg-zinc-700/60 border-zinc-200/60 dark:border-white/5 text-[#D3AE36]'
+                            : 'bg-zinc-100 dark:bg-[#12151C] border-zinc-200/60 dark:border-[#31394D] text-[#D3AE36]'
                         }`}>
                           <Icon size={18} />
                         </div>
@@ -253,14 +253,14 @@ export const ServicesPage = () => {
                             <span className="font-bold text-xs uppercase tracking-wide truncate">{pillar.title}</span>
                             <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full shrink-0 font-bold ${
                               isActive
-                                ? 'bg-zinc-950 text-white'
-                                : 'bg-zinc-200/70 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400'
+                                ? 'bg-[#12151C] text-[#F8F9FA]'
+                                : 'bg-zinc-200/70 dark:bg-[#12151C] text-zinc-600 dark:text-[#F8F9FA]/80'
                             }`}>
                               {pillar.metric}
                             </span>
                           </div>
                           <p className={`text-[11px] leading-tight line-clamp-1 ${
-                            isActive ? 'text-zinc-800 font-medium' : 'text-zinc-500 dark:text-zinc-400'
+                            isActive ? 'text-zinc-800 font-medium' : 'text-zinc-500 dark:text-[#F8F9FA]/70'
                           }`}>
                             {pillar.short}
                           </p>
@@ -331,14 +331,14 @@ export const ServicesPage = () => {
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   
                   <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-[#D3AE36] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-[#D3AE36]/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                       <Icon size={30} />
                     </div>
                     <div>
-                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
+                      <span className="inline-block rounded-full bg-zinc-100 dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
                         Module 0{index + 1}
                       </span>
-                      <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors leading-snug">
+                      <h3 className="text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
                         {srv.title}
                       </h3>
                     </div>

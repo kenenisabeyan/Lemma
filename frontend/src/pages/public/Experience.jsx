@@ -269,29 +269,29 @@ export const Experience = () => {
             >
               <div className="relative w-full overflow-hidden group">
                 
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-[#31394D] text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Milestone Spotlight</span>
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Milestone Spotlight</span>
                   </div>
                   <span className="text-[10px] font-mono text-[#D3AE36] font-bold">
                     {activeMilestone.year}
                   </span>
                 </div>
 
-                <div className="bg-zinc-50 dark:bg-zinc-800/60 p-4 rounded-2xl border border-zinc-200/70 dark:border-white/5 mb-4">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 block mb-1">
+                <div className="bg-[#F8F9FA] dark:bg-[#232936] p-4 rounded-2xl border border-zinc-200/70 dark:border-[#31394D] mb-4">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 dark:text-[#F8F9FA]/60 block mb-1">
                     {activeMilestone.category} · {activeMilestone.location}
                   </span>
-                  <h3 className="font-black text-lg text-zinc-900 dark:text-zinc-100 leading-snug mb-2">
+                  <h3 className="font-black text-lg text-[#1E2025] dark:text-[#F8F9FA] leading-snug mb-2">
                     {activeMilestone.title}
                   </h3>
-                  <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed mb-3">
+                  <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed mb-3">
                     {activeMilestone.achievement}
                   </p>
-                  <div className="flex items-center justify-between pt-2 border-t border-zinc-200/60 dark:border-white/5 text-[11px] font-mono font-bold">
+                  <div className="flex items-center justify-between pt-2 border-t border-zinc-200/60 dark:border-[#31394D] text-[11px] font-mono font-bold">
                     <span className="text-[#D3AE36]">{activeMilestone.value}</span>
-                    <span className="text-zinc-500">{activeMilestone.role}</span>
+                    <span className="text-zinc-500 dark:text-[#F8F9FA]/60">{activeMilestone.role}</span>
                   </div>
                 </div>
 
@@ -304,7 +304,7 @@ export const Experience = () => {
                       className={`p-2 rounded-xl text-center font-mono text-[10px] font-bold uppercase transition-all cursor-pointer ${
                         selectedMilestoneIdx === idx
                           ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
-                          : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
+                          : 'bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] text-zinc-600 dark:text-[#F8F9FA]/80 hover:text-zinc-900 dark:hover:text-[#D3AE36]'
                       }`}
                     >
                       {ms.year.split(' ')[0]}
@@ -422,22 +422,22 @@ export const Experience = () => {
         {/* Tab 2: Career Timeline */}
         {activeTab === 'timeline' && (
           <div className="mb-24">
-            <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-white/10 pl-8 ml-4">
+            <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-[#31394D] pl-8 ml-4">
               {CAREER_TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D3AE36] group-hover:scale-125 transition-transform"></div>
+                  <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
                   <div className="py-2 transition-all duration-300">
                     <span className="inline-block text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider mb-1">
                       {item.year}
                     </span>
-                    <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h3>
-                    <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <h3 className="text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-1">{item.role}</h3>
+                    <p className="text-xs font-semibold text-zinc-500 dark:text-[#F8F9FA]/60 uppercase tracking-wider mb-3 flex items-center gap-2">
                       <Building2 size={13} className="text-[#D3AE36]" /> {item.company}
                     </p>
-                    <p className="text-sm text-zinc-700 dark:text-zinc-300 max-w-3xl leading-relaxed mb-4">
+                    <p className="text-sm text-zinc-700 dark:text-[#F8F9FA]/80 max-w-3xl leading-relaxed mb-4">
                       {item.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-600 dark:text-zinc-400 font-bold">
+                    <div className="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-600 dark:text-[#F8F9FA]/60 font-bold">
                       <span>• Direct Client Coordination</span>
                       <span>• Code Authority Submissions</span>
                       <span>• Multi-Disciplinary BIM</span>
@@ -461,10 +461,10 @@ export const Experience = () => {
                   <div className="font-mono font-bold text-sm text-[#D3AE36] mb-2">
                     0{index + 1}
                   </div>
-                  <h4 className="text-lg font-black text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors">{comp.title}</h4>
-                  <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{comp.desc}</p>
+                  <h4 className="text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors">{comp.title}</h4>
+                  <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">{comp.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D3AE36] font-bold">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] flex items-center gap-2 text-[10px] uppercase font-mono text-[#D3AE36] font-bold">
                   <ShieldCheck size={13} /> Rigorous Engineering Verified
                 </div>
               </div>

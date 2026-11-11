@@ -265,7 +265,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors mb-2">{rel.title}</h4>
+                    <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2">{rel.title}</h4>
                   </div>
                   <span className="text-xs font-mono font-bold uppercase text-[#D3AE36] flex items-center gap-1.5 mt-4">
                     Read Article <ArrowUpRight size={13} />

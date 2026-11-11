@@ -162,7 +162,7 @@ export const BeamShearMomentSolver = () => {
           {/* Span Length */}
           <div className="py-2 space-y-1">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-800 font-bold dark:text-[#F8F9FA]">Clear Span Length ($L$):</span>
+              <span className="text-[#1E2025] font-bold dark:text-[#F8F9FA]">Clear Span Length ($L$):</span>
               <span className="text-[#D3AE36] font-bold">{spanL} meters ({Math.round(spanL * 3.28084)} ft)</span>
             </div>
             <input 
@@ -176,14 +176,14 @@ export const BeamShearMomentSolver = () => {
                 setSpanL(val);
                 if (pointLoadA > val) setPointLoadA(Math.round(val / 2));
               }}
-              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
+              className="w-full h-1.5 bg-zinc-200 dark:bg-[#12151C] rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
             />
           </div>
 
           {/* Uniform Distributed Load (UDL) */}
           <div className="py-2 space-y-1">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-800 font-bold dark:text-[#F8F9FA]">Uniform Load ($w$): Dead + Live</span>
+              <span className="text-[#1E2025] font-bold dark:text-[#F8F9FA]">Uniform Load ($w$): Dead + Live</span>
               <span className="text-[#D3AE36] font-bold">{udlW} kN/m</span>
             </div>
             <input 
@@ -193,14 +193,14 @@ export const BeamShearMomentSolver = () => {
               step="2"
               value={udlW}
               onChange={(e) => setUdlW(parseInt(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
+              className="w-full h-1.5 bg-zinc-200 dark:bg-[#12151C] rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
             />
           </div>
 
           {/* Concentrated Point Load (P) */}
           <div className="py-2 space-y-1">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-800 font-bold dark:text-[#F8F9FA]">Point Load ($P$): Equipment/Column</span>
+              <span className="text-[#1E2025] font-bold dark:text-[#F8F9FA]">Point Load ($P$): Equipment/Column</span>
               <span className="text-[#D3AE36] font-bold">{pointLoadP} kN</span>
             </div>
             <input 
@@ -210,14 +210,14 @@ export const BeamShearMomentSolver = () => {
               step="10"
               value={pointLoadP}
               onChange={(e) => setPointLoadP(parseInt(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
+              className="w-full h-1.5 bg-zinc-200 dark:bg-[#12151C] rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
             />
           </div>
 
           {/* Point Load Position (a) */}
           <div className="py-2 space-y-1">
             <div className="flex justify-between items-center text-xs font-mono">
-              <span className="text-zinc-800 font-bold dark:text-[#F8F9FA]">Point Load Location ($a$):</span>
+              <span className="text-[#1E2025] font-bold dark:text-[#F8F9FA]">Point Load Location ($a$):</span>
               <span className="text-[#D3AE36] font-bold">{pointLoadA} m from left support</span>
             </div>
             <input 
@@ -227,13 +227,13 @@ export const BeamShearMomentSolver = () => {
               step="0.5"
               value={pointLoadA}
               onChange={(e) => setPointLoadA(parseFloat(e.target.value))}
-              className="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
+              className="w-full h-1.5 bg-zinc-200 dark:bg-[#12151C] rounded-lg appearance-none cursor-pointer accent-[#D3AE36]"
             />
           </div>
 
           {/* Section Profile Selector */}
           <div className="py-2 space-y-2">
-            <span className="text-xs font-mono text-zinc-800 block font-bold dark:text-[#F8F9FA]">Structural Section Profile (AISC / ACI):</span>
+            <span className="text-xs font-mono text-[#1E2025] block font-bold dark:text-[#F8F9FA]">Structural Section Profile (AISC / ACI):</span>
             <div className="grid grid-cols-2 gap-2">
               {Object.keys(sections).map((key) => {
                 const s = sections[key];
@@ -266,7 +266,7 @@ export const BeamShearMomentSolver = () => {
             {/* 1. Free Body Loading Diagram */}
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
-                <span className="text-zinc-800 font-bold dark:text-[#F8F9FA]">1. Free Body Beam Loading</span>
+                <span className="text-[#1E2025] font-bold dark:text-[#F8F9FA]">1. Free Body Beam Loading</span>
                 <span className="text-[#D3AE36] font-bold">Span $L = {spanL}m$</span>
               </div>
               <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-16 bg-transparent">
@@ -326,7 +326,7 @@ export const BeamShearMomentSolver = () => {
             {/* 2. Shear Force Diagram (SFD) */}
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
-                <span className="text-zinc-800 flex items-center gap-1.5 font-bold dark:text-[#F8F9FA]">
+                <span className="text-[#1E2025] flex items-center gap-1.5 font-bold dark:text-[#F8F9FA]">
                   <span className="w-2 h-2 rounded-full bg-blue-500"></span> Shear Force Diagram (V)
                 </span>
                 <span className="text-blue-600 font-bold">V_max = {results.maxShear} kN</span>
@@ -349,7 +349,7 @@ export const BeamShearMomentSolver = () => {
             {/* 3. Bending Moment Diagram (BMD) */}
             <div>
               <div className="flex justify-between items-center text-xs font-mono mb-1">
-                <span className="text-zinc-800 flex items-center gap-1.5 font-bold dark:text-[#F8F9FA]">
+                <span className="text-[#1E2025] flex items-center gap-1.5 font-bold dark:text-[#F8F9FA]">
                   <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span> Bending Moment Diagram (M)
                 </span>
                 <span className="text-[#D3AE36] font-bold">M_max = {results.maxMoment} kN·m</span>

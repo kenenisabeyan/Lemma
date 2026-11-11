@@ -44,41 +44,41 @@ export const CaseStudyModal = ({ project, onClose }) => {
       <div className="flex flex-col gap-6 text-inherit">
         
         {/* Banner Header Image */}
-        <div className="relative aspect-[16/9] rounded-2xl bg-zinc-900 border border-zinc-200 dark:border-white/10 overflow-hidden shadow-sm">
+        <div className="relative aspect-[16/9] rounded-2xl bg-[#12151C] border border-zinc-200 dark:border-[#31394D] overflow-hidden shadow-sm">
           <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#12151C]/80 via-transparent to-transparent"></div>
           
           <div className="absolute top-4 left-4">
-            <span className="rounded-full bg-white/95 dark:bg-zinc-900/90 backdrop-blur-md text-[#D3AE36] border border-white/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
+            <span className="rounded-full bg-white/95 dark:bg-[#232936]/90 backdrop-blur-md text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider shadow-sm">
               {project.category}
             </span>
           </div>
 
           <button
             onClick={openFullPage}
-            className="absolute top-4 right-4 rounded-full bg-white/95 dark:bg-zinc-900/90 backdrop-blur-md text-zinc-900 dark:text-zinc-100 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] border border-zinc-200 dark:border-white/20 text-[10px] font-mono font-bold px-3.5 py-1.5 uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
+            className="absolute top-4 right-4 rounded-full bg-white/95 dark:bg-[#232936]/90 backdrop-blur-md text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] border border-zinc-200 dark:border-[#31394D] text-[10px] font-mono font-bold px-3.5 py-1.5 uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
           >
             Open Dedicated Page <ArrowUpRight size={12} />
           </button>
         </div>
 
         {/* Structural Metadata Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-zinc-50 dark:bg-zinc-800/60 p-4 rounded-2xl border border-zinc-200/80 dark:border-white/5 text-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#F8F9FA] dark:bg-[#232936]/80 p-4 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] text-xs">
           <div className="p-2">
-            <span className="text-zinc-500 uppercase block text-[10px] font-mono mb-0.5">Location</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-bold flex items-center gap-1"><MapPin size={12} className="text-[#D3AE36]"/> {project.location}</span>
+            <span className="text-zinc-500 dark:text-[#F8F9FA]/60 uppercase block text-[10px] font-mono mb-0.5">Location</span>
+            <span className="text-[#1E2025] dark:text-[#F8F9FA] font-bold flex items-center gap-1"><MapPin size={12} className="text-[#D3AE36]"/> {project.location}</span>
           </div>
           <div className="p-2">
-            <span className="text-zinc-500 uppercase block text-[10px] font-mono mb-0.5">Year</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-bold flex items-center gap-1"><Calendar size={12} className="text-[#D3AE36]"/> {project.year}</span>
+            <span className="text-zinc-500 dark:text-[#F8F9FA]/60 uppercase block text-[10px] font-mono mb-0.5">Year</span>
+            <span className="text-[#1E2025] dark:text-[#F8F9FA] font-bold flex items-center gap-1"><Calendar size={12} className="text-[#D3AE36]"/> {project.year}</span>
           </div>
           <div className="p-2">
-            <span className="text-zinc-500 uppercase block text-[10px] font-mono mb-0.5">Role</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-bold flex items-center gap-1"><ShieldCheck size={12} className="text-[#D3AE36]"/> {project.role || 'Lead Structural'}</span>
+            <span className="text-zinc-500 dark:text-[#F8F9FA]/60 uppercase block text-[10px] font-mono mb-0.5">Role</span>
+            <span className="text-[#1E2025] dark:text-[#F8F9FA] font-bold flex items-center gap-1"><ShieldCheck size={12} className="text-[#D3AE36]"/> {project.role || 'Lead Structural'}</span>
           </div>
           <div className="p-2">
-            <span className="text-zinc-500 uppercase block text-[10px] font-mono mb-0.5">Authority</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-bold flex items-center gap-1"><Building size={12} className="text-[#D3AE36]"/> {project.client || 'Apex Global'}</span>
+            <span className="text-zinc-500 dark:text-[#F8F9FA]/60 uppercase block text-[10px] font-mono mb-0.5">Authority</span>
+            <span className="text-[#1E2025] dark:text-[#F8F9FA] font-bold flex items-center gap-1"><Building size={12} className="text-[#D3AE36]"/> {project.client || 'Apex Global'}</span>
           </div>
         </div>
 
@@ -86,27 +86,27 @@ export const CaseStudyModal = ({ project, onClose }) => {
         <div className="flex flex-col gap-4 text-sm">
           
           {/* Overview */}
-          <div className="bg-white/80 dark:bg-zinc-800/40 p-5 rounded-2xl border border-zinc-200/80 dark:border-white/5">
+          <div className="bg-white/80 dark:bg-[#232936]/70 p-5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D]">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] mb-1">01 • Executive Overview</h4>
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-xs sm:text-sm">{project.description}</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed text-xs sm:text-sm">{project.description}</p>
           </div>
 
           {/* Challenge */}
-          <div className="bg-red-500/5 dark:bg-red-950/20 p-5 rounded-2xl border border-red-200 dark:border-red-900/40">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-1">02 • Technical Challenge</h4>
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-xs sm:text-sm">{project.challenge}</p>
+          <div className="bg-[#232936]/40 dark:bg-[#232936]/50 p-5 rounded-2xl border border-amber-500/30 dark:border-[#D3AE36]/30">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] mb-1">02 • Technical Challenge</h4>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed text-xs sm:text-sm">{project.challenge}</p>
           </div>
 
           {/* Engineering Approach */}
-          <div className="bg-white/80 dark:bg-zinc-800/40 p-5 rounded-2xl border border-zinc-200/80 dark:border-white/5">
+          <div className="bg-white/80 dark:bg-[#232936]/70 p-5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D]">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] mb-1">03 • Computational Approach & FEA</h4>
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-xs sm:text-sm">{project.engineeringApproach}</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed text-xs sm:text-sm">{project.engineeringApproach}</p>
           </div>
 
           {/* Solution & Result */}
           <div className="bg-emerald-500/5 dark:bg-emerald-950/20 p-5 rounded-2xl border border-emerald-200 dark:border-emerald-900/40">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-1">04 • Stamped Solution & Outcome</h4>
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-xs sm:text-sm mb-2">{project.solution}</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed text-xs sm:text-sm mb-2">{project.solution}</p>
             <p className="text-emerald-700 dark:text-emerald-300 font-bold text-xs flex items-center gap-1.5">
               <CheckCircle2 size={14} /> Result: {project.result}
             </p>
@@ -115,10 +115,10 @@ export const CaseStudyModal = ({ project, onClose }) => {
         </div>
 
         {/* Modal Footer */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-zinc-200/80 dark:border-white/10">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-zinc-200/80 dark:border-[#31394D]">
           <div className="flex flex-wrap gap-1.5 items-center">
             {softwareList.map(soft => (
-              <span key={soft} className="rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 px-2.5 py-0.5 text-[10px] font-mono text-zinc-700 dark:text-zinc-300">
+              <span key={soft} className="rounded-full bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] px-2.5 py-0.5 text-[10px] font-mono text-[#1E2025] dark:text-[#F8F9FA]/80">
                 {soft}
               </span>
             ))}
@@ -127,13 +127,13 @@ export const CaseStudyModal = ({ project, onClose }) => {
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <button
               onClick={openFullPage}
-              className="flex-1 sm:flex-none rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#D3AE36] dark:hover:bg-[#E84855] hover:text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all"
+              className="flex-1 sm:flex-none rounded-full bg-[#12151C] dark:bg-[#F8F9FA] text-[#F8F9FA] dark:text-[#12151C] hover:bg-[#D3AE36] dark:hover:bg-[#D3AE36] hover:text-[#12151C] px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all"
             >
               Full Case Study Page
             </button>
             <button
               onClick={() => { onClose(); navigate('/contact'); }}
-              className="flex-1 sm:flex-none rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md"
+              className="flex-1 sm:flex-none rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md"
             >
               Consult On Scope
             </button>
@@ -496,8 +496,8 @@ export const CaseStudyPage = () => {
                 >
                   <div>
                     <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors mb-2">{rel.title}</h4>
-                    <p className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2 mb-4">{rel.challenge}</p>
+                    <h4 className="text-lg font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2">{rel.title}</h4>
+                    <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 line-clamp-2 mb-4">{rel.challenge}</p>
                   </div>
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] flex items-center gap-1">
                     Open Case Study <ArrowUpRight size={12} />

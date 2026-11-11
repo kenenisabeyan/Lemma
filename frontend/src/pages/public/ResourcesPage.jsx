@@ -266,17 +266,17 @@ Phone: +251 934 830 919
                   {/* Tool 1 */}
                   <a
                     href="#beam-solver"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Calculator size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Beam Shear & Moment Solver</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Beam Shear & Moment Solver</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">FEA Live</span>
                       </div>
-                      <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
+                      <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 line-clamp-1">
                         Calculate shear force envelopes, moment diagrams & elastic deflections.
                       </p>
                     </div>
@@ -285,17 +285,17 @@ Phone: +251 934 830 919
                   {/* Tool 2 */}
                   <button
                     onClick={() => handleDownload(defaultResources[3])}
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group shadow-xs cursor-pointer"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <FileText size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">RC Bar Bending Schedule (BBS)</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">RC Bar Bending Schedule (BBS)</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/20 text-[#D3AE36] font-bold">XLSX / BBS</span>
                       </div>
-                      <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
+                      <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 line-clamp-1">
                         Practical on-site bar cutting lengths, lap lengths &amp; steel tonnage sheet.
                       </p>
                     </div>
@@ -304,17 +304,17 @@ Phone: +251 934 830 919
                   {/* Tool 3 */}
                   <button
                     onClick={() => handleDownload(defaultResources[0])}
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group shadow-xs cursor-pointer"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Download size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">EBCS EN Capstone Audit Checklist</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-bold">PDF / 2.4 MB</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">EBCS EN Capstone Audit Checklist</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/80 font-bold">PDF / 2.4 MB</span>
                       </div>
-                      <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1">
+                      <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 line-clamp-1">
                         One-click direct download of the official ASTU 5th-year structural design checklist.
                       </p>
                     </div>
@@ -422,17 +422,17 @@ Phone: +251 934 830 919
                 </div>
 
                 <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
-                <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100 group-hover:text-[#D3AE36] dark:group-hover:text-[#E84855] transition-colors mb-3 leading-snug">
+                <h3 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed mb-6">
                   {item.description}
                 </p>
               </div>
 
               <button
                 onClick={() => handleDownload(item)}
-                className="rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-[#D3AE36] dark:hover:bg-[#E84855] hover:text-white transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-max"
+                className="rounded-full bg-[#12151C] dark:bg-[#F8F9FA] text-[#F8F9FA] dark:text-[#12151C] hover:bg-[#D3AE36] dark:hover:bg-[#D3AE36] hover:text-[#12151C] dark:hover:text-[#12151C] transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-max"
               >
                 Download Document <Download size={14} className="text-[#D3AE36]" />
               </button>
@@ -447,14 +447,14 @@ Phone: +251 934 830 919
         {/* ======================================================================= */}
         <div id="beam-solver" className="mb-24 scroll-mt-24">
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#31394D] bg-white/90 dark:bg-[#232936] px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Computational Structural Analysis
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
               <span className="text-[#D3AE36]">Beam Shear, Moment</span> & Deflection Laboratory.
             </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-[#F8F9FA]/70 text-sm md:text-base leading-relaxed">
               Solve indeterminate and determinate structural framing spans. Evaluate live shear force envelopes, bending moments, and elastic deflections against EBCS EN 1992 and design standards.
             </p>
           </div>
@@ -465,21 +465,21 @@ Phone: +251 934 830 919
         {/* ======================================================================= */}
         {/* 6. BOTTOM CUSTOM SPECIFICATIONS BANNER                                  */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
+        <div className="py-12 border-t border-zinc-200/80 dark:border-[#31394D] flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
             <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
-            <h4 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">
+            <h4 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
               Need Capstone Calculations, Soil Test Reviews, or Civil 3D Corridors?
             </h4>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
               Our ASTU 5th-year graduating civil engineering team provides finite element analysis models, EBCS compliant calculation sheets, and AutoCAD Civil 3D highway drawings.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-white px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
           >
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#D3AE36]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
 

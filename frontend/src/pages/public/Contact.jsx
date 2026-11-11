@@ -79,12 +79,12 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#12151C] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
+    <div className="min-h-screen bg-[#F8F9FA] dark:bg-[#12151C] text-[#1E2025] dark:text-[#F8F9FA] transition-colors duration-200">
       
       {/* ========================================================================= */}
       {/* 1. CINEMATIC CONTACT HERO SECTION (MATCHING RESOURCESPAGE TOOLKIT DESIGN)  */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -97,12 +97,12 @@ export const Contact = () => {
           />
 
           {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
-          <div className="absolute inset-0 bg-white/40 dark:bg-[#12151C]/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-[#F8F9FA]/40 dark:bg-[#12151C]/75 pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#12151C]/85 dark:via-transparent dark:to-[#12151C]/85 pointer-events-none" />
           <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
 
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -226,32 +226,32 @@ export const Contact = () => {
             >
               <div className="w-full">
                 
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-[#31394D] text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Direct Channels Launchpad</span>
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Direct Channels Launchpad</span>
                   </div>
-                  <span className="text-[10px] text-zinc-500 font-mono">ASTU Live Base</span>
+                  <span className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 font-mono">ASTU Live Base</span>
                 </div>
 
                 <div className="flex flex-col gap-3">
                   {/* Channel 1: Phone */}
                   <a
                     href="tel:+251934830919"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Phone size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Direct Phone Line</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Direct Phone Line</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">FEA Live</span>
                       </div>
-                      <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-mono font-bold">
+                      <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-mono font-bold">
                         +251 934 830 919 · 0934 830 919
                       </p>
-                      <p className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                      <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
                         Direct voice calls, SMS &amp; Telegram message channel.
                       </p>
                     </div>
@@ -260,39 +260,39 @@ export const Contact = () => {
                   {/* Channel 2: Email */}
                   <a
                     href="mailto:lemmayezedlij21@gmail.com"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Mail size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Engineering Inquiries</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Engineering Inquiries</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/20 text-[#D3AE36] font-bold">Official / 24h</span>
                       </div>
-                      <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-mono font-bold truncate">
+                      <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-mono font-bold truncate">
                         lemmayezedlij21@gmail.com
                       </p>
-                      <p className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                      <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
                         Full structural calculation packages &amp; capstone consultation.
                       </p>
                     </div>
                   </a>
 
                   {/* Channel 3: Campus Base */}
-                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-white/10 bg-white/70 dark:bg-zinc-800/60 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs">
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-700/60 text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs">
+                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <MapPin size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-zinc-900 dark:text-zinc-100">Academic Base</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-bold">SoCEA Campus</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Academic Base</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA] font-bold">SoCEA Campus</span>
                       </div>
-                      <p className="text-[11px] text-zinc-700 dark:text-zinc-300 font-bold">
+                      <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-bold">
                         School of Civil Engineering &amp; Architecture
                       </p>
-                      <p className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                      <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
                         ASTU Main Campus, Adama, Oromia, Ethiopia.
                       </p>
                     </div>
@@ -301,10 +301,10 @@ export const Contact = () => {
                 </div>
 
                 {/* Scene Indicator */}
-                <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-white/10 text-[11px] font-mono text-zinc-500">
+                <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[11px] font-mono text-zinc-500">
                   <span className="flex items-center gap-1.5 truncate">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-700 dark:text-zinc-300">Lemma Amensisa — Structural Inspection Site</span>
+                    <span className="font-bold text-zinc-700 dark:text-[#F8F9FA]/80">Lemma Amensisa — Structural Inspection Site</span>
                   </span>
                   <span className="text-[10px] text-zinc-400 font-mono">ASTU Live Base</span>
                 </div>
@@ -323,72 +323,72 @@ export const Contact = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           
           {/* Card 1: Academic Base */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/50 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#D3AE36]/20 text-[#D3AE36] flex items-center justify-center mb-4">
+          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
               <MapPin size={22} />
             </div>
             <div>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
                 Academic Base
               </span>
-              <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug">
+              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
                 ASTU SoCEA Main Campus
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
                 Adama, Oromia, Ethiopia
               </p>
             </div>
           </div>
 
           {/* Card 2: Phone Numbers */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-amber-400/50 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
               <Phone size={22} />
             </div>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-bold block mb-1">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
                 Phone Numbers
               </span>
-              <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug">
+              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
                 +251 934 830 919
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
                 0934 830 919 (Direct &amp; Telegram)
               </p>
             </div>
           </div>
 
           {/* Card 3: Email Address */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-orange-400/50 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-4">
+          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
               <Mail size={22} />
             </div>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-orange-600 dark:text-orange-400 font-bold block mb-1">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
                 Email Address
               </span>
-              <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug truncate max-w-full">
+              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug truncate max-w-full">
                 lemmayezedlij21@gmail.com
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 truncate max-w-full">
+              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1 truncate max-w-full">
                 Lemma Amensisa Civil Engineering
               </p>
             </div>
           </div>
 
           {/* Card 4: Availability */}
-          <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-6 text-center border border-zinc-100 dark:border-zinc-800 transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-yellow-400/50 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-yellow-50 dark:bg-yellow-950/50 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4">
+          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
+            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
               <Clock size={22} />
             </div>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-yellow-600 dark:text-yellow-400 font-bold block mb-1">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
                 Availability
               </span>
-              <h4 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug">
+              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
                 Mon – Sat: 8:30 AM – 6:00 PM
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
                 Study &amp; Project Consultations
               </p>
             </div>
@@ -409,11 +409,11 @@ export const Contact = () => {
           <div className="lg:col-span-5 flex flex-col gap-6">
             
             {/* Social Media Card */}
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-7 border border-zinc-100 dark:border-zinc-800">
-              <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
+            <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-7 border border-zinc-200/80 dark:border-[#31394D]">
+              <h3 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight">
                 Follow Us
               </h3>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 mb-6">
+              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1 mb-6">
                 Stay updated with our latest civil engineering programs and news.
               </p>
 
@@ -423,7 +423,7 @@ export const Contact = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
                 >
                   <Facebook size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-600" />
                   <span className="text-[10px] font-bold">Facebook</span>
@@ -433,7 +433,7 @@ export const Contact = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
                 >
                   <Instagram size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-pink-600" />
                   <span className="text-[10px] font-bold">Instagram</span>
@@ -443,9 +443,9 @@ export const Contact = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
                 >
-                  <Linkedin size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-700" />
+                  <Linkedin size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-[#D3AE36]" />
                   <span className="text-[10px] font-bold">LinkedIn</span>
                 </a>
 
@@ -453,7 +453,7 @@ export const Contact = () => {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 hover:bg-amber-50 dark:hover:bg-amber-950/30 text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] transition-all border border-zinc-100 dark:border-zinc-800 hover:border-[#D3AE36]/40 text-center group"
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
                 >
                   <Youtube size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-red-600" />
                   <span className="text-[10px] font-bold">YouTube</span>
@@ -462,7 +462,7 @@ export const Contact = () => {
             </div>
 
             {/* Google Map Embed Card */}
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl overflow-hidden border border-zinc-100 dark:border-zinc-800 relative">
+            <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl overflow-hidden border border-zinc-200/80 dark:border-[#31394D] relative">
               
               {/* "Open in Maps" Link Overlay in Top-Left */}
               <div className="absolute top-3 left-3 z-10">
@@ -470,7 +470,7 @@ export const Contact = () => {
                   href="https://maps.google.com/?q=Adama+Science+and+Technology+University"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md text-zinc-800 dark:text-zinc-200 text-xs font-bold hover:text-[#D3AE36] shadow-sm border border-zinc-200 dark:border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-[#12151C]/95 backdrop-blur-md text-[#1E2025] dark:text-[#F8F9FA] text-xs font-bold hover:text-[#D3AE36] shadow-sm border border-zinc-200 dark:border-[#31394D] transition-colors"
                 >
                   <span>Open in Maps</span>
                   <ExternalLink size={12} />
@@ -499,13 +499,13 @@ export const Contact = () => {
           {/* RIGHT COLUMN: "WE'D LOVE TO HEAR FROM YOU" CONTACT FORM                 */}
           {/* ----------------------------------------------------------------------- */}
           <div ref={formRef} className="lg:col-span-7">
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-8 sm:p-10 border border-zinc-100 dark:border-zinc-800">
+            <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-8 sm:p-10 border border-zinc-200/80 dark:border-[#31394D]">
               
               {/* Form Heading & Subtitle */}
-              <h2 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight">
                 We'd Love to Hear From You
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 mb-8">
+              <p className="text-xs sm:text-sm text-zinc-500 dark:text-[#F8F9FA]/70 mt-1 mb-8">
                 Fill in the form below and our team will respond within 24 hours.
               </p>
 
@@ -527,7 +527,7 @@ export const Contact = () => {
                 
                 {/* Full Name */}
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5 font-bold">
+                  <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-[#F8F9FA]/90 mb-1.5 font-bold">
                     FULL NAME *
                   </label>
                   <input
@@ -537,14 +537,14 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Abebe Kebede"
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                    className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400"
                   />
                 </div>
 
                 {/* Email & Phone 2-Col Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5 font-bold">
+                    <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-[#F8F9FA]/90 mb-1.5 font-bold">
                       EMAIL *
                     </label>
                     <input
@@ -554,12 +554,12 @@ export const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="abebe@example.com"
-                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5 font-bold">
+                    <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-[#F8F9FA]/90 mb-1.5 font-bold">
                       PHONE *
                     </label>
                     <input
@@ -568,21 +568,21 @@ export const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="09XXXXXXXX"
-                      className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
 
                 {/* Project Specialization Selector */}
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5 font-bold">
+                  <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-[#F8F9FA]/90 mb-1.5 font-bold">
                     ENGINEERING SPECIALIZATION *
                   </label>
                   <select
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all"
+                    className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all"
                   >
                     <option value="Reinforced Concrete Structure">Reinforced Concrete Structure (EBCS EN 1992)</option>
                     <option value="Highway & Transportation">Highway & Transportation Corridor (ERA 2024)</option>
@@ -595,7 +595,7 @@ export const Contact = () => {
 
                 {/* Message Textarea */}
                 <div>
-                  <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5 font-bold">
+                  <label className="block text-[11px] uppercase tracking-wider text-zinc-700 dark:text-[#F8F9FA]/90 mb-1.5 font-bold">
                     MESSAGE *
                   </label>
                   <textarea
@@ -605,7 +605,7 @@ export const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us how we can help you with structural calculations, site supervision, or capstone collaboration..."
-                    className="w-full bg-[#F8FAFC] dark:bg-zinc-800/80 rounded-xl border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 p-4 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-zinc-800 focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
+                    className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] p-4 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
                   ></textarea>
                 </div>
 
@@ -613,10 +613,10 @@ export const Contact = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-[#D3AE36] via-[#C9A227] to-[#B89628] hover:brightness-110 active:scale-[0.99] text-zinc-950 py-3.5 px-6 rounded-xl font-black text-sm tracking-wide transition-all shadow-lg shadow-[#D3AE36]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
+                  className="w-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-[0.99] text-[#12151C] py-3.5 px-6 rounded-xl font-black text-sm tracking-wide transition-all shadow-lg shadow-[#D3AE36]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
                 >
                   <span>{loading ? 'Sending Message...' : 'Send Message'}</span>
-                  <Send size={15} className="text-zinc-950" />
+                  <Send size={15} className="text-[#12151C]" />
                 </button>
 
               </form>
@@ -631,10 +631,10 @@ export const Contact = () => {
       {/* 4. EXPANDABLE STRUCTURAL SCOPE ESTIMATOR (OPTIONAL POWER FEATURE)          */}
       {/* ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col items-center">
+        <div className="pt-8 border-t border-zinc-200 dark:border-[#31394D] flex flex-col items-center">
           <button
             onClick={() => setShowEstimator(!showEstimator)}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] shadow-sm transition-all"
           >
             <Compass size={14} className="text-[#D3AE36]" />
             <span>{showEstimator ? 'Hide Interactive Scope Estimator' : 'Need Instant Calculations? Open Interactive Scope Estimator'}</span>

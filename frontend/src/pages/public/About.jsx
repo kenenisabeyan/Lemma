@@ -279,7 +279,7 @@ export const About = () => {
                 </div>
 
                 {/* Portrait with Holographic Seal Watermark */}
-                <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-zinc-900 shadow-inner group">
+                <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-[#12151C] shadow-inner group border border-zinc-200/80 dark:border-[#31394D]">
                   <img
                     src={lemmaImg}
                     alt="Lemma Amensisa & ASTU 5th Year Civil Engineering Brothers"
@@ -288,7 +288,7 @@ export const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
                   {/* Stamp badge */}
-                  <div className="absolute top-4 right-4 bg-white/95 dark:bg-zinc-900/90 border border-[#D3AE36] px-3.5 py-1 text-[11px] font-mono font-bold text-[#D3AE36] uppercase tracking-wider rounded-full shadow-md backdrop-blur-md">
+                  <div className="absolute top-4 right-4 bg-white/95 dark:bg-[#12151C]/90 border border-[#D3AE36] px-3.5 py-1 text-[11px] font-mono font-bold text-[#D3AE36] uppercase tracking-wider rounded-full shadow-md backdrop-blur-md">
                     ASTU/SoCEA/2026
                   </div>
 
@@ -374,7 +374,7 @@ export const About = () => {
                   </div>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{soft.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500 group-hover:text-[#D3AE36] transition-colors">
+                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60 group-hover:text-[#D3AE36] transition-colors">
                   FEA Precision Verified
                 </div>
               </div>
@@ -386,7 +386,7 @@ export const About = () => {
         {/* 4. CAREER TIMELINE                                                      */}
         {/* ======================================================================= */}
         <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#31394D] px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
             <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             Professional Journey & Track Record
           </div>
@@ -394,10 +394,10 @@ export const About = () => {
             Academic & Field <span className="text-[#D3AE36]">Progression.</span>
           </h3>
 
-          <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-white/10 pl-8 ml-4">
+          <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-[#31394D] pl-8 ml-4">
             {CAREER_TIMELINE.map((item, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-zinc-900 border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
+                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
                 <div className="py-2 transition-all">
                   <span className="inline-block text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider mb-2">
                     {item.year}
@@ -473,7 +473,7 @@ export const About = () => {
                   Conducted on-site slump cone tests (80–120mm workability), concrete batching inspections, standard 150mm cube sampling, and 7 &amp; 28-day compressive crushing strength tests in the ASTU materials lab.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
                 Quality Assurance Verified
               </div>
             </div>
@@ -488,14 +488,14 @@ export const About = () => {
                     Site Supervision
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
+                <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Rebar Detailing &amp; Formwork Plumb
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
                   Supervised rebar diameters, lap splice lengths, cover block positioning, 135° seismic stirrup hooks, formwork vertical plumbness, and strut bracing before major slab and column pours.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
                 Pre-Pour Inspection Protocol
               </div>
             </div>
@@ -510,14 +510,14 @@ export const About = () => {
                     Field Surveying
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
+                <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Total Station &amp; Level Setting Out
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
                   Transferred permanent benchmarks, established building column gridlines, and staked out road centerline horizontal and vertical levels using digital Total Stations and optical AutoLevels.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
                 Sub-Millimeter Alignment
               </div>
             </div>
@@ -532,14 +532,14 @@ export const About = () => {
                     ERA Specifications
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-[#D3AE36] transition-colors">
+                <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-2 group-hover:text-[#D3AE36] transition-colors">
                   Earthworks &amp; Road Compaction
                 </h4>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
                   Monitored deep foundation excavations in expansive black cotton soils, lime-stabilized subgrade layers, and verified road sub-base compaction density using the field sand cone test method.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-zinc-800 text-[10px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
                 Field Density Test (FDT) Approved
               </div>
             </div>
@@ -572,7 +572,7 @@ export const About = () => {
               >
                 <div>
                   {/* Photo Thumbnail with Blueprint & Vignette */}
-                  <div className="relative aspect-[16/11] rounded-xl overflow-hidden mb-4 bg-zinc-900 border border-zinc-200/50 dark:border-white/10">
+                  <div className="relative aspect-[16/11] rounded-xl overflow-hidden mb-4 bg-[#12151C] border border-zinc-200/50 dark:border-[#31394D]">
                     <img
                       src={member.image}
                       alt={member.name}
