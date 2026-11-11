@@ -1065,37 +1065,37 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden md:grid-cols-2 py-6 gap-6"
+                  className="group grid overflow-hidden md:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300"
                 >
                   {/* Left Column Image */}
-                  <div className="relative overflow-hidden rounded-2xl min-h-[280px]">
+                  <div className="relative overflow-hidden rounded-2xl min-h-[280px] border border-[#31394D]/20 dark:border-[#31394D]/50 shadow-xs">
                     <img 
                       src={proj.imageUrl} 
                       alt={proj.title}
-                      className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] grayscale opacity-85 group-hover:grayscale-0"
+                      className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
                     />
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="rounded-full bg-black/60 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className="rounded-full bg-black/70 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider border border-[#D3AE36]/30">
                         {proj.category}
                       </span>
                     </div>
-                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-white bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md font-semibold">
+                    <div className="absolute bottom-3 right-3 text-[9px] font-mono text-white bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full font-semibold border border-white/10">
                       ASTU CAPSTONE · {proj.year}
                     </div>
                   </div>
 
                   {/* Right Column Content */}
-                  <div className="flex flex-col gap-4 py-2 justify-between">
+                  <div className="flex flex-col gap-4 py-1 justify-between">
                     <div>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75 text-xs uppercase tracking-[0.2em] mb-1 font-semibold">
-                        <span className="text-[#D3AE36] flex items-center gap-1">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75 text-xs uppercase tracking-[0.2em] mb-1.5 font-semibold">
+                        <span className="text-[#D3AE36] flex items-center gap-1 font-bold">
                           <MapPin size={12} /> {proj.location}
                         </span>
-                        <span aria-hidden="true">·</span>
+                        <span aria-hidden="true" className="text-[#31394D]">·</span>
                         <span>{proj.year}</span>
                       </div>
                       
-                      <h3 className="font-semibold text-xl md:text-2xl text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug dark:text-[#F8F9FA]">
+                      <h3 className="font-bold text-xl md:text-2xl text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-2.5 leading-snug dark:text-[#F8F9FA]">
                         {proj.title}
                       </h3>
                       
@@ -1103,23 +1103,23 @@ export const Home = () => {
                         {proj.description}
                       </p>
 
-                      {/* Structured Technical Specs Box */}
-                      <div className="p-3.5 rounded-2xl bg-white/70 dark:bg-[#12151C]/70 border border-[#31394D]/25 dark:border-[#31394D] space-y-2 mb-4 text-xs font-mono">
+                      {/* Structured Technical Specs DIV Box */}
+                      <div className="p-3.5 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-2 mb-4 text-xs font-mono">
                         <div className="flex items-start gap-2">
-                          <span className="text-[#D3AE36] font-bold text-[11px] shrink-0 uppercase tracking-wider">System:</span>
+                          <span className="text-[#D3AE36] font-bold text-[11px] shrink-0 uppercase tracking-wider">✦ System:</span>
                           <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs font-medium font-sans">{proj.structuralSystem}</span>
                         </div>
                         <div className="flex items-start gap-2">
-                          <span className="text-[#D3AE36] font-bold text-[11px] shrink-0 uppercase tracking-wider">Result:</span>
+                          <span className="text-[#D3AE36] font-bold text-[11px] shrink-0 uppercase tracking-wider">✦ Result:</span>
                           <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs font-medium font-sans">{proj.result}</span>
                         </div>
                       </div>
 
-                      <div className="flex flex-wrap gap-2 pt-1">
+                      <div className="flex flex-wrap gap-2 pt-0.5">
                         {softwareList.slice(0, 4).map((soft) => (
                           <span 
                             key={soft}
-                            className="px-2.5 py-1 rounded-md bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 font-mono text-xs text-[#D3AE36] font-semibold"
+                            className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-xs text-[#D3AE36] font-semibold"
                           >
                             #{soft}
                           </span>
@@ -1127,10 +1127,10 @@ export const Home = () => {
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-4 flex items-center justify-between">
+                    <div className="mt-4 pt-4 flex items-center justify-between border-t border-[#31394D]/15 dark:border-[#31394D]/50">
                       <button
                         onClick={() => setSelectedCaseStudy(proj)}
-                        className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+                        className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm active:scale-95 cursor-pointer"
                       >
                         Explore Case Study <ArrowUpRight size={13} />
                       </button>
@@ -1282,20 +1282,25 @@ export const Home = () => {
             </div>
           )}
 
-          {/* Consultation Prompt / Trust Banner */}
-          <div className="py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          {/* Consultation Prompt / Trust Banner Architectural DIV Card */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center justify-between gap-6 my-4">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 text-[#D3AE36] flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center shrink-0">
                 <ShieldCheck size={28} />
               </div>
               <div>
-                <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
-                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 mt-0.5">All designs adhere to Ethiopian Building Code Standards (EBCS) and ERA Manuals.</p>
+                <div className="flex items-center gap-2 mb-1">
+                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30">
+                    VERIFIED
+                  </span>
+                </div>
+                <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80">All designs adhere to Ethiopian Building Code Standards (EBCS) and ERA Manuals.</p>
               </div>
             </div>
             <Link
               to="/contact"
-              className="rounded-full bg-[#D3AE36] text-[#12151C] px-6 py-3 text-xs font-extrabold tracking-widest uppercase hover:bg-[#C29F2F] transition-all shrink-0 inline-flex items-center gap-2"
+              className="rounded-full bg-[#D3AE36] text-[#12151C] px-6 py-3.5 text-xs font-mono font-extrabold tracking-widest uppercase hover:bg-[#C29F2F] transition-all shrink-0 inline-flex items-center gap-2 shadow-sm active:scale-95"
             >
               Connect With Us <ArrowUpRight size={14} />
             </Link>
@@ -1414,17 +1419,26 @@ export const Home = () => {
             </div>
           </div>
 
-          {/* Full Consultation Trigger Banner */}
-          <div className="py-10 text-center flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div className="text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#1E2025] mb-1.5 dark:text-[#F8F9FA]">Interested in Collaborating on Civil Engineering Projects?</h3>
-              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80">Submit project inquiries, graduate opportunities, or academic research collaborations.</p>
+          {/* Full Consultation Trigger Banner Architectural DIV Card */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="text-left space-y-2 max-w-xl">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+                <span className="text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider">Direct Academic &amp; Industry Inquiry</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-tight">
+                Interested in Collaborating on Civil Engineering Projects?
+              </h3>
+              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
+                Submit project inquiries, graduate opportunities, structural modeling assessments, or academic research collaborations.
+              </p>
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 active:scale-95 cursor-pointer"
+              className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 active:scale-95 cursor-pointer shadow-md shadow-[#D3AE36]/20"
             >
-              Connect With Us <ArrowUpRight size={14} />
+              <span>Connect With Us</span>
+              <ArrowUpRight size={14} />
             </button>
           </div>
 

@@ -138,23 +138,33 @@ export const InsightsPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <div className="space-y-2 max-w-xl">
-                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
+                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
+                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                      ASTU SoCEA Student Technical Archive
+                    </span>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
+                      Open Access
+                    </span>
+                  </div>
+
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs sm:text-sm leading-relaxed text-left font-medium">
                     Applied engineering research, laboratory soil testing notes, and code evaluations authored by <strong className="text-[#D3AE36] font-bold">ASTU 5th-Year Civil Engineering Brothers</strong>.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Seismic:</strong> EBCS EN 1998 Zone 4
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Seismic:</strong> EBCS EN 1998 Zone 4
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Soils:</strong> Lime Stabilization (CBR)
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Soils:</strong> Lime Stabilization (CBR)
                       </span>
                     </div>
                   </div>
@@ -416,11 +426,15 @@ export const InsightsPage = () => {
         )}
 
         {/* ======================================================================= */}
-        {/* 4. BOTTOM CONSULTATION BANNER                                           */}
+        {/* 4. BOTTOM CONSULTATION BANNER ARCHITECTURAL DIV CARD                    */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-[#31394D]/25 dark:border-[#31394D] flex flex-col sm:flex-row justify-between items-center gap-8">
-          <div className="text-left max-w-2xl">
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
+          <div className="text-left max-w-2xl space-y-2">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for Technical Research &amp; Advisory</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
               Applying <span className="text-[#D3AE36]">Advanced Engineering Research</span> to Real Infrastructure
             </h3>
             <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
@@ -429,9 +443,10 @@ export const InsightsPage = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95 border border-[#D3AE36]"
           >
-            Connect With Our Team <ArrowUpRight size={15} />
+            <span>Connect With Our Team</span>
+            <ArrowUpRight size={15} />
           </button>
         </div>
 

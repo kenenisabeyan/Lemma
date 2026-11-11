@@ -143,30 +143,42 @@ export const Contact = () => {
                 </h1>
               </motion.div>
 
-              {/* Narrative Content & Feature Badges */}
+              {/* Narrative Content with Architectural DIV Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-sm sm:text-base leading-relaxed max-w-xl">
-                  Connect directly with <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU 5th-Year Civil Engineering Team</strong>. Available for graduate roles, B.Sc. capstone collaborations, and structural site consultations across Ethiopia.
-                </p>
+                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
+                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                      ASTU SoCEA Direct Channel
+                    </span>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
+                      24h Response
+                    </span>
+                  </div>
 
-                {/* Toolkit Checkmark Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
-                  <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">Direct Mobile &amp; Telegram</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">24-Hour Response Time</span>
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-xs sm:text-sm leading-relaxed text-left">
+                    Connect directly with <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU 5th-Year Civil Engineering Team</strong>. Available for graduate roles, B.Sc. capstone collaborations, and structural site consultations across Ethiopia.
+                  </p>
+
+                  {/* Toolkit Checkmark Badges */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Codes:</strong> EBCS EN &amp; ERA Manuals
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Location:</strong> ASTU Adama Campus
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>

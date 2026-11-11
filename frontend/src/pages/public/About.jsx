@@ -400,19 +400,20 @@ export const About = () => {
             {SOFTWARE_STACK.map((soft) => (
               <div 
                 key={soft.name} 
-                className="group py-4 transition-all duration-300 flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-mono group-hover:text-[#D3AE36] transition-colors">{soft.name}</h4>
-                    <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase">
+                    <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono group-hover:text-[#D3AE36] transition-colors">{soft.name}</h4>
+                    <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase px-2 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30">
                       {soft.level}
                     </span>
                   </div>
-                  <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{soft.desc}</p>
+                  <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">{soft.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60 group-hover:text-[#D3AE36] transition-colors">
-                  FEA Precision Verified
+                <div className="mt-2 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 group-hover:text-[#D3AE36] transition-colors flex items-center justify-between">
+                  <span>FEA Precision Verified</span>
+                  <CheckCircle2 size={12} className="text-[#D3AE36]" />
                 </div>
               </div>
             ))}
@@ -431,17 +432,22 @@ export const About = () => {
             Academic & Field <span className="text-[#D3AE36]">Progression.</span>
           </h3>
 
-          <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-[#31394D] pl-8 ml-4">
+          <div className="flex flex-col gap-6 relative border-l-2 border-[#D3AE36]/40 pl-6 sm:pl-8 ml-3 sm:ml-4">
             {CAREER_TIMELINE.map((item, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
-                <div className="py-2 transition-all">
-                  <span className="inline-block text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider mb-2">
-                    {item.year}
-                  </span>
-                  <h4 className="text-xl font-black text-zinc-900 dark:text-zinc-100 mb-1">{item.role}</h4>
-                  <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3">{item.company}</p>
-                  <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">{item.description}</p>
+                <div className="absolute -left-[31px] sm:-left-[39px] top-6 w-4 h-4 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
+                <div className="p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md hover:border-[#D3AE36]/60 transition-all space-y-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30">
+                      {item.year}
+                    </span>
+                    <span className="text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-widest font-semibold">
+                      Milestone 0{index + 1}
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-bold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">{item.role}</h4>
+                  <p className="text-xs font-semibold text-[#D3AE36] uppercase tracking-wider">{item.company}</p>
+                  <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed pt-1">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -462,13 +468,16 @@ export const About = () => {
 
           <div className="grid sm:grid-cols-2 gap-6">
             {CERTIFICATIONS.map((cert, index) => (
-              <div key={index} className="py-4 flex items-start gap-4 transition-all group">
-                <div className="text-[#D3AE36] shrink-0 pt-1">
-                  <Award size={24} />
+              <div 
+                key={index} 
+                className="p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md hover:border-[#D3AE36]/60 transition-all flex items-start gap-4 group"
+              >
+                <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0 group-hover:scale-110 transition-transform">
+                  <Award size={22} />
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-1 group-hover:text-[#D3AE36] transition-colors">{cert.title}</h4>
-                  <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{cert.body}</p>
+                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-1 group-hover:text-[#D3AE36] transition-colors leading-snug">{cert.title}</h4>
+                  <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">{cert.body}</p>
                 </div>
               </div>
             ))}
@@ -733,18 +742,18 @@ export const About = () => {
         </div>
 
         {/* ======================================================================= */}
-        {/* 8. BOTTOM CONSULTATION BANNER                                           */}
+        {/* 8. BOTTOM CONSULTATION BANNER ARCHITECTURAL DIV CARD                    */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="text-left max-w-2xl">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] mb-2 font-bold">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
+          <div className="text-left max-w-2xl space-y-2">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Graduate Engagements & Capstone Defense</span>
+              <span>Available for Graduate Engagements &amp; Capstone Defense</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-2">
+            <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
               Have an Infrastructure Project or Graduate Role in Mind?
             </h3>
-            <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
               From structural RC framing analysis to highway alignments and geotechnical soil testing — let's connect and build Ethiopia's future together.
             </p>
           </div>

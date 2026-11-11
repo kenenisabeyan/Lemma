@@ -145,18 +145,43 @@ export const ServicesPage = () => {
                 </h1>
               </motion.div>
 
-              {/* Narrative Content */}
+              {/* Narrative Content with Architectural DIV Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full space-y-4"
+                className="w-full space-y-3.5"
               >
-                <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base leading-relaxed text-left drop-shadow-xs">
-                  ASTU 5th-year civil engineering team delivering structural, highway, and geotechnical solutions compliant with EBCS and ERA standards.
-                </p>
+                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3 max-w-xl">
+                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                      ASTU SoCEA Specialization Suite
+                    </span>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 rounded-full">
+                      Class of 2026
+                    </span>
+                  </div>
 
+                  <p className="text-[#1E2025] dark:text-[#F8F9FA] font-medium text-xs sm:text-sm leading-relaxed text-left">
+                    ASTU 5th-year civil engineering team delivering structural, highway, and geotechnical solutions compliant with EBCS and ERA standards.
+                  </p>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">EBCS EN:</strong> RC &amp; Seismic FEA
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">ERA 2024:</strong> Geometry &amp; Mass-Haul
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
 
               {/* Signature Action Buttons (Exact Match to Home) */}
@@ -380,12 +405,18 @@ export const ServicesPage = () => {
 
 
         {/* ======================================================================= */}
-        {/* 5. BOTTOM CONSULTATION BANNER                                           */}
+        {/* 5. BOTTOM CONSULTATION BANNER ARCHITECTURAL DIV CARD                    */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
-          <div className="text-left max-w-2xl">
-            <h3 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Require Civil & Structural Engineering Collaboration?</h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
+          <div className="text-left max-w-2xl space-y-2">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for Technical Consultations &amp; Capstone Defense</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
+              Require Civil &amp; Structural Engineering Collaboration?
+            </h3>
+            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
               Let's discuss reinforced concrete analysis, ERA highway alignments, expansive soil foundation design, or capstone collaborations with our ASTU 5th-year student team.
             </p>
           </div>

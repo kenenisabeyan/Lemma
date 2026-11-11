@@ -511,23 +511,27 @@ export const CaseStudyPage = () => {
           </div>
         )}
 
-        {/* Bottom Consultation CTA */}
-        <div className="py-12 text-center relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-3">
+        {/* Bottom Consultation CTA Architectural DIV Card */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
+          <div className="text-left max-w-2xl space-y-2">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for Technical Consultations &amp; Capstone Defense</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
               Facing an <span className="text-[#D3AE36]">Ambitious</span> Civil or Structural Engineering Challenge?
             </h3>
-            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 mb-6 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
               Connect with our ASTU 5th-year graduating civil engineering team to review technical drawings, EBCS code compliance, or explore capstone graduate collaborations.
             </p>
-            <button
-              onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md inline-flex items-center gap-2 cursor-pointer"
-            >
-              <span>Connect With Our Team</span>
-              <ArrowUpRight size={14} />
-            </button>
           </div>
+          <button
+            onClick={() => navigate('/contact')}
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36] active:scale-95"
+          >
+            <span>Connect With Our Team</span>
+            <ArrowUpRight size={15} />
+          </button>
         </div>
 
       </div>

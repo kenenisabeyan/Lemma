@@ -162,23 +162,33 @@ export const Portfolio = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <div className="space-y-2 max-w-xl">
-                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
+                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
+                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                      ASTU SoCEA Verified Capstone Archive
+                    </span>
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
+                      25+ Projects
+                    </span>
+                  </div>
+
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs sm:text-sm leading-relaxed text-left font-medium">
                     Curated portfolio of 25+ capstone designs, field surveys, and infrastructure projects by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU Civil Engineering Brothers</strong>. Precision mechanics compliant with EBCS EN and ERA manuals.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">RC Towers:</strong> B+G+10 ETABS Dynamic
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">RC Towers:</strong> B+G+10 ETABS
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Highways:</strong> Civil 3D &amp; ERA 2024
+                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Highways:</strong> Civil 3D &amp; ERA
                       </span>
                     </div>
                   </div>
@@ -439,18 +449,18 @@ export const Portfolio = () => {
         </div>
 
         {/* ======================================================================= */}
-        {/* 5. HIGH-STAKES CONSULTATION BANNER                                      */}
+        {/* 5. HIGH-STAKES CONSULTATION BANNER ARCHITECTURAL DIV CARD               */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-[#31394D]/25 dark:border-[#31394D] flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="text-left max-w-2xl">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] mb-2 font-bold">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
+          <div className="text-left max-w-2xl space-y-2">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Available for Graduate Recruitment &amp; Capstone Collaborations</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-3">
+            <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
               Interested in Capstone Research or Engineering Recruitment?
             </h3>
-            <p className="text-xs md:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
               Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
             </p>
           </div>
