@@ -8,7 +8,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
   const { isDark } = useTheme();
 
   // Active engineering process visualization mode
-  const [activeMode] = useState('all');
+  const [activeMode, setActiveMode] = useState('all');
   const activeModeRef = useRef(activeMode);
   activeModeRef.current = activeMode;
 
@@ -187,9 +187,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
         }
         const tendonGeo = new THREE.BufferGeometry().setFromPoints(tendonPoints);
         const tendonMat = new THREE.LineBasicMaterial({ 
-          color: isDark ? 0x38BDF8 : accentWine, 
+          color: champagneGold, 
           transparent: true, 
-          opacity: isDark ? 0.55 : 0.32 
+          opacity: isDark ? 0.6 : 0.35 
         });
         towerGroup.add(new THREE.Line(tendonGeo, tendonMat));
       }
@@ -443,7 +443,7 @@ export const Hero3DCanvas = ({ className = '' }) => {
     const scanWidth = floorWidth + 3.0;
     const scanPlaneGeo = new THREE.PlaneGeometry(scanWidth, scanWidth);
     const scanPlaneMat = new THREE.MeshBasicMaterial({
-      color: isDark ? 0x38BDF8 : accentWine,
+      color: champagneGold,
       transparent: true,
       opacity: isDark ? 0.08 : 0.04,
       side: THREE.DoubleSide
@@ -455,9 +455,9 @@ export const Hero3DCanvas = ({ className = '' }) => {
     // High-intensity scanner perimeter laser ring
     const scanRingGeo = new THREE.EdgesGeometry(scanPlaneGeo);
     const scanRingMat = new THREE.LineBasicMaterial({
-      color: isDark ? 0x38BDF8 : accentWine,
+      color: champagneGold,
       transparent: true,
-      opacity: isDark ? 0.4 : 0.22,
+      opacity: isDark ? 0.45 : 0.25,
       linewidth: 1.5
     });
     const scanRing = new THREE.LineSegments(scanRingGeo, scanRingMat);
@@ -685,8 +685,48 @@ export const Hero3DCanvas = ({ className = '' }) => {
       {/* Three.js Canvas Mount */}
       <div 
         ref={containerRef} 
-        className="w-full h-full cursor-grab active:cursor-grabbing"
+        className="w-full h-full cursor-grab active:cursor-grabbing pointer-events-auto"
       />
+
+      {/* Floating Interactive CAD Simulation HUD Console */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 pointer-events-auto hidden md:flex flex-col items-center gap-1.5">
+        <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-[#12151C]/90 backdrop-blur-xl border border-[#31394D] shadow-[0_12px_30px_rgba(0,0,0,0.6)]">
+          {[
+            { id: 'all', label: 'BIM 3D Model', icon: Layers },
+            { id: 'fea', label: 'FEA Stress Nodes', icon: Cpu },
+            { id: 'loadpath', label: 'Newton Vectors', icon: Zap },
+            { id: 'scan', label: 'LiDAR Telemetry', icon: Eye }
+          ].map((mode) => {
+            const Icon = mode.icon;
+            const isActive = activeMode === mode.id;
+            return (
+              <button
+                key={mode.id}
+                onClick={() => setActiveMode(mode.id)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[10px] font-mono font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  isActive
+                    ? 'bg-[#D3AE36] text-[#12151C] shadow-xs'
+                    : 'text-[#F8F9FA]/70 hover:text-[#D3AE36] hover:bg-[#232936]/60'
+                }`}
+              >
+                <Icon size={12} className={isActive ? 'text-[#12151C]' : 'text-[#D3AE36]'} />
+                <span>{mode.label}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="flex items-center gap-3 text-[9px] font-mono text-[#F8F9FA]/70 bg-[#12151C]/70 backdrop-blur-md px-3 py-0.5 rounded-full border border-[#31394D]/50 shadow-sm">
+          <span className="flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36] animate-pulse"></span>
+            ASTU SOCEA CAPSTONE TOWER
+          </span>
+          <span>·</span>
+          <span>ELEV +42.0M</span>
+          <span>·</span>
+          <span className="text-[#D3AE36]">DRAG 3D MODEL TO ORBIT</span>
+        </div>
+      </div>
     </div>
   );
 };

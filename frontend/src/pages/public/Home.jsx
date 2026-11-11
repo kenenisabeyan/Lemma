@@ -348,7 +348,7 @@ export const Home = () => {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="space-y-1 sm:space-y-1.5 pointer-events-auto select-text"
               >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
                   <span className="block select-text">
                     {settings.heroHeadlineLine1 || 'Engineering Ethiopia.'}
                   </span>
@@ -366,13 +366,13 @@ export const Home = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="w-full space-y-2.5 pointer-events-auto select-text"
               >
-                <p className="text-zinc-700 dark:text-zinc-300 font-medium text-sm sm:text-base leading-relaxed text-left select-text max-w-xl">
+                <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-medium text-sm sm:text-base leading-relaxed text-left select-text max-w-xl">
                   {settings.heroBio || 'Final-year Civil Engineering student team at Adama Science and Technology University (ASTU). Graduating brothers designing resilient reinforced concrete buildings, sustainable highway corridors, and innovative graduation capstone projects.'}
                 </p>
 
                 {/* Rotating Focus Indicator (Clean, No Card Background) */}
                 <div className="flex items-center gap-2 text-xs font-mono select-text pt-0.5">
-                  <span className="font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
+                  <span className="font-semibold text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
                   <span className="font-bold text-[#D3AE36] underline decoration-[#D3AE36] decoration-2 underline-offset-4 select-text">
                     {rotatingDisciplines[disciplineIndex]}
                   </span>
@@ -386,19 +386,20 @@ export const Home = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="flex flex-row items-center justify-start gap-3 sm:gap-4 pt-1 pointer-events-auto select-text"
               >
-                {/* Primary Filled Pill Button */}
+                {/* Primary Filled Pill Button with Specular Sheen */}
                 <button
                   onClick={() => navigate('/projects')}
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 group cursor-pointer shrink-0 whitespace-nowrap"
+                  className="relative overflow-hidden rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 group cursor-pointer shrink-0 whitespace-nowrap shadow-md hover:shadow-lg"
                 >
-                  <span>EXPLORE PROJECTS</span>
-                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0" />
+                  <span className="relative z-10">EXPLORE PROJECTS</span>
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0 relative z-10" />
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform" />
                 </button>
 
                 {/* Secondary Frosted Pill Button */}
                 <button
                   onClick={() => setIsVideoModalOpen(true)}
-                  className="rounded-full text-zinc-900 dark:text-zinc-100 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap"
+                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap border border-transparent hover:border-[#31394D]/30 dark:hover:border-[#31394D]"
                 >
                   <span>WATCH CAPSTONE SHOWREEL</span>
                   <Play size={12} className="fill-[#D3AE36] text-[#D3AE36] shrink-0" />
@@ -413,16 +414,16 @@ export const Home = () => {
                 className="grid grid-cols-3 gap-4 pt-1 w-full max-w-lg pointer-events-auto select-text"
               >
                 <div className="py-1 text-left select-text">
-                  <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono select-text">{settings.yearsExp || '5th Year'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Academic Level</span>
+                  <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono select-text">{settings.yearsExp || '5th Year'}</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Academic Level</span>
                 </div>
                 <div className="py-1 text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono select-text">{settings.projectsCount || '25+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Capstone & Projects</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Capstone & Projects</span>
                 </div>
                 <div className="py-1 text-left select-text">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono select-text">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium select-text">Defense Readiness</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Defense Readiness</span>
                 </div>
               </motion.div>
 
@@ -629,7 +630,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ASTU Civil Engineering Capabilities & Rigor
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Analyze. Calculate. <span className="text-[#D3AE36]">Deliver.</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base max-w-xl mx-auto leading-relaxed">
@@ -641,11 +642,11 @@ export const Home = () => {
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
             <div className="group relative overflow-hidden py-6 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
-              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#FEF9E7]/60 text-[#D3AE36] group-hover:scale-105 transition-transform mb-6">
+              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-105 transition-transform mb-6">
                 <Building2 size={36} className="text-[#D3AE36] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg dark:text-[#F8F9FA]">Multi-Story RC Structural Design</h3>
+                <h3 className="font-semibold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Multi-Story RC Structural Design</h3>
                 <p className="text-[#1E2025] text-xs leading-relaxed">
                   Dual core shear walls, moment frames, and ductility detailing compliant with EBCS EN 1992 & Eurocode 2.
                 </p>
@@ -657,11 +658,11 @@ export const Home = () => {
 
             {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
             <div className="group relative overflow-hidden py-6 md:col-span-2 transition-all duration-300 flex flex-col justify-between">
-              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#FEF9E7]/60 text-[#D3AE36] group-hover:scale-105 transition-transform mb-6">
+              <div className="relative mx-auto flex size-20 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-105 transition-transform mb-6">
                 <Activity size={36} className="text-[#D3AE36] relative z-20" />
               </div>
               <div className="relative mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg dark:text-[#F8F9FA]">Highway Alignment & ERA Standards</h3>
+                <h3 className="font-semibold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Highway Alignment & ERA Standards</h3>
                 <p className="text-[#1E2025] text-xs leading-relaxed">
                   Route geometric layout, vertical profiling, and earthwork cut-and-fill optimization per ERA manuals.
                 </p>
@@ -678,7 +679,7 @@ export const Home = () => {
                   <div className="flex size-8 items-center justify-center rounded-full text-[#D3AE36]">
                     <ShieldCheck size={18} />
                   </div>
-                  <div className="font-mono text-xs font-bold text-zinc-900 dark:text-[#F8F9FA]">Practical Site Experience</div>
+                  <div className="font-mono text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA]">Practical Site Experience</div>
                 </div>
                 {/* Sparkline SVG Curve */}
                 <svg fill="none" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" className="translate-x-[5%] -rotate-1 scale-125 opacity-80 group-hover:opacity-100 transition-opacity my-2">
@@ -693,7 +694,7 @@ export const Home = () => {
                 </svg>
               </div>
               <div className="relative z-10 mt-2 space-y-1.5 text-center">
-                <h3 className="font-semibold text-zinc-900 text-lg dark:text-[#F8F9FA]">Site Supervision &amp; Quality Control</h3>
+                <h3 className="font-semibold text-[#1E2025] text-lg dark:text-[#F8F9FA]">Site Supervision &amp; Quality Control</h3>
                 <p className="text-[#1E2025] text-xs leading-relaxed">
                   Slump cone testing, rebar spacing inspection, Total Station surveying, and foundation excavation monitoring during field internships.
                 </p>
@@ -711,18 +712,18 @@ export const Home = () => {
                     <Ruler size={22} className="text-[#D3AE36]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-semibold text-zinc-900 text-xl dark:text-[#F8F9FA]">Bridging Engineering Calculations with Real Site Construction</h3>
+                    <h3 className="font-semibold text-[#1E2025] text-xl dark:text-[#F8F9FA]">Bridging Engineering Calculations with Real Site Construction</h3>
                     <p className="text-[#1E2025] text-xs sm:text-sm leading-relaxed max-w-md">
                       From computer-aided design in ETABS, SAP2000, and Civil 3D to on-site concrete batching and rebar inspection, we ensure structural safety adheres to Ethiopian standards every step of the way.
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-3 pt-2">
                     <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">EBCS EN 1992</span>
-                    <span className="text-zinc-300">·</span>
+                    <span className="text-[#31394D]">·</span>
                     <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">ERA Standards</span>
-                    <span className="text-zinc-300">·</span>
+                    <span className="text-[#31394D]">·</span>
                     <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">OCC Site Internship</span>
-                    <span className="text-zinc-300">·</span>
+                    <span className="text-[#31394D]">·</span>
                     <span className="font-mono text-xs text-[#1E2025] uppercase font-semibold">Quality Assurance</span>
                   </div>
                 </div>
@@ -758,7 +759,7 @@ export const Home = () => {
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Live Dynamic Mechanics Simulation
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-4 dark:text-[#F8F9FA]">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Real-Time Structural & Seismic <span className="text-[#D3AE36]">Load Path.</span>
             </h2>
             <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
@@ -780,7 +781,7 @@ export const Home = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative">
                 <div className="relative rounded-2xl group transition-all duration-300">
-                  <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-zinc-950 border border-zinc-200/80 dark:border-[#232936] shadow-xl">
+                  <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] shadow-xl">
                     <img
                       src={brotherhoodMembers[activeBrotherIndex].img}
                       alt={brotherhoodMembers[activeBrotherIndex].name}
@@ -804,7 +805,7 @@ export const Home = () => {
                 </div>
 
                 {/* Brotherhood Thumbnail Switcher Strip */}
-                <div className="mt-4 pt-3 border-t border-zinc-200/80 dark:border-[#232936] flex items-center justify-between gap-2 overflow-x-auto pb-1 scrollbar-none">
+                <div className="mt-4 pt-3 border-t border-[#31394D]/30 dark:border-[#31394D] flex items-center justify-between gap-2 overflow-x-auto pb-1 scrollbar-none">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono text-[#D3AE36] uppercase font-bold shrink-0">
                     <Users size={13} />
                     <span>Cohort:</span>
@@ -818,7 +819,7 @@ export const Home = () => {
                         className={`relative w-8 h-8 rounded-lg overflow-hidden border transition-all cursor-pointer ${
                           activeBrotherIndex === idx
                             ? 'border-[#D3AE36] ring-2 ring-[#D3AE36]/50 scale-110 shadow-md'
-                            : 'border-zinc-300 dark:border-[#31394D] opacity-60 hover:opacity-100 hover:border-[#D3AE36]'
+                            : 'border-[#31394D]/40 dark:border-[#31394D] opacity-60 hover:opacity-100 hover:border-[#D3AE36]'
                         }`}
                       >
                         <img src={b.img} alt={b.name} className="w-full h-full object-cover" />
@@ -835,7 +836,7 @@ export const Home = () => {
                 Academic Journey & Engineering Brotherhood
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Civil Engineering Built on <span className="text-[#D3AE36]">Practical Construction &amp; Rigor.</span>
               </h2>
 
@@ -851,16 +852,16 @@ export const Home = () => {
                 <div className="flex items-center gap-3 py-3">
                   <GraduationCap className="text-[#D3AE36] w-6 h-6 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block dark:text-[#F8F9FA]">B.Sc. Civil Engineering (5th Year)</span>
-                    <span className="text-[10px] text-[#1E2025]">Adama Science &amp; Technology University (ASTU)</span>
+                    <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">B.Sc. Civil Engineering (5th Year)</span>
+                    <span className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">Adama Science &amp; Technology University (ASTU)</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 py-3">
                   <HardHat className="text-[#D3AE36] w-6 h-6 shrink-0" />
                   <div>
-                    <span className="text-xs text-zinc-900 font-bold block dark:text-[#F8F9FA]">Practical Construction &amp; Internship</span>
-                    <span className="text-[10px] text-[#1E2025]">OCC Site Supervision &amp; ASTU Survey Camps</span>
+                    <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">Practical Construction &amp; Internship</span>
+                    <span className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">OCC Site Supervision &amp; ASTU Survey Camps</span>
                   </div>
                 </div>
               </div>
@@ -874,7 +875,7 @@ export const Home = () => {
                 </Link>
                 <Link
                   to="/about#brotherhood"
-                  className="rounded-full bg-[#FFFFFF] dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:border-[#D3AE36] border border-zinc-200/90 dark:border-[#31394D] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
+                  className="rounded-full bg-[#FFFFFF] dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:border-[#D3AE36] border border-[#31394D]/30 dark:border-[#31394D] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
                 >
                   <Users size={14} className="text-[#D3AE36]" />
                   <span>Meet Our Brotherhood Cohort</span>
@@ -903,14 +904,14 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 Core Capabilities & Practice
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Core Civil Engineering <span className="text-[#D3AE36]">Specializations & Capstones.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
                 Comprehensive structural analysis, highway geometric modeling, and geotechnical evaluations developed at ASTU.
               </p>
             </div>
-            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-zinc-900 transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
+            <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-[#1E2025] transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
               Explore All Disciplines <ChevronRight size={16} />
             </Link>
           </div>
@@ -922,7 +923,7 @@ export const Home = () => {
                   <div className="w-12 h-12 text-[#D3AE36] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Building2 size={28} />
                   </div>
-                  <h4 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
+                  <h4 className="text-xl font-bold text-[#1E2025] mb-3 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
                   <p className="text-[#1E2025] text-sm leading-relaxed mb-6">{srv.summary || srv.description}</p>
                 </div>
                 <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] group-hover:text-[#D3AE36] flex items-center gap-1.5 pt-4">
@@ -957,7 +958,7 @@ export const Home = () => {
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 ASTU Capstone & Field Practice
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight dark:text-[#F8F9FA]">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Featured Civil Engineering <span className="text-[#D3AE36]">Capstones.</span>
               </h2>
               <p className="text-[#1E2025] text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
@@ -1011,7 +1012,7 @@ export const Home = () => {
                         <span>{proj.year}</span>
                       </div>
                       
-                      <h3 className="font-semibold text-xl md:text-2xl text-zinc-900 group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug dark:text-[#F8F9FA]">
+                      <h3 className="font-semibold text-xl md:text-2xl text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug dark:text-[#F8F9FA]">
                         {proj.title}
                       </h3>
                       
@@ -1022,11 +1023,11 @@ export const Home = () => {
                       <ul className="space-y-1.5 text-[#1E2025] text-xs mb-4">
                         <li className="flex gap-2">
                           <span aria-hidden="true" className="text-[#D3AE36] font-bold">—</span>
-                          <span><strong className="text-zinc-900 dark:text-[#F8F9FA]">System:</strong> {proj.structuralSystem}</span>
+                          <span><strong className="text-[#1E2025] dark:text-[#F8F9FA]">System:</strong> {proj.structuralSystem}</span>
                         </li>
                         <li className="flex gap-2">
                           <span aria-hidden="true" className="text-[#D3AE36] font-bold">—</span>
-                          <span><strong className="text-zinc-900 dark:text-[#F8F9FA]">Result:</strong> {proj.result}</span>
+                          <span><strong className="text-[#1E2025] dark:text-[#F8F9FA]">Result:</strong> {proj.result}</span>
                         </li>
                       </ul>
 
