@@ -178,23 +178,25 @@ Phone: +251 934 830 919
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Download our 5th-year capstone checklists, Ethiopian code sheets, and road design templates, or test our interactive beam calculator.
-                </p>
+                <div className="space-y-2 max-w-xl">
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
+                    Verified open engineering repository by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort</strong>. Capstone audit checklists, EBCS code calculation templates, and real-time interactive structural mechanics solvers.
+                  </p>
 
-                {/* Toolkit Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">EBCS EN &amp; ERA Standards</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">2 Interactive FEA Solvers</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">Instant Capstone Downloads</span>
+                  {/* Micro-Bullet Highlights */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">EBCS EN &amp; ERA:</strong> Full Code Compliance
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Live Solvers:</strong> Shear, Moment &amp; BBS
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -335,7 +337,7 @@ Phone: +251 934 830 919
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="resources-feed" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-[#31394D] pb-6">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -349,17 +351,17 @@ Phone: +251 934 830 919
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#D3AE36]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
+                      ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
+                      : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
-                      : 'text-zinc-400'
+                      ? 'bg-[#12151C] text-[#D3AE36] font-black' 
+                      : 'bg-zinc-200 dark:bg-[#12151C] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
                   }`}>
                     {count}
                   </span>
@@ -369,19 +371,19 @@ Phone: +251 934 830 919
           </div>
 
           {/* Search Input with Reset */}
-          <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+          <div className="relative min-w-[280px] sm:min-w-[340px]">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500 w-4 h-4" />
             <input
               type="text"
               placeholder="Search guides, specs, calculations..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-700 pl-9 pr-9 py-2 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
+              className="w-full bg-white dark:bg-[#232936] border border-[#31394D]/30 rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all shadow-xs"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
               >
                 <X size={14} />
               </button>
@@ -394,9 +396,9 @@ Phone: +251 934 830 919
       {/* Download Notification Toast */}
       {downloadNotification && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
-          <div className="py-2 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2">
-            <CheckCircle2 size={16} className="text-emerald-600 dark:text-emerald-400" /> 
-            {downloadNotification}
+          <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 shadow-xs">
+            <CheckCircle2 size={16} className="text-emerald-600 dark:text-emerald-400 shrink-0" /> 
+            <span>{downloadNotification}</span>
           </div>
         </div>
       )}
@@ -405,36 +407,49 @@ Phone: +251 934 830 919
       {/* 3. RESOURCE CARDS GRID                                                    */}
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid sm:grid-cols-2 gap-10 mb-24">
+        <div className="grid sm:grid-cols-2 gap-8 mb-24">
           {filteredResources.map((item, index) => (
             <div 
               key={item.id || index} 
-              className="group py-6 transition-all duration-300 flex flex-col justify-between"
+              className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-start mb-4">
-                  <div className="text-[#D3AE36] group-hover:scale-110 transition-transform">
-                    <FileText size={28} />
+                <div className="flex justify-between items-start mb-5">
+                  <div className="p-3 rounded-2xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-zinc-200/60 dark:border-[#31394D] group-hover:scale-105 transition-transform shadow-2xs">
+                    <FileText size={24} />
                   </div>
-                  <span className="text-[10px] font-mono font-extrabold text-[#D3AE36] uppercase tracking-wider">
+                  <span className="px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono font-bold text-xs border border-[#D3AE36]/30 uppercase tracking-wider">
                     {item.format} • {item.fileSize || '1.8 MB'}
                   </span>
                 </div>
 
-                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block mb-2 font-bold">{item.category}</span>
-                <h3 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-[#F8F9FA]/60 font-bold px-2.5 py-0.5 rounded-md bg-zinc-100 dark:bg-[#12151C] inline-block mb-3">
+                  {item.category}
+                </span>
+
+                <h3 className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-3 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed mb-6">
-                  {item.description}
-                </p>
+
+                <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-5">
+                  <p className="text-xs sm:text-sm text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed">
+                    <strong className="text-[#D3AE36] font-semibold">✦ Technical Scope &amp; Contents: </strong>
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-6 text-[10px] font-mono font-bold text-zinc-500 dark:text-[#F8F9FA]/60">
+                  <span className="px-2.5 py-1 rounded-lg bg-zinc-50 dark:bg-[#12151C]/50 border border-zinc-200/50 dark:border-[#31394D]">✦ EBCS / ERA Standard</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-zinc-50 dark:bg-[#12151C]/50 border border-zinc-200/50 dark:border-[#31394D]">✦ Instant Download</span>
+                </div>
               </div>
 
               <button
                 onClick={() => handleDownload(item)}
-                className="rounded-full bg-[#12151C] dark:bg-[#F8F9FA] text-[#F8F9FA] dark:text-[#12151C] hover:bg-[#D3AE36] dark:hover:bg-[#D3AE36] hover:text-[#12151C] dark:hover:text-[#12151C] transition-all py-3.5 px-6 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-max"
+                className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] active:scale-95 transition-all py-3.5 px-7 text-xs font-mono font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-full sm:w-max shadow-[0_8px_20px_rgba(211,174,54,0.3)] border border-[#D3AE36]"
               >
-                Download Document <Download size={14} className="text-[#D3AE36]" />
+                <span>Download Document</span>
+                <Download size={14} className="text-[#12151C]" />
               </button>
             </div>
           ))}
@@ -465,7 +480,7 @@ Phone: +251 934 830 919
         {/* ======================================================================= */}
         {/* 6. BOTTOM CUSTOM SPECIFICATIONS BANNER                                  */}
         {/* ======================================================================= */}
-        <div className="py-12 border-t border-zinc-200/80 dark:border-[#31394D] flex flex-col sm:flex-row justify-between items-center gap-8">
+        <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
             <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
             <h4 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
@@ -477,7 +492,7 @@ Phone: +251 934 830 919
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02]"
+            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
             Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>

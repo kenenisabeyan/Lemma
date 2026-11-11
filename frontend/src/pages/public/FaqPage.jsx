@@ -136,23 +136,25 @@ export const FaqPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <p className="text-zinc-800 dark:text-zinc-200 font-semibold text-sm sm:text-base leading-relaxed">
-                  Clear answers about our 5th-year Civil Engineering capstone, our student brotherhood at ASTU, the codes we design by, and future opportunities.
-                </p>
+                <div className="space-y-2 max-w-xl">
+                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
+                    Comprehensive technical advisory and academic inquiry guide by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort</strong>. Unpacking Ethiopian building code standards, finite element methodologies, and post-graduation recruitment.
+                  </p>
 
-                {/* Key Guidance Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">ASTU SoCEA Class of 2026</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">EBCS EN &amp; ERA Compliant</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                    <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">Final Defense Readiness</span>
+                  {/* Micro-Bullet Highlights */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">ASTU Cohort:</strong> Class of 2026 Candidates
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                      <span className="text-[#D3AE36] font-bold">✦</span>
+                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">EBCS &amp; ERA:</strong> Full Code Verification
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -259,7 +261,7 @@ export const FaqPage = () => {
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
       <div id="faq-accordion" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30 scroll-mt-24">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-zinc-800">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-[#31394D] pb-6">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -273,17 +275,17 @@ export const FaqPage = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'text-[#D3AE36]'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:text-[#D3AE36]'
+                      ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
+                      : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
                   }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                     isSelected 
-                      ? 'bg-[#D3AE36] text-zinc-950 font-black' 
-                      : 'text-zinc-400'
+                      ? 'bg-[#12151C] text-[#D3AE36] font-black' 
+                      : 'bg-zinc-200 dark:bg-[#12151C] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
                   }`}>
                     {count}
                   </span>
@@ -293,19 +295,19 @@ export const FaqPage = () => {
           </div>
 
           {/* Search Input with Reset */}
-          <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
+          <div className="relative min-w-[280px] sm:min-w-[340px]">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500 w-4 h-4" />
             <input
               type="text"
               placeholder="Search questions, codes, fees..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] pl-9 pr-9 py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 focus:border-[#D3AE36] focus:outline-none transition-colors"
+              className="w-full bg-white dark:bg-[#232936] border border-[#31394D]/30 rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all shadow-xs"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-[#F8F9FA]"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-[#F8F9FA]"
               >
                 <X size={14} />
               </button>
@@ -319,33 +321,49 @@ export const FaqPage = () => {
       {/* 3. ACCORDION LIST                                                         */}
       {/* ========================================================================= */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col divide-y divide-zinc-200/60 dark:divide-[#31394D] mb-24">
+        <div className="flex flex-col gap-4 mb-24">
           {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div 
                 key={faq.id || index} 
-                className="py-6 transition-all duration-300"
+                className={`rounded-3xl transition-all duration-300 border ${
+                  isOpen
+                    ? 'bg-white dark:bg-[#232936] border-[#D3AE36]/60 shadow-lg'
+                    : 'bg-white/80 dark:bg-[#232936]/70 border-[#31394D]/25 dark:border-[#31394D]/60 hover:border-[#D3AE36]/40 shadow-xs'
+                } p-6 sm:p-7 group`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full text-left font-black text-base sm:text-lg text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
+                  className="w-full text-left font-black text-base sm:text-lg text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-3.5">
-                    <span className="text-[#D3AE36]">
+                    <span className="p-2 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-zinc-200/60 dark:border-[#31394D] shrink-0">
                       <HelpCircle size={18} />
                     </span>
-                    <span>{faq.question}</span>
+                    <span className="leading-snug">{faq.question}</span>
                   </span>
-                  <ChevronDown size={20} className={`text-[#D3AE36] transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                  <div className={`p-2 rounded-xl transition-all duration-300 shrink-0 ${isOpen ? 'bg-[#D3AE36] text-[#12151C] rotate-180' : 'bg-zinc-100 dark:bg-[#12151C] text-zinc-500 dark:text-zinc-400'}`}>
+                    <ChevronDown size={18} />
+                  </div>
                 </button>
 
                 {isOpen && (
-                  <div className="pt-4 text-sm text-zinc-700 dark:text-[#F8F9FA]/85 leading-relaxed animate-in fade-in duration-200">
-                    <p className="mb-3 leading-relaxed sm:text-base">{faq.answer}</p>
-                    <span className="text-[10px] font-mono uppercase text-[#D3AE36] font-bold">
-                      Discipline: {faq.category}
-                    </span>
+                  <div className="mt-5 pt-5 border-t border-zinc-100 dark:border-[#31394D]/50 animate-in fade-in duration-300">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-3">
+                      <p className="text-sm sm:text-base text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed font-sans">
+                        <strong className="text-[#D3AE36] font-semibold">✦ Technical Clarification: </strong>
+                        {faq.answer}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between text-[11px] font-mono font-bold text-zinc-500 dark:text-[#F8F9FA]/60">
+                      <span className="flex items-center gap-1.5 text-[#D3AE36]">
+                        <CheckCircle2 size={13} /> Code &amp; Academic Verified
+                      </span>
+                      <span className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-[#12151C] uppercase tracking-wider">
+                        Discipline: {faq.category}
+                      </span>
+                    </div>
                   </div>
                 )}
               </div>
@@ -363,8 +381,9 @@ export const FaqPage = () => {
         {/* ======================================================================= */}
         {/* 5. BOTTOM CONSULTATION BANNER                                           */}
         {/* ======================================================================= */}
-        <div className="py-10 flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-zinc-200/60 dark:border-[#31394D]">
+        <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
               Have a Question for Our ASTU Civil Engineering Cohort?
             </h3>
@@ -376,6 +395,9 @@ export const FaqPage = () => {
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
+          </button>
+        </div>
             Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
