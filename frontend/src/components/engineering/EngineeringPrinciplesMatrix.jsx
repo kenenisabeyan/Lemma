@@ -133,26 +133,26 @@ export const EngineeringPrinciplesMatrix = () => {
             <button
               key={principle.id}
               onClick={() => setActiveTab(principle.id)}
-              className={`p-3 text-left transition-all duration-200 flex flex-col justify-between cursor-pointer ${
+              className={`p-3.5 text-left transition-all duration-200 flex flex-col justify-between cursor-pointer rounded-xl ${
                 isActive
-                  ? 'border-l-2 border-[#D3AE36] pl-4'
-                  : 'pl-4 border-l-2 border-transparent hover:border-zinc-300'
+                  ? 'bg-[#FFFFFF] dark:bg-[#232936] border-l-2 border-[#D3AE36] shadow-sm'
+                  : 'border-l-2 border-transparent hover:border-zinc-300 dark:hover:border-[#31394D] hover:bg-zinc-100/50 dark:hover:bg-[#232936]/40'
               }`}
             >
               <div className="flex items-center justify-between mb-2">
                 <div className={`p-1.5 rounded-lg transition-colors ${
                   isActive 
                     ? 'text-[#D3AE36]' 
-                    : 'text-[#1E2025]'
+                    : 'text-[#1E2025] dark:text-[#F8F9FA]/70'
                 }`}>
                   <Icon size={18} />
                 </div>
-                <span className="text-[10px] font-mono text-[#1E2025] font-bold">
+                <span className="text-[10px] font-mono text-[#D3AE36] font-bold">
                   {principle.code}
                 </span>
               </div>
               <h4 className={`text-xs font-bold leading-snug ${
-                isActive ? 'text-zinc-900 dark:text-[#F8F9FA] font-extrabold' : 'text-zinc-700'
+                isActive ? 'text-zinc-900 dark:text-[#F8F9FA] font-extrabold' : 'text-zinc-700 dark:text-zinc-400'
               }`}>
                 {principle.title}
               </h4>
@@ -171,26 +171,26 @@ export const EngineeringPrinciplesMatrix = () => {
             <h4 className="text-xl sm:text-2xl font-black text-zinc-900 tracking-tight mt-1 dark:text-[#F8F9FA]">
               {currentPrinciple.title}
             </h4>
-            <p className="text-xs sm:text-sm text-[#1E2025] mt-1 max-w-3xl leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#1E2025] dark:text-[#F8F9FA]/80 mt-1 max-w-3xl leading-relaxed">
               {currentPrinciple.summary}
             </p>
           </div>
         </div>
 
         {/* Mathematical Equation & Physics Panel */}
-        <div className="mb-6 py-3">
+        <div className="mb-6 py-4 px-6 rounded-2xl bg-zinc-50 dark:bg-[#232936] border border-zinc-200/80 dark:border-[#31394D] shadow-xs">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025] font-bold">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]/80 font-bold">
               Key Mechanics Formulation
             </span>
-            <span className="text-[9px] font-mono text-[#1E2025]">
+            <span className="text-[9px] font-mono text-[#D3AE36] font-semibold">
               Deterministic Limit State
             </span>
           </div>
-          <div className="py-3 text-center font-mono text-sm sm:text-base font-bold text-[#D3AE36] overflow-x-auto">
+          <div className="py-3 text-center font-mono text-base sm:text-lg font-bold text-[#D3AE36] overflow-x-auto drop-shadow-xs">
             <code>{currentPrinciple.formula}</code>
           </div>
-          <p className="text-[11px] font-mono text-[#1E2025] mt-1 text-center">
+          <p className="text-[11px] font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/70 mt-1 text-center">
             {currentPrinciple.formulaDesc}
           </p>
         </div>
@@ -207,7 +207,7 @@ export const EngineeringPrinciplesMatrix = () => {
               {currentPrinciple.details.map((detail, idx) => (
                 <div key={idx} className="flex items-start gap-2.5 py-1.5">
                   <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
-                  <p className="text-xs text-[#1E2025] leading-relaxed font-medium">
+                  <p className="text-xs text-[#1E2025] dark:text-[#F8F9FA]/80 leading-relaxed font-medium">
                     {detail}
                   </p>
                 </div>
@@ -222,8 +222,8 @@ export const EngineeringPrinciplesMatrix = () => {
             </span>
             <div className="space-y-2">
               {currentPrinciple.metrics.map((metric, idx) => (
-                <div key={idx} className="flex items-center justify-between py-2">
-                  <span className="text-xs font-semibold text-[#1E2025]">
+                <div key={idx} className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-[#31394D]/60 last:border-none">
+                  <span className="text-xs font-semibold text-[#1E2025] dark:text-[#F8F9FA]/80">
                     {metric.label}
                   </span>
                   <span className="text-xs font-mono font-extrabold text-[#D3AE36]">
