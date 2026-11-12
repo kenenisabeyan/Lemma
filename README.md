@@ -90,10 +90,61 @@ npm run dev
 ## 🔐 Default Admin CMS Credentials
 
 To test the administrative control center:
-1. Navigate to: `http://localhost:5173/admin/login`
+1. Navigate to: `/admin/login`
 2. Click **"Quick Fill Demo Admin Credentials"** or enter:
    - **Email**: `admin@engineering.com`
    - **Password**: `AdminPassword123!`
+
+---
+
+## 🌐 Deployment Guide (Vercel + Render)
+
+This repository is pre-configured with **1-click / zero-config deployment** for both **Render** (Backend API) and **Vercel** (Frontend UI).
+
+### Option A: Deploy Backend to Render (Free & Fast)
+
+1. Sign up or log into [Render.com](https://render.com).
+2. Click **"New +"** → **"Web Service"**.
+3. Connect your GitHub repository (`Lema-Portfolio`).
+4. Configure the settings:
+   - **Name**: `lema-portfolio-backend`
+   - **Root Directory**: `backend`
+   - **Environment**: `Node`
+   - **Region**: Any (e.g. `Frankfurt` or `Oregon`)
+   - **Branch**: `main`
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+5. Under **Environment Variables**, add:
+   - `NODE_ENV`: `production`
+   - `PORT`: `10000`
+   - `DATABASE_URL`: `file:./dev.db`
+   - `JWT_SECRET`: *(A random 32+ character string)*
+   - `JWT_EXPIRES_IN`: `7d`
+   - `CORS_ORIGIN`: `*` *(or your Vercel domain once deployed)*
+6. Click **"Deploy Web Service"**.
+   - Render runs `npx prisma generate`, pushes the schema, and automatically seeds initial project data via `seed.js`.
+   - Your live API URL will be: `https://lema-portfolio-backend.onrender.com`
+   - Health check: `https://lema-portfolio-backend.onrender.com/api/health`
+
+*(Alternatively, use **Render Blueprints** via the included `render.yaml` for instant infrastructure creation).*
+
+---
+
+### Option B: Deploy Frontend to Vercel (Instant CDN)
+
+1. Sign up or log into [Vercel.com](https://vercel.com).
+2. Click **"Add New..."** → **"Project"**.
+3. Import your GitHub repository (`Lema-Portfolio`).
+4. In the Project Configuration:
+   - **Framework Preset**: `Vite`
+   - **Root Directory**: Click `Edit` and select `frontend` (or leave as `.` if using root `vercel.json`).
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+5. In **Environment Variables**, add:
+   - `VITE_API_BASE_URL`: Your Render backend URL (e.g. `https://lema-portfolio-backend.onrender.com`)
+6. Click **"Deploy"**.
+   - Vercel builds the React SPA and deploys it to a global edge network with SSL.
+   - Client-side routing is handled seamlessly via `vercel.json`.
 
 ---
 

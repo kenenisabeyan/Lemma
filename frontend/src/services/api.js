@@ -1,7 +1,20 @@
 import axios from 'axios';
 
+// Detect API base URL from Vite environment variables (for Vercel -> Render cross-domain deployment)
+// Falls back to local same-origin '/api' (proxy in Vite dev / Vercel rewrites)
+const rawBaseURL = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api';
+let resolvedBaseURL = rawBaseURL.trim();
+
+// Normalize URL: If an absolute URL is provided without an '/api' path, append '/api'
+if (resolvedBaseURL.startsWith('http://') || resolvedBaseURL.startsWith('https://')) {
+  resolvedBaseURL = resolvedBaseURL.replace(/\/+$/, '');
+  if (!resolvedBaseURL.endsWith('/api')) {
+    resolvedBaseURL = `${resolvedBaseURL}/api`;
+  }
+}
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: resolvedBaseURL,
   headers: {
     'Content-Type': 'application/json'
   }
