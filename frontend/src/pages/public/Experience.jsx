@@ -32,10 +32,10 @@ export const Experience = () => {
   const engineeringMilestones = [
     {
       year: '2025 - 2026',
-      title: 'B+G+10 Mixed-Use RC Commercial Tower Commission (Adama CBD)',
+      title: 'B+G+10 Mixed-Use RC Capstone Tower (Adama CBD)',
       category: 'Structural RC & Tall Buildings',
-      value: 'Commercial Commission',
-      role: 'Managing Principal & Lead Structural FEA Engineer',
+      value: 'ASTU Capstone Defense',
+      role: 'Lead Capstone Engineer',
       location: 'Adama CBD, Oromia, Ethiopia',
       achievement: 'Pioneered 3D non-linear dynamic response spectrum modeling in ETABS to design a 10-story dual shear wall-moment frame resisting Great Rift Valley Zone 4 seismic ground accelerations.',
       highlights: [
@@ -46,10 +46,10 @@ export const Experience = () => {
     },
     {
       year: '2025',
-      title: 'Awash River Highway Bridge Infrastructure Commission',
+      title: 'Awash River Highway Bridge Capstone Project',
       category: 'Bridge & Hydraulic Engineering',
-      value: 'ERA & ASTU Infrastructure Commission',
-      role: 'Lead Bridge & Structural Engineer',
+      value: 'ERA & ASTU Joint Study',
+      role: 'Bridge Design Candidate',
       location: 'Awash River Corridor, Ethiopia',
       achievement: 'Engineered a 120-meter three-span continuous post-tensioned concrete box girder bridge traversing seasonal high-velocity river discharges.',
       highlights: [
@@ -210,20 +210,20 @@ export const Experience = () => {
                 {/* 4 Quantified Metrics */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
-                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Disciplines</span>
+                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Academic Year</span>
                   </div>
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">25+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Commissions</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Capstones</span>
                   </div>
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
-                    <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">ASTU</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">SoCEA Practice</span>
+                    <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">5 Yrs</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">ASTU SoCEA</span>
                   </div>
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Code Verified</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Defense Ready</span>
                   </div>
                 </div>
               </motion.div>
@@ -541,10 +541,10 @@ export const Experience = () => {
         {/* ======================================================================= */}
         <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-widest block mb-2 font-bold">Amensisa &amp; Partners · Advisory Desk</span>
-            <h3 className="text-2xl lg:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">Commission Infrastructure or <span className="text-[#D3AE36]">Retain Amensisa &amp; Partners</span></h3>
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-widest block mb-2 font-bold">Ready to Collaborate &amp; Recruit</span>
+            <h3 className="text-2xl lg:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">Need Civil Engineering Talent or <span className="text-[#D3AE36]">Capstone Collaborations</span>?</h3>
             <p className="text-sm text-zinc-600 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Available for commercial civil &amp; structural engineering commissions, ETABS dynamic modeling, ERA highway alignments, and resident QA/QC engineering supervision across Ethiopia.
+              Available for graduate civil engineering positions, structural modeling projects, ERA highway alignment tasks, and technical consultations with our ASTU 5th-year student cohort.
             </p>
           </div>
 
@@ -553,14 +553,14 @@ export const Experience = () => {
               onClick={() => navigate('/resources')}
               className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer border border-zinc-200 dark:border-[#31394D] bg-zinc-50 dark:bg-[#12151C]"
             >
-              <span>Download Corporate Dossier (PDF)</span>
+              <span>Download Student Dossier (PDF)</span>
               <Download size={14} className="text-[#D3AE36]" />
             </button>
             <button
               onClick={() => navigate('/contact')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D3AE36]"
             >
-              <span>Initiate Commission RFP</span>
+              <span>Connect With Us</span>
               <ArrowUpRight size={14} />
             </button>
           </div>

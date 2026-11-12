@@ -145,10 +145,10 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             </div>
             <div>
               <h4 className="text-sm sm:text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5">
-                Eng. Lemma Amensisa &amp; Partners
-                <span className="text-[10px] text-[#D3AE36] font-mono font-bold">· Amensisa Practice · ASTU SoCEA</span>
+                Lemma Amensisa &amp; Brothers
+                <span className="text-[10px] text-[#D3AE36] font-mono font-bold">· ASTU SoCEA 5th Year</span>
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60">Managing Principal &amp; Multidisciplinary Practice Leads · ASTU SoCEA Division</p>
+              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60">5th Year Civil Engineering Candidates · Class of 2026 · ASTU</p>
             </div>
           </div>
         </div>
@@ -194,34 +194,34 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/50">
             <div className="flex items-center gap-2 text-xs font-mono text-[#D3AE36]">
               <ShieldCheck size={16} />
-              <span className="font-bold uppercase tracking-wider">Formal Practice Whitepaper &amp; Technical Reference</span>
+              <span className="font-bold uppercase tracking-wider">Formal Capstone &amp; Academic Reference</span>
             </div>
             <span className="text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">ASTU SoCEA Reference Format</span>
           </div>
 
           <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 font-mono text-xs text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed mb-5">
-            Amensisa, L. &amp; Partners (2026). &quot;{article.title}&quot;. <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Practice Research Archive, Adama, Ethiopia.
+            Amensisa, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
           </div>
 
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => {
-                navigator.clipboard.writeText(`Amensisa, L. & Partners (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Practice Research Archive, Adama, Ethiopia.`);
+                navigator.clipboard.writeText(`Amensisa, L. & Brothers (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Capstone Archive, Adama, Ethiopia.`);
                 setCopiedCitation(true);
                 setTimeout(() => setCopiedCitation(false), 2500);
               }}
               className="px-4 py-2 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/40 text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:bg-[#D3AE36] hover:text-[#12151C] transition-all flex items-center gap-1.5 cursor-pointer"
             >
-              <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy Practice Citation'}
+              <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASTU Citation'}
             </button>
             <button
               onClick={() => {
-                const text = `=====================================================\nAMENSISA & PARTNERS · TECHNICAL PRACTICE WHITEPAPER\nTitle: ${article.title}\nAuthors: Eng. Lemma Amensisa & Practice Partners\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
+                const text = `=====================================================\nASTU CIVIL ENGINEERING TECHNICAL NOTE\nTitle: ${article.title}\nAuthors: Lemma Amensisa & 5th Year Civil Engineering Brothers\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
                 const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `${article.slug || 'engineering-whitepaper'}.txt`;
+                a.download = `${article.slug || 'engineering-note'}.txt`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -240,13 +240,13 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             <h4 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-1">
               Have questions about this <span className="text-[#D3AE36]">engineering methodology?</span>
             </h4>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">Directly discuss EBCS compliance, finite element structural modeling, or retain Amensisa &amp; Partners for technical advisory.</p>
+            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">Directly discuss EBCS compliance, structural modeling, or capstone collaboration with our ASTU student team.</p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_8px_20px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
-            Initiate Commission RFP <ArrowUpRight size={14} />
+            Connect With Brothers <ArrowUpRight size={14} />
           </button>
         </div>
 

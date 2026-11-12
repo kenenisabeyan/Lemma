@@ -164,27 +164,27 @@ export const CaseStudyPage = () => {
       category: 'Structural RC & Tall Buildings',
       location: 'Adama CBD, Oromia, Ethiopia',
       year: '2026',
-      client: 'Oromia Regional Investment Commission / ASTU SoCEA Advisory',
-      role: 'Managing Principal & Lead Structural FEA Engineer',
+      client: 'ASTU SoCEA Final Year Capstone Committee',
+      role: 'Lead Structural Capstone Engineer',
       structuralSystem: 'Reinforced Concrete Dual System (Shear Walls + Moment Resisting Frames)',
       materials: 'C-30/37 Concrete, Grade 500 High-Yield Ribbed Reinforcement Bars',
-      description: 'Comprehensive commercial commission for an 11-story mixed-use commercial tower in downtown Adama, engineered to resist seismic forces in Great East African Rift Valley Zone 4.',
+      description: 'Comprehensive B.Sc. capstone engineering design of an 11-story mixed-use commercial tower in downtown Adama, engineered to resist seismic forces in Great East African Rift Valley Zone 4.',
       challenge: 'High seismic ground acceleration in the Main Ethiopian Rift corridor coupled with high bearing pressure requirements on local soils.',
       engineeringApproach: 'Conducted 3D finite element dynamic response spectrum analysis in ETABS 2022 and SAP2000, adhering strictly to Ethiopian Building Code Standards EBCS EN 1998:2014 and EBCS EN 1992:2014.',
       solution: 'Engineered centrally coupled core shear walls, 220mm two-way floor slabs, and a 1.2m reinforced concrete mat raft foundation with perimeter retaining walls.',
-      result: '100% Code Verified per EBCS EN 1998 Zone 4 with complete FEA structural design and bar bending schedules.',
+      result: 'Earned 98% defense readiness grade from ASTU School of Civil Engineering & Architecture faculty advisory board.',
       imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
       softwareUsed: JSON.stringify(['ETABS', 'SAP2000', 'AutoCAD Civil 3D', 'SAFE'])
     },
     {
       id: '2',
-      title: 'Awash River Highway Bridge Commission',
+      title: 'Awash River Highway Bridge Capstone',
       slug: 'awash-river-bridge',
       category: 'Bridge & Highway Engineering',
       location: 'Awash River Crossing, Oromia / Afar Corridor',
       year: '2025',
-      client: 'Ethiopian Roads Administration (ERA) / ASTU SoCEA Directorate',
-      role: 'Lead Structural & Hydraulic Bridge Practice Lead',
+      client: 'ERA / ASTU SoCEA Capstone Directorate',
+      role: 'Lead Bridge & Hydraulic Engineer',
       structuralSystem: 'Post-Tensioned Concrete Box Girder & Reinforced Pier Shafts',
       materials: 'C-40/50 High-Strength Concrete, Low-Relaxation Prestressing Strands',
       description: 'A 120-meter three-span continuous prestressed concrete highway bridge designed across the Awash River gorge along the central freight corridor.',
@@ -516,20 +516,20 @@ export const CaseStudyPage = () => {
           <div className="text-left max-w-2xl space-y-2">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Corporate Inquiries &amp; Commission RFP Desk</span>
+              <span>Available for Technical Consultations &amp; Capstone Defense</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
               Facing an <span className="text-[#D3AE36]">Ambitious</span> Civil or Structural Engineering Challenge?
             </h3>
             <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Connect with Amensisa &amp; Partners to review technical drawings, EBCS code compliance, or commission an infrastructure engineering dossier.
+              Connect with our ASTU 5th-year graduating civil engineering team to review technical drawings, EBCS code compliance, or explore capstone graduate collaborations.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36] active:scale-95"
           >
-            <span>Initiate Commission RFP</span>
+            <span>Connect With Our Team</span>
             <ArrowUpRight size={15} />
           </button>
         </div>

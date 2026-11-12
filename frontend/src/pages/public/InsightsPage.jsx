@@ -142,7 +142,7 @@ export const InsightsPage = () => {
                   <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      Amensisa Practice · ASTU SoCEA Research Archive
+                      ASTU SoCEA Student Technical Archive
                     </span>
                     <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
                       Open Access
@@ -150,7 +150,7 @@ export const InsightsPage = () => {
                   </div>
 
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs sm:text-sm leading-relaxed text-left font-medium">
-                    Applied engineering research, laboratory soil testing notes, and code evaluations authored by <strong className="text-[#D3AE36] font-bold">Amensisa &amp; Partners · ASTU SoCEA Civil Engineering Division</strong>.
+                    Applied engineering research, laboratory soil testing notes, and code evaluations authored by <strong className="text-[#D3AE36] font-bold">ASTU 5th-Year Civil Engineering Brothers</strong>.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
@@ -174,7 +174,7 @@ export const InsightsPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
                   <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
                     <BookOpen size={15} className="text-[#D3AE36] shrink-0" />
-                    <span className="font-semibold">ASTU SoCEA Verified</span>
+                    <span className="font-semibold">ASTU SoCEA Capstones</span>
                   </div>
                   <div className="flex items-center gap-2 text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
                     <ShieldCheck size={15} className="text-[#D3AE36] shrink-0" />
@@ -438,14 +438,14 @@ export const InsightsPage = () => {
               Applying <span className="text-[#D3AE36]">Advanced Engineering Research</span> to Real Infrastructure
             </h3>
             <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from Amensisa &amp; Partners?
+              Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from our ASTU 5th-year student cohort?
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95 border border-[#D3AE36]"
           >
-            <span>Initiate Commission RFP</span>
+            <span>Connect With Our Team</span>
             <ArrowUpRight size={15} />
           </button>
         </div>

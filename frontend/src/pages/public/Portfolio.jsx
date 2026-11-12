@@ -42,34 +42,34 @@ export const Portfolio = () => {
       category: 'Structural RC & Tall Buildings',
       location: 'Adama CBD, Oromia, Ethiopia',
       year: '2026',
-      client: 'Oromia Regional Investment Commission / ASTU SoCEA Advisory',
-      role: 'Managing Principal & Lead Structural FEA Engineer',
+      client: 'ASTU SoCEA Final Year Capstone Committee',
+      role: 'Lead Structural Capstone Engineer',
       structuralSystem: 'Reinforced Concrete Dual System (Shear Walls + Moment Resisting Frames)',
       materials: 'C-30/37 Concrete, Grade 500 High-Yield Ribbed Reinforcement Bars',
-      description: 'Comprehensive commercial commission for an 11-story mixed-use commercial tower in downtown Adama, engineered to resist seismic forces in Great East African Rift Valley Zone 4.',
+      description: 'Comprehensive B.Sc. capstone engineering design of an 11-story mixed-use commercial tower in downtown Adama, engineered to resist seismic forces in Great East African Rift Valley Zone 4.',
       challenge: 'High seismic ground acceleration in the Main Ethiopian Rift corridor coupled with high bearing pressure requirements on local soils.',
       engineeringApproach: 'Conducted 3D finite element dynamic response spectrum analysis in ETABS 2022 and SAP2000, adhering strictly to Ethiopian Building Code Standards EBCS EN 1998:2014 and EBCS EN 1992:2014.',
       solution: 'Engineered centrally coupled core shear walls, 220mm two-way floor slabs, and a 1.2m reinforced concrete mat raft foundation with perimeter retaining walls.',
-      result: '100% Code Verified per EBCS EN 1998 Zone 4 with complete FEA structural design and bar bending schedules.',
+      result: 'Earned 98% defense readiness grade from ASTU School of Civil Engineering & Architecture faculty advisory board.',
       imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
       softwareUsed: '["ETABS","SAP2000","AutoCAD Civil 3D","SAFE"]'
     },
     {
       id: '2',
-      title: 'Awash River Highway Bridge Commission',
+      title: 'Awash River Highway Bridge Capstone',
       slug: 'awash-river-bridge',
       category: 'Bridge & Highway Engineering',
       location: 'Awash River Crossing, Oromia / Afar Corridor',
       year: '2025',
-      client: 'Ethiopian Roads Administration (ERA) / ASTU SoCEA Directorate',
-      role: 'Lead Structural & Hydraulic Bridge Practice Lead',
+      client: 'ERA / ASTU SoCEA Capstone Directorate',
+      role: 'Lead Bridge & Hydraulic Engineer',
       structuralSystem: 'Post-Tensioned Concrete Box Girder & Reinforced Pier Shafts',
       materials: 'C-40/50 High-Strength Concrete, Low-Relaxation Prestressing Strands',
-      description: 'A 120-meter three-span continuous prestressed concrete highway bridge commission across the Awash River gorge along the central national freight corridor.',
+      description: 'A 120-meter three-span continuous prestressed concrete highway bridge designed across the Awash River gorge along the central freight corridor.',
       challenge: 'Seasonal torrential flash floods, scouring risks, and long-span deflections over soft alluvial gorge deposits.',
       engineeringApproach: 'Combined hydrological peak discharge estimation (HEC-RAS) with 3D structural longitudinal girder modeling in SAP2000 and ERA Bridge Design Manual 2024.',
       solution: 'Designed multi-cell post-tensioned box sections with deep drilled cast-in-place concrete pile groups protected by rip-rap stone pitching.',
-      result: 'Complete calculation dossier and detailed AutoCAD production drawing sheets validated by ASTU senior faculty advisors.',
+      result: 'Complete calculation dossier and detailed AutoCAD drawing sheets validated by ASTU senior faculty advisors.',
       imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
       softwareUsed: '["SAP2000","AutoCAD","HEC-RAS","Civil 3D"]'
     },
@@ -80,11 +80,11 @@ export const Portfolio = () => {
       category: 'Bridge & Highway Engineering',
       location: 'Adama - Wonji Corridor, Ethiopia',
       year: '2025',
-      client: 'Oromia Roads Authority / Regional Transport Directorate',
-      role: 'Highway Infrastructure Practice Lead',
+      client: 'Oromia Roads Authority / ASTU Academic Internship',
+      role: 'Highway & Surveying Engineer',
       structuralSystem: 'Flexible Asphalt Concrete Pavement & Super-elevated Alignment',
       materials: 'Hot Mix Asphalt (HMA), Crushed Stone Base Course, Lime-Stabilized Subgrade',
-      description: 'A 28-kilometer trunk highway corridor geometric design and multi-layered flexible pavement system engineered using AutoCAD Civil 3D per ERA 2024 manuals.',
+      description: 'A 28-kilometer trunk road geometric design and multi-layered flexible pavement system designed using AutoCAD Civil 3D per ERA Geometric Design Manual.',
       challenge: 'Traversing expansive black cotton soil zones prone to severe seasonal swelling and shrinkage cracks.',
       engineeringApproach: 'Conducted comprehensive laboratory soil classification (Atterberg limits, CBR, and Proctor compaction) and mass-haul cut/fill optimization.',
       solution: 'Specified a 400mm lime-stabilized capping layer topped with 150mm crushed stone base course and 60mm asphalt concrete surfacing.',
@@ -143,10 +143,6 @@ export const Portfolio = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="space-y-1 sm:space-y-2"
               >
-                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#D3AE36] shadow-xs mb-1 font-bold">
-                  <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                  AMENSISA &amp; PARTNERS · COMMISSIONS &amp; FEA ARCHIVE
-                </div>
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   Engineering Reality.{' '}
                   <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
@@ -154,7 +150,7 @@ export const Portfolio = () => {
                   </span>
                   <br />
                   <span className="text-[#D3AE36] opacity-95 inline-block select-text">
-                    Amensisa &amp; Partners.
+                    ASTU Civil 5th Year.
                   </span>
                 </h1>
               </motion.div>
@@ -170,15 +166,15 @@ export const Portfolio = () => {
                   <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      Amensisa Practice · ASTU SoCEA Division
+                      ASTU SoCEA Verified Capstone Archive
                     </span>
                     <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
-                      25+ Commissions
+                      25+ Projects
                     </span>
                   </div>
 
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-xs sm:text-sm leading-relaxed text-left font-medium">
-                    Curated engineering archive of 25+ commissions, field surveys, and infrastructure dossiers directed by <strong className="text-[#D3AE36] font-bold">Eng. Lemma Amensisa &amp; Multidisciplinary Practice Partners</strong>. Precision structural mechanics compliant with EBCS EN and ERA 2024 manuals.
+                    Curated portfolio of 25+ capstone designs, field surveys, and infrastructure projects by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU Civil Engineering Brothers</strong>. Precision mechanics compliant with EBCS EN and ERA manuals.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
@@ -201,20 +197,20 @@ export const Portfolio = () => {
                 {/* Live Engineering KPI Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
-                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Disciplines</span>
+                    <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Academic Year</span>
                   </div>
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">25+</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Commissions</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Capstones</span>
                   </div>
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Code Verified</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Defense Ready</span>
                   </div>
                   <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">ASTU</span>
-                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">SoCEA Practice</span>
+                    <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">SoCEA Brotherhood</span>
                   </div>
                 </div>
               </motion.div>
@@ -232,7 +228,7 @@ export const Portfolio = () => {
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
                 >
                   <Filter size={15} />
-                  <span>FILTER 25+ COMMISSIONS</span>
+                  <span>FILTER 25+ CAPSTONES</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
 
@@ -386,7 +382,7 @@ export const Portfolio = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
             <input
               type="text"
-              placeholder="Search commission, RC frame, highway, soil..."
+              placeholder="Search capstone, RC frame, highway, soil..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
@@ -411,7 +407,7 @@ export const Portfolio = () => {
         {filteredProjects.length === 0 ? (
           <div className="py-24 text-center mb-20">
             <HardHat className="w-12 h-12 text-[#D3AE36] mx-auto mb-4 opacity-75" />
-            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No engineering commissions match your search.</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No capstone projects match your search.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
@@ -445,7 +441,7 @@ export const Portfolio = () => {
               Interactive Drawing <span className="text-[#D3AE36]">Dossier &amp; FEA Inspector.</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
-              Examine practice engineering documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
+              Examine capstone project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
             </p>
           </div>
 
@@ -459,20 +455,20 @@ export const Portfolio = () => {
           <div className="text-left max-w-2xl space-y-2">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Corporate Inquiries &amp; Commission RFP Desk</span>
+              <span>Available for Graduate Recruitment &amp; Capstone Collaborations</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Commission an Infrastructure Project or Retain Amensisa &amp; Partners
+              Interested in Capstone Research or Engineering Recruitment?
             </h3>
             <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Open for corporate engineering commissions, infrastructure advisory mandates, and technical partnerships on Ethiopian Building Code Standards (EBCS EN) and ERA 2024 implementations.
+              Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
-            <span>Initiate Commission RFP</span>
+            <span>Connect With Us</span>
             <ArrowUpRight size={15} />
           </button>
         </div>

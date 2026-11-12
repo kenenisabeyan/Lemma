@@ -33,7 +33,7 @@ export const ResourcesPage = () => {
   const defaultResources = [
     {
       id: '1',
-      title: 'Amensisa & Partners B+G+10 RC Design Audit Checklist (EBCS EN 1992 & 1998)',
+      title: 'ASTU B+G+10 Capstone RC Design Checklist (EBCS EN 1992 & 1998)',
       category: 'Design Guides',
       format: 'PDF',
       fileSize: '2.4 MB',
@@ -78,12 +78,13 @@ export const ResourcesPage = () => {
 
   const handleDownload = (item) => {
     const content = `=====================================================
-AMENSISA & PARTNERS · CIVIL & STRUCTURAL ENGINEERING
+ASTU CIVIL ENGINEERING TECHNICAL RESOURCE
 Title: ${item.title}
 Category: ${item.category}
 Standard: EBCS EN 1990 / 1991 / 1992 / 1998 & ERA Standards 2024
-Practice: Amensisa & Partners · ASTU SoCEA Division
-Lead: Eng. Lemma Amensisa & Multidisciplinary Practice Partners
+Authors: Lemma Amensisa & 5th Year Civil Engineering Brothers
+Institution: Adama Science and Technology University (ASTU) · SoCEA
+Academic Year: 5th Year Graduating Candidates · Class of 2026
 =====================================================
 
 DESCRIPTION:
@@ -95,9 +96,9 @@ CORE TECHNICAL GUIDANCE (ETHIOPIAN PRACTICE):
 3. Test expansive black cotton soil active clay swell index before final foundation footing sizing.
 4. Highway horizontal and vertical curves must strictly satisfy ERA Geometric Design Manual 2024 specifications.
 
-For commercial inquiries or commission RFP:
+For academic consultation or capstone collaboration:
 Email: lemmayezedlij21@gmail.com
-Campus: ASTU Technology Park & Main Campus, Adama, Ethiopia
+Campus: ASTU Main Campus, SoCEA Building, Adama, Ethiopia
 Phone: +251 934 830 919
 =====================================================`;
 
@@ -151,7 +152,7 @@ Phone: +251 934 830 919
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  Amensisa &amp; Partners · Practice Toolkit &amp; Calculation Sheets
+                  ASTU Civil Engineering · 5th Year Capstone Toolkit &amp; Calculation Sheets
                 </span>
               </motion.div>
 
@@ -163,7 +164,7 @@ Phone: +251 934 830 919
                 className="space-y-1.5"
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
-                  Technical Practice{' '}
+                  ASTU{' '}
                   <span className="text-[#D3AE36]">
                     Engineering Toolkit.
                   </span>
@@ -179,7 +180,7 @@ Phone: +251 934 830 919
               >
                 <div className="space-y-2 max-w-xl">
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
-                    Verified engineering repository by <strong className="text-[#D3AE36] font-bold">Amensisa &amp; Partners · ASTU SoCEA Civil Engineering Division</strong>. Structural audit checklists, EBCS code calculation templates, and real-time interactive structural mechanics solvers.
+                    Verified open engineering repository by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort</strong>. Capstone audit checklists, EBCS code calculation templates, and real-time interactive structural mechanics solvers.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
@@ -481,19 +482,19 @@ Phone: +251 934 830 919
         {/* ======================================================================= */}
         <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Amensisa &amp; Partners · Advisory Desk</span>
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
             <h4 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
-              Need Engineering Calculations, Soil Test Reviews, or Civil 3D Corridors?
+              Need Capstone Calculations, Soil Test Reviews, or Civil 3D Corridors?
             </h4>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-              Amensisa &amp; Partners provides finite element structural analysis models, EBCS-compliant calculation sheets, and AutoCAD Civil 3D highway drawings for developers and engineering practices.
+              Our ASTU 5th-year graduating civil engineering team provides finite element analysis models, EBCS compliant calculation sheets, and AutoCAD Civil 3D highway drawings.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
-            Initiate Commission RFP <ArrowUpRight size={15} className="text-[#12151C]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
 

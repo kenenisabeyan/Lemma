@@ -55,45 +55,45 @@ export const Home = () => {
   const brotherhoodMembers = [
     {
       name: 'Lemma Amensisa',
-      role: 'Managing Principal & Lead Structural Engineer',
-      sub: 'ASTU SoCEA Practice Director · 3D Seismic Dynamics',
+      role: 'Senior Capstone Lead & Structural Dynamics',
+      sub: 'Adama Science & Technology University · SoCEA',
       img: lemmaImg,
-      badge: 'Managing Principal'
+      badge: 'Team Lead · Class of 2026'
     },
     {
-      name: 'Structural Modeling Division',
-      role: 'Principal Structural FEA & Seismic Specialist',
-      sub: 'EBCS EN 1998 Seismic Ductility · Eurocode 2 Modeling',
+      name: 'Structural Modeling Cohort',
+      role: 'ETABS 3D Seismic & Beam-Column Joint Detailing',
+      sub: 'EBCS EN 1998 Seismic Ductility · Eurocode 2',
       img: lemmaTwoImg,
-      badge: 'Principal FEA Lead'
+      badge: 'FEA Specialist'
     },
     {
-      name: 'Highway Infrastructure Division',
-      role: 'Lead Infrastructure & Geometric Alignment Engineer',
-      sub: 'ERA 2024 Road Standards · Earthwork Balance & Pavements',
+      name: 'Highway Infrastructure Specialist',
+      role: 'Civil 3D Geometric Corridor & Mass-Haul',
+      sub: 'ERA 2024 Road Standards · Earthwork Balance',
       img: lemmaThreeImg,
-      badge: 'Highway Practice Lead'
+      badge: 'ERA Certified'
     },
     {
-      name: 'Geotechnical & Foundation Division',
-      role: 'Lead Geotechnical & Subgrade Specialist',
-      sub: 'EBCS EN 1997 Geotechnical · Lime Mitigation & Piles',
+      name: 'Geotechnical & Foundation Engineer',
+      role: 'Expansive Clay Soil Stabilization & Caisson Piles',
+      sub: 'EBCS EN 1997 Geotechnical · Lime Mitigation',
       img: lemmaFourImg,
-      badge: 'Geotech Practice Lead'
+      badge: 'Soil & Bedrock Lead'
     },
     {
-      name: 'Site Operations & QA/QC Division',
-      role: 'Resident Engineer & Construction QA/QC Lead',
-      sub: 'OCC Industrial Operations · BBS Detailing & Slump/Cube QC',
+      name: 'Site QC & Field Supervision Officer',
+      role: 'Total Station Surveying & Concrete Slump/Cube QC',
+      sub: 'OCC Site Internship · Bar Bending Schedules (BBS)',
       img: li2Img,
-      badge: 'Field Operations Lead'
+      badge: 'Site QC Trainee'
     },
     {
-      name: 'Hydraulic & Water Resources Division',
-      role: 'Lead Drainage & Water Resources Engineer',
-      sub: 'Catchment Hydrology · Culvert Sizing & Scour Mitigation',
+      name: 'Hydraulic & Water Resources Engineer',
+      role: 'Corridor Drainage, Culverts & Watershed Runoff',
+      sub: 'Hydraulic Modeling · Flood Risk Mitigation',
       img: li3Img,
-      badge: 'Water Resources Lead'
+      badge: 'Drainage Lead'
     }
   ];
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
@@ -148,12 +148,12 @@ export const Home = () => {
 
   // Dynamic Rotating Pill Text
   const rotatingDisciplines = [
-    'Computational Structural Mechanics & FEA',
-    'Reinforced Concrete & Seismic Shear Walls',
-    'Transportation Corridors & ERA 2024 Standards',
-    'Geotechnical Soil Stabilization & Raft Footings',
-    'Field Construction QA/QC & Concrete Testing',
-    'Full Infrastructure Commission Delivery'
+    'ASTU 5th Year Civil Engineering',
+    'Reinforced Concrete & Shear Walls',
+    'Practical Construction & Site Supervision',
+    'Highway Alignment & ERA Standards',
+    'Total Station Surveying & Concrete QC',
+    'B.Sc. Graduation Capstone Defense'
   ];
   const [disciplineIndex, setDisciplineIndex] = useState(0);
 
@@ -167,17 +167,17 @@ export const Home = () => {
   // Fetch live settings and projects from API with fallback
   const { data: settingsData } = useFetch('/settings', {
     settings: {
-      engineerName: 'Amensisa & Partners',
-      title: 'Civil & Structural Engineering Practice | ASTU SoCEA',
-      heroHeadlineLine1: 'Pioneering Resilient Infrastructure.',
-      heroHeadlineAccent: 'Amensisa ',
-      heroHeadlineLine2: '& Partners Practice.',
-      heroBio: 'A multidisciplinary civil and structural engineering consultancy founded by Lemma Amensisa and graduating civil engineers at Adama Science and Technology University (ASTU). We provide computational modeling in ETABS, AutoCAD Civil 3D highway design, geotechnical soil stabilization, and on-site construction quality control across Ethiopia.',
+      engineerName: 'Lemma Amensisa & Brothers',
+      title: '5th Year Civil Engineering | ASTU SoCEA',
+      heroHeadlineLine1: 'Engineering Ethiopia.',
+      heroHeadlineAccent: 'ASTU ',
+      heroHeadlineLine2: 'Civil 5th Year.',
+      heroBio: '5th-year Civil Engineering students at Adama Science and Technology University (ASTU). Graduating together as brothers, we combine ETABS and Civil 3D design with practical site construction, concrete quality control, and field surveying across Ethiopia.',
       introVideoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-architectural-model-of-a-modern-building-41618-large.mp4',
       yearsExp: '5th Year',
       projectsCount: '25+',
-      safetyRecord: '100% Code Verified',
-      clientsCount: 'ASTU SoCEA Division'
+      safetyRecord: '100% Defense Ready',
+      clientsCount: 'ASTU SoCEA'
     }
   });
 
@@ -342,10 +342,10 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
-              {/* Corporate Status Badge Pill */}
+              {/* Status Badge Pill */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/30 shadow-xs text-xs font-mono font-bold text-[#D3AE36]">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                <span>AMENSISA &amp; PARTNERS · CIVIL &amp; STRUCTURAL PRACTICE</span>
+                <span>ASTU SoCEA Civil Engineering · Class of 2026</span>
               </div>
 
               {/* Main Headline (Left Aligned) */}
@@ -357,11 +357,11 @@ export const Home = () => {
               >
                 <h1 className="font-extrabold text-3xl sm:text-4xl md:text-[2.6rem] xl:text-[2.9rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
                   <span className="block select-text">
-                    {settings.heroHeadlineLine1 || 'Pioneering Resilient Infrastructure.'}
+                    {settings.heroHeadlineLine1 || 'Engineering Ethiopia.'}
                   </span>
                   <span className="text-[#D3AE36] block select-text">
-                    {settings.heroHeadlineAccent ? `${settings.heroHeadlineAccent} ` : 'Amensisa '}
-                    {settings.heroHeadlineLine2 || '& Partners Practice.'}
+                    {settings.heroHeadlineAccent ? `${settings.heroHeadlineAccent} ` : 'ASTU '}
+                    {settings.heroHeadlineLine2 || 'Civil 5th Year.'}
                   </span>
                 </h1>
               </motion.div>
@@ -378,15 +378,15 @@ export const Home = () => {
                   <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      Amensisa Practice · ASTU SoCEA Division
+                      ASTU SoCEA · Class of 2026 Brotherhood
                     </span>
                     <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
-                      Class of 2026
+                      5th-Year Capstone
                     </span>
                   </div>
 
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-xs sm:text-sm leading-relaxed text-left select-text">
-                    Amensisa &amp; Partners is a specialized civil and structural engineering consultancy founded by Lemma Amensisa and graduating civil engineers at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. We combine ETABS structural dynamic modeling and Civil 3D geometric design with on-site construction quality control across Ethiopia.
+                    Final-year Civil Engineering team at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. Graduating together as brothers, we combine ETABS and Civil 3D design with practical site construction, concrete quality control, and field surveying across Ethiopia.
                   </p>
 
                   {/* Micro-Bullet Executive Highlights */}
@@ -408,7 +408,7 @@ export const Home = () => {
 
                 {/* Rotating Focus Indicator */}
                 <div className="flex items-center gap-2 text-xs font-mono select-text pt-0.5">
-                  <span className="font-semibold text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-wider text-[10px] select-text">Practice Focus:</span>
+                  <span className="font-semibold text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
                   <span className="font-bold text-[#D3AE36] underline decoration-[#D3AE36] decoration-2 underline-offset-4 select-text">
                     {rotatingDisciplines[disciplineIndex]}
                   </span>
@@ -427,7 +427,7 @@ export const Home = () => {
                   onClick={() => navigate('/projects')}
                   className="relative overflow-hidden rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 group cursor-pointer shrink-0 whitespace-nowrap shadow-md hover:shadow-lg"
                 >
-                  <span className="relative z-10">EXPLORE COMMISSIONS</span>
+                  <span className="relative z-10">EXPLORE PROJECTS</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0 relative z-10" />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform" />
                 </button>
@@ -437,7 +437,7 @@ export const Home = () => {
                   onClick={() => setIsVideoModalOpen(true)}
                   className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap border border-transparent hover:border-[#31394D]/30 dark:hover:border-[#31394D]"
                 >
-                  <span>PRACTICE SHOWREEL</span>
+                  <span>WATCH CAPSTONE SHOWREEL</span>
                   <Play size={12} className="fill-[#D3AE36] text-[#D3AE36] shrink-0" />
                 </button>
               </motion.div>
@@ -480,15 +480,15 @@ export const Home = () => {
                   <div className="flex items-center gap-3">
                     <img 
                       src={settings.avatarUrl || lemmaImg} 
-                      alt="Amensisa & Partners" 
+                      alt="Lemma Amensisa" 
                       className="w-11 h-11 rounded-full object-cover object-top border-2 border-[#D3AE36] shadow-sm shrink-0" 
                     />
                     <div>
                       <span className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] block leading-tight">
-                        {settings.engineerName || 'Amensisa & Partners'}
+                        {settings.engineerName || 'Lemma Amensisa'}
                       </span>
                       <span className="text-[10px] font-mono text-[#D3AE36] font-semibold block mt-0.5">
-                        Civil &amp; Structural Engineering Practice · ASTU SoCEA
+                        ASTU Civil Engineering · Class of 2026
                       </span>
                     </div>
                   </div>
@@ -574,7 +574,7 @@ export const Home = () => {
                 <div className="mt-3 pt-3 border-t border-[#31394D]/20 dark:border-[#31394D]/50 flex items-center justify-between text-[11px] font-mono">
                   <span className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                    Practice Commission 2026
+                    Defense Capstone 2026
                   </span>
                   <span className="text-[#D3AE36] font-bold">
                     EBCS EN 1998 ZONE 4 PASS
@@ -602,13 +602,13 @@ export const Home = () => {
           <div className="mx-auto max-w-3xl text-center mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              Corporate Practice Disciplines &amp; Numerical Verification
+              ASTU Civil Engineering Capabilities & Rigor
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Analyze. Calculate. <span className="text-[#D3AE36]">Deliver.</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-              Precision finite element mechanics, highway corridor alignments, and geotechnical simulations engineered by <strong className="text-[#D3AE36] font-bold">Amensisa &amp; Partners</strong>.
+              Precision finite element mechanics, highway alignments, and geotechnical simulations engineered by <strong className="text-[#D3AE36] font-bold">ASTU 5th-year civil engineering brothers</strong>.
             </p>
           </div>
 
@@ -857,16 +857,16 @@ export const Home = () => {
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] w-max font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                Practice Leadership &amp; Engineering Partnership
+                Academic Journey & Engineering Brotherhood
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                A Modern Engineering Practice <span className="text-[#D3AE36]">Rooted in Academic Rigor &amp; Field Execution.</span>
+                Civil Engineering Built on <span className="text-[#D3AE36]">Practical Construction &amp; Rigor.</span>
               </h2>
 
               {/* Editorial Lead Paragraph */}
               <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed">
-                Operating from <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>, Amensisa &amp; Partners unites specialized practice leads across structural dynamics, highway geometric alignments, geotechnical soil mitigation, and site construction QA/QC.
+                At <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>, our 5-year curriculum fuses advanced structural modeling with real on-site field practice. Graduating as civil engineering brothers, we turn complex design codes into durable, buildable physical assets.
               </p>
 
               {/* 2-Column Technical Experience DIV Cards */}
@@ -879,7 +879,7 @@ export const Home = () => {
                     </span>
                   </div>
                   <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed">
-                    Multidisciplinary engineering capstone projects compliant with <span className="text-[#D3AE36] font-semibold">EBCS EN 1990–1998</span> and ERA geometric road standards.
+                    5th-year multidisciplinary capstone projects compliant with <span className="text-[#D3AE36] font-semibold">EBCS EN 1990–1998</span> and ERA geometric road standards.
                   </p>
                 </div>
 
@@ -887,11 +887,11 @@ export const Home = () => {
                   <div className="flex items-center gap-2 mb-2">
                     <HardHat className="text-[#D3AE36] w-5 h-5 shrink-0" />
                     <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
-                      OCC Site Operations
+                      OCC Site Supervision
                     </span>
                   </div>
                   <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed">
-                    Industrial field operations at <span className="text-[#D3AE36] font-semibold">Oromia Construction Corp</span> — supervising concrete batching, slump cone QC, and Total Station setting-out.
+                    Industrial internships at <span className="text-[#D3AE36] font-semibold">Oromia Construction Corp</span> — supervising concrete batching, slump cone QC, and Total Station setting-out.
                   </p>
                 </div>
               </div>
@@ -902,7 +902,7 @@ export const Home = () => {
                   “Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction.”
                 </p>
                 <div className="mt-2 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider font-bold">
-                  — Eng. Lemma Amensisa &amp; Partners, ASTU SoCEA Division
+                  — Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort
                 </div>
               </div>
 
@@ -933,20 +933,20 @@ export const Home = () => {
                   to="/about"
                   className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all flex items-center gap-2 font-bold shadow-md shadow-[#D3AE36]/20"
                 >
-                  Firm Profile &amp; Governance <ArrowUpRight size={14} />
+                  Full Academic Profile <ArrowUpRight size={14} />
                 </Link>
                 <Link
                   to="/about#brotherhood"
                   className="rounded-full bg-[#FFFFFF] dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:border-[#D3AE36] border border-[#31394D]/30 dark:border-[#31394D] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
                 >
                   <Users size={14} className="text-[#D3AE36]" />
-                  <span>Meet Our Practice Leads</span>
+                  <span>Meet Our Brotherhood Cohort</span>
                 </Link>
                 <a
                   href="/resources"
                   className="rounded-full text-[#1E2025] dark:text-[#F8F9FA]/80 hover:text-[#D3AE36] px-5 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2"
                 >
-                  Practice Profile (PDF) <Download size={14} />
+                  CV (PDF) <Download size={14} />
                 </a>
               </div>
             </div>
@@ -964,13 +964,13 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                Corporate Practice Disciplines &amp; Delivery
+                Core Capabilities & Practice
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Comprehensive Civil &amp; Structural <span className="text-[#D3AE36]">Consultancy Services.</span>
+                Core Civil Engineering <span className="text-[#D3AE36]">Specializations &amp; Capstones.</span>
               </h2>
               <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
-                Full-scope structural modeling, transportation corridor geometry, geotechnical soil mitigation, and on-site QA/QC developed under rigorous Ethiopian standards.
+                Comprehensive structural analysis, highway geometric modeling, and geotechnical evaluations developed at ASTU.
               </p>
             </div>
             <Link to="/services" className="text-xs font-bold uppercase tracking-widest text-[#D3AE36] hover:text-[#1E2025] transition-colors flex items-center gap-2 dark:hover:text-[#F8F9FA]">
@@ -1039,20 +1039,20 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                Featured Engineering Commissions &amp; Dossiers
+                ASTU Capstone &amp; Field Practice
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Landmark Infrastructure <span className="text-[#D3AE36]">Commissions.</span>
+                Featured Civil Engineering <span className="text-[#D3AE36]">Capstones.</span>
               </h2>
               <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
-                A selection of stamped reinforced concrete structures, highway transit links, and expansive soil foundations engineered by Amensisa &amp; Partners.
+                Showcase of verified structural designs, highway link models, and expansive soil foundations engineered at ASTU.
               </p>
             </div>
             <Link 
               to="/projects" 
               className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 w-max"
             >
-              Browse All Commissions <ChevronRight size={14} />
+              Browse All Projects <ChevronRight size={14} />
             </Link>
           </div>
 
@@ -1080,7 +1080,7 @@ export const Home = () => {
                       </span>
                     </div>
                     <div className="absolute bottom-3 right-3 text-[9px] font-mono text-white bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full font-semibold border border-white/10">
-                      COMMISSION DOSSIER · {proj.year}
+                      ASTU CAPSTONE · {proj.year}
                     </div>
                   </div>
 
@@ -1157,10 +1157,10 @@ export const Home = () => {
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              Amensisa &amp; Partners Multi-Layer CAD &amp; FEA Telemetry Board
+              ASTU Multi-Layer CAD &amp; FEA Telemetry Board
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
-              Interactive Practice <span className="text-[#D3AE36]">Dossier &amp; Structural Inspector.</span>
+              Interactive Capstone <span className="text-[#D3AE36]">Dossier &amp; Structural Inspector.</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
               Toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles with certified code verification markers.
@@ -1185,10 +1185,10 @@ export const Home = () => {
                 Academic &amp; Field Endorsements
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Faculty &amp; Practice <span className="text-[#D3AE36]">Endorsements.</span>
+                Faculty &amp; Peer <span className="text-[#D3AE36]">Endorsements.</span>
               </h2>
               <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
-                Recommendations and corporate endorsements from ASTU faculty, regional engineering authorities, and practice partners.
+                Recommendations and academic reviews from ASTU faculty, internship supervisors, and student brothers.
               </p>
             </div>
 
@@ -1290,7 +1290,7 @@ export const Home = () => {
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">Amensisa &amp; Partners · 100% Code Verified</h4>
+                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30">
                     VERIFIED
                   </span>
@@ -1302,7 +1302,7 @@ export const Home = () => {
               to="/contact"
               className="rounded-full bg-[#D3AE36] text-[#12151C] px-6 py-3.5 text-xs font-mono font-extrabold tracking-widest uppercase hover:bg-[#C29F2F] transition-all shrink-0 inline-flex items-center gap-2 shadow-sm active:scale-95"
             >
-              Initiate RFP <ArrowUpRight size={14} />
+              Connect With Us <ArrowUpRight size={14} />
             </Link>
           </div>
 
@@ -1318,7 +1318,7 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                Amensisa Practice Research &amp; Technical Whitepapers
+                ASTU Student Research &amp; Technical Notes
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Technical Notes &amp; <span className="text-[#D3AE36]">Research Papers.</span>
@@ -1367,13 +1367,13 @@ export const Home = () => {
           <div className="text-center mb-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              Commission Inquiries &amp; Corporate Advisory Desk
+              Academic &amp; Graduate Opportunities
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
-              Ready to Build? <span className="text-[#D3AE36]">Retain Amensisa &amp; Partners.</span>
+              Have Inquiries? <span className="text-[#D3AE36]">Connect with Our Team!</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
-              Inquire about commercial engineering commissions, municipal highway design packages, structural safety audits, or resident site QA/QC supervision.
+              Inquire about 2026 graduate engineer recruitment, B.Sc. capstone collaborations, or civil engineering consulting.
             </p>
           </div>
 

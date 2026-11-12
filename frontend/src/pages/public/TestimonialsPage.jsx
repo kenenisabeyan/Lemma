@@ -29,44 +29,44 @@ export const TestimonialsPage = () => {
     {
       id: '1',
       clientName: 'Dr. Dawit Mengistu, PhD',
-      clientRole: 'Faculty Chair & Structural Research Lead',
+      clientRole: 'Associate Professor & Capstone Advisor',
       clientCompany: 'ASTU School of Civil Engineering & Architecture (SoCEA)',
       category: 'Academic Faculty',
       avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80',
-      content: 'Eng. Lemma Amensisa and his multidisciplinary practice partners demonstrated exemplary structural rigor on their B+G+10 RC tower commission. Their mastery of ETABS seismic modeling per EBCS EN 1998 sets a benchmark for national infrastructure engineering.',
+      content: 'Lemma Amensisa and his 5th-year brothers demonstrated exemplary structural rigor on their B+G+10 RC tower capstone. Their mastery of ETABS seismic modeling per EBCS EN 1998 sets a benchmark for graduating engineers.',
       rating: 5
     },
     {
       id: '2',
       clientName: 'Eng. Tigist Bekele, PE',
-      clientRole: 'Senior Resident Highway Engineer',
+      clientRole: 'Senior Highway Design Engineer',
       clientCompany: 'Oromia Construction Corporation (OCC)',
       category: 'Industry Mentors',
       avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-      content: 'During industrial corridor assignments with Oromia Construction Corporation (OCC), Lemma and his practice leads engineered highway corridor alignments using AutoCAD Civil 3D and verified earthwork balancing with exceptional adherence to ERA 2024 standards.',
+      content: 'During their university internship, Lemma and his team performed highway corridor alignments using AutoCAD Civil 3D and verified earthwork balancing with exceptional attention to ERA standards.',
       rating: 5
     },
     {
       id: '3',
       clientName: 'Yonas Tadesse',
-      clientRole: 'Principal Structural FEA Partner',
-      clientCompany: 'Amensisa & Partners · ASTU SoCEA Division',
-      category: 'Practice Partners',
+      clientRole: '5th Year Civil Engineering Colleague',
+      clientCompany: 'ASTU SoCEA Brotherhood · Class of 2026',
+      category: 'Student Cohort',
       avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80',
-      content: 'Partnering with Lemma across high-order computational structural mechanics, advanced surveying field operations, and multidisciplinary FEA modeling has built an elite engineering practice rooted in absolute rigor.',
+      content: 'Collaborating with Lemma across 5 years of rigorous structural mechanics, surveying field camps, and late-night capstone modeling built an unbreakable brotherhood of engineering excellence.',
       rating: 5
     }
   ];
 
   const testimonials = data?.testimonials?.length ? data.testimonials : defaultTestimonials;
-  const categories = ['All', 'Academic Faculty', 'Industry Mentors', 'Practice Partners'];
+  const categories = ['All', 'Academic Faculty', 'Industry Mentors', 'Student Cohort'];
 
   const filteredTestimonials = testimonials.filter(t => {
     const roleMatches = selectedCategory === 'All' || 
       t.category === selectedCategory ||
       (selectedCategory === 'Academic Faculty' && (t.category === 'Academic Faculty' || t.clientRole?.toLowerCase().includes('professor') || t.clientCompany?.toLowerCase().includes('astu'))) ||
       (selectedCategory === 'Industry Mentors' && (t.category === 'Industry Mentors' || t.clientRole?.toLowerCase().includes('engineer') || t.clientCompany?.toLowerCase().includes('oromia') || t.clientCompany?.toLowerCase().includes('corporation'))) ||
-      (selectedCategory === 'Practice Partners' && (t.category === 'Practice Partners' || t.clientRole?.toLowerCase().includes('partner') || t.clientCompany?.toLowerCase().includes('amensisa')));
+      (selectedCategory === 'Student Cohort' && (t.category === 'Student Cohort' || t.clientRole?.toLowerCase().includes('colleague') || t.clientCompany?.toLowerCase().includes('brotherhood')));
 
     const textMatches = searchQuery === '' ||
       t.clientName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -151,7 +151,7 @@ export const TestimonialsPage = () => {
               >
                 <div className="space-y-2 max-w-xl">
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
-                    Verified industry &amp; academic endorsements for <strong className="text-[#D3AE36] font-bold">Amensisa &amp; Partners · ASTU SoCEA Civil Engineering Division</strong>. Evaluations by university professors, structural consultants, and highway contractors.
+                    Verified industry &amp; academic endorsements for <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort</strong>. Evaluations by university professors, structural consultants, and highway contractors.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
@@ -159,7 +159,7 @@ export const TestimonialsPage = () => {
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Faculty:</strong> 5.0★ Structural Rigor
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Faculty:</strong> 5.0★ Capstone Rigor
                       </span>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
@@ -293,7 +293,7 @@ export const TestimonialsPage = () => {
                     if (t.category === cat) return true;
                     if (cat === 'Academic Faculty' && (t.category === 'Academic Faculty' || t.clientRole?.toLowerCase().includes('professor') || t.clientCompany?.toLowerCase().includes('astu'))) return true;
                     if (cat === 'Industry Mentors' && (t.category === 'Industry Mentors' || t.clientRole?.toLowerCase().includes('engineer') || t.clientCompany?.toLowerCase().includes('oromia') || t.clientCompany?.toLowerCase().includes('corporation'))) return true;
-                    if (cat === 'Practice Partners' && (t.category === 'Practice Partners' || t.clientRole?.toLowerCase().includes('partner') || t.clientCompany?.toLowerCase().includes('amensisa'))) return true;
+                    if (cat === 'Student Cohort' && (t.category === 'Student Cohort' || t.clientRole?.toLowerCase().includes('colleague') || t.clientCompany?.toLowerCase().includes('brotherhood')));
                     return false;
                   }).length;
               const isSelected = selectedCategory === cat;
@@ -412,19 +412,22 @@ export const TestimonialsPage = () => {
         {/* ======================================================================= */}
         <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Amensisa &amp; Partners · Corporate Endorsements</span>
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
-              Retain <span className="text-[#D3AE36]">Amensisa &amp; Partners</span> for Infrastructure Delivery
+              Collaborate with Our <span className="text-[#D3AE36]">ASTU Civil Engineering Cohort</span>
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-              Whether you represent a municipal commissioning authority, an infrastructure developer, or a contractor requiring finite element verification and on-site QA/QC, Amensisa &amp; Partners is prepared to execute.
+              Whether you represent an engineering consultancy seeking top graduating talent or a project team needing capstone modeling, Lemma and the brothers are ready to contribute.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
-            Initiate Commission RFP <ArrowUpRight size={15} className="text-[#12151C]" />
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
+          </button>
+        </div>
+            Connect With Brothers <ArrowUpRight size={15} className="text-[#D3AE36]" />
           </button>
         </div>
 

@@ -31,7 +31,7 @@ export const ServicesPage = () => {
       title: 'Structural RC & Multi-Story Framing Design',
       icon: 'Building2',
       summary: 'Advanced 3D linear and dynamic modeling for multi-story residential, commercial, and mixed-use structures.',
-      description: 'Comprehensive computational structural engineering from architectural schematics through structural framing details in ETABS and SAP2000, ensuring seismic safety under EBCS EN 1998 (Zone 4) and EBCS EN 1992.',
+      description: 'Comprehensive analysis from architectural schematics through structural framing details in ETABS and SAP2000, ensuring seismic safety under EBCS EN 1998 (Zone 4) and EBCS EN 1992.',
       features: '["3D finite element structural analysis in ETABS & SAP2000","Reinforced concrete shear wall & moment frame detailing","Earthquake response spectrum analysis (EBCS EN 1998 Zone 4)","Complete structural drawing packages & bar bending schedules"]'
     },
     {
@@ -39,7 +39,7 @@ export const ServicesPage = () => {
       title: 'Highway Geometric & Pavement Engineering',
       icon: 'Layers',
       summary: 'Road alignment design, earthwork mass-haul balancing, and flexible pavement structure design in AutoCAD Civil 3D.',
-      description: 'Field-tested geometric route design adhering to Ethiopian Roads Administration (ERA 2024) manuals, optimizing cut-fill volumes and drainage cross-sections.',
+      description: 'Field-tested geometric route design adhering to Ethiopian Roads Administration (ERA) manuals, optimizing cut-fill volumes and drainage cross-sections.',
       features: '["AutoCAD Civil 3D corridor modeling & digital terrain modeling","Horizontal & vertical curve optimization with super-elevation","Flexible & rigid pavement thickness design per ERA manuals","Culvert sizing, side drains, and hydrological runoff routing"]'
     },
     {
@@ -55,7 +55,7 @@ export const ServicesPage = () => {
       title: 'Practical Site Supervision & Concrete QC',
       icon: 'Ruler',
       summary: 'On-site concrete slump testing, rebar spacing checks, Total Station setting out, and formwork inspections.',
-      description: 'Resident construction site supervision and QA/QC operations gained through industrial engagements with Oromia Construction Corporation (OCC) and ASTU surveying practice. Ensuring engineering specifications are executed with strict precision and safety.',
+      description: 'Hands-on construction site supervision gained through industrial internships at Oromia Construction Corporation (OCC) and ASTU surveying field camps. Ensuring drawings are translated into physical construction with strict safety.',
       features: '["Concrete batching oversight & slump cone workability testing","Pre-pour rebar placement, lap length, and cover block inspection","Total Station column grid setting out and elevation control","Quantity surveying, daily work logs, and material reconciliation"]'
     }
   ];
@@ -65,13 +65,13 @@ export const ServicesPage = () => {
       title: 'Structural RC & ETABS FEA',
       short: 'EBCS EN 1992/1998 3D dynamic simulations & framing',
       icon: Building2,
-      metric: 'B+G+10 Structural FEA'
+      metric: 'B+G+10 Capstone'
     },
     {
       title: 'Highway Civil 3D & ERA',
       short: 'Route geometry, super-elevation & pavement layers',
       icon: Layers,
-      metric: '45 km Corridor Geometry'
+      metric: '45 km Trunk Route'
     },
     {
       title: 'Geotechnical & Soils',
@@ -83,7 +83,7 @@ export const ServicesPage = () => {
       title: 'Surveying & Site Engineering',
       short: 'Total Station topography, GPS & field layout camps',
       icon: Ruler,
-      metric: 'OCC Site QA/QC'
+      metric: 'ASTU Field Camps'
     }
   ];
 
@@ -135,16 +135,12 @@ export const ServicesPage = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="space-y-1 sm:space-y-2"
               >
-                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-3.5 py-1 text-[11px] font-mono text-[#D3AE36] shadow-xs mb-1 font-bold">
-                  <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                  AMENSISA &amp; PARTNERS · PRACTICE DISCIPLINES
-                </div>
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   <span className="text-zinc-900 dark:text-zinc-100 block select-text">
-                    Engineering Practice Disciplines
+                    Comprehensive
                   </span>
                   <span className="text-[#D3AE36] block select-text">
-                    &amp; Technical Advisory Services.
+                    Civil &amp; Structural Solutions.
                   </span>
                 </h1>
               </motion.div>
@@ -160,15 +156,15 @@ export const ServicesPage = () => {
                   <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      Amensisa Practice · ASTU SoCEA Division
+                      ASTU SoCEA Specialization Suite
                     </span>
                     <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 rounded-full">
-                      EBCS &amp; ERA Verified
+                      Class of 2026
                     </span>
                   </div>
 
                   <p className="text-[#1E2025] dark:text-[#F8F9FA] font-medium text-xs sm:text-sm leading-relaxed text-left">
-                    Amensisa &amp; Partners provides multidisciplinary civil and structural engineering advisory services compliant with Ethiopian Building Code Standards (EBCS EN 1990–1998) and ERA 2024 design manuals.
+                    ASTU 5th-year civil engineering team delivering structural, highway, and geotechnical solutions compliant with EBCS and ERA standards.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
@@ -200,7 +196,7 @@ export const ServicesPage = () => {
                   onClick={() => navigate('/contact')}
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
                 >
-                  <span>REQUEST PROPOSAL (RFP)</span>
+                  <span>CONNECT WITH US</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </button>
 
@@ -223,15 +219,15 @@ export const ServicesPage = () => {
               >
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">4</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Practice Disciplines</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Core Disciplines</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
-                  <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">25+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Commissions Done</span>
+                  <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
                 <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Code Compliance</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Readiness</span>
                 </div>
               </motion.div>
 
@@ -328,13 +324,13 @@ export const ServicesPage = () => {
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
             <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-            Practice Disciplines &amp; Delivery Scope
+            Technical Specifications & Scope
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
-            Practice Disciplines &amp; <span className="text-[#D3AE36]">Technical Deliverables.</span>
+            Four Core <span className="text-[#D3AE36]">Engineering Capabilities.</span>
           </h2>
           <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
-            Every deliverable adheres to high-order structural mechanics and finite element verification, delivering code-compliant design packages for Ethiopian public and private infrastructure.
+            Every deliverable adheres to rigorous structural mechanics and finite element verification, delivering code-compliant design packages for Ethiopian infrastructure.
           </p>
         </div>
 
@@ -365,7 +361,7 @@ export const ServicesPage = () => {
                     </div>
                     <div>
                       <span className="inline-block rounded-full bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
-                        Discipline 0{index + 1}
+                        Module 0{index + 1}
                       </span>
                       <h3 className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
                         {srv.title}
@@ -392,7 +388,7 @@ export const ServicesPage = () => {
                         onClick={() => navigate('/contact')}
                         className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(211,174,54,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
                       >
-                        <span>Request Technical Proposal (RFP)</span>
+                        <span>Request Service Consultation</span>
                         <ArrowUpRight size={14} />
                       </button>
                     </div>
@@ -415,20 +411,20 @@ export const ServicesPage = () => {
           <div className="text-left max-w-2xl space-y-2">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Corporate Inquiries &amp; Commission RFP Desk</span>
+              <span>Available for Technical Consultations &amp; Capstone Defense</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Commission a Civil or Structural Engineering Study
+              Require Civil &amp; Structural Engineering Collaboration?
             </h3>
             <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Let&apos;s discuss reinforced concrete FEA analysis, ERA highway alignments, expansive soil foundation design, or comprehensive resident engineering supervision with Amensisa &amp; Partners.
+              Let's discuss reinforced concrete analysis, ERA highway alignments, expansive soil foundation design, or capstone collaborations with our ASTU 5th-year student team.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
-            <span>Initiate Commission RFP</span>
+            <span>Connect With Our Team</span>
             <ArrowUpRight size={15} />
           </button>
         </div>
