@@ -386,7 +386,7 @@ export const Portfolio = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
             <input
               type="text"
-              placeholder="Search capstone, RC frame, highway, soil..."
+              placeholder="Search commission, RC frame, highway, soil..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
@@ -411,7 +411,7 @@ export const Portfolio = () => {
         {filteredProjects.length === 0 ? (
           <div className="py-24 text-center mb-20">
             <HardHat className="w-12 h-12 text-[#D3AE36] mx-auto mb-4 opacity-75" />
-            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No capstone projects match your search.</p>
+            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No engineering commissions match your search.</p>
             <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
@@ -445,7 +445,7 @@ export const Portfolio = () => {
               Interactive Drawing <span className="text-[#D3AE36]">Dossier &amp; FEA Inspector.</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
-              Examine capstone project documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
+              Examine practice engineering documentation layers: toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles.
             </p>
           </div>
 
@@ -459,20 +459,20 @@ export const Portfolio = () => {
           <div className="text-left max-w-2xl space-y-2">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Graduate Recruitment &amp; Capstone Collaborations</span>
+              <span>Corporate Inquiries &amp; Commission RFP Desk</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Interested in Capstone Research or Engineering Recruitment?
+              Commission an Infrastructure Project or Retain Amensisa &amp; Partners
             </h3>
             <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
+              Open for corporate engineering commissions, infrastructure advisory mandates, and technical partnerships on Ethiopian Building Code Standards (EBCS EN) and ERA 2024 implementations.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
           >
-            <span>Connect With Us</span>
+            <span>Initiate Commission RFP</span>
             <ArrowUpRight size={15} />
           </button>
         </div>

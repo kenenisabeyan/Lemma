@@ -120,7 +120,7 @@ export const Contact = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  ASTU Civil Engineering · Direct Consultation &amp; Inquiries
+                  Amensisa &amp; Partners · Corporate Inquiries &amp; Commission RFP Desk
                 </span>
               </motion.div>
 
@@ -132,13 +132,13 @@ export const Contact = () => {
                 className="space-y-1.5"
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
-                  Contact Lemma.{' '}
+                  Commission Inquiries.{' '}
                   <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
-                    ASTU
+                    Civil &amp; Structural
                   </span>
                   <br />
                   <span className="text-[#D3AE36] opacity-95 inline-block">
-                    Amensisa &amp; Brothers.
+                    Amensisa &amp; Partners.
                   </span>
                 </h1>
               </motion.div>
@@ -154,7 +154,7 @@ export const Contact = () => {
                   <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      ASTU SoCEA Direct Channel
+                      Amensisa Practice · ASTU SoCEA Division
                     </span>
                     <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
                       24h Response
@@ -162,7 +162,7 @@ export const Contact = () => {
                   </div>
 
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-xs sm:text-sm leading-relaxed text-left">
-                    Connect directly with <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU 5th-Year Civil Engineering Team</strong>. Available for graduate roles, B.Sc. capstone collaborations, and structural site consultations across Ethiopia.
+                    Connect directly with <strong className="text-[#D3AE36] font-bold">Eng. Lemma Amensisa &amp; Multidisciplinary Practice Partners</strong>. Available for commercial structural FEA commissions, ERA highway route designs, geotechnical site investigations, and resident QA/QC engineering supervision across Ethiopia.
                   </p>
 
                   {/* Toolkit Checkmark Badges */}
@@ -170,13 +170,13 @@ export const Contact = () => {
                     <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Codes:</strong> EBCS EN &amp; ERA Manuals
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Codes:</strong> EBCS EN &amp; ERA 2024
                       </span>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Location:</strong> ASTU Adama Campus
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">HQ Base:</strong> ASTU SoCEA Campus
                       </span>
                     </div>
                   </div>
@@ -194,14 +194,14 @@ export const Contact = () => {
                   href="tel:+251934830919"
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer font-mono"
                 >
-                  <span>Call +251 934 830 919</span>
+                  <span>Call Desk +251 934 830 919</span>
                   <Phone size={15} />
                 </a>
                 <a
                   href="mailto:lemmayezedlij21@gmail.com"
                   className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
                 >
-                  <span>Send Email</span>
+                  <span>Transmit Commission RFP</span>
                   <Mail size={14} className="text-[#D3AE36]" />
                 </a>
               </motion.div>
@@ -214,16 +214,16 @@ export const Contact = () => {
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
+                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5+</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Practice Disciplines</span>
                 </div>
                 <div className="py-2 text-left">
                   <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">24h</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Direct Reply</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">RFP Response</span>
                 </div>
                 <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">ASTU</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Campus</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">100%</span>
+                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Code Compliance</span>
                 </div>
               </motion.div>
 
@@ -257,14 +257,14 @@ export const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Direct Phone Line</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">FEA Live</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Managing Principal Desk</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">Live Direct</span>
                       </div>
                       <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-mono font-bold">
                         +251 934 830 919 · 0934 830 919
                       </p>
                       <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
-                        Direct voice calls, SMS &amp; Telegram message channel.
+                        Direct voice, official commission inquiries &amp; Telegram dispatch.
                       </p>
                     </div>
                   </a>
@@ -279,14 +279,14 @@ export const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Engineering Inquiries</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Corporate Inquiries &amp; RFPs</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/20 text-[#D3AE36] font-bold">Official / 24h</span>
                       </div>
                       <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-mono font-bold truncate">
                         lemmayezedlij21@gmail.com
                       </p>
                       <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
-                        Full structural calculation packages &amp; capstone consultation.
+                        Comprehensive structural calculation packages &amp; commercial project proposals.
                       </p>
                     </div>
                   </a>
@@ -298,14 +298,14 @@ export const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Academic Base</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA] font-bold">SoCEA Campus</span>
+                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Practice Headquarters</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA] font-bold">SoCEA Base</span>
                       </div>
                       <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-bold">
                         School of Civil Engineering &amp; Architecture
                       </p>
                       <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
-                        ASTU Main Campus, Adama, Oromia, Ethiopia.
+                        ASTU Technology Park &amp; Main Campus, Adama, Oromia, Ethiopia.
                       </p>
                     </div>
                   </div>
@@ -316,7 +316,7 @@ export const Contact = () => {
                 <div className="flex items-center justify-between pt-3 mt-3 border-t border-zinc-200/60 dark:border-[#31394D] text-[11px] font-mono text-zinc-500">
                   <span className="flex items-center gap-1.5 truncate">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-700 dark:text-[#F8F9FA]/80">Lemma Amensisa — Structural Inspection Site</span>
+                    <span className="font-bold text-zinc-700 dark:text-[#F8F9FA]/80">Amensisa &amp; Partners — Civil &amp; Structural Engineering Division</span>
                   </span>
                   <span className="text-[10px] text-zinc-400 font-mono">ASTU Live Base</span>
                 </div>
@@ -341,10 +341,10 @@ export const Contact = () => {
             </div>
             <div>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Academic Base
+                Practice Headquarters
               </span>
               <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
-                ASTU SoCEA Main Campus
+                ASTU SoCEA Technology Park
               </h4>
               <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
                 Adama, Oromia, Ethiopia
@@ -359,13 +359,13 @@ export const Contact = () => {
             </div>
             <div>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Phone Numbers
+                Executive Desk Line
               </span>
               <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
                 +251 934 830 919
               </h4>
               <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
-                0934 830 919 (Direct &amp; Telegram)
+                0934 830 919 (Voice &amp; Telegram)
               </p>
             </div>
           </div>
@@ -377,13 +377,13 @@ export const Contact = () => {
             </div>
             <div>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Email Address
+                Commission RFP Desk
               </span>
               <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug truncate max-w-full">
                 lemmayezedlij21@gmail.com
               </h4>
               <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1 truncate max-w-full">
-                Lemma Amensisa Civil Engineering
+                Amensisa &amp; Partners Corporate Desk
               </p>
             </div>
           </div>
@@ -395,13 +395,13 @@ export const Contact = () => {
             </div>
             <div>
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Availability
+                Operating Hours
               </span>
               <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
                 Mon – Sat: 8:30 AM – 6:00 PM
               </h4>
               <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
-                Study &amp; Project Consultations
+                Technical Audits &amp; Client RFPs
               </p>
             </div>
           </div>
@@ -616,7 +616,7 @@ export const Contact = () => {
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us how we can help you with structural calculations, site supervision, or capstone collaboration..."
+                    placeholder="Detail your engineering commission scope (e.g., B+G+10 ETABS dynamic FEA, ERA highway route alignment, foundation geotechnical stabilization, or resident site QA/QC supervision)..."
                     className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] p-4 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
                   ></textarea>
                 </div>
