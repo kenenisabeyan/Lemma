@@ -431,16 +431,13 @@ export const Home = () => {
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0 relative z-10" />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform" />
                 </button>
-                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0 relative z-10" />
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform" />
-                </button>
 
                 {/* Secondary Frosted Pill Button */}
                 <button
                   onClick={() => setIsVideoModalOpen(true)}
                   className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap border border-transparent hover:border-[#31394D]/30 dark:hover:border-[#31394D]"
                 >
-                  <span>WATCH CAPSTONE SHOWREEL</span>
+                  <span>PRACTICE SHOWREEL</span>
                   <Play size={12} className="fill-[#D3AE36] text-[#D3AE36] shrink-0" />
                 </button>
               </motion.div>
@@ -577,7 +574,7 @@ export const Home = () => {
                 <div className="mt-3 pt-3 border-t border-[#31394D]/20 dark:border-[#31394D]/50 flex items-center justify-between text-[11px] font-mono">
                   <span className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                    Defense Capstone 2026
+                    Practice Commission 2026
                   </span>
                   <span className="text-[#D3AE36] font-bold">
                     EBCS EN 1998 ZONE 4 PASS
@@ -1083,7 +1080,7 @@ export const Home = () => {
                       </span>
                     </div>
                     <div className="absolute bottom-3 right-3 text-[9px] font-mono text-white bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full font-semibold border border-white/10">
-                      ASTU CAPSTONE · {proj.year}
+                      COMMISSION DOSSIER · {proj.year}
                     </div>
                   </div>
 
@@ -1160,10 +1157,10 @@ export const Home = () => {
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              ASTU Multi-Layer CAD &amp; FEA Telemetry Board
+              Amensisa &amp; Partners Multi-Layer CAD &amp; FEA Telemetry Board
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
-              Interactive Capstone <span className="text-[#D3AE36]">Dossier &amp; Structural Inspector.</span>
+              Interactive Practice <span className="text-[#D3AE36]">Dossier &amp; Structural Inspector.</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
               Toggle between 3D non-linear stress wireframes, physical architectural finishes, and high-strength rebar / post-tensioning profiles with certified code verification markers.
@@ -1188,10 +1185,10 @@ export const Home = () => {
                 Academic &amp; Field Endorsements
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
-                Faculty &amp; Peer <span className="text-[#D3AE36]">Endorsements.</span>
+                Faculty &amp; Practice <span className="text-[#D3AE36]">Endorsements.</span>
               </h2>
               <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
-                Recommendations and academic reviews from ASTU faculty, internship supervisors, and student brothers.
+                Recommendations and corporate endorsements from ASTU faculty, regional engineering authorities, and practice partners.
               </p>
             </div>
 
@@ -1293,7 +1290,7 @@ export const Home = () => {
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">ASTU 5th-Year Capstone Defense Ready</h4>
+                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA]">Amensisa &amp; Partners · 100% Code Verified</h4>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30">
                     VERIFIED
                   </span>
@@ -1305,7 +1302,7 @@ export const Home = () => {
               to="/contact"
               className="rounded-full bg-[#D3AE36] text-[#12151C] px-6 py-3.5 text-xs font-mono font-extrabold tracking-widest uppercase hover:bg-[#C29F2F] transition-all shrink-0 inline-flex items-center gap-2 shadow-sm active:scale-95"
             >
-              Connect With Us <ArrowUpRight size={14} />
+              Initiate RFP <ArrowUpRight size={14} />
             </Link>
           </div>
 
@@ -1321,7 +1318,7 @@ export const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                ASTU Student Research &amp; Technical Notes
+                Amensisa Practice Research &amp; Technical Whitepapers
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Technical Notes &amp; <span className="text-[#D3AE36]">Research Papers.</span>
@@ -1370,13 +1367,13 @@ export const Home = () => {
           <div className="text-center mb-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-              Academic &amp; Graduate Opportunities
+              Commission Inquiries &amp; Corporate Advisory Desk
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
-              Have Inquiries? <span className="text-[#D3AE36]">Connect with Our Team!</span>
+              Ready to Build? <span className="text-[#D3AE36]">Retain Amensisa &amp; Partners.</span>
             </h2>
             <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
-              Inquire about 2026 graduate engineer recruitment, B.Sc. capstone collaborations, or civil engineering consulting.
+              Inquire about commercial engineering commissions, municipal highway design packages, structural safety audits, or resident site QA/QC supervision.
             </p>
           </div>
 

@@ -31,27 +31,27 @@ export const FaqPage = () => {
   const defaultFaqs = [
     {
       id: '1',
-      question: 'What does the 5th-Year Civil Engineering Capstone at ASTU entail?',
-      answer: 'At Adama Science and Technology University (ASTU) School of Civil Engineering & Architecture (SoCEA), 5th-year students undertake comprehensive capstone engineering theses spanning multi-story reinforced concrete structural analysis, seismic resistance under Rift Valley geology, highway alignment per ERA standards, and geotechnical soil stabilization.',
-      category: 'Capstone & Academics'
+      question: 'What engineering disciplines and commissions does Amensisa & Partners execute?',
+      answer: 'Headquartered through Adama Science and Technology University (ASTU) School of Civil Engineering & Architecture (SoCEA), Amensisa & Partners undertakes multidisciplinary infrastructure commissions spanning multi-story reinforced concrete structural FEA, seismic shear wall resistance under Great Rift Valley Zone 4, highway corridor alignment per ERA 2024 standards, and expansive black cotton soil geotechnical stabilization.',
+      category: 'Practice & Governance'
     },
     {
       id: '2',
-      question: 'How do Lemma Amensisa and the 5th-year student brothers collaborate?',
-      answer: 'Our cohort works as an integrated engineering design team. We combine specialized strengths across ETABS structural modeling, AutoCAD Civil 3D corridor geometry, SAP2000 finite element bridge analysis, and ASTU geotechnical soil mechanics lab testing.',
-      category: 'Student Cohort'
+      question: 'How does Amensisa & Partners organize leadership and multidisciplinary practice divisions?',
+      answer: 'Our practice operates as an integrated corporate engineering firm led by Managing Principal Eng. Lemma Amensisa alongside specialized Practice Leads across Computational Structural FEA, Highway Corridor Infrastructure, Geotechnical & Foundation Works, and Field QA/QC Operations.',
+      category: 'Practice Leadership'
     },
     {
       id: '3',
-      question: 'What building codes and highway standards govern your ASTU engineering designs?',
+      question: 'What building codes and highway standards govern your engineering designs?',
       answer: 'Our engineering work strictly adheres to the Ethiopian Building Code Standards (EBCS EN 1990 to 1998, harmonized with Eurocodes) and Ethiopian Roads Administration (ERA 2013/2024) Geometric, Pavement, and Drainage Design Manuals.',
       category: 'EBCS & Standards'
     },
     {
       id: '4',
-      question: 'Are the ASTU 5th-year candidates available for post-graduation recruitment and project roles?',
-      answer: 'Yes. Our graduating civil engineering cohort (Class of 2026) is completing final thesis defenses and actively seeking structural engineering, highway infrastructure, and construction management roles with engineering consultancies and contractors across Ethiopia.',
-      category: 'Recruitment'
+      question: 'Is Amensisa & Partners available for commercial engineering commissions and technical audits?',
+      answer: 'Yes. Our practice accepts commercial engineering commissions, municipal highway design packages, structural safety audits, and resident engineering supervision across all regions of Ethiopia.',
+      category: 'Commissions & Advisory'
     },
     {
       id: '5',
@@ -62,7 +62,7 @@ export const FaqPage = () => {
   ];
 
   const faqs = (data?.faqs && data.faqs.length > 0) ? data.faqs : defaultFaqs;
-  const categories = ['All', 'Capstone & Academics', 'Student Cohort', 'EBCS & Standards', 'Recruitment', 'Technical Lab'];
+  const categories = ['All', 'Practice & Governance', 'Practice Leadership', 'EBCS & Standards', 'Commissions & Advisory', 'Technical Lab'];
 
   const filteredFaqs = faqs.filter(faq => {
     const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
@@ -108,7 +108,7 @@ export const FaqPage = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-                  ASTU Civil Engineering · 5th Year Capstone &amp; Academic Inquiry FAQ
+                  Amensisa &amp; Partners · Practice FAQ &amp; Technical Governance
                 </span>
               </motion.div>
 
@@ -120,12 +120,12 @@ export const FaqPage = () => {
                 className="space-y-1.5"
               >
                 <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
-                  Demystifying Physics.{' '}
+                  Technical Precision.{' '}
                   <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
                     Clarity
                   </span>
                   <br />
-                  on Codes &amp; <span className="text-[#D3AE36] opacity-95 inline-block">ASTU Civil.</span>
+                  on Codes &amp; <span className="text-[#D3AE36] opacity-95 inline-block">Practice Governance.</span>
                 </h1>
               </motion.div>
 
@@ -138,7 +138,7 @@ export const FaqPage = () => {
               >
                 <div className="space-y-2 max-w-xl">
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed text-left">
-                    Comprehensive technical advisory and academic inquiry guide by <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort</strong>. Unpacking Ethiopian building code standards, finite element methodologies, and post-graduation recruitment.
+                    Comprehensive technical advisory and governance guide by <strong className="text-[#D3AE36] font-bold">Amensisa &amp; Partners · ASTU SoCEA Engineering Division</strong>. Unpacking Ethiopian building code standards, finite element methodologies, and commercial commission scopes.
                   </p>
 
                   {/* Micro-Bullet Highlights */}
@@ -146,7 +146,7 @@ export const FaqPage = () => {
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">ASTU Cohort:</strong> Class of 2026 Candidates
+                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Leadership:</strong> Managing Principal &amp; Practice Leads
                       </span>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
@@ -383,19 +383,19 @@ export const FaqPage = () => {
         {/* ======================================================================= */}
         <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
+            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Amensisa &amp; Partners · Advisory Desk</span>
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
-              Have a Question for Our ASTU Civil Engineering Cohort?
+              Have a Technical Question for Amensisa &amp; Partners?
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-              Whether inquiring about our capstone structural calculation models, highway route designs, or career recruitment opportunities, reach out directly to Lemma and the brothers.
+              Whether inquiring about our structural dynamic calculation models, highway route designs, or commercial commission RFPs, reach out directly to our engineering desk.
             </p>
           </div>
           <button
             onClick={() => navigate('/contact')}
             className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
           >
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
+            Initiate Commission RFP <ArrowUpRight size={15} className="text-[#12151C]" />
           </button>
         </div>
 
