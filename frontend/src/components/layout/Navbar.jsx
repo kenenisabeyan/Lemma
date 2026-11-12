@@ -38,8 +38,8 @@ export const Navbar = () => {
   });
 
   const settings = settingsData?.settings || settingsData || {};
-  const brandName = 'Lemma';
-  const brandSubtitle = 'CIVIL ENG | ASTU';
+  const brandName = 'Amensisa & Partners';
+  const brandSubtitle = 'CIVIL & STRUCTURAL PRACTICE';
   const avatarImage = settings.avatarUrl || lemmaImg;
 
   useEffect(() => {
@@ -56,15 +56,15 @@ export const Navbar = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { num: '01', name: 'Home', path: '/' },
-    { num: '02', name: 'About', path: '/about' },
-    { num: '03', name: 'Services', path: '/services' },
-    { num: '04', name: 'Projects', path: '/projects' },
-    { num: '05', name: 'Experience', path: '/experience' },
-    { num: '06', name: 'Insights', path: '/insights' },
-    { num: '07', name: 'Testimonials', path: '/#testimonials' },
-    { num: '08', name: 'Resources', path: '/resources' },
-    { num: '09', name: 'Contact', path: '/contact' }
+    { num: '01', name: 'The Practice (Home)', path: '/' },
+    { num: '02', name: 'Firm Profile & Leadership', path: '/about' },
+    { num: '03', name: 'Disciplines & Capabilities', path: '/services' },
+    { num: '04', name: 'Commissions & Portfolio', path: '/projects' },
+    { num: '05', name: 'Field Operations & QA/QC', path: '/experience' },
+    { num: '06', name: 'Technical Whitepapers', path: '/insights' },
+    { num: '07', name: 'Advisory & Endorsements', path: '/#testimonials' },
+    { num: '08', name: 'Engineering Standards & Solvers', path: '/resources' },
+    { num: '09', name: 'Commission Inquiries', path: '/contact' }
   ];
 
   return (
@@ -192,10 +192,10 @@ export const Navbar = () => {
                   </button>
                 </div>
 
-                {/* Status Badge */}
+                {/* Corporate Status Badge */}
                 <div className="my-5 flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span>Available for 2026 Graduate Roles, Research & Projects</span>
+                  <span>Amensisa &amp; Partners · ASTU SoCEA Engineering Division</span>
                 </div>
 
                 {/* Navigation Links */}

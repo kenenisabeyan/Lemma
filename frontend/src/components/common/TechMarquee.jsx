@@ -3,20 +3,20 @@ import { ShieldCheck, Cpu } from 'lucide-react';
 
 export const TechMarquee = ({ className = '' }) => {
   const marqueeItems = [
-    { category: 'ASTU CORE', title: 'ASTU SoCEA Brotherhood · Class of 2026' },
-    { category: 'FEA / ETABS', title: 'ETABS 3D Seismic Dynamic Analysis' },
-    { category: 'EBCS CODE', title: 'EBCS EN 1992 Reinforced Concrete Design' },
-    { category: 'SEISMIC', title: 'EBCS EN 1998 Ductility Class High (DCH)' },
-    { category: 'CIVIL 3D', title: 'AutoCAD Civil 3D Road Corridors & Profiles' },
-    { category: 'ERA 2024', title: 'ERA Geometric & Pavement Design Manuals' },
-    { category: 'SITE QC', title: 'OCC Practical Site Supervision & Inspection' },
-    { category: 'SURVEYING', title: 'Digital Total Station Coordinate Topography' },
-    { category: 'MATERIALS', title: 'Concrete Slump & 28-Day Cube Crushing QC' },
-    { category: 'REBAR', title: 'Bar Bending Schedules (BBS) & Detailing' },
-    { category: 'GEOTECH', title: 'Field Density Sand Cone Testing (FDT)' },
-    { category: 'SOIL MECH', title: 'Expansive Black Cotton Soil Chemical Stabilization' },
-    { category: 'BRIDGES', title: 'SAP2000 Prestressed Girder Modeling' },
-    { category: 'DEFENSE', title: 'ASTU Capstone Defense · EBCS Verified' }
+    { category: 'PRACTICE', title: 'Amensisa & Partners · Civil & Structural Consultancy' },
+    { category: 'FEA / ETABS', title: 'ETABS 3D Non-Linear Seismic Dynamic Analysis' },
+    { category: 'EBCS CODES', title: 'EBCS EN 1990–1998 Structural Compliance Certified' },
+    { category: 'SEISMIC', title: 'Ductility Class High (DCH) Drift Ratio < 0.015h Verification' },
+    { category: 'HIGHWAYS', title: 'AutoCAD Civil 3D Highway Corridors & Profiles' },
+    { category: 'ERA 2024', title: 'ERA Geometric & Flexible Pavement Design Manuals' },
+    { category: 'FIELD QA/QC', title: 'OCC Industrial Site Supervision & Pre-Pour Certification' },
+    { category: 'GEODESY', title: 'Digital Total Station Coordinate Setting-Out & Topography' },
+    { category: 'MATERIALS', title: 'Concrete Slump (80–120mm) & 28-Day Compressive Strength QC' },
+    { category: 'REBAR / BBS', title: 'Bar Bending Schedules (BBS) & Ductile Joint Detailing' },
+    { category: 'GEOTECH', title: 'Expansive Black Cotton Clay Chemical Lime Stabilization' },
+    { category: 'FOUNDATIONS', title: 'Mat Raft Sizing & Deep Drilled Caisson Foundations' },
+    { category: 'COMMISSIONS', title: '25+ Multidisciplinary Infrastructure Capstones & Engagements' },
+    { category: 'ACCREDITATION', title: 'ASTU SoCEA Verified Civil Engineering Division' }
   ];
 
   return (

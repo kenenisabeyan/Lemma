@@ -44,28 +44,28 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12">
           
           {/* ----------------------------------------------------------------------- */}
-          {/* COLUMN 1: BRAND LOGO, MISSION & SOCIAL CIRCLE BUTTONS (3.5 cols)        */}
+          {/* COLUMN 1: CORPORATE BRAND LOGO, MISSION & SOCIAL CIRCLE BUTTONS (3 cols) */}
           {/* ----------------------------------------------------------------------- */}
           <div className="lg:col-span-3 xl:col-span-3 flex flex-col items-start gap-4">
             
-            {/* Round Brand Badge & Name */}
+            {/* Corporate Brand Badge & Name */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full bg-[#232936] border border-[#D3AE36]/40 flex items-center justify-center text-[#D3AE36] shrink-0 shadow-inner group-hover:scale-105 group-hover:border-[#D3AE36] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#232936] border border-[#D3AE36]/50 flex items-center justify-center text-[#D3AE36] shrink-0 shadow-inner group-hover:scale-105 group-hover:border-[#D3AE36] transition-all">
                 <Building2 className="w-6 h-6 text-[#D3AE36]" />
               </div>
               <div className="flex flex-col text-left">
                 <span className="font-black text-xl tracking-tight text-[#F8F9FA] leading-tight group-hover:text-[#D3AE36] transition-colors">
-                  Lemma <span className="font-light text-[#F8F9FA]/80">Amensisa</span>
+                  AMENSISA <span className="font-light text-[#F8F9FA]/80">&amp; PARTNERS</span>
                 </span>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#D3AE36] font-extrabold">
-                  CIVIL ENG · ASTU
+                  CIVIL &amp; STRUCTURAL PRACTICE
                 </span>
               </div>
             </Link>
 
-            {/* Mission Statement */}
+            {/* Corporate Mission Statement */}
             <p className="text-[#F8F9FA]/75 text-xs sm:text-sm leading-relaxed max-w-sm mt-1">
-              Designing resilient reinforced concrete structures, highway transit corridors, and expansive soil foundations across Ethiopia. Graduating student engineer at ASTU SoCEA.
+              Delivering resilient reinforced concrete structures, transportation corridors, and geotechnical solutions across Ethiopia. Operating as a unified multidisciplinary engineering practice from ASTU School of Civil Engineering &amp; Architecture.
             </p>
 
             {/* Social Platform Circular Buttons */}
@@ -111,11 +111,11 @@ export const Footer = () => {
           </div>
 
           {/* ----------------------------------------------------------------------- */}
-          {/* COLUMN 2: CONTACT & UPDATES + NEWSLETTER BAR (3.5 cols)                 */}
+          {/* COLUMN 2: HEADQUARTERS & PRACTICE DISPATCH (3 cols)                     */}
           {/* ----------------------------------------------------------------------- */}
           <div className="lg:col-span-3 xl:col-span-3 flex flex-col gap-3.5">
             <h4 className="text-[#F8F9FA] font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 mb-1">
-              <span className="text-[#D3AE36] font-black text-base">|</span> CONTACT &amp; UPDATES
+              <span className="text-[#D3AE36] font-black text-base">|</span> PRACTICE DISPATCH
             </h4>
 
             {/* Email */}
@@ -136,7 +136,7 @@ export const Footer = () => {
                 <a href="tel:+251934830919" className="hover:underline hover:text-[#D3AE36] text-[#F8F9FA] font-semibold transition-colors">
                   +251 934 830 919
                 </a>
-                <span className="text-[#F8F9FA]/60 text-[11px]">0934 830 919 (Direct &amp; Telegram)</span>
+                <span className="text-[#F8F9FA]/60 text-[11px]">Direct Executive &amp; Telegram Desk</span>
               </div>
             </div>
 
@@ -144,14 +144,14 @@ export const Footer = () => {
             <div className="flex items-start gap-2.5 text-xs text-[#F8F9FA]/85">
               <MapPin size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
               <span className="text-[#F8F9FA]/80 leading-relaxed">
-                ASTU SoCEA Main Campus, Adama, Oromia, Ethiopia
+                ASTU SoCEA Campus, Adama / Addis Ababa Corridor, Ethiopia
               </span>
             </div>
 
             {/* Newsletter Subscription Bar */}
             <div className="mt-2 pt-2 border-t border-[#232936]">
               <span className="text-[10px] font-mono uppercase font-bold text-[#F8F9FA] tracking-wider block mb-2">
-                SUBSCRIBE TO ENGINEERING BRIEFS
+                SUBSCRIBE TO PRACTICE WHITEPAPERS
               </span>
               <form onSubmit={handleNewsletterSubmit} className="relative flex items-center max-w-sm">
                 <input
@@ -159,20 +159,20 @@ export const Footer = () => {
                   required
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="Enter email.."
+                  placeholder="Enter corporate email.."
                   className="w-full bg-[#232936] border border-[#232936] focus:border-[#D3AE36] rounded-xl px-4 py-2 text-xs text-[#F8F9FA] placeholder:text-[#F8F9FA]/40 focus:outline-none transition-all pr-11"
                 />
                 <button
                   type="submit"
                   className="absolute right-1 w-7 h-7 rounded-lg bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] flex items-center justify-center transition-all shadow-sm cursor-pointer"
-                  title="Subscribe to Engineering Briefs"
+                  title="Subscribe to Practice Briefs"
                 >
                   <Send size={12} className="rotate-45" />
                 </button>
               </form>
               {subscribed && (
                 <span className="text-[11px] font-semibold text-[#D3AE36] mt-1.5 block">
-                  ✓ Subscribed! You will receive engineering insights.
+                  ✓ Subscribed! You will receive engineering briefs.
                 </span>
               )}
             </div>
@@ -180,89 +180,52 @@ export const Footer = () => {
           </div>
 
           {/* ----------------------------------------------------------------------- */}
-          {/* COLUMN 3: QUICK LINKS (SPLIT INTO 2 SUBCOLUMNS) (3.5 cols)              */}
+          {/* COLUMN 3: PRACTICE DIVISIONS (3 cols)                                   */}
           {/* ----------------------------------------------------------------------- */}
           <div className="lg:col-span-3 xl:col-span-3 flex flex-col">
             <h4 className="text-[#F8F9FA] font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 mb-3.5">
-              <span className="text-[#D3AE36] font-black text-base">|</span> QUICK LINKS
+              <span className="text-[#D3AE36] font-black text-base">|</span> PRACTICE DIVISIONS
             </h4>
 
             {/* Double Subcolumn List with Arrows */}
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-xs text-[#F8F9FA]/80">
-              <Link to="/" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Home
+            <div className="grid grid-cols-1 gap-y-2.5 text-xs text-[#F8F9FA]/80">
+              <Link to="/services" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
+                <span className="text-[#D3AE36]">→</span> Structural RC &amp; High-Rise Design (ETABS)
               </Link>
               <Link to="/services" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Services
+                <span className="text-[#D3AE36]">→</span> Highway Corridors &amp; Pavements (ERA 2024)
               </Link>
-
               <Link to="/services" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Solutions
+                <span className="text-[#D3AE36]">→</span> Geotechnical &amp; Soil Mechanics (EBCS 7)
+              </Link>
+              <Link to="/experience" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
+                <span className="text-[#D3AE36]">→</span> Field Operations &amp; Site QA/QC (OCC Sites)
+              </Link>
+              <Link to="/projects" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
+                <span className="text-[#D3AE36]">→</span> Infrastructure Commissions Archive
               </Link>
               <Link to="/resources" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Structural Codes
-              </Link>
-
-              <Link to="/projects" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Portfolio
-              </Link>
-              <Link to="/about" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Our Methodology
-              </Link>
-
-              <Link to="/about" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Why Choose Us
-              </Link>
-              <Link to="/#testimonials" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Faculty Mentors
-              </Link>
-
-              <Link to="/experience" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Supervisors
-              </Link>
-              <Link to="/experience" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Recruiter Hub
-              </Link>
-
-              <Link to="/about#brotherhood" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Brotherhood
-              </Link>
-              <Link to="/insights" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Technical Media
-              </Link>
-
-              <Link to="/projects" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Showreel
-              </Link>
-              <Link to="/contact" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Estimator <span className="text-[10px]">↗</span>
-              </Link>
-
-              <Link to="/about" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> About Us
-              </Link>
-              <Link to="/contact" className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-0.5 transition-transform">
-                <span className="text-[#D3AE36]">→</span> Contact Us
+                <span className="text-[#D3AE36]">→</span> Structural Calculators &amp; Code Manuals
               </Link>
             </div>
           </div>
 
           {/* ----------------------------------------------------------------------- */}
-          {/* COLUMN 4: CAPABILITIES (2 cols)                                         */}
+          {/* COLUMN 4: CODE ACCREDITATIONS & VERIFICATION (3 cols)                   */}
           {/* ----------------------------------------------------------------------- */}
           <div className="lg:col-span-3 xl:col-span-3 flex flex-col">
             <h4 className="text-[#F8F9FA] font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 mb-3.5">
-              <span className="text-[#D3AE36] font-black text-base">|</span> CAPABILITIES
+              <span className="text-[#D3AE36] font-black text-base">|</span> ACCREDITATIONS &amp; CODES
             </h4>
 
             <ul className="flex flex-col gap-2.5 text-xs text-[#F8F9FA]/80">
-              <li className="hover:text-[#D3AE36] transition-colors">Reinforced Concrete Design (EBCS EN 1992)</li>
-              <li className="hover:text-[#D3AE36] transition-colors">ETABS &amp; SAP2000 FEA Modeling</li>
-              <li className="hover:text-[#D3AE36] transition-colors">Highway Corridor Alignment (ERA 2024)</li>
-              <li className="hover:text-[#D3AE36] transition-colors">Expansive Soil Foundation Mitigation</li>
-              <li className="hover:text-[#D3AE36] transition-colors">Seismic &amp; Dynamic Response Analysis</li>
-              <li className="hover:text-[#D3AE36] transition-colors">Capstone Defense &amp; BBS Detailing</li>
-              <li className="hover:text-[#D3AE36] transition-colors">Quantity Surveying &amp; Site Supervision</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ EBCS EN 1990 — Basis of Structural Design</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ EBCS EN 1992 — Reinforced Concrete Framing</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ EBCS EN 1998 — Seismic Ductility (Zone 4)</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ ERA 2024 — Geometric &amp; Pavement Manuals</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ Total Station Coordinate Setting-Out</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ ASTM Concrete Slump &amp; Cube Testing</li>
+              <li className="hover:text-[#D3AE36] transition-colors">✦ ASTU SoCEA Certified Defense Ready</li>
             </ul>
           </div>
 
@@ -273,22 +236,22 @@ export const Footer = () => {
         {/* ========================================================================= */}
         <div className="pt-6 border-t border-[#232936] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#F8F9FA]/70">
           <p className="text-center md:text-left">
-            &copy; {new Date().getFullYear()} Lemma Amensisa. All rights reserved. Built with precision civil engineering.
+            &copy; {new Date().getFullYear()} Amensisa &amp; Partners. All rights reserved. ASTU School of Civil Engineering &amp; Architecture.
           </p>
 
           <div className="flex items-center gap-6 text-xs">
             <Link to="/about" className="hover:text-[#D3AE36] transition-colors">
-              Privacy Policy
+              Practice Governance
             </Link>
             <Link to="/about" className="hover:text-[#D3AE36] transition-colors">
-              Terms of Service
+              Code Compliance
             </Link>
             <Link 
               to="/admin/login" 
               className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 font-bold text-[#F8F9FA]"
             >
               <ShieldCheck size={14} className="text-[#D3AE36]" />
-              <span>Admin Portal</span>
+              <span>Executive Portal</span>
             </Link>
             <button
               onClick={scrollToTop}
