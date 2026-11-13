@@ -84,7 +84,7 @@ export const Contact = () => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC CONTACT HERO SECTION (MATCHING RESOURCESPAGE TOOLKIT DESIGN)  */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
         
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">

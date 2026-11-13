@@ -122,7 +122,7 @@ Phone: +251 934 830 919
       {/* ========================================================================= */}
       {/* 1. CINEMATIC RESOURCES & TOOLKIT HERO SECTION                             */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
         
         {/* Ambient Sheen & Radiant Studio Lights */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
