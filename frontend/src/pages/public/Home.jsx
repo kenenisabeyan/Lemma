@@ -306,35 +306,25 @@ export const Home = () => {
           {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-white dark:bg-[#12151C] bg-cad-grid transition-colors">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
         
-        {/* Luminous White Glass Frosted Sheen & Reflection Layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-
-        {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
-        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
-          {/* Subtle Ambient Studio Light (Wine & Gold) */}
-          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none"></div>
-          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none"></div>
+        {/* Architectural 3D Three.js Civil Engineering Simulation - Pure Primary Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-auto">
+          {/* Subtle Ambient Studio Light */}
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.03] dark:bg-[#D3AE36]/10 blur-[140px] pointer-events-none"></div>
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.03] dark:bg-[#D3AE36]/10 blur-[120px] pointer-events-none"></div>
           
-          {/* 3D Interactive Three.js High-Rise Civil Engineering Process Model (Subtle Atmospheric Ambient) */}
-          <div className="absolute inset-0 opacity-30 dark:opacity-40">
+          {/* 3D Interactive Three.js High-Rise Civil Engineering Process Model */}
+          <div className="absolute inset-0 opacity-95 dark:opacity-100">
             <Hero3DCanvas />
           </div>
 
-          {/* Precision Blueprint Vignette Edge Fade - subtle bottom transition only */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
+          {/* Soft Vignette Edge Fade at bottom only */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#F8F9FA] dark:from-[#12151C] to-transparent pointer-events-none"></div>
         </div>
 
-        {/* Floating Accent Ring */}
-        <div 
-          aria-hidden="true" 
-          className="pointer-events-none absolute top-[28%] left-[16%] sm:left-[24%] w-3 h-3 rounded-full bg-[#D3AE36]/40 animate-pulse hidden sm:block z-10"
-        />
-
         {/* Hero Content Container - Split 2-Column Professional Architecture */}
-        <div className="relative z-30 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-8 select-text">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-8 select-text pointer-events-none">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
             
             {/* --------------------------------------------------------------- */}
@@ -342,8 +332,8 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
-              {/* Status Badge Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/30 shadow-xs text-xs font-mono font-bold text-[#D3AE36]">
+              {/* Status Badge - Borderless, Clean Typography */}
+              <div className="inline-flex items-center gap-2 py-1 text-xs font-mono font-bold text-[#D3AE36] pointer-events-auto">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                 <span>ASTU SoCEA Civil Engineering · Class of 2026</span>
               </div>
@@ -366,48 +356,45 @@ export const Home = () => {
                 </h1>
               </motion.div>
 
-              {/* Narrative Bio & Focus (Executive Editorial Layout) */}
+              {/* Narrative Bio & Focus - Zero Background Boxes, Zero Borders */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full space-y-3 pointer-events-auto select-text"
+                className="w-full space-y-3.5 pointer-events-auto select-text max-w-xl"
               >
-                {/* Structured Architectural Executive Bio DIV */}
-                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
-                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      ASTU SoCEA · Class of 2026 Brotherhood
-                    </span>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
-                      5th-Year Capstone
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025]/80 dark:text-[#F8F9FA]/80 font-bold">
+                    ASTU SoCEA · Class of 2026 Brotherhood
+                  </span>
+                  <span className="text-xs font-mono text-[#D3AE36] font-bold">
+                    · 5th-Year Capstone
+                  </span>
+                </div>
+
+                <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-sm sm:text-base leading-relaxed text-left select-text">
+                  Final-year Civil Engineering team at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. Graduating together as brothers, we combine ETABS and Civil 3D design with practical site construction, concrete quality control, and field surveying across Ethiopia.
+                </p>
+
+                {/* Micro-Bullet Highlights - Clean, Borderless */}
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-0.5 font-mono text-xs">
+                  <div className="flex items-center gap-1.5 text-[#1E2025]/90 dark:text-[#F8F9FA]/90">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>
+                      <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">RC Structures:</strong> EBCS EN 1992
                     </span>
                   </div>
-
-                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-xs sm:text-sm leading-relaxed text-left select-text">
-                    Final-year Civil Engineering team at <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>. Graduating together as brothers, we combine ETABS and Civil 3D design with practical site construction, concrete quality control, and field surveying across Ethiopia.
-                  </p>
-
-                  {/* Micro-Bullet Executive Highlights */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
-                      <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">RC Structures:</strong> EBCS EN 1992
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
-                      <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Corridors &amp; QC:</strong> ERA &amp; OCC Site
-                      </span>
-                    </div>
+                  <div className="flex items-center gap-1.5 text-[#1E2025]/90 dark:text-[#F8F9FA]/90">
+                    <span className="text-[#D3AE36] font-bold">✦</span>
+                    <span>
+                      <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Corridors &amp; QC:</strong> ERA &amp; OCC Site
+                    </span>
                   </div>
                 </div>
 
                 {/* Rotating Focus Indicator */}
-                <div className="flex items-center gap-2 text-xs font-mono select-text pt-0.5">
+                <div className="flex items-center gap-2 text-xs font-mono select-text pt-1">
                   <span className="font-semibold text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-wider text-[10px] select-text">Active Focus:</span>
                   <span className="font-bold text-[#D3AE36] underline decoration-[#D3AE36] decoration-2 underline-offset-4 select-text">
                     {rotatingDisciplines[disciplineIndex]}
@@ -425,63 +412,63 @@ export const Home = () => {
                 {/* Primary Filled Pill Button with Specular Sheen */}
                 <button
                   onClick={() => navigate('/projects')}
-                  className="relative overflow-hidden rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 group cursor-pointer shrink-0 whitespace-nowrap shadow-md hover:shadow-lg"
+                  className="relative overflow-hidden rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-5 sm:px-7 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 group cursor-pointer shrink-0 whitespace-nowrap shadow-md hover:shadow-lg border-none"
                 >
                   <span className="relative z-10">EXPLORE PROJECTS</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0 relative z-10" />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform" />
                 </button>
 
-                {/* Secondary Frosted Pill Button */}
+                {/* Secondary Button - Borderless */}
                 <button
                   onClick={() => setIsVideoModalOpen(true)}
-                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap border border-transparent hover:border-[#31394D]/30 dark:hover:border-[#31394D]"
+                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-5 sm:px-6 py-3 sm:py-3.5 font-bold text-xs tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer shrink-0 whitespace-nowrap border-none"
                 >
                   <span>WATCH CAPSTONE SHOWREEL</span>
                   <Play size={12} className="fill-[#D3AE36] text-[#D3AE36] shrink-0" />
                 </button>
               </motion.div>
 
-              {/* Quick Credentials / Performance Row */}
+              {/* Quick Credentials / Academic Metrics - Zero Borders, Zero Boxes */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-3 pt-2 w-full max-w-lg pointer-events-auto select-text"
+                className="grid grid-cols-3 gap-6 pt-3 w-full max-w-lg pointer-events-auto select-text"
               >
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] shadow-xs text-left select-text">
-                  <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono select-text">{settings.yearsExp || '5th Year'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Academic Level</span>
+                <div className="text-left select-text">
+                  <span className="block text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono leading-none select-text">{settings.yearsExp || '5th Year'}</span>
+                  <span className="block text-[10px] sm:text-[11px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mt-1 select-text">Academic Level</span>
                 </div>
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] shadow-xs text-left select-text">
-                  <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono select-text">{settings.projectsCount || '25+'}</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Capstone Works</span>
+                <div className="text-left select-text">
+                  <span className="block text-2xl sm:text-3xl font-black text-[#D3AE36] font-mono leading-none select-text">{settings.projectsCount || '25+'}</span>
+                  <span className="block text-[10px] sm:text-[11px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mt-1 select-text">Capstone Works</span>
                 </div>
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] shadow-xs text-left select-text">
-                  <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono select-text">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium select-text">Defense Ready</span>
+                <div className="text-left select-text">
+                  <span className="block text-2xl sm:text-3xl font-black text-[#D3AE36] font-mono leading-none select-text">100%</span>
+                  <span className="block text-[10px] sm:text-[11px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mt-1 select-text">Defense Ready</span>
                 </div>
               </motion.div>
 
             </div>
 
             {/* --------------------------------------------------------------- */}
-            {/* RIGHT COLUMN: Master Architectural Capstone Showcase DIV        */}
+            {/* RIGHT COLUMN: Architectural Capstone Showcase (No Extra Background Box, No Borders) */}
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 relative flex flex-col items-center justify-center pointer-events-auto">
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative w-full max-w-lg lg:max-w-xl mx-auto rounded-3xl bg-white dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] p-5 sm:p-6 shadow-2xl transition-all"
+                className="relative w-full max-w-lg lg:max-w-xl mx-auto space-y-3.5 transition-all"
               >
-                {/* Header Profile & Verification Bar */}
-                <div className="flex items-center justify-between pb-4 border-b border-[#31394D]/20 dark:border-[#31394D]/50">
+                {/* Header Profile & Verification Bar - Borderless */}
+                <div className="flex items-center justify-between pb-1">
                   <div className="flex items-center gap-3">
                     <img 
                       src={settings.avatarUrl || lemmaImg} 
                       alt="Lemma Amensisa" 
-                      className="w-11 h-11 rounded-full object-cover object-top border-2 border-[#D3AE36] shadow-sm shrink-0" 
+                      className="w-11 h-11 rounded-full object-cover object-top shadow-md shrink-0" 
                     />
                     <div>
                       <span className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] block leading-tight">
@@ -493,15 +480,15 @@ export const Home = () => {
                     </div>
                   </div>
 
-                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5 shrink-0">
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 px-3 py-1 rounded-full flex items-center gap-1.5 shrink-0">
                     <ShieldCheck size={13} />
                     <span>EBCS VERIFIED</span>
                   </span>
                 </div>
 
-                {/* Main Visual Display Frame */}
+                {/* Main Visual Display Frame - Borderless */}
                 <div 
-                  className="relative aspect-[16/10] rounded-2xl overflow-hidden my-4 border border-[#31394D]/25 dark:border-[#31394D] group cursor-pointer shadow-md"
+                  className="relative aspect-[16/10] rounded-2xl overflow-hidden group cursor-pointer shadow-xl"
                   onClick={() => {
                     const matched = projects.find(p => p.slug === heroProjects[activeHeroProjectIdx].slug) || projects[0];
                     setSelectedCaseStudy(matched);
@@ -540,21 +527,21 @@ export const Home = () => {
                   </div>
                 </div>
 
-                {/* Clean Project Switcher Tabs (3 Clear Cards) */}
-                <div className="grid grid-cols-3 gap-2.5 my-2">
+                {/* Clean Project Switcher Tabs - Borderless */}
+                <div className="grid grid-cols-3 gap-2.5 pt-1">
                   {heroProjects.map((proj, idx) => {
                     const isSelected = activeHeroProjectIdx === idx;
                     return (
                       <button
                         key={proj.id}
                         onClick={() => setActiveHeroProjectIdx(idx)}
-                        className={`p-2 rounded-xl text-left transition-all duration-200 flex items-center gap-2 cursor-pointer border ${
+                        className={`p-2 rounded-xl text-left transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                           isSelected
-                            ? 'bg-[#D3AE36]/10 dark:bg-[#D3AE36]/15 border-[#D3AE36] ring-1 ring-[#D3AE36]'
-                            : 'bg-[#12151C]/5 dark:bg-[#232936] border-[#31394D]/30 dark:border-[#31394D] opacity-75 hover:opacity-100 hover:border-[#D3AE36]/60'
+                            ? 'bg-[#D3AE36]/20 text-[#D3AE36]'
+                            : 'bg-black/[0.04] dark:bg-white/[0.05] opacity-70 hover:opacity-100'
                         }`}
                       >
-                        <div className="w-9 h-9 rounded-lg overflow-hidden shrink-0 border border-[#31394D]/40">
+                        <div className="w-9 h-9 rounded-lg overflow-hidden shrink-0 shadow-xs">
                           <img src={proj.imageUrl} alt={proj.title} className="w-full h-full object-cover" />
                         </div>
                         <div className="overflow-hidden min-w-0">
@@ -570,8 +557,8 @@ export const Home = () => {
                   })}
                 </div>
 
-                {/* Card Footer Telemetry */}
-                <div className="mt-3 pt-3 border-t border-[#31394D]/20 dark:border-[#31394D]/50 flex items-center justify-between text-[11px] font-mono">
+                {/* Telemetry Row - Borderless */}
+                <div className="pt-2 flex items-center justify-between text-[11px] font-mono">
                   <span className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
                     Defense Capstone 2026
