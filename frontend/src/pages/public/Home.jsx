@@ -584,7 +584,7 @@ export const Home = () => {
       {/* 3. BENTO GRID CORE DISCIPLINES ("ANALYZE. CALCULATE. DELIVER.")            */}
       {/* ========================================================================= */}
       <section className="py-20 md:py-24 relative transition-colors">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mx-auto max-w-3xl text-center mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
@@ -599,7 +599,7 @@ export const Home = () => {
             </p>
           </div>
 
-          <div className="relative mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
+          <div className="relative mx-auto grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
             <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
@@ -764,7 +764,7 @@ export const Home = () => {
       {/* 3.5 INTERACTIVE LOAD PATH & STRUCTURAL TELEMETRY SIMULATOR                */}
       {/* ========================================================================= */}
       <section className="py-20 md:py-28 relative transition-colors">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
@@ -786,7 +786,7 @@ export const Home = () => {
       {/* 4. ABOUT ME SECTION                                                       */}
       {/* ========================================================================= */}
       <section className="py-24 relative transition-colors">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5 relative">
@@ -946,7 +946,7 @@ export const Home = () => {
       {/* 5. EXPERTISE / SERVICES SECTION                                           */}
       {/* ========================================================================= */}
       <section className="py-24 relative transition-colors">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
@@ -1009,7 +1009,7 @@ export const Home = () => {
       {/* 6. STATISTICS ROW                                                         */}
       {/* ========================================================================= */}
       <section className="py-14 transition-colors">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           <StatCounter value={settings.yearsExp || '5th Year'} label="Academic Year" subtext="ASTU Graduating Class of 2026" />
           <StatCounter value={settings.projectsCount || '25+'} label="Academic &amp; Site Projects" subtext="Capstones, Labs &amp; Internships" />
           <StatCounter value={settings.safetyRecord || '100%'} label="Defense Readiness" subtext="Zero Critical Deficiencies" />
@@ -1021,7 +1021,7 @@ export const Home = () => {
       {/* 7. FEATURED PROJECTS CASE STUDIES                                         */}
       {/* ========================================================================= */}
       <section className="py-20 md:py-24 relative transition-colors" id="projects">
-        <div className="max-w-5xl mx-auto px-6 space-y-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
@@ -1140,7 +1140,7 @@ export const Home = () => {
       {/* 7.5 INTERACTIVE CAD & FEA BLUEPRINT INSPECTOR                             */}
       {/* ========================================================================= */}
       <section className="py-20 md:py-28 relative transition-colors">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
@@ -1162,7 +1162,7 @@ export const Home = () => {
       {/* 8. CLIENT TRUST & TESTIMONIALS                                            */}
       {/* ========================================================================= */}
       <section id="testimonials" className="py-24 relative transition-colors scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -1300,7 +1300,7 @@ export const Home = () => {
       {/* 9. LATEST ENGINEERING INSIGHTS                                            */}
       {/* ========================================================================= */}
       <section className="py-24 relative transition-colors">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
@@ -1350,7 +1350,7 @@ export const Home = () => {
       {/* 11. CONTACT BENTO STRIP                                                   */}
       {/* ========================================================================= */}
       <section className="py-20 relative transition-colors" id="contact">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] mb-4 font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
