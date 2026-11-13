@@ -262,7 +262,7 @@ export const CaseStudyPage = () => {
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-white via-white/80 dark:from-[#12151C] dark:via-[#12151C]/80 to-transparent pointer-events-none"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb Navigation */}
         <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 uppercase tracking-wider mb-8">

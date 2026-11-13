@@ -260,7 +260,7 @@ export const FaqPage = () => {
       {/* ========================================================================= */}
       {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
       {/* ========================================================================= */}
-      <div id="faq-accordion" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30 scroll-mt-24">
+      <div id="faq-accordion" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30 scroll-mt-24">
         <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-[#31394D] pb-6">
           
           {/* Category Tabs */}
