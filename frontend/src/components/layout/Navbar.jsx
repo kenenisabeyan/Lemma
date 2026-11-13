@@ -71,9 +71,9 @@ export const Navbar = () => {
     <>
       {/* Top Header Bar */}
       <header 
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 border-none ${
           scrolled 
-            ? 'bg-[#FFFFFF]/95 dark:bg-[#12151C]/95 backdrop-blur-xl border-b border-zinc-200/90 dark:border-[#232936] shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
+            ? 'bg-[#FFFFFF]/95 dark:bg-[#12151C]/95 backdrop-blur-xl shadow-[0_4px_25px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] py-3 sm:py-3.5' 
             : 'bg-transparent py-4 sm:py-6'
         }`}
       >
