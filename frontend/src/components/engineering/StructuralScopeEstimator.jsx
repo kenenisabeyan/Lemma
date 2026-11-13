@@ -153,7 +153,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                   <div className={`p-2 rounded-xl transition-colors ${
                     isSelected 
                       ? 'bg-[#D3AE36] text-[#12151C]' 
-                      : 'bg-[#FFFFFF] border border-zinc-200 text-[#1E2025] group-hover:text-[#D3AE36]'
+                      : 'bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36]'
                   }`}>
                     <Icon size={18} />
                   </div>
@@ -163,11 +163,11 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 </div>
                 <div>
                   <h4 className={`text-xs font-bold mb-1 ${
-                    isSelected ? 'text-[#D3AE36]' : 'text-[#1E2025]'
+                    isSelected ? 'text-[#D3AE36]' : 'text-[#1E2025] dark:text-[#F8F9FA]'
                   }`}>
                     {type.name}
                   </h4>
-                  <p className="text-[10px] text-[#1E2025] line-clamp-2 leading-relaxed">
+                  <p className="text-[10px] text-[#1E2025]/80 dark:text-[#F8F9FA]/70 line-clamp-2 leading-relaxed">
                     {type.desc}
                   </p>
                 </div>
