@@ -117,7 +117,7 @@ export const LoadPathSimulator = () => {
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Structural Load Path & Drift Mechanics
           </h3>
-          <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1 max-w-2xl">
+          <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-mono mt-1 max-w-2xl">
             Simulate force vector distribution, lateral drift resistance, and energy dissipation on a 52-story dual-core outrigger skyscraper model in real-time.
           </p>
         </div>
@@ -174,7 +174,7 @@ export const LoadPathSimulator = () => {
         <div className="lg:col-span-5 py-4 relative overflow-hidden flex flex-col items-center justify-between min-h-[420px]">
           
           {/* Top Crosshair Badge */}
-          <div className="w-full flex justify-between items-center text-[10px] font-mono text-[#1E2025]">
+          <div className="w-full flex justify-between items-center text-[10px] font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
             <span className="flex items-center gap-1 text-[#D3AE36] font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ELEVATION SECTION: TOWER CORE
@@ -290,7 +290,7 @@ export const LoadPathSimulator = () => {
 
           {/* Interactive Intensity Slider */}
           <div className="w-full pt-4">
-            <div className="flex justify-between items-center text-[10px] font-mono text-[#1E2025] mb-1.5">
+            <div className="flex justify-between items-center text-[10px] font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80 mb-1.5">
               <span className="flex items-center gap-1 font-semibold">
                 <Sliders size={11} className="text-[#D3AE36]" /> FORCE INTENSITY FACTOR
               </span>
