@@ -28,7 +28,7 @@ export const TechMarquee = ({ className = '' }) => {
       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#D3AE36]/35 to-transparent pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-[#D3AE36]/35 to-transparent pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-4 flex items-center gap-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-4">
         
         {/* Fixed Left Live Telemetry Stamp */}
         <div className="hidden lg:flex items-center gap-2 shrink-0 pr-4 border-r border-[#31394D]/30 dark:border-[#31394D]">
