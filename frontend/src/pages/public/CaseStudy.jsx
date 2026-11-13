@@ -92,7 +92,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
           </div>
 
           {/* Challenge */}
-          <div className="bg-[#232936]/40 dark:bg-[#232936]/50 p-5 rounded-2xl border border-amber-500/30 dark:border-[#D3AE36]/30">
+          <div className="bg-amber-500/5 dark:bg-[#232936]/50 p-5 rounded-2xl border border-amber-500/30 dark:border-[#D3AE36]/30">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] mb-1">02 • Technical Challenge</h4>
             <p className="text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed text-xs sm:text-sm">{project.challenge}</p>
           </div>
@@ -246,9 +246,9 @@ export const CaseStudyPage = () => {
   return (
     <div className="min-h-screen bg-transparent text-inherit relative pt-32 pb-24 overflow-hidden selection:bg-[#D3AE36] selection:text-[#12151C] transition-colors duration-200 bg-cad-grid">
       
-      {/* Luminous White Glass Frosted Sheen & Center Light Dome */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/65 to-white/85 dark:from-[#12151C]/80 dark:via-[#12151C]/50 dark:to-[#12151C]/85 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white/70 dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+      {/* Luminous Frosted Sheen & Center Light Dome */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9FA]/90 via-[#F8F9FA]/65 to-[#F8F9FA]/85 dark:from-[#12151C]/80 dark:via-[#12151C]/50 dark:to-[#12151C]/85 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-[#D3AE36]/5 dark:bg-[#D3AE36]/10 rounded-full blur-[90px] pointer-events-none" />
 
       {/* Subtle Ambient Studio Lights */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -259,7 +259,7 @@ export const CaseStudyPage = () => {
       {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
       <div className="absolute inset-0 overflow-hidden select-none z-0 pointer-events-none">
         <Hero3DCanvas />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-white via-white/80 dark:from-[#12151C] dark:via-[#12151C]/80 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/80 dark:from-[#12151C] dark:via-[#12151C]/80 to-transparent pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

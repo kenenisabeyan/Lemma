@@ -82,7 +82,7 @@ export const BlueprintInspector = () => {
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             CAD Elevation & Stress Layer Discretization
           </h3>
-          <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1">
+          <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 font-mono mt-1">
             Toggle between architectural render, structural FEA wireframe, and rebar post-tensioning placement.
           </p>
         </div>
@@ -262,29 +262,29 @@ export const BlueprintInspector = () => {
               Spec: <span className="text-[#1E2025] dark:text-[#F8F9FA]">{currentHotspot.spec}</span>
             </div>
 
-            <p className="text-xs text-[#1E2025] leading-relaxed mb-6">
+            <p className="text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed mb-6">
               {currentHotspot.description}
             </p>
           </div>
 
           {/* Technical Details Grid */}
           <div className="flex flex-col gap-3 font-mono text-xs">
-            <div className="py-2 flex justify-between items-center">
-              <span className="text-[#1E2025] text-[10px] uppercase font-semibold">Design Capacity</span>
+            <div className="py-2 flex justify-between items-center border-b border-zinc-200/40 dark:border-[#31394D]/40">
+              <span className="text-[#1E2025]/70 dark:text-[#F8F9FA]/70 text-[10px] uppercase font-semibold">Design Capacity</span>
               <span className="text-[#1E2025] font-bold text-right text-[11px] truncate max-w-[200px] dark:text-[#F8F9FA]">
                 {currentHotspot.capacity}
               </span>
             </div>
 
-            <div className="py-2 flex justify-between items-center">
-              <span className="text-[#1E2025] text-[10px] uppercase font-semibold">Compliance Code</span>
+            <div className="py-2 flex justify-between items-center border-b border-zinc-200/40 dark:border-[#31394D]/40">
+              <span className="text-[#1E2025]/70 dark:text-[#F8F9FA]/70 text-[10px] uppercase font-semibold">Compliance Code</span>
               <span className="text-[#D3AE36] font-bold text-right text-[11px] truncate max-w-[200px]">
                 {currentHotspot.code}
               </span>
             </div>
 
             {/* ASTU SoCEA Seal */}
-            <div className="pt-4 flex items-center justify-between text-[11px] text-[#1E2025]">
+            <div className="pt-4 flex items-center justify-between text-[11px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#D3AE36]" /> ASTU SoCEA Capstone Detail
               </span>
