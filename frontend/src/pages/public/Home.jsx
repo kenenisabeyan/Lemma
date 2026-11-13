@@ -306,11 +306,11 @@ export const Home = () => {
           {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-white dark:bg-[#12151C] bg-cad-grid transition-colors">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] bg-cad-grid transition-colors">
         
-        {/* Luminous White Glass Frosted Sheen & Reflection Layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+        {/* Luminous Glass Frosted Sheen & Reflection Layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8F9FA]/40 to-[#F8F9FA] dark:from-transparent dark:via-[#12151C]/40 dark:to-[#12151C] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-[#D3AE36]/5 dark:bg-[#D3AE36]/10 rounded-full blur-[90px] pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -324,7 +324,7 @@ export const Home = () => {
           </div>
 
           {/* Precision Blueprint Vignette Edge Fade - subtle bottom transition only */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         {/* Floating Accent Ring */}
@@ -473,7 +473,7 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative w-full max-w-lg lg:max-w-xl mx-auto rounded-3xl bg-white dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] p-5 sm:p-6 shadow-2xl transition-all"
+                className="relative w-full max-w-lg lg:max-w-xl mx-auto rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] p-5 sm:p-6 shadow-2xl transition-all"
               >
                 {/* Header Profile & Verification Bar */}
                 <div className="flex items-center justify-between pb-4 border-b border-[#31394D]/20 dark:border-[#31394D]/50">
@@ -786,7 +786,7 @@ export const Home = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Real-Time Structural & Seismic <span className="text-[#D3AE36]">Load Path.</span>
             </h2>
-            <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
               Explore how gravity loads, wind pressures, and Rift Valley seismic motions propagate through reinforced concrete columns, shear walls, and foundation soils down to bedrock.
             </p>
           </div>
@@ -1228,7 +1228,7 @@ export const Home = () => {
           {filteredTestimonials.length === 0 ? (
             <div className="py-16 text-center mb-12">
               <MessageSquareQuote className="mx-auto w-10 h-10 text-[#D3AE36]/60 mb-2" />
-              <p className="text-[#1E2025] text-xs font-mono uppercase tracking-wider">
+              <p className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 text-xs font-mono uppercase tracking-wider">
                 No endorsements match the selected category.
               </p>
             </div>
