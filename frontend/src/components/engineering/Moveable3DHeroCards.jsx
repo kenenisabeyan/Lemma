@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Move, Building2, ShieldCheck, Activity, Compass, RotateCcw, CheckCircle2 } from 'lucide-react';
+import { Move, Building2, ShieldCheck, Activity, Compass, RotateCcw, CheckCircle2, X } from 'lucide-react';
 
-export const Moveable3DHeroCards = () => {
+export const Moveable3DHeroCards = ({ forceShow = false, onClose }) => {
   const [resetKey, setResetKey] = useState(0);
   const [hasInteracted, setHasInteracted] = useState(false);
 
@@ -102,22 +102,33 @@ export const Moveable3DHeroCards = () => {
   };
 
   return (
-    <div key={resetKey} className="absolute inset-0 pointer-events-none z-20 overflow-hidden hidden md:block">
+    <div key={resetKey} className={`absolute inset-0 pointer-events-none z-20 overflow-hidden ${forceShow ? 'block' : 'hidden 2xl:block'}`}>
       
-      {/* Live Interactive HUD Indicator (When User Has Dragged Cards) */}
-      {hasInteracted && (
+      {/* Live Interactive HUD Indicator (When User Has Dragged Cards or in forceShow mode) */}
+      {(hasInteracted || forceShow) && (
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-4 right-8 z-50 pointer-events-auto"
+          className="absolute top-4 right-6 2xl:right-10 z-50 pointer-events-auto flex items-center gap-2"
         >
-          <button
-            onClick={handleReset}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#12151C]/90 dark:bg-[#232936]/90 border border-[#D3AE36]/40 hover:border-[#D3AE36] text-[#D3AE36] text-[10px] font-mono font-bold uppercase tracking-widest backdrop-blur-md shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            <RotateCcw size={12} />
-            <span>Reset 3D Space</span>
-          </button>
+          {hasInteracted && (
+            <button
+              onClick={handleReset}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#12151C]/90 dark:bg-[#232936]/90 border border-[#D3AE36]/40 hover:border-[#D3AE36] text-[#D3AE36] text-[10px] font-mono font-bold uppercase tracking-widest backdrop-blur-md shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            >
+              <RotateCcw size={12} />
+              <span>Reset 3D Space</span>
+            </button>
+          )}
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#12151C]/90 dark:bg-[#232936]/90 border border-[#31394D] hover:border-[#D3AE36] text-[#F8F9FA] hover:text-[#D3AE36] text-[10px] font-mono font-bold uppercase tracking-widest backdrop-blur-md shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            >
+              <X size={12} />
+              <span>Close 3D View</span>
+            </button>
+          )}
         </motion.div>
       )}
 
@@ -161,7 +172,7 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(211,174,54, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-64 lg:w-72 rounded-2xl bg-[#F8F9FA]/90 dark:bg-[#12151C]/90 backdrop-blur-2xl border border-[#31394D]/30 dark:border-[#31394D] hover:border-[#D3AE36]/80 dark:hover:border-[#D3AE36]/80 p-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.1),inset_0_1px_1px_rgba(255,255,255,0.8)] dark:shadow-[0_18px_45px_rgba(0,0,0,0.65)] hover:shadow-[0_20px_50px_rgba(211,174,54,0.22)] dark:hover:shadow-[0_20px_50px_rgba(211,174,54,0.3)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-64 lg:w-72 rounded-2xl bg-[#F8F9FA]/95 dark:bg-[#12151C]/95 backdrop-blur-2xl border border-[#31394D]/30 dark:border-[#31394D] hover:border-[#D3AE36]/80 dark:hover:border-[#D3AE36]/80 p-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.12),inset_0_1px_1px_rgba(255,255,255,0.8)] dark:shadow-[0_18px_45px_rgba(0,0,0,0.65)] hover:shadow-[0_20px_50px_rgba(211,174,54,0.22)] dark:hover:shadow-[0_20px_50px_rgba(211,174,54,0.3)] transition-all select-none group ${forceShow ? 'block' : (card.visibility || 'hidden md:block')}`}
           >
             {/* 3D Depth Card Inner Stage */}
             <div className="relative overflow-hidden rounded-xl bg-[#12151C] aspect-[16/10] border border-[#31394D]/50">

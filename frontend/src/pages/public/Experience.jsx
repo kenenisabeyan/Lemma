@@ -166,7 +166,7 @@ export const Experience = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="space-y-1 sm:space-y-2"
               >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
                   A Dedicated Journey of{' '}
                   <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
                     Academic

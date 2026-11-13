@@ -331,12 +331,23 @@ export const About = () => {
         
         <div className="mb-24">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span>
+            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
             <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-bold">Core Academic &amp; Field Philosophy</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-6 leading-tight max-w-3xl">
-            Precision Engineering Meets Ethiopian Infrastructure
+            Precision Engineering Meets <span className="text-[#D3AE36]">Ethiopian Infrastructure.</span>
           </h2>
+
+          {/* Book-Style Monograph Reading Box */}
+          <div className="p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm border-l-4 border-l-[#D3AE36] mb-8 space-y-3.5">
+            <p className="text-sm sm:text-[15px] text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-[1.75]">
+              <span className="float-left text-3xl font-serif font-black text-[#D3AE36] leading-none pr-3 pt-0.5">C</span>
+              ivil engineering is fundamentally an act of public trust and stewardship over the physical built environment. Across five years of academic study at Adama Science and Technology University (ASTU) School of Civil Engineering and Architecture (SoCEA), our philosophy has centered on one inviolable principle: theoretical calculations must directly withstand physical reality. Every structural member modeled on our workstations must translate safely into rebar cages, concrete batching, and stable foundations on Ethiopia's distinctive geological terrains.
+            </p>
+            <p className="text-sm sm:text-[15px] text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-[1.75]">
+              Whether confronting the severe seismic acceleration coefficients of the Main Ethiopian Rift or mitigating deep cyclic volumetric swelling across expansive black cotton clay soils, our designs are calculated in strict conformance with both national provisions (<strong className="text-[#D3AE36] font-semibold">EBCS EN 1990–1998</strong>, <strong className="text-[#D3AE36] font-semibold">ERA 2024 Standards</strong>) and international Eurocode structural methodologies.
+            </p>
+          </div>
           <div className="grid lg:grid-cols-2 gap-6 pt-2">
             <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
               <div>
@@ -636,17 +647,26 @@ export const About = () => {
         {/* 7.5 ASTU SoCEA CIVIL ENGINEERING BROTHERHOOD (id="brotherhood")          */}
         {/* ======================================================================= */}
         <div id="brotherhood" className="mb-24 scroll-mt-24">
-          <div className="mx-auto max-w-3xl text-center mb-14">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#232936] bg-[#FFFFFF] dark:bg-[#232936] px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
+          <div className="mx-auto max-w-4xl text-center mb-12">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#31394D] bg-[#FFFFFF] dark:bg-[#232936] px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ASTU SoCEA Civil Engineering Brotherhood · Class of 2026
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 dark:text-[#F8F9FA] tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
               United in Rigor. <span className="text-[#D3AE36]">Graduating as Brother Engineers.</span>
             </h2>
-            <p className="text-sm sm:text-base text-[#1E2025]/85 dark:text-[#F8F9FA]/80 max-w-2xl mx-auto leading-relaxed">
-              From 1st-year statics to 5th-year multi-story ETABS capstone defense, total station surveying camps in Adama, and field internships at OCC — meet the engineers who stand shoulder to shoulder with Lemma Amensisa.
-            </p>
+
+            {/* Book-Style Editorial Narrative Monograph */}
+            <div className="p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm text-left my-6 space-y-3.5 border-l-4 border-l-[#D3AE36]">
+              <p className="text-sm sm:text-[15px] text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-[1.75]">
+                <span className="float-left text-3xl font-serif font-black text-[#D3AE36] leading-none pr-3 pt-0.5">W</span>
+                e are not merely independent students; we are a disciplined engineering brotherhood formed through five years of shared academic rigor at Adama Science and Technology University (ASTU). From foundational vector statics and fluid mechanics to complex multi-story ETABS modal simulations and high-temperature summer site internships at Oromia Construction Corporation (OCC), each member of our cohort brings a specialized, certified pillar of civil praxis to the table.
+              </p>
+              <div className="pt-2 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                <span className="text-[#D3AE36] font-bold">✦ Co-Authored Capstones &amp; Site Supervisions</span>
+                <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold">ADAMA · OROMIA · ETHIOPIA</span>
+              </div>
+            </div>
           </div>
 
           {/* 6-Card Brotherhood Grid */}

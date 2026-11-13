@@ -143,7 +143,7 @@ export const Portfolio = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="space-y-1 sm:space-y-2"
               >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
                   Engineering Reality.{' '}
                   <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
                     Built by
@@ -257,7 +257,7 @@ export const Portfolio = () => {
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Landmark Spotlight</span>
+                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Landmark Spotlight</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     {allProjects.map((_, idx) => (
