@@ -306,7 +306,7 @@ export const Home = () => {
           {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
         
         {/* Architectural 3D Three.js Civil Engineering Simulation - Pure Primary Background */}
         <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-auto">
@@ -361,7 +361,7 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full space-y-3.5 pointer-events-auto select-text max-w-xl"
+                className="w-full space-y-3.5 pointer-events-auto select-text"
               >
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
@@ -434,7 +434,7 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-6 pt-3 w-full max-w-lg pointer-events-auto select-text"
+                className="grid grid-cols-3 gap-6 pt-3 w-full pointer-events-auto select-text"
               >
                 <div className="text-left select-text">
                   <span className="block text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono leading-none select-text">{settings.yearsExp || '5th Year'}</span>
@@ -455,12 +455,12 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             {/* RIGHT COLUMN: Architectural Capstone Showcase (No Extra Background Box, No Borders) */}
             {/* --------------------------------------------------------------- */}
-            <div className="lg:col-span-6 xl:col-span-6 relative flex flex-col items-center justify-center pointer-events-auto">
+            <div className="lg:col-span-6 xl:col-span-6 relative flex flex-col justify-center pointer-events-auto">
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative w-full max-w-lg lg:max-w-xl mx-auto space-y-3.5 transition-all"
+                className="relative w-full space-y-3.5 transition-all"
               >
                 {/* Header Profile & Verification Bar - Borderless */}
                 <div className="flex items-center justify-between pb-1">
