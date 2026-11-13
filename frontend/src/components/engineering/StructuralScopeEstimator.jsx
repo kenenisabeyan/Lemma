@@ -253,9 +253,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 onChange={(e) => setFramingSystem(e.target.value)}
                 className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] font-medium focus:border-[#D3AE36] focus:outline-none"
               >
-                <option value="pt-concrete">Cast-in-Place RC Frame (EBCS EN 1992)</option>
-                <option value="structural-steel">Dual System (RC Frame + Shear Walls)</option>
-                <option value="mass-timber">Composite Steel / Precast Girders</option>
+                <option value="pt-concrete" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Cast-in-Place RC Frame (EBCS EN 1992)</option>
+                <option value="structural-steel" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Dual System (RC Frame + Shear Walls)</option>
+                <option value="mass-timber" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Composite Steel / Precast Girders</option>
               </select>
             </div>
 
@@ -268,9 +268,9 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 onChange={(e) => setWindZone(e.target.value)}
                 className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] font-medium focus:border-[#D3AE36] focus:outline-none"
               >
-                <option value="32m/s">32 m/s (Adama Urban Basin)</option>
-                <option value="38m/s">38 m/s (Rift Valley Corridor)</option>
-                <option value="42m/s">42+ m/s (Highland Escarpment)</option>
+                <option value="32m/s" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">32 m/s (Adama Urban Basin)</option>
+                <option value="38m/s" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">38 m/s (Rift Valley Corridor)</option>
+                <option value="42m/s" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">42+ m/s (Highland Escarpment)</option>
               </select>
             </div>
 
@@ -283,10 +283,10 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                 onChange={(e) => setSeismicCategory(e.target.value)}
                 className="w-full bg-transparent border-b border-zinc-300 dark:border-[#31394D] py-2 text-xs text-[#1E2025] dark:text-[#F8F9FA] font-medium focus:border-[#D3AE36] focus:outline-none"
               >
-                <option value="Zone-1">Zone 1 (Low Hazard - ag = 0.05g)</option>
-                <option value="Zone-2">Zone 2 (Moderate - ag = 0.08g)</option>
-                <option value="Zone-4">Zone 4 (Adama / Rift Valley - ag = 0.15g)</option>
-                <option value="Zone-4+">Zone 4+ (Main Rift Fault - ag = 0.20g)</option>
+                <option value="Zone-1" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Zone 1 (Low Hazard - ag = 0.05g)</option>
+                <option value="Zone-2" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Zone 2 (Moderate - ag = 0.08g)</option>
+                <option value="Zone-4" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Zone 4 (Adama / Rift Valley - ag = 0.15g)</option>
+                <option value="Zone-4+" className="bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]">Zone 4+ (Main Rift Fault - ag = 0.20g)</option>
               </select>
             </div>
 
@@ -377,15 +377,15 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           </div>
 
           {/* Action Button: Load into Form */}
-          <div className="pt-6 mt-6 border-t border-zinc-200">
+          <div className="pt-6 mt-6 border-t border-zinc-200 dark:border-[#31394D]">
             <button
               type="button"
               onClick={handleApply}
-              className="w-full rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] py-3.5 px-6 text-xs font-extrabold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] py-3.5 px-6 text-xs font-extrabold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
             >
               Apply Scope to Inquiry Brief <ArrowRight size={14} />
             </button>
-            <p className="text-[10px] font-mono text-center text-[#1E2025]/80 mt-2">
+            <p className="text-[10px] font-mono text-center text-[#1E2025]/80 dark:text-[#F8F9FA]/70 mt-2">
               Populates your parameters directly into the confidential inquiry form below.
             </p>
           </div>
