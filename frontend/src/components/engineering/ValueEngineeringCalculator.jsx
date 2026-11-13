@@ -54,7 +54,7 @@ export const ValueEngineeringCalculator = () => {
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Structural Capital & Carbon Estimator
           </h3>
-          <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1">
+          <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 font-mono mt-1">
             Calculate estimated material reduction, cost savings, and embodied carbon offsets through advanced FEA optimization
           </p>
         </div>
@@ -68,7 +68,7 @@ export const ValueEngineeringCalculator = () => {
           
           {/* Structural System Tabs */}
           <div>
-            <label className="block text-[10px] font-mono uppercase text-[#1E2025] tracking-wider mb-2 font-bold">
+            <label className="block text-[10px] font-mono uppercase text-[#1E2025] dark:text-[#F8F9FA] tracking-wider mb-2 font-bold">
               Select Proposed Structural Framing System
             </label>
             <div className="grid grid-cols-2 gap-2.5">
@@ -163,7 +163,7 @@ export const ValueEngineeringCalculator = () => {
               onChange={(e) => setFloorArea(Number(e.target.value))}
               className="w-full accent-[#D3AE36] h-2 bg-zinc-200 dark:bg-[#12151C] rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[10px] font-mono text-[#1E2025] mt-1">
+            <div className="flex justify-between text-[10px] font-mono text-[#1E2025]/70 dark:text-[#F8F9FA]/60 mt-1">
               <span>6,000 sq ft</span>
               <span>Total GFA: {(totalArea / 1000).toFixed(0)}k sq ft</span>
               <span>35,000 sq ft</span>
@@ -182,48 +182,48 @@ export const ValueEngineeringCalculator = () => {
             <div className="text-4xl sm:text-5xl font-extrabold text-[#1E2025] font-mono tracking-tight mb-2 dark:text-[#F8F9FA]">
               ${(estimatedSavingsUSD / 1000000).toFixed(2)}M <span className="text-sm text-emerald-600 font-normal">USD</span>
             </div>
-            <p className="text-xs text-[#1E2025] font-mono leading-relaxed mb-6">
+            <p className="text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-mono leading-relaxed mb-6">
               Achieved through member slenderness optimization, post-tensioned tendon layout, and finite element stress redistribution.
             </p>
 
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-4 font-mono">
               <div className="py-2">
-                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
+                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 mb-1">
                   <TrendingDown size={11} className="text-emerald-600" /> Concrete Volume
                 </div>
                 <div className="text-lg font-extrabold text-[#1E2025] dark:text-[#F8F9FA]">
-                  {concreteSavedM3.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]">m³</span>
+                  {concreteSavedM3.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]/70 dark:text-[#F8F9FA]/60">m³</span>
                 </div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">Reduced Dead Load</div>
               </div>
 
               <div className="py-2">
-                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
+                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 mb-1">
                   <TrendingDown size={11} className="text-emerald-600" /> Steel Tonnage
                 </div>
                 <div className="text-lg font-extrabold text-[#1E2025] dark:text-[#F8F9FA]">
-                  {steelSavedTons.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]">tons</span>
+                  {steelSavedTons.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]/70 dark:text-[#F8F9FA]/60">tons</span>
                 </div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">Optimized Sections</div>
               </div>
 
               <div className="py-2">
-                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
+                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 mb-1">
                   <Leaf size={11} className="text-emerald-600" /> Embodied Carbon
                 </div>
                 <div className="text-lg font-extrabold text-emerald-600">
-                  {carbonOffsetTons.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]">t CO₂e</span>
+                  {carbonOffsetTons.toLocaleString()} <span className="text-xs font-normal text-[#1E2025]/70 dark:text-[#F8F9FA]/60">t CO₂e</span>
                 </div>
                 <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">LEED Carbon Credits</div>
               </div>
 
               <div className="py-2">
-                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025] mb-1">
+                <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 mb-1">
                   <Clock size={11} className="text-[#D3AE36]" /> Schedule Offset
                 </div>
                 <div className="text-lg font-extrabold text-[#1E2025] dark:text-[#F8F9FA]">
-                  {weeksSaved} <span className="text-xs font-normal text-[#1E2025]">Weeks</span>
+                  {weeksSaved} <span className="text-xs font-normal text-[#1E2025]/70 dark:text-[#F8F9FA]/60">Weeks</span>
                 </div>
                 <div className="text-[10px] text-[#D3AE36] font-semibold mt-0.5">Earlier Substantial Date</div>
               </div>
@@ -236,7 +236,7 @@ export const ValueEngineeringCalculator = () => {
               <div className="text-xs font-mono font-bold text-[#1E2025] uppercase dark:text-[#F8F9FA]">
                 Want a Capstone Quantity &amp; Value Engineering Review?
               </div>
-              <div className="text-[11px] text-[#1E2025] font-mono mt-0.5">
+              <div className="text-[11px] text-[#1E2025]/80 dark:text-[#F8F9FA]/75 font-mono mt-0.5">
                 Consult with our ASTU 5th-year student cohort for independent rebar tonnage and concrete volume audit.
               </div>
             </div>
