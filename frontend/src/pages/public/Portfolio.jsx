@@ -112,11 +112,11 @@ export const Portfolio = () => {
       {/* ========================================================================= */}
       {/* CINEMATIC PORTFOLIO HERO SECTION                                          */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.4)]">
         
-        {/* Luminous Glass Frosted Sheen & Center Light Dome */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8F9FA]/40 to-[#F8F9FA] dark:from-transparent dark:via-[#12151C]/40 dark:to-[#12151C] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-[#D3AE36]/5 dark:bg-[#D3AE36]/10 rounded-full blur-[90px] pointer-events-none" />
+        {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
         
         {/* Subtle Ambient Studio Lights (Wine & Gold) */}
         <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
@@ -126,7 +126,7 @@ export const Portfolio = () => {
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -143,7 +143,7 @@ export const Portfolio = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="space-y-1 sm:space-y-2"
               >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-[#1E2025] dark:text-[#F8F9FA] select-text">
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100 select-text">
                   Engineering Reality.{' '}
                   <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)] select-text">
                     Built by
@@ -257,7 +257,7 @@ export const Portfolio = () => {
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Landmark Spotlight</span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Landmark Spotlight</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     {allProjects.map((_, idx) => (

@@ -117,7 +117,7 @@ export const LoadPathSimulator = () => {
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
             Structural Load Path & Drift Mechanics
           </h3>
-          <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-mono mt-1 max-w-2xl">
+          <p className="text-xs sm:text-sm text-[#1E2025] font-mono mt-1 max-w-2xl">
             Simulate force vector distribution, lateral drift resistance, and energy dissipation on a 52-story dual-core outrigger skyscraper model in real-time.
           </p>
         </div>
@@ -174,7 +174,7 @@ export const LoadPathSimulator = () => {
         <div className="lg:col-span-5 py-4 relative overflow-hidden flex flex-col items-center justify-between min-h-[420px]">
           
           {/* Top Crosshair Badge */}
-          <div className="w-full flex justify-between items-center text-[10px] font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
+          <div className="w-full flex justify-between items-center text-[10px] font-mono text-[#1E2025]">
             <span className="flex items-center gap-1 text-[#D3AE36] font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               ELEVATION SECTION: TOWER CORE
@@ -290,7 +290,7 @@ export const LoadPathSimulator = () => {
 
           {/* Interactive Intensity Slider */}
           <div className="w-full pt-4">
-            <div className="flex justify-between items-center text-[10px] font-mono text-[#1E2025]/80 dark:text-[#F8F9FA]/80 mb-1.5">
+            <div className="flex justify-between items-center text-[10px] font-mono text-[#1E2025] mb-1.5">
               <span className="flex items-center gap-1 font-semibold">
                 <Sliders size={11} className="text-[#D3AE36]" /> FORCE INTENSITY FACTOR
               </span>
@@ -323,11 +323,11 @@ export const LoadPathSimulator = () => {
             <h4 className="text-3xl sm:text-4xl font-extrabold text-[#1E2025] font-mono mb-1 dark:text-[#F8F9FA]">
               {metrics.primaryMetric}
             </h4>
-            <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 font-mono mb-4">
+            <p className="text-xs text-[#1E2025] font-mono mb-4">
               {metrics.primaryLabel} · <span className="text-[#D3AE36] font-semibold">{metrics.codeClause}</span>
             </p>
 
-            <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed mb-6">
+            <p className="text-xs sm:text-sm text-[#1E2025] leading-relaxed mb-6">
               {metrics.explanation}
             </p>
           </div>
@@ -335,32 +335,32 @@ export const LoadPathSimulator = () => {
           {/* Telemetry Metrics Bento 4-Box */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono">
             <div className="py-2">
-              <span className="text-[9px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 block mb-1">Base Shear ($V_b$)</span>
+              <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Base Shear ($V_b$)</span>
               <span className="text-base font-extrabold text-[#1E2025] block dark:text-[#F8F9FA]">{metrics.baseShear}</span>
               <span className="text-[9px] text-[#D3AE36] font-semibold block mt-0.5">Reaction Force</span>
             </div>
 
             <div className="py-2">
-              <span className="text-[9px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 block mb-1">Roof Drift Ratio</span>
+              <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Roof Drift Ratio</span>
               <span className="text-base font-extrabold text-[#1E2025] block dark:text-[#F8F9FA]">{metrics.driftRatio}</span>
               <span className="text-[9px] text-emerald-600 font-semibold block mt-0.5">Limit H/400</span>
             </div>
 
             <div className="py-2">
-              <span className="text-[9px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 block mb-1">Overturning (M_OT)</span>
+              <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Overturning (M_OT)</span>
               <span className="text-base font-extrabold text-[#1E2025] block truncate dark:text-[#F8F9FA]">{metrics.overturning}</span>
               <span className="text-[9px] text-[#D3AE36] font-semibold block mt-0.5">Foundation Moment</span>
             </div>
 
             <div className="py-2">
-              <span className="text-[9px] uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/60 block mb-1">Energy Dissipation</span>
+              <span className="text-[9px] uppercase text-[#1E2025] block mb-1">Energy Dissipation</span>
               <span className="text-base font-extrabold text-emerald-600 block">{metrics.dissipation}</span>
-              <span className="text-[9px] text-[#1E2025]/70 dark:text-[#F8F9FA]/60 block mt-0.5">Supplemental</span>
+              <span className="text-[9px] text-[#1E2025] block mt-0.5">Supplemental</span>
             </div>
           </div>
 
           {/* Stamped Verification Bar */}
-          <div className="pt-4 flex flex-wrap justify-between items-center text-xs font-mono text-[#1E2025]/85 dark:text-[#F8F9FA]/85 gap-2">
+          <div className="pt-4 flex flex-wrap justify-between items-center text-xs font-mono text-[#1E2025] gap-2">
             <div className="flex items-center gap-2">
               <ShieldCheck size={14} className="text-[#D3AE36]" />
               <span>FEA Solver Model: ETABS v21 / SAP2000 Non-Linear Dynamic Engine</span>

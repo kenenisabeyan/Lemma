@@ -30,8 +30,7 @@ import {
   ArrowRight,
   Star,
   MessageSquareQuote,
-  Users,
-  Move
+  Users
 } from 'lucide-react';
 import { useFetch } from '../../hooks/useFetch';
 import { TechMarquee } from '../../components/common/TechMarquee';
@@ -39,7 +38,6 @@ import { StatCounter } from '../../components/engineering/StatCounter';
 import { ProjectCard } from '../../components/engineering/ProjectCard';
 import { EngineeringCanvas } from '../../components/engineering/EngineeringCanvas';
 import { Hero3DCanvas } from '../../components/engineering/Hero3DCanvas';
-import { Moveable3DHeroCards } from '../../components/engineering/Moveable3DHeroCards';
 import { LoadPathSimulator } from '../../components/engineering/LoadPathSimulator';
 import { BlueprintInspector } from '../../components/engineering/BlueprintInspector';
 import { CaseStudyModal } from './CaseStudy';
@@ -100,7 +98,6 @@ export const Home = () => {
   ];
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  const [show3DCards, setShow3DCards] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [selectedTestimonialCategory, setSelectedTestimonialCategory] = useState('All');
   const testimonialCategories = ['All', 'Faculty & Mentors', 'Industry Supervisors', 'Engineering Brothers'];
@@ -309,11 +306,11 @@ export const Home = () => {
           {/* ========================================================================= */}
       {/* 1. CINEMATIC HERO SECTION                                                 */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] bg-cad-grid transition-colors">
+      <section className="relative min-h-[95vh] sm:min-h-screen flex flex-col justify-center items-center py-20 sm:py-28 lg:py-24 px-4 sm:px-6 overflow-hidden bg-white dark:bg-[#12151C] bg-cad-grid transition-colors">
         
-        {/* Luminous Glass Frosted Sheen & Reflection Layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8F9FA]/40 to-[#F8F9FA] dark:from-transparent dark:via-[#12151C]/40 dark:to-[#12151C] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-[#D3AE36]/5 dark:bg-[#D3AE36]/10 rounded-full blur-[90px] pointer-events-none" />
+        {/* Luminous White Glass Frosted Sheen & Reflection Layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -327,11 +324,8 @@ export const Home = () => {
           </div>
 
           {/* Precision Blueprint Vignette Edge Fade - subtle bottom transition only */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
         </div>
-
-        {/* Moveable 3D Interactive Engineering Cards Canvas */}
-        <Moveable3DHeroCards forceShow={show3DCards} onClose={() => setShow3DCards(false)} />
 
         {/* Floating Accent Ring */}
         <div 
@@ -348,26 +342,10 @@ export const Home = () => {
             {/* --------------------------------------------------------------- */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left gap-4 sm:gap-5 select-text">
               
-              {/* Status Badge & 3D Interactive Controls Pill Row */}
-              <div className="flex flex-wrap items-center gap-2.5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/30 shadow-xs text-xs font-mono font-bold text-[#D3AE36]">
-                  <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                  <span>ASTU SoCEA Civil Engineering · Class of 2026</span>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => setShow3DCards(prev => !prev)}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-mono font-bold transition-all cursor-pointer shadow-xs ${
-                    show3DCards
-                      ? 'bg-[#D3AE36] text-[#12151C] border-[#D3AE36] shadow-[#D3AE36]/30'
-                      : 'bg-white/90 dark:bg-[#232936]/90 text-[#1E2025] dark:text-[#F8F9FA] border-[#31394D]/30 hover:border-[#D3AE36]'
-                  }`}
-                  title="Toggle draggable 3D engineering models"
-                >
-                  <Move size={12} className={show3DCards ? 'text-[#12151C]' : 'text-[#D3AE36] animate-pulse'} />
-                  <span>{show3DCards ? 'Hide 3D Models' : 'Interactive 3D Cards'}</span>
-                </button>
+              {/* Status Badge Pill */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/30 shadow-xs text-xs font-mono font-bold text-[#D3AE36]">
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+                <span>ASTU SoCEA Civil Engineering · Class of 2026</span>
               </div>
 
               {/* Main Headline (Left Aligned) */}
@@ -495,7 +473,7 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative w-full max-w-lg lg:max-w-xl mx-auto rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] p-5 sm:p-6 shadow-2xl transition-all"
+                className="relative w-full max-w-lg lg:max-w-xl mx-auto rounded-3xl bg-white dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] p-5 sm:p-6 shadow-2xl transition-all"
               >
                 {/* Header Profile & Verification Bar */}
                 <div className="flex items-center justify-between pb-4 border-b border-[#31394D]/20 dark:border-[#31394D]/50">
@@ -808,7 +786,7 @@ export const Home = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Real-Time Structural & Seismic <span className="text-[#D3AE36]">Load Path.</span>
             </h2>
-            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm md:text-base leading-relaxed">
+            <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
               Explore how gravity loads, wind pressures, and Rift Valley seismic motions propagate through reinforced concrete columns, shear walls, and foundation soils down to bedrock.
             </p>
           </div>
@@ -877,163 +855,89 @@ export const Home = () => {
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
-              {/* Folio Chapter Stamp Header */}
-              <div className="flex items-center justify-between border-b border-[#31394D]/25 dark:border-[#31394D]/60 pb-3">
-                <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D3AE36] font-bold">
-                  <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                  <span>FOLIO 04 · ACADEMIC CURRICULUM &amp; FIELD PRAXIS</span>
-                </div>
-                <span className="text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-widest hidden sm:inline-block font-semibold">
-                  ASTU SoCEA · CLASS OF 2026
-                </span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-[#D3AE36] w-max font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+                Academic Journey & Engineering Brotherhood
               </div>
 
-              {/* Main Headline */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA] leading-[1.18]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E2025] tracking-tight dark:text-[#F8F9FA]">
                 Civil Engineering Built on <span className="text-[#D3AE36]">Practical Construction &amp; Rigor.</span>
               </h2>
 
-              {/* Editorial Monograph Reading Section */}
-              <div className="border-l-2 border-[#D3AE36] pl-5 sm:pl-6 space-y-3.5 my-1">
-                <p className="text-sm sm:text-[15px] text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-[1.75] font-normal">
-                  <span className="float-left text-3xl sm:text-4xl font-serif font-black text-[#D3AE36] leading-none pr-3 pt-1">A</span>
-                  t <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Adama Science and Technology University (ASTU)</strong>, School of Civil Engineering and Architecture (SoCEA), our 5-year curriculum bridges numerical computational mechanics with boots-on-the-ground field execution. Working collectively as civil engineering brothers, we transform theoretical governing equations and national design standards—including <strong className="text-[#D3AE36] font-semibold">EBCS EN 1990–1998</strong> and <strong className="text-[#D3AE36] font-semibold">ERA Standard Specifications</strong>—into resilient, constructible physical infrastructure across Ethiopia.
-                </p>
-                <p className="text-sm sm:text-[15px] text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-[1.75] font-normal">
-                  From late-night finite element stress simulations in campus computer labs to hot afternoon concrete pours at <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Oromia Construction Corporation (OCC)</strong> project sites, our brotherhood has cultivated rigorous mastery across finite element analysis (FEA), corridor mass-haul optimization, fresh concrete slump/cube compressive quality control, and millimeter-level geodetic Total Station surveying.
-                </p>
-              </div>
+              {/* Editorial Lead Paragraph */}
+              <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed">
+                At <strong className="text-[#D3AE36] font-bold">Adama Science and Technology University (ASTU)</strong>, our 5-year curriculum fuses advanced structural modeling with real on-site field practice. Graduating as civil engineering brothers, we turn complex design codes into durable, buildable physical assets.
+              </p>
 
-              {/* 4-Pillar Distinct Engineering Praxis Matrix */}
+              {/* 2-Column Technical Experience DIV Cards */}
               <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
-                {/* Pillar 01: Computational Modeling & FEA Sizing */}
-                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between group">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <Building2 className="text-[#D3AE36] w-4 h-4 shrink-0" />
-                        <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono">
-                          FEA Computational Modeling
-                        </span>
-                      </div>
-                      <span className="text-[9px] font-mono font-bold text-[#D3AE36] bg-[#D3AE36]/10 px-2 py-0.5 rounded-md border border-[#D3AE36]/30">
-                        EBCS EN 1992
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-                      3D modal response spectrum analysis, dual RC core shear wall lateral stability, and P-Delta drift verification in ETABS &amp; SAP2000.
-                    </p>
+                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+                  <div className="flex items-center gap-2 mb-2">
+                    <GraduationCap className="text-[#D3AE36] w-5 h-5 shrink-0" />
+                    <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
+                      ASTU Capstone Rigor
+                    </span>
                   </div>
-                  <div className="mt-3 pt-2 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-semibold flex items-center justify-between">
-                    <span>✦ Ductility Class High (DCH)</span>
-                    <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">01 / 04</span>
+                  <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed">
+                    5th-year multidisciplinary capstone projects compliant with <span className="text-[#D3AE36] font-semibold">EBCS EN 1990–1998</span> and ERA geometric road standards.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+                  <div className="flex items-center gap-2 mb-2">
+                    <HardHat className="text-[#D3AE36] w-5 h-5 shrink-0" />
+                    <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
+                      OCC Site Supervision
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed">
+                    Industrial internships at <span className="text-[#D3AE36] font-semibold">Oromia Construction Corp</span> — supervising concrete batching, slump cone QC, and Total Station setting-out.
+                  </p>
+                </div>
+              </div>
+
+              {/* Executive Architectural Pull-Quote DIV */}
+              <div className="relative p-4 sm:p-5 rounded-2xl bg-[#D3AE36]/5 dark:bg-[#232936]/60 border-l-4 border-[#D3AE36] border-y border-r border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                <p className="text-xs sm:text-sm text-[#1E2025] dark:text-[#F8F9FA] italic leading-relaxed font-serif">
+                  “Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction.”
+                </p>
+                <div className="mt-2 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider font-bold">
+                  — Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
+                <div className="p-3.5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
+                  <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">B.Sc. Civil Engineering (5th Year)</span>
+                    <span className="text-[10px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">Adama Science &amp; Technology University</span>
                   </div>
                 </div>
 
-                {/* Pillar 02: Highway Alignment & Geometric Design */}
-                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between group">
+                <div className="p-3.5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
+                  <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0">
+                    <HardHat className="w-5 h-5" />
+                  </div>
                   <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <Layers className="text-[#D3AE36] w-4 h-4 shrink-0" />
-                        <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono">
-                          Civil 3D Highway Geometry
-                        </span>
-                      </div>
-                      <span className="text-[9px] font-mono font-bold text-[#D3AE36] bg-[#D3AE36]/10 px-2 py-0.5 rounded-md border border-[#D3AE36]/30">
-                        ERA 2024
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-                      Corridor horizontal/vertical curvature design, mass-haul volumetric earthwork balancing, and stormwater culvert sizing per ERA manuals.
-                    </p>
-                  </div>
-                  <div className="mt-3 pt-2 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-semibold flex items-center justify-between">
-                    <span>✦ Mass-Haul Balance</span>
-                    <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">02 / 04</span>
-                  </div>
-                </div>
-
-                {/* Pillar 03: Field QA/QC & Rebar Schedules */}
-                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between group">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <HardHat className="text-[#D3AE36] w-4 h-4 shrink-0" />
-                        <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono">
-                          OCC Site Quality Supervision
-                        </span>
-                      </div>
-                      <span className="text-[9px] font-mono font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/30">
-                        BS 1881 / C-25
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-                      On-site concrete slump cone workability testing, standard 28-day cube compressive strength batching, and bar bending schedule (BBS) inspection.
-                    </p>
-                  </div>
-                  <div className="mt-3 pt-2 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-semibold flex items-center justify-between">
-                    <span>✦ 100% Structural Pour QC</span>
-                    <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">03 / 04</span>
-                  </div>
-                </div>
-
-                {/* Pillar 04: Geodetic Survey & Field Setting-Out */}
-                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between group">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <Ruler className="text-[#D3AE36] w-4 h-4 shrink-0" />
-                        <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono">
-                          Total Station Precision Geodesy
-                        </span>
-                      </div>
-                      <span className="text-[9px] font-mono font-bold text-[#D3AE36] bg-[#D3AE36]/10 px-2 py-0.5 rounded-md border border-[#D3AE36]/30">
-                        ±2mm TOLERANCE
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-                      Topographic contour surveying, benchmark differential leveling, column axis setting-out, and foundation layout at ASTU field camps.
-                    </p>
-                  </div>
-                  <div className="mt-3 pt-2 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-semibold flex items-center justify-between">
-                    <span>✦ Closed Traverse Balancing</span>
-                    <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">04 / 04</span>
+                    <span className="text-xs text-[#1E2025] font-bold block dark:text-[#F8F9FA]">Practical Site Internship</span>
+                    <span className="text-[10px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/75">OCC Supervision &amp; Geodetic Survey Camps</span>
                   </div>
                 </div>
               </div>
 
-              {/* Executive Architectural Monograph Pull-Quote */}
-              <div className="relative p-5 rounded-2xl bg-[#D3AE36]/5 dark:bg-[#232936]/60 border-l-4 border-[#D3AE36] border-y border-r border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
-                <div className="flex items-start gap-3">
-                  <Quote className="w-5 h-5 text-[#D3AE36] shrink-0 mt-0.5" />
-                  <div className="space-y-1.5">
-                    <p className="text-xs sm:text-sm text-[#1E2025] dark:text-[#F8F9FA] italic leading-relaxed font-serif">
-                      “Civil engineering is the noble art of turning physical laws and local geological materials into safe, enduring structures. We bridge office calculations with real boots-on-the-ground construction.”
-                    </p>
-                    <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-[#31394D]/20 dark:border-[#31394D]/50 text-[10px] font-mono">
-                      <span className="text-[#D3AE36] uppercase tracking-wider font-bold">
-                        — Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Cohort
-                      </span>
-                      <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold uppercase">
-                        ASTU Class of 2026
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Dossier Buttons */}
-              <div className="flex flex-wrap items-center gap-3.5 pt-1">
+              <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/about"
-                  className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all flex items-center gap-2 shadow-md shadow-[#D3AE36]/20 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all flex items-center gap-2 font-bold shadow-md shadow-[#D3AE36]/20"
                 >
                   Full Academic Profile <ArrowUpRight size={14} />
                 </Link>
                 <Link
                   to="/about#brotherhood"
-                  className="rounded-full bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:border-[#D3AE36] border border-[#31394D]/30 dark:border-[#31394D] px-6 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs cursor-pointer"
+                  className="rounded-full bg-[#FFFFFF] dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] hover:border-[#D3AE36] border border-[#31394D]/30 dark:border-[#31394D] px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
                 >
                   <Users size={14} className="text-[#D3AE36]" />
                   <span>Meet Our Brotherhood Cohort</span>
@@ -1324,7 +1228,7 @@ export const Home = () => {
           {filteredTestimonials.length === 0 ? (
             <div className="py-16 text-center mb-12">
               <MessageSquareQuote className="mx-auto w-10 h-10 text-[#D3AE36]/60 mb-2" />
-              <p className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 text-xs font-mono uppercase tracking-wider">
+              <p className="text-[#1E2025] text-xs font-mono uppercase tracking-wider">
                 No endorsements match the selected category.
               </p>
             </div>
