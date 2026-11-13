@@ -773,7 +773,7 @@ export const Home = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1E2025] tracking-tight mb-4 dark:text-[#F8F9FA]">
               Real-Time Structural & Seismic <span className="text-[#D3AE36]">Load Path.</span>
             </h2>
-            <p className="text-[#1E2025] text-sm md:text-base leading-relaxed">
+            <p className="text-[#1E2025]/80 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
               Explore how gravity loads, wind pressures, and Rift Valley seismic motions propagate through reinforced concrete columns, shear walls, and foundation soils down to bedrock.
             </p>
           </div>
