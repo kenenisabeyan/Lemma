@@ -362,11 +362,15 @@ export const TestimonialsPage = () => {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            {filteredTestimonials.map((t) => (
-              <div 
-                key={t.id} 
-                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
-              >
+            {filteredTestimonials.map((t, idx) => {
+              const isEven = idx % 2 === 0;
+              return (
+                <div 
+                  key={t.id} 
+                  className={`group rounded-3xl ${
+                    isEven ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
+                  } border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between`}
+                >
                 <div>
                   <div className="flex justify-between items-center mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/40">
                     <div className="flex gap-1 text-[#D3AE36]">
@@ -403,7 +407,7 @@ export const TestimonialsPage = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            ); })}
           </div>
         )}
 

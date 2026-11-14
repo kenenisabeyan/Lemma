@@ -408,11 +408,15 @@ Phone: +251 934 830 919
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 gap-8 mb-24">
-          {filteredResources.map((item, index) => (
-            <div 
-              key={item.id || index} 
-              className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
-            >
+          {filteredResources.map((item, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <div 
+                key={item.id || index} 
+                className={`group rounded-3xl ${
+                  isEven ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
+                } border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between`}
+              >
               <div>
                 <div className="flex justify-between items-start mb-5">
                   <div className="p-3 rounded-2xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-zinc-200/60 dark:border-[#31394D] group-hover:scale-105 transition-transform shadow-2xs">
@@ -452,7 +456,7 @@ Phone: +251 934 830 919
                 <Download size={14} className="text-[#12151C]" />
               </button>
             </div>
-          ))}
+          ); })}
         </div>
 
 

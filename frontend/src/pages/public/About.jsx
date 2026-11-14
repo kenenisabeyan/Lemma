@@ -502,7 +502,7 @@ export const About = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -534,7 +534,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -566,7 +566,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -598,7 +598,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -651,10 +651,12 @@ export const About = () => {
 
           {/* 6-Card Brotherhood Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brotherhoodCohort.map((member) => (
+            {brotherhoodCohort.map((member, idx) => (
               <div
                 key={member.id}
-                className="group relative rounded-2xl bg-[#FFFFFF] dark:bg-[#232936] border border-zinc-200/90 dark:border-[#31394D] p-5 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between cad-bracket-corners"
+                className={`group relative rounded-2xl ${
+                  idx % 2 === 0 ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
+                } border border-zinc-200/90 dark:border-[#31394D] p-5 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between cad-bracket-corners`}
               >
                 <div>
                   {/* Photo Thumbnail with Blueprint & Vignette */}

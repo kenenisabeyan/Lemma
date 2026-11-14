@@ -250,7 +250,7 @@ export const Contact = () => {
                   {/* Channel 1: Phone */}
                   <a
                     href="tel:+251934830919"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#232936] hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
                     <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Phone size={20} />
@@ -272,7 +272,7 @@ export const Contact = () => {
                   {/* Channel 2: Email */}
                   <a
                     href="mailto:lemmayezedlij21@gmail.com"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-[#DFE2EB] dark:bg-[#1E2025] hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
                     <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Mail size={20} />
@@ -292,7 +292,7 @@ export const Contact = () => {
                   </a>
 
                   {/* Channel 3: Campus Base */}
-                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs">
+                  <div className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#232936] hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs">
                     <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <MapPin size={20} />
                     </div>

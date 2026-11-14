@@ -328,10 +328,10 @@ export const FaqPage = () => {
               <div 
                 key={faq.id || index} 
                 className={`rounded-3xl transition-all duration-300 border ${
-                  isOpen
-                    ? 'bg-white dark:bg-[#232936] border-[#D3AE36]/60 shadow-lg'
-                    : 'bg-white/80 dark:bg-[#232936]/70 border-[#31394D]/25 dark:border-[#31394D]/60 hover:border-[#D3AE36]/40 shadow-xs'
-                } p-6 sm:p-7 group`}
+                  index % 2 === 0
+                    ? 'bg-[#F8F9FA] dark:bg-[#232936] border-[#31394D]/25 dark:border-[#31394D]/60'
+                    : 'bg-[#DFE2EB] dark:bg-[#1E2025] border-[#31394D]/25 dark:border-[#31394D]/60'
+                } ${isOpen ? 'ring-2 ring-[#D3AE36]/60 shadow-lg' : 'hover:border-[#D3AE36]/40 shadow-xs'} p-6 sm:p-7 group`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}

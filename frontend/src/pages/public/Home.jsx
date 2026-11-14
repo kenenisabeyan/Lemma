@@ -602,7 +602,7 @@ export const Home = () => {
           <div className="relative mx-auto grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
             
             {/* Bento Card 1: Multi-Story RC Structural Design (Col 1-2) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
@@ -618,7 +618,7 @@ export const Home = () => {
                     Dual core shear walls and moment frames compliant with <strong className="text-[#D3AE36] font-semibold">EBCS EN 1992</strong> &amp; <strong className="text-[#D3AE36] font-semibold">Eurocode 2</strong>.
                   </p>
                   {/* Structured Architectural Spec Micro-Box */}
-                  <div className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
+                  <div className="p-3 rounded-2xl bg-[#DFE2EB] dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
                     <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">3D dynamic response spectrum</span>
@@ -637,7 +637,7 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 2: Highway Alignment & ERA Standards (Col 3-4) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-[#DFE2EB] dark:bg-[#181B22] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 md:col-span-2 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
@@ -653,7 +653,7 @@ export const Home = () => {
                     Route geometric layout and cut-and-fill optimization adhering strictly to <strong className="text-[#D3AE36] font-semibold">ERA 2024</strong> manuals.
                   </p>
                   {/* Structured Architectural Spec Micro-Box */}
-                  <div className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
+                  <div className="p-3 rounded-2xl bg-[#F8F9FA] dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
                     <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Civil 3D corridor &amp; profile design</span>
@@ -672,7 +672,7 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 3: Practical Site Supervision & Soil Testing (Col 5-6) */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
+            <div className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-2 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
@@ -688,7 +688,7 @@ export const Home = () => {
                     Field inspection conducted during <strong className="text-[#D3AE36] font-semibold">OCC Site Internships</strong> and ASTU geodetic survey camps.
                   </p>
                   {/* Structured Architectural Spec Micro-Box */}
-                  <div className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
+                  <div className="p-3 rounded-2xl bg-[#DFE2EB] dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs">
                     <div className="flex items-center gap-2">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">Slump test (80–120mm) &amp; cube QC</span>
@@ -707,7 +707,7 @@ export const Home = () => {
             </div>
 
             {/* Bento Card 4: Full-Width 6-Col Bottom Showcase */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-9 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-6 grid sm:grid-cols-2 gap-8 items-center group">
+            <div className="bg-[#DFE2EB] dark:bg-[#181B22] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-9 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 sm:col-span-2 md:col-span-6 grid sm:grid-cols-2 gap-8 items-center group">
               <div className="space-y-4">
                 <div className="flex size-12 items-center justify-center rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36]">
                   <Ruler size={24} className="text-[#D3AE36]" />
@@ -723,21 +723,21 @@ export const Home = () => {
 
                 {/* Structured Value Strip */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs">
-                  <div className="p-3 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30">
+                  <div className="p-3 rounded-xl bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30">
                     <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] block text-xs">01. FEA Computer Modeling</span>
                     <span className="text-[10px] text-[#1E2025]/70 dark:text-[#F8F9FA]/70">ETABS 3D seismic &amp; frame dynamics</span>
                   </div>
-                  <div className="p-3 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30">
+                  <div className="p-3 rounded-xl bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30">
                     <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] block text-xs">02. Field QA/QC Supervision</span>
                     <span className="text-[10px] text-[#1E2025]/70 dark:text-[#F8F9FA]/70">Slump testing, BBS &amp; Total Station</span>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 pt-1">
-                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">EBCS EN 1992</span>
-                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">ERA Standards</span>
-                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">OCC Site Internship</span>
-                  <span className="px-3 py-1 rounded-lg bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">Quality Assurance</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">EBCS EN 1992</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">ERA Standards</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">OCC Site Internship</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-[11px] text-[#D3AE36] font-bold">Quality Assurance</span>
                 </div>
               </div>
 
@@ -858,7 +858,7 @@ export const Home = () => {
 
               {/* 2-Column Technical Experience DIV Cards */}
               <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
-                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+                <div className="p-4 rounded-2xl bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
                   <div className="flex items-center gap-2 mb-2">
                     <GraduationCap className="text-[#D3AE36] w-5 h-5 shrink-0" />
                     <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
@@ -870,7 +870,7 @@ export const Home = () => {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
+                <div className="p-4 rounded-2xl bg-[#DFE2EB] dark:bg-[#181B22] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs">
                   <div className="flex items-center gap-2 mb-2">
                     <HardHat className="text-[#D3AE36] w-5 h-5 shrink-0" />
                     <span className="text-xs font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase font-mono tracking-wider">
@@ -884,7 +884,7 @@ export const Home = () => {
               </div>
 
               {/* Executive Architectural Pull-Quote DIV */}
-              <div className="relative p-4 sm:p-5 rounded-2xl bg-[#D3AE36]/5 dark:bg-[#232936]/60 border-l-4 border-[#D3AE36] border-y border-r border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+              <div className="relative p-4 sm:p-5 rounded-2xl bg-[#F8F9FA] dark:bg-[#232936]/60 border-l-4 border-[#D3AE36] border-y border-r border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
                 <p className="text-xs sm:text-sm text-[#1E2025] dark:text-[#F8F9FA] italic leading-relaxed font-serif">
                   “Civil engineering is about turning physical laws and local materials into safe, durable structures. We bridge office calculations with real boots-on-the-ground construction.”
                 </p>
@@ -894,7 +894,7 @@ export const Home = () => {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
-                <div className="p-3.5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
+                <div className="p-3.5 rounded-2xl bg-[#DFE2EB] dark:bg-[#181B22] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
                   <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0">
                     <GraduationCap className="w-5 h-5" />
                   </div>
@@ -904,7 +904,7 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
+                <div className="p-3.5 rounded-2xl bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 flex items-center gap-3.5 shadow-xs hover:border-[#D3AE36]/50 transition-all">
                   <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0">
                     <HardHat className="w-5 h-5" />
                   </div>
@@ -966,41 +966,44 @@ export const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-            {services.map((srv, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Building2 size={24} />
+            {services.map((srv, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <div 
+                  key={index} 
+                  className={`${isEven ? 'bg-[#DFE2EB] dark:bg-[#1E2025]' : 'bg-[#F8F9FA] dark:bg-[#232936]'} border border-[#31394D]/25 dark:border-[#31394D]/60 rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Building2 size={24} />
+                      </div>
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-bold uppercase tracking-wider">
+                        Specialization 0{index + 1}
+                      </span>
                     </div>
-                    <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-bold uppercase tracking-wider">
-                      Specialization 0{index + 1}
-                    </span>
+                    <h4 className="text-xl font-bold text-[#1E2025] mb-2.5 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
+                    <p className="text-[#1E2025]/80 text-sm leading-relaxed mb-4 dark:text-[#F8F9FA]/80">{srv.summary || srv.description}</p>
+                    
+                    {/* Structured Technical Specification DIV Card */}
+                    <div className={`p-3.5 rounded-2xl ${isEven ? 'bg-[#F8F9FA]/90 dark:bg-[#12151C]/70' : 'bg-[#DFE2EB]/90 dark:bg-[#12151C]/70'} border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs mb-5`}>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[#D3AE36] font-bold">✦ Standard:</span>
+                        <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">EBCS EN, ERA 2024 &amp; ASTM Standards</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[#D3AE36] font-bold">✦ Execution:</span>
+                        <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">3D Modeling, Field Testing &amp; BBS Calculation</span>
+                      </div>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-[#1E2025] mb-2.5 group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">{srv.title}</h4>
-                  <p className="text-[#1E2025]/80 text-sm leading-relaxed mb-4 dark:text-[#F8F9FA]/80">{srv.summary || srv.description}</p>
-                  
-                  {/* Structured Technical Specification DIV Card */}
-                  <div className="p-3.5 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 space-y-1.5 font-mono text-xs mb-5">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#D3AE36] font-bold">✦ Standard:</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">EBCS EN, ERA 2024 &amp; ASTM Standards</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#D3AE36] font-bold">✦ Execution:</span>
-                      <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px]">3D Modeling, Field Testing &amp; BBS Calculation</span>
-                    </div>
-                  </div>
+                  <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:text-[#C29F2F] flex items-center justify-between pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
+                    <span>Explore Scope &amp; Deliverables</span>
+                    <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </Link>
                 </div>
-                <Link to="/services" className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:text-[#C29F2F] flex items-center justify-between pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
-                  <span>Explore Scope &amp; Deliverables</span>
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -1010,10 +1013,18 @@ export const Home = () => {
       {/* ========================================================================= */}
       <section className="py-14 transition-colors bg-[#DFE2EB] dark:bg-[#1E2025] border-y border-[#31394D]/15 dark:border-[#31394D]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <StatCounter value={settings.yearsExp || '5th Year'} label="Academic Year" subtext="ASTU Graduating Class of 2026" />
-          <StatCounter value={settings.projectsCount || '25+'} label="Academic &amp; Site Projects" subtext="Capstones, Labs &amp; Internships" />
-          <StatCounter value={settings.safetyRecord || '100%'} label="Defense Readiness" subtext="Zero Critical Deficiencies" />
-          <StatCounter value={settings.clientsCount || 'ASTU SoCEA'} label="University School" subtext="Civil Eng &amp; Architecture" />
+          <div className="rounded-2xl bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/20 shadow-xs">
+            <StatCounter value={settings.yearsExp || '5th Year'} label="Academic Year" subtext="ASTU Graduating Class of 2026" />
+          </div>
+          <div className="rounded-2xl bg-[#DFE2EB] dark:bg-[#181B22] border border-[#31394D]/20 shadow-xs">
+            <StatCounter value={settings.projectsCount || '25+'} label="Academic &amp; Site Projects" subtext="Capstones, Labs &amp; Internships" />
+          </div>
+          <div className="rounded-2xl bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/20 shadow-xs">
+            <StatCounter value={settings.safetyRecord || '100%'} label="Defense Readiness" subtext="Zero Critical Deficiencies" />
+          </div>
+          <div className="rounded-2xl bg-[#DFE2EB] dark:bg-[#181B22] border border-[#31394D]/20 shadow-xs">
+            <StatCounter value={settings.clientsCount || 'ASTU SoCEA'} label="University School" subtext="Civil Eng &amp; Architecture" />
+          </div>
         </div>
       </section>
 
@@ -1044,7 +1055,8 @@ export const Home = () => {
           </div>
 
           <div className="space-y-12">
-            {projects.slice(0, 3).map((proj) => {
+            {projects.slice(0, 3).map((proj, pIdx) => {
+              const isEven = pIdx % 2 === 0;
               const softwareList = typeof proj.softwareUsed === 'string'
                 ? JSON.parse(proj.softwareUsed || '[]')
                 : (proj.softwareUsed || []);
@@ -1052,7 +1064,9 @@ export const Home = () => {
               return (
                 <article 
                   key={proj.id}
-                  className="group grid overflow-hidden md:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300"
+                  className={`group grid overflow-hidden md:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-8 rounded-3xl ${
+                    isEven ? 'bg-[#DFE2EB] dark:bg-[#1E2025]' : 'bg-[#F8F9FA] dark:bg-[#232936]'
+                  } border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300`}
                 >
                   {/* Left Column Image */}
                   <div className="relative overflow-hidden rounded-2xl min-h-[280px] border border-[#31394D]/20 dark:border-[#31394D]/50 shadow-xs">
@@ -1221,11 +1235,13 @@ export const Home = () => {
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-              {filteredTestimonials.map((t, idx) => (
-                <div 
-                  key={t.id || idx} 
-                  className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
-                >
+              {filteredTestimonials.map((t, idx) => {
+                const isEven = idx % 2 === 0;
+                return (
+                  <div 
+                    key={t.id || idx} 
+                    className={`${isEven ? 'bg-[#DFE2EB] dark:bg-[#1E2025]' : 'bg-[#F8F9FA] dark:bg-[#232936]'} border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group`}
+                  >
                   <div>
                     <div className="flex justify-between items-center mb-6">
                       <div className="flex gap-1 text-[#D3AE36]">
@@ -1265,12 +1281,12 @@ export const Home = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ); })}
             </div>
           )}
 
           {/* Consultation Prompt / Trust Banner Architectural DIV Card */}
-          <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center justify-between gap-6 my-4">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center justify-between gap-6 my-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center shrink-0">
                 <ShieldCheck size={28} />
@@ -1320,28 +1336,31 @@ export const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            {insights.slice(0, 3).map((article, i) => (
-              <Link 
-                key={i} 
-                to={`/insights/${article.slug || 'mitigating-differential-settlement-expansive-soils'}`} 
-                className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <FileText size={24} />
+            {insights.slice(0, 3).map((article, i) => {
+              const isEven = i % 2 === 0;
+              return (
+                <Link 
+                  key={i} 
+                  to={`/insights/${article.slug || 'mitigating-differential-settlement-expansive-soils'}`} 
+                  className={`${isEven ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#181B22]'} border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer`}
+                >
+                  <div>
+                    <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                      <FileText size={24} />
+                    </div>
+                    <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-bold">{article.category} • {article.date || 'Oct 2026'}</span>
+                    <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-3 dark:text-[#F8F9FA] leading-snug">{article.title}</h5>
+                    <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed mb-4 line-clamp-2">
+                      {article.summary || article.excerpt || 'Technical analysis and design procedures compliant with Ethiopian Building Code Standards (EBCS).'}
+                    </p>
                   </div>
-                  <span className="text-[10px] uppercase font-mono text-[#D3AE36] tracking-widest block mb-2 font-bold">{article.category} • {article.date || 'Oct 2026'}</span>
-                  <h5 className="text-base font-bold text-[#1E2025] group-hover:text-[#D3AE36] transition-colors mb-3 dark:text-[#F8F9FA] leading-snug">{article.title}</h5>
-                  <p className="text-xs text-[#1E2025]/75 dark:text-[#F8F9FA]/75 leading-relaxed mb-4 line-clamp-2">
-                    {article.summary || article.excerpt || 'Technical analysis and design procedures compliant with Ethiopian Building Code Standards (EBCS).'}
-                  </p>
-                </div>
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
-                  <span>Read Technical Paper</span>
-                  <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </span>
-              </Link>
-            ))}
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] flex items-center gap-1.5 pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50">
+                    <span>Read Technical Paper</span>
+                    <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -1369,7 +1388,7 @@ export const Home = () => {
             {/* Item 1: Email */}
             <a 
               href="mailto:lemmayezedlij21@gmail.com" 
-              className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4 group"
+              className="bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4 group"
             >
               <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
                 <Mail size={22} />
@@ -1383,7 +1402,7 @@ export const Home = () => {
             {/* Item 2: Phone */}
             <a 
               href="tel:+251934830919" 
-              className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4 group"
+              className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4 group"
             >
               <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] group-hover:scale-110 transition-transform">
                 <Phone size={22} />
@@ -1395,7 +1414,7 @@ export const Home = () => {
             </a>
 
             {/* Item 3: Location */}
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4">
+            <div className="bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all flex items-center gap-4">
               <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#D3AE36]/10 text-[#D3AE36]">
                 <MapPin size={22} />
               </div>
@@ -1407,7 +1426,7 @@ export const Home = () => {
           </div>
 
           {/* Full Consultation Trigger Banner Architectural DIV Card */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="text-left space-y-2 max-w-xl">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>

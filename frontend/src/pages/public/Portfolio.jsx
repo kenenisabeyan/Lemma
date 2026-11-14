@@ -418,10 +418,11 @@ export const Portfolio = () => {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, idx) => (
               <ProjectCard
                 key={project.id}
                 project={project}
+                index={idx}
                 onClick={(p) => setSelectedProject(p)}
               />
             ))}

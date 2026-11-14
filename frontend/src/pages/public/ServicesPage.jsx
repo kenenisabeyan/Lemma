@@ -351,7 +351,9 @@ export const ServicesPage = () => {
             return (
               <div 
                 key={srv.id || index} 
-                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 relative"
+                className={`group rounded-3xl ${
+                  index % 2 === 0 ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
+                } border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 relative`}
               >
                 <div className="grid lg:grid-cols-12 gap-8 items-start">
                   

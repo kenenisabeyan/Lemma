@@ -374,12 +374,16 @@ export const InsightsPage = () => {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            {filteredArticles.map((item) => (
-              <Link
-                key={item.id}
-                to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
-                className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden"
-              >
+            {filteredArticles.map((item, idx) => {
+              const isEven = idx % 2 === 0;
+              return (
+                <Link
+                  key={item.id}
+                  to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
+                  className={`rounded-3xl ${
+                    isEven ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
+                  } border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden`}
+                >
                 <div>
                   <div className="aspect-[16/10] bg-[#12151C] overflow-hidden relative rounded-2xl mb-4 border border-[#31394D]/30 dark:border-[#31394D]">
                     {item.imageUrl && (
@@ -421,7 +425,7 @@ export const InsightsPage = () => {
                   </span>
                 </div>
               </Link>
-            ))}
+            ); })}
           </div>
         )}
 
