@@ -13,7 +13,7 @@ export const StatCounter = ({ value, label, subtext }) => {
       <h3 className="text-4xl lg:text-5xl font-extrabold text-[#1E2025] mb-2 font-mono tracking-tight group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA]">
         {value}
       </h3>
-      <p className="text-xs text-[#1E2025] uppercase tracking-[0.2em] font-bold">{label}</p>
+      <p className="text-xs text-[#1E2025] dark:text-[#F8F9FA]/80 uppercase tracking-[0.2em] font-bold">{label}</p>
       {subtext && <p className="text-[10px] text-[#D3AE36] mt-1.5 font-mono font-semibold">{subtext}</p>}
     </motion.div>
   );
