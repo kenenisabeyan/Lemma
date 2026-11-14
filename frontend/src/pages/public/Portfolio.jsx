@@ -112,21 +112,17 @@ export const Portfolio = () => {
       {/* ========================================================================= */}
       {/* CINEMATIC PORTFOLIO HERO SECTION                                          */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
-        
-        {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
         
         {/* Subtle Ambient Studio Lights (Wine & Gold) */}
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] pointer-events-none" />
 
         {/* Architectural CAD Blueprint & 3D Three.js Civil Engineering Simulation */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
           <Hero3DCanvas />
           {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] dark:from-[#12151C] to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -341,98 +337,103 @@ export const Portfolio = () => {
       <TechMarquee />
 
       {/* ========================================================================= */}
-      {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
+      {/* 2. FILTER & SEARCH TELEMETRY DOCK & PROJECT GRID                          */}
       {/* ========================================================================= */}
-      <div id="project-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
+      <section id="project-grid" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Category Tabs */}
-          <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
-            {PROJECT_CATEGORIES.map((cat) => {
-              const count = cat === 'All' 
-                ? allProjects.length 
-                : allProjects.filter(p => p.category === cat).length;
-              const isSelected = selectedCategory === cat;
+          <div className="py-4 mb-8 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
+            
+            {/* Category Tabs */}
+            <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
+              {PROJECT_CATEGORIES.map((cat) => {
+                const count = cat === 'All' 
+                  ? allProjects.length 
+                  : allProjects.filter(p => p.category === cat).length;
+                const isSelected = selectedCategory === cat;
 
-              return (
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 rounded-full cursor-pointer ${
+                      isSelected
+                        ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
+                        : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:bg-white/80 dark:hover:bg-[#232936]'
+                    }`}
+                  >
+                    <span>{cat}</span>
+                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                      isSelected 
+                        ? 'bg-[#12151C] text-[#F8F9FA] font-black' 
+                        : 'bg-[#12151C]/10 dark:bg-[#12151C] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Search Input with Reset */}
+            <div className="relative min-w-[280px] sm:min-w-[320px]">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search capstone, RC frame, highway, soil..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
+              />
+              {searchQuery && (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 rounded-full cursor-pointer ${
-                    isSelected
-                      ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
-                      : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:bg-[#12151C]/5 dark:hover:bg-[#232936]'
-                  }`}
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#1E2025]/60 dark:text-[#F8F9FA]/60 hover:text-[#D3AE36] cursor-pointer"
                 >
-                  <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                    isSelected 
-                      ? 'bg-[#12151C] text-[#F8F9FA] font-black' 
-                      : 'bg-[#12151C]/10 dark:bg-[#12151C] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
-                  }`}>
-                    {count}
-                  </span>
+                  <X size={14} />
                 </button>
-              );
-            })}
+              )}
+            </div>
+
           </div>
 
-          {/* Search Input with Reset */}
-          <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search capstone, RC frame, highway, soil..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#1E2025]/60 dark:text-[#F8F9FA]/60 hover:text-[#D3AE36] cursor-pointer"
-              >
-                <X size={14} />
-              </button>
+          {/* Project Grid */}
+          <div>
+            {filteredProjects.length === 0 ? (
+              <div className="py-24 text-center">
+                <HardHat className="w-12 h-12 text-[#D3AE36] mx-auto mb-4 opacity-75" />
+                <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No capstone projects match your search.</p>
+                <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
+                <button
+                  onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
+                  className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
+                >
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, idx) => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    index={idx}
+                    onClick={(p) => setSelectedProject(p)}
+                  />
+                ))}
+              </div>
             )}
           </div>
 
         </div>
-      </div>
+      </section>
 
       {/* ========================================================================= */}
-      {/* 3. PROJECT GRID                                                           */}
+      {/* 3. INTERACTIVE DRAWING DOSSIER & CAD INSPECTOR SECTION                    */}
       {/* ========================================================================= */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {filteredProjects.length === 0 ? (
-          <div className="py-24 text-center mb-20">
-            <HardHat className="w-12 h-12 text-[#D3AE36] mx-auto mb-4 opacity-75" />
-            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No capstone projects match your search.</p>
-            <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
-            <button
-              onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
-            >
-              Reset Filters
-            </button>
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            {filteredProjects.map((project, idx) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                index={idx}
-                onClick={(p) => setSelectedProject(p)}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* ======================================================================= */}
-        {/* 4. INTERACTIVE DRAWING DOSSIER & FEA CAD INSPECTOR                      */}
-        {/* ======================================================================= */}
-        <div id="cad-inspector" className="mb-24 scroll-mt-24">
+      <section id="cad-inspector" className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
@@ -447,34 +448,32 @@ export const Portfolio = () => {
           </div>
 
           <BlueprintInspector />
-        </div>
 
-        {/* ======================================================================= */}
-        {/* 5. HIGH-STAKES CONSULTATION BANNER ARCHITECTURAL DIV CARD               */}
-        {/* ======================================================================= */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
-          <div className="text-left max-w-2xl space-y-2">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Graduate Recruitment &amp; Capstone Collaborations</span>
+          {/* High-Stakes Consultation Banner */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
+            <div className="text-left max-w-2xl space-y-2">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Available for Graduate Recruitment &amp; Capstone Collaborations</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
+                Interested in Capstone Research or Engineering Recruitment?
+              </h3>
+              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
+                Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
+              </p>
             </div>
-            <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Interested in Capstone Research or Engineering Recruitment?
-            </h3>
-            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Open for graduate engineering roles, infrastructure project partnerships, and technical discussions on Ethiopian Building Code Standards (EBCS) and ERA implementations with our ASTU 5th-year student cohort.
-            </p>
+            <button
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+            >
+              <span>Connect With Us</span>
+              <ArrowUpRight size={15} />
+            </button>
           </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
-          >
-            <span>Connect With Us</span>
-            <ArrowUpRight size={15} />
-          </button>
-        </div>
 
-      </div>
+        </div>
+      </section>
 
       {/* Case Study Modal */}
       {selectedProject && (

@@ -339,43 +339,44 @@ export const Experience = () => {
       {/* ========================================================================= */}
       {/* 2. TABBED EXPERIENCE DOSSIER (MILESTONES, TIMELINE, COMPETENCIES)         */}
       {/* ========================================================================= */}
-      <div id="experience-tabs" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
-        
-        {/* Navigation Tabs */}
-        <div className="flex flex-wrap gap-2.5 mb-10 pb-4 border-b border-zinc-200/60 dark:border-[#31394D]">
-          <button
-            onClick={() => setActiveTab('milestones')}
-            className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-              activeTab === 'milestones'
-                ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
-            }`}
-          >
-            Major Project Milestones
-          </button>
+      <section id="experience-tabs" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Navigation Tabs */}
+          <div className="flex flex-wrap gap-2.5 mb-10 pb-4 border-b border-zinc-200/60 dark:border-[#31394D]">
+            <button
+              onClick={() => setActiveTab('milestones')}
+              className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                activeTab === 'milestones'
+                  ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
+                  : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+              }`}
+            >
+              Major Project Milestones
+            </button>
 
-          <button
-            onClick={() => setActiveTab('timeline')}
-            className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-              activeTab === 'timeline'
-                ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
-            }`}
-          >
-            Career Timeline &amp; Roles
-          </button>
+            <button
+              onClick={() => setActiveTab('timeline')}
+              className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                activeTab === 'timeline'
+                  ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
+                  : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+              }`}
+            >
+              Career Timeline &amp; Roles
+            </button>
 
-          <button
-            onClick={() => setActiveTab('competencies')}
-            className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-              activeTab === 'competencies'
-                ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
-            }`}
-          >
-            Core Competencies
-          </button>
-        </div>
+            <button
+              onClick={() => setActiveTab('competencies')}
+              className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                activeTab === 'competencies'
+                  ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
+                  : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+              }`}
+            >
+              Core Competencies
+            </button>
+          </div>
 
         {/* Tab 1: Major Milestones */}
         {activeTab === 'milestones' && (
@@ -488,9 +489,7 @@ export const Experience = () => {
             {structuralCompetencies.map((comp, index) => (
               <div 
                 key={index} 
-                className={`group rounded-3xl ${
-                  index % 2 === 0 ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
-                } border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between`}
+                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -514,10 +513,15 @@ export const Experience = () => {
           </div>
         )}
 
-        {/* ======================================================================= */}
-        {/* 3. DYNAMIC SEISMIC SHAKE TABLE LABORATORY                               */}
-        {/* ======================================================================= */}
-        <div id="shake-table" className="mb-24 scroll-mt-24">
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. DYNAMIC SEISMIC SHAKE TABLE LABORATORY & BANNER SECTION                */}
+      {/* ========================================================================= */}
+      <section id="shake-table" className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
@@ -532,39 +536,37 @@ export const Experience = () => {
           </div>
 
           <SeismicShakeTable />
-        </div>
 
-        {/* ======================================================================= */}
-        {/* 4. CREDENTIALS & CALL TO ACTION BANNER                                  */}
-        {/* ======================================================================= */}
-        <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col lg:flex-row justify-between items-center gap-8">
-          <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-widest block mb-2 font-bold">Ready to Collaborate &amp; Recruit</span>
-            <h3 className="text-2xl lg:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">Need Civil Engineering Talent or <span className="text-[#D3AE36]">Capstone Collaborations</span>?</h3>
-            <p className="text-sm text-zinc-600 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Available for graduate civil engineering positions, structural modeling projects, ERA highway alignment tasks, and technical consultations with our ASTU 5th-year student cohort.
-            </p>
+          {/* Credentials & Call to Action Banner */}
+          <div className="mt-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col lg:flex-row justify-between items-center gap-8">
+            <div className="text-left max-w-2xl">
+              <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-widest block mb-2 font-bold">Ready to Collaborate &amp; Recruit</span>
+              <h3 className="text-2xl lg:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">Need Civil Engineering Talent or <span className="text-[#D3AE36]">Capstone Collaborations</span>?</h3>
+              <p className="text-sm text-zinc-600 dark:text-[#F8F9FA]/80 leading-relaxed">
+                Available for graduate civil engineering positions, structural modeling projects, ERA highway alignment tasks, and technical consultations with our ASTU 5th-year student cohort.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+              <button
+                onClick={() => navigate('/resources')}
+                className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer border border-zinc-200 dark:border-[#31394D] bg-zinc-50 dark:bg-[#12151C]"
+              >
+                <span>Download Student Dossier (PDF)</span>
+                <Download size={14} className="text-[#D3AE36]" />
+              </button>
+              <button
+                onClick={() => navigate('/contact')}
+                className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D3AE36]"
+              >
+                <span>Connect With Us</span>
+                <ArrowUpRight size={14} />
+              </button>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-            <button
-              onClick={() => navigate('/resources')}
-              className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer border border-zinc-200 dark:border-[#31394D] bg-zinc-50 dark:bg-[#12151C]"
-            >
-              <span>Download Student Dossier (PDF)</span>
-              <Download size={14} className="text-[#D3AE36]" />
-            </button>
-            <button
-              onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D3AE36]"
-            >
-              <span>Connect With Us</span>
-              <ArrowUpRight size={14} />
-            </button>
-          </div>
         </div>
-
-      </div>
+      </section>
     </div>
   );
 };
