@@ -483,7 +483,7 @@ export const LoadPathSimulator = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono pt-2">
             
             {/* Metric 1 */}
-            <div className="p-3.5 rounded-2xl bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/15 dark:border-[#31394D]/30 shadow-xs">
+            <div className="p-3.5 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03]">
               <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mb-1">
                 <span>{metrics.baseShearSymbol}</span>
                 <sub className="text-[9px] -bottom-0.5">{metrics.baseShearSub}</sub>
@@ -498,7 +498,7 @@ export const LoadPathSimulator = () => {
             </div>
 
             {/* Metric 2 */}
-            <div className="p-3.5 rounded-2xl bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/15 dark:border-[#31394D]/30 shadow-xs">
+            <div className="p-3.5 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03]">
               <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mb-1">
                 <span>{metrics.driftSymbol}</span>
                 <sub className="text-[9px] -bottom-0.5">{metrics.driftSub}</sub>
@@ -513,7 +513,7 @@ export const LoadPathSimulator = () => {
             </div>
 
             {/* Metric 3 */}
-            <div className="p-3.5 rounded-2xl bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/15 dark:border-[#31394D]/30 shadow-xs">
+            <div className="p-3.5 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03]">
               <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mb-1">
                 <span>{metrics.momentSymbol}</span>
                 <sub className="text-[9px] -bottom-0.5">{metrics.momentSub}</sub>
@@ -528,7 +528,7 @@ export const LoadPathSimulator = () => {
             </div>
 
             {/* Metric 4 */}
-            <div className="p-3.5 rounded-2xl bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/15 dark:border-[#31394D]/30 shadow-xs">
+            <div className="p-3.5 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03]">
               <div className="flex items-center gap-1 text-[10px] uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-semibold mb-1">
                 <span>{metrics.dissipationSymbol}</span>
                 <sub className="text-[9px] -bottom-0.5">{metrics.dissipationSub}</sub>
