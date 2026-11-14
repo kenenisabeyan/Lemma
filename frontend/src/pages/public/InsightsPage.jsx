@@ -295,164 +295,159 @@ export const InsightsPage = () => {
       <TechMarquee />
 
       {/* ========================================================================= */}
-      {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
+      {/* 2. FILTER & SEARCH DOCK AND ARTICLES FEED                                 */}
       {/* ========================================================================= */}
-      <div id="articles-feed" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
+      <section id="articles-feed" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Category Tabs */}
-          <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
-            {categories.map((cat) => {
-              const count = cat === 'All'
-                ? articles.length
-                : articles.filter(a => a.category === cat).length;
-              const isSelected = selectedCategory === cat;
+          <div className="py-4 mb-8 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
+            
+            {/* Category Tabs */}
+            <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
+              {categories.map((cat) => {
+                const count = cat === 'All'
+                  ? articles.length
+                  : articles.filter(a => a.category === cat).length;
+                const isSelected = selectedCategory === cat;
 
-              return (
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 rounded-full cursor-pointer ${
+                      isSelected
+                        ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
+                        : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:bg-white/80 dark:hover:bg-[#232936]'
+                    }`}
+                  >
+                    <span>{cat}</span>
+                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                      isSelected 
+                        ? 'bg-[#12151C] text-[#F8F9FA] font-black' 
+                        : 'bg-[#12151C]/10 dark:bg-[#12151C] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Search Input with Reset */}
+            <div className="relative min-w-[280px] sm:min-w-[320px]">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search research papers, EBCS codes, ERA manuals..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
+              />
+              {searchQuery && (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 rounded-full cursor-pointer ${
-                    isSelected
-                      ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
-                      : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:bg-[#12151C]/5 dark:hover:bg-[#232936]'
-                  }`}
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#1E2025]/60 dark:text-[#F8F9FA]/60 hover:text-[#D3AE36] cursor-pointer"
                 >
-                  <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                    isSelected 
-                      ? 'bg-[#12151C] text-[#F8F9FA] font-black' 
-                      : 'bg-[#12151C]/10 dark:bg-[#12151C] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
-                  }`}>
-                    {count}
-                  </span>
+                  <X size={14} />
                 </button>
-              );
-            })}
+              )}
+            </div>
+
           </div>
 
-          {/* Search Input with Reset */}
-          <div className="relative min-w-[280px] sm:min-w-[320px]">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D3AE36] w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search research papers, EBCS codes, ERA manuals..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#1E2025]/60 dark:text-[#F8F9FA]/60 hover:text-[#D3AE36] cursor-pointer"
-              >
-                <X size={14} />
-              </button>
+          {/* Articles Grid */}
+          <div>
+            {filteredArticles.length === 0 ? (
+              <div className="py-24 text-center mb-16">
+                <BookOpen className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
+                <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No technical publications match your query.</p>
+                <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
+                <button
+                  onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
+                  className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
+                >
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {filteredArticles.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
+                    className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden"
+                  >
+                    <div>
+                      <div className="aspect-[16/10] bg-[#12151C] overflow-hidden relative rounded-2xl mb-4 border border-[#31394D]/30 dark:border-[#31394D]">
+                        {item.imageUrl && (
+                          <img 
+                            src={item.imageUrl} 
+                            alt={item.title} 
+                            className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                        <span className="absolute top-3 left-3 rounded-full bg-black/65 backdrop-blur-md text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
+                          {item.category}
+                        </span>
+                      </div>
+
+                      <div>
+                        <div className="flex items-center gap-3 text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 mb-2 uppercase tracking-wider">
+                          <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D3AE36]" /> {item.publishedAt}</span>
+                          <span>·</span>
+                          <span className="flex items-center gap-1"><Clock size={12} className="text-[#D3AE36]" /> {item.readTime}</span>
+                        </div>
+
+                        <h3 className="text-lg font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2 leading-snug">
+                          {item.title}
+                        </h3>
+
+                        <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/75 leading-relaxed line-clamp-3">
+                          {item.excerpt}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] transition-colors flex items-center gap-1.5">
+                        Read Paper <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </span>
+                      <span className="text-[10px] font-mono text-[#1E2025]/50 dark:text-[#F8F9FA]/50">
+                        ASTU SoCEA
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             )}
           </div>
 
-        </div>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* 3. ARTICLES GRID                                                          */}
-      {/* ========================================================================= */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {filteredArticles.length === 0 ? (
-          <div className="py-24 text-center mb-16">
-            <BookOpen className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
-            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No technical publications match your query.</p>
-            <p className="text-zinc-500 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
+          {/* Bottom Consultation Banner */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
+            <div className="text-left max-w-2xl space-y-2">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Available for Technical Research &amp; Advisory</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
+                Applying <span className="text-[#D3AE36]">Advanced Engineering Research</span> to Real Infrastructure
+              </h3>
+              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
+                Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from our ASTU 5th-year student cohort?
+              </p>
+            </div>
             <button
-              onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-[#D3AE36] text-[#12151C] px-5 py-2 text-xs font-mono uppercase font-bold cursor-pointer"
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95 border border-[#D3AE36]"
             >
-              Reset Filters
+              <span>Connect With Our Team</span>
+              <ArrowUpRight size={15} />
             </button>
           </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            {filteredArticles.map((item, idx) => {
-              const isEven = idx % 2 === 0;
-              return (
-                <Link
-                  key={item.id}
-                  to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
-                  className={`rounded-3xl ${
-                    isEven ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
-                  } border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden`}
-                >
-                <div>
-                  <div className="aspect-[16/10] bg-[#12151C] overflow-hidden relative rounded-2xl mb-4 border border-[#31394D]/30 dark:border-[#31394D]">
-                    {item.imageUrl && (
-                      <img 
-                        src={item.imageUrl} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                    <span className="absolute top-3 left-3 rounded-full bg-black/65 backdrop-blur-md text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
-                      {item.category}
-                    </span>
-                  </div>
 
-                  <div>
-                    <div className="flex items-center gap-3 text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 mb-2 uppercase tracking-wider">
-                      <span className="flex items-center gap-1"><Calendar size={12} className="text-[#D3AE36]" /> {item.publishedAt}</span>
-                      <span>·</span>
-                      <span className="flex items-center gap-1"><Clock size={12} className="text-[#D3AE36]" /> {item.readTime}</span>
-                    </div>
-
-                    <h3 className="text-lg font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2 leading-snug">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/75 leading-relaxed line-clamp-3">
-                      {item.excerpt}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] transition-colors flex items-center gap-1.5">
-                    Read Paper <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </span>
-                  <span className="text-[10px] font-mono text-[#1E2025]/50 dark:text-[#F8F9FA]/50">
-                    ASTU SoCEA
-                  </span>
-                </div>
-              </Link>
-            ); })}
-          </div>
-        )}
-
-        {/* ======================================================================= */}
-        {/* 4. BOTTOM CONSULTATION BANNER ARCHITECTURAL DIV CARD                    */}
-        {/* ======================================================================= */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
-          <div className="text-left max-w-2xl space-y-2">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Technical Research &amp; Advisory</span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Applying <span className="text-[#D3AE36]">Advanced Engineering Research</span> to Real Infrastructure
-            </h3>
-            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Need finite element analysis, EBCS seismic checks, ERA road alignments, or soil stabilization advice from our ASTU 5th-year student cohort?
-            </p>
-          </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95 border border-[#D3AE36]"
-          >
-            <span>Connect With Our Team</span>
-            <ArrowUpRight size={15} />
-          </button>
         </div>
-
-      </div>
+      </section>
     </div>
   );
 };
