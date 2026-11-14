@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { MapPin, ArrowUpRight, Building2, ShieldCheck } from 'lucide-react';
 
 export const ProjectCard = ({ project, onClick, index = 0, className = '' }) => {
-  const isEven = index % 2 === 0;
   const softwareList = typeof project.softwareUsed === 'string'
     ? JSON.parse(project.softwareUsed || '[]')
     : (project.softwareUsed || []);
@@ -12,9 +11,7 @@ export const ProjectCard = ({ project, onClick, index = 0, className = '' }) => 
     <motion.div
       whileHover={{ y: -5 }}
       onClick={() => onClick && onClick(project)}
-      className={`group cursor-pointer rounded-3xl ${
-        isEven ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
-      } border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between ${className}`}
+      className={`group cursor-pointer rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between ${className}`}
     >
       <div>
         {/* Project Thumbnail Image with Blueprint Crosshairs Overlay */}
