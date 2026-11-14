@@ -93,15 +93,11 @@ export const ServicesPage = () => {
       {/* ========================================================================= */}
       {/* CINEMATIC SERVICES HERO SECTION                                           */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-white/10 bg-white dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
+      <section className="relative min-h-[92vh] sm:min-h-[88vh] flex flex-col justify-center items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
         
-        {/* Luminous White Glass Frosted Sheen & Center Light Dome (Exact Match to Home) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white dark:from-[#12151C] dark:via-[#12151C] dark:to-[#12151C] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65vw] h-[55vh] bg-white dark:bg-white/[0.04] rounded-full blur-[90px] pointer-events-none" />
-
         {/* Subtle Ambient Studio Lights */}
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] animate-aurora-drift pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] animate-aurora-drift-2 pointer-events-none" />
+        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/[0.02] dark:bg-[#D3AE36]/10 blur-[120px] pointer-events-none" />
 
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -113,13 +109,12 @@ export const ServicesPage = () => {
             style={{ backgroundImage: `url(${lemmaFour})` }}
           />
 
-          {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
-          <div className="absolute inset-0 bg-white/40 dark:bg-[#12151C]/70 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#12151C]/85 dark:via-transparent dark:to-[#12151C]/85 pointer-events-none" />
-          <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
+          {/* Contrast Gradients for Perfect Readability */}
+          <div className="absolute inset-0 bg-[#F8F9FA]/40 dark:bg-[#12151C]/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F8F9FA]/80 via-[#F8F9FA]/40 to-[#F8F9FA]/70 dark:from-[#12151C]/85 dark:via-transparent dark:to-[#12151C]/85 pointer-events-none" />
 
-          {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none" />
+          {/* Precision Vignette Edge Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] dark:from-[#12151C] to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
@@ -319,119 +314,113 @@ export const ServicesPage = () => {
       {/* ========================================================================= */}
       {/* 2. SERVICES LIST (BENTO CARD MODULES)                                     */}
       {/* ========================================================================= */}
-      <div id="service-modules" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
-        
-        <div className="mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-            Technical Specifications & Scope
-          </div>
-          <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
-            Four Core <span className="text-[#D3AE36]">Engineering Capabilities.</span>
-          </h2>
-          <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
-            Every deliverable adheres to rigorous structural mechanics and finite element verification, delivering code-compliant design packages for Ethiopian infrastructure.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-6 sm:gap-8 mb-24">
-          {servicesList.map((srv, index) => {
-            const features = typeof srv.features === 'string'
-              ? JSON.parse(srv.features || '[]')
-              : (srv.features || []);
-
-            const iconMap = {
-              '0': Building2,
-              '1': Layers,
-              '2': ShieldCheck,
-              '3': Ruler
-            };
-            const Icon = iconMap[index % 4] || Building2;
-
-            return (
-              <div 
-                key={srv.id || index} 
-                className={`group rounded-3xl ${
-                  index % 2 === 0 ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
-                } border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 relative`}
-              >
-                <div className="grid lg:grid-cols-12 gap-8 items-start">
-                  
-                  <div className="lg:col-span-4 flex items-start gap-4">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
-                      <Icon size={30} />
-                    </div>
-                    <div>
-                      <span className="inline-block rounded-full bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
-                        Module 0{index + 1}
-                      </span>
-                      <h3 className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
-                        {srv.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div className="lg:col-span-8 flex flex-col gap-5">
-                    <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm sm:text-base leading-relaxed">
-                      {srv.description || srv.summary}
-                    </p>
-
-                    <div className="grid sm:grid-cols-2 gap-3 pt-1">
-                      {features.map((feat, i) => (
-                        <div key={i} className="flex items-start gap-2.5 p-2 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C]/60 border border-[#31394D]/20 dark:border-[#31394D]/40">
-                          <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
-                          <span className="text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-medium leading-snug">{feat}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="pt-2 flex flex-wrap items-center gap-3">
-                      <button
-                        onClick={() => navigate('/contact')}
-                        className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(211,174,54,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
-                      >
-                        <span>Request Service Consultation</span>
-                        <ArrowUpRight size={14} />
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-
-
-
-
-        {/* ======================================================================= */}
-        {/* 5. BOTTOM CONSULTATION BANNER ARCHITECTURAL DIV CARD                    */}
-        {/* ======================================================================= */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
-          <div className="text-left max-w-2xl space-y-2">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Technical Consultations &amp; Capstone Defense</span>
+      <section id="service-modules" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+              Technical Specifications & Scope
             </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Require Civil &amp; Structural Engineering Collaboration?
-            </h3>
-            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              Let's discuss reinforced concrete analysis, ERA highway alignments, expansive soil foundation design, or capstone collaborations with our ASTU 5th-year student team.
+            <h2 className="text-3xl md:text-5xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight mb-4">
+              Four Core <span className="text-[#D3AE36]">Engineering Capabilities.</span>
+            </h2>
+            <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/80 text-sm md:text-base leading-relaxed">
+              Every deliverable adheres to rigorous structural mechanics and finite element verification, delivering code-compliant design packages for Ethiopian infrastructure.
             </p>
           </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
-          >
-            <span>Connect With Our Team</span>
-            <ArrowUpRight size={15} />
-          </button>
-        </div>
 
-      </div>
+          <div className="flex flex-col gap-6 sm:gap-8 mb-20">
+            {servicesList.map((srv, index) => {
+              const features = typeof srv.features === 'string'
+                ? JSON.parse(srv.features || '[]')
+                : (srv.features || []);
+
+              const iconMap = {
+                '0': Building2,
+                '1': Layers,
+                '2': ShieldCheck,
+                '3': Ruler
+              };
+              const Icon = iconMap[index % 4] || Building2;
+
+              return (
+                <div 
+                  key={srv.id || index} 
+                  className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 relative"
+                >
+                  <div className="grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <div className="lg:col-span-4 flex items-start gap-4">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                        <Icon size={30} />
+                      </div>
+                      <div>
+                        <span className="inline-block rounded-full bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
+                          Module 0{index + 1}
+                        </span>
+                        <h3 className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
+                          {srv.title}
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div className="lg:col-span-8 flex flex-col gap-5">
+                      <p className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-sm sm:text-base leading-relaxed">
+                        {srv.description || srv.summary}
+                      </p>
+
+                      <div className="grid sm:grid-cols-2 gap-3 pt-1">
+                        {features.map((feat, i) => (
+                          <div key={i} className="flex items-start gap-2.5 p-2 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C]/60 border border-[#31394D]/20 dark:border-[#31394D]/40">
+                            <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
+                            <span className="text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-medium leading-snug">{feat}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="pt-2 flex flex-wrap items-center gap-3">
+                        <button
+                          onClick={() => navigate('/contact')}
+                          className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(211,174,54,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+                        >
+                          <span>Request Service Consultation</span>
+                          <ArrowUpRight size={14} />
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom Consultation Banner Architectural DIV Card */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
+            <div className="text-left max-w-2xl space-y-2">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Available for Technical Consultations &amp; Capstone Defense</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
+                Require Civil &amp; Structural Engineering Collaboration?
+              </h3>
+              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
+                Let's discuss reinforced concrete analysis, ERA highway alignments, expansive soil foundation design, or capstone collaborations with our ASTU 5th-year student team.
+              </p>
+            </div>
+            <button
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+            >
+              <span>Connect With Our Team</span>
+              <ArrowUpRight size={15} />
+            </button>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 };

@@ -321,169 +321,177 @@ export const About = () => {
       <TechMarquee />
 
       {/* ========================================================================= */}
-      {/* 2. CORE PHILOSOPHY & PRACTICE HIGHLIGHTS                                  */}
+      {/* 2. CORE PHILOSOPHY & TECHNICAL TOOLKIT SECTION                            */}
       {/* ========================================================================= */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        
-        <div className="mb-24">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-bold">Core Academic &amp; Field Philosophy</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-6 leading-tight max-w-3xl">
-            Precision Engineering Meets Ethiopian Infrastructure
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-6 pt-2">
-            <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center font-bold">
-                    <Target size={22} />
+      <section className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36]"></span>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D3AE36] font-bold">Core Academic &amp; Field Philosophy</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-6 leading-tight max-w-3xl">
+              Precision Engineering Meets Ethiopian Infrastructure
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-6 pt-2">
+              <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-11 h-11 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center font-bold">
+                      <Target size={22} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-[#1E2025] dark:text-[#F8F9FA]">Context-Driven Civil Engineering</h4>
+                      <span className="text-[10px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider">Rift Valley &amp; Local Geologies</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-base text-[#1E2025] dark:text-[#F8F9FA]">Context-Driven Civil Engineering</h4>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider">Rift Valley &amp; Local Geologies</span>
-                  </div>
+                  <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/80 leading-relaxed mb-4">
+                    We believe civil engineering shapes communities. As 5th-year students at ASTU, we study and work together as brothers to solve real local challenges — from earthquake forces in the Great Rift Valley to foundation design on expansive black cotton soils.
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/80 leading-relaxed mb-4">
-                  We believe civil engineering shapes communities. As 5th-year students at ASTU, we study and work together as brothers to solve real local challenges — from earthquake forces in the Great Rift Valley to foundation design on expansive black cotton soils.
-                </p>
+                <div className="pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center gap-3 text-xs font-mono text-[#D3AE36] font-bold">
+                  <span>✦ Seismic Ductility Class High</span>
+                  <span>·</span>
+                  <span>✦ Expansive Soil Stabilization</span>
+                </div>
               </div>
-              <div className="pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center gap-3 text-xs font-mono text-[#D3AE36] font-bold">
-                <span>✦ Seismic Ductility Class High</span>
-                <span>·</span>
-                <span>✦ Expansive Soil Stabilization</span>
+
+              <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-11 h-11 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center font-bold">
+                      <Layers size={22} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-[#1E2025] dark:text-[#F8F9FA]">Computational Rigor &amp; National Codes</h4>
+                      <span className="text-[10px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider">EBCS &amp; ERA Certified</span>
+                    </div>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/80 leading-relaxed mb-4">
+                    Every capstone design is modeled in ETABS, SAP2000, or Civil 3D, and checked against Ethiopian Building Code Standards (EBCS EN 1990–1998) and ERA manuals to ensure safety, durability, and cost efficiency.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center gap-3 text-xs font-mono text-[#D3AE36] font-bold">
+                  <span>✦ Finite Element Verification</span>
+                  <span>·</span>
+                  <span>✦ Standard Bar Bending Schedules</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="rounded-3xl p-6 sm:p-7 bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] shadow-sm hover:border-[#D3AE36]/60 transition-all flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center font-bold">
-                    <Layers size={22} />
-                  </div>
+          {/* Software & FEA Proficiency */}
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+              Technical Toolkit & Simulation
+            </div>
+            <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
+              Software & <span className="text-[#D3AE36]">FEA Numerical Modeling.</span>
+            </h3>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {SOFTWARE_STACK.map((soft) => (
+                <div 
+                  key={soft.name} 
+                  className="p-5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
+                >
                   <div>
-                    <h4 className="font-bold text-base text-[#1E2025] dark:text-[#F8F9FA]">Computational Rigor &amp; National Codes</h4>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider">EBCS &amp; ERA Certified</span>
+                    <div className="flex justify-between items-center mb-3">
+                      <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono group-hover:text-[#D3AE36] transition-colors">{soft.name}</h4>
+                      <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase px-2 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30">
+                        {soft.level}
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">{soft.desc}</p>
+                  </div>
+                  <div className="mt-2 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 group-hover:text-[#D3AE36] transition-colors flex items-center justify-between">
+                    <span>FEA Precision Verified</span>
+                    <CheckCircle2 size={12} className="text-[#D3AE36]" />
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/80 leading-relaxed mb-4">
-                  Every capstone design is modeled in ETABS, SAP2000, or Civil 3D, and checked against Ethiopian Building Code Standards (EBCS EN 1990–1998) and ERA manuals to ensure safety, durability, and cost efficiency.
-                </p>
-              </div>
-              <div className="pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center gap-3 text-xs font-mono text-[#D3AE36] font-bold">
-                <span>✦ Finite Element Verification</span>
-                <span>·</span>
-                <span>✦ Standard Bar Bending Schedules</span>
-              </div>
+              ))}
             </div>
           </div>
+
         </div>
+      </section>
 
-        {/* ======================================================================= */}
-        {/* 3. SOFTWARE & FEA PROFICIENCY                                           */}
-        {/* ======================================================================= */}
-        <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-            Technical Toolkit & Simulation
-          </div>
-          <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
-            Software & <span className="text-[#D3AE36]">FEA Numerical Modeling.</span>
-          </h3>
+      {/* ========================================================================= */}
+      {/* 3. CAREER PROGRESSION & CERTIFICATIONS SECTION                            */}
+      {/* ========================================================================= */}
+      <section className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-20">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#31394D] px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+              Professional Journey & Track Record
+            </div>
+            <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-12">
+              Academic & Field <span className="text-[#D3AE36]">Progression.</span>
+            </h3>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SOFTWARE_STACK.map((soft) => (
-              <div 
-                key={soft.name} 
-                className="p-5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex justify-between items-center mb-3">
-                    <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono group-hover:text-[#D3AE36] transition-colors">{soft.name}</h4>
-                    <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase px-2 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30">
-                      {soft.level}
-                    </span>
+            <div className="flex flex-col gap-6 relative border-l-2 border-[#D3AE36]/40 pl-6 sm:pl-8 ml-3 sm:ml-4">
+              {CAREER_TIMELINE.map((item, index) => (
+                <div key={index} className="relative group">
+                  <div className="absolute -left-[31px] sm:-left-[39px] top-6 w-4 h-4 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
+                  <div className="p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md hover:border-[#D3AE36]/60 transition-all space-y-2">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30">
+                        {item.year}
+                      </span>
+                      <span className="text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-widest font-semibold">
+                        Milestone 0{index + 1}
+                      </span>
+                    </div>
+                    <h4 className="text-lg font-bold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">{item.role}</h4>
+                    <p className="text-xs font-semibold text-[#D3AE36] uppercase tracking-wider">{item.company}</p>
+                    <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed pt-1">{item.description}</p>
                   </div>
-                  <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed mb-3">{soft.desc}</p>
                 </div>
-                <div className="mt-2 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 group-hover:text-[#D3AE36] transition-colors flex items-center justify-between">
-                  <span>FEA Precision Verified</span>
-                  <CheckCircle2 size={12} className="text-[#D3AE36]" />
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* ======================================================================= */}
-        {/* 4. CAREER TIMELINE                                                      */}
-        {/* ======================================================================= */}
-        <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#31394D] px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-            Professional Journey & Track Record
-          </div>
-          <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-12">
-            Academic & Field <span className="text-[#D3AE36]">Progression.</span>
-          </h3>
+          {/* Academic Credentials & Certifications */}
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
+              Academic Honors & Technical Certifications
+            </div>
+            <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
+              Academic Credentials & <span className="text-[#D3AE36]">Certifications.</span>
+            </h3>
 
-          <div className="flex flex-col gap-6 relative border-l-2 border-[#D3AE36]/40 pl-6 sm:pl-8 ml-3 sm:ml-4">
-            {CAREER_TIMELINE.map((item, index) => (
-              <div key={index} className="relative group">
-                <div className="absolute -left-[31px] sm:-left-[39px] top-6 w-4 h-4 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs"></div>
-                <div className="p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md hover:border-[#D3AE36]/60 transition-all space-y-2">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="text-xs font-mono text-[#D3AE36] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30">
-                      {item.year}
-                    </span>
-                    <span className="text-[10px] font-mono text-[#1E2025]/60 dark:text-[#F8F9FA]/60 uppercase tracking-widest font-semibold">
-                      Milestone 0{index + 1}
-                    </span>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {CERTIFICATIONS.map((cert, index) => (
+                <div 
+                  key={index} 
+                  className="p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md hover:border-[#D3AE36]/60 transition-all flex items-start gap-4 group"
+                >
+                  <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0 group-hover:scale-110 transition-transform">
+                    <Award size={22} />
                   </div>
-                  <h4 className="text-lg font-bold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">{item.role}</h4>
-                  <p className="text-xs font-semibold text-[#D3AE36] uppercase tracking-wider">{item.company}</p>
-                  <p className="text-xs sm:text-sm text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed pt-1">{item.description}</p>
+                  <div>
+                    <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-1 group-hover:text-[#D3AE36] transition-colors leading-snug">{cert.title}</h4>
+                    <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">{cert.body}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
         </div>
+      </section>
 
-        {/* ======================================================================= */}
-        {/* 5. LICENSURE & BOARD CERTIFICATIONS                                     */}
-        {/* ======================================================================= */}
-        <div className="mb-24">
-          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-3 font-bold">
-            <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-            Academic Honors & Technical Certifications
-          </div>
-          <h3 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-10">
-            Academic Credentials & <span className="text-[#D3AE36]">Certifications.</span>
-          </h3>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            {CERTIFICATIONS.map((cert, index) => (
-              <div 
-                key={index} 
-                className="p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-md hover:border-[#D3AE36]/60 transition-all flex items-start gap-4 group"
-              >
-                <div className="p-2.5 rounded-xl bg-[#D3AE36]/10 text-[#D3AE36] shrink-0 group-hover:scale-110 transition-transform">
-                  <Award size={22} />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] mb-1 group-hover:text-[#D3AE36] transition-colors leading-snug">{cert.title}</h4>
-                  <p className="text-xs text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">{cert.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* ======================================================================= */}
-        {/* 6. PRACTICAL SITE CONSTRUCTION & INTERNSHIP SHOWCASE                    */}
-        {/* ======================================================================= */}
-        <div id="practical-construction" className="mb-24 scroll-mt-24">
+      {/* ========================================================================= */}
+      {/* 4. PRACTICAL SITE CONSTRUCTION & OCC INTERNSHIP SECTION                   */}
+      {/* ========================================================================= */}
+      <section id="practical-construction" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
@@ -498,7 +506,7 @@ export const About = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -530,7 +538,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -562,7 +570,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="bg-[#F8F9FA] dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -594,7 +602,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="bg-[#DFE2EB] dark:bg-[#1E2025] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -626,12 +634,16 @@ export const About = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* ======================================================================= */}
-        {/* 7.5 ASTU SoCEA CIVIL ENGINEERING BROTHERHOOD (id="brotherhood")          */}
-        {/* ======================================================================= */}
-        <div id="brotherhood" className="mb-24 scroll-mt-24">
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. ASTU SoCEA CIVIL ENGINEERING BROTHERHOOD SECTION                       */}
+      {/* ========================================================================= */}
+      <section id="brotherhood" className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="mx-auto max-w-3xl text-center mb-14">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#232936] bg-[#FFFFFF] dark:bg-[#232936] px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-3 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
@@ -647,12 +659,10 @@ export const About = () => {
 
           {/* 6-Card Brotherhood Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brotherhoodCohort.map((member, idx) => (
+            {brotherhoodCohort.map((member) => (
               <div
                 key={member.id}
-                className={`group relative rounded-2xl ${
-                  idx % 2 === 0 ? 'bg-[#F8F9FA] dark:bg-[#232936]' : 'bg-[#DFE2EB] dark:bg-[#1E2025]'
-                } border border-zinc-200/90 dark:border-[#31394D] p-5 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between cad-bracket-corners`}
+                className="group relative rounded-2xl bg-white dark:bg-[#232936] border border-zinc-200/90 dark:border-[#31394D] p-5 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 dark:hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between cad-bracket-corners"
               >
                 <div>
                   {/* Photo Thumbnail with Blueprint & Vignette */}
@@ -719,7 +729,7 @@ export const About = () => {
           </div>
 
           {/* Brotherhood Cohort Endorsement Strip */}
-          <div className="mt-8 p-6 rounded-2xl bg-[#FFFFFF] dark:bg-[#232936] border border-[#D3AE36]/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+          <div className="mt-8 p-6 rounded-2xl bg-white dark:bg-[#232936] border border-[#D3AE36]/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono shadow-xs">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-[#D3AE36]/15 border border-[#D3AE36]/40 flex items-center justify-center text-[#D3AE36] shrink-0">
                 <Users size={18} />
@@ -737,34 +747,32 @@ export const About = () => {
               <ArrowUpRight size={14} />
             </button>
           </div>
-        </div>
 
-        {/* ======================================================================= */}
-        {/* 8. BOTTOM CONSULTATION BANNER ARCHITECTURAL DIV CARD                    */}
-        {/* ======================================================================= */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
-          <div className="text-left max-w-2xl space-y-2">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Graduate Engagements &amp; Capstone Defense</span>
+          {/* Bottom Consultation Banner Architectural DIV Card */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
+            <div className="text-left max-w-2xl space-y-2">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Available for Graduate Engagements &amp; Capstone Defense</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
+                Have an Infrastructure Project or Graduate Role in Mind?
+              </h3>
+              <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
+                From structural RC framing analysis to highway alignments and geotechnical soil testing — let's connect and build Ethiopia's future together.
+              </p>
             </div>
-            <h3 className="text-2xl md:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight leading-snug">
-              Have an Infrastructure Project or Graduate Role in Mind?
-            </h3>
-            <p className="text-xs sm:text-sm text-[#1E2025]/80 dark:text-[#F8F9FA]/80 leading-relaxed">
-              From structural RC framing analysis to highway alignments and geotechnical soil testing — let's connect and build Ethiopia's future together.
-            </p>
+            <button
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+            >
+              <span>Connect With Us</span>
+              <ArrowUpRight size={15} />
+            </button>
           </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
-          >
-            <span>Connect With Us</span>
-            <ArrowUpRight size={15} />
-          </button>
-        </div>
 
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
