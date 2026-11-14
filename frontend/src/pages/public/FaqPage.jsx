@@ -256,10 +256,12 @@ export const FaqPage = () => {
       <TechMarquee />
 
       {/* ========================================================================= */}
-      {/* 2. FILTER & SEARCH TELEMETRY DOCK                                         */}
+      {/* 2. FILTER & SEARCH DOCK AND FAQ ACCORDION                                 */}
       {/* ========================================================================= */}
-      <div id="faq-accordion" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 relative z-30 scroll-mt-24">
-        <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-zinc-200/60 dark:border-[#31394D] pb-6">
+      <section id="faq-accordion" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D] pb-6 mb-8">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -312,25 +314,17 @@ export const FaqPage = () => {
             )}
           </div>
 
-        </div>
-      </div>
+          </div>
 
-      {/* ========================================================================= */}
-      {/* 3. ACCORDION LIST                                                         */}
-      {/* ========================================================================= */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col gap-4 mb-24">
-          {filteredFaqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div 
-                key={faq.id || index} 
-                className={`rounded-3xl transition-all duration-300 border ${
-                  index % 2 === 0
-                    ? 'bg-[#F8F9FA] dark:bg-[#232936] border-[#31394D]/25 dark:border-[#31394D]/60'
-                    : 'bg-[#DFE2EB] dark:bg-[#1E2025] border-[#31394D]/25 dark:border-[#31394D]/60'
-                } ${isOpen ? 'ring-2 ring-[#D3AE36]/60 shadow-lg' : 'hover:border-[#D3AE36]/40 shadow-xs'} p-6 sm:p-7 group`}
-              >
+          {/* Accordion List */}
+          <div className="flex flex-col gap-4 mb-24">
+            {filteredFaqs.map((faq, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <div 
+                  key={faq.id || index} 
+                  className={`rounded-3xl transition-all duration-300 border bg-white dark:bg-[#232936] border-[#31394D]/25 dark:border-[#31394D]/60 ${isOpen ? 'ring-2 ring-[#D3AE36]/60 shadow-lg' : 'hover:border-[#D3AE36]/40 shadow-xs'} p-6 sm:p-7 group`}
+                >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full text-left font-black text-base sm:text-lg text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
@@ -367,37 +361,43 @@ export const FaqPage = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* ======================================================================= */}
-        {/* 4. STRUCTURAL ENGINEERING GLOSSARY                                      */}
-        {/* ======================================================================= */}
-        <div id="glossary" className="mb-24 scroll-mt-24">
-          <EngineeringGlossary />
-        </div>
-
-        {/* ======================================================================= */}
-        {/* 5. BOTTOM CONSULTATION BANNER                                           */}
-        {/* ======================================================================= */}
-        <div className="my-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
-          <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
-              Have a Question for Our ASTU Civil Engineering Cohort?
-            </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-              Whether inquiring about our capstone structural calculation models, highway route designs, or career recruitment opportunities, reach out directly to Lemma and the brothers.
-            </p>
           </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
-          >
-            Connect With Brothers <ArrowUpRight size={15} className="text-[#12151C]" />
-          </button>
-        </div>
 
-      </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. STRUCTURAL ENGINEERING GLOSSARY & BANNER SECTION                       */}
+      {/* ========================================================================= */}
+      <section id="glossary" className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-12">
+            <EngineeringGlossary />
+          </div>
+
+          {/* Bottom Consultation Banner */}
+          <div className="mt-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
+            <div className="text-left max-w-2xl">
+              <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
+              <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
+                Have a Question for Our ASTU Civil Engineering Cohort?
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
+                Whether inquiring about our capstone structural calculation models, highway route designs, or career recruitment opportunities, reach out directly to Lemma and the brothers.
+              </p>
+            </div>
+            <button
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
+            >
+              <span>Connect With Brothers</span>
+              <ArrowUpRight size={15} className="text-[#12151C]" />
+            </button>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 };
