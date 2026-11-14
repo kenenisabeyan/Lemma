@@ -84,7 +84,7 @@ export const Contact = () => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC CONTACT HERO SECTION (MATCHING RESOURCESPAGE TOOLKIT DESIGN)  */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-100 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
+      <section id="contact-hero" className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
         
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
         <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
@@ -272,7 +272,7 @@ export const Contact = () => {
                   {/* Channel 2: Email */}
                   <a
                     href="mailto:lemmayezedlij21@gmail.com"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-[#DFE2EB] dark:bg-[#1E2025] hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#232936] hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
                     <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Mail size={20} />
@@ -329,10 +329,11 @@ export const Contact = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. FOUR OVERLAPPING FLOATING CONTACT CARDS                                 */}
+      {/* 2. DIRECT CHANNELS & CONSULTATION INQUIRY (FULL-WIDTH SECTION)             */}
       {/* ========================================================================= */}
-      <section className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 sm:-mt-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <section id="contact-channels-and-form" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors relative z-20 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           
           {/* Card 1: Academic Base */}
           <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
@@ -407,12 +408,8 @@ export const Contact = () => {
           </div>
 
         </div>
-      </section>
 
-      {/* ========================================================================= */}
-      {/* 3. LOWER SECTION: SPLIT GRID (LEFT: SOCIAL & MAP, RIGHT: FORM)            */}
-      {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        {/* Split Grid: Left (Socials & Map) and Right (Inquiry Form) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* ----------------------------------------------------------------------- */}
@@ -637,31 +634,34 @@ export const Contact = () => {
           </div>
 
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ========================================================================= */}
-      {/* 4. EXPANDABLE STRUCTURAL SCOPE ESTIMATOR (OPTIONAL POWER FEATURE)          */}
+      {/* 3. EXPANDABLE STRUCTURAL SCOPE ESTIMATOR (FULL-WIDTH SECTION)              */}
       {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="pt-8 border-t border-zinc-200 dark:border-[#31394D] flex flex-col items-center">
-          <button
-            onClick={() => setShowEstimator(!showEstimator)}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] shadow-sm transition-all"
-          >
-            <Compass size={14} className="text-[#D3AE36]" />
-            <span>{showEstimator ? 'Hide Interactive Scope Estimator' : 'Need Instant Calculations? Open Interactive Scope Estimator'}</span>
-          </button>
-
-          {showEstimator && (
-            <motion.div 
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="w-full mt-8"
+      <section id="scope-estimator" className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center">
+            <button
+              onClick={() => setShowEstimator(!showEstimator)}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] shadow-sm transition-all"
             >
-              <StructuralScopeEstimator onApplyScope={handleApplyEstimatorScope} />
-            </motion.div>
-          )}
+              <Compass size={14} className="text-[#D3AE36]" />
+              <span>{showEstimator ? 'Hide Interactive Scope Estimator' : 'Need Instant Calculations? Open Interactive Scope Estimator'}</span>
+            </button>
+
+            {showEstimator && (
+              <motion.div 
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="w-full mt-8"
+              >
+                <StructuralScopeEstimator onApplyScope={handleApplyEstimatorScope} />
+              </motion.div>
+            )}
+          </div>
         </div>
       </section>
 
