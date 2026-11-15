@@ -269,7 +269,7 @@ export const About = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col items-center"
             >
-              <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-zinc-200/80 dark:border-[#31394D] bg-[#12151C]">
+              <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-[#12151C]">
                 <img
                   src={lemmaImg}
                   alt="Lemma Amensisa"
