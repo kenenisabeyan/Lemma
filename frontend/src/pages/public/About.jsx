@@ -26,8 +26,6 @@ import lemmaImg from '../../assets/lemma.JPG';
 import lemmaTwoImg from '../../assets/lemma-two.jpg';
 import lemmaThreeImg from '../../assets/lemma-three.jpg';
 import lemmaFourImg from '../../assets/lemma-four.jpg';
-import li2Img from '../../assets/li2.jpg';
-import li3Img from '../../assets/li3.jpg';
 
 export const About = () => {
   const navigate = useNavigate();
@@ -86,7 +84,7 @@ export const About = () => {
       name: 'Site QC & Field Supervision Officer',
       role: 'Total Station Surveying & Concrete Quality Batching',
       focus: 'Slump testing, rebar BBS inspection, 135° hook verification & OCC site training',
-      image: li2Img,
+      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80',
       badge: 'OCC Site Internship',
       badgeColor: 'bg-[#232936] text-[#D3AE36] border-[#D3AE36]/30',
       standards: ['Digital Total Station', 'Slump Cone QC', 'Bar Bending (BBS)'],
@@ -98,7 +96,7 @@ export const About = () => {
       name: 'Hydraulic & Water Resources Engineer',
       role: 'Drainage Corridor & Watershed Storm Modeling',
       focus: 'Culvert sizing, catchment runoff coefficient, and sediment retention works',
-      image: li3Img,
+      image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&q=80',
       badge: 'Water Works Division',
       badgeColor: 'bg-[#232936] text-cyan-400 border-cyan-500/30',
       standards: ['HEC-RAS', 'Rational Runoff', 'ERA Drainage'],

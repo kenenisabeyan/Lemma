@@ -31,8 +31,6 @@ import lemmaImg from '../../assets/lemma.JPG';
 import lemmaTwoImg from '../../assets/lemma-two.jpg';
 import lemmaThreeImg from '../../assets/lemma-three.jpg';
 import lemmaFourImg from '../../assets/lemma-four.jpg';
-import li2Img from '../../assets/li2.jpg';
-import li3Img from '../../assets/li3.jpg';
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -71,14 +69,14 @@ export const Home = () => {
       name: 'Site QC & Field Supervision Officer',
       role: 'Total Station Surveying & Concrete Slump/Cube QC',
       sub: 'OCC Site Internship · Bar Bending Schedules (BBS)',
-      img: li2Img,
+      img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80',
       badge: 'Site QC Trainee'
     },
     {
       name: 'Hydraulic & Water Resources Engineer',
       role: 'Corridor Drainage, Culverts & Watershed Runoff',
       sub: 'Hydraulic Modeling · Flood Risk Mitigation',
-      img: li3Img,
+      img: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&q=80',
       badge: 'Drainage Lead'
     }
   ];
