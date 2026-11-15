@@ -34,7 +34,7 @@ export const InsightsPage = () => {
       excerpt: 'Evaluating dynamic response spectrum calculations, inter-story drift limits, and ductility detailing for reinforced concrete buildings in Ethiopia Seismic Zone 4.',
       readTime: '7 min read',
       publishedAt: 'Oct 12, 2026',
-      imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80'
+      imageUrl: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&q=80'
     },
     {
       id: '2',
@@ -44,7 +44,7 @@ export const InsightsPage = () => {
       excerpt: 'Experimental laboratory investigation of Atterberg limits, swell pressure reduction, and CBR improvement using 4% to 6% lime admixtures in East Shoa soils.',
       readTime: '6 min read',
       publishedAt: 'Sep 28, 2026',
-      imageUrl: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80'
+      imageUrl: 'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&q=80'
     },
     {
       id: '3',
@@ -54,7 +54,7 @@ export const InsightsPage = () => {
       excerpt: 'Balancing cut and fill earthwork volumes while enforcing minimum stopping sight distances and transition curves on Ethiopian trunk corridors.',
       readTime: '8 min read',
       publishedAt: 'Aug 15, 2026',
-      imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80'
+      imageUrl: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80'
     }
   ];
 

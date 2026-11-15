@@ -32,7 +32,7 @@ export const TestimonialsPage = () => {
       clientRole: 'Associate Professor & Capstone Advisor',
       clientCompany: 'ASTU School of Civil Engineering & Architecture (SoCEA)',
       category: 'Academic Faculty',
-      avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80',
+      avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80',
       content: 'Lemma Amensisa and his 5th-year brothers demonstrated exemplary structural rigor on their B+G+10 RC tower capstone. Their mastery of ETABS seismic modeling per EBCS EN 1998 sets a benchmark for graduating engineers.',
       rating: 5
     },
@@ -42,7 +42,7 @@ export const TestimonialsPage = () => {
       clientRole: 'Senior Highway Design Engineer',
       clientCompany: 'Oromia Construction Corporation (OCC)',
       category: 'Industry Mentors',
-      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
+      avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80',
       content: 'During their university internship, Lemma and his team performed highway corridor alignments using AutoCAD Civil 3D and verified earthwork balancing with exceptional attention to ERA standards.',
       rating: 5
     },
