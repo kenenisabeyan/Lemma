@@ -499,7 +499,7 @@ export const Home = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-[#232936] rounded-2xl p-6 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+                  className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl p-6 transition-all flex flex-col justify-between group"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
@@ -520,7 +520,7 @@ export const Home = () => {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 space-y-1 font-mono text-[11px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
+                  <div className="mt-5 pt-3.5 space-y-1 font-mono text-[11px] text-[#1E2025]/80 dark:text-[#F8F9FA]/80">
                     <div className="flex items-center gap-1.5 truncate">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="truncate">{d.spec1}</span>
@@ -536,12 +536,12 @@ export const Home = () => {
           </div>
 
           {/* Brotherhood Cohort Spotlight Bar */}
-          <div className="bg-white dark:bg-[#232936] rounded-3xl p-6 sm:p-8 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm">
+          <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-3xl p-6 sm:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               {/* Left Profile Preview */}
               <div className="lg:col-span-5 flex items-center gap-5">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 border border-[#31394D]/30 shadow-md">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 shadow-md">
                   <img
                     src={brotherhoodMembers[activeBrotherIndex].img}
                     alt={brotherhoodMembers[activeBrotherIndex].name}
@@ -568,7 +568,7 @@ export const Home = () => {
 
               {/* Right: Cohort Selector Strip & Bio */}
               <div className="lg:col-span-7 flex flex-col justify-between gap-4">
-                <div className="flex items-center justify-between pb-2 border-b border-[#31394D]/15 dark:border-[#31394D]/50 text-xs font-mono">
+                <div className="flex items-center justify-between pb-2 text-xs font-mono">
                   <div className="flex items-center gap-2 text-[#D3AE36] font-bold">
                     <Users size={14} />
                     <span>ASTU SoCEA Civil Engineering Brotherhood · Class of 2026</span>
@@ -584,10 +584,10 @@ export const Home = () => {
                       key={b.name}
                       onClick={() => setActiveBrotherIndex(idx)}
                       title={`${b.name} · ${b.role}`}
-                      className={`relative w-11 h-11 rounded-xl overflow-hidden border transition-all cursor-pointer shrink-0 ${
+                      className={`relative w-11 h-11 rounded-xl overflow-hidden transition-all cursor-pointer shrink-0 ${
                         activeBrotherIndex === idx
-                          ? 'border-[#D3AE36] ring-2 ring-[#D3AE36]/60 scale-105 shadow-md'
-                          : 'border-[#31394D]/30 opacity-60 hover:opacity-100 hover:border-[#D3AE36]'
+                          ? 'ring-2 ring-[#D3AE36] scale-105 shadow-md'
+                          : 'opacity-60 hover:opacity-100'
                       }`}
                     >
                       <img src={b.img} alt={b.name} className="w-full h-full object-cover" />
