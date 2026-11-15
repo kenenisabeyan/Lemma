@@ -244,32 +244,11 @@ export const Experience = () => {
                 {/* Secondary Pill Button */}
                 <a
                   href="#shake-table"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer border border-transparent hover:border-[#31394D]/30"
                 >
                   <Activity size={15} className="text-[#D3AE36]" />
                   <span>SEISMIC SHAKE TABLE</span>
                 </a>
-              </motion.div>
-
-              {/* Quick KPI Stats Row */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
-              >
-                <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">5th</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
-                </div>
-                <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">25+</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Projects Led</span>
-                </div>
-                <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">100%</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Ready</span>
-                </div>
               </motion.div>
 
             </div>
