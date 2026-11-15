@@ -122,7 +122,7 @@ const PublicLayout = ({ children }) => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col w-full bg-[#12151C] text-[#1E2025] dark:text-[#F8F9FA]">
+    <>
       {/* Top Reading Progress Bar */}
       <div
         aria-hidden="true"
@@ -130,11 +130,9 @@ const PublicLayout = ({ children }) => {
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
       <Navbar />
-      <main className="flex-1 w-full bg-[#F8F9FA] dark:bg-[#12151C] text-[#1E2025] dark:text-[#F8F9FA] transition-colors duration-200">
-        {children}
-      </main>
+      <main className="bg-[#F8F9FA] dark:bg-[#12151C] min-h-screen text-[#1E2025] dark:text-[#F8F9FA] transition-colors duration-200">{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

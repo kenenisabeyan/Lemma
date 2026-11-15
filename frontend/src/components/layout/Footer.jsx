@@ -35,7 +35,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-[#12151C] text-[#F8F9FA] pt-14 pb-12 sm:pb-16 relative overflow-hidden transition-colors border-t border-white/5">
+    <footer className="bg-[#12151C] text-[#F8F9FA] pt-14 pb-8 relative overflow-hidden transition-colors border-t border-white/5">
       {/* Subtle Ambient Studio Glows */}
       <div className="absolute top-0 left-1/3 w-96 h-32 bg-[#D3AE36]/[0.04] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-80 h-32 bg-[#232936]/50 rounded-full blur-3xl pointer-events-none" />
