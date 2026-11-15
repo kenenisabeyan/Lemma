@@ -490,14 +490,8 @@ Phone: +251 934 830 919
               onClick={() => navigate('/contact')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer"
             >
-              <span>Connect With Us</span>
-              <ArrowUpRight size={15} />
-            </button>
-          </div>
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
-            >
               <span>Connect With Brothers</span>
-              <ArrowUpRight size={15} className="text-[#12151C]" />
+              <ArrowUpRight size={15} />
             </button>
           </div>
 
