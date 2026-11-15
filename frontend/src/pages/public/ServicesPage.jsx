@@ -318,7 +318,7 @@ export const ServicesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full bg-black/[0.04] dark:bg-white/[0.06] px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Technical Specifications & Scope
             </div>
