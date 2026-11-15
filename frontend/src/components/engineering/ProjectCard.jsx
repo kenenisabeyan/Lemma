@@ -11,11 +11,11 @@ export const ProjectCard = ({ project, onClick, index = 0, className = '' }) => 
     <motion.div
       whileHover={{ y: -5 }}
       onClick={() => onClick && onClick(project)}
-      className={`group cursor-pointer rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between ${className}`}
+      className={`group cursor-pointer rounded-3xl bg-transparent p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between ${className}`}
     >
       <div>
         {/* Project Thumbnail Image with Blueprint Crosshairs Overlay */}
-        <div className="relative aspect-[16/10] bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D] overflow-hidden rounded-2xl mb-4">
+        <div className="relative aspect-[16/10] bg-[#12151C] overflow-hidden rounded-2xl mb-4">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -27,7 +27,7 @@ export const ProjectCard = ({ project, onClick, index = 0, className = '' }) => 
 
           {/* Technical Badge Overlay */}
           <div className="absolute top-3 left-3 z-10 flex gap-2">
-            <span className="rounded-full bg-black/65 backdrop-blur-md text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
+            <span className="rounded-full bg-black/65 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
               {project.category}
             </span>
           </div>
@@ -51,7 +51,7 @@ export const ProjectCard = ({ project, onClick, index = 0, className = '' }) => 
           </h3>
 
           {/* Structured Technical Spec DIV Box */}
-          <div className="p-3.5 rounded-2xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D] space-y-1.5 my-3 text-xs">
+          <div className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] space-y-1.5 my-3 text-xs">
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#D3AE36] font-bold">
               <span>✦</span>
               <span className="truncate">{project.structuralSystem}</span>
@@ -64,10 +64,10 @@ export const ProjectCard = ({ project, onClick, index = 0, className = '' }) => 
       </div>
 
       {/* Footer Tags & Action Link */}
-      <div className="mt-4 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex justify-between items-center gap-3">
+      <div className="mt-4 pt-3.5 flex justify-between items-center gap-3">
         <div className="flex gap-1.5 flex-wrap">
           {softwareList.slice(0, 3).map((soft) => (
-            <span key={soft} className="text-[10px] font-mono text-[#D3AE36] font-bold px-2 py-0.5 rounded-md bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D]">
+            <span key={soft} className="text-[10px] font-mono text-[#D3AE36] font-bold px-2 py-0.5 rounded-md bg-black/[0.04] dark:bg-white/[0.06]">
               #{soft}
             </span>
           ))}

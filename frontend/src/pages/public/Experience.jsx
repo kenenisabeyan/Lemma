@@ -147,7 +147,7 @@ export const Experience = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -188,13 +188,13 @@ export const Experience = () => {
 
                   {/* Micro-Bullet Highlights */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">ETABS / SAP:</strong> 3D Seismic Dynamic
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">OCC Site:</strong> Slump QC &amp; Surveying
@@ -205,19 +205,19 @@ export const Experience = () => {
 
                 {/* 4 Quantified Metrics */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 font-mono">
-                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Academic Year</span>
                   </div>
-                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                     <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">25+</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Capstones</span>
                   </div>
-                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                     <span className="block text-base sm:text-lg font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">5 Yrs</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">ASTU SoCEA</span>
                   </div>
-                  <div className="px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                  <div className="px-3.5 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                     <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
                     <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Defense Ready</span>
                   </div>
@@ -234,7 +234,7 @@ export const Experience = () => {
                 {/* Primary Filled Pill Button */}
                 <a
                   href="#experience-tabs"
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer"
                 >
                   <Briefcase size={15} />
                   <span>INSPECT MILESTONES</span>
@@ -244,7 +244,7 @@ export const Experience = () => {
                 {/* Secondary Pill Button */}
                 <a
                   href="#shake-table"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer border border-transparent hover:border-[#31394D]/30"
+                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Activity size={15} className="text-[#D3AE36]" />
                   <span>SEISMIC SHAKE TABLE</span>
@@ -262,7 +262,7 @@ export const Experience = () => {
             >
               <div className="relative w-full overflow-hidden group">
                 
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-[#31394D] text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-3 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Milestone Spotlight</span>
@@ -272,7 +272,7 @@ export const Experience = () => {
                   </span>
                 </div>
 
-                <div className="bg-[#F8F9FA] dark:bg-[#232936] p-4 rounded-2xl border border-zinc-200/70 dark:border-[#31394D] mb-4">
+                <div className="bg-black/[0.03] dark:bg-white/[0.04] p-4 rounded-2xl mb-4">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 dark:text-[#F8F9FA]/60 block mb-1">
                     {activeMilestone.category} · {activeMilestone.location}
                   </span>
@@ -282,7 +282,7 @@ export const Experience = () => {
                   <p className="text-xs text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed mb-3">
                     {activeMilestone.achievement}
                   </p>
-                  <div className="flex items-center justify-between pt-2 border-t border-zinc-200/60 dark:border-[#31394D] text-[11px] font-mono font-bold">
+                  <div className="flex items-center justify-between pt-2 text-[11px] font-mono font-bold">
                     <span className="text-[#D3AE36]">{activeMilestone.value}</span>
                     <span className="text-zinc-500 dark:text-[#F8F9FA]/60">{activeMilestone.role}</span>
                   </div>
@@ -297,7 +297,7 @@ export const Experience = () => {
                       className={`p-2 rounded-xl text-center font-mono text-[10px] font-bold uppercase transition-all cursor-pointer ${
                         selectedMilestoneIdx === idx
                           ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
-                          : 'bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] text-zinc-600 dark:text-[#F8F9FA]/80 hover:text-zinc-900 dark:hover:text-[#D3AE36]'
+                          : 'bg-black/[0.04] dark:bg-white/[0.05] text-zinc-600 dark:text-[#F8F9FA]/80 hover:text-zinc-900 dark:hover:text-[#D3AE36]'
                       }`}
                     >
                       {ms.year.split(' ')[0]}
@@ -322,13 +322,13 @@ export const Experience = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Navigation Tabs */}
-          <div className="flex flex-wrap gap-2.5 mb-10 pb-4 border-b border-zinc-200/60 dark:border-[#31394D]">
+          <div className="flex flex-wrap gap-2.5 mb-10 pb-4">
             <button
               onClick={() => setActiveTab('milestones')}
               className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeTab === 'milestones'
                   ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                  : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+                  : 'bg-black/[0.05] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA]/80 hover:bg-black/[0.08] dark:hover:bg-white/[0.1]'
               }`}
             >
               Major Project Milestones
@@ -339,7 +339,7 @@ export const Experience = () => {
               className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeTab === 'timeline'
                   ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                  : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+                  : 'bg-black/[0.05] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA]/80 hover:bg-black/[0.08] dark:hover:bg-white/[0.1]'
               }`}
             >
               Career Timeline &amp; Roles
@@ -350,7 +350,7 @@ export const Experience = () => {
               className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeTab === 'competencies'
                   ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                  : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+                  : 'bg-black/[0.05] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA]/80 hover:bg-black/[0.08] dark:hover:bg-white/[0.1]'
               }`}
             >
               Core Competencies
@@ -359,19 +359,19 @@ export const Experience = () => {
 
         {/* Tab 1: Major Milestones */}
         {activeTab === 'milestones' && (
-          <div className="flex flex-col gap-6 mb-24">
+          <div className="flex flex-col gap-8 mb-24">
             {engineeringMilestones.map((item, index) => (
               <div 
                 key={index} 
-                className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 group"
+                className="rounded-3xl bg-transparent p-6 sm:p-8 transition-all duration-300 group"
               >
-                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-5 pb-5 border-b border-zinc-100 dark:border-[#31394D]/40">
+                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-5 pb-5">
                   <div>
                     <div className="flex flex-wrap items-center gap-2.5 mb-2">
-                      <span className="px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono font-bold text-xs border border-[#D3AE36]/30">
+                      <span className="px-3 py-1 rounded-full bg-[#D3AE36]/15 text-[#D3AE36] font-mono font-bold text-xs">
                         {item.year}
                       </span>
-                      <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-[#F8F9FA]/60 font-bold px-2.5 py-0.5 rounded-md bg-zinc-100 dark:bg-[#12151C]">
+                      <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-600 dark:text-[#F8F9FA]/70 font-bold px-2.5 py-0.5 rounded-md bg-black/[0.05] dark:bg-white/[0.06]">
                         {item.category}
                       </span>
                     </div>
@@ -381,16 +381,16 @@ export const Experience = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="px-3.5 py-1.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] text-xs font-mono text-[#D3AE36] font-extrabold shadow-2xs">
+                    <span className="px-3.5 py-1.5 rounded-xl bg-black/[0.05] dark:bg-white/[0.06] text-xs font-mono text-[#D3AE36] font-extrabold shadow-2xs">
                       {item.value}
                     </span>
-                    <span className="px-3.5 py-1.5 rounded-xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 text-xs font-mono text-zinc-600 dark:text-[#F8F9FA]/70 flex items-center gap-1.5">
+                    <span className="px-3.5 py-1.5 rounded-xl bg-black/[0.03] dark:bg-white/[0.04] text-xs font-mono text-zinc-600 dark:text-[#F8F9FA]/70 flex items-center gap-1.5">
                       <MapPin size={13} className="text-[#D3AE36]" /> {item.location}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-5">
+                <div className="p-4 sm:p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] mb-5">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs uppercase font-mono font-bold text-[#D3AE36] tracking-wider">
                       Structural Achievement &amp; Technical Innovation
@@ -409,7 +409,7 @@ export const Experience = () => {
                   </h5>
                   <div className="grid sm:grid-cols-3 gap-3">
                     {item.highlights.map((h, i) => (
-                      <div key={i} className="p-3.5 rounded-2xl bg-white dark:bg-[#12151C]/40 border border-zinc-200/70 dark:border-[#31394D]/60 flex items-start gap-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 shadow-2xs hover:border-[#D3AE36]/40 transition-colors">
+                      <div key={i} className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] flex items-start gap-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 transition-colors">
                         <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
                         <span className="leading-snug">{h}</span>
                       </div>
@@ -424,15 +424,15 @@ export const Experience = () => {
         {/* Tab 2: Career Timeline */}
         {activeTab === 'timeline' && (
           <div className="mb-24">
-            <div className="flex flex-col gap-8 relative border-l-2 border-zinc-200 dark:border-[#31394D] pl-8 ml-4">
+            <div className="flex flex-col gap-8 relative border-l-2 border-[#1E2025]/15 dark:border-white/15 pl-8 ml-4">
               {CAREER_TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -left-[45px] top-6 w-5 h-5 rounded-full bg-white dark:bg-[#12151C] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs flex items-center justify-center">
+                  <div className="absolute -left-[45px] top-6 w-5 h-5 rounded-full bg-[#DFE2EB] dark:bg-[#1E2025] border-2 border-[#D3AE36] group-hover:scale-125 transition-transform shadow-xs flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-[#D3AE36]" />
                   </div>
-                  <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-lg hover:border-[#D3AE36]/60 transition-all duration-300">
+                  <div className="rounded-3xl bg-transparent p-6 sm:p-7 transition-all duration-300">
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                      <span className="px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono font-bold text-xs border border-[#D3AE36]/30 uppercase tracking-wider">
+                      <span className="px-3 py-1 rounded-full bg-[#D3AE36]/15 text-[#D3AE36] font-mono font-bold text-xs uppercase tracking-wider">
                         {item.year}
                       </span>
                       <span className="text-xs font-semibold text-zinc-500 dark:text-[#F8F9FA]/60 uppercase tracking-wider flex items-center gap-2 font-mono">
@@ -443,7 +443,7 @@ export const Experience = () => {
                       {item.role}
                     </h3>
                     
-                    <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-4">
+                    <div className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] mb-4">
                       <p className="text-sm text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed">
                         <strong className="text-[#D3AE36] font-semibold">✦ Scope &amp; Deliverables: </strong>
                         {item.description}
@@ -451,9 +451,9 @@ export const Experience = () => {
                     </div>
 
                     <div className="flex flex-wrap gap-2 text-[11px] font-mono font-bold">
-                      <span className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D]">✦ Direct Client Coordination</span>
-                      <span className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D]">✦ Code Authority Submissions</span>
-                      <span className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D]">✦ Multi-Disciplinary BIM</span>
+                      <span className="px-2.5 py-1 rounded-lg bg-black/[0.04] dark:bg-white/[0.05] text-zinc-700 dark:text-[#F8F9FA]/70">✦ Direct Client Coordination</span>
+                      <span className="px-2.5 py-1 rounded-lg bg-black/[0.04] dark:bg-white/[0.05] text-zinc-700 dark:text-[#F8F9FA]/70">✦ Code Authority Submissions</span>
+                      <span className="px-2.5 py-1 rounded-lg bg-black/[0.04] dark:bg-white/[0.05] text-zinc-700 dark:text-[#F8F9FA]/70">✦ Multi-Disciplinary BIM</span>
                     </div>
                   </div>
                 </div>
@@ -468,11 +468,11 @@ export const Experience = () => {
             {structuralCompetencies.map((comp, index) => (
               <div 
                 key={index} 
-                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
+                className="group rounded-3xl bg-transparent p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono font-black text-xs border border-[#D3AE36]/30">
+                    <span className="px-3 py-1 rounded-full bg-[#D3AE36]/15 text-[#D3AE36] font-mono font-black text-xs">
                       0{index + 1}
                     </span>
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36]/40 group-hover:bg-[#D3AE36] transition-colors" />
@@ -484,7 +484,7 @@ export const Experience = () => {
                     {comp.desc}
                   </p>
                 </div>
-                <div className="mt-5 pt-3.5 border-t border-zinc-200/60 dark:border-[#31394D]/60 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D3AE36] font-bold">
+                <div className="mt-5 pt-3.5 flex items-center gap-2 text-[10px] uppercase font-mono text-[#D3AE36] font-bold">
                   <ShieldCheck size={14} /> Rigorous Engineering Verified
                 </div>
               </div>
@@ -502,7 +502,7 @@ export const Experience = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold bg-black/[0.04] dark:bg-white/[0.06]">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Live Physics &amp; Non-Linear Dynamics
             </div>
@@ -517,7 +517,7 @@ export const Experience = () => {
           <SeismicShakeTable />
 
           {/* Credentials & Call to Action Banner */}
-          <div className="mt-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col lg:flex-row justify-between items-center gap-8">
+          <div className="mt-16 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] p-8 sm:p-10 flex flex-col lg:flex-row justify-between items-center gap-8">
             <div className="text-left max-w-2xl">
               <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-widest block mb-2 font-bold">Ready to Collaborate &amp; Recruit</span>
               <h3 className="text-2xl lg:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">Need Civil Engineering Talent or <span className="text-[#D3AE36]">Capstone Collaborations</span>?</h3>
@@ -529,14 +529,14 @@ export const Experience = () => {
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
               <button
                 onClick={() => navigate('/resources')}
-                className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer border border-zinc-200 dark:border-[#31394D] bg-zinc-50 dark:bg-[#12151C]"
+                className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer bg-black/[0.04] dark:bg-white/[0.06]"
               >
                 <span>Download Student Dossier (PDF)</span>
                 <Download size={14} className="text-[#D3AE36]" />
               </button>
               <button
                 onClick={() => navigate('/contact')}
-                className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer border border-[#D3AE36]"
+                className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Connect With Us</span>
                 <ArrowUpRight size={14} />
