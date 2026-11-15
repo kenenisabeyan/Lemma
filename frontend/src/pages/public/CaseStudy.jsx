@@ -328,25 +328,25 @@ export const CaseStudyPage = () => {
 
           {/* Structural Metadata Bar (4 DIV Cards) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-2">
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-4 shadow-xs">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl p-4">
               <span className="text-[10px] font-mono uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 block mb-1">Geographic Location</span>
               <span className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5">
                 <MapPin size={14} className="text-[#D3AE36]" /> {project.location}
               </span>
             </div>
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-4 shadow-xs">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl p-4">
               <span className="text-[10px] font-mono uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 block mb-1">Completion Year</span>
               <span className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5">
                 <Calendar size={14} className="text-[#D3AE36]" /> {project.year}
               </span>
             </div>
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-4 shadow-xs">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl p-4">
               <span className="text-[10px] font-mono uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 block mb-1">Structural Role</span>
               <span className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#D3AE36]" /> {project.role || 'Lead Structural Engineer'}
               </span>
             </div>
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-2xl p-4 shadow-xs">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl p-4">
               <span className="text-[10px] font-mono uppercase text-[#1E2025]/60 dark:text-[#F8F9FA]/60 block mb-1">Client / Authority</span>
               <span className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5 truncate">
                 <Building size={14} className="text-[#D3AE36] shrink-0" /> {project.client || 'ASTU SoCEA'}
@@ -365,7 +365,7 @@ export const CaseStudyPage = () => {
           
           {/* System & Material Specifications Grid (2 DIV Cards) */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-3xl p-6 sm:p-7">
               <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] mb-3 flex items-center gap-2">
                 <Layers size={16} /> Lateral &amp; Gravity Structural System
               </h3>
@@ -374,7 +374,7 @@ export const CaseStudyPage = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] rounded-3xl p-6 sm:p-7 shadow-sm">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-3xl p-6 sm:p-7">
               <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] mb-3 flex items-center gap-2">
                 <Building size={16} /> Primary Materials Specified
               </h3>
@@ -388,7 +388,7 @@ export const CaseStudyPage = () => {
           <div className="flex flex-col gap-6">
             
             {/* Step 1: Overview */}
-            <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-7 shadow-sm hover:border-[#D3AE36]/60 transition-all">
+            <div className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 transition-all">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono text-[10px] font-bold uppercase tracking-wider mb-3">
                 <span>✦</span> Phase 01 • Context &amp; Scope
               </div>
@@ -399,7 +399,7 @@ export const CaseStudyPage = () => {
             </div>
 
             {/* Step 2: Challenge */}
-            <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-7 shadow-sm hover:border-[#D3AE36]/60 transition-all">
+            <div className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 transition-all">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono text-[10px] font-bold uppercase tracking-wider mb-3">
                 <span>✦</span> Phase 02 • Technical Boundary
               </div>
@@ -407,13 +407,13 @@ export const CaseStudyPage = () => {
               <p className="text-sm sm:text-base text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed mb-3">
                 {project.challenge}
               </p>
-              <div className="p-3 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 font-mono text-xs text-[#D3AE36] font-semibold">
+              <div className="p-3 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] font-mono text-xs text-[#D3AE36] font-semibold">
                 EBCS EN 1998 Seismic Drift &amp; Local Geotechnical Settlement Mitigations Enforced
               </div>
             </div>
 
             {/* Step 3: Engineering Approach */}
-            <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-7 shadow-sm hover:border-[#D3AE36]/60 transition-all">
+            <div className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 transition-all">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono text-[10px] font-bold uppercase tracking-wider mb-3">
                 <span>✦</span> Phase 03 • Mechanics &amp; Simulation
               </div>
@@ -421,14 +421,14 @@ export const CaseStudyPage = () => {
               <p className="text-sm sm:text-base text-[#1E2025]/85 dark:text-[#F8F9FA]/85 leading-relaxed mb-4">
                 {project.engineeringApproach}
               </p>
-              <div className="p-3.5 rounded-2xl bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/30 flex items-center gap-3 text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85">
+              <div className="p-3.5 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] flex items-center gap-3 text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85">
                 <Cpu className="text-[#D3AE36] shrink-0" size={20} />
                 <span>Full 3D dynamic response spectrum analysis, lateral stiffness checks, and seismic shear wall distribution validated against EBCS EN 1998 Zone 4 and EBCS EN 1992.</span>
               </div>
             </div>
 
             {/* Step 4: Solution */}
-            <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-7 shadow-sm hover:border-[#D3AE36]/60 transition-all">
+            <div className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 transition-all">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono text-[10px] font-bold uppercase tracking-wider mb-3">
                 <span>✦</span> Phase 04 • Implementation
               </div>
@@ -439,7 +439,7 @@ export const CaseStudyPage = () => {
             </div>
 
             {/* Step 5: Result */}
-            <div className="rounded-3xl bg-[#D3AE36]/10 dark:bg-[#232936] border-2 border-[#D3AE36]/50 p-6 sm:p-7 shadow-lg transition-all">
+            <div className="rounded-3xl bg-black/[0.04] dark:bg-white/[0.05] p-6 sm:p-7 transition-all">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D3AE36] text-[#12151C] font-mono text-[10px] font-black uppercase tracking-wider mb-3">
                 <CheckCircle2 size={13} /> Phase 05 • Performance Verification
               </div>
@@ -486,7 +486,7 @@ export const CaseStudyPage = () => {
 
             <div className="flex flex-wrap gap-2.5">
               {softwareList.map((soft) => (
-                <span key={soft} className="px-3 py-1 rounded-full bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-xs font-mono text-zinc-700 dark:text-zinc-300 font-bold shadow-2xs">
+                <span key={soft} className="px-3 py-1 rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-xs font-mono text-zinc-700 dark:text-zinc-300 font-bold">
                   • {soft}
                 </span>
               ))}
@@ -519,7 +519,7 @@ export const CaseStudyPage = () => {
                   <Link
                     key={rel.id}
                     to={`/projects/${rel.slug}`}
-                    className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all group flex flex-col justify-between"
+                    className="rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] p-6 transition-all group flex flex-col justify-between"
                   >
                     <div>
                       <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
@@ -536,7 +536,7 @@ export const CaseStudyPage = () => {
           )}
 
           {/* Bottom Consultation CTA Architectural DIV Card */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] transition-all flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-left max-w-2xl space-y-2">
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -551,7 +551,7 @@ export const CaseStudyPage = () => {
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36] active:scale-95"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95"
             >
               <span>Connect With Our Team</span>
               <ArrowUpRight size={15} />
