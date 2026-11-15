@@ -94,7 +94,7 @@ export const Home = () => {
       category: 'Structural & Buildings',
       metric: '5-Story Dual RC Core',
       tag: 'EBCS EN 1992 · ETABS FEA',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80',
       slug: 'astu-central-multipurpose-complex',
       location: 'ASTU Campus, Adama'
     },
@@ -114,7 +114,7 @@ export const Home = () => {
       category: 'Geotechnical & Foundation',
       metric: 'Mat Foundation on Expansive Clay',
       tag: 'EBCS 7 · Lime Stabilization',
-      imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&q=80',
       slug: 'adama-smart-commercial-plaza',
       location: 'Downtown Adama'
     }
@@ -199,7 +199,7 @@ export const Home = () => {
       system: 'Dual Shear Wall & Moment Frame',
       standard: 'EBCS EN 1992 & 1998',
       summary: '5-story multipurpose academic auditorium and library complex designed as the graduation capstone project with 3D non-linear dynamic spectrum analysis in ETABS.',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80'
+      imageUrl: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80'
     },
     {
       id: '2',
@@ -221,7 +221,7 @@ export const Home = () => {
       system: 'Ribbed Raft & Drilled Caissons',
       standard: 'EBCS 7 & Eurocode 7',
       summary: 'Foundation design in downtown Adama resolving high swelling index clay soils via 4% lime chemical stabilization and rigid RC raft footing.',
-      imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&q=80'
+      imageUrl: 'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&q=80'
     }
   ];
 
