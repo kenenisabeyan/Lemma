@@ -146,7 +146,7 @@ Phone: +251 934 830 919
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -183,13 +183,13 @@ Phone: +251 934 830 919
 
                   {/* Micro-Bullet Highlights */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">EBCS EN &amp; ERA:</strong> Full Code Compliance
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Live Solvers:</strong> Shear, Moment &amp; BBS
@@ -208,7 +208,7 @@ Phone: +251 934 830 919
               >
                 <a
                   href="#resources-feed"
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 cursor-pointer"
                 >
                   <span>Download Resources</span>
                   <FileText size={15} />
@@ -254,7 +254,7 @@ Phone: +251 934 830 919
             >
               <div className="w-full">
                 
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-4 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Interactive Tools Launchpad</span>
@@ -266,9 +266,9 @@ Phone: +251 934 830 919
                   {/* Tool 1 */}
                   <a
                     href="#beam-solver"
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 group shadow-xs"
+                    className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all flex items-start gap-3.5 group shadow-xs"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Calculator size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -285,9 +285,9 @@ Phone: +251 934 830 919
                   {/* Tool 2 */}
                   <button
                     onClick={() => handleDownload(defaultResources[3])}
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group shadow-xs cursor-pointer"
+                    className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all flex items-start gap-3.5 text-left group shadow-xs cursor-pointer"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <FileText size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -304,15 +304,15 @@ Phone: +251 934 830 919
                   {/* Tool 3 */}
                   <button
                     onClick={() => handleDownload(defaultResources[0])}
-                    className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all flex items-start gap-3.5 text-left group shadow-xs cursor-pointer"
+                    className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all flex items-start gap-3.5 text-left group shadow-xs cursor-pointer"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Download size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1 mb-0.5">
                         <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">EBCS EN Capstone Audit Checklist</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/80 font-bold">PDF / 2.4 MB</span>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-zinc-700 dark:text-[#F8F9FA]/80 font-bold">PDF / 2.4 MB</span>
                       </div>
                       <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 line-clamp-1">
                         One-click direct download of the official ASTU 5th-year structural design checklist.

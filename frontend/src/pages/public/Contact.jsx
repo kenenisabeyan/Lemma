@@ -343,8 +343,8 @@ export const Contact = () => {
             <div className="lg:col-span-5 flex flex-col gap-6">
               
               {/* Personal Engineering Contact Card */}
-              <div className="bg-white dark:bg-[#232936] rounded-3xl shadow-sm border border-[#31394D]/25 dark:border-[#31394D]/60 p-7 space-y-6">
-                <div className="flex items-center justify-between border-b border-zinc-100 dark:border-[#31394D]/50 pb-4">
+              <div className="bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] rounded-3xl p-7 space-y-6">
+                <div className="flex items-center justify-between pb-4">
                   <div>
                     <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider font-bold block mb-0.5">
                       Direct Communication Hub
@@ -353,7 +353,7 @@ export const Contact = () => {
                       Lemma Amensisa
                     </h3>
                   </div>
-                  <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     Available 2026
                   </span>
@@ -363,9 +363,9 @@ export const Contact = () => {
                   {/* Phone & Telegram */}
                   <a
                     href="tel:+251934830919"
-                    className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50 hover:border-[#D3AE36] transition-all group cursor-pointer"
+                    className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all group cursor-pointer"
                   >
-                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Phone size={18} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -382,9 +382,9 @@ export const Contact = () => {
                   {/* Email */}
                   <a
                     href="mailto:lemmayezedlij21@gmail.com"
-                    className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50 hover:border-[#D3AE36] transition-all group cursor-pointer"
+                    className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all group cursor-pointer"
                   >
-                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] group-hover:scale-105 transition-transform shrink-0">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
                       <Mail size={18} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -399,8 +399,8 @@ export const Contact = () => {
                   </a>
 
                   {/* Academic Base */}
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50">
-                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] shrink-0">
+                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04]">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] shrink-0">
                       <MapPin size={18} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -417,8 +417,8 @@ export const Contact = () => {
                   </div>
 
                   {/* Consultation Hours */}
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50">
-                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] shrink-0">
+                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04]">
+                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] shrink-0">
                       <Clock size={18} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -436,7 +436,7 @@ export const Contact = () => {
                 </div>
 
                 {/* Professional Links */}
-                <div className="pt-2 border-t border-zinc-100 dark:border-[#31394D]/50 flex items-center justify-between text-xs font-mono">
+                <div className="pt-2 flex items-center justify-between text-xs font-mono">
                   <span className="text-zinc-500 dark:text-[#F8F9FA]/60 font-medium">Connect Online:</span>
                   <div className="flex items-center gap-3">
                     <a
@@ -461,7 +461,7 @@ export const Contact = () => {
               </div>
 
               {/* Google Map Embed Card */}
-            <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl overflow-hidden border border-zinc-200/80 dark:border-[#31394D] relative">
+            <div className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl overflow-hidden relative">
               
               {/* "Open in Maps" Link Overlay in Top-Left */}
               <div className="absolute top-3 left-3 z-10">
@@ -469,7 +469,7 @@ export const Contact = () => {
                   href="https://maps.google.com/?q=Adama+Science+and+Technology+University"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 dark:bg-[#12151C]/95 backdrop-blur-md text-[#1E2025] dark:text-[#F8F9FA] text-xs font-bold hover:text-[#D3AE36] shadow-sm border border-zinc-200 dark:border-[#31394D] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-xs font-bold hover:text-[#D3AE36] shadow-sm transition-colors"
                 >
                   <span>Open in Maps</span>
                   <ExternalLink size={12} />
@@ -498,7 +498,7 @@ export const Contact = () => {
           {/* RIGHT COLUMN: "WE'D LOVE TO HEAR FROM YOU" CONTACT FORM                 */}
           {/* ----------------------------------------------------------------------- */}
           <div ref={formRef} className="lg:col-span-7">
-            <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-8 sm:p-10 border border-zinc-200/80 dark:border-[#31394D]">
+            <div className="bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] rounded-2xl p-8 sm:p-10">
               
               {/* Form Heading & Subtitle */}
               <h2 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight">
@@ -635,7 +635,7 @@ export const Contact = () => {
           <div className="flex flex-col items-center">
             <button
               onClick={() => setShowEstimator(!showEstimator)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-xs font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-all cursor-pointer"
             >
               <Compass size={14} className="text-[#D3AE36]" />
               <span>{showEstimator ? 'Hide Interactive Scope Estimator' : 'Need Instant Calculations? Open Interactive Scope Estimator'}</span>
