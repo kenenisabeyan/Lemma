@@ -22,7 +22,7 @@ export const TechMarquee = ({ className = '' }) => {
   return (
     <section 
       aria-label="Software Stack, Engineering Standards & Credentials" 
-      className={`relative border-y border-[#31394D]/30 dark:border-[#31394D] bg-[#F8F9FA] dark:bg-[#12151C] py-3 sm:py-3.5 overflow-hidden transition-colors ${className}`}
+      className={`relative bg-[#F8F9FA] dark:bg-[#12151C] py-3 sm:py-3.5 overflow-hidden transition-colors ${className}`}
     >
       {/* Precision Top & Bottom Hairline Gold Accents */}
       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#D3AE36]/35 to-transparent pointer-events-none" />
@@ -31,7 +31,7 @@ export const TechMarquee = ({ className = '' }) => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-4">
         
         {/* Fixed Left Live Telemetry Stamp */}
-        <div className="hidden lg:flex items-center gap-2 shrink-0 pr-4 border-r border-[#31394D]/30 dark:border-[#31394D]">
+        <div className="hidden lg:flex items-center gap-2 shrink-0 pr-4">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D3AE36] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D3AE36]"></span>
@@ -50,7 +50,7 @@ export const TechMarquee = ({ className = '' }) => {
                 className="group flex items-center gap-2.5 whitespace-nowrap cursor-default transition-all"
               >
                 {/* Category Micro-Badge */}
-                <span className="px-2 py-0.5 rounded-sm bg-[#D3AE36]/10 dark:bg-[#D3AE36]/15 border border-[#D3AE36]/30 text-[#D3AE36] font-mono text-[9px] font-bold tracking-widest uppercase">
+                <span className="px-2 py-0.5 rounded-sm bg-[#D3AE36]/10 dark:bg-[#D3AE36]/15 text-[#D3AE36] font-mono text-[9px] font-bold tracking-widest uppercase">
                   {item.category}
                 </span>
 
