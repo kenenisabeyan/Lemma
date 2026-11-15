@@ -188,7 +188,7 @@ export const ServicesPage = () => {
               >
                 {/* Primary Filled Pill Button */}
                 <button
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate('/contact#contact-form')}
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer"
                 >
                   <span>CONNECT WITH US</span>
@@ -415,7 +415,7 @@ export const ServicesPage = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact#contact-form')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer"
             >
               <span>Connect With Our Team</span>

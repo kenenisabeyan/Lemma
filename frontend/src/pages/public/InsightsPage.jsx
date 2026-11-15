@@ -445,7 +445,7 @@ export const InsightsPage = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact#contact-form')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95"
             >
               <span>Connect With Our Team</span>

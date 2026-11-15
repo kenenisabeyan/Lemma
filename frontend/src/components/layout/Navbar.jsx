@@ -61,7 +61,7 @@ export const Navbar = () => {
     { num: '03', name: 'Projects', path: '/projects' },
     { num: '04', name: 'Services', path: '/services' },
     { num: '05', name: 'Experience', path: '/experience' },
-    { num: '06', name: 'Contact', path: '/contact' }
+    { num: '06', name: 'Contact', path: '/contact#contact-form' }
   ];
 
   return (
@@ -198,7 +198,7 @@ export const Navbar = () => {
                 {/* Navigation Links */}
                 <nav className="flex flex-col gap-1 mt-4">
                   {navLinks.map((link) => {
-                    const isActive = location.pathname === link.path;
+                    const isActive = location.pathname === link.path || (link.path.startsWith('/contact') && location.pathname === '/contact');
                     return (
                       <Link
                         key={link.name}
@@ -209,7 +209,7 @@ export const Navbar = () => {
                             const id = link.path.split('#')[1];
                             setTimeout(() => {
                               const el = document.getElementById(id);
-                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                             }, 100);
                           }
                         }}
@@ -251,8 +251,11 @@ export const Navbar = () => {
 
                 <button
                   onClick={() => {
-                    navigate('/contact');
+                    navigate('/contact#contact-form');
                     setMenuOpen(false);
+                    if (location.pathname === '/contact') {
+                      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                   }}
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#D3AE36]/25 flex items-center justify-center gap-2"
                 >

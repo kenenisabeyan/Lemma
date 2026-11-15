@@ -31,7 +31,7 @@ export const Footer = () => {
     { name: 'Projects', path: '/projects' },
     { name: 'Services', path: '/services' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact#contact-form' }
   ];
 
   return (
@@ -81,13 +81,18 @@ export const Footer = () => {
 
           {/* Quick Personal Action Buttons */}
           <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
-            <a
-              href="mailto:lemmayezedlij21@gmail.com"
+            <Link
+              to="/contact#contact-form"
+              onClick={() => {
+                if (window.location.pathname === '/contact') {
+                  document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
               className="flex-1 sm:flex-initial rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-6 py-3 font-mono font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(211,174,54,0.3)] cursor-pointer"
             >
               <Mail size={14} />
               <span>Say Hello</span>
-            </a>
+            </Link>
 
             <button
               onClick={handleCopyEmail}

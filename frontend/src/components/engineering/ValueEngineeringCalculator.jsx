@@ -241,7 +241,7 @@ export const ValueEngineeringCalculator = () => {
               </div>
             </div>
             <button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact#contact-form')}
               className="rounded-full bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] px-6 py-3 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shrink-0 flex items-center gap-1.5"
             >
               Connect With Brothers <ArrowUpRight size={13} />

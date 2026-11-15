@@ -763,7 +763,7 @@ export const Home = () => {
                 </a>
                 
                 <Link
-                  to="/contact"
+                  to="/contact#contact-form"
                   className="rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] px-6 py-3.5 font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95"
                 >
                   <Mail size={14} className="text-[#D3AE36]" />

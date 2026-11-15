@@ -256,7 +256,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
               <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">Directly discuss EBCS compliance, structural modeling, or capstone collaboration with our ASTU student team.</p>
             </div>
             <button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact#contact-form')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_8px_20px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 cursor-pointer"
             >
               Connect With Brothers <ArrowUpRight size={14} />

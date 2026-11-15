@@ -535,7 +535,7 @@ export const Experience = () => {
                 <Download size={14} className="text-[#D3AE36]" />
               </button>
               <button
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/contact#contact-form')}
                 className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Connect With Us</span>

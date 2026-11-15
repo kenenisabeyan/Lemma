@@ -185,7 +185,7 @@ export const TestimonialsPage = () => {
                   <MessageSquareQuote size={15} />
                 </a>
                 <button
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate('/contact#contact-form')}
                   className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Connect With Us</span>
@@ -421,7 +421,7 @@ export const TestimonialsPage = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact#contact-form')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
             >
               <span>Connect With Brothers</span>

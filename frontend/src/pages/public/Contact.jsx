@@ -17,7 +17,8 @@ import {
   Facebook,
   Youtube,
   Linkedin,
-  Sparkles
+  Sparkles,
+  ArrowDown
 } from 'lucide-react';
 import api from '../../services/api';
 import { StructuralScopeEstimator } from '../../components/engineering/StructuralScopeEstimator';
@@ -37,6 +38,21 @@ export const Contact = () => {
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [showEstimator, setShowEstimator] = useState(false);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === '#contact-form' || hash === '#contact-channels-and-form' || hash === '#inquiry-form' || hash === '#contact') {
+      const scrollDown = () => {
+        const el = document.getElementById('contact-form') || formRef.current;
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+      setTimeout(scrollDown, 80);
+      setTimeout(scrollDown, 300);
+      setTimeout(scrollDown, 600);
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -191,18 +207,22 @@ export const Contact = () => {
                 className="flex flex-wrap items-center gap-4 pt-2"
               >
                 <a
-                  href="tel:+251934830919"
+                  href="#contact-form"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 cursor-pointer font-mono"
                 >
-                  <span>Call +251 934 830 919</span>
-                  <Phone size={15} />
+                  <span>Inquiry &amp; Direct Form</span>
+                  <ArrowDown size={15} />
                 </a>
                 <a
-                  href="mailto:lemmayezedlij21@gmail.com"
+                  href="tel:+251934830919"
                   className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
                 >
-                  <span>Send Email</span>
-                  <Mail size={14} className="text-[#D3AE36]" />
+                  <span>Call +251 934 830 919</span>
+                  <Phone size={14} className="text-[#D3AE36]" />
                 </a>
               </motion.div>
 
@@ -331,7 +351,8 @@ export const Contact = () => {
       {/* ========================================================================= */}
       {/* 2. DIRECT CHANNELS & CONSULTATION INQUIRY (FULL-WIDTH SECTION)             */}
       {/* ========================================================================= */}
-      <section id="contact-channels-and-form" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors relative z-20 scroll-mt-24">
+      <section id="contact-form" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors relative z-20 scroll-mt-24">
+        <span id="contact-channels-and-form" className="scroll-mt-28" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Split Grid: Left (Direct Contact Hub & Map) and Right (Inquiry Form) */}

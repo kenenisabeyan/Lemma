@@ -132,7 +132,7 @@ export const CaseStudyModal = ({ project, onClose }) => {
               Full Case Study Page
             </button>
             <button
-              onClick={() => { onClose(); navigate('/contact'); }}
+              onClick={() => { onClose(); navigate('/contact#contact-form'); }}
               className="flex-1 sm:flex-none rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md"
             >
               Consult On Scope
@@ -287,7 +287,7 @@ export const CaseStudyPage = () => {
                 <Share2 size={14} className="text-[#D3AE36]" /> {copied ? 'Link Copied!' : 'Share Case Study'}
               </button>
               <button
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/contact#contact-form')}
                 className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:underline flex items-center gap-1 cursor-pointer"
               >
                 <span>Consult On Scope</span>
@@ -550,7 +550,7 @@ export const CaseStudyPage = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact#contact-form')}
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95"
             >
               <span>Connect With Our Team</span>
