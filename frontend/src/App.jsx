@@ -34,10 +34,43 @@ import { ManageResources } from './pages/admin/ManageResources';
 import { ManageFaqs } from './pages/admin/ManageFaqs';
 import { Settings } from './pages/admin/Settings';
 
-// Scroll to Top & Hash Anchor Helper
+// Scroll to Top, Hash Anchor & Page Title Manager
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
+
   useEffect(() => {
+    // Dynamic tab title that appears at top of browser
+    const titles = {
+      '/': 'Lemma | CIVIL ENG | ASTU',
+      '/about': 'About | Lemma - CIVIL ENG | ASTU',
+      '/projects': 'Projects | Lemma - CIVIL ENG | ASTU',
+      '/services': 'Services | Lemma - CIVIL ENG | ASTU',
+      '/experience': 'Experience | Lemma - CIVIL ENG | ASTU',
+      '/insights': 'Insights | Lemma - CIVIL ENG | ASTU',
+      '/resources': 'Resources | Lemma - CIVIL ENG | ASTU',
+      '/contact': 'Contact | Lemma - CIVIL ENG | ASTU',
+      '/faq': 'FAQ | Lemma - CIVIL ENG | ASTU',
+      '/admin/login': 'Admin Portal | Lemma - CIVIL ENG | ASTU',
+      '/admin': 'Dashboard | Lemma - CIVIL ENG | ASTU',
+      '/admin/projects': 'Manage Projects | Lemma - CIVIL ENG | ASTU',
+      '/admin/services': 'Manage Services | Lemma - CIVIL ENG | ASTU',
+      '/admin/insights': 'Manage Insights | Lemma - CIVIL ENG | ASTU',
+      '/admin/testimonials': 'Manage Testimonials | Lemma - CIVIL ENG | ASTU',
+      '/admin/inquiries': 'Manage Inquiries | Lemma - CIVIL ENG | ASTU',
+      '/admin/media': 'Manage Media | Lemma - CIVIL ENG | ASTU',
+      '/admin/resources': 'Manage Resources | Lemma - CIVIL ENG | ASTU',
+      '/admin/faqs': 'Manage FAQs | Lemma - CIVIL ENG | ASTU',
+      '/admin/settings': 'Settings | Lemma - CIVIL ENG | ASTU'
+    };
+
+    if (pathname.startsWith('/projects/')) {
+      document.title = 'Case Study | Lemma - CIVIL ENG | ASTU';
+    } else if (pathname.startsWith('/insights/')) {
+      document.title = 'Research Insight | Lemma - CIVIL ENG | ASTU';
+    } else {
+      document.title = titles[pathname] || 'Lemma | CIVIL ENG | ASTU';
+    }
+
     if (hash) {
       setTimeout(() => {
         const id = hash.replace('#', '');
