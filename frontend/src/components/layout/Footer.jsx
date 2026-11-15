@@ -35,7 +35,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#12151C] text-[#F8F9FA] pt-14 pb-8 relative overflow-hidden transition-colors border-t border-[#232936]">
+    <footer className="bg-[#12151C] text-[#F8F9FA] pt-14 pb-8 relative overflow-hidden transition-colors border-t border-white/5">
       {/* Subtle Ambient Studio Glows */}
       <div className="absolute top-0 left-1/3 w-96 h-32 bg-[#D3AE36]/[0.04] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-80 h-32 bg-[#232936]/50 rounded-full blur-3xl pointer-events-none" />
@@ -45,7 +45,7 @@ export const Footer = () => {
         {/* ========================================================================= */}
         {/* TOP: PERSONAL HERO CTA (WARM, DIRECT, RECRUITER-FRIENDLY)                 */}
         {/* ========================================================================= */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-10 border-b border-[#232936]">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-10 border-b border-white/5">
           
           {/* Avatar + Personal Introduction */}
           <div className="flex items-center gap-4 sm:gap-5">
@@ -69,7 +69,7 @@ export const Footer = () => {
                 <h3 className="font-extrabold text-xl sm:text-2xl text-[#F8F9FA] tracking-tight">
                   Lemma Amensisa
                 </h3>
-                <span className="text-[10px] font-mono font-bold text-[#D3AE36] bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 rounded-full uppercase">
+                <span className="text-[10px] font-mono font-bold text-[#D3AE36] bg-[#D3AE36]/15 px-2.5 py-0.5 rounded-full uppercase">
                   Class of 2026
                 </span>
               </div>
@@ -91,7 +91,7 @@ export const Footer = () => {
 
             <button
               onClick={handleCopyEmail}
-              className="rounded-full bg-[#232936] hover:bg-[#31394D] border border-[#31394D] text-[#F8F9FA] px-5 py-3 font-mono text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer"
+              className="rounded-full bg-white/10 hover:bg-white/15 text-[#F8F9FA] px-5 py-3 font-mono text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer"
               title="Copy Email Address"
             >
               {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} className="text-[#D3AE36]" />}
@@ -104,7 +104,7 @@ export const Footer = () => {
         {/* ========================================================================= */}
         {/* MIDDLE: MINIMALIST PERSONAL DETAILS, SOCIALS & INLINE NAV                 */}
         {/* ========================================================================= */}
-        <div className="py-7 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-[#232936]">
+        <div className="py-7 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-white/5">
           
           {/* Minimalist Horizontal Navigation */}
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-medium text-[#F8F9FA]/80">
@@ -126,7 +126,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-9 h-9 rounded-full bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] transition-all"
             >
               <Linkedin size={15} />
             </a>
@@ -135,14 +135,14 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Telegram"
-              className="w-9 h-9 rounded-full bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] transition-all"
             >
               <Send size={14} className="-translate-x-0.5" />
             </a>
             <a
               href="tel:+251934830919"
               aria-label="Phone"
-              className="w-9 h-9 rounded-full bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] transition-all"
             >
               <Phone size={14} />
             </a>
