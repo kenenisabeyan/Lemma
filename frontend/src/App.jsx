@@ -7,7 +7,6 @@ import { useAuth } from './hooks/useAuth';
 // Public Layout
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
-import { FloatingDock } from './components/layout/FloatingDock';
 
 // Public Pages
 import { Home } from './pages/public/Home';
@@ -87,7 +86,6 @@ const PublicLayout = ({ children }) => {
       />
       <Navbar />
       <main className="bg-[#F8F9FA] dark:bg-[#12151C] min-h-screen text-[#1E2025] dark:text-[#F8F9FA] transition-colors duration-200">{children}</main>
-      <FloatingDock />
       <Footer />
     </>
   );
