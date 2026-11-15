@@ -143,7 +143,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             </h1>
 
             {/* Author Bento Badge */}
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/80 dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-xs">
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04]">
               <div className="w-11 h-11 rounded-full text-[#D3AE36] bg-[#D3AE36]/10 border-2 border-[#D3AE36] flex items-center justify-center font-bold text-sm shrink-0">
                 LA
               </div>
@@ -159,7 +159,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
 
           {/* Featured Image */}
           {article.imageUrl && (
-            <div className="aspect-[16/9] rounded-3xl overflow-hidden mb-12 relative border border-[#31394D]/20 shadow-md">
+            <div className="aspect-[16/9] rounded-3xl overflow-hidden mb-12 relative shadow-md">
               <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
             </div>
@@ -194,8 +194,8 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
           </div>
 
           {/* Academic & ASTU Formal Citation Box */}
-          <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-6 sm:p-8 shadow-sm">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/50">
+          <div className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-black/5 dark:border-white/5">
               <div className="flex items-center gap-2 text-xs font-mono text-[#D3AE36]">
                 <ShieldCheck size={16} />
                 <span className="font-bold uppercase tracking-wider">Formal Capstone &amp; Academic Reference</span>
@@ -203,7 +203,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
               <span className="text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">ASTU SoCEA Reference Format</span>
             </div>
 
-            <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 font-mono text-xs text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed mb-5">
+            <div className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.05] font-mono text-xs text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed mb-5">
               Amensisa, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
             </div>
 
@@ -214,7 +214,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
                   setCopiedCitation(true);
                   setTimeout(() => setCopiedCitation(false), 2500);
                 }}
-                className="px-4 py-2 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/40 text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:bg-[#D3AE36] hover:text-[#12151C] transition-all flex items-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 rounded-full bg-[#D3AE36]/15 text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:bg-[#D3AE36] hover:text-[#12151C] transition-all flex items-center gap-1.5 cursor-pointer"
               >
                 <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASTU Citation'}
               </button>
@@ -231,7 +231,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
                   document.body.removeChild(a);
                   URL.revokeObjectURL(url);
                 }}
-                className="px-4 py-2 rounded-full bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA] hover:border-[#D3AE36] transition-all flex items-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 rounded-full bg-black/[0.05] dark:bg-white/[0.06] text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all flex items-center gap-1.5 cursor-pointer"
               >
                 <Download size={13} className="text-[#D3AE36]" /> Export Memo (TXT)
               </button>
@@ -248,7 +248,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Article Footer & Consultation Link */}
-          <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-6 sm:p-8 shadow-sm mb-12 flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-8 mb-12 flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="text-left max-w-xl">
               <h4 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-1">
                 Have questions about this <span className="text-[#D3AE36]">engineering methodology?</span>
@@ -257,7 +257,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_8px_20px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_8px_20px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 cursor-pointer"
             >
               Connect With Brothers <ArrowUpRight size={14} />
             </button>
@@ -274,7 +274,7 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
                   <Link
                     key={rel.id}
                     to={`/insights/${rel.slug}`}
-                    className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all group flex flex-col justify-between"
+                    className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 hover:bg-black/[0.05] dark:hover:bg-white/[0.06] transition-all group flex flex-col justify-between"
                   >
                     <div>
                       <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>

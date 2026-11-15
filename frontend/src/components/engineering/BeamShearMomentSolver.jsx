@@ -112,10 +112,10 @@ export const BeamShearMomentSolver = () => {
   const ptPixelX = leftX + (pointLoadA / spanL) * spanPixel;
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm relative overflow-hidden">
+    <div className="rounded-3xl bg-transparent p-6 sm:p-8 relative overflow-hidden">
       
       {/* Header */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4 border-b border-zinc-100 dark:border-[#31394D]/50">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4 border-b border-black/5 dark:border-white/5">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] font-bold">
             <Calculator size={14} className="animate-pulse" />
@@ -141,7 +141,7 @@ export const BeamShearMomentSolver = () => {
               className={`px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 supportType === type.id
                   ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_2px_10px_rgba(211,174,54,0.3)] font-extrabold'
-                  : 'bg-zinc-100 dark:bg-[#12151C] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
+                  : 'bg-black/[0.04] dark:bg-white/[0.05] text-[#1E2025] dark:text-[#F8F9FA]/70 hover:text-[#D3AE36]'
               }`}
             >
               {type.label}
