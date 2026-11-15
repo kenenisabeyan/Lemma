@@ -74,7 +74,7 @@ async function main() {
       engineeringApproach: 'Conducted 3D finite element modeling in ETABS, non-linear dynamic spectrum analysis, and foundation soil-structure interaction over Adama volcanic tuff.',
       solution: 'Engineered a dual RC shear wall core coupled with post-tensioned beam-slab systems conforming strictly to Ethiopian Building Code Standard (EBCS EN 1992 & EBCS EN 1998).',
       result: 'Received highest capstone evaluation honor from the ASTU civil engineering faculty and external industry evaluators.',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80',
       softwareUsed: JSON.stringify(['ETABS', 'SAP2000', 'AutoCAD', 'SAFE']),
       isFeatured: true,
       order: 1
@@ -114,7 +114,7 @@ async function main() {
       engineeringApproach: 'Conducted laboratory consolidation and direct shear testing at the ASTU Geotechnical Lab; modeled foundation settlement using SAFE.',
       solution: 'Designed a compensated reinforced concrete mat foundation combined with a 1.5m replacement layer of compacted granular sub-base.',
       result: 'Prevented differential settlement cracking and achieved full compliance with Ethiopian Building Code Standard (EBCS 7).',
-      imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&q=80',
       softwareUsed: JSON.stringify(['SAFE', 'ETABS', 'AutoCAD', 'Geostudio']),
       isFeatured: true,
       order: 3
@@ -252,7 +252,7 @@ async function main() {
       clientName: 'Dr. Abebe Gemechu, Ph.D.',
       clientRole: 'Associate Professor & Capstone Advisor',
       clientCompany: 'ASTU School of Civil Engineering & Architecture',
-      avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80',
+      avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80',
       content: 'Lemma and his 5th-year brothers exhibited remarkable mastery of structural dynamics and EBCS provisions in their multi-story capstone defense. Their ETABS modeling was rigorous and precise.',
       rating: 5,
       isFeatured: true,
@@ -262,7 +262,7 @@ async function main() {
       clientName: 'Eng. Bethlehem Tadesse, P.E.',
       clientRole: 'Senior Structural Engineer & Internship Supervisor',
       clientCompany: 'Oromia Construction Corporation (OCC)',
-      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
+      avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80',
       content: 'During their site internship, Lemma and his fellow ASTU brothers demonstrated exceptional diligence in reinforcement inspection and concrete quality control. True future leaders of Ethiopian engineering.',
       rating: 5,
       isFeatured: true,
@@ -298,7 +298,7 @@ async function main() {
       excerpt: 'Evaluating lime stabilization, moisture barriers, and compensated raft foundations for structures in Adama and surrounding regions.',
       content: 'Expansive soils, commonly known as black cotton clays, present significant structural hazards across the Ethiopian Rift Valley due to extreme swelling and shrinkage cycles. Through extensive laboratory testing at ASTU, we analyzed the effects of chemical lime stabilization and mechanical replacement with selected granular fills, demonstrating how proper foundation depth and drainage cut-offs prevent severe structural cracking.',
       readTime: '6 min read',
-      imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&q=80',
       isFeatured: true
     },
     {
@@ -318,7 +318,7 @@ async function main() {
       excerpt: 'Applying ERA drainage design guidelines to prevent bridge abutment scour during intense seasonal rainfall.',
       content: 'Seasonal flash floods across the Awash river tributaries demand careful hydraulic and hydrological modeling. Using Rational and SCS curve number methods, we evaluated peak discharge return periods to properly size bridge waterway openings and specify riprap boulder protection around pier foundations.',
       readTime: '7 min read',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
       isFeatured: true
     }
   ];
