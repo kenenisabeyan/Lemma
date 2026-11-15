@@ -147,13 +147,13 @@ export const ServicesPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-3.5"
               >
-                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3 max-w-xl">
-                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2">
+                <div className="p-4 sm:p-5 rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] space-y-3 max-w-xl">
+                  <div className="flex items-center justify-between pb-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
                       ASTU SoCEA Specialization Suite
                     </span>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 px-2 py-0.5 rounded-full">
                       Class of 2026
                     </span>
                   </div>
@@ -163,13 +163,13 @@ export const ServicesPage = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">EBCS EN:</strong> RC &amp; Seismic FEA
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">ERA 2024:</strong> Geometry &amp; Mass-Haul
@@ -189,7 +189,7 @@ export const ServicesPage = () => {
                 {/* Primary Filled Pill Button */}
                 <button
                   onClick={() => navigate('/contact')}
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer"
                 >
                   <span>CONNECT WITH US</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -198,7 +198,7 @@ export const ServicesPage = () => {
                 {/* Secondary Frosted Glass Pill Button */}
                 <a
                   href="#service-modules"
-                  className="rounded-full bg-white/85 dark:bg-white/10 backdrop-blur-2xl text-zinc-900 dark:text-zinc-100 border border-white/90 dark:border-white/20 hover:border-[#D3AE36] hover:bg-white/95 dark:hover:bg-white/20 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_4px_20px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-zinc-900 dark:text-zinc-100 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-7 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Layers size={15} className="text-[#D3AE36]" />
                   <span>EXPLORE 4 DISCIPLINES</span>
@@ -210,17 +210,17 @@ export const ServicesPage = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
+                className="grid grid-cols-3 gap-2.5 pt-1 w-max"
               >
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                <div className="px-3.5 py-2 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                   <span className="block text-base sm:text-lg font-black text-zinc-900 dark:text-white font-mono">4</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Core Disciplines</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                <div className="px-3.5 py-2 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">5th</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
                 </div>
-                <div className="px-3 py-2 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/80 dark:border-white/10 text-left">
+                <div className="px-3.5 py-2 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                   <span className="block text-base sm:text-lg font-black text-[#D3AE36] font-mono">100%</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Defense Readiness</span>
                 </div>

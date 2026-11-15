@@ -154,7 +154,7 @@ export const About = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -186,13 +186,13 @@ export const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
-                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
+                <div className="p-4 sm:p-5 rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] space-y-3.5 max-w-xl">
+                  <div className="flex items-center justify-between pb-2.5">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]" />
                       Candidate: B.Sc. Civil Engineering (2026)
                     </span>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 px-2.5 py-0.5 rounded-full">
                       5th-Year Senior
                     </span>
                   </div>
@@ -202,13 +202,13 @@ export const About = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/[0.03] dark:bg-white/[0.04]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Modeling:</strong> ETABS, Civil 3D, SAP
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/[0.03] dark:bg-white/[0.04]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Site QC:</strong> Slump, BBS &amp; Compaction
@@ -323,10 +323,10 @@ export const About = () => {
               {siteCapabilities.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-[#232936] rounded-2xl p-6 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm flex flex-col justify-between group"
+                  className="bg-black/[0.03] dark:bg-white/[0.04] rounded-2xl p-6 flex flex-col justify-between group"
                 >
                   <div className="space-y-3">
-                    <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase px-2 py-0.5 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30 inline-block">
+                    <span className="text-[10px] font-mono font-bold text-[#D3AE36] uppercase px-2 py-0.5 rounded-full bg-[#D3AE36]/10 inline-block">
                       {item.tag}
                     </span>
                     <h4 className="font-extrabold text-base text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
@@ -336,7 +336,7 @@ export const About = () => {
                       {item.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 text-[10px] font-mono text-[#D3AE36] font-bold">
+                  <div className="mt-4 pt-3 text-[10px] font-mono text-[#D3AE36] font-bold">
                     ✓ Verified on OCC Sites
                   </div>
                 </div>
@@ -356,7 +356,7 @@ export const About = () => {
                 {SOFTWARE_STACK.slice(0, 4).map((soft) => (
                   <div 
                     key={soft.name} 
-                    className="p-5 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm flex flex-col justify-between"
+                    className="p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex justify-between items-center mb-2">
@@ -381,7 +381,7 @@ export const About = () => {
                 {CAREER_TIMELINE.slice(0, 3).map((item, idx) => (
                   <div 
                     key={idx}
-                    className="p-4 rounded-2xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm flex items-start gap-4"
+                    className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] flex items-start gap-4"
                   >
                     <span className="text-xs font-mono text-[#D3AE36] font-bold px-2 py-1 rounded-lg bg-[#D3AE36]/10 shrink-0">
                       {item.year}
@@ -425,7 +425,7 @@ export const About = () => {
             {brotherhoodCohort.map((member) => (
               <div
                 key={member.id}
-                className="group relative rounded-2xl bg-white dark:bg-[#232936] border border-zinc-200/90 dark:border-[#31394D] p-5 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
+                className="group relative rounded-2xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] p-5 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="relative aspect-[16/11] rounded-xl overflow-hidden mb-4 bg-[#12151C]">
@@ -437,7 +437,7 @@ export const About = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
                     <div className="absolute top-3 left-3 z-10">
-                      <span className={`px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md ${member.badgeColor}`}>
+                      <span className={`px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider ${member.badgeColor}`}>
                         {member.badge}
                       </span>
                     </div>
@@ -461,7 +461,7 @@ export const About = () => {
                     {member.standards.map((std) => (
                       <span
                         key={std}
-                        className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-[#12151C] text-zinc-700 dark:text-[#F8F9FA]/80 border border-zinc-200 dark:border-[#31394D]"
+                        className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded-md bg-black/[0.04] dark:bg-white/[0.06] text-zinc-700 dark:text-[#F8F9FA]/80"
                       >
                         {std}
                       </span>
@@ -469,7 +469,7 @@ export const About = () => {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-zinc-200/70 dark:border-[#31394D] text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/70 italic flex items-center justify-between">
+                <div className="pt-3 text-[11px] font-mono text-[#1E2025]/75 dark:text-[#F8F9FA]/70 italic flex items-center justify-between">
                   <span className="truncate">"{member.quote}"</span>
                   <ArrowUpRight size={14} className="text-[#D3AE36] shrink-0 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
@@ -478,7 +478,7 @@ export const About = () => {
           </div>
 
           {/* Consolidated Single Consultation & Recruitment Banner */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-md flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-left max-w-2xl space-y-2">
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -493,7 +493,7 @@ export const About = () => {
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer"
             >
               <span>Connect With Us</span>
               <ArrowUpRight size={15} />
