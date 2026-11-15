@@ -347,16 +347,16 @@ export const ServicesPage = () => {
               return (
                 <div 
                   key={srv.id || index} 
-                  className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 relative"
+                  className="group rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-8 transition-all duration-300 relative"
                 >
                   <div className="grid lg:grid-cols-12 gap-8 items-start">
                     
                     <div className="lg:col-span-4 flex items-start gap-4">
-                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#D3AE36]/10 text-[#D3AE36] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                         <Icon size={30} />
                       </div>
                       <div>
-                        <span className="inline-block rounded-full bg-[#12151C]/5 dark:bg-[#12151C] border border-[#31394D]/25 dark:border-[#31394D] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
+                        <span className="inline-block rounded-full bg-black/[0.04] dark:bg-white/[0.06] px-3 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-widest mb-2 font-extrabold">
                           Module 0{index + 1}
                         </span>
                         <h3 className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors leading-snug">
@@ -372,7 +372,7 @@ export const ServicesPage = () => {
 
                       <div className="grid sm:grid-cols-2 gap-3 pt-1">
                         {features.map((feat, i) => (
-                          <div key={i} className="flex items-start gap-2.5 p-2 rounded-xl bg-[#12151C]/5 dark:bg-[#12151C]/60 border border-[#31394D]/20 dark:border-[#31394D]/40">
+                          <div key={i} className="flex items-start gap-2.5 p-2 rounded-xl bg-black/[0.03] dark:bg-white/[0.04]">
                             <CheckCircle2 size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
                             <span className="text-xs text-[#1E2025]/85 dark:text-[#F8F9FA]/85 font-medium leading-snug">{feat}</span>
                           </div>
@@ -401,7 +401,7 @@ export const ServicesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Consultation Banner Architectural DIV Card */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] transition-all flex flex-col sm:flex-row justify-between items-center gap-8">
             <div className="text-left max-w-2xl space-y-2">
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -416,7 +416,7 @@ export const ServicesPage = () => {
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer"
             >
               <span>Connect With Our Team</span>
               <ArrowUpRight size={15} />
