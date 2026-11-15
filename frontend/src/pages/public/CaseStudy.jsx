@@ -173,7 +173,7 @@ export const CaseStudyPage = () => {
       engineeringApproach: 'Conducted 3D finite element dynamic response spectrum analysis in ETABS 2022 and SAP2000, adhering strictly to Ethiopian Building Code Standards EBCS EN 1998:2014 and EBCS EN 1992:2014.',
       solution: 'Engineered centrally coupled core shear walls, 220mm two-way floor slabs, and a 1.2m reinforced concrete mat raft foundation with perimeter retaining walls.',
       result: 'Earned 98% defense readiness grade from ASTU School of Civil Engineering & Architecture faculty advisory board.',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80',
       softwareUsed: JSON.stringify(['ETABS', 'SAP2000', 'AutoCAD Civil 3D', 'SAFE'])
     },
     {
@@ -211,7 +211,7 @@ export const CaseStudyPage = () => {
       engineeringApproach: 'Conducted comprehensive laboratory soil classification (Atterberg limits, CBR, and Proctor compaction) and mass-haul cut/fill optimization.',
       solution: 'Specified a 400mm lime-stabilized capping layer topped with 150mm crushed stone base course and 60mm asphalt concrete surfacing.',
       result: 'Optimized cut-and-fill earthworks by 22%, ensuring cost-effective construction and durability over a 20-year design life.',
-      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80',
       softwareUsed: JSON.stringify(['AutoCAD Civil 3D', 'ERA Geometric Manual', 'ArcGIS'])
     }
   ];

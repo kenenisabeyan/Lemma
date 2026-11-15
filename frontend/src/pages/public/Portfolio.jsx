@@ -51,7 +51,7 @@ export const Portfolio = () => {
       engineeringApproach: 'Conducted 3D finite element dynamic response spectrum analysis in ETABS 2022 and SAP2000, adhering strictly to Ethiopian Building Code Standards EBCS EN 1998:2014 and EBCS EN 1992:2014.',
       solution: 'Engineered centrally coupled core shear walls, 220mm two-way floor slabs, and a 1.2m reinforced concrete mat raft foundation with perimeter retaining walls.',
       result: 'Earned 98% defense readiness grade from ASTU School of Civil Engineering & Architecture faculty advisory board.',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80',
       softwareUsed: '["ETABS","SAP2000","AutoCAD Civil 3D","SAFE"]'
     },
     {
@@ -89,7 +89,7 @@ export const Portfolio = () => {
       engineeringApproach: 'Conducted comprehensive laboratory soil classification (Atterberg limits, CBR, and Proctor compaction) and mass-haul cut/fill optimization.',
       solution: 'Specified a 400mm lime-stabilized capping layer topped with 150mm crushed stone base course and 60mm asphalt concrete surfacing.',
       result: 'Optimized cut-and-fill earthworks by 22%, ensuring cost-effective construction and durability over a 20-year design life.',
-      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80',
       softwareUsed: '["AutoCAD Civil 3D","AASHTO / ERA Guide","ArcGIS"]'
     }
   ];
@@ -221,7 +221,7 @@ export const Portfolio = () => {
                 {/* Primary Filled Pill Button */}
                 <a
                   href="#project-grid"
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer border border-[#D3AE36]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 group cursor-pointer"
                 >
                   <Filter size={15} />
                   <span>FILTER 25+ CAPSTONES</span>
@@ -435,7 +435,7 @@ export const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-white/10 bg-white/90 dark:bg-white/10 px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full bg-black/[0.04] dark:bg-white/[0.06] px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Multi-Layer CAD Telemetry Board
             </div>
