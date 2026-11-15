@@ -102,7 +102,7 @@ export const InsightsPage = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -136,13 +136,13 @@ export const InsightsPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full space-y-4"
               >
-                <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm backdrop-blur-xs space-y-3.5 max-w-xl">
-                  <div className="flex items-center justify-between border-b border-[#31394D]/15 dark:border-[#31394D]/50 pb-2.5">
+                <div className="p-4 sm:p-5 rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] space-y-3.5 max-w-xl">
+                  <div className="flex items-center justify-between pb-2.5">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
                       ASTU SoCEA Student Technical Archive
                     </span>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 px-2.5 py-0.5 rounded-full">
                       Open Access
                     </span>
                   </div>
@@ -153,13 +153,13 @@ export const InsightsPage = () => {
 
                   {/* Micro-Bullet Highlights */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Seismic:</strong> EBCS EN 1998 Zone 4
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Soils:</strong> Lime Stabilization (CBR)
@@ -194,14 +194,14 @@ export const InsightsPage = () => {
               >
                 <a
                   href="#articles-feed"
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer font-mono"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 cursor-pointer font-mono"
                 >
                   <span>Explore Research</span>
                   <ArrowRight size={15} />
                 </a>
                 <button
                   onClick={() => navigate('/resources')}
-                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono border border-transparent hover:border-[#31394D]/30"
+                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
                 >
                   <span>Engineering Tools</span>
                   <Sparkles size={14} className="text-[#D3AE36]" />
@@ -215,15 +215,15 @@ export const InsightsPage = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
               >
-                <div className="p-3 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                <div className="p-3 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                   <span className="block text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] font-mono">12+</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Research Papers</span>
                 </div>
-                <div className="p-3 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                <div className="p-3 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                   <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">3</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Focus Disciplines</span>
                 </div>
-                <div className="p-3 rounded-2xl bg-white/80 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D] text-left shadow-xs">
+                <div className="p-3 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-left">
                   <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">Free</span>
                   <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-[#1E2025]/60 dark:text-[#F8F9FA]/60 font-medium">Open Access</span>
                 </div>
@@ -238,9 +238,9 @@ export const InsightsPage = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col gap-4"
             >
-              <div className="relative w-full overflow-hidden group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-5 shadow-xl">
+              <div className="relative w-full overflow-hidden group rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-5">
                 
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#31394D]/25 dark:border-[#31394D] text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-3 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Featured Whitepaper</span>
@@ -250,7 +250,7 @@ export const InsightsPage = () => {
                   </span>
                 </div>
 
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#12151C] shadow-inner border border-[#31394D]/30 dark:border-[#31394D] mb-4">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#12151C] mb-4">
                   <img
                     src={featuredArticle.imageUrl}
                     alt={featuredArticle.title}
@@ -258,7 +258,7 @@ export const InsightsPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
-                  <span className="absolute top-3 left-3 bg-black/65 backdrop-blur-md text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase shadow-xs">
+                  <span className="absolute top-3 left-3 bg-black/65 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase shadow-xs">
                     {featuredArticle.category}
                   </span>
 
@@ -300,7 +300,7 @@ export const InsightsPage = () => {
       <section id="articles-feed" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="py-4 mb-8 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
+          <div className="py-4 mb-8 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
             
             {/* Category Tabs */}
             <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -317,14 +317,14 @@ export const InsightsPage = () => {
                     className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 rounded-full cursor-pointer ${
                       isSelected
                         ? 'bg-[#D3AE36] text-[#12151C] shadow-sm font-extrabold'
-                        : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:bg-white/80 dark:hover:bg-[#232936]'
+                        : 'text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] bg-black/[0.04] dark:bg-white/[0.06]'
                     }`}
                   >
                     <span>{cat}</span>
                     <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
                       isSelected 
                         ? 'bg-[#12151C] text-[#F8F9FA] font-black' 
-                        : 'bg-[#12151C]/10 dark:bg-[#12151C] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
+                        : 'bg-black/[0.05] dark:bg-white/[0.08] text-[#1E2025]/70 dark:text-[#F8F9FA]/70'
                     }`}>
                       {count}
                     </span>
@@ -341,7 +341,7 @@ export const InsightsPage = () => {
                 placeholder="Search research papers, EBCS codes, ERA manuals..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
+                className="w-full bg-black/[0.04] dark:bg-white/[0.06] rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:outline-none transition-colors"
               />
               {searchQuery && (
                 <button
@@ -375,10 +375,10 @@ export const InsightsPage = () => {
                   <Link
                     key={item.id}
                     to={`/insights/${item.slug || 'ebcs-en-1998-seismic-design-rift-valley'}`}
-                    className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D] p-5 sm:p-6 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden"
+                    className="rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden"
                   >
                     <div>
-                      <div className="aspect-[16/10] bg-[#12151C] overflow-hidden relative rounded-2xl mb-4 border border-[#31394D]/30 dark:border-[#31394D]">
+                      <div className="aspect-[16/10] bg-[#12151C] overflow-hidden relative rounded-2xl mb-4">
                         {item.imageUrl && (
                           <img 
                             src={item.imageUrl} 
@@ -387,7 +387,7 @@ export const InsightsPage = () => {
                           />
                         )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                        <span className="absolute top-3 left-3 rounded-full bg-black/65 backdrop-blur-md text-[#D3AE36] border border-[#D3AE36]/30 text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
+                        <span className="absolute top-3 left-3 rounded-full bg-black/65 backdrop-blur-md text-[#D3AE36] text-[10px] font-mono font-bold px-3 py-1 uppercase tracking-wider">
                           {item.category}
                         </span>
                       </div>
@@ -409,7 +409,7 @@ export const InsightsPage = () => {
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-3.5 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between">
+                    <div className="mt-4 pt-3.5 flex items-center justify-between">
                       <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] group-hover:text-[#C29F2F] transition-colors flex items-center gap-1.5">
                         Read Paper <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </span>
@@ -431,7 +431,7 @@ export const InsightsPage = () => {
       {/* ========================================================================= */}
       <section className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] transition-all flex flex-col sm:flex-row justify-between items-center gap-8">
             <div className="text-left max-w-2xl space-y-2">
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -446,7 +446,7 @@ export const InsightsPage = () => {
             </div>
             <button
               onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95 border border-[#D3AE36]"
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 cursor-pointer active:scale-95"
             >
               <span>Connect With Our Team</span>
               <ArrowUpRight size={15} />
