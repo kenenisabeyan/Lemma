@@ -109,7 +109,7 @@ export const TestimonialsPage = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
               >
                 <div className="flex gap-0.5 text-[#D3AE36]">
                   {[...Array(5)].map((_, i) => (
@@ -154,13 +154,13 @@ export const TestimonialsPage = () => {
 
                   {/* Micro-Bullet Highlights */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">Faculty:</strong> 5.0★ Capstone Rigor
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">OCC Site:</strong> Field Verified Honors
@@ -179,7 +179,7 @@ export const TestimonialsPage = () => {
               >
                 <a
                   href="#testimonials-grid"
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 cursor-pointer"
                 >
                   <span>Read Endorsements</span>
                   <MessageSquareQuote size={15} />
@@ -223,9 +223,9 @@ export const TestimonialsPage = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 flex flex-col gap-4"
             >
-              <div className="relative w-full rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm group">
+              <div className="relative w-full rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 group">
                 
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-100 dark:border-[#31394D]/50 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-4 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Spotlight Endorsement</span>
@@ -239,28 +239,28 @@ export const TestimonialsPage = () => {
                   ))}
                 </div>
 
-                <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-5">
+                <div className="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] mb-5">
                   <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm sm:text-base leading-relaxed italic font-light">
                     "{featuredTestimonial.content}"
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3.5 border-t border-zinc-100 dark:border-[#31394D]/50 pt-4">
+                <div className="flex items-center gap-3.5 pt-4">
                   {featuredTestimonial.avatarUrl ? (
                     <img
                       src={featuredTestimonial.avatarUrl}
                       alt={featuredTestimonial.clientName}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-[#D3AE36] shadow-xs"
+                      className="w-12 h-12 rounded-full object-cover shadow-xs"
                     />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-[#12151C] border-2 border-[#D3AE36] flex items-center justify-center text-[#D3AE36] font-bold text-xs">
+                    <div className="w-12 h-12 rounded-full bg-black/[0.04] dark:bg-white/[0.06] flex items-center justify-center text-[#D3AE36] font-bold text-xs">
                       CL
                     </div>
                   )}
                   <div className="overflow-hidden">
                     <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] truncate">{featuredTestimonial.clientName}</h4>
                     <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60 truncate">{featuredTestimonial.clientRole}</p>
-                    <span className="inline-block rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/40 px-2.5 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold">
+                    <span className="inline-block rounded-full bg-[#D3AE36]/10 px-2.5 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold">
                       {featuredTestimonial.clientCompany}
                     </span>
                   </div>

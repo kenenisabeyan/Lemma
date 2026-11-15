@@ -337,7 +337,7 @@ Phone: +251 934 830 919
       <section id="resources-feed" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D] pb-6 mb-6">
+          <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 pb-6 mb-6">
             
             {/* Category Tabs */}
             <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -354,14 +354,14 @@ Phone: +251 934 830 919
                     className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                       isSelected
                         ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                        : 'bg-white dark:bg-[#232936] text-[#1E2025] dark:text-[#F8F9FA]/70 border border-[#31394D]/25 dark:border-[#31394D] hover:border-[#D3AE36]'
+                        : 'bg-black/[0.04] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA]/70 hover:text-[#D3AE36]'
                     }`}
                   >
                     <span>{cat}</span>
                     <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                       isSelected 
                         ? 'bg-[#12151C] text-[#D3AE36] font-black' 
-                        : 'bg-zinc-100 dark:bg-[#12151C] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
+                        : 'bg-black/[0.05] dark:bg-white/[0.08] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
                     }`}>
                       {count}
                     </span>
@@ -378,7 +378,7 @@ Phone: +251 934 830 919
                 placeholder="Search guides, specs, calculations..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white dark:bg-[#232936] border border-[#31394D]/30 rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all shadow-xs"
+                className="w-full bg-black/[0.04] dark:bg-white/[0.06] rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:outline-none transition-all"
               />
               {searchQuery && (
                 <button
@@ -395,7 +395,7 @@ Phone: +251 934 830 919
           {/* Download Notification Toast */}
           {downloadNotification && (
             <div className="mb-6">
-              <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2 shadow-xs">
+              <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-600 dark:text-emerald-400 shrink-0" /> 
                 <span>{downloadNotification}</span>
               </div>
@@ -407,19 +407,19 @@ Phone: +251 934 830 919
             {filteredResources.map((item) => (
               <div 
                 key={item.id} 
-                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
+                className="group rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-8 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex justify-between items-start mb-5">
-                    <div className="p-3 rounded-2xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-zinc-200/60 dark:border-[#31394D] group-hover:scale-105 transition-transform shadow-2xs">
+                    <div className="p-3 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform">
                       <FileText size={24} />
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono font-bold text-xs border border-[#D3AE36]/30 uppercase tracking-wider">
+                    <span className="px-3 py-1 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] font-mono font-bold text-xs uppercase tracking-wider">
                       {item.format} • {item.fileSize || '1.8 MB'}
                     </span>
                   </div>
 
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-[#F8F9FA]/60 font-bold px-2.5 py-0.5 rounded-md bg-zinc-100 dark:bg-[#12151C] inline-block mb-3">
+                  <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-[#F8F9FA]/60 font-bold px-2.5 py-0.5 rounded-md bg-black/[0.04] dark:bg-white/[0.06] inline-block mb-3">
                     {item.category}
                   </span>
 
@@ -427,7 +427,7 @@ Phone: +251 934 830 919
                     {item.title}
                   </h3>
 
-                  <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-5">
+                  <div className="p-4 sm:p-5 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] mb-5">
                     <p className="text-xs sm:text-sm text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed">
                       <strong className="text-[#D3AE36] font-semibold">✦ Technical Scope &amp; Contents: </strong>
                       {item.description}
@@ -435,14 +435,14 @@ Phone: +251 934 830 919
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-6 text-[10px] font-mono font-bold text-zinc-500 dark:text-[#F8F9FA]/60">
-                    <span className="px-2.5 py-1 rounded-lg bg-zinc-50 dark:bg-[#12151C]/50 border border-zinc-200/50 dark:border-[#31394D]">✦ EBCS / ERA Standard</span>
-                    <span className="px-2.5 py-1 rounded-lg bg-zinc-50 dark:bg-[#12151C]/50 border border-zinc-200/50 dark:border-[#31394D]">✦ Instant Download</span>
+                    <span className="px-2.5 py-1 rounded-lg bg-black/[0.03] dark:bg-white/[0.04]">✦ EBCS / ERA Standard</span>
+                    <span className="px-2.5 py-1 rounded-lg bg-black/[0.03] dark:bg-white/[0.04]">✦ Instant Download</span>
                   </div>
                 </div>
 
                 <button
                   onClick={() => handleDownload(item)}
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] active:scale-95 transition-all py-3.5 px-7 text-xs font-mono font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-full sm:w-max shadow-[0_8px_20px_rgba(211,174,54,0.3)] border border-[#D3AE36]"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] active:scale-95 transition-all py-3.5 px-7 text-xs font-mono font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-full sm:w-max shadow-[0_8px_20px_rgba(211,174,54,0.3)]"
                 >
                   <span>Download Document</span>
                   <Download size={14} className="text-[#12151C]" />
@@ -461,7 +461,7 @@ Phone: +251 934 830 919
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-10 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 dark:border-[#31394D] bg-white/90 dark:bg-[#232936] px-4 py-1.5 text-xs font-mono text-[#D3AE36] shadow-xs mb-4 font-bold">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-mono text-[#D3AE36] mb-4 font-bold bg-black/[0.04] dark:bg-white/[0.06]">
               <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
               Computational Structural Analysis
             </div>
@@ -476,7 +476,7 @@ Phone: +251 934 830 919
           <BeamShearMomentSolver />
 
           {/* Bottom Custom Specifications Banner */}
-          <div className="mt-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
+          <div className="mt-16 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] p-8 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-8">
             <div className="text-left max-w-2xl">
               <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Capstones</span>
               <h4 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
@@ -488,6 +488,12 @@ Phone: +251 934 830 919
             </div>
             <button
               onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] shrink-0 flex items-center gap-2 cursor-pointer"
+            >
+              <span>Connect With Us</span>
+              <ArrowUpRight size={15} />
+            </button>
+          </div>
               className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
             >
               <span>Connect With Brothers</span>
