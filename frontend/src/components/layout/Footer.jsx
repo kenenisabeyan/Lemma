@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Building2, 
   Mail, 
   Phone, 
   MapPin, 
   Send, 
   Linkedin, 
-  ExternalLink,
-  ChevronUp
+  ChevronUp,
+  Copy,
+  Check
 } from 'lucide-react';
+import lemmaImg from '../../assets/lemma.JPG';
 
 export const Footer = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('lemmayezedlij21@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -19,155 +28,148 @@ export const Footer = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About & Brotherhood', path: '/about' },
-    { name: 'Featured Projects', path: '/projects' },
-    { name: 'Services & Modules', path: '/services' },
-    { name: 'Experience & Milestones', path: '/experience' },
-    { name: 'Contact & Consultation', path: '/contact' }
+    { name: 'Projects', path: '/projects' },
+    { name: 'Services', path: '/services' },
+    { name: 'Experience', path: '/experience' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
     <footer className="bg-[#12151C] text-[#F8F9FA] pt-14 pb-8 relative overflow-hidden transition-colors border-t border-[#232936]">
       {/* Subtle Ambient Studio Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-32 bg-[#D3AE36]/[0.03] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-32 bg-[#232936]/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/3 w-96 h-32 bg-[#D3AE36]/[0.04] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-32 bg-[#232936]/50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ========================================================================= */}
-        {/* INTEGRATED 3-COLUMN EXECUTIVE PERSONAL PORTFOLIO FOOTER                   */}
+        {/* TOP: PERSONAL HERO CTA (WARM, DIRECT, RECRUITER-FRIENDLY)                 */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-10">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-10 border-b border-[#232936]">
           
-          {/* Column 1: Personal Brand, Profile & Social Identity (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col items-start gap-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-11 h-11 rounded-2xl bg-[#232936] border border-[#D3AE36]/40 flex items-center justify-center text-[#D3AE36] shrink-0 shadow-inner group-hover:scale-105 group-hover:border-[#D3AE36] transition-all">
-                <Building2 className="w-5 h-5 text-[#D3AE36]" />
+          {/* Avatar + Personal Introduction */}
+          <div className="flex items-center gap-4 sm:gap-5">
+            <div className="relative shrink-0">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-[#D3AE36] shadow-lg">
+                <img 
+                  src={lemmaImg} 
+                  alt="Lemma Amensisa" 
+                  className="w-full h-full object-cover object-top" 
+                />
               </div>
-              <div className="flex flex-col text-left">
-                <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[#F8F9FA] leading-tight group-hover:text-[#D3AE36] transition-colors">
-                  Lemma <span className="font-light text-[#F8F9FA]/80">Amensisa</span>
-                </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#D3AE36] font-bold">
-                  B.Sc. Civil Engineering · ASTU Class of 2026
+              {/* Online Green Indicator Dot */}
+              <span className="absolute bottom-0 right-0 flex h-3.5 w-3.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-[#12151C]"></span>
+              </span>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex items-center gap-2.5">
+                <h3 className="font-extrabold text-xl sm:text-2xl text-[#F8F9FA] tracking-tight">
+                  Lemma Amensisa
+                </h3>
+                <span className="text-[10px] font-mono font-bold text-[#D3AE36] bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 rounded-full uppercase">
+                  Class of 2026
                 </span>
               </div>
-            </Link>
-
-            <p className="text-[#F8F9FA]/75 text-xs sm:text-sm leading-relaxed max-w-md">
-              Specializing in reinforced concrete structures, ETABS non-linear seismic modeling, highway corridor alignments (ERA standards), and field quality supervision across Ethiopia.
-            </p>
-
-            {/* Direct Connect Pills */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="w-9 h-9 rounded-xl bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
-              >
-                <Linkedin size={15} />
-              </a>
-              <a
-                href="https://t.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-                className="w-9 h-9 rounded-xl bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
-              >
-                <Send size={14} className="-translate-x-0.5" />
-              </a>
-              <a
-                href="tel:+251934830919"
-                aria-label="Call Direct"
-                className="w-9 h-9 rounded-xl bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
-              >
-                <Phone size={14} />
-              </a>
-              <a
-                href="mailto:lemmayezedlij21@gmail.com"
-                aria-label="Email Direct"
-                className="w-9 h-9 rounded-xl bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
-              >
-                <Mail size={14} />
-              </a>
+              <p className="text-xs sm:text-sm text-[#F8F9FA]/75 max-w-md leading-relaxed">
+                Civil Engineering Student at ASTU SoCEA · Open for graduate engineering roles, B.Sc. capstone collaborations, and structural consultations.
+              </p>
             </div>
           </div>
 
-          {/* Column 2: Streamlined Navigation (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col gap-3">
-            <h4 className="text-[#F8F9FA] font-bold text-xs uppercase tracking-wider font-mono text-[#D3AE36]">
-              Navigation
-            </h4>
-            <div className="flex flex-col gap-2 text-xs text-[#F8F9FA]/80">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.path}
-                  to={link.path} 
-                  className="hover:text-[#D3AE36] transition-colors flex items-center gap-1.5 hover:translate-x-1 transition-transform"
-                >
-                  <span className="text-[#D3AE36]/60">→</span>
-                  <span>{link.name}</span>
-                </Link>
-              ))}
-            </div>
+          {/* Quick Personal Action Buttons */}
+          <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+            <a
+              href="mailto:lemmayezedlij21@gmail.com"
+              className="flex-1 sm:flex-initial rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-6 py-3 font-mono font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(211,174,54,0.3)] cursor-pointer"
+            >
+              <Mail size={14} />
+              <span>Say Hello</span>
+            </a>
+
+            <button
+              onClick={handleCopyEmail}
+              className="rounded-full bg-[#232936] hover:bg-[#31394D] border border-[#31394D] text-[#F8F9FA] px-5 py-3 font-mono text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer"
+              title="Copy Email Address"
+            >
+              {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} className="text-[#D3AE36]" />}
+              <span>{copied ? 'Copied!' : 'Copy Email'}</span>
+            </button>
           </div>
 
-          {/* Column 3: Academic Base & Direct Contact (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-3.5">
-            <h4 className="text-[#F8F9FA] font-bold text-xs uppercase tracking-wider font-mono text-[#D3AE36]">
-              Academic Base &amp; Contact
-            </h4>
+        </div>
 
-            <div className="space-y-2.5 text-xs text-[#F8F9FA]/85">
-              <div className="flex items-start gap-2.5">
-                <MapPin size={15} className="text-[#D3AE36] shrink-0 mt-0.5" />
-                <span className="text-[#F8F9FA]/80">
-                  School of Civil Engineering &amp; Architecture (SoCEA), ASTU Main Campus, Adama, Ethiopia
-                </span>
-              </div>
+        {/* ========================================================================= */}
+        {/* MIDDLE: MINIMALIST PERSONAL DETAILS, SOCIALS & INLINE NAV                 */}
+        {/* ========================================================================= */}
+        <div className="py-7 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-[#232936]">
+          
+          {/* Minimalist Horizontal Navigation */}
+          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-medium text-[#F8F9FA]/80">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="hover:text-[#D3AE36] transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
 
-              <div className="flex items-center gap-2.5 font-mono">
-                <Phone size={15} className="text-[#D3AE36] shrink-0" />
-                <a href="tel:+251934830919" className="hover:underline hover:text-[#D3AE36] text-[#F8F9FA] font-semibold transition-colors">
-                  +251 934 830 919 / 0934 830 919
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2.5 font-mono">
-                <Mail size={15} className="text-[#D3AE36] shrink-0" />
-                <a href="mailto:lemmayezedlij21@gmail.com" className="hover:underline hover:text-[#D3AE36] text-[#F8F9FA] transition-colors truncate">
-                  lemmayezedlij21@gmail.com
-                </a>
-              </div>
-            </div>
-
-            {/* Recruiter & Capstone Status Pill */}
-            <div className="mt-1 p-3 rounded-xl bg-[#232936] border border-[#31394D]/60 flex items-center gap-2.5 text-[11px] text-[#F8F9FA]/90">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-              <span>Available for 2026 graduate structural roles &amp; capstone collaborations</span>
+          {/* Personal Social & Communication Channels */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="w-9 h-9 rounded-full bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
+            >
+              <Linkedin size={15} />
+            </a>
+            <a
+              href="https://t.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              className="w-9 h-9 rounded-full bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
+            >
+              <Send size={14} className="-translate-x-0.5" />
+            </a>
+            <a
+              href="tel:+251934830919"
+              aria-label="Phone"
+              className="w-9 h-9 rounded-full bg-[#232936] border border-[#31394D]/60 flex items-center justify-center text-[#F8F9FA]/80 hover:bg-[#D3AE36] hover:text-[#12151C] hover:border-[#D3AE36] transition-all"
+            >
+              <Phone size={14} />
+            </a>
+            <span className="text-zinc-700">|</span>
+            <div className="flex items-center gap-1.5 text-xs text-[#F8F9FA]/70 font-mono">
+              <MapPin size={13} className="text-[#D3AE36]" />
+              <span>Adama, Ethiopia</span>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Strip: Copyright & Back to Top */}
-        <div className="pt-6 border-t border-[#232936] flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#F8F9FA]/65">
+        {/* ========================================================================= */}
+        {/* BOTTOM: PERSONAL SIGNATURE, COPYRIGHT & BACK TO TOP                      */}
+        {/* ========================================================================= */}
+        <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#F8F9FA]/60 font-mono">
           <p className="text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Lemma Amensisa &amp; Brotherhood Cohort. All rights reserved.
+            Designed &amp; Engineered by <strong className="text-[#F8F9FA] font-bold">Lemma Amensisa</strong> · &copy; {new Date().getFullYear()}
           </p>
 
-          <div className="flex items-center gap-5 text-xs">
-            <Link to="/about" className="hover:text-[#D3AE36] transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="hover:text-[#D3AE36] transition-colors">
-              Contact
-            </Link>
+          <div className="flex items-center gap-4">
+            <span className="text-[11px] text-[#D3AE36]">
+              ✦ ASTU SoCEA Civil Engineering
+            </span>
             <button
               onClick={scrollToTop}
-              className="hover:text-[#D3AE36] transition-colors flex items-center gap-1 text-[11px] font-mono uppercase tracking-wider cursor-pointer text-[#D3AE36]"
+              className="hover:text-[#D3AE36] transition-colors flex items-center gap-1 text-[11px] uppercase tracking-wider cursor-pointer text-[#F8F9FA]/80"
               title="Back to Top"
             >
               <span>Back to Top</span>
