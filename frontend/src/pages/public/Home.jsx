@@ -633,7 +633,7 @@ export const Home = () => {
 
             <Link 
               to="/projects" 
-              className="rounded-full bg-white dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all flex items-center gap-2 shadow-xs shrink-0 self-start md:self-auto"
+              className="rounded-full bg-black/[0.04] dark:bg-white/[0.06] px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all flex items-center gap-2 shrink-0 self-start md:self-auto"
             >
               <span>View All 25+ Works</span>
               <ArrowUpRight size={14} className="text-[#D3AE36]" />
@@ -645,10 +645,10 @@ export const Home = () => {
               <div
                 key={p.id}
                 onClick={() => setSelectedCaseStudy(p)}
-                className="bg-white dark:bg-[#232936] rounded-3xl overflow-hidden border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                className="bg-transparent rounded-3xl overflow-hidden transition-all duration-300 flex flex-col justify-between group cursor-pointer"
               >
                 <div>
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
                     <img
                       src={p.imageUrl}
                       alt={p.title}
@@ -680,7 +680,7 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="px-6 pb-6 pt-3 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between text-[11px] font-mono">
+                <div className="px-6 pb-6 pt-3 flex items-center justify-between text-[11px] font-mono">
                   <span className="text-[#1E2025]/70 dark:text-[#F8F9FA]/70 truncate">
                     {p.standard}
                   </span>
@@ -706,7 +706,7 @@ export const Home = () => {
             {endorsements.map((e, idx) => (
               <div 
                 key={idx}
-                className="bg-white dark:bg-[#232936] rounded-3xl p-7 sm:p-8 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm flex flex-col justify-between group"
+                className="bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] rounded-3xl p-7 sm:p-8 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -723,13 +723,13 @@ export const Home = () => {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#31394D]/15 dark:border-[#31394D]/50 flex items-center justify-between">
+                <div className="pt-4 flex items-center justify-between">
                   <div>
                     <h5 className="font-bold text-sm text-[#1E2025] dark:text-[#F8F9FA]">{e.name}</h5>
                     <p className="text-xs text-[#1E2025]/70 dark:text-[#F8F9FA]/70">{e.role}</p>
                     <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mt-0.5">{e.org}</span>
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30 shrink-0">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold shrink-0">
                     VERIFIED
                   </span>
                 </div>
@@ -738,7 +738,7 @@ export const Home = () => {
           </div>
 
           {/* Integrated Collaboration & Direct Channel Banner */}
-          <div className="bg-white dark:bg-[#232936] rounded-3xl p-8 sm:p-12 border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-md">
+          <div className="bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] rounded-3xl p-8 sm:p-12">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               
               <div className="space-y-3 max-w-2xl">
@@ -766,7 +766,7 @@ export const Home = () => {
                 
                 <Link
                   to="/contact"
-                  className="rounded-full bg-transparent border border-zinc-300 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] hover:border-[#D3AE36] px-6 py-3.5 font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95"
+                  className="rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] px-6 py-3.5 font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95"
                 >
                   <Mail size={14} className="text-[#D3AE36]" />
                   <span>Send Inquiry</span>
