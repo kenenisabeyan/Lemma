@@ -137,7 +137,7 @@ export const BlueprintInspector = () => {
               className="absolute inset-0"
             >
               <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" 
+                src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80" 
                 alt="Nexus Tower Architecture"
                 className="w-full h-full object-cover grayscale opacity-80"
               />
