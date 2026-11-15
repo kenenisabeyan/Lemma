@@ -536,7 +536,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Abebe Kebede"
-                    className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400"
+                    className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-xl text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all placeholder:text-zinc-400"
                   />
                 </div>
 
@@ -553,7 +553,7 @@ export const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="abebe@example.com"
-                      className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-xl text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
 
@@ -567,7 +567,7 @@ export const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="09XXXXXXXX"
-                      className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-xl text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
@@ -581,7 +581,7 @@ export const Contact = () => {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all"
+                    className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-xl text-[#1E2025] dark:text-[#F8F9FA] px-4 py-3 text-xs sm:text-sm focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all"
                   >
                     <option value="Reinforced Concrete Structure">Reinforced Concrete Structure (EBCS EN 1992)</option>
                     <option value="Highway & Transportation">Highway & Transportation Corridor (ERA 2024)</option>
@@ -604,7 +604,7 @@ export const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us how we can help you with structural calculations, site supervision, or capstone collaboration..."
-                    className="w-full bg-[#F8FAFC] dark:bg-[#12151C] rounded-xl border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] p-4 text-xs sm:text-sm focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36]/30 focus:bg-white dark:focus:bg-[#12151C] focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
+                    className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-xl text-[#1E2025] dark:text-[#F8F9FA] p-4 text-xs sm:text-sm focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all placeholder:text-zinc-400 resize-none"
                   ></textarea>
                 </div>
 

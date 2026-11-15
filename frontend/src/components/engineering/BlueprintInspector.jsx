@@ -219,7 +219,7 @@ export const BlueprintInspector = () => {
                   className={`group/btn absolute flex items-center justify-center rounded-full transition-all duration-300 ${
                     isSelected
                       ? 'w-9 h-9 bg-[#D3AE36] text-[#12151C] scale-110 shadow-lg shadow-[#D3AE36]/30'
-                      : 'w-7 h-7 bg-white dark:bg-[#232936] text-[#D3AE36] border border-[#D3AE36]/40 hover:scale-125'
+                      : 'w-7 h-7 bg-[#D3AE36]/20 text-[#D3AE36] hover:scale-125'
                   }`}
                   title={h.title}
                 >

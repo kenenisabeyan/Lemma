@@ -155,10 +155,10 @@ export const SeismicShakeTable = () => {
     : 0;
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-transparent p-6 sm:p-8 relative overflow-hidden transition-colors duration-200">
       
       {/* Header Banner */}
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4 border-b border-zinc-100 dark:border-[#31394D]/50">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-4 border-b border-black/5 dark:border-white/5">
         <div>
           <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-[0.2em] text-[#D3AE36] font-bold">
             <Activity size={14} className="animate-pulse" />
@@ -178,7 +178,7 @@ export const SeismicShakeTable = () => {
             className={`rounded-full px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer shadow-md ${
               isSimulating
                 ? 'bg-rose-500 text-white hover:bg-rose-600'
-                : 'bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F] border border-[#D3AE36]'
+                : 'bg-[#D3AE36] text-[#12151C] hover:bg-[#C29F2F]'
             }`}
           >
             {isSimulating ? (
@@ -212,10 +212,10 @@ export const SeismicShakeTable = () => {
                 <button
                   key={key}
                   onClick={() => { setSelectedEarthquake(key); setIsSimulating(false); }}
-                  className={`p-3.5 rounded-2xl text-left transition-all relative border cursor-pointer ${
+                  className={`p-3.5 rounded-2xl text-left transition-all relative cursor-pointer ${
                     isSelected
-                      ? 'bg-[#D3AE36]/15 border-[#D3AE36] shadow-xs'
-                      : 'bg-zinc-50 dark:bg-[#12151C]/50 border-zinc-200/60 dark:border-[#31394D]/60 hover:border-[#D3AE36]/50'
+                      ? 'bg-[#D3AE36]/15 shadow-xs'
+                      : 'bg-black/[0.04] dark:bg-white/[0.05] hover:text-[#D3AE36]'
                   }`}
                 >
                   <div className="flex justify-between items-center mb-1">
@@ -230,7 +230,7 @@ export const SeismicShakeTable = () => {
           </div>
 
           {/* PGA Multiplier Slider */}
-          <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 space-y-2">
+          <div className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] space-y-2">
             <div className="flex justify-between items-center text-xs font-mono">
               <span className="text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5 font-bold">
                 <Sliders size={13} className="text-[#D3AE36]" /> Ground Motion Intensity:
@@ -273,10 +273,10 @@ export const SeismicShakeTable = () => {
                 <button
                   key={sys.id}
                   onClick={() => setDampingSystem(sys.id)}
-                  className={`p-4 rounded-2xl text-left transition-all flex flex-col justify-between border cursor-pointer ${
+                  className={`p-4 rounded-2xl text-left transition-all flex flex-col justify-between cursor-pointer ${
                     isSelected
-                      ? 'bg-[#D3AE36]/15 border-[#D3AE36] shadow-xs'
-                      : 'bg-zinc-50 dark:bg-[#12151C]/50 border-zinc-200/60 dark:border-[#31394D]/60 hover:border-[#D3AE36]/50'
+                      ? 'bg-[#D3AE36]/15 shadow-xs'
+                      : 'bg-black/[0.04] dark:bg-white/[0.05] hover:text-[#D3AE36]'
                   }`}
                 >
                   <div>
@@ -439,7 +439,7 @@ export const SeismicShakeTable = () => {
         </div>
 
         {/* Right Column: Comparative Spectral Acceleration Plot & Performance Metrics */}
-        <div className="lg:col-span-5 p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 flex flex-col justify-between">
+        <div className="lg:col-span-5 p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] flex flex-col justify-between">
           
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -495,7 +495,7 @@ export const SeismicShakeTable = () => {
           </div>
 
           {/* Performance Impact Summary */}
-          <div className="space-y-2.5 my-4 divide-y divide-zinc-200/60 dark:divide-[#31394D]/40">
+          <div className="space-y-2.5 my-4 divide-y divide-black/5 dark:divide-white/5">
             <div className="flex justify-between items-center text-xs font-mono pt-2">
               <span className="text-[#1E2025] dark:text-[#F8F9FA]">Peak Lateral Drift Reduction:</span>
               <span className="text-emerald-500 font-bold">-{metrics.driftReduction}%</span>
@@ -511,7 +511,7 @@ export const SeismicShakeTable = () => {
           </div>
 
           {/* Code Reference Stamp */}
-          <div className="pt-3 border-t border-zinc-200/60 dark:border-[#31394D]/50 flex items-center justify-between text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
+          <div className="pt-3 border-t border-black/5 dark:border-white/5 flex items-center justify-between text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">
             <span className="flex items-center gap-1 text-[#D3AE36] font-bold">
               <ShieldCheck size={13} /> FEMA P-58 Validated
             </span>

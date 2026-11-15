@@ -242,10 +242,10 @@ export const BeamShearMomentSolver = () => {
                   <button
                     key={key}
                     onClick={() => setSectionProfile(key)}
-                    className={`p-3 rounded-2xl text-left text-xs font-mono transition-all cursor-pointer border ${
+                    className={`p-3 rounded-2xl text-left text-xs font-mono transition-all cursor-pointer ${
                       isSelected
-                        ? 'border-[#D3AE36] bg-[#D3AE36]/10 text-[#D3AE36] font-bold shadow-xs'
-                        : 'border-zinc-200/60 dark:border-[#31394D]/60 bg-zinc-50/50 dark:bg-[#12151C]/40 text-[#1E2025] dark:text-[#F8F9FA]/80 hover:border-[#D3AE36]/50'
+                        ? 'bg-[#D3AE36]/15 text-[#D3AE36] font-bold shadow-xs'
+                        : 'bg-black/[0.04] dark:bg-white/[0.05] text-[#1E2025] dark:text-[#F8F9FA]/80 hover:text-[#D3AE36]'
                     }`}
                   >
                     <span className="block truncate font-bold text-xs">{s.name.split(' ')[0]}</span>
@@ -372,7 +372,7 @@ export const BeamShearMomentSolver = () => {
           </div>
 
           {/* Telemetry Evaluation Box */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 text-xs font-mono shadow-xs">
+          <div className="p-4 sm:p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 text-xs font-mono">
             <div className="py-1">
               <span className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 block font-bold uppercase">MAX MOMENT ($M_u$):</span>
               <span className="text-[#D3AE36] font-black text-sm">{results.maxMoment} kN·m</span>
@@ -401,7 +401,7 @@ export const BeamShearMomentSolver = () => {
       </div>
 
       {/* Code Compliance Footer */}
-      <div className="relative z-10 pt-6 border-t border-zinc-100 dark:border-[#31394D]/40 flex flex-wrap items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60 gap-4">
+      <div className="relative z-10 pt-6 border-t border-black/5 dark:border-white/5 flex flex-wrap items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60 gap-4">
         <div className="flex items-center gap-2">
           <ShieldCheck size={14} className="text-[#D3AE36]" />
           <span>Euler-Bernoulli Elastic Formulation: EI · (d⁴w / dx⁴) = q(x)</span>

@@ -107,7 +107,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
       {/* Header Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200/60 dark:border-white/10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#D3AE36]/40 px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#D3AE36]/15 px-3.5 py-1 text-xs font-mono text-[#D3AE36] mb-2 font-bold">
             <Sliders size={13} />
             <span>ASTU Capstone Feasibility Telemetry</span>
           </div>
@@ -153,7 +153,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
                   <div className={`p-2 rounded-xl transition-colors ${
                     isSelected 
                       ? 'bg-[#D3AE36] text-[#12151C]' 
-                      : 'bg-[#FFFFFF] border border-zinc-200 text-[#1E2025] group-hover:text-[#D3AE36]'
+                      : 'bg-black/[0.04] dark:bg-white/[0.05] text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36]'
                   }`}>
                     <Icon size={18} />
                   </div>
@@ -242,7 +242,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           </div>
 
           {/* Framing System & Environmental Codes */}
-          <div className="grid sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-200/60 dark:border-[#31394D]">
+          <div className="grid sm:grid-cols-3 gap-3 pt-4 border-t border-black/5 dark:border-white/5">
             
             <div>
               <label className="block text-[10px] font-mono uppercase text-[#1E2025] dark:text-[#F8F9FA]/80 mb-1.5 font-semibold">
@@ -297,7 +297,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
         {/* Live Calculated Deliverables Panel (5 Cols) */}
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/60 dark:border-white/10">
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-black/5 dark:border-white/5">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-zinc-200 flex items-center gap-1.5">
                 <Sparkles size={14} className="text-[#D3AE36]" />
                 Calculated Deliverables &amp; Timeline
@@ -310,7 +310,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
             <div className="space-y-3">
               
               {/* Calculation Package */}
-              <div className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-[#31394D]">
+              <div className="flex items-center justify-between py-2 border-b border-black/5 dark:border-white/5">
                 <div className="flex items-center gap-2.5">
                   <div className="text-[#D3AE36]">
                     <FileSpreadsheet size={16} />
@@ -326,7 +326,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               </div>
 
               {/* BIM / AutoCAD Sheets */}
-              <div className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-[#31394D]">
+              <div className="flex items-center justify-between py-2 border-b border-black/5 dark:border-white/5">
                 <div className="flex items-center gap-2.5">
                   <div className="text-[#D3AE36]">
                     <Layers size={16} />
@@ -342,7 +342,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
               </div>
 
               {/* Delivery Timeline */}
-              <div className="flex items-center justify-between py-2 border-b border-zinc-100 dark:border-[#31394D]">
+              <div className="flex items-center justify-between py-2 border-b border-black/5 dark:border-white/5">
                 <div className="flex items-center gap-2.5">
                   <div className="text-[#D3AE36]">
                     <Clock size={16} />
@@ -377,7 +377,7 @@ export const StructuralScopeEstimator = ({ onApplyScope }) => {
           </div>
 
           {/* Action Button: Load into Form */}
-          <div className="pt-6 mt-6 border-t border-zinc-200">
+          <div className="pt-6 mt-6 border-t border-black/5 dark:border-white/5">
             <button
               type="button"
               onClick={handleApply}

@@ -787,7 +787,7 @@ export const Home = () => {
       {/* Video Modal */}
       {isVideoModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-          <div className="relative w-full max-w-4xl bg-white dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] p-2 rounded-xl shadow-2xl">
+          <div className="relative w-full max-w-4xl bg-[#12151C] p-2 rounded-2xl shadow-2xl">
             <button
               onClick={() => setIsVideoModalOpen(false)}
               className="absolute -top-10 right-0 text-[#F8F9FA] hover:text-[#D3AE36] transition-colors cursor-pointer"

@@ -255,16 +255,16 @@ export const ServicesPage = () => {
                       <button
                         key={idx}
                         onClick={() => setActiveHeroTab(idx)}
-                        className={`text-left p-3.5 rounded-2xl border transition-all flex items-start gap-3.5 cursor-pointer ${
+                        className={`text-left p-3.5 rounded-2xl transition-all flex items-start gap-3.5 cursor-pointer ${
                           isActive
-                            ? 'bg-[#D3AE36] text-[#12151C] border-[#D3AE36] shadow-[0_6px_20px_rgba(211,174,54,0.35)] scale-[1.01]'
-                            : 'bg-white/70 dark:bg-[#232936]/80 hover:bg-white dark:hover:bg-[#232936] border-zinc-200/70 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA]'
+                            ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_6px_20px_rgba(211,174,54,0.35)] scale-[1.01]'
+                            : 'bg-black/[0.04] dark:bg-white/[0.05] hover:bg-black/[0.07] dark:hover:bg-white/[0.08] text-[#1E2025] dark:text-[#F8F9FA]'
                         }`}
                       >
-                        <div className={`p-2.5 rounded-xl border shrink-0 ${
+                        <div className={`p-2.5 rounded-xl shrink-0 ${
                           isActive
-                            ? 'bg-zinc-950/15 border-zinc-950/20 text-[#12151C]'
-                            : 'bg-zinc-100 dark:bg-[#12151C] border-zinc-200/60 dark:border-[#31394D] text-[#D3AE36]'
+                            ? 'bg-zinc-950/15 text-[#12151C]'
+                            : 'bg-black/[0.04] dark:bg-white/[0.05] text-[#D3AE36]'
                         }`}>
                           <Icon size={18} />
                         </div>

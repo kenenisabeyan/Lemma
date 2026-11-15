@@ -129,7 +129,7 @@ export const EngineeringGlossary = () => {
             placeholder="Search formulas or terms..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white dark:bg-[#232936] border border-[#31394D]/30 rounded-full focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36] text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 pl-9 pr-4 py-2.5 outline-none font-mono transition-all shadow-xs"
+            className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-full focus:ring-1 focus:ring-[#D3AE36] text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 pl-9 pr-4 py-2.5 outline-none font-mono transition-all"
           />
         </div>
       </div>
@@ -143,7 +143,7 @@ export const EngineeringGlossary = () => {
             className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeCategory === cat
                 ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
+                : 'bg-black/[0.04] dark:bg-white/[0.05] text-zinc-600 dark:text-[#F8F9FA]/70 hover:text-[#D3AE36]'
             }`}
           >
             {cat}
@@ -158,25 +158,25 @@ export const EngineeringGlossary = () => {
           return (
             <div
               key={idx}
-              className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between group"
+              className="rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 hover:bg-black/[0.05] dark:hover:bg-white/[0.06] transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex justify-between items-start gap-3 mb-3">
                   <div>
-                    <span className="px-2.5 py-0.5 rounded-md bg-zinc-100 dark:bg-[#12151C] text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider inline-block mb-1.5 font-bold border border-zinc-200/50 dark:border-[#31394D]">
+                    <span className="px-2.5 py-0.5 rounded-md bg-black/[0.05] dark:bg-white/[0.06] text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider inline-block mb-1.5 font-bold">
                       {item.category}
                     </span>
                     <h4 className="text-base sm:text-lg font-bold text-[#1E2025] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors dark:text-[#F8F9FA] leading-snug">
                       {item.term}
                     </h4>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-[#D3AE36]/10 text-[10px] font-mono text-[#D3AE36] shrink-0 font-bold border border-[#D3AE36]/30">
+                  <span className="px-2.5 py-1 rounded-full bg-[#D3AE36]/15 text-[10px] font-mono text-[#D3AE36] shrink-0 font-bold">
                     {item.code.split(' ')[0]}
                   </span>
                 </div>
 
                 {/* Formula Callout */}
-                <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 font-mono text-xs text-[#D3AE36] font-extrabold flex items-center justify-between mb-3 shadow-2xs">
+                <div className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.05] font-mono text-xs text-[#D3AE36] font-extrabold flex items-center justify-between mb-3">
                   <span>{item.formula}</span>
                   <span className="text-[9px] text-zinc-500 dark:text-[#F8F9FA]/60 uppercase">{item.code}</span>
                 </div>
@@ -187,12 +187,12 @@ export const EngineeringGlossary = () => {
 
                 {/* Expanded Detailed Breakdown */}
                 {isExpanded && (
-                  <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-[#31394D]/50 space-y-3 animate-in fade-in duration-200 text-xs">
-                    <div className="p-3.5 rounded-xl bg-zinc-50/80 dark:bg-[#12151C]/40 border border-zinc-200/50 dark:border-[#31394D]/30">
+                  <div className="mt-4 pt-4 border-t border-black/5 dark:border-white/5 space-y-3 animate-in fade-in duration-200 text-xs">
+                    <div className="p-3.5 rounded-xl bg-black/[0.03] dark:bg-white/[0.05]">
                       <strong className="text-[#D3AE36] block mb-1 font-bold">✦ Engineering Mechanics:</strong>
                       <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed">{item.explanation}</p>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-zinc-50/80 dark:bg-[#12151C]/40 border border-zinc-200/50 dark:border-[#31394D]/30">
+                    <div className="p-3.5 rounded-xl bg-black/[0.03] dark:bg-white/[0.05]">
                       <strong className="text-[#D3AE36] block mb-1 font-bold">✦ Practical Impact on Job Site:</strong>
                       <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed">{item.significance}</p>
                     </div>
@@ -200,7 +200,7 @@ export const EngineeringGlossary = () => {
                 )}
               </div>
 
-              <div className="mt-4 pt-3.5 border-t border-zinc-100 dark:border-[#31394D]/50 flex items-center justify-between">
+              <div className="mt-4 pt-3.5 border-t border-black/5 dark:border-white/5 flex items-center justify-between">
                 <button
                   type="button"
                   onClick={() => setSelectedTerm(isExpanded ? null : item.term)}

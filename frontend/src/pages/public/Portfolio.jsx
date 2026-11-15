@@ -231,7 +231,7 @@ export const Portfolio = () => {
                 {/* Secondary Pill Button */}
                 <a
                   href="#cad-inspector"
-                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer border border-transparent hover:border-[#31394D]/30"
+                  className="rounded-full text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Compass size={15} className="text-[#D3AE36]" />
                   <span>LAUNCH CAD INSPECTOR</span>
@@ -250,7 +250,7 @@ export const Portfolio = () => {
               <div className="relative w-full overflow-hidden group">
                 
                 {/* Header ribbon */}
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-3 border-b border-black/5 dark:border-white/5 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Landmark Spotlight</span>
@@ -272,7 +272,7 @@ export const Portfolio = () => {
                 </div>
 
                 {/* Spotlight Image & Badge */}
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#12151C] shadow-inner border border-zinc-200/80 dark:border-[#31394D]">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#12151C] shadow-inner">
                   <img
                     src={spotlightProject.imageUrl}
                     alt={spotlightProject.title}
@@ -280,7 +280,7 @@ export const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
                   
-                  <div className="absolute top-3 left-3 bg-white/90 dark:bg-[#12151C]/90 backdrop-blur-md px-3 py-1 rounded-full border border-white/30 text-[10px] font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase">
+                  <div className="absolute top-3 left-3 bg-white/90 dark:bg-[#12151C]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-mono font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase">
                     {spotlightProject.category}
                   </div>
 
@@ -318,7 +318,7 @@ export const Portfolio = () => {
                     </button>
                     <button
                       onClick={() => setSpotlightIndex((prev) => (prev + 1) % allProjects.length)}
-                      className="rounded-xl border border-zinc-200 dark:border-[#31394D] hover:border-[#D3AE36] bg-white/80 dark:bg-[#232936] p-2.5 text-zinc-600 dark:text-[#F8F9FA]/80 hover:text-zinc-900 dark:hover:text-[#D3AE36] transition-all cursor-pointer"
+                      className="rounded-xl bg-black/[0.04] dark:bg-white/[0.05] hover:bg-[#D3AE36]/20 p-2.5 text-zinc-600 dark:text-[#F8F9FA]/80 hover:text-zinc-900 dark:hover:text-[#D3AE36] transition-all cursor-pointer"
                       title="Next Landmark"
                     >
                       <Sparkles size={16} className="text-[#D3AE36]" />
@@ -342,7 +342,7 @@ export const Portfolio = () => {
       <section id="project-grid" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="py-4 mb-8 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D]">
+          <div className="py-4 mb-8 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-black/5 dark:border-white/5">
             
             {/* Category Tabs */}
             <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -383,7 +383,7 @@ export const Portfolio = () => {
                 placeholder="Search capstone, RC frame, highway, soil..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white dark:bg-[#232936] rounded-full border border-[#31394D]/30 dark:border-[#31394D] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:border-[#D3AE36] focus:outline-none transition-colors shadow-xs"
+                className="w-full bg-black/[0.04] dark:bg-white/[0.05] rounded-full focus:ring-1 focus:ring-[#D3AE36] pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-[#1E2025]/50 dark:placeholder:text-[#F8F9FA]/50 focus:outline-none transition-colors"
               />
               {searchQuery && (
                 <button
