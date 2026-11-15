@@ -102,7 +102,7 @@ export const FaqPage = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-white/95 dark:border-white/20 shadow-xs"
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
@@ -141,13 +141,13 @@ export const FaqPage = () => {
 
                   {/* Micro-Bullet Highlights */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">ASTU Cohort:</strong> Class of 2026 Candidates
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-[#232936]/80 border border-[#31394D]/25 dark:border-[#31394D]/50 shadow-xs">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
                       <span className="text-[#D3AE36] font-bold">✦</span>
                       <span className="text-[#1E2025]/85 dark:text-[#F8F9FA]/85 text-[11px] truncate">
                         <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-semibold">EBCS &amp; ERA:</strong> Full Code Verification
@@ -166,7 +166,7 @@ export const FaqPage = () => {
               >
                 <a
                   href="#faq-accordion"
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] border border-[#D3AE36] flex items-center gap-2 cursor-pointer"
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 cursor-pointer"
                 >
                   <span>Explore Questions</span>
                   <HelpCircle size={15} />
@@ -212,7 +212,7 @@ export const FaqPage = () => {
             >
               <div className="w-full">
                 
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-200/80 dark:border-white/10 text-xs font-mono">
+                <div className="flex items-center justify-between pb-3 mb-4 text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Top Consultation Inquiries</span>
@@ -230,7 +230,7 @@ export const FaqPage = () => {
                         const el = document.getElementById('faq-accordion');
                         if (el) el.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-[#31394D] bg-white/70 dark:bg-[#232936]/80 hover:border-[#D3AE36] transition-all text-left group shadow-xs cursor-pointer"
+                      className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all text-left group shadow-xs cursor-pointer"
                     >
                       <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-1 font-bold">
                         {f.category} Discipline
@@ -261,7 +261,7 @@ export const FaqPage = () => {
       <section id="faq-accordion" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors scroll-mt-24 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 border-b border-[#31394D]/25 dark:border-[#31394D] pb-6 mb-8">
+          <div className="py-4 flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 pb-6 mb-8">
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none items-center">
@@ -278,14 +278,14 @@ export const FaqPage = () => {
                   className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
                       ? 'bg-[#D3AE36] text-[#12151C] shadow-[0_4px_14px_rgba(211,174,54,0.3)] font-extrabold'
-                      : 'bg-zinc-100 dark:bg-[#232936] text-zinc-600 dark:text-[#F8F9FA]/70 border border-zinc-200/60 dark:border-[#31394D] hover:border-[#D3AE36]/50'
+                      : 'bg-black/[0.04] dark:bg-white/[0.06] text-zinc-600 dark:text-[#F8F9FA]/70 hover:text-[#D3AE36]'
                   }`}
                 >
                   <span>{cat}</span>
                   <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                     isSelected 
                       ? 'bg-[#12151C] text-[#D3AE36] font-black' 
-                      : 'bg-zinc-200 dark:bg-[#12151C] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
+                      : 'bg-black/[0.05] dark:bg-white/[0.08] text-zinc-600 dark:text-[#F8F9FA]/60 font-bold'
                   }`}>
                     {count}
                   </span>
@@ -302,7 +302,7 @@ export const FaqPage = () => {
               placeholder="Search questions, codes, fees..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white dark:bg-[#232936] border border-[#31394D]/30 rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:border-[#D3AE36] focus:ring-1 focus:ring-[#D3AE36] focus:outline-none transition-all shadow-xs"
+              className="w-full bg-black/[0.04] dark:bg-white/[0.06] rounded-full pl-10 pr-9 py-2.5 text-xs text-[#1E2025] dark:text-[#F8F9FA] placeholder:text-zinc-400 dark:placeholder:text-[#F8F9FA]/40 focus:outline-none transition-all"
             />
             {searchQuery && (
               <button
@@ -323,26 +323,26 @@ export const FaqPage = () => {
               return (
                 <div 
                   key={faq.id || index} 
-                  className={`rounded-3xl transition-all duration-300 border bg-white dark:bg-[#232936] border-[#31394D]/25 dark:border-[#31394D]/60 ${isOpen ? 'ring-2 ring-[#D3AE36]/60 shadow-lg' : 'hover:border-[#D3AE36]/40 shadow-xs'} p-6 sm:p-7 group`}
+                  className={`rounded-3xl transition-all duration-300 bg-black/[0.03] dark:bg-white/[0.04] p-6 sm:p-7 group`}
                 >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full text-left font-black text-base sm:text-lg text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] flex justify-between items-center gap-4 transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-3.5">
-                    <span className="p-2 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] border border-zinc-200/60 dark:border-[#31394D] shrink-0">
+                    <span className="p-2 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] shrink-0">
                       <HelpCircle size={18} />
                     </span>
                     <span className="leading-snug">{faq.question}</span>
                   </span>
-                  <div className={`p-2 rounded-xl transition-all duration-300 shrink-0 ${isOpen ? 'bg-[#D3AE36] text-[#12151C] rotate-180' : 'bg-zinc-100 dark:bg-[#12151C] text-zinc-500 dark:text-zinc-400'}`}>
+                  <div className={`p-2 rounded-xl transition-all duration-300 shrink-0 ${isOpen ? 'bg-[#D3AE36] text-[#12151C] rotate-180' : 'bg-black/[0.04] dark:bg-white/[0.06] text-zinc-500 dark:text-zinc-400'}`}>
                     <ChevronDown size={18} />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="mt-5 pt-5 border-t border-zinc-100 dark:border-[#31394D]/50 animate-in fade-in duration-300">
-                    <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-3">
+                  <div className="mt-5 pt-5 animate-in fade-in duration-300">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] mb-3">
                       <p className="text-sm sm:text-base text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed font-sans">
                         <strong className="text-[#D3AE36] font-semibold">✦ Technical Clarification: </strong>
                         {faq.answer}
@@ -352,7 +352,7 @@ export const FaqPage = () => {
                       <span className="flex items-center gap-1.5 text-[#D3AE36]">
                         <CheckCircle2 size={13} /> Code &amp; Academic Verified
                       </span>
-                      <span className="px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-[#12151C] uppercase tracking-wider">
+                      <span className="px-2.5 py-1 rounded-lg bg-black/[0.04] dark:bg-white/[0.06] uppercase tracking-wider">
                         Discipline: {faq.category}
                       </span>
                     </div>
@@ -377,7 +377,7 @@ export const FaqPage = () => {
           </div>
 
           {/* Bottom Consultation Banner */}
-          <div className="mt-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
+          <div className="mt-16 rounded-3xl bg-transparent sm:bg-black/[0.02] sm:dark:bg-white/[0.03] p-8 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-8">
             <div className="text-left max-w-2xl">
               <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
               <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
