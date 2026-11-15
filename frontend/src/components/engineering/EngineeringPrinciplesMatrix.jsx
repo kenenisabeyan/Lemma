@@ -354,7 +354,7 @@ export const EngineeringPrinciplesMatrix = () => {
                   ))}
                 </div>
               </div>
-              <div className="p-4 rounded-xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] text-center space-y-1">
+              <div className="p-4 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] text-center space-y-1">
                 <span className="text-[10px] font-mono uppercase text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-semibold block">Inelastic Demand / Capacity (D/C)</span>
                 <span className="text-2xl font-mono font-black text-[#D3AE36] block">{collapseScenarios[collapseColumn].ratio}</span>
                 <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center gap-1">
@@ -374,7 +374,7 @@ export const EngineeringPrinciplesMatrix = () => {
               <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
                 Practical Structural Application
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/10 text-[#D3AE36] border border-[#D3AE36]/30 font-semibold">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/15 text-[#D3AE36] font-semibold">
                 EBCS EN Field Methods
               </span>
             </div>
@@ -382,9 +382,9 @@ export const EngineeringPrinciplesMatrix = () => {
               {currentPrinciple.details.map((detail, idx) => (
                 <div 
                   key={idx} 
-                  className="p-3.5 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 flex items-start gap-3 text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 transition-all hover:border-[#D3AE36]/50 shadow-sm"
+                  className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] flex items-start gap-3 text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 transition-all"
                 >
-                  <div className="p-1 rounded-lg bg-[#D3AE36]/10 text-[#D3AE36] shrink-0 mt-0.5">
+                  <div className="p-1 rounded-lg bg-[#D3AE36]/15 text-[#D3AE36] shrink-0 mt-0.5">
                     <CheckCircle2 size={14} className="stroke-[2.5]" />
                   </div>
                   <p className="text-xs text-[#1E2025] dark:text-[#F8F9FA]/90 leading-relaxed font-medium">
@@ -401,7 +401,7 @@ export const EngineeringPrinciplesMatrix = () => {
               <span className="text-xs font-mono uppercase tracking-wider text-[#1E2025] font-bold block dark:text-[#F8F9FA]">
                 Benchmark Verification Metrics
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#12151C]/10 dark:bg-[#232936] text-[#1E2025]/70 dark:text-[#F8F9FA]/70 border border-[#31394D]/40 font-semibold">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.05] text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-semibold">
                 Lab Verified
               </span>
             </div>
@@ -409,12 +409,12 @@ export const EngineeringPrinciplesMatrix = () => {
               {currentPrinciple.metrics.map((metric, idx) => (
                 <div 
                   key={idx} 
-                  className="p-3 rounded-2xl bg-zinc-50/90 dark:bg-[#12151C]/70 border border-zinc-200/80 dark:border-[#31394D]/60 flex items-center justify-between gap-3 text-xs shadow-sm hover:border-[#D3AE36]/50 transition-all"
+                  className="p-3 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] flex items-center justify-between gap-3 text-xs transition-all"
                 >
                   <span className="text-xs font-semibold text-[#1E2025] dark:text-[#F8F9FA]/90">
                     {metric.label}
                   </span>
-                  <span className="text-xs font-mono font-extrabold text-[#D3AE36] px-2.5 py-1 rounded-lg bg-[#D3AE36]/10 border border-[#D3AE36]/30">
+                  <span className="text-xs font-mono font-extrabold text-[#D3AE36] px-2.5 py-1 rounded-lg bg-[#D3AE36]/15">
                     {metric.value}
                   </span>
                 </div>
