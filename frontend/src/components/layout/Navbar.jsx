@@ -57,14 +57,11 @@ export const Navbar = () => {
 
   const navLinks = [
     { num: '01', name: 'Home', path: '/' },
-    { num: '02', name: 'About', path: '/about' },
-    { num: '03', name: 'Services', path: '/services' },
-    { num: '04', name: 'Projects', path: '/projects' },
+    { num: '02', name: 'About & Brotherhood', path: '/about' },
+    { num: '03', name: 'Projects', path: '/projects' },
+    { num: '04', name: 'Services', path: '/services' },
     { num: '05', name: 'Experience', path: '/experience' },
-    { num: '06', name: 'Insights', path: '/insights' },
-    { num: '07', name: 'Testimonials', path: '/#testimonials' },
-    { num: '08', name: 'Resources', path: '/resources' },
-    { num: '09', name: 'Contact', path: '/contact' }
+    { num: '06', name: 'Contact', path: '/contact' }
   ];
 
   return (

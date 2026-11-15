@@ -379,14 +379,9 @@ export const ServicesPage = () => {
                         ))}
                       </div>
 
-                      <div className="pt-2 flex flex-wrap items-center gap-3">
-                        <button
-                          onClick={() => navigate('/contact')}
-                          className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3 text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_4px_15px_rgba(211,174,54,0.3)] inline-flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
-                        >
-                          <span>Request Service Consultation</span>
-                          <ArrowUpRight size={14} />
-                        </button>
+                      <div className="pt-2 flex items-center justify-between text-[11px] font-mono text-[#D3AE36]">
+                        <span className="font-bold">✦ EBCS &amp; ERA Manuals Compliant</span>
+                        <span className="text-[#1E2025]/60 dark:text-[#F8F9FA]/60">ASTU SoCEA Verified</span>
                       </div>
                     </div>
 
