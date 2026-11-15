@@ -86,197 +86,212 @@ Rather than excavating tenant finishes to replace hundreds of individual beam-to
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-inherit relative pt-32 pb-24 overflow-hidden selection:bg-[#D3AE36] selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-transparent text-inherit relative selection:bg-[#D3AE36] selection:text-white transition-colors duration-200">
       
-      {/* Background Sheen & Ambient Aurora Lights */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/8 dark:bg-[#D3AE36]/20 blur-[140px] animate-aurora-drift"></div>
-        <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/8 dark:bg-[#D3AE36]/15 blur-[120px] animate-aurora-drift-2"></div>
-      </div>
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Breadcrumbs */}
-        <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 uppercase tracking-wider mb-8">
-          <Link to="/" className="hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors">Home</Link>
-          <ChevronRight size={14} className="text-zinc-400" />
-          <Link to="/insights" className="hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors">Insights</Link>
-          <ChevronRight size={14} className="text-zinc-400" />
-          <span className="text-[#D3AE36] font-bold line-clamp-1">{article.title}</span>
+      {/* ========================================================================= */}
+      {/* 1. ARTICLE DETAIL & CITATION SECTION                                      */}
+      {/* ========================================================================= */}
+      <section className="relative pt-32 pb-20 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors overflow-hidden">
+        {/* Background Sheen & Ambient Aurora Lights */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/4 left-1/4 h-[55vh] w-[55vh] rounded-full bg-[#D3AE36]/8 dark:bg-[#D3AE36]/20 blur-[140px] pointer-events-none"></div>
+          <div className="absolute bottom-0 right-1/4 h-[45vh] w-[45vh] rounded-full bg-[#D3AE36]/8 dark:bg-[#D3AE36]/15 blur-[120px] pointer-events-none"></div>
         </div>
 
-        {/* Back and Action Bar */}
-        <div className="flex justify-between items-center pb-4 mb-8">
-          <Link to="/insights" className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors">
-            <ArrowLeft size={16} /> All Insights
-          </Link>
-
-          <button
-            onClick={handleCopy}
-            className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] flex items-center gap-2 transition-colors cursor-pointer"
-          >
-            <Share2 size={13} className="text-[#D3AE36]" /> {copied ? 'Link Copied!' : 'Share Article'}
-          </button>
-        </div>
-
-        {/* Article Header */}
-        <div className="mb-10">
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="text-[#D3AE36] text-xs font-mono font-bold uppercase tracking-wider">
-              {article.category}
-            </span>
-            <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
-              <Calendar size={12} className="text-[#D3AE36]" /> {article.publishedAt}
-            </span>
-            <span>·</span>
-            <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
-              <Clock size={12} className="text-[#D3AE36]" /> {article.readTime}
-            </span>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Breadcrumbs */}
+          <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 uppercase tracking-wider mb-8">
+            <Link to="/" className="hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors">Home</Link>
+            <ChevronRight size={14} className="text-zinc-400" />
+            <Link to="/insights" className="hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors">Insights</Link>
+            <ChevronRight size={14} className="text-zinc-400" />
+            <span className="text-[#D3AE36] font-bold line-clamp-1">{article.title}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-tight mb-6">
-            <span className="text-[#D3AE36]">{article.title.split(' ')[0]}</span> {article.title.split(' ').slice(1).join(' ')}
-          </h1>
+          {/* Back and Action Bar */}
+          <div className="flex justify-between items-center pb-4 mb-8 border-b border-zinc-200/60 dark:border-[#31394D]/60">
+            <Link to="/insights" className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors">
+              <ArrowLeft size={16} /> All Insights
+            </Link>
 
-          {/* Author Bento Badge */}
-          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/80 dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-xs">
-            <div className="w-11 h-11 rounded-full text-[#D3AE36] bg-[#D3AE36]/10 border-2 border-[#D3AE36] flex items-center justify-center font-bold text-sm shrink-0">
-              LA
+            <button
+              onClick={handleCopy}
+              className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-[#D3AE36] flex items-center gap-2 transition-colors cursor-pointer"
+            >
+              <Share2 size={13} className="text-[#D3AE36]" /> {copied ? 'Link Copied!' : 'Share Article'}
+            </button>
+          </div>
+
+          {/* Article Header */}
+          <div className="mb-10">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="text-[#D3AE36] text-xs font-mono font-bold uppercase tracking-wider">
+                {article.category}
+              </span>
+              <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
+                <Calendar size={12} className="text-[#D3AE36]" /> {article.publishedAt}
+              </span>
+              <span>·</span>
+              <span className="text-xs font-mono text-zinc-500 flex items-center gap-1.5">
+                <Clock size={12} className="text-[#D3AE36]" /> {article.readTime}
+              </span>
             </div>
-            <div>
-              <h4 className="text-sm sm:text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5">
-                Lemma Amensisa &amp; Brothers
-                <span className="text-[10px] text-[#D3AE36] font-mono font-bold">· ASTU SoCEA 5th Year</span>
+
+            <h1 className="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-tight mb-6">
+              <span className="text-[#D3AE36]">{article.title.split(' ')[0]}</span> {article.title.split(' ').slice(1).join(' ')}
+            </h1>
+
+            {/* Author Bento Badge */}
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/80 dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-xs">
+              <div className="w-11 h-11 rounded-full text-[#D3AE36] bg-[#D3AE36]/10 border-2 border-[#D3AE36] flex items-center justify-center font-bold text-sm shrink-0">
+                LA
+              </div>
+              <div>
+                <h4 className="text-sm sm:text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] flex items-center gap-1.5">
+                  Lemma Amensisa &amp; Brothers
+                  <span className="text-[10px] text-[#D3AE36] font-mono font-bold">· ASTU SoCEA 5th Year</span>
+                </h4>
+                <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60">5th Year Civil Engineering Candidates · Class of 2026 · ASTU</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Image */}
+          {article.imageUrl && (
+            <div className="aspect-[16/9] rounded-3xl overflow-hidden mb-12 relative border border-[#31394D]/20 shadow-md">
+              <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            </div>
+          )}
+
+          {/* Article Body Content */}
+          <div className="prose max-w-none text-base text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed space-y-6 mb-16">
+            {article.content.split('\n\n').map((paragraph, index) => {
+              if (paragraph.startsWith('### ')) {
+                return (
+                  <h3 key={index} className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] text-left pt-6 pb-2 border-l-4 border-[#D3AE36] pl-4">
+                    {paragraph.replace('### ', '')}
+                  </h3>
+                );
+              }
+              if (paragraph.startsWith('- ')) {
+                const bullets = paragraph.split('\n- ');
+                return (
+                  <ul key={index} className="space-y-2 pl-4 list-disc text-sm sm:text-base text-[#1E2025]/90 dark:text-[#F8F9FA]/90">
+                    {bullets.map((b, i) => (
+                      <li key={i}>{b.replace(/^- /, '')}</li>
+                    ))}
+                  </ul>
+                );
+              }
+              return (
+                <p key={index} className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed text-sm sm:text-base">
+                  {paragraph}
+                </p>
+              );
+            })}
+          </div>
+
+          {/* Academic & ASTU Formal Citation Box */}
+          <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-6 sm:p-8 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/50">
+              <div className="flex items-center gap-2 text-xs font-mono text-[#D3AE36]">
+                <ShieldCheck size={16} />
+                <span className="font-bold uppercase tracking-wider">Formal Capstone &amp; Academic Reference</span>
+              </div>
+              <span className="text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">ASTU SoCEA Reference Format</span>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 font-mono text-xs text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed mb-5">
+              Amensisa, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(`Amensisa, L. & Brothers (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Capstone Archive, Adama, Ethiopia.`);
+                  setCopiedCitation(true);
+                  setTimeout(() => setCopiedCitation(false), 2500);
+                }}
+                className="px-4 py-2 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/40 text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:bg-[#D3AE36] hover:text-[#12151C] transition-all flex items-center gap-1.5 cursor-pointer"
+              >
+                <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASTU Citation'}
+              </button>
+              <button
+                onClick={() => {
+                  const text = `=====================================================\nASTU CIVIL ENGINEERING TECHNICAL NOTE\nTitle: ${article.title}\nAuthors: Lemma Amensisa & 5th Year Civil Engineering Brothers\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
+                  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = `${article.slug || 'engineering-note'}.txt`;
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  URL.revokeObjectURL(url);
+                }}
+                className="px-4 py-2 rounded-full bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA] hover:border-[#D3AE36] transition-all flex items-center gap-1.5 cursor-pointer"
+              >
+                <Download size={13} className="text-[#D3AE36]" /> Export Memo (TXT)
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. RELATED ARTICLES & CONSULTATION SECTION                                */}
+      {/* ========================================================================= */}
+      <section className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Article Footer & Consultation Link */}
+          <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-6 sm:p-8 shadow-sm mb-12 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="text-left max-w-xl">
+              <h4 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-1">
+                Have questions about this <span className="text-[#D3AE36]">engineering methodology?</span>
               </h4>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60">5th Year Civil Engineering Candidates · Class of 2026 · ASTU</p>
+              <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">Directly discuss EBCS compliance, structural modeling, or capstone collaboration with our ASTU student team.</p>
             </div>
-          </div>
-        </div>
-
-        {/* Featured Image */}
-        {article.imageUrl && (
-          <div className="aspect-[16/9] rounded-3xl overflow-hidden mb-12 relative border border-[#31394D]/20 shadow-md">
-            <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-          </div>
-        )}
-
-        {/* Article Body Content */}
-        <div className="prose max-w-none text-base text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed space-y-6 mb-16">
-          {article.content.split('\n\n').map((paragraph, index) => {
-            if (paragraph.startsWith('### ')) {
-              return (
-                <h3 key={index} className="text-xl sm:text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] text-left pt-6 pb-2 border-l-4 border-[#D3AE36] pl-4">
-                  {paragraph.replace('### ', '')}
-                </h3>
-              );
-            }
-            if (paragraph.startsWith('- ')) {
-              const bullets = paragraph.split('\n- ');
-              return (
-                <ul key={index} className="space-y-2 pl-4 list-disc text-sm sm:text-base text-[#1E2025]/90 dark:text-[#F8F9FA]/90">
-                  {bullets.map((b, i) => (
-                    <li key={i}>{b.replace(/^- /, '')}</li>
-                  ))}
-                </ul>
-              );
-            }
-            return (
-              <p key={index} className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed text-sm sm:text-base">
-                {paragraph}
-              </p>
-            );
-          })}
-        </div>
-
-        {/* Academic & ASTU Formal Citation Box */}
-        <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-6 sm:p-8 shadow-sm my-12">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/50">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#D3AE36]">
-              <ShieldCheck size={16} />
-              <span className="font-bold uppercase tracking-wider">Formal Capstone &amp; Academic Reference</span>
-            </div>
-            <span className="text-[10px] font-mono text-zinc-500 dark:text-[#F8F9FA]/60">ASTU SoCEA Reference Format</span>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 font-mono text-xs text-[#1E2025]/90 dark:text-[#F8F9FA]/90 leading-relaxed mb-5">
-            Amensisa, L. &amp; Brothers (2026). "{article.title}". <em>School of Civil Engineering &amp; Architecture (SoCEA)</em>, Adama Science and Technology University (ASTU), Capstone Research Archive, Adama, Ethiopia.
-          </div>
-
-          <div className="flex flex-wrap gap-4">
             <button
-              onClick={() => {
-                navigator.clipboard.writeText(`Amensisa, L. & Brothers (2026). "${article.title}". School of Civil Engineering & Architecture (SoCEA), Adama Science and Technology University (ASTU), Capstone Archive, Adama, Ethiopia.`);
-                setCopiedCitation(true);
-                setTimeout(() => setCopiedCitation(false), 2500);
-              }}
-              className="px-4 py-2 rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/40 text-xs font-mono font-bold uppercase tracking-wider text-[#D3AE36] hover:bg-[#D3AE36] hover:text-[#12151C] transition-all flex items-center gap-1.5 cursor-pointer"
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_8px_20px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
             >
-              <Copy size={13} /> {copiedCitation ? 'Citation Copied!' : 'Copy ASTU Citation'}
-            </button>
-            <button
-              onClick={() => {
-                const text = `=====================================================\nASTU CIVIL ENGINEERING TECHNICAL NOTE\nTitle: ${article.title}\nAuthors: Lemma Amensisa & 5th Year Civil Engineering Brothers\nInstitution: Adama Science and Technology University (ASTU) - SoCEA\nDate: ${article.publishedAt}\nCategory: ${article.category}\n\nCONTENT:\n${article.content}\n=====================================================`;
-                const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `${article.slug || 'engineering-note'}.txt`;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-              }}
-              className="px-4 py-2 rounded-full bg-zinc-100 dark:bg-[#12151C] border border-zinc-200 dark:border-[#31394D] text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA] hover:border-[#D3AE36] transition-all flex items-center gap-1.5 cursor-pointer"
-            >
-              <Download size={13} className="text-[#D3AE36]" /> Export Memo (TXT)
+              Connect With Brothers <ArrowUpRight size={14} />
             </button>
           </div>
-        </div>
 
-        {/* Article Footer & Consultation Link */}
-        <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-6 sm:p-8 shadow-sm my-12 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <div className="text-left max-w-xl">
-            <h4 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-1">
-              Have questions about this <span className="text-[#D3AE36]">engineering methodology?</span>
-            </h4>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">Directly discuss EBCS compliance, structural modeling, or capstone collaboration with our ASTU student team.</p>
-          </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-7 py-3.5 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_8px_20px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 cursor-pointer border border-[#D3AE36]"
-          >
-            Connect With Brothers <ArrowUpRight size={14} />
-          </button>
-        </div>
-
-        {/* Related Articles */}
-        {related.length > 0 && (
-          <div className="pt-8 mb-16">
-            <h3 className="text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-6">
-              More <span className="text-[#D3AE36]">Engineering Insights</span>
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {related.map(rel => (
-                <Link
-                  key={rel.id}
-                  to={`/insights/${rel.slug}`}
-                  className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all group flex flex-col justify-between"
-                >
-                  <div>
-                    <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
-                    <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2 leading-snug">{rel.title}</h4>
-                  </div>
-                  <span className="text-xs font-mono font-bold uppercase text-[#D3AE36] flex items-center gap-1.5 mt-4">
-                    Read Article <ArrowUpRight size={13} />
-                  </span>
-                </Link>
-              ))}
+          {/* Related Articles */}
+          {related.length > 0 && (
+            <div>
+              <h3 className="text-2xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-6">
+                More <span className="text-[#D3AE36]">Engineering Insights</span>
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {related.map(rel => (
+                  <Link
+                    key={rel.id}
+                    to={`/insights/${rel.slug}`}
+                    className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all group flex flex-col justify-between"
+                  >
+                    <div>
+                      <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider block mb-2 font-bold">{rel.category}</span>
+                      <h4 className="text-base font-bold text-[#1E2025] dark:text-[#F8F9FA] group-hover:text-[#D3AE36] dark:group-hover:text-[#D3AE36] transition-colors mb-2 leading-snug">{rel.title}</h4>
+                    </div>
+                    <span className="text-xs font-mono font-bold uppercase text-[#D3AE36] flex items-center gap-1.5 mt-4">
+                      Read Article <ArrowUpRight size={13} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-      </div>
+        </div>
+      </section>
+
     </div>
   );
 };

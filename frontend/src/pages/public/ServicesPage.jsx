@@ -391,8 +391,17 @@ export const ServicesPage = () => {
             })}
           </div>
 
-          {/* Bottom Consultation Banner Architectural DIV Card */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8 mt-12">
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. CONSULTATION & CAPSTONE COLLABORATION SECTION                          */}
+      {/* ========================================================================= */}
+      <section className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Consultation Banner Architectural DIV Card */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row justify-between items-center gap-8">
             <div className="text-left max-w-2xl space-y-2">
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#D3AE36] font-bold">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>

@@ -340,94 +340,94 @@ export const TestimonialsPage = () => {
             )}
           </div>
 
+          {/* Testimonials Cards Grid */}
+          <div>
+            {filteredTestimonials.length === 0 ? (
+              <div className="py-24 text-center rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 p-8">
+                <MessageSquareQuote className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
+                <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No endorsements match the selected criteria.</p>
+                <p className="text-zinc-500 dark:text-[#F8F9FA]/60 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
+                <button
+                  onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
+                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-6 py-2.5 text-xs font-mono uppercase font-bold cursor-pointer"
+                >
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredTestimonials.map((t) => (
+                  <div 
+                    key={t.id} 
+                    className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex justify-between items-center mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/40">
+                        <div className="flex gap-1 text-[#D3AE36]">
+                          {[...Array(t.rating || 5)].map((_, i) => (
+                            <Star key={i} size={15} fill="#D3AE36" className="text-[#D3AE36]" />
+                          ))}
+                        </div>
+                        <div className="p-2 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-110 transition-transform">
+                          <Quote size={16} />
+                        </div>
+                      </div>
+
+                      <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-6">
+                        <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm leading-relaxed italic font-light">
+                          "{t.content}"
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-3.5 border-t border-zinc-100 dark:border-[#31394D]/50 pt-4">
+                      {t.avatarUrl ? (
+                        <img src={t.avatarUrl} alt={t.clientName} className="w-12 h-12 rounded-full object-cover border-2 border-[#D3AE36] shadow-2xs" />
+                      ) : (
+                        <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-[#12151C] border-2 border-[#D3AE36] flex items-center justify-center text-[#D3AE36] font-bold text-xs">
+                          {t.clientName ? t.clientName.substring(0, 2).toUpperCase() : 'CL'}
+                        </div>
+                      )}
+                      <div className="overflow-hidden">
+                        <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] truncate">{t.clientName}</h4>
+                        <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60 truncate">{t.clientRole}</p>
+                        <span className="inline-block rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
+                          {t.clientCompany}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
         </div>
-      </div>
+      </section>
 
       {/* ========================================================================= */}
-      {/* 3. TESTIMONIALS CARDS GRID                                                */}
+      {/* 3. COLLABORATION & RECRUITMENT BANNER SECTION                             */}
       {/* ========================================================================= */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {filteredTestimonials.length === 0 ? (
-          <div className="py-24 text-center mb-16 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 p-8">
-            <MessageSquareQuote className="mx-auto w-12 h-12 text-[#D3AE36] mb-3 opacity-75" />
-            <p className="text-[#1E2025] dark:text-[#F8F9FA] text-base font-bold mb-1">No endorsements match the selected criteria.</p>
-            <p className="text-zinc-500 dark:text-[#F8F9FA]/60 text-xs font-mono uppercase tracking-wider mb-4">Try clearing your filters or search keywords.</p>
+      <section className="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#12151C] transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
+            <div className="text-left max-w-2xl">
+              <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
+              <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
+                Collaborate with Our <span className="text-[#D3AE36]">ASTU Civil Engineering Cohort</span>
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
+                Whether you represent an engineering consultancy seeking top graduating talent or a project team needing capstone modeling, Lemma and the brothers are ready to contribute.
+              </p>
+            </div>
             <button
-              onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-6 py-2.5 text-xs font-mono uppercase font-bold cursor-pointer"
+              onClick={() => navigate('/contact')}
+              className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
             >
-              Reset Filters
+              <span>Connect With Brothers</span>
+              <ArrowUpRight size={15} className="text-[#12151C]" />
             </button>
           </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {filteredTestimonials.map((t) => (
-              <div 
-                key={t.id} 
-                className="group rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#D3AE36]/60 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex justify-between items-center mb-4 pb-3 border-b border-zinc-100 dark:border-[#31394D]/40">
-                    <div className="flex gap-1 text-[#D3AE36]">
-                      {[...Array(t.rating || 5)].map((_, i) => (
-                        <Star key={i} size={15} fill="#D3AE36" className="text-[#D3AE36]" />
-                      ))}
-                    </div>
-                    <div className="p-2 rounded-xl bg-zinc-100 dark:bg-[#12151C] text-[#D3AE36] group-hover:scale-110 transition-transform">
-                      <Quote size={16} />
-                    </div>
-                  </div>
-
-                  <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50/80 dark:bg-[#12151C]/60 border border-zinc-200/60 dark:border-[#31394D]/40 mb-6">
-                    <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-sm leading-relaxed italic font-light">
-                      "{t.content}"
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3.5 border-t border-zinc-100 dark:border-[#31394D]/50 pt-4">
-                  {t.avatarUrl ? (
-                    <img src={t.avatarUrl} alt={t.clientName} className="w-12 h-12 rounded-full object-cover border-2 border-[#D3AE36] shadow-2xs" />
-                  ) : (
-                    <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-[#12151C] border-2 border-[#D3AE36] flex items-center justify-center text-[#D3AE36] font-bold text-xs">
-                      {t.clientName ? t.clientName.substring(0, 2).toUpperCase() : 'CL'}
-                    </div>
-                  )}
-                  <div className="overflow-hidden">
-                    <h4 className="text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] truncate">{t.clientName}</h4>
-                    <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/60 truncate">{t.clientRole}</p>
-                    <span className="inline-block rounded-full bg-[#D3AE36]/10 border border-[#D3AE36]/30 px-2 py-0.5 text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider mt-1 font-bold truncate max-w-full">
-                      {t.clientCompany}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* ======================================================================= */}
-        {/* 4. BOTTOM CONSULTATION BANNER                                           */}
-        {/* ======================================================================= */}
-        <div className="mt-12 rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/30 p-8 sm:p-10 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-8">
-          <div className="text-left max-w-2xl">
-            <span className="text-[10px] font-mono uppercase text-[#D3AE36] tracking-wider block mb-1 font-bold">Academic Collaboration &amp; Careers</span>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1E2025] dark:text-[#F8F9FA] mb-2">
-              Collaborate with Our <span className="text-[#D3AE36]">ASTU Civil Engineering Cohort</span>
-            </h3>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-[#F8F9FA]/70 leading-relaxed">
-              Whether you represent an engineering consultancy seeking top graduating talent or a project team needing capstone modeling, Lemma and the brothers are ready to contribute.
-            </p>
-          </div>
-          <button
-            onClick={() => navigate('/contact')}
-            className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] text-[#12151C] px-8 py-4 text-xs font-mono font-extrabold uppercase tracking-wider transition-all shadow-[0_10px_25px_rgba(211,174,54,0.3)] shrink-0 flex items-center gap-2 hover:scale-[1.02] cursor-pointer"
-          >
-            <span>Connect With Brothers</span>
-            <ArrowUpRight size={15} className="text-[#12151C]" />
-          </button>
-        </div>
-
         </div>
       </section>
     </div>

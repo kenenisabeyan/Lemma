@@ -332,145 +332,135 @@ export const Contact = () => {
       {/* 2. DIRECT CHANNELS & CONSULTATION INQUIRY (FULL-WIDTH SECTION)             */}
       {/* ========================================================================= */}
       <section id="contact-channels-and-form" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors relative z-20 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Card 1: Academic Base */}
-          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
-              <MapPin size={22} />
-            </div>
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Academic Base
-              </span>
-              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
-                ASTU SoCEA Main Campus
-              </h4>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
-                Adama, Oromia, Ethiopia
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2: Phone Numbers */}
-          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
-              <Phone size={22} />
-            </div>
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Phone Numbers
-              </span>
-              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
-                +251 934 830 919
-              </h4>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
-                0934 830 919 (Direct &amp; Telegram)
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3: Email Address */}
-          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
-              <Mail size={22} />
-            </div>
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Email Address
-              </span>
-              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug truncate max-w-full">
-                lemmayezedlij21@gmail.com
-              </h4>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1 truncate max-w-full">
-                Lemma Amensisa Civil Engineering
-              </p>
-            </div>
-          </div>
-
-          {/* Card 4: Availability */}
-          <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-6 text-center border border-zinc-200/80 dark:border-[#31394D] transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-[#D3AE36]/60 flex flex-col items-center justify-between">
-            <div className="w-12 h-12 rounded-xl bg-[#D3AE36]/15 dark:bg-[#12151C] text-[#D3AE36] flex items-center justify-center mb-4 border border-[#D3AE36]/30">
-              <Clock size={22} />
-            </div>
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#D3AE36] font-bold block mb-1">
-                Availability
-              </span>
-              <h4 className="text-sm font-extrabold text-[#1E2025] dark:text-[#F8F9FA] leading-snug">
-                Mon – Sat: 8:30 AM – 6:00 PM
-              </h4>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1">
-                Study &amp; Project Consultations
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Split Grid: Left (Socials & Map) and Right (Inquiry Form) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* ----------------------------------------------------------------------- */}
-          {/* LEFT COLUMN: SOCIAL PLATFORMS & GOOGLE MAPS CARD                        */}
-          {/* ----------------------------------------------------------------------- */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          {/* Split Grid: Left (Direct Contact Hub & Map) and Right (Inquiry Form) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            {/* Social Media Card */}
-            <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl p-7 border border-zinc-200/80 dark:border-[#31394D]">
-              <h3 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight">
-                Follow Us
-              </h3>
-              <p className="text-xs text-zinc-500 dark:text-[#F8F9FA]/70 mt-1 mb-6">
-                Stay updated with our latest civil engineering programs and news.
-              </p>
+            {/* ----------------------------------------------------------------------- */}
+            {/* LEFT COLUMN: DIRECT CONTACT DOSSIER & CAMPUS MAP                       */}
+            {/* ----------------------------------------------------------------------- */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              
+              {/* Personal Engineering Contact Card */}
+              <div className="bg-white dark:bg-[#232936] rounded-3xl shadow-sm border border-[#31394D]/25 dark:border-[#31394D]/60 p-7 space-y-6">
+                <div className="flex items-center justify-between border-b border-zinc-100 dark:border-[#31394D]/50 pb-4">
+                  <div>
+                    <span className="text-[10px] font-mono text-[#D3AE36] uppercase tracking-wider font-bold block mb-0.5">
+                      Direct Communication Hub
+                    </span>
+                    <h3 className="text-xl font-black text-[#1E2025] dark:text-[#F8F9FA] tracking-tight">
+                      Lemma Amensisa
+                    </h3>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Available 2026
+                  </span>
+                </div>
 
-              {/* 4 Social Buttons Grid */}
-              <div className="grid grid-cols-4 gap-2.5">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
-                >
-                  <Facebook size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-blue-600" />
-                  <span className="text-[10px] font-bold">Facebook</span>
-                </a>
+                <div className="space-y-3.5">
+                  {/* Phone & Telegram */}
+                  <a
+                    href="tel:+251934830919"
+                    className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50 hover:border-[#D3AE36] transition-all group cursor-pointer"
+                  >
+                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] group-hover:scale-105 transition-transform shrink-0">
+                      <Phone size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-0.5">
+                        <span className="text-[10px] font-mono uppercase font-bold text-zinc-500 dark:text-[#F8F9FA]/60">Direct Phone &amp; Telegram</span>
+                        <span className="text-[9px] font-mono font-bold text-[#D3AE36]">Direct Voice</span>
+                      </div>
+                      <p className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono">
+                        +251 934 830 919 · 0934 830 919
+                      </p>
+                    </div>
+                  </a>
 
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
-                >
-                  <Instagram size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-pink-600" />
-                  <span className="text-[10px] font-bold">Instagram</span>
-                </a>
+                  {/* Email */}
+                  <a
+                    href="mailto:lemmayezedlij21@gmail.com"
+                    className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50 hover:border-[#D3AE36] transition-all group cursor-pointer"
+                  >
+                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] group-hover:scale-105 transition-transform shrink-0">
+                      <Mail size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-0.5">
+                        <span className="text-[10px] font-mono uppercase font-bold text-zinc-500 dark:text-[#F8F9FA]/60">Email Inquiries</span>
+                        <span className="text-[9px] font-mono font-bold text-[#D3AE36]">24h Response</span>
+                      </div>
+                      <p className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono truncate">
+                        lemmayezedlij21@gmail.com
+                      </p>
+                    </div>
+                  </a>
 
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
-                >
-                  <Linkedin size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-[#D3AE36]" />
-                  <span className="text-[10px] font-bold">LinkedIn</span>
-                </a>
+                  {/* Academic Base */}
+                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50">
+                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] shrink-0">
+                      <MapPin size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[10px] font-mono uppercase font-bold text-zinc-500 dark:text-[#F8F9FA]/60 block mb-0.5">
+                        Academic Department
+                      </span>
+                      <p className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA]">
+                        ASTU SoCEA Main Campus
+                      </p>
+                      <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 mt-0.5">
+                        School of Civil Engineering &amp; Architecture · Adama, Ethiopia
+                      </p>
+                    </div>
+                  </div>
 
-                <a
-                  href="https://youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-50 dark:bg-[#12151C] hover:bg-[#D3AE36]/10 dark:hover:bg-[#D3AE36]/20 text-[#1E2025] dark:text-[#F8F9FA] hover:text-[#D3AE36] transition-all border border-zinc-200/80 dark:border-[#31394D] hover:border-[#D3AE36]/50 text-center group"
-                >
-                  <Youtube size={18} className="group-hover:scale-110 transition-transform mb-1.5 text-red-600" />
-                  <span className="text-[10px] font-bold">YouTube</span>
-                </a>
+                  {/* Consultation Hours */}
+                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-zinc-50 dark:bg-[#12151C]/60 border border-zinc-200/70 dark:border-[#31394D]/50">
+                    <div className="p-2.5 rounded-xl bg-white dark:bg-[#232936] text-[#D3AE36] border border-zinc-200/80 dark:border-[#31394D] shrink-0">
+                      <Clock size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[10px] font-mono uppercase font-bold text-zinc-500 dark:text-[#F8F9FA]/60 block mb-0.5">
+                        Consultation Hours
+                      </span>
+                      <p className="text-xs sm:text-sm font-bold text-[#1E2025] dark:text-[#F8F9FA] font-mono">
+                        Mon – Sat: 8:30 AM – 6:00 PM (EAT)
+                      </p>
+                      <p className="text-[11px] text-zinc-500 dark:text-[#F8F9FA]/70 mt-0.5">
+                        B.Sc. Thesis Defense &amp; Project Collaborations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Professional Links */}
+                <div className="pt-2 border-t border-zinc-100 dark:border-[#31394D]/50 flex items-center justify-between text-xs font-mono">
+                  <span className="text-zinc-500 dark:text-[#F8F9FA]/60 font-medium">Connect Online:</span>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-zinc-700 dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors font-bold"
+                    >
+                      <Linkedin size={14} className="text-[#D3AE36]" /> LinkedIn
+                    </a>
+                    <span className="text-zinc-300 dark:text-zinc-700">·</span>
+                    <a
+                      href="https://t.me/lemmaamensisa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-zinc-700 dark:text-[#F8F9FA] hover:text-[#D3AE36] dark:hover:text-[#D3AE36] transition-colors font-bold"
+                    >
+                      <Send size={14} className="text-[#D3AE36]" /> Telegram
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Google Map Embed Card */}
+              {/* Google Map Embed Card */}
             <div className="bg-white dark:bg-[#232936] rounded-2xl shadow-xl overflow-hidden border border-zinc-200/80 dark:border-[#31394D] relative">
               
               {/* "Open in Maps" Link Overlay in Top-Left */}
