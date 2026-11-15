@@ -72,16 +72,25 @@ const ScrollToTop = () => {
     }
 
     if (hash) {
-      const scrollTarget = () => {
-        const id = hash.replace('#', '');
-        const el = document.getElementById(id);
+      const targetId = hash.replace('#', '');
+      let attempts = 0;
+      let scrolled = false;
+
+      const tryScroll = () => {
+        if (scrolled) return;
+        attempts++;
+        const el = document.getElementById(targetId);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          scrolled = true;
+          const navbarHeight = 80;
+          const y = el.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+        } else if (attempts < 15) {
+          setTimeout(tryScroll, 40);
         }
       };
-      setTimeout(scrollTarget, 40);
-      setTimeout(scrollTarget, 180);
-      setTimeout(scrollTarget, 450);
+
+      setTimeout(tryScroll, 50);
     } else {
       window.scrollTo(0, 0);
     }

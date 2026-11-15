@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Phone, 
@@ -37,22 +38,24 @@ export const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const location = useLocation();
   const [showEstimator, setShowEstimator] = useState(false);
 
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash === '#contact-form' || hash === '#contact-channels-and-form' || hash === '#inquiry-form' || hash === '#contact') {
-      const scrollDown = () => {
+    const targetHash = location.hash || window.location.hash;
+    if (targetHash === '#contact-form' || targetHash === '#contact-channels-and-form' || targetHash === '#inquiry-form' || targetHash === '#contact') {
+      const scrollToForm = () => {
         const el = document.getElementById('contact-form') || formRef.current;
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const navbarHeight = 80;
+          const y = el.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
         }
       };
-      setTimeout(scrollDown, 80);
-      setTimeout(scrollDown, 300);
-      setTimeout(scrollDown, 600);
+      const timer = setTimeout(scrollToForm, 70);
+      return () => clearTimeout(timer);
     }
-  }, []);
+  }, [location.hash]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -98,251 +101,64 @@ export const Contact = () => {
     <div className="min-h-screen bg-[#F8F9FA] dark:bg-[#12151C] text-[#1E2025] dark:text-[#F8F9FA] transition-colors duration-200">
       
       {/* ========================================================================= */}
-      {/* 1. CINEMATIC CONTACT HERO SECTION (MATCHING RESOURCESPAGE TOOLKIT DESIGN)  */}
+      {/* 1. CINEMATIC CONTACT HERO INTRO BANNER                                    */}
       {/* ========================================================================= */}
-      <section id="contact-hero" className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
-        
+      <section id="contact-hero" className="relative pt-28 sm:pt-32 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#F8F9FA] dark:bg-[#12151C] backdrop-blur-3xl bg-cad-grid transition-colors">
         {/* Photographic Civil Engineering Site Background (lemma-four.jpg) */}
-        <div className="absolute inset-0 overflow-hidden select-none z-10 pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden select-none z-0 pointer-events-none">
           <motion.div
             initial={{ scale: 1.0 }}
-            animate={{ scale: 1.06 }}
+            animate={{ scale: 1.05 }}
             transition={{ duration: 12, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            className="absolute inset-0 bg-cover bg-center will-change-transform opacity-80 dark:opacity-70"
+            className="absolute inset-0 bg-cover bg-center will-change-transform opacity-30 dark:opacity-20"
             style={{ backgroundImage: `url(${lemmaFour})` }}
           />
-
-          {/* Luminous Light Wash & Contrast Gradients for Perfect Readability */}
-          <div className="absolute inset-0 bg-[#F8F9FA]/40 dark:bg-[#12151C]/75 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-white/60 dark:from-[#12151C]/85 dark:via-transparent dark:to-[#12151C]/85 pointer-events-none" />
-          <div className="absolute inset-0 bg-cad-grid opacity-25 dark:opacity-15 pointer-events-none" />
-
-          {/* Precision Blueprint Vignette Edge Fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/90 dark:from-[#12151C] dark:via-[#12151C]/90 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9FA]/85 via-[#F8F9FA]/95 to-[#F8F9FA] dark:from-[#12151C]/90 dark:via-[#12151C]/95 dark:to-[#12151C] pointer-events-none" />
+          <div className="absolute inset-0 bg-cad-grid opacity-20 dark:opacity-10 pointer-events-none" />
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6">
             
-            {/* Left Column: Scope, Headline, Bio, Badges, Buttons, KPI Stats */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left gap-5">
-              
-              {/* Badge (Matching ResourcesPage) */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-xl shadow-xs"
-              >
+            {/* Title & Badges */}
+            <div className="space-y-3 max-w-2xl text-left">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] backdrop-blur-xl">
                 <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse" />
                 <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
                   ASTU Civil Engineering · Direct Consultation &amp; Inquiries
                 </span>
-              </motion.div>
+              </div>
 
-              {/* Headline (Matching ResourcesPage Grand Typography) */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="space-y-1.5"
-              >
-                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-[2.2rem] xl:text-[2.45rem] tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
-                  Contact Lemma.{' '}
-                  <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
-                    ASTU
-                  </span>
-                  <br />
-                  <span className="text-[#D3AE36] opacity-95 inline-block">
-                    Amensisa &amp; Brothers.
-                  </span>
-                </h1>
-              </motion.div>
+              <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-zinc-900 dark:text-zinc-100">
+                Contact Lemma.{' '}
+                <span className="text-[#D3AE36] drop-shadow-[0_4px_20px_rgba(211,174,54,0.3)]">
+                  ASTU
+                </span>{' '}
+                <span className="text-[#D3AE36] opacity-95">
+                  Civil Engineering
+                </span>
+              </h1>
 
-              {/* Narrative Content with Architectural DIV Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full space-y-4"
-              >
-                <div className="p-4 sm:p-5 rounded-3xl bg-black/[0.03] dark:bg-white/[0.04] space-y-3.5 max-w-xl">
-                  <div className="flex items-center justify-between pb-2.5">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025]/70 dark:text-[#F8F9FA]/70 font-bold flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36]"></span>
-                      ASTU SoCEA Direct Channel
-                    </span>
-                    <span className="text-[10px] font-mono text-[#D3AE36] font-bold bg-[#D3AE36]/10 px-2.5 py-0.5 rounded-full">
-                      24h Response
-                    </span>
-                  </div>
-
-                  <p className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 font-medium text-xs sm:text-sm leading-relaxed text-left">
-                    Connect directly with <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU 5th-Year Civil Engineering Team</strong>. Available for graduate roles, B.Sc. capstone collaborations, and structural site consultations across Ethiopia.
-                  </p>
-
-                  {/* Toolkit Checkmark Badges */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-0.5 font-mono text-xs">
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
-                      <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Codes:</strong> EBCS EN &amp; ERA Manuals
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
-                      <span className="text-[#D3AE36] font-bold">✦</span>
-                      <span className="text-[#1E2025]/90 dark:text-[#F8F9FA]/90 text-[11px] truncate">
-                        <strong className="text-[#1E2025] dark:text-[#F8F9FA] font-bold">Location:</strong> ASTU Adama Campus
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Action Buttons (Matching ResourcesPage) */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-wrap items-center gap-4 pt-2"
-              >
-                <a
-                  href="#contact-form"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }}
-                  className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-8 sm:px-9 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all shadow-[0_10px_25px_rgba(211,174,54,0.35)] hover:shadow-[0_14px_32px_rgba(211,174,54,0.5)] flex items-center gap-2 cursor-pointer font-mono"
-                >
-                  <span>Inquiry &amp; Direct Form</span>
-                  <ArrowDown size={15} />
-                </a>
-                <a
-                  href="tel:+251934830919"
-                  className="rounded-full text-zinc-800 dark:text-zinc-200 hover:text-[#D3AE36] dark:hover:text-[#D3AE36] active:scale-95 px-6 py-3.5 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all flex items-center gap-2 cursor-pointer font-mono"
-                >
-                  <span>Call +251 934 830 919</span>
-                  <Phone size={14} className="text-[#D3AE36]" />
-                </a>
-              </motion.div>
-
-              {/* Quick KPI Stats Row (Matching ResourcesPage) */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-3 gap-2.5 pt-1 w-full max-w-lg"
-              >
-                <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-zinc-900 dark:text-white font-mono">5th</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Academic Year</span>
-                </div>
-                <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">24h</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">Direct Reply</span>
-                </div>
-                <div className="py-2 text-left">
-                  <span className="block text-xl sm:text-2xl font-black text-[#D3AE36] font-mono">ASTU</span>
-                  <span className="block text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 font-medium">SoCEA Campus</span>
-                </div>
-              </motion.div>
-
+              <p className="text-zinc-600 dark:text-[#F8F9FA]/75 font-medium text-xs sm:text-sm leading-relaxed max-w-xl">
+                Connect directly with <strong className="text-[#D3AE36] font-bold">Lemma Amensisa &amp; ASTU SoCEA Civil Engineering Team</strong>. Available for graduate roles, B.Sc. capstone collaborations, and structural site consultations across Ethiopia.
+              </p>
             </div>
 
-            {/* Right Column: Direct Channels Launchpad (Matching ResourcesPage Launchpad) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="lg:col-span-5 flex flex-col gap-3"
-            >
-              <div className="w-full">
-                
-                <div className="flex items-center justify-between pb-3 mb-4 text-xs font-mono">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-[#1E2025] dark:text-[#F8F9FA] uppercase tracking-wider">Direct Channels Launchpad</span>
-                  </div>
-                  <span className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 font-mono">ASTU Live Base</span>
-                </div>
-
-                <div className="flex flex-col gap-3">
-                  {/* Channel 1: Phone */}
-                  <a
-                    href="tel:+251934830919"
-                    className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all flex items-start gap-3.5 group shadow-xs"
-                  >
-                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
-                      <Phone size={20} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Direct Phone Line</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">FEA Live</span>
-                      </div>
-                      <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-mono font-bold">
-                        +251 934 830 919 · 0934 830 919
-                      </p>
-                      <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
-                        Direct voice calls, SMS &amp; Telegram message channel.
-                      </p>
-                    </div>
-                  </a>
-
-                  {/* Channel 2: Email */}
-                  <a
-                    href="mailto:lemmayezedlij21@gmail.com"
-                    className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all flex items-start gap-3.5 group shadow-xs"
-                  >
-                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
-                      <Mail size={20} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Engineering Inquiries</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#D3AE36]/20 text-[#D3AE36] font-bold">Official / 24h</span>
-                      </div>
-                      <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-mono font-bold truncate">
-                        lemmayezedlij21@gmail.com
-                      </p>
-                      <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
-                        Full structural calculation packages &amp; capstone consultation.
-                      </p>
-                    </div>
-                  </a>
-
-                  {/* Channel 3: Campus Base */}
-                  <div className="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] transition-all flex items-start gap-3.5 group shadow-xs">
-                    <div className="p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-[#D3AE36] group-hover:scale-105 transition-transform shrink-0">
-                      <MapPin size={20} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-1 mb-0.5">
-                        <span className="font-bold text-xs uppercase text-[#1E2025] dark:text-[#F8F9FA]">Academic Base</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-zinc-700 dark:text-[#F8F9FA] font-bold">SoCEA Campus</span>
-                      </div>
-                      <p className="text-[11px] text-[#1E2025] dark:text-[#F8F9FA]/90 font-bold">
-                        School of Civil Engineering &amp; Architecture
-                      </p>
-                      <p className="text-[10px] text-zinc-500 dark:text-[#F8F9FA]/60 mt-0.5">
-                        ASTU Main Campus, Adama, Oromia, Ethiopia.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Scene Indicator */}
-                <div className="flex items-center justify-between pt-3 mt-3 text-[11px] font-mono text-zinc-500">
-                  <span className="flex items-center gap-1.5 truncate">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D3AE36] animate-pulse"></span>
-                    <span className="font-bold text-zinc-700 dark:text-[#F8F9FA]/80">Lemma Amensisa — Structural Inspection Site</span>
-                  </span>
-                  <span className="text-[10px] text-zinc-400 font-mono">ASTU Live Base</span>
-                </div>
-
+            {/* Quick KPI Badges */}
+            <div className="flex items-center gap-3 sm:gap-4 shrink-0 font-mono text-xs">
+              <div className="px-4 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-center">
+                <span className="block text-base sm:text-lg font-black text-[#D3AE36]">5th Year</span>
+                <span className="text-[10px] text-zinc-500 uppercase">ASTU SoCEA</span>
               </div>
-            </motion.div>
+              <div className="px-4 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-center">
+                <span className="block text-base sm:text-lg font-black text-emerald-500">24h Direct</span>
+                <span className="text-[10px] text-zinc-500 uppercase">Response</span>
+              </div>
+              <div className="px-4 py-2.5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] text-center">
+                <span className="block text-base sm:text-lg font-black text-[#D3AE36]">EBCS EN</span>
+                <span className="text-[10px] text-zinc-500 uppercase">Codes</span>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -351,8 +167,8 @@ export const Contact = () => {
       {/* ========================================================================= */}
       {/* 2. DIRECT CHANNELS & CONSULTATION INQUIRY (FULL-WIDTH SECTION)             */}
       {/* ========================================================================= */}
-      <section id="contact-form" className="py-20 sm:py-24 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors relative z-20 scroll-mt-24">
-        <span id="contact-channels-and-form" className="scroll-mt-28" />
+      <section id="contact-form" className="py-12 sm:py-16 bg-[#DFE2EB] dark:bg-[#1E2025] transition-colors relative z-20 scroll-mt-20">
+        <span id="contact-channels-and-form" className="scroll-mt-24" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Split Grid: Left (Direct Contact Hub & Map) and Right (Inquiry Form) */}

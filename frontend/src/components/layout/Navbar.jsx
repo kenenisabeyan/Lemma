@@ -207,10 +207,13 @@ export const Navbar = () => {
                           setMenuOpen(false);
                           if (link.path.includes('#')) {
                             const id = link.path.split('#')[1];
-                            setTimeout(() => {
+                            if (location.pathname === '/contact' || location.pathname.startsWith('/contact')) {
                               const el = document.getElementById(id);
-                              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }, 100);
+                              if (el) {
+                                const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                                window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+                              }
+                            }
                           }
                         }}
                         className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 ${
@@ -251,10 +254,15 @@ export const Navbar = () => {
 
                 <button
                   onClick={() => {
-                    navigate('/contact#contact-form');
                     setMenuOpen(false);
-                    if (location.pathname === '/contact') {
-                      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (location.pathname === '/contact' || location.pathname.startsWith('/contact')) {
+                      const el = document.getElementById('contact-form') || document.getElementById('contact-channels-and-form');
+                      if (el) {
+                        const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+                      }
+                    } else {
+                      navigate('/contact#contact-form');
                     }
                   }}
                   className="rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] py-3.5 px-6 font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-[#D3AE36]/25 flex items-center justify-center gap-2"

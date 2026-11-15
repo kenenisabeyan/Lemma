@@ -84,8 +84,12 @@ export const Footer = () => {
             <Link
               to="/contact#contact-form"
               onClick={() => {
-                if (window.location.pathname === '/contact') {
-                  document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (window.location.pathname === '/contact' || window.location.pathname.startsWith('/contact')) {
+                  const el = document.getElementById('contact-form') || document.getElementById('contact-channels-and-form');
+                  if (el) {
+                    const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+                  }
                 }
               }}
               className="flex-1 sm:flex-initial rounded-full bg-[#D3AE36] hover:bg-[#C29F2F] active:scale-95 text-[#12151C] px-6 py-3 font-mono font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(211,174,54,0.3)] cursor-pointer"
@@ -117,6 +121,16 @@ export const Footer = () => {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={() => {
+                  if (link.path.includes('#') && (window.location.pathname === '/contact' || window.location.pathname.startsWith('/contact'))) {
+                    const id = link.path.split('#')[1];
+                    const el = document.getElementById(id);
+                    if (el) {
+                      const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+                    }
+                  }
+                }}
                 className="hover:text-[#D3AE36] transition-colors"
               >
                 {link.name}
