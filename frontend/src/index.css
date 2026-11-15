@@ -41,10 +41,27 @@
     --brand-charcoal: #1E2025;
   }
 
+  html {
+    background-color: #12151C;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+  }
+
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    @apply overflow-x-hidden min-h-screen transition-colors duration-200 selection:bg-[#D3AE36] selection:text-[#12151C];
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    min-height: 100vh;
+    @apply transition-colors duration-200 selection:bg-[#D3AE36] selection:text-[#12151C];
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #12151C;
+    overflow-x: hidden;
   }
 }
 
@@ -55,11 +72,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F9FA;
+  background: transparent;
 }
 
 html.dark ::-webkit-scrollbar-track {
-  background: #12151C;
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
