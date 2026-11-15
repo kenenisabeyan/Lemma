@@ -116,7 +116,7 @@ export const Navbar = () => {
             <button
               onClick={toggleTheme}
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white dark:bg-[#232936] border border-zinc-200/90 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none cursor-pointer"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-black/[0.04] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA] hover:scale-105 active:scale-95 transition-all focus:outline-none cursor-pointer"
               title={isDark ? "Light mode" : "Dark mode"}
             >
               {isDark ? (
@@ -130,7 +130,7 @@ export const Navbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle navigation menu"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-white dark:bg-[#232936] border border-zinc-200/90 dark:border-[#232936] text-zinc-800 dark:text-[#F8F9FA] shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all focus:outline-none"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center bg-black/[0.04] dark:bg-white/[0.06] text-zinc-800 dark:text-[#F8F9FA] hover:scale-105 active:scale-95 transition-all focus:outline-none cursor-pointer"
               title="Menu"
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -161,16 +161,16 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 260 }}
-              className="relative z-10 w-full max-w-md bg-[#FFFFFF] dark:bg-[#12151C] border-l border-zinc-200 dark:border-[#31394D] shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
+              className="relative z-10 w-full max-w-md bg-[#FFFFFF] dark:bg-[#12151C] shadow-2xl h-full flex flex-col justify-between overflow-y-auto p-6 sm:p-8"
             >
               {/* Drawer Top */}
               <div>
-                <div className="flex items-center justify-between pb-6 border-b border-zinc-200 dark:border-[#31394D]">
+                <div className="flex items-center justify-between pb-6 border-b border-black/5 dark:border-white/5">
                   <div className="flex items-center gap-3">
                     <img 
                       src={avatarImage} 
                       alt={brandName}
-                      className="w-10 h-10 rounded-full object-cover border border-zinc-300 dark:border-[#31394D]" 
+                      className="w-10 h-10 rounded-full object-cover border border-[#D3AE36]/60" 
                     />
                     <div>
                       <h3 className="font-extrabold text-sm text-[#1E2025] dark:text-[#F8F9FA]">{brandName}</h3>
@@ -183,14 +183,14 @@ export const Navbar = () => {
                   <button
                     onClick={() => setMenuOpen(false)}
                     aria-label="Close menu"
-                    className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-[#232936] border border-zinc-200 dark:border-[#31394D] text-[#1E2025] dark:text-[#F8F9FA] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full flex items-center justify-center bg-black/[0.04] dark:bg-white/[0.06] text-[#1E2025] dark:text-[#F8F9FA] hover:scale-105 active:scale-95 transition-all cursor-pointer"
                   >
                     <X size={18} />
                   </button>
                 </div>
 
                 {/* Status Badge */}
-                <div className="my-5 flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
+                <div className="my-5 flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-emerald-500/10 text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>Available for 2026 Graduate Roles, Research & Projects</span>
                 </div>
@@ -238,12 +238,12 @@ export const Navbar = () => {
               </div>
 
               {/* Drawer Bottom Actions */}
-              <div className="pt-6 mt-6 border-t border-zinc-200 dark:border-[#232936] flex flex-col gap-3">
+              <div className="pt-6 mt-6 border-t border-black/5 dark:border-white/5 flex flex-col gap-3">
                 {user && (
                   <Link
                     to="/admin/dashboard"
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-300 dark:border-[#232936] bg-[#FFFFFF] dark:bg-[#232936] text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-[#F8F9FA] hover:bg-zinc-100 dark:hover:bg-[#232936]/80"
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-[#F8F9FA] hover:text-[#D3AE36]"
                   >
                     <User size={14} /> Admin CMS Portal
                   </Link>
