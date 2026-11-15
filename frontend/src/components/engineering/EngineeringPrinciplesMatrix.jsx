@@ -122,10 +122,10 @@ export const EngineeringPrinciplesMatrix = () => {
   const currentPrinciple = principles.find(p => p.id === activeTab) || principles[0];
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-[#232936] border border-[#31394D]/25 dark:border-[#31394D]/60 p-6 sm:p-8 shadow-sm relative overflow-hidden transition-colors duration-200">
+    <div className="rounded-3xl bg-transparent p-6 sm:p-8 relative overflow-hidden transition-colors duration-200">
       
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 border-b border-zinc-100 dark:border-[#31394D]/50 relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 pb-4 border-b border-black/5 dark:border-white/5 relative z-10">
         <div>
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D3AE36] mb-2 font-bold uppercase tracking-wider">
             <Cpu size={14} className="animate-pulse" />
@@ -140,7 +140,7 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Code Standard Stamp */}
-        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs p-2.5 rounded-xl bg-zinc-100 dark:bg-[#12151C] border border-[#31394D]/30 dark:border-[#31394D]">
+        <div className="flex items-center gap-2.5 shrink-0 font-mono text-xs p-2.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.05]">
           <div className="w-2.5 h-2.5 rounded-full bg-[#D3AE36] animate-pulse"></div>
           <div>
             <span className="text-[9px] text-[#D3AE36] block uppercase tracking-wider font-bold">MANDATE SPEC</span>
@@ -160,8 +160,8 @@ export const EngineeringPrinciplesMatrix = () => {
               onClick={() => setActiveTab(principle.id)}
               className={`p-3.5 text-left transition-all duration-200 flex flex-col justify-between cursor-pointer rounded-xl ${
                 isActive
-                  ? 'bg-[#FFFFFF] dark:bg-[#232936] border-l-2 border-[#D3AE36] shadow-sm'
-                  : 'border-l-2 border-transparent hover:border-[#31394D]/60 dark:hover:border-[#31394D] hover:bg-[#12151C]/5 dark:hover:bg-[#232936]/40'
+                  ? 'bg-black/[0.05] dark:bg-white/[0.06] border-l-2 border-[#D3AE36]'
+                  : 'border-l-2 border-transparent hover:bg-black/[0.02] dark:hover:bg-white/[0.03]'
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -203,12 +203,12 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Mathematical Equation & Physics Panel with Typographic Notation */}
-        <div className="mb-6 py-5 px-6 rounded-2xl bg-[#12151C]/5 dark:bg-[#232936] border border-[#31394D]/30 dark:border-[#31394D] shadow-xs relative">
+        <div className="mb-6 py-5 px-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] relative">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]/80 font-bold flex items-center gap-1.5">
               <Calculator size={13} className="text-[#D3AE36]" /> Key Mechanics Formulation
             </span>
-            <span className="text-[9px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#D3AE36]/10 border border-[#D3AE36]/30">
+            <span className="text-[9px] font-mono text-[#D3AE36] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#D3AE36]/15">
               Deterministic Limit State
             </span>
           </div>
@@ -221,8 +221,8 @@ export const EngineeringPrinciplesMatrix = () => {
         </div>
 
         {/* Interactive Parameter Sensitivity Lab Widget */}
-        <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-[#F8F9FA] dark:bg-[#12151C] border border-[#31394D]/40 shadow-xs">
-          <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#31394D]/20 dark:border-[#31394D]/60">
+        <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04]">
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-black/5 dark:border-white/5">
             <div className="flex items-center gap-2">
               <Sliders size={14} className="text-[#D3AE36]" />
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E2025] dark:text-[#F8F9FA]">

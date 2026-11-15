@@ -161,10 +161,10 @@ export const Moveable3DHeroCards = () => {
               cursor: 'grabbing',
               boxShadow: '0 30px 60px -12px rgba(211,174,54, 0.5)'
             }}
-            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-64 lg:w-72 rounded-2xl bg-[#F8F9FA]/90 dark:bg-[#12151C]/90 backdrop-blur-2xl border border-[#31394D]/30 dark:border-[#31394D] hover:border-[#D3AE36]/80 dark:hover:border-[#D3AE36]/80 p-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.1),inset_0_1px_1px_rgba(255,255,255,0.8)] dark:shadow-[0_18px_45px_rgba(0,0,0,0.65)] hover:shadow-[0_20px_50px_rgba(211,174,54,0.22)] dark:hover:shadow-[0_20px_50px_rgba(211,174,54,0.3)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
+            className={`absolute ${card.defaultPos} z-20 pointer-events-auto cursor-grab active:cursor-grabbing w-64 lg:w-72 rounded-2xl bg-[#F8F9FA]/90 dark:bg-[#12151C]/90 backdrop-blur-2xl p-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.1),inset_0_1px_1px_rgba(255,255,255,0.8)] dark:shadow-[0_18px_45px_rgba(0,0,0,0.65)] hover:shadow-[0_20px_50px_rgba(211,174,54,0.22)] dark:hover:shadow-[0_20px_50px_rgba(211,174,54,0.3)] transition-all select-none group ${card.visibility || 'hidden md:block'}`}
           >
             {/* 3D Depth Card Inner Stage */}
-            <div className="relative overflow-hidden rounded-xl bg-[#12151C] aspect-[16/10] border border-[#31394D]/50">
+            <div className="relative overflow-hidden rounded-xl bg-[#12151C] aspect-[16/10]">
               
               {/* Photorealistic Architectural Engineering Image */}
               <img 
@@ -187,13 +187,13 @@ export const Moveable3DHeroCards = () => {
               <span className="absolute bottom-2 right-2 text-[8px] font-mono text-[#D3AE36]/70 tracking-widest">+</span>
 
               {/* Moveable Badge Chip with Grab Icon */}
-              <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#12151C]/80 backdrop-blur-md border border-[#31394D] text-[10px] font-mono text-[#F8F9FA] font-bold shadow-sm">
+              <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#12151C]/80 backdrop-blur-md text-[10px] font-mono text-[#F8F9FA] font-bold shadow-sm">
                 <Move size={10} className="text-[#D3AE36] animate-pulse" />
                 <span className="tracking-wider">INTERACTIVE 3D</span>
               </div>
 
               {/* Upper Right Engineering Tag */}
-              <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-[#12151C]/80 backdrop-blur-md border border-[#31394D] text-[9px] font-mono text-[#D3AE36] font-bold">
+              <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-[#12151C]/80 backdrop-blur-md text-[9px] font-mono text-[#D3AE36] font-bold">
                 {card.tag}
               </div>
 
@@ -207,7 +207,7 @@ export const Moveable3DHeroCards = () => {
                     {card.title}
                   </h4>
                 </div>
-                <div className="w-7 h-7 rounded-lg bg-[#232936]/80 backdrop-blur-md border border-[#31394D] flex items-center justify-center text-[#D3AE36] shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                <div className="w-7 h-7 rounded-lg bg-[#232936]/80 backdrop-blur-md flex items-center justify-center text-[#D3AE36] shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                   <Icon size={14} />
                 </div>
               </div>
@@ -225,7 +225,7 @@ export const Moveable3DHeroCards = () => {
                 </span>
               </div>
 
-              <div className="text-[9px] font-mono text-[#D3AE36] border border-[#31394D]/30 dark:border-[#31394D] px-2 py-1 rounded-md bg-[#12151C]/5 dark:bg-[#232936] backdrop-blur-md uppercase tracking-widest shrink-0 font-bold shadow-2xs">
+              <div className="text-[9px] font-mono text-[#D3AE36] px-2 py-1 rounded-md bg-black/[0.04] dark:bg-white/[0.06] backdrop-blur-md uppercase tracking-widest shrink-0 font-bold">
                 EBCS VERIFIED
               </div>
             </div>
